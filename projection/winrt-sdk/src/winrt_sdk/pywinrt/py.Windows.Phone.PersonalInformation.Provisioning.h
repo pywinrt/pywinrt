@@ -43,14 +43,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation.provisioning";
+        static constexpr const char* type_name = "ContactPartnerProvisioningManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation.provisioning";
+        static constexpr const char* type_name = "MessagePartnerProvisioningManager";
     };
 }

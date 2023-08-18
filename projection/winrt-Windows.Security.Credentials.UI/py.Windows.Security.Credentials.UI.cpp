@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Security::Credentials::UI
 {
-    struct module_state
-    {
-        PyTypeObject* type_CredentialPicker;
-        PyTypeObject* type_CredentialPickerOptions;
-        PyTypeObject* type_CredentialPickerResults;
-        PyTypeObject* type_UserConsentVerifier;
-    };
-
     // ----- CredentialPicker class --------------------
     static constexpr const char* const type_name_CredentialPicker = "CredentialPicker";
 
@@ -1016,50 +1008,15 @@ namespace py::cpp::Windows::Security::Credentials::UI
     PyDoc_STRVAR(module_doc, "Windows::Security::Credentials::UI");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CredentialPicker);
-        Py_VISIT(state->type_CredentialPickerOptions);
-        Py_VISIT(state->type_CredentialPickerResults);
-        Py_VISIT(state->type_UserConsentVerifier);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CredentialPicker);
-        Py_CLEAR(state->type_CredentialPickerOptions);
-        Py_CLEAR(state->type_CredentialPickerResults);
-        Py_CLEAR(state->type_UserConsentVerifier);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Credentials_UI",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Credentials::UI
@@ -1075,7 +1032,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials_UI(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1088,125 +1045,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials_UI(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CredentialPicker = py::register_python_type(module.get(), type_name_CredentialPicker, &type_spec_CredentialPicker, object_bases.get(), nullptr);
-    if (!state->type_CredentialPicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CredentialPicker, &type_spec_CredentialPicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CredentialPicker, &type_spec_CredentialPicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CredentialPickerOptions = py::register_python_type(module.get(), type_name_CredentialPickerOptions, &type_spec_CredentialPickerOptions, object_bases.get(), nullptr);
-    if (!state->type_CredentialPickerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CredentialPickerOptions, &type_spec_CredentialPickerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CredentialPickerOptions, &type_spec_CredentialPickerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CredentialPickerResults = py::register_python_type(module.get(), type_name_CredentialPickerResults, &type_spec_CredentialPickerResults, object_bases.get(), nullptr);
-    if (!state->type_CredentialPickerResults)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CredentialPickerResults, &type_spec_CredentialPickerResults, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CredentialPickerResults, &type_spec_CredentialPickerResults, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserConsentVerifier = py::register_python_type(module.get(), type_name_UserConsentVerifier, &type_spec_UserConsentVerifier, object_bases.get(), nullptr);
-    if (!state->type_UserConsentVerifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserConsentVerifier, &type_spec_UserConsentVerifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserConsentVerifier, &type_spec_UserConsentVerifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialPicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::CredentialPicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialPickerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::CredentialPickerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialPickerResults;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::CredentialPickerResults is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserConsentVerifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::UI::UserConsentVerifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

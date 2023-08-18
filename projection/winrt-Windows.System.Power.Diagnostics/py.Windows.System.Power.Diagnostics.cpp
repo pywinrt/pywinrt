@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::System::Power::Diagnostics
 {
-    struct module_state
-    {
-        PyTypeObject* type_BackgroundEnergyDiagnostics;
-        PyTypeObject* type_ForegroundEnergyDiagnostics;
-    };
-
     // ----- BackgroundEnergyDiagnostics class --------------------
     static constexpr const char* const type_name_BackgroundEnergyDiagnostics = "BackgroundEnergyDiagnostics";
 
@@ -286,46 +280,15 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     PyDoc_STRVAR(module_doc, "Windows::System::Power::Diagnostics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BackgroundEnergyDiagnostics);
-        Py_VISIT(state->type_ForegroundEnergyDiagnostics);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BackgroundEnergyDiagnostics);
-        Py_CLEAR(state->type_ForegroundEnergyDiagnostics);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Power_Diagnostics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Power::Diagnostics
@@ -341,7 +304,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Power_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -354,17 +317,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Power_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_BackgroundEnergyDiagnostics_Meta{PyType_FromSpec(&type_spec_BackgroundEnergyDiagnostics_Meta)};
     if (!type_BackgroundEnergyDiagnostics_Meta)
     {
         return nullptr;
     }
 
-    state->type_BackgroundEnergyDiagnostics = py::register_python_type(module.get(), type_name_BackgroundEnergyDiagnostics, &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get()));
-    if (!state->type_BackgroundEnergyDiagnostics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundEnergyDiagnostics, &type_spec_BackgroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundEnergyDiagnostics, &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -375,58 +338,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Power_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    state->type_ForegroundEnergyDiagnostics = py::register_python_type(module.get(), type_name_ForegroundEnergyDiagnostics, &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get()));
-    if (!state->type_ForegroundEnergyDiagnostics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ForegroundEnergyDiagnostics, &type_spec_ForegroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ForegroundEnergyDiagnostics, &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Power::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Power::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundEnergyDiagnostics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Power::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Power::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ForegroundEnergyDiagnostics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

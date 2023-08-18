@@ -56,26 +56,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
+    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "IDirect3DDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
+    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "IDirect3DSurface";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
+    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "Direct3DMultisampleDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
+    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
+        static constexpr const char* type_name = "Direct3DSurfaceDescription";
     };
 }

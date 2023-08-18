@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::UI::Composition::Interactions
 {
-    struct module_state
-    {
-        PyTypeObject* type_CompositionConditionalValue;
-        PyTypeObject* type_CompositionInteractionSourceCollection;
-        PyTypeObject* type_InteractionSourceConfiguration;
-        PyTypeObject* type_InteractionTracker;
-        PyTypeObject* type_InteractionTrackerCustomAnimationStateEnteredArgs;
-        PyTypeObject* type_InteractionTrackerIdleStateEnteredArgs;
-        PyTypeObject* type_InteractionTrackerInertiaModifier;
-        PyTypeObject* type_InteractionTrackerInertiaMotion;
-        PyTypeObject* type_InteractionTrackerInertiaNaturalMotion;
-        PyTypeObject* type_InteractionTrackerInertiaRestingValue;
-        PyTypeObject* type_InteractionTrackerInertiaStateEnteredArgs;
-        PyTypeObject* type_InteractionTrackerInteractingStateEnteredArgs;
-        PyTypeObject* type_InteractionTrackerRequestIgnoredArgs;
-        PyTypeObject* type_InteractionTrackerValuesChangedArgs;
-        PyTypeObject* type_InteractionTrackerVector2InertiaModifier;
-        PyTypeObject* type_InteractionTrackerVector2InertiaNaturalMotion;
-        PyTypeObject* type_VisualInteractionSource;
-        PyTypeObject* type_ICompositionInteractionSource;
-        PyTypeObject* type_IInteractionTrackerOwner;
-    };
-
     // ----- CompositionConditionalValue class --------------------
     static constexpr const char* const type_name_CompositionConditionalValue = "CompositionConditionalValue";
 
@@ -5019,80 +4996,15 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Interactions");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CompositionConditionalValue);
-        Py_VISIT(state->type_CompositionInteractionSourceCollection);
-        Py_VISIT(state->type_InteractionSourceConfiguration);
-        Py_VISIT(state->type_InteractionTracker);
-        Py_VISIT(state->type_InteractionTrackerCustomAnimationStateEnteredArgs);
-        Py_VISIT(state->type_InteractionTrackerIdleStateEnteredArgs);
-        Py_VISIT(state->type_InteractionTrackerInertiaModifier);
-        Py_VISIT(state->type_InteractionTrackerInertiaMotion);
-        Py_VISIT(state->type_InteractionTrackerInertiaNaturalMotion);
-        Py_VISIT(state->type_InteractionTrackerInertiaRestingValue);
-        Py_VISIT(state->type_InteractionTrackerInertiaStateEnteredArgs);
-        Py_VISIT(state->type_InteractionTrackerInteractingStateEnteredArgs);
-        Py_VISIT(state->type_InteractionTrackerRequestIgnoredArgs);
-        Py_VISIT(state->type_InteractionTrackerValuesChangedArgs);
-        Py_VISIT(state->type_InteractionTrackerVector2InertiaModifier);
-        Py_VISIT(state->type_InteractionTrackerVector2InertiaNaturalMotion);
-        Py_VISIT(state->type_VisualInteractionSource);
-        Py_VISIT(state->type_ICompositionInteractionSource);
-        Py_VISIT(state->type_IInteractionTrackerOwner);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CompositionConditionalValue);
-        Py_CLEAR(state->type_CompositionInteractionSourceCollection);
-        Py_CLEAR(state->type_InteractionSourceConfiguration);
-        Py_CLEAR(state->type_InteractionTracker);
-        Py_CLEAR(state->type_InteractionTrackerCustomAnimationStateEnteredArgs);
-        Py_CLEAR(state->type_InteractionTrackerIdleStateEnteredArgs);
-        Py_CLEAR(state->type_InteractionTrackerInertiaModifier);
-        Py_CLEAR(state->type_InteractionTrackerInertiaMotion);
-        Py_CLEAR(state->type_InteractionTrackerInertiaNaturalMotion);
-        Py_CLEAR(state->type_InteractionTrackerInertiaRestingValue);
-        Py_CLEAR(state->type_InteractionTrackerInertiaStateEnteredArgs);
-        Py_CLEAR(state->type_InteractionTrackerInteractingStateEnteredArgs);
-        Py_CLEAR(state->type_InteractionTrackerRequestIgnoredArgs);
-        Py_CLEAR(state->type_InteractionTrackerValuesChangedArgs);
-        Py_CLEAR(state->type_InteractionTrackerVector2InertiaModifier);
-        Py_CLEAR(state->type_InteractionTrackerVector2InertiaNaturalMotion);
-        Py_CLEAR(state->type_VisualInteractionSource);
-        Py_CLEAR(state->type_ICompositionInteractionSource);
-        Py_CLEAR(state->type_IInteractionTrackerOwner);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Composition_Interactions",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Composition::Interactions
@@ -5108,7 +5020,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Interactions(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5121,560 +5033,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Interactions(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CompositionConditionalValue = py::register_python_type(module.get(), type_name_CompositionConditionalValue, &type_spec_CompositionConditionalValue, object_bases.get(), nullptr);
-    if (!state->type_CompositionConditionalValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionConditionalValue, &type_spec_CompositionConditionalValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionConditionalValue, &type_spec_CompositionConditionalValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionInteractionSourceCollection = py::register_python_type(module.get(), type_name_CompositionInteractionSourceCollection, &type_spec_CompositionInteractionSourceCollection, object_bases.get(), nullptr);
-    if (!state->type_CompositionInteractionSourceCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionInteractionSourceCollection, &type_spec_CompositionInteractionSourceCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionInteractionSourceCollection, &type_spec_CompositionInteractionSourceCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionSourceConfiguration = py::register_python_type(module.get(), type_name_InteractionSourceConfiguration, &type_spec_InteractionSourceConfiguration, object_bases.get(), nullptr);
-    if (!state->type_InteractionSourceConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionSourceConfiguration, &type_spec_InteractionSourceConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionSourceConfiguration, &type_spec_InteractionSourceConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTracker = py::register_python_type(module.get(), type_name_InteractionTracker, &type_spec_InteractionTracker, object_bases.get(), nullptr);
-    if (!state->type_InteractionTracker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTracker, &type_spec_InteractionTracker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTracker, &type_spec_InteractionTracker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerCustomAnimationStateEnteredArgs = py::register_python_type(module.get(), type_name_InteractionTrackerCustomAnimationStateEnteredArgs, &type_spec_InteractionTrackerCustomAnimationStateEnteredArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerCustomAnimationStateEnteredArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerCustomAnimationStateEnteredArgs, &type_spec_InteractionTrackerCustomAnimationStateEnteredArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerCustomAnimationStateEnteredArgs, &type_spec_InteractionTrackerCustomAnimationStateEnteredArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerIdleStateEnteredArgs = py::register_python_type(module.get(), type_name_InteractionTrackerIdleStateEnteredArgs, &type_spec_InteractionTrackerIdleStateEnteredArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerIdleStateEnteredArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerIdleStateEnteredArgs, &type_spec_InteractionTrackerIdleStateEnteredArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerIdleStateEnteredArgs, &type_spec_InteractionTrackerIdleStateEnteredArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInertiaModifier = py::register_python_type(module.get(), type_name_InteractionTrackerInertiaModifier, &type_spec_InteractionTrackerInertiaModifier, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInertiaModifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaModifier, &type_spec_InteractionTrackerInertiaModifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaModifier, &type_spec_InteractionTrackerInertiaModifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInertiaMotion = py::register_python_type(module.get(), type_name_InteractionTrackerInertiaMotion, &type_spec_InteractionTrackerInertiaMotion, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInertiaMotion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaMotion, &type_spec_InteractionTrackerInertiaMotion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaMotion, &type_spec_InteractionTrackerInertiaMotion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInertiaNaturalMotion = py::register_python_type(module.get(), type_name_InteractionTrackerInertiaNaturalMotion, &type_spec_InteractionTrackerInertiaNaturalMotion, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInertiaNaturalMotion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaNaturalMotion, &type_spec_InteractionTrackerInertiaNaturalMotion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaNaturalMotion, &type_spec_InteractionTrackerInertiaNaturalMotion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInertiaRestingValue = py::register_python_type(module.get(), type_name_InteractionTrackerInertiaRestingValue, &type_spec_InteractionTrackerInertiaRestingValue, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInertiaRestingValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaRestingValue, &type_spec_InteractionTrackerInertiaRestingValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaRestingValue, &type_spec_InteractionTrackerInertiaRestingValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInertiaStateEnteredArgs = py::register_python_type(module.get(), type_name_InteractionTrackerInertiaStateEnteredArgs, &type_spec_InteractionTrackerInertiaStateEnteredArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInertiaStateEnteredArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaStateEnteredArgs, &type_spec_InteractionTrackerInertiaStateEnteredArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInertiaStateEnteredArgs, &type_spec_InteractionTrackerInertiaStateEnteredArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerInteractingStateEnteredArgs = py::register_python_type(module.get(), type_name_InteractionTrackerInteractingStateEnteredArgs, &type_spec_InteractionTrackerInteractingStateEnteredArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerInteractingStateEnteredArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInteractingStateEnteredArgs, &type_spec_InteractionTrackerInteractingStateEnteredArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerInteractingStateEnteredArgs, &type_spec_InteractionTrackerInteractingStateEnteredArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerRequestIgnoredArgs = py::register_python_type(module.get(), type_name_InteractionTrackerRequestIgnoredArgs, &type_spec_InteractionTrackerRequestIgnoredArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerRequestIgnoredArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerRequestIgnoredArgs, &type_spec_InteractionTrackerRequestIgnoredArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerRequestIgnoredArgs, &type_spec_InteractionTrackerRequestIgnoredArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerValuesChangedArgs = py::register_python_type(module.get(), type_name_InteractionTrackerValuesChangedArgs, &type_spec_InteractionTrackerValuesChangedArgs, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerValuesChangedArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerValuesChangedArgs, &type_spec_InteractionTrackerValuesChangedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerValuesChangedArgs, &type_spec_InteractionTrackerValuesChangedArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerVector2InertiaModifier = py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaModifier, &type_spec_InteractionTrackerVector2InertiaModifier, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerVector2InertiaModifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaModifier, &type_spec_InteractionTrackerVector2InertiaModifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaModifier, &type_spec_InteractionTrackerVector2InertiaModifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InteractionTrackerVector2InertiaNaturalMotion = py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaNaturalMotion, &type_spec_InteractionTrackerVector2InertiaNaturalMotion, object_bases.get(), nullptr);
-    if (!state->type_InteractionTrackerVector2InertiaNaturalMotion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaNaturalMotion, &type_spec_InteractionTrackerVector2InertiaNaturalMotion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InteractionTrackerVector2InertiaNaturalMotion, &type_spec_InteractionTrackerVector2InertiaNaturalMotion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualInteractionSource = py::register_python_type(module.get(), type_name_VisualInteractionSource, &type_spec_VisualInteractionSource, object_bases.get(), nullptr);
-    if (!state->type_VisualInteractionSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualInteractionSource, &type_spec_VisualInteractionSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualInteractionSource, &type_spec_VisualInteractionSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICompositionInteractionSource = py::register_python_type(module.get(), type_name_ICompositionInteractionSource, &type_spec_ICompositionInteractionSource, object_bases.get(), nullptr);
-    if (!state->type_ICompositionInteractionSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICompositionInteractionSource, &type_spec_ICompositionInteractionSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICompositionInteractionSource, &type_spec_ICompositionInteractionSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInteractionTrackerOwner = py::register_python_type(module.get(), type_name_IInteractionTrackerOwner, &type_spec_IInteractionTrackerOwner, object_bases.get(), nullptr);
-    if (!state->type_IInteractionTrackerOwner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInteractionTrackerOwner, &type_spec_IInteractionTrackerOwner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInteractionTrackerOwner, &type_spec_IInteractionTrackerOwner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionConditionalValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionInteractionSourceCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionSourceConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTracker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTracker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTracker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerCustomAnimationStateEnteredArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerIdleStateEnteredArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInertiaModifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInertiaMotion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInertiaNaturalMotion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInertiaRestingValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInertiaStateEnteredArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerInteractingStateEnteredArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerRequestIgnoredArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerValuesChangedArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerVector2InertiaModifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InteractionTrackerVector2InertiaNaturalMotion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualInteractionSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::VisualInteractionSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICompositionInteractionSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Interactions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Interactions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInteractionTrackerOwner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,34 +6,6 @@
 
 namespace py::cpp::Windows::Devices::AllJoyn
 {
-    struct module_state
-    {
-        PyTypeObject* type_AllJoynAboutData;
-        PyTypeObject* type_AllJoynAboutDataView;
-        PyTypeObject* type_AllJoynAcceptSessionJoinerEventArgs;
-        PyTypeObject* type_AllJoynAuthenticationCompleteEventArgs;
-        PyTypeObject* type_AllJoynBusAttachment;
-        PyTypeObject* type_AllJoynBusAttachmentStateChangedEventArgs;
-        PyTypeObject* type_AllJoynBusObject;
-        PyTypeObject* type_AllJoynBusObjectStoppedEventArgs;
-        PyTypeObject* type_AllJoynCredentials;
-        PyTypeObject* type_AllJoynCredentialsRequestedEventArgs;
-        PyTypeObject* type_AllJoynCredentialsVerificationRequestedEventArgs;
-        PyTypeObject* type_AllJoynMessageInfo;
-        PyTypeObject* type_AllJoynProducerStoppedEventArgs;
-        PyTypeObject* type_AllJoynServiceInfo;
-        PyTypeObject* type_AllJoynServiceInfoRemovedEventArgs;
-        PyTypeObject* type_AllJoynSession;
-        PyTypeObject* type_AllJoynSessionJoinedEventArgs;
-        PyTypeObject* type_AllJoynSessionLostEventArgs;
-        PyTypeObject* type_AllJoynSessionMemberAddedEventArgs;
-        PyTypeObject* type_AllJoynSessionMemberRemovedEventArgs;
-        PyTypeObject* type_AllJoynStatus;
-        PyTypeObject* type_AllJoynWatcherStoppedEventArgs;
-        PyTypeObject* type_IAllJoynAcceptSessionJoiner;
-        PyTypeObject* type_IAllJoynProducer;
-    };
-
     // ----- AllJoynAboutData class --------------------
     static constexpr const char* const type_name_AllJoynAboutData = "AllJoynAboutData";
 
@@ -5460,90 +5432,15 @@ namespace py::cpp::Windows::Devices::AllJoyn
     PyDoc_STRVAR(module_doc, "Windows::Devices::AllJoyn");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AllJoynAboutData);
-        Py_VISIT(state->type_AllJoynAboutDataView);
-        Py_VISIT(state->type_AllJoynAcceptSessionJoinerEventArgs);
-        Py_VISIT(state->type_AllJoynAuthenticationCompleteEventArgs);
-        Py_VISIT(state->type_AllJoynBusAttachment);
-        Py_VISIT(state->type_AllJoynBusAttachmentStateChangedEventArgs);
-        Py_VISIT(state->type_AllJoynBusObject);
-        Py_VISIT(state->type_AllJoynBusObjectStoppedEventArgs);
-        Py_VISIT(state->type_AllJoynCredentials);
-        Py_VISIT(state->type_AllJoynCredentialsRequestedEventArgs);
-        Py_VISIT(state->type_AllJoynCredentialsVerificationRequestedEventArgs);
-        Py_VISIT(state->type_AllJoynMessageInfo);
-        Py_VISIT(state->type_AllJoynProducerStoppedEventArgs);
-        Py_VISIT(state->type_AllJoynServiceInfo);
-        Py_VISIT(state->type_AllJoynServiceInfoRemovedEventArgs);
-        Py_VISIT(state->type_AllJoynSession);
-        Py_VISIT(state->type_AllJoynSessionJoinedEventArgs);
-        Py_VISIT(state->type_AllJoynSessionLostEventArgs);
-        Py_VISIT(state->type_AllJoynSessionMemberAddedEventArgs);
-        Py_VISIT(state->type_AllJoynSessionMemberRemovedEventArgs);
-        Py_VISIT(state->type_AllJoynStatus);
-        Py_VISIT(state->type_AllJoynWatcherStoppedEventArgs);
-        Py_VISIT(state->type_IAllJoynAcceptSessionJoiner);
-        Py_VISIT(state->type_IAllJoynProducer);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AllJoynAboutData);
-        Py_CLEAR(state->type_AllJoynAboutDataView);
-        Py_CLEAR(state->type_AllJoynAcceptSessionJoinerEventArgs);
-        Py_CLEAR(state->type_AllJoynAuthenticationCompleteEventArgs);
-        Py_CLEAR(state->type_AllJoynBusAttachment);
-        Py_CLEAR(state->type_AllJoynBusAttachmentStateChangedEventArgs);
-        Py_CLEAR(state->type_AllJoynBusObject);
-        Py_CLEAR(state->type_AllJoynBusObjectStoppedEventArgs);
-        Py_CLEAR(state->type_AllJoynCredentials);
-        Py_CLEAR(state->type_AllJoynCredentialsRequestedEventArgs);
-        Py_CLEAR(state->type_AllJoynCredentialsVerificationRequestedEventArgs);
-        Py_CLEAR(state->type_AllJoynMessageInfo);
-        Py_CLEAR(state->type_AllJoynProducerStoppedEventArgs);
-        Py_CLEAR(state->type_AllJoynServiceInfo);
-        Py_CLEAR(state->type_AllJoynServiceInfoRemovedEventArgs);
-        Py_CLEAR(state->type_AllJoynSession);
-        Py_CLEAR(state->type_AllJoynSessionJoinedEventArgs);
-        Py_CLEAR(state->type_AllJoynSessionLostEventArgs);
-        Py_CLEAR(state->type_AllJoynSessionMemberAddedEventArgs);
-        Py_CLEAR(state->type_AllJoynSessionMemberRemovedEventArgs);
-        Py_CLEAR(state->type_AllJoynStatus);
-        Py_CLEAR(state->type_AllJoynWatcherStoppedEventArgs);
-        Py_CLEAR(state->type_IAllJoynAcceptSessionJoiner);
-        Py_CLEAR(state->type_IAllJoynProducer);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_AllJoyn",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::AllJoyn
@@ -5559,7 +5456,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_AllJoyn(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5572,125 +5469,182 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_AllJoyn(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AllJoynAboutData = py::register_python_type(module.get(), type_name_AllJoynAboutData, &type_spec_AllJoynAboutData, object_bases.get(), nullptr);
-    if (!state->type_AllJoynAboutData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynAboutData, &type_spec_AllJoynAboutData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynAboutData, &type_spec_AllJoynAboutData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynAboutDataView = py::register_python_type(module.get(), type_name_AllJoynAboutDataView, &type_spec_AllJoynAboutDataView, object_bases.get(), nullptr);
-    if (!state->type_AllJoynAboutDataView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynAboutDataView, &type_spec_AllJoynAboutDataView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynAboutDataView, &type_spec_AllJoynAboutDataView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynAcceptSessionJoinerEventArgs = py::register_python_type(module.get(), type_name_AllJoynAcceptSessionJoinerEventArgs, &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynAcceptSessionJoinerEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynAcceptSessionJoinerEventArgs, &type_spec_AllJoynAcceptSessionJoinerEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynAcceptSessionJoinerEventArgs, &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynAuthenticationCompleteEventArgs = py::register_python_type(module.get(), type_name_AllJoynAuthenticationCompleteEventArgs, &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynAuthenticationCompleteEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynAuthenticationCompleteEventArgs, &type_spec_AllJoynAuthenticationCompleteEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynAuthenticationCompleteEventArgs, &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynBusAttachment = py::register_python_type(module.get(), type_name_AllJoynBusAttachment, &type_spec_AllJoynBusAttachment, object_bases.get(), nullptr);
-    if (!state->type_AllJoynBusAttachment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachment, &type_spec_AllJoynBusAttachment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachment, &type_spec_AllJoynBusAttachment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynBusAttachmentStateChangedEventArgs = py::register_python_type(module.get(), type_name_AllJoynBusAttachmentStateChangedEventArgs, &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynBusAttachmentStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachmentStateChangedEventArgs, &type_spec_AllJoynBusAttachmentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachmentStateChangedEventArgs, &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynBusObject = py::register_python_type(module.get(), type_name_AllJoynBusObject, &type_spec_AllJoynBusObject, object_bases.get(), nullptr);
-    if (!state->type_AllJoynBusObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynBusObject, &type_spec_AllJoynBusObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynBusObject, &type_spec_AllJoynBusObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynBusObjectStoppedEventArgs = py::register_python_type(module.get(), type_name_AllJoynBusObjectStoppedEventArgs, &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynBusObjectStoppedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynBusObjectStoppedEventArgs, &type_spec_AllJoynBusObjectStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynBusObjectStoppedEventArgs, &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynCredentials = py::register_python_type(module.get(), type_name_AllJoynCredentials, &type_spec_AllJoynCredentials, object_bases.get(), nullptr);
-    if (!state->type_AllJoynCredentials)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentials, &type_spec_AllJoynCredentials, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentials, &type_spec_AllJoynCredentials, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynCredentialsRequestedEventArgs = py::register_python_type(module.get(), type_name_AllJoynCredentialsRequestedEventArgs, &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynCredentialsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsRequestedEventArgs, &type_spec_AllJoynCredentialsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsRequestedEventArgs, &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynCredentialsVerificationRequestedEventArgs = py::register_python_type(module.get(), type_name_AllJoynCredentialsVerificationRequestedEventArgs, &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynCredentialsVerificationRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsVerificationRequestedEventArgs, &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsVerificationRequestedEventArgs, &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynMessageInfo = py::register_python_type(module.get(), type_name_AllJoynMessageInfo, &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr);
-    if (!state->type_AllJoynMessageInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynMessageInfo, &type_spec_AllJoynMessageInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynMessageInfo, &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynProducerStoppedEventArgs = py::register_python_type(module.get(), type_name_AllJoynProducerStoppedEventArgs, &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynProducerStoppedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynProducerStoppedEventArgs, &type_spec_AllJoynProducerStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynProducerStoppedEventArgs, &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynServiceInfo = py::register_python_type(module.get(), type_name_AllJoynServiceInfo, &type_spec_AllJoynServiceInfo, object_bases.get(), nullptr);
-    if (!state->type_AllJoynServiceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfo, &type_spec_AllJoynServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfo, &type_spec_AllJoynServiceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynServiceInfoRemovedEventArgs = py::register_python_type(module.get(), type_name_AllJoynServiceInfoRemovedEventArgs, &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynServiceInfoRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfoRemovedEventArgs, &type_spec_AllJoynServiceInfoRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfoRemovedEventArgs, &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynSession = py::register_python_type(module.get(), type_name_AllJoynSession, &type_spec_AllJoynSession, object_bases.get(), nullptr);
-    if (!state->type_AllJoynSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynSession, &type_spec_AllJoynSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynSession, &type_spec_AllJoynSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynSessionJoinedEventArgs = py::register_python_type(module.get(), type_name_AllJoynSessionJoinedEventArgs, &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynSessionJoinedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionJoinedEventArgs, &type_spec_AllJoynSessionJoinedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionJoinedEventArgs, &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynSessionLostEventArgs = py::register_python_type(module.get(), type_name_AllJoynSessionLostEventArgs, &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynSessionLostEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionLostEventArgs, &type_spec_AllJoynSessionLostEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionLostEventArgs, &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynSessionMemberAddedEventArgs = py::register_python_type(module.get(), type_name_AllJoynSessionMemberAddedEventArgs, &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynSessionMemberAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberAddedEventArgs, &type_spec_AllJoynSessionMemberAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberAddedEventArgs, &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynSessionMemberRemovedEventArgs = py::register_python_type(module.get(), type_name_AllJoynSessionMemberRemovedEventArgs, &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynSessionMemberRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberRemovedEventArgs, &type_spec_AllJoynSessionMemberRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberRemovedEventArgs, &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5701,582 +5655,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_AllJoyn(void) noexcept
         return nullptr;
     }
 
-    state->type_AllJoynStatus = py::register_python_type(module.get(), type_name_AllJoynStatus, &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get()));
-    if (!state->type_AllJoynStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynStatus, &type_spec_AllJoynStatus, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynStatus, &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AllJoynWatcherStoppedEventArgs = py::register_python_type(module.get(), type_name_AllJoynWatcherStoppedEventArgs, &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AllJoynWatcherStoppedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AllJoynWatcherStoppedEventArgs, &type_spec_AllJoynWatcherStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AllJoynWatcherStoppedEventArgs, &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAllJoynAcceptSessionJoiner = py::register_python_type(module.get(), type_name_IAllJoynAcceptSessionJoiner, &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr);
-    if (!state->type_IAllJoynAcceptSessionJoiner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAllJoynAcceptSessionJoiner, &type_spec_IAllJoynAcceptSessionJoiner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAllJoynAcceptSessionJoiner, &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAllJoynProducer = py::register_python_type(module.get(), type_name_IAllJoynProducer, &type_spec_IAllJoynProducer, object_bases.get(), nullptr);
-    if (!state->type_IAllJoynProducer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAllJoynProducer, &type_spec_IAllJoynProducer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAllJoynProducer, &type_spec_IAllJoynProducer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynAboutData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynAboutData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynAboutDataView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynAcceptSessionJoinerEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynAuthenticationCompleteEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynBusAttachment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynBusAttachmentStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynBusObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynBusObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynBusObjectStoppedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynCredentials;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynCredentials is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynCredentialsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynCredentialsVerificationRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynMessageInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynProducerStoppedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynServiceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynServiceInfoRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSessionJoinedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSessionLostEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSessionMemberAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynSessionMemberRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AllJoynWatcherStoppedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAllJoynAcceptSessionJoiner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::AllJoyn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::AllJoyn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAllJoynProducer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::AllJoyn::IAllJoynProducer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

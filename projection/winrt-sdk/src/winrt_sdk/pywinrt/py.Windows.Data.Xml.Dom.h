@@ -72,128 +72,149 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::DtdEntity>
+    struct py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "DtdEntity";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::DtdNotation>
+    struct py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "DtdNotation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlAttribute";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlCDataSection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlComment>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlComment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlComment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocument>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlDocument";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlDocumentFragment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlDocumentType";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlDomImplementation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlElement>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlEntityReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlLoadSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlNamedNodeMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlNodeList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlProcessingInstruction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::XmlText>
+    struct py_type<winrt::Windows::Data::Xml::Dom::XmlText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "XmlText";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
+    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "IXmlCharacterData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNode>
+    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "IXmlNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
+    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "IXmlNodeSelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
+    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "IXmlNodeSerializer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Dom::IXmlText>
+    struct py_type<winrt::Windows::Data::Xml::Dom::IXmlText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.dom";
+        static constexpr const char* type_name = "IXmlText";
     };
 }

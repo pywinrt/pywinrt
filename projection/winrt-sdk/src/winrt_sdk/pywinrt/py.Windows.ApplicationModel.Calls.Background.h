@@ -82,38 +82,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneCallBlockedTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneCallOriginDataRequestTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneIncomingCallDismissedTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneIncomingCallNotificationTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneLineChangedTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
+        static constexpr const char* type_name = "PhoneNewVoicemailMessageTriggerDetails";
     };
 }

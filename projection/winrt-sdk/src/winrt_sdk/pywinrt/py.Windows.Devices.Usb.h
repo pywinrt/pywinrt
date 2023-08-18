@@ -118,134 +118,156 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbBulkInEndpointDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>
+    struct py_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbBulkInPipe";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbBulkOutEndpointDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>
+    struct py_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbBulkOutPipe";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbConfiguration>
+    struct py_type<winrt::Windows::Devices::Usb::UsbConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbConfigurationDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbControlRequestType>
+    struct py_type<winrt::Windows::Devices::Usb::UsbControlRequestType>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbControlRequestType";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbDevice>
+    struct py_type<winrt::Windows::Devices::Usb::UsbDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbDeviceClass>
+    struct py_type<winrt::Windows::Devices::Usb::UsbDeviceClass>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbDeviceClass";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>
+    struct py_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbDeviceClasses";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbDeviceDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbEndpointDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterface>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterface>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterface";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterfaceDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterfaceSetting";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterruptInEndpointDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterruptInEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterruptInPipe";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterruptOutEndpointDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>
+    struct py_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbInterruptOutPipe";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Usb::UsbSetupPacket>
+    struct py_type<winrt::Windows::Devices::Usb::UsbSetupPacket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.usb";
+        static constexpr const char* type_name = "UsbSetupPacket";
     };
 }

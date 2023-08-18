@@ -98,56 +98,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScanner>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScanner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScanner";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerAutoConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerFeederConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerFlatbedConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerPreviewResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerScanResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>
+    struct py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "IImageScannerFormatConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>
+    struct py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "IImageScannerSourceConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>
+    struct py_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.scanners";
+        static constexpr const char* type_name = "ImageScannerResolution";
     };
 }

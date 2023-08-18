@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input::Inking::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_CoreIncrementalInkStroke;
-        PyTypeObject* type_CoreInkIndependentInputSource;
-        PyTypeObject* type_CoreInkPresenterHost;
-        PyTypeObject* type_CoreWetStrokeUpdateEventArgs;
-        PyTypeObject* type_CoreWetStrokeUpdateSource;
-    };
-
     // ----- CoreIncrementalInkStroke class --------------------
     static constexpr const char* const type_name_CoreIncrementalInkStroke = "CoreIncrementalInkStroke";
 
@@ -1413,52 +1404,15 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Inking::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CoreIncrementalInkStroke);
-        Py_VISIT(state->type_CoreInkIndependentInputSource);
-        Py_VISIT(state->type_CoreInkPresenterHost);
-        Py_VISIT(state->type_CoreWetStrokeUpdateEventArgs);
-        Py_VISIT(state->type_CoreWetStrokeUpdateSource);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CoreIncrementalInkStroke);
-        Py_CLEAR(state->type_CoreInkIndependentInputSource);
-        Py_CLEAR(state->type_CoreInkPresenterHost);
-        Py_CLEAR(state->type_CoreWetStrokeUpdateEventArgs);
-        Py_CLEAR(state->type_CoreWetStrokeUpdateSource);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input_Inking_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input::Inking::Core
@@ -1474,7 +1428,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1487,154 +1441,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CoreIncrementalInkStroke = py::register_python_type(module.get(), type_name_CoreIncrementalInkStroke, &type_spec_CoreIncrementalInkStroke, object_bases.get(), nullptr);
-    if (!state->type_CoreIncrementalInkStroke)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreIncrementalInkStroke, &type_spec_CoreIncrementalInkStroke, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreIncrementalInkStroke, &type_spec_CoreIncrementalInkStroke, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInkIndependentInputSource = py::register_python_type(module.get(), type_name_CoreInkIndependentInputSource, &type_spec_CoreInkIndependentInputSource, object_bases.get(), nullptr);
-    if (!state->type_CoreInkIndependentInputSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInkIndependentInputSource, &type_spec_CoreInkIndependentInputSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInkIndependentInputSource, &type_spec_CoreInkIndependentInputSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInkPresenterHost = py::register_python_type(module.get(), type_name_CoreInkPresenterHost, &type_spec_CoreInkPresenterHost, object_bases.get(), nullptr);
-    if (!state->type_CoreInkPresenterHost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInkPresenterHost, &type_spec_CoreInkPresenterHost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInkPresenterHost, &type_spec_CoreInkPresenterHost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWetStrokeUpdateEventArgs = py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateEventArgs, &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreWetStrokeUpdateEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateEventArgs, &type_spec_CoreWetStrokeUpdateEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateEventArgs, &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWetStrokeUpdateSource = py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateSource, &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), nullptr);
-    if (!state->type_CoreWetStrokeUpdateSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateSource, &type_spec_CoreWetStrokeUpdateSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWetStrokeUpdateSource, &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreIncrementalInkStroke;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInkIndependentInputSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInkPresenterHost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWetStrokeUpdateEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWetStrokeUpdateSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

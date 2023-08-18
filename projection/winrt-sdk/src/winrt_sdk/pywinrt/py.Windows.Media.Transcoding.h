@@ -73,14 +73,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Transcoding::MediaTranscoder>
+    struct py_type<winrt::Windows::Media::Transcoding::MediaTranscoder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.transcoding";
+        static constexpr const char* type_name = "MediaTranscoder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>
+    struct py_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.transcoding";
+        static constexpr const char* type_name = "PrepareTranscodeResult";
     };
 }

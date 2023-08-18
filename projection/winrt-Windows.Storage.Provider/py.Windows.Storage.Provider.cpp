@@ -6,32 +6,6 @@
 
 namespace py::cpp::Windows::Storage::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_CachedFileUpdater;
-        PyTypeObject* type_CachedFileUpdaterUI;
-        PyTypeObject* type_FileUpdateRequest;
-        PyTypeObject* type_FileUpdateRequestDeferral;
-        PyTypeObject* type_FileUpdateRequestedEventArgs;
-        PyTypeObject* type_StorageProviderFileTypeInfo;
-        PyTypeObject* type_StorageProviderGetContentInfoForPathResult;
-        PyTypeObject* type_StorageProviderGetPathForContentUriResult;
-        PyTypeObject* type_StorageProviderItemProperties;
-        PyTypeObject* type_StorageProviderItemProperty;
-        PyTypeObject* type_StorageProviderItemPropertyDefinition;
-        PyTypeObject* type_StorageProviderMoreInfoUI;
-        PyTypeObject* type_StorageProviderQuotaUI;
-        PyTypeObject* type_StorageProviderStatusUI;
-        PyTypeObject* type_StorageProviderSyncRootInfo;
-        PyTypeObject* type_StorageProviderSyncRootManager;
-        PyTypeObject* type_IStorageProviderItemPropertySource;
-        PyTypeObject* type_IStorageProviderPropertyCapabilities;
-        PyTypeObject* type_IStorageProviderStatusUISource;
-        PyTypeObject* type_IStorageProviderStatusUISourceFactory;
-        PyTypeObject* type_IStorageProviderUICommand;
-        PyTypeObject* type_IStorageProviderUriSource;
-    };
-
     // ----- CachedFileUpdater class --------------------
     static constexpr const char* const type_name_CachedFileUpdater = "CachedFileUpdater";
 
@@ -4861,86 +4835,15 @@ namespace py::cpp::Windows::Storage::Provider
     PyDoc_STRVAR(module_doc, "Windows::Storage::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CachedFileUpdater);
-        Py_VISIT(state->type_CachedFileUpdaterUI);
-        Py_VISIT(state->type_FileUpdateRequest);
-        Py_VISIT(state->type_FileUpdateRequestDeferral);
-        Py_VISIT(state->type_FileUpdateRequestedEventArgs);
-        Py_VISIT(state->type_StorageProviderFileTypeInfo);
-        Py_VISIT(state->type_StorageProviderGetContentInfoForPathResult);
-        Py_VISIT(state->type_StorageProviderGetPathForContentUriResult);
-        Py_VISIT(state->type_StorageProviderItemProperties);
-        Py_VISIT(state->type_StorageProviderItemProperty);
-        Py_VISIT(state->type_StorageProviderItemPropertyDefinition);
-        Py_VISIT(state->type_StorageProviderMoreInfoUI);
-        Py_VISIT(state->type_StorageProviderQuotaUI);
-        Py_VISIT(state->type_StorageProviderStatusUI);
-        Py_VISIT(state->type_StorageProviderSyncRootInfo);
-        Py_VISIT(state->type_StorageProviderSyncRootManager);
-        Py_VISIT(state->type_IStorageProviderItemPropertySource);
-        Py_VISIT(state->type_IStorageProviderPropertyCapabilities);
-        Py_VISIT(state->type_IStorageProviderStatusUISource);
-        Py_VISIT(state->type_IStorageProviderStatusUISourceFactory);
-        Py_VISIT(state->type_IStorageProviderUICommand);
-        Py_VISIT(state->type_IStorageProviderUriSource);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CachedFileUpdater);
-        Py_CLEAR(state->type_CachedFileUpdaterUI);
-        Py_CLEAR(state->type_FileUpdateRequest);
-        Py_CLEAR(state->type_FileUpdateRequestDeferral);
-        Py_CLEAR(state->type_FileUpdateRequestedEventArgs);
-        Py_CLEAR(state->type_StorageProviderFileTypeInfo);
-        Py_CLEAR(state->type_StorageProviderGetContentInfoForPathResult);
-        Py_CLEAR(state->type_StorageProviderGetPathForContentUriResult);
-        Py_CLEAR(state->type_StorageProviderItemProperties);
-        Py_CLEAR(state->type_StorageProviderItemProperty);
-        Py_CLEAR(state->type_StorageProviderItemPropertyDefinition);
-        Py_CLEAR(state->type_StorageProviderMoreInfoUI);
-        Py_CLEAR(state->type_StorageProviderQuotaUI);
-        Py_CLEAR(state->type_StorageProviderStatusUI);
-        Py_CLEAR(state->type_StorageProviderSyncRootInfo);
-        Py_CLEAR(state->type_StorageProviderSyncRootManager);
-        Py_CLEAR(state->type_IStorageProviderItemPropertySource);
-        Py_CLEAR(state->type_IStorageProviderPropertyCapabilities);
-        Py_CLEAR(state->type_IStorageProviderStatusUISource);
-        Py_CLEAR(state->type_IStorageProviderStatusUISourceFactory);
-        Py_CLEAR(state->type_IStorageProviderUICommand);
-        Py_CLEAR(state->type_IStorageProviderUriSource);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::Provider
@@ -4956,7 +4859,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4969,647 +4872,204 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CachedFileUpdater = py::register_python_type(module.get(), type_name_CachedFileUpdater, &type_spec_CachedFileUpdater, object_bases.get(), nullptr);
-    if (!state->type_CachedFileUpdater)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdater, &type_spec_CachedFileUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdater, &type_spec_CachedFileUpdater, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CachedFileUpdaterUI = py::register_python_type(module.get(), type_name_CachedFileUpdaterUI, &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr);
-    if (!state->type_CachedFileUpdaterUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterUI, &type_spec_CachedFileUpdaterUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterUI, &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileUpdateRequest = py::register_python_type(module.get(), type_name_FileUpdateRequest, &type_spec_FileUpdateRequest, object_bases.get(), nullptr);
-    if (!state->type_FileUpdateRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequest, &type_spec_FileUpdateRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequest, &type_spec_FileUpdateRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileUpdateRequestDeferral = py::register_python_type(module.get(), type_name_FileUpdateRequestDeferral, &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_FileUpdateRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequestDeferral, &type_spec_FileUpdateRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequestDeferral, &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileUpdateRequestedEventArgs = py::register_python_type(module.get(), type_name_FileUpdateRequestedEventArgs, &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileUpdateRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequestedEventArgs, &type_spec_FileUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileUpdateRequestedEventArgs, &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderFileTypeInfo = py::register_python_type(module.get(), type_name_StorageProviderFileTypeInfo, &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderFileTypeInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderFileTypeInfo, &type_spec_StorageProviderFileTypeInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderFileTypeInfo, &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderGetContentInfoForPathResult = py::register_python_type(module.get(), type_name_StorageProviderGetContentInfoForPathResult, &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderGetContentInfoForPathResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderGetContentInfoForPathResult, &type_spec_StorageProviderGetContentInfoForPathResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderGetContentInfoForPathResult, &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderGetPathForContentUriResult = py::register_python_type(module.get(), type_name_StorageProviderGetPathForContentUriResult, &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderGetPathForContentUriResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderGetPathForContentUriResult, &type_spec_StorageProviderGetPathForContentUriResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderGetPathForContentUriResult, &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderItemProperties = py::register_python_type(module.get(), type_name_StorageProviderItemProperties, &type_spec_StorageProviderItemProperties, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderItemProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperties, &type_spec_StorageProviderItemProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperties, &type_spec_StorageProviderItemProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderItemProperty = py::register_python_type(module.get(), type_name_StorageProviderItemProperty, &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderItemProperty)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperty, &type_spec_StorageProviderItemProperty, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperty, &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderItemPropertyDefinition = py::register_python_type(module.get(), type_name_StorageProviderItemPropertyDefinition, &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderItemPropertyDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemPropertyDefinition, &type_spec_StorageProviderItemPropertyDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderItemPropertyDefinition, &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderMoreInfoUI = py::register_python_type(module.get(), type_name_StorageProviderMoreInfoUI, &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderMoreInfoUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderMoreInfoUI, &type_spec_StorageProviderMoreInfoUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderMoreInfoUI, &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderQuotaUI = py::register_python_type(module.get(), type_name_StorageProviderQuotaUI, &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderQuotaUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderQuotaUI, &type_spec_StorageProviderQuotaUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderQuotaUI, &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderStatusUI = py::register_python_type(module.get(), type_name_StorageProviderStatusUI, &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderStatusUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderStatusUI, &type_spec_StorageProviderStatusUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderStatusUI, &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderSyncRootInfo = py::register_python_type(module.get(), type_name_StorageProviderSyncRootInfo, &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderSyncRootInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootInfo, &type_spec_StorageProviderSyncRootInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootInfo, &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageProviderSyncRootManager = py::register_python_type(module.get(), type_name_StorageProviderSyncRootManager, &type_spec_StorageProviderSyncRootManager, object_bases.get(), nullptr);
-    if (!state->type_StorageProviderSyncRootManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootManager, &type_spec_StorageProviderSyncRootManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootManager, &type_spec_StorageProviderSyncRootManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderItemPropertySource = py::register_python_type(module.get(), type_name_IStorageProviderItemPropertySource, &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderItemPropertySource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderItemPropertySource, &type_spec_IStorageProviderItemPropertySource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderItemPropertySource, &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderPropertyCapabilities = py::register_python_type(module.get(), type_name_IStorageProviderPropertyCapabilities, &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderPropertyCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderPropertyCapabilities, &type_spec_IStorageProviderPropertyCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderPropertyCapabilities, &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderStatusUISource = py::register_python_type(module.get(), type_name_IStorageProviderStatusUISource, &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderStatusUISource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISource, &type_spec_IStorageProviderStatusUISource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISource, &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderStatusUISourceFactory = py::register_python_type(module.get(), type_name_IStorageProviderStatusUISourceFactory, &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderStatusUISourceFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISourceFactory, &type_spec_IStorageProviderStatusUISourceFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISourceFactory, &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderUICommand = py::register_python_type(module.get(), type_name_IStorageProviderUICommand, &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderUICommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderUICommand, &type_spec_IStorageProviderUICommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderUICommand, &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageProviderUriSource = py::register_python_type(module.get(), type_name_IStorageProviderUriSource, &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr);
-    if (!state->type_IStorageProviderUriSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageProviderUriSource, &type_spec_IStorageProviderUriSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageProviderUriSource, &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::CachedFileUpdater>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CachedFileUpdater;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::CachedFileUpdater is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CachedFileUpdaterUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::CachedFileUpdaterUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileUpdateRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::FileUpdateRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileUpdateRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::FileUpdateRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileUpdateRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderFileTypeInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderGetContentInfoForPathResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderGetPathForContentUriResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderItemProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderItemProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemProperty>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderItemProperty;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderItemProperty is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderItemPropertyDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderMoreInfoUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderQuotaUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderQuotaUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderStatusUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderStatusUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderStatusUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderSyncRootInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageProviderSyncRootManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::StorageProviderSyncRootManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderItemPropertySource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderPropertyCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderStatusUISource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderStatusUISource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderStatusUISourceFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderUICommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderUICommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageProviderUriSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Provider::IStorageProviderUriSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

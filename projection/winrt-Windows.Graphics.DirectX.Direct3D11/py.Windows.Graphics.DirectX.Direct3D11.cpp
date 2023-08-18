@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
-    struct module_state
-    {
-        PyTypeObject* type_IDirect3DDevice;
-        PyTypeObject* type_IDirect3DSurface;
-        PyTypeObject* type_Direct3DMultisampleDescription;
-        PyTypeObject* type_Direct3DSurfaceDescription;
-    };
-
     // ----- IDirect3DDevice interface --------------------
     static constexpr const char* const type_name_IDirect3DDevice = "IDirect3DDevice";
 
@@ -665,50 +657,15 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     PyDoc_STRVAR(module_doc, "Windows::Graphics::DirectX::Direct3D11");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IDirect3DDevice);
-        Py_VISIT(state->type_IDirect3DSurface);
-        Py_VISIT(state->type_Direct3DMultisampleDescription);
-        Py_VISIT(state->type_Direct3DSurfaceDescription);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IDirect3DDevice);
-        Py_CLEAR(state->type_IDirect3DSurface);
-        Py_CLEAR(state->type_Direct3DMultisampleDescription);
-        Py_CLEAR(state->type_Direct3DSurfaceDescription);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_DirectX_Direct3D11",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::DirectX::Direct3D11
@@ -724,7 +681,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_DirectX_Direct3D11(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -737,125 +694,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_DirectX_Direct3D11(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IDirect3DDevice = py::register_python_type(module.get(), type_name_IDirect3DDevice, &type_spec_IDirect3DDevice, object_bases.get(), nullptr);
-    if (!state->type_IDirect3DDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDirect3DDevice, &type_spec_IDirect3DDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDirect3DDevice, &type_spec_IDirect3DDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDirect3DSurface = py::register_python_type(module.get(), type_name_IDirect3DSurface, &type_spec_IDirect3DSurface, object_bases.get(), nullptr);
-    if (!state->type_IDirect3DSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDirect3DSurface, &type_spec_IDirect3DSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDirect3DSurface, &type_spec_IDirect3DSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Direct3DMultisampleDescription = py::register_python_type(module.get(), type_name_Direct3DMultisampleDescription, &type_spec_Direct3DMultisampleDescription, nullptr, nullptr);
-    if (!state->type_Direct3DMultisampleDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Direct3DMultisampleDescription, &type_spec_Direct3DMultisampleDescription, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Direct3DMultisampleDescription, &type_spec_Direct3DMultisampleDescription, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Direct3DSurfaceDescription = py::register_python_type(module.get(), type_name_Direct3DSurfaceDescription, &type_spec_Direct3DSurfaceDescription, nullptr, nullptr);
-    if (!state->type_Direct3DSurfaceDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Direct3DSurfaceDescription, &type_spec_Direct3DSurfaceDescription, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Direct3DSurfaceDescription, &type_spec_Direct3DSurfaceDescription, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::DirectX::Direct3D11;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::DirectX::Direct3D11");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDirect3DDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::DirectX::Direct3D11;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::DirectX::Direct3D11");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDirect3DSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::DirectX::Direct3D11;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::DirectX::Direct3D11");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Direct3DMultisampleDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::DirectX::Direct3D11;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::DirectX::Direct3D11");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Direct3DSurfaceDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

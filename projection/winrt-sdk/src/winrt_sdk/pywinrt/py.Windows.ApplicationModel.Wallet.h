@@ -104,50 +104,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletBarcode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItem>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletItemCustomProperty";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletItemStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletManager>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletRelevantLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletTransaction>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletTransaction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletTransaction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletVerb>
+    struct py_type<winrt::Windows::ApplicationModel::Wallet::WalletVerb>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet";
+        static constexpr const char* type_name = "WalletVerb";
     };
 }

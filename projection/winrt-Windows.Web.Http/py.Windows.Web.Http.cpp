@@ -6,30 +6,6 @@
 
 namespace py::cpp::Windows::Web::Http
 {
-    struct module_state
-    {
-        PyTypeObject* type_HttpBufferContent;
-        PyTypeObject* type_HttpClient;
-        PyTypeObject* type_HttpCookie;
-        PyTypeObject* type_HttpCookieCollection;
-        PyTypeObject* type_HttpCookieManager;
-        PyTypeObject* type_HttpFormUrlEncodedContent;
-        PyTypeObject* type_HttpGetBufferResult;
-        PyTypeObject* type_HttpGetInputStreamResult;
-        PyTypeObject* type_HttpGetStringResult;
-        PyTypeObject* type_HttpMethod;
-        PyTypeObject* type_HttpMultipartContent;
-        PyTypeObject* type_HttpMultipartFormDataContent;
-        PyTypeObject* type_HttpRequestMessage;
-        PyTypeObject* type_HttpRequestResult;
-        PyTypeObject* type_HttpResponseMessage;
-        PyTypeObject* type_HttpStreamContent;
-        PyTypeObject* type_HttpStringContent;
-        PyTypeObject* type_HttpTransportInformation;
-        PyTypeObject* type_IHttpContent;
-        PyTypeObject* type_HttpProgress;
-    };
-
     // ----- HttpBufferContent class --------------------
     static constexpr const char* const type_name_HttpBufferContent = "HttpBufferContent";
 
@@ -7861,82 +7837,15 @@ namespace py::cpp::Windows::Web::Http
     PyDoc_STRVAR(module_doc, "Windows::Web::Http");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HttpBufferContent);
-        Py_VISIT(state->type_HttpClient);
-        Py_VISIT(state->type_HttpCookie);
-        Py_VISIT(state->type_HttpCookieCollection);
-        Py_VISIT(state->type_HttpCookieManager);
-        Py_VISIT(state->type_HttpFormUrlEncodedContent);
-        Py_VISIT(state->type_HttpGetBufferResult);
-        Py_VISIT(state->type_HttpGetInputStreamResult);
-        Py_VISIT(state->type_HttpGetStringResult);
-        Py_VISIT(state->type_HttpMethod);
-        Py_VISIT(state->type_HttpMultipartContent);
-        Py_VISIT(state->type_HttpMultipartFormDataContent);
-        Py_VISIT(state->type_HttpRequestMessage);
-        Py_VISIT(state->type_HttpRequestResult);
-        Py_VISIT(state->type_HttpResponseMessage);
-        Py_VISIT(state->type_HttpStreamContent);
-        Py_VISIT(state->type_HttpStringContent);
-        Py_VISIT(state->type_HttpTransportInformation);
-        Py_VISIT(state->type_IHttpContent);
-        Py_VISIT(state->type_HttpProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HttpBufferContent);
-        Py_CLEAR(state->type_HttpClient);
-        Py_CLEAR(state->type_HttpCookie);
-        Py_CLEAR(state->type_HttpCookieCollection);
-        Py_CLEAR(state->type_HttpCookieManager);
-        Py_CLEAR(state->type_HttpFormUrlEncodedContent);
-        Py_CLEAR(state->type_HttpGetBufferResult);
-        Py_CLEAR(state->type_HttpGetInputStreamResult);
-        Py_CLEAR(state->type_HttpGetStringResult);
-        Py_CLEAR(state->type_HttpMethod);
-        Py_CLEAR(state->type_HttpMultipartContent);
-        Py_CLEAR(state->type_HttpMultipartFormDataContent);
-        Py_CLEAR(state->type_HttpRequestMessage);
-        Py_CLEAR(state->type_HttpRequestResult);
-        Py_CLEAR(state->type_HttpResponseMessage);
-        Py_CLEAR(state->type_HttpStreamContent);
-        Py_CLEAR(state->type_HttpStringContent);
-        Py_CLEAR(state->type_HttpTransportInformation);
-        Py_CLEAR(state->type_IHttpContent);
-        Py_CLEAR(state->type_HttpProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Web_Http",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Web::Http
@@ -7952,7 +7861,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7965,59 +7874,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HttpBufferContent = py::register_python_type(module.get(), type_name_HttpBufferContent, &type_spec_HttpBufferContent, object_bases.get(), nullptr);
-    if (!state->type_HttpBufferContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpBufferContent, &type_spec_HttpBufferContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpBufferContent, &type_spec_HttpBufferContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpClient = py::register_python_type(module.get(), type_name_HttpClient, &type_spec_HttpClient, object_bases.get(), nullptr);
-    if (!state->type_HttpClient)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpClient, &type_spec_HttpClient, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpClient, &type_spec_HttpClient, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCookie = py::register_python_type(module.get(), type_name_HttpCookie, &type_spec_HttpCookie, object_bases.get(), nullptr);
-    if (!state->type_HttpCookie)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCookie, &type_spec_HttpCookie, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCookie, &type_spec_HttpCookie, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCookieCollection = py::register_python_type(module.get(), type_name_HttpCookieCollection, &type_spec_HttpCookieCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpCookieCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCookieCollection, &type_spec_HttpCookieCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCookieCollection, &type_spec_HttpCookieCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCookieManager = py::register_python_type(module.get(), type_name_HttpCookieManager, &type_spec_HttpCookieManager, object_bases.get(), nullptr);
-    if (!state->type_HttpCookieManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCookieManager, &type_spec_HttpCookieManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCookieManager, &type_spec_HttpCookieManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpFormUrlEncodedContent = py::register_python_type(module.get(), type_name_HttpFormUrlEncodedContent, &type_spec_HttpFormUrlEncodedContent, object_bases.get(), nullptr);
-    if (!state->type_HttpFormUrlEncodedContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpFormUrlEncodedContent, &type_spec_HttpFormUrlEncodedContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpFormUrlEncodedContent, &type_spec_HttpFormUrlEncodedContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpGetBufferResult = py::register_python_type(module.get(), type_name_HttpGetBufferResult, &type_spec_HttpGetBufferResult, object_bases.get(), nullptr);
-    if (!state->type_HttpGetBufferResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpGetBufferResult, &type_spec_HttpGetBufferResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpGetBufferResult, &type_spec_HttpGetBufferResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpGetInputStreamResult = py::register_python_type(module.get(), type_name_HttpGetInputStreamResult, &type_spec_HttpGetInputStreamResult, object_bases.get(), nullptr);
-    if (!state->type_HttpGetInputStreamResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpGetInputStreamResult, &type_spec_HttpGetInputStreamResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpGetInputStreamResult, &type_spec_HttpGetInputStreamResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpGetStringResult = py::register_python_type(module.get(), type_name_HttpGetStringResult, &type_spec_HttpGetStringResult, object_bases.get(), nullptr);
-    if (!state->type_HttpGetStringResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpGetStringResult, &type_spec_HttpGetStringResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpGetStringResult, &type_spec_HttpGetStringResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8028,532 +7961,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http(void) noexcept
         return nullptr;
     }
 
-    state->type_HttpMethod = py::register_python_type(module.get(), type_name_HttpMethod, &type_spec_HttpMethod, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMethod_Meta.get()));
-    if (!state->type_HttpMethod)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMethod, &type_spec_HttpMethod, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMethod_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMethod, &type_spec_HttpMethod, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMethod_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMultipartContent = py::register_python_type(module.get(), type_name_HttpMultipartContent, &type_spec_HttpMultipartContent, object_bases.get(), nullptr);
-    if (!state->type_HttpMultipartContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMultipartContent, &type_spec_HttpMultipartContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMultipartContent, &type_spec_HttpMultipartContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMultipartFormDataContent = py::register_python_type(module.get(), type_name_HttpMultipartFormDataContent, &type_spec_HttpMultipartFormDataContent, object_bases.get(), nullptr);
-    if (!state->type_HttpMultipartFormDataContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMultipartFormDataContent, &type_spec_HttpMultipartFormDataContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMultipartFormDataContent, &type_spec_HttpMultipartFormDataContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpRequestMessage = py::register_python_type(module.get(), type_name_HttpRequestMessage, &type_spec_HttpRequestMessage, object_bases.get(), nullptr);
-    if (!state->type_HttpRequestMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpRequestMessage, &type_spec_HttpRequestMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpRequestMessage, &type_spec_HttpRequestMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpRequestResult = py::register_python_type(module.get(), type_name_HttpRequestResult, &type_spec_HttpRequestResult, object_bases.get(), nullptr);
-    if (!state->type_HttpRequestResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpRequestResult, &type_spec_HttpRequestResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpRequestResult, &type_spec_HttpRequestResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpResponseMessage = py::register_python_type(module.get(), type_name_HttpResponseMessage, &type_spec_HttpResponseMessage, object_bases.get(), nullptr);
-    if (!state->type_HttpResponseMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpResponseMessage, &type_spec_HttpResponseMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpResponseMessage, &type_spec_HttpResponseMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpStreamContent = py::register_python_type(module.get(), type_name_HttpStreamContent, &type_spec_HttpStreamContent, object_bases.get(), nullptr);
-    if (!state->type_HttpStreamContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpStreamContent, &type_spec_HttpStreamContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpStreamContent, &type_spec_HttpStreamContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpStringContent = py::register_python_type(module.get(), type_name_HttpStringContent, &type_spec_HttpStringContent, object_bases.get(), nullptr);
-    if (!state->type_HttpStringContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpStringContent, &type_spec_HttpStringContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpStringContent, &type_spec_HttpStringContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpTransportInformation = py::register_python_type(module.get(), type_name_HttpTransportInformation, &type_spec_HttpTransportInformation, object_bases.get(), nullptr);
-    if (!state->type_HttpTransportInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpTransportInformation, &type_spec_HttpTransportInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpTransportInformation, &type_spec_HttpTransportInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IHttpContent = py::register_python_type(module.get(), type_name_IHttpContent, &type_spec_IHttpContent, object_bases.get(), nullptr);
-    if (!state->type_IHttpContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IHttpContent, &type_spec_IHttpContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IHttpContent, &type_spec_IHttpContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpProgress = py::register_python_type(module.get(), type_name_HttpProgress, &type_spec_HttpProgress, nullptr, nullptr);
-    if (!state->type_HttpProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpProgress, &type_spec_HttpProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpProgress, &type_spec_HttpProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpBufferContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpBufferContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpBufferContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpClient>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpClient;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpClient is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpCookie>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookie;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpCookie is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpCookieCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookieCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpCookieCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpCookieManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookieManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpCookieManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpFormUrlEncodedContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpFormUrlEncodedContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpGetBufferResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpGetBufferResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpGetBufferResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpGetInputStreamResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpGetInputStreamResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpGetStringResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpGetStringResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpGetStringResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpMethod>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMethod;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpMethod is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpMultipartContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMultipartContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpMultipartContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpMultipartFormDataContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMultipartFormDataContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpMultipartFormDataContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpRequestMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpRequestMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpRequestMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpRequestResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpRequestResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpRequestResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpResponseMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpResponseMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpResponseMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpStreamContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpStreamContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpStreamContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpStringContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpStringContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpStringContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpTransportInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpTransportInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpTransportInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::IHttpContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IHttpContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::IHttpContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::HttpProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::HttpProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

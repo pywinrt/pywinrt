@@ -6,30 +6,6 @@
 
 namespace py::cpp::Windows::Networking::BackgroundTransfer
 {
-    struct module_state
-    {
-        PyTypeObject* type_BackgroundDownloader;
-        PyTypeObject* type_BackgroundTransferCompletionGroup;
-        PyTypeObject* type_BackgroundTransferCompletionGroupTriggerDetails;
-        PyTypeObject* type_BackgroundTransferContentPart;
-        PyTypeObject* type_BackgroundTransferError;
-        PyTypeObject* type_BackgroundTransferGroup;
-        PyTypeObject* type_BackgroundTransferRangesDownloadedEventArgs;
-        PyTypeObject* type_BackgroundUploader;
-        PyTypeObject* type_ContentPrefetcher;
-        PyTypeObject* type_DownloadOperation;
-        PyTypeObject* type_ResponseInformation;
-        PyTypeObject* type_UnconstrainedTransferRequestResult;
-        PyTypeObject* type_UploadOperation;
-        PyTypeObject* type_IBackgroundTransferBase;
-        PyTypeObject* type_IBackgroundTransferContentPartFactory;
-        PyTypeObject* type_IBackgroundTransferOperation;
-        PyTypeObject* type_IBackgroundTransferOperationPriority;
-        PyTypeObject* type_BackgroundDownloadProgress;
-        PyTypeObject* type_BackgroundTransferFileRange;
-        PyTypeObject* type_BackgroundUploadProgress;
-    };
-
     // ----- BackgroundDownloader class --------------------
     static constexpr const char* const type_name_BackgroundDownloader = "BackgroundDownloader";
 
@@ -5981,82 +5957,15 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     PyDoc_STRVAR(module_doc, "Windows::Networking::BackgroundTransfer");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BackgroundDownloader);
-        Py_VISIT(state->type_BackgroundTransferCompletionGroup);
-        Py_VISIT(state->type_BackgroundTransferCompletionGroupTriggerDetails);
-        Py_VISIT(state->type_BackgroundTransferContentPart);
-        Py_VISIT(state->type_BackgroundTransferError);
-        Py_VISIT(state->type_BackgroundTransferGroup);
-        Py_VISIT(state->type_BackgroundTransferRangesDownloadedEventArgs);
-        Py_VISIT(state->type_BackgroundUploader);
-        Py_VISIT(state->type_ContentPrefetcher);
-        Py_VISIT(state->type_DownloadOperation);
-        Py_VISIT(state->type_ResponseInformation);
-        Py_VISIT(state->type_UnconstrainedTransferRequestResult);
-        Py_VISIT(state->type_UploadOperation);
-        Py_VISIT(state->type_IBackgroundTransferBase);
-        Py_VISIT(state->type_IBackgroundTransferContentPartFactory);
-        Py_VISIT(state->type_IBackgroundTransferOperation);
-        Py_VISIT(state->type_IBackgroundTransferOperationPriority);
-        Py_VISIT(state->type_BackgroundDownloadProgress);
-        Py_VISIT(state->type_BackgroundTransferFileRange);
-        Py_VISIT(state->type_BackgroundUploadProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BackgroundDownloader);
-        Py_CLEAR(state->type_BackgroundTransferCompletionGroup);
-        Py_CLEAR(state->type_BackgroundTransferCompletionGroupTriggerDetails);
-        Py_CLEAR(state->type_BackgroundTransferContentPart);
-        Py_CLEAR(state->type_BackgroundTransferError);
-        Py_CLEAR(state->type_BackgroundTransferGroup);
-        Py_CLEAR(state->type_BackgroundTransferRangesDownloadedEventArgs);
-        Py_CLEAR(state->type_BackgroundUploader);
-        Py_CLEAR(state->type_ContentPrefetcher);
-        Py_CLEAR(state->type_DownloadOperation);
-        Py_CLEAR(state->type_ResponseInformation);
-        Py_CLEAR(state->type_UnconstrainedTransferRequestResult);
-        Py_CLEAR(state->type_UploadOperation);
-        Py_CLEAR(state->type_IBackgroundTransferBase);
-        Py_CLEAR(state->type_IBackgroundTransferContentPartFactory);
-        Py_CLEAR(state->type_IBackgroundTransferOperation);
-        Py_CLEAR(state->type_IBackgroundTransferOperationPriority);
-        Py_CLEAR(state->type_BackgroundDownloadProgress);
-        Py_CLEAR(state->type_BackgroundTransferFileRange);
-        Py_CLEAR(state->type_BackgroundUploadProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_BackgroundTransfer",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::BackgroundTransfer
@@ -6072,7 +5981,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_BackgroundTransfer(void) noexcep
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6085,53 +5994,74 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_BackgroundTransfer(void) noexcep
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BackgroundDownloader = py::register_python_type(module.get(), type_name_BackgroundDownloader, &type_spec_BackgroundDownloader, object_bases.get(), nullptr);
-    if (!state->type_BackgroundDownloader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundDownloader, &type_spec_BackgroundDownloader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundDownloader, &type_spec_BackgroundDownloader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferCompletionGroup = py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroup, &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferCompletionGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroup, &type_spec_BackgroundTransferCompletionGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroup, &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferCompletionGroupTriggerDetails = py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroupTriggerDetails, &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferCompletionGroupTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroupTriggerDetails, &type_spec_BackgroundTransferCompletionGroupTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroupTriggerDetails, &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferContentPart = py::register_python_type(module.get(), type_name_BackgroundTransferContentPart, &type_spec_BackgroundTransferContentPart, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferContentPart)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferContentPart, &type_spec_BackgroundTransferContentPart, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferContentPart, &type_spec_BackgroundTransferContentPart, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferError = py::register_python_type(module.get(), type_name_BackgroundTransferError, &type_spec_BackgroundTransferError, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferError, &type_spec_BackgroundTransferError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferError, &type_spec_BackgroundTransferError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferGroup = py::register_python_type(module.get(), type_name_BackgroundTransferGroup, &type_spec_BackgroundTransferGroup, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferGroup, &type_spec_BackgroundTransferGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferGroup, &type_spec_BackgroundTransferGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferRangesDownloadedEventArgs = py::register_python_type(module.get(), type_name_BackgroundTransferRangesDownloadedEventArgs, &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTransferRangesDownloadedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferRangesDownloadedEventArgs, &type_spec_BackgroundTransferRangesDownloadedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferRangesDownloadedEventArgs, &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundUploader = py::register_python_type(module.get(), type_name_BackgroundUploader, &type_spec_BackgroundUploader, object_bases.get(), nullptr);
-    if (!state->type_BackgroundUploader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundUploader, &type_spec_BackgroundUploader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundUploader, &type_spec_BackgroundUploader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6142,538 +6072,114 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_BackgroundTransfer(void) noexcep
         return nullptr;
     }
 
-    state->type_ContentPrefetcher = py::register_python_type(module.get(), type_name_ContentPrefetcher, &type_spec_ContentPrefetcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get()));
-    if (!state->type_ContentPrefetcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentPrefetcher, &type_spec_ContentPrefetcher, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentPrefetcher, &type_spec_ContentPrefetcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DownloadOperation = py::register_python_type(module.get(), type_name_DownloadOperation, &type_spec_DownloadOperation, object_bases.get(), nullptr);
-    if (!state->type_DownloadOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DownloadOperation, &type_spec_DownloadOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DownloadOperation, &type_spec_DownloadOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResponseInformation = py::register_python_type(module.get(), type_name_ResponseInformation, &type_spec_ResponseInformation, object_bases.get(), nullptr);
-    if (!state->type_ResponseInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResponseInformation, &type_spec_ResponseInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResponseInformation, &type_spec_ResponseInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnconstrainedTransferRequestResult = py::register_python_type(module.get(), type_name_UnconstrainedTransferRequestResult, &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), nullptr);
-    if (!state->type_UnconstrainedTransferRequestResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnconstrainedTransferRequestResult, &type_spec_UnconstrainedTransferRequestResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnconstrainedTransferRequestResult, &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UploadOperation = py::register_python_type(module.get(), type_name_UploadOperation, &type_spec_UploadOperation, object_bases.get(), nullptr);
-    if (!state->type_UploadOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UploadOperation, &type_spec_UploadOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UploadOperation, &type_spec_UploadOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTransferBase = py::register_python_type(module.get(), type_name_IBackgroundTransferBase, &type_spec_IBackgroundTransferBase, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTransferBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferBase, &type_spec_IBackgroundTransferBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferBase, &type_spec_IBackgroundTransferBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTransferContentPartFactory = py::register_python_type(module.get(), type_name_IBackgroundTransferContentPartFactory, &type_spec_IBackgroundTransferContentPartFactory, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTransferContentPartFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferContentPartFactory, &type_spec_IBackgroundTransferContentPartFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferContentPartFactory, &type_spec_IBackgroundTransferContentPartFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTransferOperation = py::register_python_type(module.get(), type_name_IBackgroundTransferOperation, &type_spec_IBackgroundTransferOperation, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTransferOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperation, &type_spec_IBackgroundTransferOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperation, &type_spec_IBackgroundTransferOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTransferOperationPriority = py::register_python_type(module.get(), type_name_IBackgroundTransferOperationPriority, &type_spec_IBackgroundTransferOperationPriority, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTransferOperationPriority)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperationPriority, &type_spec_IBackgroundTransferOperationPriority, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperationPriority, &type_spec_IBackgroundTransferOperationPriority, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundDownloadProgress = py::register_python_type(module.get(), type_name_BackgroundDownloadProgress, &type_spec_BackgroundDownloadProgress, nullptr, nullptr);
-    if (!state->type_BackgroundDownloadProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundDownloadProgress, &type_spec_BackgroundDownloadProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundDownloadProgress, &type_spec_BackgroundDownloadProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTransferFileRange = py::register_python_type(module.get(), type_name_BackgroundTransferFileRange, &type_spec_BackgroundTransferFileRange, nullptr, nullptr);
-    if (!state->type_BackgroundTransferFileRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferFileRange, &type_spec_BackgroundTransferFileRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTransferFileRange, &type_spec_BackgroundTransferFileRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundUploadProgress = py::register_python_type(module.get(), type_name_BackgroundUploadProgress, &type_spec_BackgroundUploadProgress, nullptr, nullptr);
-    if (!state->type_BackgroundUploadProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundUploadProgress, &type_spec_BackgroundUploadProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundUploadProgress, &type_spec_BackgroundUploadProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundDownloader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferCompletionGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferCompletionGroupTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferContentPart;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferRangesDownloadedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundUploader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentPrefetcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DownloadOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::DownloadOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResponseInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::ResponseInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnconstrainedTransferRequestResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UploadOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::UploadOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTransferBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTransferContentPartFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTransferOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTransferOperationPriority;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundDownloadProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTransferFileRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::BackgroundTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::BackgroundTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundUploadProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

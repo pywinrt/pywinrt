@@ -6,54 +6,6 @@
 
 namespace py::cpp::Windows::Networking::Vpn
 {
-    struct module_state
-    {
-        PyTypeObject* type_VpnAppId;
-        PyTypeObject* type_VpnChannel;
-        PyTypeObject* type_VpnChannelActivityEventArgs;
-        PyTypeObject* type_VpnChannelActivityStateChangedArgs;
-        PyTypeObject* type_VpnChannelConfiguration;
-        PyTypeObject* type_VpnCredential;
-        PyTypeObject* type_VpnCustomCheckBox;
-        PyTypeObject* type_VpnCustomComboBox;
-        PyTypeObject* type_VpnCustomEditBox;
-        PyTypeObject* type_VpnCustomErrorBox;
-        PyTypeObject* type_VpnCustomPromptBooleanInput;
-        PyTypeObject* type_VpnCustomPromptOptionSelector;
-        PyTypeObject* type_VpnCustomPromptText;
-        PyTypeObject* type_VpnCustomPromptTextInput;
-        PyTypeObject* type_VpnCustomTextBox;
-        PyTypeObject* type_VpnDomainNameAssignment;
-        PyTypeObject* type_VpnDomainNameInfo;
-        PyTypeObject* type_VpnForegroundActivatedEventArgs;
-        PyTypeObject* type_VpnForegroundActivationOperation;
-        PyTypeObject* type_VpnInterfaceId;
-        PyTypeObject* type_VpnManagementAgent;
-        PyTypeObject* type_VpnNamespaceAssignment;
-        PyTypeObject* type_VpnNamespaceInfo;
-        PyTypeObject* type_VpnNativeProfile;
-        PyTypeObject* type_VpnPacketBuffer;
-        PyTypeObject* type_VpnPacketBufferList;
-        PyTypeObject* type_VpnPickedCredential;
-        PyTypeObject* type_VpnPlugInProfile;
-        PyTypeObject* type_VpnRoute;
-        PyTypeObject* type_VpnRouteAssignment;
-        PyTypeObject* type_VpnSystemHealth;
-        PyTypeObject* type_VpnTrafficFilter;
-        PyTypeObject* type_VpnTrafficFilterAssignment;
-        PyTypeObject* type_IVpnChannelStatics;
-        PyTypeObject* type_IVpnCredential;
-        PyTypeObject* type_IVpnCustomPrompt;
-        PyTypeObject* type_IVpnCustomPromptElement;
-        PyTypeObject* type_IVpnDomainNameInfoFactory;
-        PyTypeObject* type_IVpnInterfaceIdFactory;
-        PyTypeObject* type_IVpnNamespaceInfoFactory;
-        PyTypeObject* type_IVpnPacketBufferFactory;
-        PyTypeObject* type_IVpnPlugIn;
-        PyTypeObject* type_IVpnProfile;
-        PyTypeObject* type_IVpnRouteFactory;
-    };
-
     // ----- VpnAppId class --------------------
     static constexpr const char* const type_name_VpnAppId = "VpnAppId";
 
@@ -11413,130 +11365,15 @@ namespace py::cpp::Windows::Networking::Vpn
     PyDoc_STRVAR(module_doc, "Windows::Networking::Vpn");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_VpnAppId);
-        Py_VISIT(state->type_VpnChannel);
-        Py_VISIT(state->type_VpnChannelActivityEventArgs);
-        Py_VISIT(state->type_VpnChannelActivityStateChangedArgs);
-        Py_VISIT(state->type_VpnChannelConfiguration);
-        Py_VISIT(state->type_VpnCredential);
-        Py_VISIT(state->type_VpnCustomCheckBox);
-        Py_VISIT(state->type_VpnCustomComboBox);
-        Py_VISIT(state->type_VpnCustomEditBox);
-        Py_VISIT(state->type_VpnCustomErrorBox);
-        Py_VISIT(state->type_VpnCustomPromptBooleanInput);
-        Py_VISIT(state->type_VpnCustomPromptOptionSelector);
-        Py_VISIT(state->type_VpnCustomPromptText);
-        Py_VISIT(state->type_VpnCustomPromptTextInput);
-        Py_VISIT(state->type_VpnCustomTextBox);
-        Py_VISIT(state->type_VpnDomainNameAssignment);
-        Py_VISIT(state->type_VpnDomainNameInfo);
-        Py_VISIT(state->type_VpnForegroundActivatedEventArgs);
-        Py_VISIT(state->type_VpnForegroundActivationOperation);
-        Py_VISIT(state->type_VpnInterfaceId);
-        Py_VISIT(state->type_VpnManagementAgent);
-        Py_VISIT(state->type_VpnNamespaceAssignment);
-        Py_VISIT(state->type_VpnNamespaceInfo);
-        Py_VISIT(state->type_VpnNativeProfile);
-        Py_VISIT(state->type_VpnPacketBuffer);
-        Py_VISIT(state->type_VpnPacketBufferList);
-        Py_VISIT(state->type_VpnPickedCredential);
-        Py_VISIT(state->type_VpnPlugInProfile);
-        Py_VISIT(state->type_VpnRoute);
-        Py_VISIT(state->type_VpnRouteAssignment);
-        Py_VISIT(state->type_VpnSystemHealth);
-        Py_VISIT(state->type_VpnTrafficFilter);
-        Py_VISIT(state->type_VpnTrafficFilterAssignment);
-        Py_VISIT(state->type_IVpnChannelStatics);
-        Py_VISIT(state->type_IVpnCredential);
-        Py_VISIT(state->type_IVpnCustomPrompt);
-        Py_VISIT(state->type_IVpnCustomPromptElement);
-        Py_VISIT(state->type_IVpnDomainNameInfoFactory);
-        Py_VISIT(state->type_IVpnInterfaceIdFactory);
-        Py_VISIT(state->type_IVpnNamespaceInfoFactory);
-        Py_VISIT(state->type_IVpnPacketBufferFactory);
-        Py_VISIT(state->type_IVpnPlugIn);
-        Py_VISIT(state->type_IVpnProfile);
-        Py_VISIT(state->type_IVpnRouteFactory);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_VpnAppId);
-        Py_CLEAR(state->type_VpnChannel);
-        Py_CLEAR(state->type_VpnChannelActivityEventArgs);
-        Py_CLEAR(state->type_VpnChannelActivityStateChangedArgs);
-        Py_CLEAR(state->type_VpnChannelConfiguration);
-        Py_CLEAR(state->type_VpnCredential);
-        Py_CLEAR(state->type_VpnCustomCheckBox);
-        Py_CLEAR(state->type_VpnCustomComboBox);
-        Py_CLEAR(state->type_VpnCustomEditBox);
-        Py_CLEAR(state->type_VpnCustomErrorBox);
-        Py_CLEAR(state->type_VpnCustomPromptBooleanInput);
-        Py_CLEAR(state->type_VpnCustomPromptOptionSelector);
-        Py_CLEAR(state->type_VpnCustomPromptText);
-        Py_CLEAR(state->type_VpnCustomPromptTextInput);
-        Py_CLEAR(state->type_VpnCustomTextBox);
-        Py_CLEAR(state->type_VpnDomainNameAssignment);
-        Py_CLEAR(state->type_VpnDomainNameInfo);
-        Py_CLEAR(state->type_VpnForegroundActivatedEventArgs);
-        Py_CLEAR(state->type_VpnForegroundActivationOperation);
-        Py_CLEAR(state->type_VpnInterfaceId);
-        Py_CLEAR(state->type_VpnManagementAgent);
-        Py_CLEAR(state->type_VpnNamespaceAssignment);
-        Py_CLEAR(state->type_VpnNamespaceInfo);
-        Py_CLEAR(state->type_VpnNativeProfile);
-        Py_CLEAR(state->type_VpnPacketBuffer);
-        Py_CLEAR(state->type_VpnPacketBufferList);
-        Py_CLEAR(state->type_VpnPickedCredential);
-        Py_CLEAR(state->type_VpnPlugInProfile);
-        Py_CLEAR(state->type_VpnRoute);
-        Py_CLEAR(state->type_VpnRouteAssignment);
-        Py_CLEAR(state->type_VpnSystemHealth);
-        Py_CLEAR(state->type_VpnTrafficFilter);
-        Py_CLEAR(state->type_VpnTrafficFilterAssignment);
-        Py_CLEAR(state->type_IVpnChannelStatics);
-        Py_CLEAR(state->type_IVpnCredential);
-        Py_CLEAR(state->type_IVpnCustomPrompt);
-        Py_CLEAR(state->type_IVpnCustomPromptElement);
-        Py_CLEAR(state->type_IVpnDomainNameInfoFactory);
-        Py_CLEAR(state->type_IVpnInterfaceIdFactory);
-        Py_CLEAR(state->type_IVpnNamespaceInfoFactory);
-        Py_CLEAR(state->type_IVpnPacketBufferFactory);
-        Py_CLEAR(state->type_IVpnPlugIn);
-        Py_CLEAR(state->type_IVpnProfile);
-        Py_CLEAR(state->type_IVpnRouteFactory);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_Vpn",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::Vpn
@@ -11552,7 +11389,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Vpn(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -11565,1285 +11402,402 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Vpn(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_VpnAppId = py::register_python_type(module.get(), type_name_VpnAppId, &type_spec_VpnAppId, object_bases.get(), nullptr);
-    if (!state->type_VpnAppId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnAppId, &type_spec_VpnAppId, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnAppId, &type_spec_VpnAppId, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnChannel = py::register_python_type(module.get(), type_name_VpnChannel, &type_spec_VpnChannel, object_bases.get(), nullptr);
-    if (!state->type_VpnChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnChannel, &type_spec_VpnChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnChannel, &type_spec_VpnChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnChannelActivityEventArgs = py::register_python_type(module.get(), type_name_VpnChannelActivityEventArgs, &type_spec_VpnChannelActivityEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VpnChannelActivityEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnChannelActivityEventArgs, &type_spec_VpnChannelActivityEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnChannelActivityEventArgs, &type_spec_VpnChannelActivityEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnChannelActivityStateChangedArgs = py::register_python_type(module.get(), type_name_VpnChannelActivityStateChangedArgs, &type_spec_VpnChannelActivityStateChangedArgs, object_bases.get(), nullptr);
-    if (!state->type_VpnChannelActivityStateChangedArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnChannelActivityStateChangedArgs, &type_spec_VpnChannelActivityStateChangedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnChannelActivityStateChangedArgs, &type_spec_VpnChannelActivityStateChangedArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnChannelConfiguration = py::register_python_type(module.get(), type_name_VpnChannelConfiguration, &type_spec_VpnChannelConfiguration, object_bases.get(), nullptr);
-    if (!state->type_VpnChannelConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnChannelConfiguration, &type_spec_VpnChannelConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnChannelConfiguration, &type_spec_VpnChannelConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCredential = py::register_python_type(module.get(), type_name_VpnCredential, &type_spec_VpnCredential, object_bases.get(), nullptr);
-    if (!state->type_VpnCredential)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCredential, &type_spec_VpnCredential, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCredential, &type_spec_VpnCredential, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomCheckBox = py::register_python_type(module.get(), type_name_VpnCustomCheckBox, &type_spec_VpnCustomCheckBox, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomCheckBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomCheckBox, &type_spec_VpnCustomCheckBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomCheckBox, &type_spec_VpnCustomCheckBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomComboBox = py::register_python_type(module.get(), type_name_VpnCustomComboBox, &type_spec_VpnCustomComboBox, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomComboBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomComboBox, &type_spec_VpnCustomComboBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomComboBox, &type_spec_VpnCustomComboBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomEditBox = py::register_python_type(module.get(), type_name_VpnCustomEditBox, &type_spec_VpnCustomEditBox, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomEditBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomEditBox, &type_spec_VpnCustomEditBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomEditBox, &type_spec_VpnCustomEditBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomErrorBox = py::register_python_type(module.get(), type_name_VpnCustomErrorBox, &type_spec_VpnCustomErrorBox, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomErrorBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomErrorBox, &type_spec_VpnCustomErrorBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomErrorBox, &type_spec_VpnCustomErrorBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomPromptBooleanInput = py::register_python_type(module.get(), type_name_VpnCustomPromptBooleanInput, &type_spec_VpnCustomPromptBooleanInput, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomPromptBooleanInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptBooleanInput, &type_spec_VpnCustomPromptBooleanInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptBooleanInput, &type_spec_VpnCustomPromptBooleanInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomPromptOptionSelector = py::register_python_type(module.get(), type_name_VpnCustomPromptOptionSelector, &type_spec_VpnCustomPromptOptionSelector, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomPromptOptionSelector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptOptionSelector, &type_spec_VpnCustomPromptOptionSelector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptOptionSelector, &type_spec_VpnCustomPromptOptionSelector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomPromptText = py::register_python_type(module.get(), type_name_VpnCustomPromptText, &type_spec_VpnCustomPromptText, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomPromptText)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptText, &type_spec_VpnCustomPromptText, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptText, &type_spec_VpnCustomPromptText, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomPromptTextInput = py::register_python_type(module.get(), type_name_VpnCustomPromptTextInput, &type_spec_VpnCustomPromptTextInput, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomPromptTextInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptTextInput, &type_spec_VpnCustomPromptTextInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomPromptTextInput, &type_spec_VpnCustomPromptTextInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnCustomTextBox = py::register_python_type(module.get(), type_name_VpnCustomTextBox, &type_spec_VpnCustomTextBox, object_bases.get(), nullptr);
-    if (!state->type_VpnCustomTextBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnCustomTextBox, &type_spec_VpnCustomTextBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnCustomTextBox, &type_spec_VpnCustomTextBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnDomainNameAssignment = py::register_python_type(module.get(), type_name_VpnDomainNameAssignment, &type_spec_VpnDomainNameAssignment, object_bases.get(), nullptr);
-    if (!state->type_VpnDomainNameAssignment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnDomainNameAssignment, &type_spec_VpnDomainNameAssignment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnDomainNameAssignment, &type_spec_VpnDomainNameAssignment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnDomainNameInfo = py::register_python_type(module.get(), type_name_VpnDomainNameInfo, &type_spec_VpnDomainNameInfo, object_bases.get(), nullptr);
-    if (!state->type_VpnDomainNameInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnDomainNameInfo, &type_spec_VpnDomainNameInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnDomainNameInfo, &type_spec_VpnDomainNameInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnForegroundActivatedEventArgs = py::register_python_type(module.get(), type_name_VpnForegroundActivatedEventArgs, &type_spec_VpnForegroundActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VpnForegroundActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnForegroundActivatedEventArgs, &type_spec_VpnForegroundActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnForegroundActivatedEventArgs, &type_spec_VpnForegroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnForegroundActivationOperation = py::register_python_type(module.get(), type_name_VpnForegroundActivationOperation, &type_spec_VpnForegroundActivationOperation, object_bases.get(), nullptr);
-    if (!state->type_VpnForegroundActivationOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnForegroundActivationOperation, &type_spec_VpnForegroundActivationOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnForegroundActivationOperation, &type_spec_VpnForegroundActivationOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnInterfaceId = py::register_python_type(module.get(), type_name_VpnInterfaceId, &type_spec_VpnInterfaceId, object_bases.get(), nullptr);
-    if (!state->type_VpnInterfaceId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnInterfaceId, &type_spec_VpnInterfaceId, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnInterfaceId, &type_spec_VpnInterfaceId, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnManagementAgent = py::register_python_type(module.get(), type_name_VpnManagementAgent, &type_spec_VpnManagementAgent, object_bases.get(), nullptr);
-    if (!state->type_VpnManagementAgent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnManagementAgent, &type_spec_VpnManagementAgent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnManagementAgent, &type_spec_VpnManagementAgent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnNamespaceAssignment = py::register_python_type(module.get(), type_name_VpnNamespaceAssignment, &type_spec_VpnNamespaceAssignment, object_bases.get(), nullptr);
-    if (!state->type_VpnNamespaceAssignment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnNamespaceAssignment, &type_spec_VpnNamespaceAssignment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnNamespaceAssignment, &type_spec_VpnNamespaceAssignment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnNamespaceInfo = py::register_python_type(module.get(), type_name_VpnNamespaceInfo, &type_spec_VpnNamespaceInfo, object_bases.get(), nullptr);
-    if (!state->type_VpnNamespaceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnNamespaceInfo, &type_spec_VpnNamespaceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnNamespaceInfo, &type_spec_VpnNamespaceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnNativeProfile = py::register_python_type(module.get(), type_name_VpnNativeProfile, &type_spec_VpnNativeProfile, object_bases.get(), nullptr);
-    if (!state->type_VpnNativeProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnNativeProfile, &type_spec_VpnNativeProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnNativeProfile, &type_spec_VpnNativeProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnPacketBuffer = py::register_python_type(module.get(), type_name_VpnPacketBuffer, &type_spec_VpnPacketBuffer, object_bases.get(), nullptr);
-    if (!state->type_VpnPacketBuffer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnPacketBuffer, &type_spec_VpnPacketBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnPacketBuffer, &type_spec_VpnPacketBuffer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnPacketBufferList = py::register_python_type(module.get(), type_name_VpnPacketBufferList, &type_spec_VpnPacketBufferList, object_bases.get(), nullptr);
-    if (!state->type_VpnPacketBufferList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnPacketBufferList, &type_spec_VpnPacketBufferList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnPacketBufferList, &type_spec_VpnPacketBufferList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnPickedCredential = py::register_python_type(module.get(), type_name_VpnPickedCredential, &type_spec_VpnPickedCredential, object_bases.get(), nullptr);
-    if (!state->type_VpnPickedCredential)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnPickedCredential, &type_spec_VpnPickedCredential, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnPickedCredential, &type_spec_VpnPickedCredential, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnPlugInProfile = py::register_python_type(module.get(), type_name_VpnPlugInProfile, &type_spec_VpnPlugInProfile, object_bases.get(), nullptr);
-    if (!state->type_VpnPlugInProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnPlugInProfile, &type_spec_VpnPlugInProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnPlugInProfile, &type_spec_VpnPlugInProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnRoute = py::register_python_type(module.get(), type_name_VpnRoute, &type_spec_VpnRoute, object_bases.get(), nullptr);
-    if (!state->type_VpnRoute)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnRoute, &type_spec_VpnRoute, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnRoute, &type_spec_VpnRoute, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnRouteAssignment = py::register_python_type(module.get(), type_name_VpnRouteAssignment, &type_spec_VpnRouteAssignment, object_bases.get(), nullptr);
-    if (!state->type_VpnRouteAssignment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnRouteAssignment, &type_spec_VpnRouteAssignment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnRouteAssignment, &type_spec_VpnRouteAssignment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnSystemHealth = py::register_python_type(module.get(), type_name_VpnSystemHealth, &type_spec_VpnSystemHealth, object_bases.get(), nullptr);
-    if (!state->type_VpnSystemHealth)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnSystemHealth, &type_spec_VpnSystemHealth, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnSystemHealth, &type_spec_VpnSystemHealth, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnTrafficFilter = py::register_python_type(module.get(), type_name_VpnTrafficFilter, &type_spec_VpnTrafficFilter, object_bases.get(), nullptr);
-    if (!state->type_VpnTrafficFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnTrafficFilter, &type_spec_VpnTrafficFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnTrafficFilter, &type_spec_VpnTrafficFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VpnTrafficFilterAssignment = py::register_python_type(module.get(), type_name_VpnTrafficFilterAssignment, &type_spec_VpnTrafficFilterAssignment, object_bases.get(), nullptr);
-    if (!state->type_VpnTrafficFilterAssignment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VpnTrafficFilterAssignment, &type_spec_VpnTrafficFilterAssignment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VpnTrafficFilterAssignment, &type_spec_VpnTrafficFilterAssignment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnChannelStatics = py::register_python_type(module.get(), type_name_IVpnChannelStatics, &type_spec_IVpnChannelStatics, object_bases.get(), nullptr);
-    if (!state->type_IVpnChannelStatics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnChannelStatics, &type_spec_IVpnChannelStatics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnChannelStatics, &type_spec_IVpnChannelStatics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnCredential = py::register_python_type(module.get(), type_name_IVpnCredential, &type_spec_IVpnCredential, object_bases.get(), nullptr);
-    if (!state->type_IVpnCredential)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnCredential, &type_spec_IVpnCredential, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnCredential, &type_spec_IVpnCredential, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnCustomPrompt = py::register_python_type(module.get(), type_name_IVpnCustomPrompt, &type_spec_IVpnCustomPrompt, object_bases.get(), nullptr);
-    if (!state->type_IVpnCustomPrompt)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnCustomPrompt, &type_spec_IVpnCustomPrompt, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnCustomPrompt, &type_spec_IVpnCustomPrompt, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnCustomPromptElement = py::register_python_type(module.get(), type_name_IVpnCustomPromptElement, &type_spec_IVpnCustomPromptElement, object_bases.get(), nullptr);
-    if (!state->type_IVpnCustomPromptElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnCustomPromptElement, &type_spec_IVpnCustomPromptElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnCustomPromptElement, &type_spec_IVpnCustomPromptElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnDomainNameInfoFactory = py::register_python_type(module.get(), type_name_IVpnDomainNameInfoFactory, &type_spec_IVpnDomainNameInfoFactory, object_bases.get(), nullptr);
-    if (!state->type_IVpnDomainNameInfoFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnDomainNameInfoFactory, &type_spec_IVpnDomainNameInfoFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnDomainNameInfoFactory, &type_spec_IVpnDomainNameInfoFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnInterfaceIdFactory = py::register_python_type(module.get(), type_name_IVpnInterfaceIdFactory, &type_spec_IVpnInterfaceIdFactory, object_bases.get(), nullptr);
-    if (!state->type_IVpnInterfaceIdFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnInterfaceIdFactory, &type_spec_IVpnInterfaceIdFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnInterfaceIdFactory, &type_spec_IVpnInterfaceIdFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnNamespaceInfoFactory = py::register_python_type(module.get(), type_name_IVpnNamespaceInfoFactory, &type_spec_IVpnNamespaceInfoFactory, object_bases.get(), nullptr);
-    if (!state->type_IVpnNamespaceInfoFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnNamespaceInfoFactory, &type_spec_IVpnNamespaceInfoFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnNamespaceInfoFactory, &type_spec_IVpnNamespaceInfoFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnPacketBufferFactory = py::register_python_type(module.get(), type_name_IVpnPacketBufferFactory, &type_spec_IVpnPacketBufferFactory, object_bases.get(), nullptr);
-    if (!state->type_IVpnPacketBufferFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnPacketBufferFactory, &type_spec_IVpnPacketBufferFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnPacketBufferFactory, &type_spec_IVpnPacketBufferFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnPlugIn = py::register_python_type(module.get(), type_name_IVpnPlugIn, &type_spec_IVpnPlugIn, object_bases.get(), nullptr);
-    if (!state->type_IVpnPlugIn)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnPlugIn, &type_spec_IVpnPlugIn, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnPlugIn, &type_spec_IVpnPlugIn, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnProfile = py::register_python_type(module.get(), type_name_IVpnProfile, &type_spec_IVpnProfile, object_bases.get(), nullptr);
-    if (!state->type_IVpnProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnProfile, &type_spec_IVpnProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnProfile, &type_spec_IVpnProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVpnRouteFactory = py::register_python_type(module.get(), type_name_IVpnRouteFactory, &type_spec_IVpnRouteFactory, object_bases.get(), nullptr);
-    if (!state->type_IVpnRouteFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVpnRouteFactory, &type_spec_IVpnRouteFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVpnRouteFactory, &type_spec_IVpnRouteFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnAppId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnAppId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnAppId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnChannelActivityEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnChannelActivityStateChangedArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnChannelConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnChannelConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnChannelConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCredential>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCredential;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCredential is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomCheckBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomCheckBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomCheckBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomComboBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomComboBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomComboBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomEditBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomEditBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomEditBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomErrorBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomErrorBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomErrorBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomPromptBooleanInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomPromptOptionSelector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptText>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomPromptText;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomPromptText is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomPromptTextInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnCustomTextBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnCustomTextBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnCustomTextBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnDomainNameAssignment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnDomainNameAssignment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnDomainNameAssignment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnDomainNameInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnDomainNameInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnDomainNameInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnForegroundActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnForegroundActivationOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnInterfaceId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnInterfaceId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnInterfaceId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnManagementAgent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnManagementAgent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnManagementAgent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnNamespaceAssignment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnNamespaceAssignment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnNamespaceAssignment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnNamespaceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnNamespaceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnNativeProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnNativeProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnNativeProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnPacketBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnPacketBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnPacketBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnPacketBufferList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnPacketBufferList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnPacketBufferList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnPickedCredential>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnPickedCredential;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnPickedCredential is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnPlugInProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnPlugInProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnPlugInProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnRoute>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnRoute;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnRoute is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnRouteAssignment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnRouteAssignment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnRouteAssignment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnSystemHealth>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnSystemHealth;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnSystemHealth is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnTrafficFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnTrafficFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnTrafficFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VpnTrafficFilterAssignment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnChannelStatics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnChannelStatics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnCredential>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnCredential;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnCredential is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnCustomPrompt;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnCustomPrompt is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnCustomPromptElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnCustomPromptElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnDomainNameInfoFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnInterfaceIdFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnNamespaceInfoFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnPacketBufferFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnPlugIn;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnPlugIn is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Vpn;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Vpn");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVpnRouteFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Vpn::IVpnRouteFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

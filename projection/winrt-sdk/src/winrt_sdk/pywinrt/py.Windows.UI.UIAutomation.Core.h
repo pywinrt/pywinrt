@@ -60,80 +60,93 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "AutomationRemoteOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "CoreAutomationRegistrar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "CoreAutomationRemoteOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "CoreAutomationRemoteOperationContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "RemoteAutomationClientSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "RemoteAutomationConnectionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "RemoteAutomationDisconnectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "RemoteAutomationServer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "RemoteAutomationWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "ICoreAutomationConnectionBoundObjectProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "ICoreAutomationRemoteOperationExtensionProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "AutomationAnnotationTypeRegistration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>
+    struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
+        static constexpr const char* type_name = "AutomationRemoteOperationOperandId";
     };
 }

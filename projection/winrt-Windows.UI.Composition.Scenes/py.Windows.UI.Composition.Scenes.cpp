@@ -6,27 +6,6 @@
 
 namespace py::cpp::Windows::UI::Composition::Scenes
 {
-    struct module_state
-    {
-        PyTypeObject* type_SceneBoundingBox;
-        PyTypeObject* type_SceneComponent;
-        PyTypeObject* type_SceneComponentCollection;
-        PyTypeObject* type_SceneMaterial;
-        PyTypeObject* type_SceneMaterialInput;
-        PyTypeObject* type_SceneMesh;
-        PyTypeObject* type_SceneMeshMaterialAttributeMap;
-        PyTypeObject* type_SceneMeshRendererComponent;
-        PyTypeObject* type_SceneMetallicRoughnessMaterial;
-        PyTypeObject* type_SceneModelTransform;
-        PyTypeObject* type_SceneNode;
-        PyTypeObject* type_SceneNodeCollection;
-        PyTypeObject* type_SceneObject;
-        PyTypeObject* type_ScenePbrMaterial;
-        PyTypeObject* type_SceneRendererComponent;
-        PyTypeObject* type_SceneSurfaceMaterialInput;
-        PyTypeObject* type_SceneVisual;
-    };
-
     // ----- SceneBoundingBox class --------------------
     static constexpr const char* const type_name_SceneBoundingBox = "SceneBoundingBox";
 
@@ -4577,76 +4556,15 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Scenes");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SceneBoundingBox);
-        Py_VISIT(state->type_SceneComponent);
-        Py_VISIT(state->type_SceneComponentCollection);
-        Py_VISIT(state->type_SceneMaterial);
-        Py_VISIT(state->type_SceneMaterialInput);
-        Py_VISIT(state->type_SceneMesh);
-        Py_VISIT(state->type_SceneMeshMaterialAttributeMap);
-        Py_VISIT(state->type_SceneMeshRendererComponent);
-        Py_VISIT(state->type_SceneMetallicRoughnessMaterial);
-        Py_VISIT(state->type_SceneModelTransform);
-        Py_VISIT(state->type_SceneNode);
-        Py_VISIT(state->type_SceneNodeCollection);
-        Py_VISIT(state->type_SceneObject);
-        Py_VISIT(state->type_ScenePbrMaterial);
-        Py_VISIT(state->type_SceneRendererComponent);
-        Py_VISIT(state->type_SceneSurfaceMaterialInput);
-        Py_VISIT(state->type_SceneVisual);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SceneBoundingBox);
-        Py_CLEAR(state->type_SceneComponent);
-        Py_CLEAR(state->type_SceneComponentCollection);
-        Py_CLEAR(state->type_SceneMaterial);
-        Py_CLEAR(state->type_SceneMaterialInput);
-        Py_CLEAR(state->type_SceneMesh);
-        Py_CLEAR(state->type_SceneMeshMaterialAttributeMap);
-        Py_CLEAR(state->type_SceneMeshRendererComponent);
-        Py_CLEAR(state->type_SceneMetallicRoughnessMaterial);
-        Py_CLEAR(state->type_SceneModelTransform);
-        Py_CLEAR(state->type_SceneNode);
-        Py_CLEAR(state->type_SceneNodeCollection);
-        Py_CLEAR(state->type_SceneObject);
-        Py_CLEAR(state->type_ScenePbrMaterial);
-        Py_CLEAR(state->type_SceneRendererComponent);
-        Py_CLEAR(state->type_SceneSurfaceMaterialInput);
-        Py_CLEAR(state->type_SceneVisual);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Composition_Scenes",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Composition::Scenes
@@ -4662,7 +4580,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Scenes(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4675,502 +4593,159 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Scenes(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SceneBoundingBox = py::register_python_type(module.get(), type_name_SceneBoundingBox, &type_spec_SceneBoundingBox, object_bases.get(), nullptr);
-    if (!state->type_SceneBoundingBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneBoundingBox, &type_spec_SceneBoundingBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneBoundingBox, &type_spec_SceneBoundingBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneComponent = py::register_python_type(module.get(), type_name_SceneComponent, &type_spec_SceneComponent, object_bases.get(), nullptr);
-    if (!state->type_SceneComponent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneComponent, &type_spec_SceneComponent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneComponent, &type_spec_SceneComponent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneComponentCollection = py::register_python_type(module.get(), type_name_SceneComponentCollection, &type_spec_SceneComponentCollection, object_bases.get(), nullptr);
-    if (!state->type_SceneComponentCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneComponentCollection, &type_spec_SceneComponentCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneComponentCollection, &type_spec_SceneComponentCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMaterial = py::register_python_type(module.get(), type_name_SceneMaterial, &type_spec_SceneMaterial, object_bases.get(), nullptr);
-    if (!state->type_SceneMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMaterial, &type_spec_SceneMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMaterial, &type_spec_SceneMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMaterialInput = py::register_python_type(module.get(), type_name_SceneMaterialInput, &type_spec_SceneMaterialInput, object_bases.get(), nullptr);
-    if (!state->type_SceneMaterialInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMaterialInput, &type_spec_SceneMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMaterialInput, &type_spec_SceneMaterialInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMesh = py::register_python_type(module.get(), type_name_SceneMesh, &type_spec_SceneMesh, object_bases.get(), nullptr);
-    if (!state->type_SceneMesh)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMesh, &type_spec_SceneMesh, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMesh, &type_spec_SceneMesh, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMeshMaterialAttributeMap = py::register_python_type(module.get(), type_name_SceneMeshMaterialAttributeMap, &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr);
-    if (!state->type_SceneMeshMaterialAttributeMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMeshMaterialAttributeMap, &type_spec_SceneMeshMaterialAttributeMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMeshMaterialAttributeMap, &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMeshRendererComponent = py::register_python_type(module.get(), type_name_SceneMeshRendererComponent, &type_spec_SceneMeshRendererComponent, object_bases.get(), nullptr);
-    if (!state->type_SceneMeshRendererComponent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMeshRendererComponent, &type_spec_SceneMeshRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMeshRendererComponent, &type_spec_SceneMeshRendererComponent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneMetallicRoughnessMaterial = py::register_python_type(module.get(), type_name_SceneMetallicRoughnessMaterial, &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), nullptr);
-    if (!state->type_SceneMetallicRoughnessMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneMetallicRoughnessMaterial, &type_spec_SceneMetallicRoughnessMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneMetallicRoughnessMaterial, &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneModelTransform = py::register_python_type(module.get(), type_name_SceneModelTransform, &type_spec_SceneModelTransform, object_bases.get(), nullptr);
-    if (!state->type_SceneModelTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneModelTransform, &type_spec_SceneModelTransform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneModelTransform, &type_spec_SceneModelTransform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneNode = py::register_python_type(module.get(), type_name_SceneNode, &type_spec_SceneNode, object_bases.get(), nullptr);
-    if (!state->type_SceneNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneNode, &type_spec_SceneNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneNode, &type_spec_SceneNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneNodeCollection = py::register_python_type(module.get(), type_name_SceneNodeCollection, &type_spec_SceneNodeCollection, object_bases.get(), nullptr);
-    if (!state->type_SceneNodeCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneNodeCollection, &type_spec_SceneNodeCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneNodeCollection, &type_spec_SceneNodeCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneObject = py::register_python_type(module.get(), type_name_SceneObject, &type_spec_SceneObject, object_bases.get(), nullptr);
-    if (!state->type_SceneObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneObject, &type_spec_SceneObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneObject, &type_spec_SceneObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScenePbrMaterial = py::register_python_type(module.get(), type_name_ScenePbrMaterial, &type_spec_ScenePbrMaterial, object_bases.get(), nullptr);
-    if (!state->type_ScenePbrMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScenePbrMaterial, &type_spec_ScenePbrMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScenePbrMaterial, &type_spec_ScenePbrMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneRendererComponent = py::register_python_type(module.get(), type_name_SceneRendererComponent, &type_spec_SceneRendererComponent, object_bases.get(), nullptr);
-    if (!state->type_SceneRendererComponent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneRendererComponent, &type_spec_SceneRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneRendererComponent, &type_spec_SceneRendererComponent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneSurfaceMaterialInput = py::register_python_type(module.get(), type_name_SceneSurfaceMaterialInput, &type_spec_SceneSurfaceMaterialInput, object_bases.get(), nullptr);
-    if (!state->type_SceneSurfaceMaterialInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneSurfaceMaterialInput, &type_spec_SceneSurfaceMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneSurfaceMaterialInput, &type_spec_SceneSurfaceMaterialInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneVisual = py::register_python_type(module.get(), type_name_SceneVisual, &type_spec_SceneVisual, object_bases.get(), nullptr);
-    if (!state->type_SceneVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneVisual, &type_spec_SceneVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneVisual, &type_spec_SceneVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneBoundingBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneBoundingBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneComponentCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneComponentCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMaterialInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMaterialInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMesh>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMesh;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMesh is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMeshMaterialAttributeMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMeshRendererComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneMetallicRoughnessMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneModelTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneModelTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneModelTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneNodeCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneNodeCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScenePbrMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneRendererComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneRendererComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneSurfaceMaterialInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Scenes::SceneVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition::Scenes;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition::Scenes");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Scenes::SceneVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -129,170 +129,198 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>
+    struct py_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ImageFeatureDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>
+    struct py_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ImageFeatureValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModel>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModelBinding>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModelBinding>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelBinding";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModelDevice>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModelDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelEvaluationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModelSession>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModelSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>
+    struct py_type<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "LearningModelSessionOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>
+    struct py_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "MapFeatureDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>
+    struct py_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "SequenceFeatureDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorBoolean>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorBoolean>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorBoolean";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorDouble>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorDouble>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorDouble";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorFeatureDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorFloat>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorFloat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorFloat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorFloat16Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorInt16Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorInt32Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorInt64Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorInt8Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorString>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorString>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorString";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorUInt16Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorUInt32Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorUInt64Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>
+    struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "TensorUInt8Bit";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
+    struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ILearningModelFeatureDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
+    struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ILearningModelFeatureValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
+    struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ILearningModelOperatorProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::ITensor>
+    struct py_type<winrt::Windows::AI::MachineLearning::ITensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
+        static constexpr const char* type_name = "ITensor";
     };
 }

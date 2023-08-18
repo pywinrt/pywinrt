@@ -6,40 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Sms
 {
-    struct module_state
-    {
-        PyTypeObject* type_DeleteSmsMessageOperation;
-        PyTypeObject* type_DeleteSmsMessagesOperation;
-        PyTypeObject* type_GetSmsDeviceOperation;
-        PyTypeObject* type_GetSmsMessageOperation;
-        PyTypeObject* type_GetSmsMessagesOperation;
-        PyTypeObject* type_SendSmsMessageOperation;
-        PyTypeObject* type_SmsAppMessage;
-        PyTypeObject* type_SmsBinaryMessage;
-        PyTypeObject* type_SmsBroadcastMessage;
-        PyTypeObject* type_SmsDevice;
-        PyTypeObject* type_SmsDevice2;
-        PyTypeObject* type_SmsDeviceMessageStore;
-        PyTypeObject* type_SmsFilterRule;
-        PyTypeObject* type_SmsFilterRules;
-        PyTypeObject* type_SmsMessageReceivedEventArgs;
-        PyTypeObject* type_SmsMessageReceivedTriggerDetails;
-        PyTypeObject* type_SmsMessageRegistration;
-        PyTypeObject* type_SmsReceivedEventDetails;
-        PyTypeObject* type_SmsSendMessageResult;
-        PyTypeObject* type_SmsStatusMessage;
-        PyTypeObject* type_SmsTextMessage;
-        PyTypeObject* type_SmsTextMessage2;
-        PyTypeObject* type_SmsVoicemailMessage;
-        PyTypeObject* type_SmsWapMessage;
-        PyTypeObject* type_ISmsBinaryMessage;
-        PyTypeObject* type_ISmsDevice;
-        PyTypeObject* type_ISmsMessage;
-        PyTypeObject* type_ISmsMessageBase;
-        PyTypeObject* type_ISmsTextMessage;
-        PyTypeObject* type_SmsEncodedLength;
-    };
-
     // ----- DeleteSmsMessageOperation class --------------------
     static constexpr const char* const type_name_DeleteSmsMessageOperation = "DeleteSmsMessageOperation";
 
@@ -9211,102 +9177,15 @@ namespace py::cpp::Windows::Devices::Sms
     PyDoc_STRVAR(module_doc, "Windows::Devices::Sms");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DeleteSmsMessageOperation);
-        Py_VISIT(state->type_DeleteSmsMessagesOperation);
-        Py_VISIT(state->type_GetSmsDeviceOperation);
-        Py_VISIT(state->type_GetSmsMessageOperation);
-        Py_VISIT(state->type_GetSmsMessagesOperation);
-        Py_VISIT(state->type_SendSmsMessageOperation);
-        Py_VISIT(state->type_SmsAppMessage);
-        Py_VISIT(state->type_SmsBinaryMessage);
-        Py_VISIT(state->type_SmsBroadcastMessage);
-        Py_VISIT(state->type_SmsDevice);
-        Py_VISIT(state->type_SmsDevice2);
-        Py_VISIT(state->type_SmsDeviceMessageStore);
-        Py_VISIT(state->type_SmsFilterRule);
-        Py_VISIT(state->type_SmsFilterRules);
-        Py_VISIT(state->type_SmsMessageReceivedEventArgs);
-        Py_VISIT(state->type_SmsMessageReceivedTriggerDetails);
-        Py_VISIT(state->type_SmsMessageRegistration);
-        Py_VISIT(state->type_SmsReceivedEventDetails);
-        Py_VISIT(state->type_SmsSendMessageResult);
-        Py_VISIT(state->type_SmsStatusMessage);
-        Py_VISIT(state->type_SmsTextMessage);
-        Py_VISIT(state->type_SmsTextMessage2);
-        Py_VISIT(state->type_SmsVoicemailMessage);
-        Py_VISIT(state->type_SmsWapMessage);
-        Py_VISIT(state->type_ISmsBinaryMessage);
-        Py_VISIT(state->type_ISmsDevice);
-        Py_VISIT(state->type_ISmsMessage);
-        Py_VISIT(state->type_ISmsMessageBase);
-        Py_VISIT(state->type_ISmsTextMessage);
-        Py_VISIT(state->type_SmsEncodedLength);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DeleteSmsMessageOperation);
-        Py_CLEAR(state->type_DeleteSmsMessagesOperation);
-        Py_CLEAR(state->type_GetSmsDeviceOperation);
-        Py_CLEAR(state->type_GetSmsMessageOperation);
-        Py_CLEAR(state->type_GetSmsMessagesOperation);
-        Py_CLEAR(state->type_SendSmsMessageOperation);
-        Py_CLEAR(state->type_SmsAppMessage);
-        Py_CLEAR(state->type_SmsBinaryMessage);
-        Py_CLEAR(state->type_SmsBroadcastMessage);
-        Py_CLEAR(state->type_SmsDevice);
-        Py_CLEAR(state->type_SmsDevice2);
-        Py_CLEAR(state->type_SmsDeviceMessageStore);
-        Py_CLEAR(state->type_SmsFilterRule);
-        Py_CLEAR(state->type_SmsFilterRules);
-        Py_CLEAR(state->type_SmsMessageReceivedEventArgs);
-        Py_CLEAR(state->type_SmsMessageReceivedTriggerDetails);
-        Py_CLEAR(state->type_SmsMessageRegistration);
-        Py_CLEAR(state->type_SmsReceivedEventDetails);
-        Py_CLEAR(state->type_SmsSendMessageResult);
-        Py_CLEAR(state->type_SmsStatusMessage);
-        Py_CLEAR(state->type_SmsTextMessage);
-        Py_CLEAR(state->type_SmsTextMessage2);
-        Py_CLEAR(state->type_SmsVoicemailMessage);
-        Py_CLEAR(state->type_SmsWapMessage);
-        Py_CLEAR(state->type_ISmsBinaryMessage);
-        Py_CLEAR(state->type_ISmsDevice);
-        Py_CLEAR(state->type_ISmsMessage);
-        Py_CLEAR(state->type_ISmsMessageBase);
-        Py_CLEAR(state->type_ISmsTextMessage);
-        Py_CLEAR(state->type_SmsEncodedLength);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Sms",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Sms
@@ -9322,7 +9201,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sms(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -9335,101 +9214,146 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sms(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DeleteSmsMessageOperation = py::register_python_type(module.get(), type_name_DeleteSmsMessageOperation, &type_spec_DeleteSmsMessageOperation, object_bases.get(), nullptr);
-    if (!state->type_DeleteSmsMessageOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeleteSmsMessageOperation, &type_spec_DeleteSmsMessageOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeleteSmsMessageOperation, &type_spec_DeleteSmsMessageOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeleteSmsMessagesOperation = py::register_python_type(module.get(), type_name_DeleteSmsMessagesOperation, &type_spec_DeleteSmsMessagesOperation, object_bases.get(), nullptr);
-    if (!state->type_DeleteSmsMessagesOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeleteSmsMessagesOperation, &type_spec_DeleteSmsMessagesOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeleteSmsMessagesOperation, &type_spec_DeleteSmsMessagesOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GetSmsDeviceOperation = py::register_python_type(module.get(), type_name_GetSmsDeviceOperation, &type_spec_GetSmsDeviceOperation, object_bases.get(), nullptr);
-    if (!state->type_GetSmsDeviceOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GetSmsDeviceOperation, &type_spec_GetSmsDeviceOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GetSmsDeviceOperation, &type_spec_GetSmsDeviceOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GetSmsMessageOperation = py::register_python_type(module.get(), type_name_GetSmsMessageOperation, &type_spec_GetSmsMessageOperation, object_bases.get(), nullptr);
-    if (!state->type_GetSmsMessageOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GetSmsMessageOperation, &type_spec_GetSmsMessageOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GetSmsMessageOperation, &type_spec_GetSmsMessageOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GetSmsMessagesOperation = py::register_python_type(module.get(), type_name_GetSmsMessagesOperation, &type_spec_GetSmsMessagesOperation, object_bases.get(), nullptr);
-    if (!state->type_GetSmsMessagesOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GetSmsMessagesOperation, &type_spec_GetSmsMessagesOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GetSmsMessagesOperation, &type_spec_GetSmsMessagesOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SendSmsMessageOperation = py::register_python_type(module.get(), type_name_SendSmsMessageOperation, &type_spec_SendSmsMessageOperation, object_bases.get(), nullptr);
-    if (!state->type_SendSmsMessageOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SendSmsMessageOperation, &type_spec_SendSmsMessageOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SendSmsMessageOperation, &type_spec_SendSmsMessageOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsAppMessage = py::register_python_type(module.get(), type_name_SmsAppMessage, &type_spec_SmsAppMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsAppMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsAppMessage, &type_spec_SmsAppMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsAppMessage, &type_spec_SmsAppMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsBinaryMessage = py::register_python_type(module.get(), type_name_SmsBinaryMessage, &type_spec_SmsBinaryMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsBinaryMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsBinaryMessage, &type_spec_SmsBinaryMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsBinaryMessage, &type_spec_SmsBinaryMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsBroadcastMessage = py::register_python_type(module.get(), type_name_SmsBroadcastMessage, &type_spec_SmsBroadcastMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsBroadcastMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsBroadcastMessage, &type_spec_SmsBroadcastMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsBroadcastMessage, &type_spec_SmsBroadcastMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsDevice = py::register_python_type(module.get(), type_name_SmsDevice, &type_spec_SmsDevice, object_bases.get(), nullptr);
-    if (!state->type_SmsDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsDevice, &type_spec_SmsDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsDevice, &type_spec_SmsDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsDevice2 = py::register_python_type(module.get(), type_name_SmsDevice2, &type_spec_SmsDevice2, object_bases.get(), nullptr);
-    if (!state->type_SmsDevice2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsDevice2, &type_spec_SmsDevice2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsDevice2, &type_spec_SmsDevice2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsDeviceMessageStore = py::register_python_type(module.get(), type_name_SmsDeviceMessageStore, &type_spec_SmsDeviceMessageStore, object_bases.get(), nullptr);
-    if (!state->type_SmsDeviceMessageStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsDeviceMessageStore, &type_spec_SmsDeviceMessageStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsDeviceMessageStore, &type_spec_SmsDeviceMessageStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsFilterRule = py::register_python_type(module.get(), type_name_SmsFilterRule, &type_spec_SmsFilterRule, object_bases.get(), nullptr);
-    if (!state->type_SmsFilterRule)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsFilterRule, &type_spec_SmsFilterRule, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsFilterRule, &type_spec_SmsFilterRule, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsFilterRules = py::register_python_type(module.get(), type_name_SmsFilterRules, &type_spec_SmsFilterRules, object_bases.get(), nullptr);
-    if (!state->type_SmsFilterRules)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsFilterRules, &type_spec_SmsFilterRules, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsFilterRules, &type_spec_SmsFilterRules, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsMessageReceivedEventArgs = py::register_python_type(module.get(), type_name_SmsMessageReceivedEventArgs, &type_spec_SmsMessageReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SmsMessageReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedEventArgs, &type_spec_SmsMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedEventArgs, &type_spec_SmsMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsMessageReceivedTriggerDetails = py::register_python_type(module.get(), type_name_SmsMessageReceivedTriggerDetails, &type_spec_SmsMessageReceivedTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_SmsMessageReceivedTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedTriggerDetails, &type_spec_SmsMessageReceivedTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedTriggerDetails, &type_spec_SmsMessageReceivedTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9440,780 +9364,132 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sms(void) noexcept
         return nullptr;
     }
 
-    state->type_SmsMessageRegistration = py::register_python_type(module.get(), type_name_SmsMessageRegistration, &type_spec_SmsMessageRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmsMessageRegistration_Meta.get()));
-    if (!state->type_SmsMessageRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsMessageRegistration, &type_spec_SmsMessageRegistration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmsMessageRegistration_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsMessageRegistration, &type_spec_SmsMessageRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmsMessageRegistration_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsReceivedEventDetails = py::register_python_type(module.get(), type_name_SmsReceivedEventDetails, &type_spec_SmsReceivedEventDetails, object_bases.get(), nullptr);
-    if (!state->type_SmsReceivedEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsReceivedEventDetails, &type_spec_SmsReceivedEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsReceivedEventDetails, &type_spec_SmsReceivedEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsSendMessageResult = py::register_python_type(module.get(), type_name_SmsSendMessageResult, &type_spec_SmsSendMessageResult, object_bases.get(), nullptr);
-    if (!state->type_SmsSendMessageResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsSendMessageResult, &type_spec_SmsSendMessageResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsSendMessageResult, &type_spec_SmsSendMessageResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsStatusMessage = py::register_python_type(module.get(), type_name_SmsStatusMessage, &type_spec_SmsStatusMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsStatusMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsStatusMessage, &type_spec_SmsStatusMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsStatusMessage, &type_spec_SmsStatusMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsTextMessage = py::register_python_type(module.get(), type_name_SmsTextMessage, &type_spec_SmsTextMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsTextMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsTextMessage, &type_spec_SmsTextMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsTextMessage, &type_spec_SmsTextMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsTextMessage2 = py::register_python_type(module.get(), type_name_SmsTextMessage2, &type_spec_SmsTextMessage2, object_bases.get(), nullptr);
-    if (!state->type_SmsTextMessage2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsTextMessage2, &type_spec_SmsTextMessage2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsTextMessage2, &type_spec_SmsTextMessage2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsVoicemailMessage = py::register_python_type(module.get(), type_name_SmsVoicemailMessage, &type_spec_SmsVoicemailMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsVoicemailMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsVoicemailMessage, &type_spec_SmsVoicemailMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsVoicemailMessage, &type_spec_SmsVoicemailMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsWapMessage = py::register_python_type(module.get(), type_name_SmsWapMessage, &type_spec_SmsWapMessage, object_bases.get(), nullptr);
-    if (!state->type_SmsWapMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsWapMessage, &type_spec_SmsWapMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsWapMessage, &type_spec_SmsWapMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISmsBinaryMessage = py::register_python_type(module.get(), type_name_ISmsBinaryMessage, &type_spec_ISmsBinaryMessage, object_bases.get(), nullptr);
-    if (!state->type_ISmsBinaryMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISmsBinaryMessage, &type_spec_ISmsBinaryMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISmsBinaryMessage, &type_spec_ISmsBinaryMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISmsDevice = py::register_python_type(module.get(), type_name_ISmsDevice, &type_spec_ISmsDevice, object_bases.get(), nullptr);
-    if (!state->type_ISmsDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISmsDevice, &type_spec_ISmsDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISmsDevice, &type_spec_ISmsDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISmsMessage = py::register_python_type(module.get(), type_name_ISmsMessage, &type_spec_ISmsMessage, object_bases.get(), nullptr);
-    if (!state->type_ISmsMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISmsMessage, &type_spec_ISmsMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISmsMessage, &type_spec_ISmsMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISmsMessageBase = py::register_python_type(module.get(), type_name_ISmsMessageBase, &type_spec_ISmsMessageBase, object_bases.get(), nullptr);
-    if (!state->type_ISmsMessageBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISmsMessageBase, &type_spec_ISmsMessageBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISmsMessageBase, &type_spec_ISmsMessageBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISmsTextMessage = py::register_python_type(module.get(), type_name_ISmsTextMessage, &type_spec_ISmsTextMessage, object_bases.get(), nullptr);
-    if (!state->type_ISmsTextMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISmsTextMessage, &type_spec_ISmsTextMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISmsTextMessage, &type_spec_ISmsTextMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsEncodedLength = py::register_python_type(module.get(), type_name_SmsEncodedLength, &type_spec_SmsEncodedLength, nullptr, nullptr);
-    if (!state->type_SmsEncodedLength)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsEncodedLength, &type_spec_SmsEncodedLength, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsEncodedLength, &type_spec_SmsEncodedLength, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeleteSmsMessageOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::DeleteSmsMessageOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeleteSmsMessagesOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetSmsDeviceOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::GetSmsDeviceOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::GetSmsMessageOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetSmsMessageOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::GetSmsMessageOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetSmsMessagesOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::GetSmsMessagesOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SendSmsMessageOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SendSmsMessageOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SendSmsMessageOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsAppMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsAppMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsAppMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsBinaryMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsBinaryMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsBinaryMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsBroadcastMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsBroadcastMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsBroadcastMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsDevice2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsDevice2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsDevice2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsDeviceMessageStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsDeviceMessageStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsFilterRule>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsFilterRule;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsFilterRule is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsFilterRules>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsFilterRules;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsFilterRules is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsMessageReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsMessageReceivedTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsMessageRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsMessageRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsMessageRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsReceivedEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsReceivedEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsSendMessageResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsSendMessageResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsSendMessageResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsStatusMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsStatusMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsStatusMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsTextMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsTextMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsTextMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsTextMessage2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsTextMessage2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsTextMessage2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsVoicemailMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsVoicemailMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsVoicemailMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsWapMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsWapMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsWapMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISmsBinaryMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::ISmsBinaryMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::ISmsDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISmsDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::ISmsDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::ISmsMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISmsMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::ISmsMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::ISmsMessageBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISmsMessageBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::ISmsMessageBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::ISmsTextMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISmsTextMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::ISmsTextMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sms::SmsEncodedLength>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sms;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sms");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsEncodedLength;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sms::SmsEncodedLength is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

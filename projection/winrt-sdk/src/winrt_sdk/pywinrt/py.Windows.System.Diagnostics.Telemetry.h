@@ -34,20 +34,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>
+    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
+        static constexpr const char* type_name = "PlatformTelemetryClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>
+    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
+        static constexpr const char* type_name = "PlatformTelemetryRegistrationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>
+    struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
+        static constexpr const char* type_name = "PlatformTelemetryRegistrationSettings";
     };
 }

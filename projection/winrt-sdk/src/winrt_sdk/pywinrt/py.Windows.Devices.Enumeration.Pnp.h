@@ -50,26 +50,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>
+    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
+        static constexpr const char* type_name = "PnpObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>
+    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
+        static constexpr const char* type_name = "PnpObjectCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>
+    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
+        static constexpr const char* type_name = "PnpObjectUpdate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>
+    struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
+        static constexpr const char* type_name = "PnpObjectWatcher";
     };
 }

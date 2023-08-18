@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Power::Battery>
+    struct py_type<winrt::Windows::Devices::Power::Battery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.power";
+        static constexpr const char* type_name = "Battery";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Power::BatteryReport>
+    struct py_type<winrt::Windows::Devices::Power::BatteryReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.power";
+        static constexpr const char* type_name = "BatteryReport";
     };
 }

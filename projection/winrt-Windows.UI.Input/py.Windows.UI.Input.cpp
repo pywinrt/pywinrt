@@ -6,52 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input
 {
-    struct module_state
-    {
-        PyTypeObject* type_AttachableInputObject;
-        PyTypeObject* type_CrossSlidingEventArgs;
-        PyTypeObject* type_DraggingEventArgs;
-        PyTypeObject* type_EdgeGesture;
-        PyTypeObject* type_EdgeGestureEventArgs;
-        PyTypeObject* type_GestureRecognizer;
-        PyTypeObject* type_HoldingEventArgs;
-        PyTypeObject* type_InputActivationListener;
-        PyTypeObject* type_InputActivationListenerActivationChangedEventArgs;
-        PyTypeObject* type_KeyboardDeliveryInterceptor;
-        PyTypeObject* type_ManipulationCompletedEventArgs;
-        PyTypeObject* type_ManipulationInertiaStartingEventArgs;
-        PyTypeObject* type_ManipulationStartedEventArgs;
-        PyTypeObject* type_ManipulationUpdatedEventArgs;
-        PyTypeObject* type_MouseWheelParameters;
-        PyTypeObject* type_PointerPoint;
-        PyTypeObject* type_PointerPointProperties;
-        PyTypeObject* type_PointerVisualizationSettings;
-        PyTypeObject* type_RadialController;
-        PyTypeObject* type_RadialControllerButtonClickedEventArgs;
-        PyTypeObject* type_RadialControllerButtonHoldingEventArgs;
-        PyTypeObject* type_RadialControllerButtonPressedEventArgs;
-        PyTypeObject* type_RadialControllerButtonReleasedEventArgs;
-        PyTypeObject* type_RadialControllerConfiguration;
-        PyTypeObject* type_RadialControllerControlAcquiredEventArgs;
-        PyTypeObject* type_RadialControllerMenu;
-        PyTypeObject* type_RadialControllerMenuItem;
-        PyTypeObject* type_RadialControllerRotationChangedEventArgs;
-        PyTypeObject* type_RadialControllerScreenContact;
-        PyTypeObject* type_RadialControllerScreenContactContinuedEventArgs;
-        PyTypeObject* type_RadialControllerScreenContactEndedEventArgs;
-        PyTypeObject* type_RadialControllerScreenContactStartedEventArgs;
-        PyTypeObject* type_RightTappedEventArgs;
-        PyTypeObject* type_SystemButtonEventController;
-        PyTypeObject* type_SystemFunctionButtonEventArgs;
-        PyTypeObject* type_SystemFunctionLockChangedEventArgs;
-        PyTypeObject* type_SystemFunctionLockIndicatorChangedEventArgs;
-        PyTypeObject* type_TappedEventArgs;
-        PyTypeObject* type_IPointerPointTransform;
-        PyTypeObject* type_CrossSlideThresholds;
-        PyTypeObject* type_ManipulationDelta;
-        PyTypeObject* type_ManipulationVelocities;
-    };
-
     // ----- AttachableInputObject class --------------------
     static constexpr const char* const type_name_AttachableInputObject = "AttachableInputObject";
 
@@ -10244,126 +10198,15 @@ namespace py::cpp::Windows::UI::Input
     PyDoc_STRVAR(module_doc, "Windows::UI::Input");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AttachableInputObject);
-        Py_VISIT(state->type_CrossSlidingEventArgs);
-        Py_VISIT(state->type_DraggingEventArgs);
-        Py_VISIT(state->type_EdgeGesture);
-        Py_VISIT(state->type_EdgeGestureEventArgs);
-        Py_VISIT(state->type_GestureRecognizer);
-        Py_VISIT(state->type_HoldingEventArgs);
-        Py_VISIT(state->type_InputActivationListener);
-        Py_VISIT(state->type_InputActivationListenerActivationChangedEventArgs);
-        Py_VISIT(state->type_KeyboardDeliveryInterceptor);
-        Py_VISIT(state->type_ManipulationCompletedEventArgs);
-        Py_VISIT(state->type_ManipulationInertiaStartingEventArgs);
-        Py_VISIT(state->type_ManipulationStartedEventArgs);
-        Py_VISIT(state->type_ManipulationUpdatedEventArgs);
-        Py_VISIT(state->type_MouseWheelParameters);
-        Py_VISIT(state->type_PointerPoint);
-        Py_VISIT(state->type_PointerPointProperties);
-        Py_VISIT(state->type_PointerVisualizationSettings);
-        Py_VISIT(state->type_RadialController);
-        Py_VISIT(state->type_RadialControllerButtonClickedEventArgs);
-        Py_VISIT(state->type_RadialControllerButtonHoldingEventArgs);
-        Py_VISIT(state->type_RadialControllerButtonPressedEventArgs);
-        Py_VISIT(state->type_RadialControllerButtonReleasedEventArgs);
-        Py_VISIT(state->type_RadialControllerConfiguration);
-        Py_VISIT(state->type_RadialControllerControlAcquiredEventArgs);
-        Py_VISIT(state->type_RadialControllerMenu);
-        Py_VISIT(state->type_RadialControllerMenuItem);
-        Py_VISIT(state->type_RadialControllerRotationChangedEventArgs);
-        Py_VISIT(state->type_RadialControllerScreenContact);
-        Py_VISIT(state->type_RadialControllerScreenContactContinuedEventArgs);
-        Py_VISIT(state->type_RadialControllerScreenContactEndedEventArgs);
-        Py_VISIT(state->type_RadialControllerScreenContactStartedEventArgs);
-        Py_VISIT(state->type_RightTappedEventArgs);
-        Py_VISIT(state->type_SystemButtonEventController);
-        Py_VISIT(state->type_SystemFunctionButtonEventArgs);
-        Py_VISIT(state->type_SystemFunctionLockChangedEventArgs);
-        Py_VISIT(state->type_SystemFunctionLockIndicatorChangedEventArgs);
-        Py_VISIT(state->type_TappedEventArgs);
-        Py_VISIT(state->type_IPointerPointTransform);
-        Py_VISIT(state->type_CrossSlideThresholds);
-        Py_VISIT(state->type_ManipulationDelta);
-        Py_VISIT(state->type_ManipulationVelocities);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AttachableInputObject);
-        Py_CLEAR(state->type_CrossSlidingEventArgs);
-        Py_CLEAR(state->type_DraggingEventArgs);
-        Py_CLEAR(state->type_EdgeGesture);
-        Py_CLEAR(state->type_EdgeGestureEventArgs);
-        Py_CLEAR(state->type_GestureRecognizer);
-        Py_CLEAR(state->type_HoldingEventArgs);
-        Py_CLEAR(state->type_InputActivationListener);
-        Py_CLEAR(state->type_InputActivationListenerActivationChangedEventArgs);
-        Py_CLEAR(state->type_KeyboardDeliveryInterceptor);
-        Py_CLEAR(state->type_ManipulationCompletedEventArgs);
-        Py_CLEAR(state->type_ManipulationInertiaStartingEventArgs);
-        Py_CLEAR(state->type_ManipulationStartedEventArgs);
-        Py_CLEAR(state->type_ManipulationUpdatedEventArgs);
-        Py_CLEAR(state->type_MouseWheelParameters);
-        Py_CLEAR(state->type_PointerPoint);
-        Py_CLEAR(state->type_PointerPointProperties);
-        Py_CLEAR(state->type_PointerVisualizationSettings);
-        Py_CLEAR(state->type_RadialController);
-        Py_CLEAR(state->type_RadialControllerButtonClickedEventArgs);
-        Py_CLEAR(state->type_RadialControllerButtonHoldingEventArgs);
-        Py_CLEAR(state->type_RadialControllerButtonPressedEventArgs);
-        Py_CLEAR(state->type_RadialControllerButtonReleasedEventArgs);
-        Py_CLEAR(state->type_RadialControllerConfiguration);
-        Py_CLEAR(state->type_RadialControllerControlAcquiredEventArgs);
-        Py_CLEAR(state->type_RadialControllerMenu);
-        Py_CLEAR(state->type_RadialControllerMenuItem);
-        Py_CLEAR(state->type_RadialControllerRotationChangedEventArgs);
-        Py_CLEAR(state->type_RadialControllerScreenContact);
-        Py_CLEAR(state->type_RadialControllerScreenContactContinuedEventArgs);
-        Py_CLEAR(state->type_RadialControllerScreenContactEndedEventArgs);
-        Py_CLEAR(state->type_RadialControllerScreenContactStartedEventArgs);
-        Py_CLEAR(state->type_RightTappedEventArgs);
-        Py_CLEAR(state->type_SystemButtonEventController);
-        Py_CLEAR(state->type_SystemFunctionButtonEventArgs);
-        Py_CLEAR(state->type_SystemFunctionLockChangedEventArgs);
-        Py_CLEAR(state->type_SystemFunctionLockIndicatorChangedEventArgs);
-        Py_CLEAR(state->type_TappedEventArgs);
-        Py_CLEAR(state->type_IPointerPointTransform);
-        Py_CLEAR(state->type_CrossSlideThresholds);
-        Py_CLEAR(state->type_ManipulationDelta);
-        Py_CLEAR(state->type_ManipulationVelocities);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input
@@ -10379,7 +10222,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -10392,143 +10235,209 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AttachableInputObject = py::register_python_type(module.get(), type_name_AttachableInputObject, &type_spec_AttachableInputObject, object_bases.get(), nullptr);
-    if (!state->type_AttachableInputObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AttachableInputObject, &type_spec_AttachableInputObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AttachableInputObject, &type_spec_AttachableInputObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CrossSlidingEventArgs = py::register_python_type(module.get(), type_name_CrossSlidingEventArgs, &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CrossSlidingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CrossSlidingEventArgs, &type_spec_CrossSlidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CrossSlidingEventArgs, &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DraggingEventArgs = py::register_python_type(module.get(), type_name_DraggingEventArgs, &type_spec_DraggingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DraggingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DraggingEventArgs, &type_spec_DraggingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DraggingEventArgs, &type_spec_DraggingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EdgeGesture = py::register_python_type(module.get(), type_name_EdgeGesture, &type_spec_EdgeGesture, object_bases.get(), nullptr);
-    if (!state->type_EdgeGesture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EdgeGesture, &type_spec_EdgeGesture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EdgeGesture, &type_spec_EdgeGesture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EdgeGestureEventArgs = py::register_python_type(module.get(), type_name_EdgeGestureEventArgs, &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EdgeGestureEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EdgeGestureEventArgs, &type_spec_EdgeGestureEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EdgeGestureEventArgs, &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GestureRecognizer = py::register_python_type(module.get(), type_name_GestureRecognizer, &type_spec_GestureRecognizer, object_bases.get(), nullptr);
-    if (!state->type_GestureRecognizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GestureRecognizer, &type_spec_GestureRecognizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GestureRecognizer, &type_spec_GestureRecognizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HoldingEventArgs = py::register_python_type(module.get(), type_name_HoldingEventArgs, &type_spec_HoldingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HoldingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HoldingEventArgs, &type_spec_HoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HoldingEventArgs, &type_spec_HoldingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputActivationListener = py::register_python_type(module.get(), type_name_InputActivationListener, &type_spec_InputActivationListener, object_bases.get(), nullptr);
-    if (!state->type_InputActivationListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputActivationListener, &type_spec_InputActivationListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputActivationListener, &type_spec_InputActivationListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputActivationListenerActivationChangedEventArgs = py::register_python_type(module.get(), type_name_InputActivationListenerActivationChangedEventArgs, &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InputActivationListenerActivationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputActivationListenerActivationChangedEventArgs, &type_spec_InputActivationListenerActivationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputActivationListenerActivationChangedEventArgs, &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyboardDeliveryInterceptor = py::register_python_type(module.get(), type_name_KeyboardDeliveryInterceptor, &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), nullptr);
-    if (!state->type_KeyboardDeliveryInterceptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyboardDeliveryInterceptor, &type_spec_KeyboardDeliveryInterceptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyboardDeliveryInterceptor, &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationCompletedEventArgs = py::register_python_type(module.get(), type_name_ManipulationCompletedEventArgs, &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationCompletedEventArgs, &type_spec_ManipulationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationCompletedEventArgs, &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationInertiaStartingEventArgs = py::register_python_type(module.get(), type_name_ManipulationInertiaStartingEventArgs, &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationInertiaStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingEventArgs, &type_spec_ManipulationInertiaStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingEventArgs, &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationStartedEventArgs = py::register_python_type(module.get(), type_name_ManipulationStartedEventArgs, &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationStartedEventArgs, &type_spec_ManipulationStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationStartedEventArgs, &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationUpdatedEventArgs = py::register_python_type(module.get(), type_name_ManipulationUpdatedEventArgs, &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationUpdatedEventArgs, &type_spec_ManipulationUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationUpdatedEventArgs, &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MouseWheelParameters = py::register_python_type(module.get(), type_name_MouseWheelParameters, &type_spec_MouseWheelParameters, object_bases.get(), nullptr);
-    if (!state->type_MouseWheelParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MouseWheelParameters, &type_spec_MouseWheelParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MouseWheelParameters, &type_spec_MouseWheelParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerPoint = py::register_python_type(module.get(), type_name_PointerPoint, &type_spec_PointerPoint, object_bases.get(), nullptr);
-    if (!state->type_PointerPoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerPoint, &type_spec_PointerPoint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerPoint, &type_spec_PointerPoint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerPointProperties = py::register_python_type(module.get(), type_name_PointerPointProperties, &type_spec_PointerPointProperties, object_bases.get(), nullptr);
-    if (!state->type_PointerPointProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerPointProperties, &type_spec_PointerPointProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerPointProperties, &type_spec_PointerPointProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerVisualizationSettings = py::register_python_type(module.get(), type_name_PointerVisualizationSettings, &type_spec_PointerVisualizationSettings, object_bases.get(), nullptr);
-    if (!state->type_PointerVisualizationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerVisualizationSettings, &type_spec_PointerVisualizationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerVisualizationSettings, &type_spec_PointerVisualizationSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialController = py::register_python_type(module.get(), type_name_RadialController, &type_spec_RadialController, object_bases.get(), nullptr);
-    if (!state->type_RadialController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialController, &type_spec_RadialController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialController, &type_spec_RadialController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerButtonClickedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerButtonClickedEventArgs, &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerButtonClickedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonClickedEventArgs, &type_spec_RadialControllerButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonClickedEventArgs, &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerButtonHoldingEventArgs = py::register_python_type(module.get(), type_name_RadialControllerButtonHoldingEventArgs, &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerButtonHoldingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonHoldingEventArgs, &type_spec_RadialControllerButtonHoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonHoldingEventArgs, &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerButtonPressedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerButtonPressedEventArgs, &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerButtonPressedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonPressedEventArgs, &type_spec_RadialControllerButtonPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonPressedEventArgs, &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerButtonReleasedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerButtonReleasedEventArgs, &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerButtonReleasedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonReleasedEventArgs, &type_spec_RadialControllerButtonReleasedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerButtonReleasedEventArgs, &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10539,1086 +10448,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_RadialControllerConfiguration = py::register_python_type(module.get(), type_name_RadialControllerConfiguration, &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get()));
-    if (!state->type_RadialControllerConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerConfiguration, &type_spec_RadialControllerConfiguration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerConfiguration, &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerControlAcquiredEventArgs = py::register_python_type(module.get(), type_name_RadialControllerControlAcquiredEventArgs, &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerControlAcquiredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerControlAcquiredEventArgs, &type_spec_RadialControllerControlAcquiredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerControlAcquiredEventArgs, &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerMenu = py::register_python_type(module.get(), type_name_RadialControllerMenu, &type_spec_RadialControllerMenu, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerMenu)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerMenu, &type_spec_RadialControllerMenu, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerMenu, &type_spec_RadialControllerMenu, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerMenuItem = py::register_python_type(module.get(), type_name_RadialControllerMenuItem, &type_spec_RadialControllerMenuItem, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerMenuItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerMenuItem, &type_spec_RadialControllerMenuItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerMenuItem, &type_spec_RadialControllerMenuItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerRotationChangedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerRotationChangedEventArgs, &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerRotationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerRotationChangedEventArgs, &type_spec_RadialControllerRotationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerRotationChangedEventArgs, &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerScreenContact = py::register_python_type(module.get(), type_name_RadialControllerScreenContact, &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerScreenContact)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContact, &type_spec_RadialControllerScreenContact, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContact, &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerScreenContactContinuedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerScreenContactContinuedEventArgs, &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerScreenContactContinuedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactContinuedEventArgs, &type_spec_RadialControllerScreenContactContinuedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactContinuedEventArgs, &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerScreenContactEndedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerScreenContactEndedEventArgs, &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerScreenContactEndedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactEndedEventArgs, &type_spec_RadialControllerScreenContactEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactEndedEventArgs, &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadialControllerScreenContactStartedEventArgs = py::register_python_type(module.get(), type_name_RadialControllerScreenContactStartedEventArgs, &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RadialControllerScreenContactStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactStartedEventArgs, &type_spec_RadialControllerScreenContactStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactStartedEventArgs, &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RightTappedEventArgs = py::register_python_type(module.get(), type_name_RightTappedEventArgs, &type_spec_RightTappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RightTappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RightTappedEventArgs, &type_spec_RightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RightTappedEventArgs, &type_spec_RightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemButtonEventController = py::register_python_type(module.get(), type_name_SystemButtonEventController, &type_spec_SystemButtonEventController, object_bases.get(), nullptr);
-    if (!state->type_SystemButtonEventController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemButtonEventController, &type_spec_SystemButtonEventController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemButtonEventController, &type_spec_SystemButtonEventController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemFunctionButtonEventArgs = py::register_python_type(module.get(), type_name_SystemFunctionButtonEventArgs, &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SystemFunctionButtonEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemFunctionButtonEventArgs, &type_spec_SystemFunctionButtonEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemFunctionButtonEventArgs, &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemFunctionLockChangedEventArgs = py::register_python_type(module.get(), type_name_SystemFunctionLockChangedEventArgs, &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SystemFunctionLockChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemFunctionLockChangedEventArgs, &type_spec_SystemFunctionLockChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemFunctionLockChangedEventArgs, &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemFunctionLockIndicatorChangedEventArgs = py::register_python_type(module.get(), type_name_SystemFunctionLockIndicatorChangedEventArgs, &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SystemFunctionLockIndicatorChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemFunctionLockIndicatorChangedEventArgs, &type_spec_SystemFunctionLockIndicatorChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemFunctionLockIndicatorChangedEventArgs, &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TappedEventArgs = py::register_python_type(module.get(), type_name_TappedEventArgs, &type_spec_TappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TappedEventArgs, &type_spec_TappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TappedEventArgs, &type_spec_TappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPointerPointTransform = py::register_python_type(module.get(), type_name_IPointerPointTransform, &type_spec_IPointerPointTransform, object_bases.get(), nullptr);
-    if (!state->type_IPointerPointTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPointerPointTransform, &type_spec_IPointerPointTransform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPointerPointTransform, &type_spec_IPointerPointTransform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CrossSlideThresholds = py::register_python_type(module.get(), type_name_CrossSlideThresholds, &type_spec_CrossSlideThresholds, nullptr, nullptr);
-    if (!state->type_CrossSlideThresholds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CrossSlideThresholds, &type_spec_CrossSlideThresholds, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CrossSlideThresholds, &type_spec_CrossSlideThresholds, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationDelta = py::register_python_type(module.get(), type_name_ManipulationDelta, &type_spec_ManipulationDelta, nullptr, nullptr);
-    if (!state->type_ManipulationDelta)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationDelta, &type_spec_ManipulationDelta, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationDelta, &type_spec_ManipulationDelta, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationVelocities = py::register_python_type(module.get(), type_name_ManipulationVelocities, &type_spec_ManipulationVelocities, nullptr, nullptr);
-    if (!state->type_ManipulationVelocities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationVelocities, &type_spec_ManipulationVelocities, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationVelocities, &type_spec_ManipulationVelocities, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::AttachableInputObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AttachableInputObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::AttachableInputObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CrossSlidingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::CrossSlidingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::DraggingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DraggingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::DraggingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::EdgeGesture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EdgeGesture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::EdgeGesture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EdgeGestureEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::EdgeGestureEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::GestureRecognizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GestureRecognizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::GestureRecognizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::HoldingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HoldingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::HoldingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::InputActivationListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputActivationListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::InputActivationListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputActivationListenerActivationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyboardDeliveryInterceptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::KeyboardDeliveryInterceptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationInertiaStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::MouseWheelParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MouseWheelParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::MouseWheelParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::PointerPoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerPoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::PointerPoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::PointerPointProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerPointProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::PointerPointProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::PointerVisualizationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerVisualizationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::PointerVisualizationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerButtonClickedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerButtonHoldingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerButtonPressedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerButtonReleasedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerControlAcquiredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerMenu>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerMenu;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerMenu is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerMenuItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerMenuItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerMenuItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerRotationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerScreenContact>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerScreenContact;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerScreenContact is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerScreenContactContinuedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerScreenContactEndedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadialControllerScreenContactStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::RightTappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RightTappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::RightTappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::SystemButtonEventController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemButtonEventController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::SystemButtonEventController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemFunctionButtonEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::SystemFunctionButtonEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemFunctionLockChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemFunctionLockIndicatorChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::TappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::TappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::IPointerPointTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPointerPointTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::IPointerPointTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::CrossSlideThresholds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CrossSlideThresholds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::CrossSlideThresholds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationDelta>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationDelta;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationDelta is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::ManipulationVelocities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationVelocities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::ManipulationVelocities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

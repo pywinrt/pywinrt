@@ -126,104 +126,121 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextCompositionCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextCompositionSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextCompositionStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextEditContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextFormatUpdatingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextLayoutBounds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextLayoutRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextLayoutRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextSelectionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextSelectionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextSelectionUpdatingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextServicesConstants";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextServicesManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextTextRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextTextRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextTextUpdatingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::Core::CoreTextRange>
+    struct py_type<winrt::Windows::UI::Text::Core::CoreTextRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text.core";
+        static constexpr const char* type_name = "CoreTextRange";
     };
 }

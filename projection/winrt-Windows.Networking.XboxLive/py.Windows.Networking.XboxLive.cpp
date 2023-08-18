@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Networking::XboxLive
 {
-    struct module_state
-    {
-        PyTypeObject* type_XboxLiveDeviceAddress;
-        PyTypeObject* type_XboxLiveEndpointPair;
-        PyTypeObject* type_XboxLiveEndpointPairCreationResult;
-        PyTypeObject* type_XboxLiveEndpointPairStateChangedEventArgs;
-        PyTypeObject* type_XboxLiveEndpointPairTemplate;
-        PyTypeObject* type_XboxLiveInboundEndpointPairCreatedEventArgs;
-        PyTypeObject* type_XboxLiveQualityOfServiceMeasurement;
-        PyTypeObject* type_XboxLiveQualityOfServiceMetricResult;
-        PyTypeObject* type_XboxLiveQualityOfServicePrivatePayloadResult;
-    };
-
     // ----- XboxLiveDeviceAddress class --------------------
     static constexpr const char* const type_name_XboxLiveDeviceAddress = "XboxLiveDeviceAddress";
 
@@ -2795,60 +2782,15 @@ namespace py::cpp::Windows::Networking::XboxLive
     PyDoc_STRVAR(module_doc, "Windows::Networking::XboxLive");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_XboxLiveDeviceAddress);
-        Py_VISIT(state->type_XboxLiveEndpointPair);
-        Py_VISIT(state->type_XboxLiveEndpointPairCreationResult);
-        Py_VISIT(state->type_XboxLiveEndpointPairStateChangedEventArgs);
-        Py_VISIT(state->type_XboxLiveEndpointPairTemplate);
-        Py_VISIT(state->type_XboxLiveInboundEndpointPairCreatedEventArgs);
-        Py_VISIT(state->type_XboxLiveQualityOfServiceMeasurement);
-        Py_VISIT(state->type_XboxLiveQualityOfServiceMetricResult);
-        Py_VISIT(state->type_XboxLiveQualityOfServicePrivatePayloadResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_XboxLiveDeviceAddress);
-        Py_CLEAR(state->type_XboxLiveEndpointPair);
-        Py_CLEAR(state->type_XboxLiveEndpointPairCreationResult);
-        Py_CLEAR(state->type_XboxLiveEndpointPairStateChangedEventArgs);
-        Py_CLEAR(state->type_XboxLiveEndpointPairTemplate);
-        Py_CLEAR(state->type_XboxLiveInboundEndpointPairCreatedEventArgs);
-        Py_CLEAR(state->type_XboxLiveQualityOfServiceMeasurement);
-        Py_CLEAR(state->type_XboxLiveQualityOfServiceMetricResult);
-        Py_CLEAR(state->type_XboxLiveQualityOfServicePrivatePayloadResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_XboxLive",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::XboxLive
@@ -2864,7 +2806,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_XboxLive(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2877,35 +2819,44 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_XboxLive(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_XboxLiveDeviceAddress_Meta{PyType_FromSpec(&type_spec_XboxLiveDeviceAddress_Meta)};
     if (!type_XboxLiveDeviceAddress_Meta)
     {
         return nullptr;
     }
 
-    state->type_XboxLiveDeviceAddress = py::register_python_type(module.get(), type_name_XboxLiveDeviceAddress, &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get()));
-    if (!state->type_XboxLiveDeviceAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveDeviceAddress, &type_spec_XboxLiveDeviceAddress, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveDeviceAddress, &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveEndpointPair = py::register_python_type(module.get(), type_name_XboxLiveEndpointPair, &type_spec_XboxLiveEndpointPair, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveEndpointPair)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPair, &type_spec_XboxLiveEndpointPair, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPair, &type_spec_XboxLiveEndpointPair, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveEndpointPairCreationResult = py::register_python_type(module.get(), type_name_XboxLiveEndpointPairCreationResult, &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveEndpointPairCreationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairCreationResult, &type_spec_XboxLiveEndpointPairCreationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairCreationResult, &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveEndpointPairStateChangedEventArgs = py::register_python_type(module.get(), type_name_XboxLiveEndpointPairStateChangedEventArgs, &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveEndpointPairStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairStateChangedEventArgs, &type_spec_XboxLiveEndpointPairStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairStateChangedEventArgs, &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2916,14 +2867,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_XboxLive(void) noexcept
         return nullptr;
     }
 
-    state->type_XboxLiveEndpointPairTemplate = py::register_python_type(module.get(), type_name_XboxLiveEndpointPairTemplate, &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get()));
-    if (!state->type_XboxLiveEndpointPairTemplate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairTemplate, &type_spec_XboxLiveEndpointPairTemplate, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveEndpointPairTemplate, &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveInboundEndpointPairCreatedEventArgs = py::register_python_type(module.get(), type_name_XboxLiveInboundEndpointPairCreatedEventArgs, &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveInboundEndpointPairCreatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveInboundEndpointPairCreatedEventArgs, &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveInboundEndpointPairCreatedEventArgs, &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2934,231 +2891,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_XboxLive(void) noexcept
         return nullptr;
     }
 
-    state->type_XboxLiveQualityOfServiceMeasurement = py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMeasurement, &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get()));
-    if (!state->type_XboxLiveQualityOfServiceMeasurement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMeasurement, &type_spec_XboxLiveQualityOfServiceMeasurement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMeasurement, &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveQualityOfServiceMetricResult = py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMetricResult, &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveQualityOfServiceMetricResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMetricResult, &type_spec_XboxLiveQualityOfServiceMetricResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServiceMetricResult, &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XboxLiveQualityOfServicePrivatePayloadResult = py::register_python_type(module.get(), type_name_XboxLiveQualityOfServicePrivatePayloadResult, &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr);
-    if (!state->type_XboxLiveQualityOfServicePrivatePayloadResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServicePrivatePayloadResult, &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XboxLiveQualityOfServicePrivatePayloadResult, &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveDeviceAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPair;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairCreationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveEndpointPairTemplate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveInboundEndpointPairCreatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveQualityOfServiceMeasurement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveQualityOfServiceMetricResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::XboxLive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::XboxLive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XboxLiveQualityOfServicePrivatePayloadResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

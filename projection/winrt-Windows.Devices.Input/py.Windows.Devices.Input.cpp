@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Input
 {
-    struct module_state
-    {
-        PyTypeObject* type_KeyboardCapabilities;
-        PyTypeObject* type_MouseCapabilities;
-        PyTypeObject* type_MouseDevice;
-        PyTypeObject* type_MouseEventArgs;
-        PyTypeObject* type_PenButtonListener;
-        PyTypeObject* type_PenDevice;
-        PyTypeObject* type_PenDockListener;
-        PyTypeObject* type_PenDockedEventArgs;
-        PyTypeObject* type_PenTailButtonClickedEventArgs;
-        PyTypeObject* type_PenTailButtonDoubleClickedEventArgs;
-        PyTypeObject* type_PenTailButtonLongPressedEventArgs;
-        PyTypeObject* type_PenUndockedEventArgs;
-        PyTypeObject* type_PointerDevice;
-        PyTypeObject* type_TouchCapabilities;
-        PyTypeObject* type_MouseDelta;
-        PyTypeObject* type_PointerDeviceUsage;
-    };
-
     // ----- KeyboardCapabilities class --------------------
     static constexpr const char* const type_name_KeyboardCapabilities = "KeyboardCapabilities";
 
@@ -2593,74 +2573,15 @@ namespace py::cpp::Windows::Devices::Input
     PyDoc_STRVAR(module_doc, "Windows::Devices::Input");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_KeyboardCapabilities);
-        Py_VISIT(state->type_MouseCapabilities);
-        Py_VISIT(state->type_MouseDevice);
-        Py_VISIT(state->type_MouseEventArgs);
-        Py_VISIT(state->type_PenButtonListener);
-        Py_VISIT(state->type_PenDevice);
-        Py_VISIT(state->type_PenDockListener);
-        Py_VISIT(state->type_PenDockedEventArgs);
-        Py_VISIT(state->type_PenTailButtonClickedEventArgs);
-        Py_VISIT(state->type_PenTailButtonDoubleClickedEventArgs);
-        Py_VISIT(state->type_PenTailButtonLongPressedEventArgs);
-        Py_VISIT(state->type_PenUndockedEventArgs);
-        Py_VISIT(state->type_PointerDevice);
-        Py_VISIT(state->type_TouchCapabilities);
-        Py_VISIT(state->type_MouseDelta);
-        Py_VISIT(state->type_PointerDeviceUsage);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_KeyboardCapabilities);
-        Py_CLEAR(state->type_MouseCapabilities);
-        Py_CLEAR(state->type_MouseDevice);
-        Py_CLEAR(state->type_MouseEventArgs);
-        Py_CLEAR(state->type_PenButtonListener);
-        Py_CLEAR(state->type_PenDevice);
-        Py_CLEAR(state->type_PenDockListener);
-        Py_CLEAR(state->type_PenDockedEventArgs);
-        Py_CLEAR(state->type_PenTailButtonClickedEventArgs);
-        Py_CLEAR(state->type_PenTailButtonDoubleClickedEventArgs);
-        Py_CLEAR(state->type_PenTailButtonLongPressedEventArgs);
-        Py_CLEAR(state->type_PenUndockedEventArgs);
-        Py_CLEAR(state->type_PointerDevice);
-        Py_CLEAR(state->type_TouchCapabilities);
-        Py_CLEAR(state->type_MouseDelta);
-        Py_CLEAR(state->type_PointerDeviceUsage);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Input",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Input
@@ -2676,7 +2597,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Input(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2689,473 +2610,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Input(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_KeyboardCapabilities = py::register_python_type(module.get(), type_name_KeyboardCapabilities, &type_spec_KeyboardCapabilities, object_bases.get(), nullptr);
-    if (!state->type_KeyboardCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyboardCapabilities, &type_spec_KeyboardCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyboardCapabilities, &type_spec_KeyboardCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MouseCapabilities = py::register_python_type(module.get(), type_name_MouseCapabilities, &type_spec_MouseCapabilities, object_bases.get(), nullptr);
-    if (!state->type_MouseCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MouseCapabilities, &type_spec_MouseCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MouseCapabilities, &type_spec_MouseCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MouseDevice = py::register_python_type(module.get(), type_name_MouseDevice, &type_spec_MouseDevice, object_bases.get(), nullptr);
-    if (!state->type_MouseDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MouseDevice, &type_spec_MouseDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MouseDevice, &type_spec_MouseDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MouseEventArgs = py::register_python_type(module.get(), type_name_MouseEventArgs, &type_spec_MouseEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MouseEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MouseEventArgs, &type_spec_MouseEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MouseEventArgs, &type_spec_MouseEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenButtonListener = py::register_python_type(module.get(), type_name_PenButtonListener, &type_spec_PenButtonListener, object_bases.get(), nullptr);
-    if (!state->type_PenButtonListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenButtonListener, &type_spec_PenButtonListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenButtonListener, &type_spec_PenButtonListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenDevice = py::register_python_type(module.get(), type_name_PenDevice, &type_spec_PenDevice, object_bases.get(), nullptr);
-    if (!state->type_PenDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenDevice, &type_spec_PenDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenDevice, &type_spec_PenDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenDockListener = py::register_python_type(module.get(), type_name_PenDockListener, &type_spec_PenDockListener, object_bases.get(), nullptr);
-    if (!state->type_PenDockListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenDockListener, &type_spec_PenDockListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenDockListener, &type_spec_PenDockListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenDockedEventArgs = py::register_python_type(module.get(), type_name_PenDockedEventArgs, &type_spec_PenDockedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PenDockedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenDockedEventArgs, &type_spec_PenDockedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenDockedEventArgs, &type_spec_PenDockedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenTailButtonClickedEventArgs = py::register_python_type(module.get(), type_name_PenTailButtonClickedEventArgs, &type_spec_PenTailButtonClickedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PenTailButtonClickedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenTailButtonClickedEventArgs, &type_spec_PenTailButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenTailButtonClickedEventArgs, &type_spec_PenTailButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenTailButtonDoubleClickedEventArgs = py::register_python_type(module.get(), type_name_PenTailButtonDoubleClickedEventArgs, &type_spec_PenTailButtonDoubleClickedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PenTailButtonDoubleClickedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenTailButtonDoubleClickedEventArgs, &type_spec_PenTailButtonDoubleClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenTailButtonDoubleClickedEventArgs, &type_spec_PenTailButtonDoubleClickedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenTailButtonLongPressedEventArgs = py::register_python_type(module.get(), type_name_PenTailButtonLongPressedEventArgs, &type_spec_PenTailButtonLongPressedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PenTailButtonLongPressedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenTailButtonLongPressedEventArgs, &type_spec_PenTailButtonLongPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenTailButtonLongPressedEventArgs, &type_spec_PenTailButtonLongPressedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenUndockedEventArgs = py::register_python_type(module.get(), type_name_PenUndockedEventArgs, &type_spec_PenUndockedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PenUndockedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenUndockedEventArgs, &type_spec_PenUndockedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenUndockedEventArgs, &type_spec_PenUndockedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerDevice = py::register_python_type(module.get(), type_name_PointerDevice, &type_spec_PointerDevice, object_bases.get(), nullptr);
-    if (!state->type_PointerDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerDevice, &type_spec_PointerDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerDevice, &type_spec_PointerDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TouchCapabilities = py::register_python_type(module.get(), type_name_TouchCapabilities, &type_spec_TouchCapabilities, object_bases.get(), nullptr);
-    if (!state->type_TouchCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TouchCapabilities, &type_spec_TouchCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TouchCapabilities, &type_spec_TouchCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MouseDelta = py::register_python_type(module.get(), type_name_MouseDelta, &type_spec_MouseDelta, nullptr, nullptr);
-    if (!state->type_MouseDelta)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MouseDelta, &type_spec_MouseDelta, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MouseDelta, &type_spec_MouseDelta, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerDeviceUsage = py::register_python_type(module.get(), type_name_PointerDeviceUsage, &type_spec_PointerDeviceUsage, nullptr, nullptr);
-    if (!state->type_PointerDeviceUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerDeviceUsage, &type_spec_PointerDeviceUsage, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerDeviceUsage, &type_spec_PointerDeviceUsage, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::KeyboardCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyboardCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::KeyboardCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::MouseCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MouseCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::MouseCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::MouseDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MouseDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::MouseDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::MouseEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MouseEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::MouseEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenButtonListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenButtonListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenButtonListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenDockListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenDockListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenDockListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenDockedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenDockedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenDockedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenTailButtonClickedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenTailButtonDoubleClickedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenTailButtonLongPressedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenUndockedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PenUndockedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PointerDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PointerDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::TouchCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TouchCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::TouchCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::MouseDelta>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MouseDelta;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::MouseDelta is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Input::PointerDeviceUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerDeviceUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Input::PointerDeviceUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

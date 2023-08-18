@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>
+    struct py_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.devices.notification";
+        static constexpr const char* type_name = "VibrationDevice";
     };
 }

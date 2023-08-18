@@ -6,51 +6,6 @@
 
 namespace py::cpp::Windows::Networking::Sockets
 {
-    struct module_state
-    {
-        PyTypeObject* type_ControlChannelTrigger;
-        PyTypeObject* type_DatagramSocket;
-        PyTypeObject* type_DatagramSocketControl;
-        PyTypeObject* type_DatagramSocketInformation;
-        PyTypeObject* type_DatagramSocketMessageReceivedEventArgs;
-        PyTypeObject* type_MessageWebSocket;
-        PyTypeObject* type_MessageWebSocketControl;
-        PyTypeObject* type_MessageWebSocketInformation;
-        PyTypeObject* type_MessageWebSocketMessageReceivedEventArgs;
-        PyTypeObject* type_ServerMessageWebSocket;
-        PyTypeObject* type_ServerMessageWebSocketControl;
-        PyTypeObject* type_ServerMessageWebSocketInformation;
-        PyTypeObject* type_ServerStreamWebSocket;
-        PyTypeObject* type_ServerStreamWebSocketInformation;
-        PyTypeObject* type_SocketActivityContext;
-        PyTypeObject* type_SocketActivityInformation;
-        PyTypeObject* type_SocketActivityTriggerDetails;
-        PyTypeObject* type_SocketError;
-        PyTypeObject* type_StreamSocket;
-        PyTypeObject* type_StreamSocketControl;
-        PyTypeObject* type_StreamSocketInformation;
-        PyTypeObject* type_StreamSocketListener;
-        PyTypeObject* type_StreamSocketListenerConnectionReceivedEventArgs;
-        PyTypeObject* type_StreamSocketListenerControl;
-        PyTypeObject* type_StreamSocketListenerInformation;
-        PyTypeObject* type_StreamWebSocket;
-        PyTypeObject* type_StreamWebSocketControl;
-        PyTypeObject* type_StreamWebSocketInformation;
-        PyTypeObject* type_WebSocketClosedEventArgs;
-        PyTypeObject* type_WebSocketError;
-        PyTypeObject* type_WebSocketKeepAlive;
-        PyTypeObject* type_WebSocketServerCustomValidationRequestedEventArgs;
-        PyTypeObject* type_IControlChannelTriggerEventDetails;
-        PyTypeObject* type_IControlChannelTriggerResetEventDetails;
-        PyTypeObject* type_IWebSocket;
-        PyTypeObject* type_IWebSocketControl;
-        PyTypeObject* type_IWebSocketControl2;
-        PyTypeObject* type_IWebSocketInformation;
-        PyTypeObject* type_IWebSocketInformation2;
-        PyTypeObject* type_BandwidthStatistics;
-        PyTypeObject* type_RoundTripTimeStatistics;
-    };
-
     // ----- ControlChannelTrigger class --------------------
     static constexpr const char* const type_name_ControlChannelTrigger = "ControlChannelTrigger";
 
@@ -10611,124 +10566,15 @@ namespace py::cpp::Windows::Networking::Sockets
     PyDoc_STRVAR(module_doc, "Windows::Networking::Sockets");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ControlChannelTrigger);
-        Py_VISIT(state->type_DatagramSocket);
-        Py_VISIT(state->type_DatagramSocketControl);
-        Py_VISIT(state->type_DatagramSocketInformation);
-        Py_VISIT(state->type_DatagramSocketMessageReceivedEventArgs);
-        Py_VISIT(state->type_MessageWebSocket);
-        Py_VISIT(state->type_MessageWebSocketControl);
-        Py_VISIT(state->type_MessageWebSocketInformation);
-        Py_VISIT(state->type_MessageWebSocketMessageReceivedEventArgs);
-        Py_VISIT(state->type_ServerMessageWebSocket);
-        Py_VISIT(state->type_ServerMessageWebSocketControl);
-        Py_VISIT(state->type_ServerMessageWebSocketInformation);
-        Py_VISIT(state->type_ServerStreamWebSocket);
-        Py_VISIT(state->type_ServerStreamWebSocketInformation);
-        Py_VISIT(state->type_SocketActivityContext);
-        Py_VISIT(state->type_SocketActivityInformation);
-        Py_VISIT(state->type_SocketActivityTriggerDetails);
-        Py_VISIT(state->type_SocketError);
-        Py_VISIT(state->type_StreamSocket);
-        Py_VISIT(state->type_StreamSocketControl);
-        Py_VISIT(state->type_StreamSocketInformation);
-        Py_VISIT(state->type_StreamSocketListener);
-        Py_VISIT(state->type_StreamSocketListenerConnectionReceivedEventArgs);
-        Py_VISIT(state->type_StreamSocketListenerControl);
-        Py_VISIT(state->type_StreamSocketListenerInformation);
-        Py_VISIT(state->type_StreamWebSocket);
-        Py_VISIT(state->type_StreamWebSocketControl);
-        Py_VISIT(state->type_StreamWebSocketInformation);
-        Py_VISIT(state->type_WebSocketClosedEventArgs);
-        Py_VISIT(state->type_WebSocketError);
-        Py_VISIT(state->type_WebSocketKeepAlive);
-        Py_VISIT(state->type_WebSocketServerCustomValidationRequestedEventArgs);
-        Py_VISIT(state->type_IControlChannelTriggerEventDetails);
-        Py_VISIT(state->type_IControlChannelTriggerResetEventDetails);
-        Py_VISIT(state->type_IWebSocket);
-        Py_VISIT(state->type_IWebSocketControl);
-        Py_VISIT(state->type_IWebSocketControl2);
-        Py_VISIT(state->type_IWebSocketInformation);
-        Py_VISIT(state->type_IWebSocketInformation2);
-        Py_VISIT(state->type_BandwidthStatistics);
-        Py_VISIT(state->type_RoundTripTimeStatistics);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ControlChannelTrigger);
-        Py_CLEAR(state->type_DatagramSocket);
-        Py_CLEAR(state->type_DatagramSocketControl);
-        Py_CLEAR(state->type_DatagramSocketInformation);
-        Py_CLEAR(state->type_DatagramSocketMessageReceivedEventArgs);
-        Py_CLEAR(state->type_MessageWebSocket);
-        Py_CLEAR(state->type_MessageWebSocketControl);
-        Py_CLEAR(state->type_MessageWebSocketInformation);
-        Py_CLEAR(state->type_MessageWebSocketMessageReceivedEventArgs);
-        Py_CLEAR(state->type_ServerMessageWebSocket);
-        Py_CLEAR(state->type_ServerMessageWebSocketControl);
-        Py_CLEAR(state->type_ServerMessageWebSocketInformation);
-        Py_CLEAR(state->type_ServerStreamWebSocket);
-        Py_CLEAR(state->type_ServerStreamWebSocketInformation);
-        Py_CLEAR(state->type_SocketActivityContext);
-        Py_CLEAR(state->type_SocketActivityInformation);
-        Py_CLEAR(state->type_SocketActivityTriggerDetails);
-        Py_CLEAR(state->type_SocketError);
-        Py_CLEAR(state->type_StreamSocket);
-        Py_CLEAR(state->type_StreamSocketControl);
-        Py_CLEAR(state->type_StreamSocketInformation);
-        Py_CLEAR(state->type_StreamSocketListener);
-        Py_CLEAR(state->type_StreamSocketListenerConnectionReceivedEventArgs);
-        Py_CLEAR(state->type_StreamSocketListenerControl);
-        Py_CLEAR(state->type_StreamSocketListenerInformation);
-        Py_CLEAR(state->type_StreamWebSocket);
-        Py_CLEAR(state->type_StreamWebSocketControl);
-        Py_CLEAR(state->type_StreamWebSocketInformation);
-        Py_CLEAR(state->type_WebSocketClosedEventArgs);
-        Py_CLEAR(state->type_WebSocketError);
-        Py_CLEAR(state->type_WebSocketKeepAlive);
-        Py_CLEAR(state->type_WebSocketServerCustomValidationRequestedEventArgs);
-        Py_CLEAR(state->type_IControlChannelTriggerEventDetails);
-        Py_CLEAR(state->type_IControlChannelTriggerResetEventDetails);
-        Py_CLEAR(state->type_IWebSocket);
-        Py_CLEAR(state->type_IWebSocketControl);
-        Py_CLEAR(state->type_IWebSocketControl2);
-        Py_CLEAR(state->type_IWebSocketInformation);
-        Py_CLEAR(state->type_IWebSocketInformation2);
-        Py_CLEAR(state->type_BandwidthStatistics);
-        Py_CLEAR(state->type_RoundTripTimeStatistics);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_Sockets",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::Sockets
@@ -10744,7 +10590,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Sockets(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -10757,95 +10603,137 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Sockets(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ControlChannelTrigger = py::register_python_type(module.get(), type_name_ControlChannelTrigger, &type_spec_ControlChannelTrigger, object_bases.get(), nullptr);
-    if (!state->type_ControlChannelTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ControlChannelTrigger, &type_spec_ControlChannelTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ControlChannelTrigger, &type_spec_ControlChannelTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatagramSocket = py::register_python_type(module.get(), type_name_DatagramSocket, &type_spec_DatagramSocket, object_bases.get(), nullptr);
-    if (!state->type_DatagramSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatagramSocket, &type_spec_DatagramSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatagramSocket, &type_spec_DatagramSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatagramSocketControl = py::register_python_type(module.get(), type_name_DatagramSocketControl, &type_spec_DatagramSocketControl, object_bases.get(), nullptr);
-    if (!state->type_DatagramSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatagramSocketControl, &type_spec_DatagramSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatagramSocketControl, &type_spec_DatagramSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatagramSocketInformation = py::register_python_type(module.get(), type_name_DatagramSocketInformation, &type_spec_DatagramSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_DatagramSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatagramSocketInformation, &type_spec_DatagramSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatagramSocketInformation, &type_spec_DatagramSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatagramSocketMessageReceivedEventArgs = py::register_python_type(module.get(), type_name_DatagramSocketMessageReceivedEventArgs, &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DatagramSocketMessageReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatagramSocketMessageReceivedEventArgs, &type_spec_DatagramSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatagramSocketMessageReceivedEventArgs, &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MessageWebSocket = py::register_python_type(module.get(), type_name_MessageWebSocket, &type_spec_MessageWebSocket, object_bases.get(), nullptr);
-    if (!state->type_MessageWebSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MessageWebSocket, &type_spec_MessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MessageWebSocket, &type_spec_MessageWebSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MessageWebSocketControl = py::register_python_type(module.get(), type_name_MessageWebSocketControl, &type_spec_MessageWebSocketControl, object_bases.get(), nullptr);
-    if (!state->type_MessageWebSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketControl, &type_spec_MessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketControl, &type_spec_MessageWebSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MessageWebSocketInformation = py::register_python_type(module.get(), type_name_MessageWebSocketInformation, &type_spec_MessageWebSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_MessageWebSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketInformation, &type_spec_MessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketInformation, &type_spec_MessageWebSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MessageWebSocketMessageReceivedEventArgs = py::register_python_type(module.get(), type_name_MessageWebSocketMessageReceivedEventArgs, &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MessageWebSocketMessageReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketMessageReceivedEventArgs, &type_spec_MessageWebSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MessageWebSocketMessageReceivedEventArgs, &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServerMessageWebSocket = py::register_python_type(module.get(), type_name_ServerMessageWebSocket, &type_spec_ServerMessageWebSocket, object_bases.get(), nullptr);
-    if (!state->type_ServerMessageWebSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocket, &type_spec_ServerMessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocket, &type_spec_ServerMessageWebSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServerMessageWebSocketControl = py::register_python_type(module.get(), type_name_ServerMessageWebSocketControl, &type_spec_ServerMessageWebSocketControl, object_bases.get(), nullptr);
-    if (!state->type_ServerMessageWebSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketControl, &type_spec_ServerMessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketControl, &type_spec_ServerMessageWebSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServerMessageWebSocketInformation = py::register_python_type(module.get(), type_name_ServerMessageWebSocketInformation, &type_spec_ServerMessageWebSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_ServerMessageWebSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketInformation, &type_spec_ServerMessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketInformation, &type_spec_ServerMessageWebSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServerStreamWebSocket = py::register_python_type(module.get(), type_name_ServerStreamWebSocket, &type_spec_ServerStreamWebSocket, object_bases.get(), nullptr);
-    if (!state->type_ServerStreamWebSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocket, &type_spec_ServerStreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocket, &type_spec_ServerStreamWebSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServerStreamWebSocketInformation = py::register_python_type(module.get(), type_name_ServerStreamWebSocketInformation, &type_spec_ServerStreamWebSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_ServerStreamWebSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocketInformation, &type_spec_ServerStreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocketInformation, &type_spec_ServerStreamWebSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocketActivityContext = py::register_python_type(module.get(), type_name_SocketActivityContext, &type_spec_SocketActivityContext, object_bases.get(), nullptr);
-    if (!state->type_SocketActivityContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocketActivityContext, &type_spec_SocketActivityContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocketActivityContext, &type_spec_SocketActivityContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10856,1105 +10744,240 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Sockets(void) noexcept
         return nullptr;
     }
 
-    state->type_SocketActivityInformation = py::register_python_type(module.get(), type_name_SocketActivityInformation, &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get()));
-    if (!state->type_SocketActivityInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocketActivityInformation, &type_spec_SocketActivityInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocketActivityInformation, &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocketActivityTriggerDetails = py::register_python_type(module.get(), type_name_SocketActivityTriggerDetails, &type_spec_SocketActivityTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_SocketActivityTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocketActivityTriggerDetails, &type_spec_SocketActivityTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocketActivityTriggerDetails, &type_spec_SocketActivityTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocketError = py::register_python_type(module.get(), type_name_SocketError, &type_spec_SocketError, object_bases.get(), nullptr);
-    if (!state->type_SocketError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocketError, &type_spec_SocketError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocketError, &type_spec_SocketError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocket = py::register_python_type(module.get(), type_name_StreamSocket, &type_spec_StreamSocket, object_bases.get(), nullptr);
-    if (!state->type_StreamSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocket, &type_spec_StreamSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocket, &type_spec_StreamSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketControl = py::register_python_type(module.get(), type_name_StreamSocketControl, &type_spec_StreamSocketControl, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketControl, &type_spec_StreamSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketControl, &type_spec_StreamSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketInformation = py::register_python_type(module.get(), type_name_StreamSocketInformation, &type_spec_StreamSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketInformation, &type_spec_StreamSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketInformation, &type_spec_StreamSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketListener = py::register_python_type(module.get(), type_name_StreamSocketListener, &type_spec_StreamSocketListener, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketListener, &type_spec_StreamSocketListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketListener, &type_spec_StreamSocketListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketListenerConnectionReceivedEventArgs = py::register_python_type(module.get(), type_name_StreamSocketListenerConnectionReceivedEventArgs, &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketListenerConnectionReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerConnectionReceivedEventArgs, &type_spec_StreamSocketListenerConnectionReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerConnectionReceivedEventArgs, &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketListenerControl = py::register_python_type(module.get(), type_name_StreamSocketListenerControl, &type_spec_StreamSocketListenerControl, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketListenerControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerControl, &type_spec_StreamSocketListenerControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerControl, &type_spec_StreamSocketListenerControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamSocketListenerInformation = py::register_python_type(module.get(), type_name_StreamSocketListenerInformation, &type_spec_StreamSocketListenerInformation, object_bases.get(), nullptr);
-    if (!state->type_StreamSocketListenerInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerInformation, &type_spec_StreamSocketListenerInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamSocketListenerInformation, &type_spec_StreamSocketListenerInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamWebSocket = py::register_python_type(module.get(), type_name_StreamWebSocket, &type_spec_StreamWebSocket, object_bases.get(), nullptr);
-    if (!state->type_StreamWebSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamWebSocket, &type_spec_StreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamWebSocket, &type_spec_StreamWebSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamWebSocketControl = py::register_python_type(module.get(), type_name_StreamWebSocketControl, &type_spec_StreamWebSocketControl, object_bases.get(), nullptr);
-    if (!state->type_StreamWebSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamWebSocketControl, &type_spec_StreamWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamWebSocketControl, &type_spec_StreamWebSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreamWebSocketInformation = py::register_python_type(module.get(), type_name_StreamWebSocketInformation, &type_spec_StreamWebSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_StreamWebSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreamWebSocketInformation, &type_spec_StreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreamWebSocketInformation, &type_spec_StreamWebSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebSocketClosedEventArgs = py::register_python_type(module.get(), type_name_WebSocketClosedEventArgs, &type_spec_WebSocketClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebSocketClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebSocketClosedEventArgs, &type_spec_WebSocketClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebSocketClosedEventArgs, &type_spec_WebSocketClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebSocketError = py::register_python_type(module.get(), type_name_WebSocketError, &type_spec_WebSocketError, object_bases.get(), nullptr);
-    if (!state->type_WebSocketError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebSocketError, &type_spec_WebSocketError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebSocketError, &type_spec_WebSocketError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebSocketKeepAlive = py::register_python_type(module.get(), type_name_WebSocketKeepAlive, &type_spec_WebSocketKeepAlive, object_bases.get(), nullptr);
-    if (!state->type_WebSocketKeepAlive)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebSocketKeepAlive, &type_spec_WebSocketKeepAlive, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebSocketKeepAlive, &type_spec_WebSocketKeepAlive, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebSocketServerCustomValidationRequestedEventArgs = py::register_python_type(module.get(), type_name_WebSocketServerCustomValidationRequestedEventArgs, &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebSocketServerCustomValidationRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebSocketServerCustomValidationRequestedEventArgs, &type_spec_WebSocketServerCustomValidationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebSocketServerCustomValidationRequestedEventArgs, &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IControlChannelTriggerEventDetails = py::register_python_type(module.get(), type_name_IControlChannelTriggerEventDetails, &type_spec_IControlChannelTriggerEventDetails, object_bases.get(), nullptr);
-    if (!state->type_IControlChannelTriggerEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerEventDetails, &type_spec_IControlChannelTriggerEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerEventDetails, &type_spec_IControlChannelTriggerEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IControlChannelTriggerResetEventDetails = py::register_python_type(module.get(), type_name_IControlChannelTriggerResetEventDetails, &type_spec_IControlChannelTriggerResetEventDetails, object_bases.get(), nullptr);
-    if (!state->type_IControlChannelTriggerResetEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerResetEventDetails, &type_spec_IControlChannelTriggerResetEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerResetEventDetails, &type_spec_IControlChannelTriggerResetEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebSocket = py::register_python_type(module.get(), type_name_IWebSocket, &type_spec_IWebSocket, object_bases.get(), nullptr);
-    if (!state->type_IWebSocket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebSocket, &type_spec_IWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebSocket, &type_spec_IWebSocket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebSocketControl = py::register_python_type(module.get(), type_name_IWebSocketControl, &type_spec_IWebSocketControl, object_bases.get(), nullptr);
-    if (!state->type_IWebSocketControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebSocketControl, &type_spec_IWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebSocketControl, &type_spec_IWebSocketControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebSocketControl2 = py::register_python_type(module.get(), type_name_IWebSocketControl2, &type_spec_IWebSocketControl2, object_bases.get(), nullptr);
-    if (!state->type_IWebSocketControl2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebSocketControl2, &type_spec_IWebSocketControl2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebSocketControl2, &type_spec_IWebSocketControl2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebSocketInformation = py::register_python_type(module.get(), type_name_IWebSocketInformation, &type_spec_IWebSocketInformation, object_bases.get(), nullptr);
-    if (!state->type_IWebSocketInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebSocketInformation, &type_spec_IWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebSocketInformation, &type_spec_IWebSocketInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebSocketInformation2 = py::register_python_type(module.get(), type_name_IWebSocketInformation2, &type_spec_IWebSocketInformation2, object_bases.get(), nullptr);
-    if (!state->type_IWebSocketInformation2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebSocketInformation2, &type_spec_IWebSocketInformation2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebSocketInformation2, &type_spec_IWebSocketInformation2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BandwidthStatistics = py::register_python_type(module.get(), type_name_BandwidthStatistics, &type_spec_BandwidthStatistics, nullptr, nullptr);
-    if (!state->type_BandwidthStatistics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BandwidthStatistics, &type_spec_BandwidthStatistics, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BandwidthStatistics, &type_spec_BandwidthStatistics, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RoundTripTimeStatistics = py::register_python_type(module.get(), type_name_RoundTripTimeStatistics, &type_spec_RoundTripTimeStatistics, nullptr, nullptr);
-    if (!state->type_RoundTripTimeStatistics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RoundTripTimeStatistics, &type_spec_RoundTripTimeStatistics, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RoundTripTimeStatistics, &type_spec_RoundTripTimeStatistics, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ControlChannelTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ControlChannelTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ControlChannelTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::DatagramSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatagramSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::DatagramSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatagramSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::DatagramSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatagramSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::DatagramSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatagramSocketMessageReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessageWebSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::MessageWebSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessageWebSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::MessageWebSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessageWebSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::MessageWebSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MessageWebSocketMessageReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServerMessageWebSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ServerMessageWebSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServerMessageWebSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServerMessageWebSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServerStreamWebSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ServerStreamWebSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServerStreamWebSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::SocketActivityContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocketActivityContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::SocketActivityContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocketActivityInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::SocketActivityInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocketActivityTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::SocketError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocketError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::SocketError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketListenerConnectionReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketListenerControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketListenerControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamSocketListenerInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamSocketListenerInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamWebSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamWebSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamWebSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamWebSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreamWebSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::StreamWebSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebSocketClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::WebSocketError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebSocketError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::WebSocketError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebSocketKeepAlive;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::WebSocketKeepAlive is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebSocketServerCustomValidationRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IControlChannelTriggerEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IControlChannelTriggerResetEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IWebSocket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebSocket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IWebSocket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IWebSocketControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebSocketControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IWebSocketControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebSocketControl2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IWebSocketControl2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebSocketInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IWebSocketInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebSocketInformation2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::IWebSocketInformation2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BandwidthStatistics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::BandwidthStatistics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Sockets;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Sockets");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RoundTripTimeStatistics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Sockets::RoundTripTimeStatistics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

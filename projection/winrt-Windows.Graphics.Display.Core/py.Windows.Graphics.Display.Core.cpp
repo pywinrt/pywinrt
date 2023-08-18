@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Display::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_HdmiDisplayInformation;
-        PyTypeObject* type_HdmiDisplayMode;
-        PyTypeObject* type_HdmiDisplayHdr2086Metadata;
-    };
-
     // ----- HdmiDisplayInformation class --------------------
     static constexpr const char* const type_name_HdmiDisplayInformation = "HdmiDisplayInformation";
 
@@ -1144,48 +1137,15 @@ namespace py::cpp::Windows::Graphics::Display::Core
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Display::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HdmiDisplayInformation);
-        Py_VISIT(state->type_HdmiDisplayMode);
-        Py_VISIT(state->type_HdmiDisplayHdr2086Metadata);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HdmiDisplayInformation);
-        Py_CLEAR(state->type_HdmiDisplayMode);
-        Py_CLEAR(state->type_HdmiDisplayHdr2086Metadata);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Display_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Display::Core
@@ -1201,7 +1161,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1214,96 +1174,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HdmiDisplayInformation = py::register_python_type(module.get(), type_name_HdmiDisplayInformation, &type_spec_HdmiDisplayInformation, object_bases.get(), nullptr);
-    if (!state->type_HdmiDisplayInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayInformation, &type_spec_HdmiDisplayInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayInformation, &type_spec_HdmiDisplayInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HdmiDisplayMode = py::register_python_type(module.get(), type_name_HdmiDisplayMode, &type_spec_HdmiDisplayMode, object_bases.get(), nullptr);
-    if (!state->type_HdmiDisplayMode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayMode, &type_spec_HdmiDisplayMode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayMode, &type_spec_HdmiDisplayMode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HdmiDisplayHdr2086Metadata = py::register_python_type(module.get(), type_name_HdmiDisplayHdr2086Metadata, &type_spec_HdmiDisplayHdr2086Metadata, nullptr, nullptr);
-    if (!state->type_HdmiDisplayHdr2086Metadata)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayHdr2086Metadata, &type_spec_HdmiDisplayHdr2086Metadata, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HdmiDisplayHdr2086Metadata, &type_spec_HdmiDisplayHdr2086Metadata, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdmiDisplayInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdmiDisplayMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::Core::HdmiDisplayMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdmiDisplayHdr2086Metadata;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 {
-    struct module_state
-    {
-        PyTypeObject* type_DevicePortalConnection;
-        PyTypeObject* type_DevicePortalConnectionClosedEventArgs;
-        PyTypeObject* type_DevicePortalConnectionRequestReceivedEventArgs;
-    };
-
     // ----- DevicePortalConnection class --------------------
     static constexpr const char* const type_name_DevicePortalConnection = "DevicePortalConnection";
 
@@ -628,48 +621,15 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     PyDoc_STRVAR(module_doc, "Windows::System::Diagnostics::DevicePortal");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DevicePortalConnection);
-        Py_VISIT(state->type_DevicePortalConnectionClosedEventArgs);
-        Py_VISIT(state->type_DevicePortalConnectionRequestReceivedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DevicePortalConnection);
-        Py_CLEAR(state->type_DevicePortalConnectionClosedEventArgs);
-        Py_CLEAR(state->type_DevicePortalConnectionRequestReceivedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Diagnostics_DevicePortal",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Diagnostics::DevicePortal
@@ -685,7 +645,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_DevicePortal(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -698,96 +658,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_DevicePortal(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DevicePortalConnection = py::register_python_type(module.get(), type_name_DevicePortalConnection, &type_spec_DevicePortalConnection, object_bases.get(), nullptr);
-    if (!state->type_DevicePortalConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnection, &type_spec_DevicePortalConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnection, &type_spec_DevicePortalConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePortalConnectionClosedEventArgs = py::register_python_type(module.get(), type_name_DevicePortalConnectionClosedEventArgs, &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DevicePortalConnectionClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnectionClosedEventArgs, &type_spec_DevicePortalConnectionClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnectionClosedEventArgs, &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePortalConnectionRequestReceivedEventArgs = py::register_python_type(module.get(), type_name_DevicePortalConnectionRequestReceivedEventArgs, &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DevicePortalConnectionRequestReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnectionRequestReceivedEventArgs, &type_spec_DevicePortalConnectionRequestReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePortalConnectionRequestReceivedEventArgs, &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::DevicePortal;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::DevicePortal");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePortalConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::DevicePortal;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::DevicePortal");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePortalConnectionClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics::DevicePortal;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics::DevicePortal");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePortalConnectionRequestReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

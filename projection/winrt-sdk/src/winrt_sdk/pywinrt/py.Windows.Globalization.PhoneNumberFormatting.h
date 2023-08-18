@@ -63,14 +63,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>
+    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PhoneNumberFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>
+    struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
+        static constexpr const char* type_name = "PhoneNumberInfo";
     };
 }

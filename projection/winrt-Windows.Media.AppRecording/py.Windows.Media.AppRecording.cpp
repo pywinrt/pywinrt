@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Media::AppRecording
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppRecordingManager;
-        PyTypeObject* type_AppRecordingResult;
-        PyTypeObject* type_AppRecordingSaveScreenshotResult;
-        PyTypeObject* type_AppRecordingSavedScreenshotInfo;
-        PyTypeObject* type_AppRecordingStatus;
-        PyTypeObject* type_AppRecordingStatusDetails;
-    };
-
     // ----- AppRecordingManager class --------------------
     static constexpr const char* const type_name_AppRecordingManager = "AppRecordingManager";
 
@@ -1091,54 +1081,15 @@ namespace py::cpp::Windows::Media::AppRecording
     PyDoc_STRVAR(module_doc, "Windows::Media::AppRecording");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppRecordingManager);
-        Py_VISIT(state->type_AppRecordingResult);
-        Py_VISIT(state->type_AppRecordingSaveScreenshotResult);
-        Py_VISIT(state->type_AppRecordingSavedScreenshotInfo);
-        Py_VISIT(state->type_AppRecordingStatus);
-        Py_VISIT(state->type_AppRecordingStatusDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppRecordingManager);
-        Py_CLEAR(state->type_AppRecordingResult);
-        Py_CLEAR(state->type_AppRecordingSaveScreenshotResult);
-        Py_CLEAR(state->type_AppRecordingSavedScreenshotInfo);
-        Py_CLEAR(state->type_AppRecordingStatus);
-        Py_CLEAR(state->type_AppRecordingStatusDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_AppRecording",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::AppRecording
@@ -1154,7 +1105,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppRecording(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1167,183 +1118,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppRecording(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppRecordingManager = py::register_python_type(module.get(), type_name_AppRecordingManager, &type_spec_AppRecordingManager, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingManager, &type_spec_AppRecordingManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingManager, &type_spec_AppRecordingManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppRecordingResult = py::register_python_type(module.get(), type_name_AppRecordingResult, &type_spec_AppRecordingResult, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingResult, &type_spec_AppRecordingResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingResult, &type_spec_AppRecordingResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppRecordingSaveScreenshotResult = py::register_python_type(module.get(), type_name_AppRecordingSaveScreenshotResult, &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingSaveScreenshotResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingSaveScreenshotResult, &type_spec_AppRecordingSaveScreenshotResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingSaveScreenshotResult, &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppRecordingSavedScreenshotInfo = py::register_python_type(module.get(), type_name_AppRecordingSavedScreenshotInfo, &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingSavedScreenshotInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingSavedScreenshotInfo, &type_spec_AppRecordingSavedScreenshotInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingSavedScreenshotInfo, &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppRecordingStatus = py::register_python_type(module.get(), type_name_AppRecordingStatus, &type_spec_AppRecordingStatus, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingStatus, &type_spec_AppRecordingStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingStatus, &type_spec_AppRecordingStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppRecordingStatusDetails = py::register_python_type(module.get(), type_name_AppRecordingStatusDetails, &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr);
-    if (!state->type_AppRecordingStatusDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppRecordingStatusDetails, &type_spec_AppRecordingStatusDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppRecordingStatusDetails, &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingSaveScreenshotResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingSavedScreenshotInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppRecording;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppRecording");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppRecordingStatusDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppRecording::AppRecordingStatusDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

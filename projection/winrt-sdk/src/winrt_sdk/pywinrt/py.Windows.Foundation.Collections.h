@@ -2673,93 +2673,108 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Collections::PropertySet>
+    struct py_type<winrt::Windows::Foundation::Collections::PropertySet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "PropertySet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Collections::StringMap>
+    struct py_type<winrt::Windows::Foundation::Collections::StringMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "StringMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Collections::ValueSet>
+    struct py_type<winrt::Windows::Foundation::Collections::ValueSet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "ValueSet";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IIterable>
+    struct py_type<py::proj::Windows::Foundation::Collections::IIterable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IIterable`1";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IIterator>
+    struct py_type<py::proj::Windows::Foundation::Collections::IIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IIterator`1";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>
+    struct py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IKeyValuePair`2";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>
+    struct py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IMapChangedEventArgs`1";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IMapView>
+    struct py_type<py::proj::Windows::Foundation::Collections::IMapView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IMapView`2";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IMap>
+    struct py_type<py::proj::Windows::Foundation::Collections::IMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IMap`2";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IObservableMap>
+    struct py_type<py::proj::Windows::Foundation::Collections::IObservableMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IObservableMap`2";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IObservableVector>
+    struct py_type<py::proj::Windows::Foundation::Collections::IObservableVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IObservableVector`1";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Collections::IPropertySet>
+    struct py_type<winrt::Windows::Foundation::Collections::IPropertySet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IPropertySet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
+    struct py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IVectorChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IVectorView>
+    struct py_type<py::proj::Windows::Foundation::Collections::IVectorView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IVectorView`1";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::Collections::IVector>
+    struct py_type<py::proj::Windows::Foundation::Collections::IVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.collections";
+        static constexpr const char* type_name = "IVector`1";
     };
     template <typename T>
     struct pinterface_python_type<winrt::Windows::Foundation::Collections::IIterable<T>>

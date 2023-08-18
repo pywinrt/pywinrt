@@ -32,8 +32,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>
+    struct py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.applicationmodel";
+        static constexpr const char* type_name = "ApplicationProfile";
     };
 }

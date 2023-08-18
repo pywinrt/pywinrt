@@ -14,7 +14,6 @@ try:
 except ImportError:
     pass
 
-
 Blittable = _ns_module.Blittable
 Nested = _ns_module.Nested
 NonBlittable = _ns_module.NonBlittable

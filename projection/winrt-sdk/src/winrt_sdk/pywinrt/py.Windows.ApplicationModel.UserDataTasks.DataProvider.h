@@ -43,74 +43,86 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskDataProviderConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskDataProviderTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListCompleteTaskRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListCompleteTaskRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListCreateOrUpdateTaskRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListCreateOrUpdateTaskRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListDeleteTaskRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListDeleteTaskRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListSkipOccurrenceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListSkipOccurrenceRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListSyncManagerSyncRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
+        static constexpr const char* type_name = "UserDataTaskListSyncManagerSyncRequestEventArgs";
     };
 }

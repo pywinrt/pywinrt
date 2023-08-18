@@ -67,20 +67,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>
+    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>
+    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayMode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
+    struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display.core";
+        static constexpr const char* type_name = "HdmiDisplayHdr2086Metadata";
     };
 }

@@ -181,164 +181,191 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AudioBuffer>
+    struct py_type<winrt::Windows::Media::AudioBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "AudioBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AudioFrame>
+    struct py_type<winrt::Windows::Media::AudioFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "AudioFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "AutoRepeatModeChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ImageDisplayProperties>
+    struct py_type<winrt::Windows::Media::ImageDisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "ImageDisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaControl>
+    struct py_type<winrt::Windows::Media::MediaControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaExtensionManager>
+    struct py_type<winrt::Windows::Media::MediaExtensionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaExtensionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaMarkerTypes>
+    struct py_type<winrt::Windows::Media::MediaMarkerTypes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaMarkerTypes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProcessingTriggerDetails>
+    struct py_type<winrt::Windows::Media::MediaProcessingTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaProcessingTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaTimelineController>
+    struct py_type<winrt::Windows::Media::MediaTimelineController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaTimelineController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaTimelineControllerFailedEventArgs>
+    struct py_type<winrt::Windows::Media::MediaTimelineControllerFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaTimelineControllerFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MusicDisplayProperties>
+    struct py_type<winrt::Windows::Media::MusicDisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MusicDisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlaybackPositionChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlaybackPositionChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "PlaybackPositionChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "PlaybackRateChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "ShuffleEnabledChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SystemMediaTransportControls>
+    struct py_type<winrt::Windows::Media::SystemMediaTransportControls>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControls";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs>
+    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsButtonPressedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SystemMediaTransportControlsDisplayUpdater>
+    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsDisplayUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsDisplayUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs>
+    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsPropertyChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties>
+    struct py_type<winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "SystemMediaTransportControlsTimelineProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::VideoDisplayProperties>
+    struct py_type<winrt::Windows::Media::VideoDisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "VideoDisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::VideoEffects>
+    struct py_type<winrt::Windows::Media::VideoEffects>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "VideoEffects";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::VideoFrame>
+    struct py_type<winrt::Windows::Media::VideoFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "VideoFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::IMediaExtension>
+    struct py_type<winrt::Windows::Media::IMediaExtension>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "IMediaExtension";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::IMediaFrame>
+    struct py_type<winrt::Windows::Media::IMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "IMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::IMediaMarker>
+    struct py_type<winrt::Windows::Media::IMediaMarker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "IMediaMarker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::IMediaMarkers>
+    struct py_type<winrt::Windows::Media::IMediaMarkers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "IMediaMarkers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaTimeRange>
+    struct py_type<winrt::Windows::Media::MediaTimeRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media";
+        static constexpr const char* type_name = "MediaTimeRange";
     };
 }

@@ -74,50 +74,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketFeature";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketOption";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketParameterDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketParameterInitializer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "PrintTicketValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "WorkflowPrintTicket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
+        static constexpr const char* type_name = "WorkflowPrintTicketValidationResult";
     };
 }

@@ -234,230 +234,268 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::AdaptiveNotificationText>
+    struct py_type<winrt::Windows::UI::Notifications::AdaptiveNotificationText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "AdaptiveNotificationText";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::BadgeNotification>
+    struct py_type<winrt::Windows::UI::Notifications::BadgeNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "BadgeNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>
+    struct py_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "BadgeUpdateManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>
+    struct py_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "BadgeUpdateManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::BadgeUpdater>
+    struct py_type<winrt::Windows::UI::Notifications::BadgeUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "BadgeUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>
+    struct py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "KnownAdaptiveNotificationHints";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>
+    struct py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "KnownAdaptiveNotificationTextStyles";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>
+    struct py_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "KnownNotificationBindings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::Notification>
+    struct py_type<winrt::Windows::UI::Notifications::Notification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "Notification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::NotificationBinding>
+    struct py_type<winrt::Windows::UI::Notifications::NotificationBinding>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "NotificationBinding";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::NotificationData>
+    struct py_type<winrt::Windows::UI::Notifications::NotificationData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "NotificationData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::NotificationVisual>
+    struct py_type<winrt::Windows::UI::Notifications::NotificationVisual>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "NotificationVisual";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ScheduledTileNotification>
+    struct py_type<winrt::Windows::UI::Notifications::ScheduledTileNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ScheduledTileNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ScheduledToastNotification>
+    struct py_type<winrt::Windows::UI::Notifications::ScheduledToastNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ScheduledToastNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>
+    struct py_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ScheduledToastNotificationShowingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ShownTileNotification>
+    struct py_type<winrt::Windows::UI::Notifications::ShownTileNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ShownTileNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileFlyoutNotification>
+    struct py_type<winrt::Windows::UI::Notifications::TileFlyoutNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileFlyoutNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>
+    struct py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileFlyoutUpdateManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>
+    struct py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileFlyoutUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileNotification>
+    struct py_type<winrt::Windows::UI::Notifications::TileNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileUpdateManager>
+    struct py_type<winrt::Windows::UI::Notifications::TileUpdateManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileUpdateManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>
+    struct py_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileUpdateManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::TileUpdater>
+    struct py_type<winrt::Windows::UI::Notifications::TileUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "TileUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastCollection>
+    struct py_type<winrt::Windows::UI::Notifications::ToastCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastCollectionManager>
+    struct py_type<winrt::Windows::UI::Notifications::ToastCollectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastCollectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>
+    struct py_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastDismissedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>
+    struct py_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotification>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotificationActionTriggerDetail";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotificationHistory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotificationHistoryChangedTriggerDetail";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotificationManager>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotificationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotificationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotificationManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::ToastNotifier>
+    struct py_type<winrt::Windows::UI::Notifications::ToastNotifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "ToastNotifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::UserNotification>
+    struct py_type<winrt::Windows::UI::Notifications::UserNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "UserNotification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "UserNotificationChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
+    struct py_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.notifications";
+        static constexpr const char* type_name = "IAdaptiveNotificationContent";
     };
 }

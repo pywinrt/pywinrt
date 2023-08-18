@@ -79,50 +79,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "FindAllAccountsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAccountEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAccountMonitor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAuthenticationCoreManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebProviderError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebTokenRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebTokenRequestResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebTokenResponse";
     };
 }

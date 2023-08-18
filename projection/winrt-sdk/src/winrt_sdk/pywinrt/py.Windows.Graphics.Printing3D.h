@@ -187,171 +187,199 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DManager>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTask>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTask";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskSourceChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Print3DTaskSourceRequestedArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3D3MFPackage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DBaseMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DBaseMaterialGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DColorMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DColorMaterialGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DComponent>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DComponent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DComponent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DComponentWithMatrix";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DCompositeMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DCompositeMaterialGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DFaceReductionOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMesh>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMesh>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMesh";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMeshVerificationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DModel>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DModel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DModelTexture";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMultiplePropertyMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DMultiplePropertyMaterialGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DTexture2CoordMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DTexture2CoordMaterialGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DTextureResource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>
+    struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
+        static constexpr const char* type_name = "Printing3DBufferDescription";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedHandler>

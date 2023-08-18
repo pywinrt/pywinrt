@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Lights::Effects
 {
-    struct module_state
-    {
-        PyTypeObject* type_LampArrayBitmapEffect;
-        PyTypeObject* type_LampArrayBitmapRequestedEventArgs;
-        PyTypeObject* type_LampArrayBlinkEffect;
-        PyTypeObject* type_LampArrayColorRampEffect;
-        PyTypeObject* type_LampArrayCustomEffect;
-        PyTypeObject* type_LampArrayEffectPlaylist;
-        PyTypeObject* type_LampArraySolidEffect;
-        PyTypeObject* type_LampArrayUpdateRequestedEventArgs;
-        PyTypeObject* type_ILampArrayEffect;
-    };
-
     // ----- LampArrayBitmapEffect class --------------------
     static constexpr const char* const type_name_LampArrayBitmapEffect = "LampArrayBitmapEffect";
 
@@ -3140,60 +3127,15 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     PyDoc_STRVAR(module_doc, "Windows::Devices::Lights::Effects");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_LampArrayBitmapEffect);
-        Py_VISIT(state->type_LampArrayBitmapRequestedEventArgs);
-        Py_VISIT(state->type_LampArrayBlinkEffect);
-        Py_VISIT(state->type_LampArrayColorRampEffect);
-        Py_VISIT(state->type_LampArrayCustomEffect);
-        Py_VISIT(state->type_LampArrayEffectPlaylist);
-        Py_VISIT(state->type_LampArraySolidEffect);
-        Py_VISIT(state->type_LampArrayUpdateRequestedEventArgs);
-        Py_VISIT(state->type_ILampArrayEffect);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_LampArrayBitmapEffect);
-        Py_CLEAR(state->type_LampArrayBitmapRequestedEventArgs);
-        Py_CLEAR(state->type_LampArrayBlinkEffect);
-        Py_CLEAR(state->type_LampArrayColorRampEffect);
-        Py_CLEAR(state->type_LampArrayCustomEffect);
-        Py_CLEAR(state->type_LampArrayEffectPlaylist);
-        Py_CLEAR(state->type_LampArraySolidEffect);
-        Py_CLEAR(state->type_LampArrayUpdateRequestedEventArgs);
-        Py_CLEAR(state->type_ILampArrayEffect);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Lights_Effects",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Lights::Effects
@@ -3209,7 +3151,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights_Effects(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3222,270 +3164,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights_Effects(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_LampArrayBitmapEffect = py::register_python_type(module.get(), type_name_LampArrayBitmapEffect, &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr);
-    if (!state->type_LampArrayBitmapEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayBitmapEffect, &type_spec_LampArrayBitmapEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayBitmapEffect, &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayBitmapRequestedEventArgs = py::register_python_type(module.get(), type_name_LampArrayBitmapRequestedEventArgs, &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LampArrayBitmapRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayBitmapRequestedEventArgs, &type_spec_LampArrayBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayBitmapRequestedEventArgs, &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayBlinkEffect = py::register_python_type(module.get(), type_name_LampArrayBlinkEffect, &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr);
-    if (!state->type_LampArrayBlinkEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayBlinkEffect, &type_spec_LampArrayBlinkEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayBlinkEffect, &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayColorRampEffect = py::register_python_type(module.get(), type_name_LampArrayColorRampEffect, &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr);
-    if (!state->type_LampArrayColorRampEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayColorRampEffect, &type_spec_LampArrayColorRampEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayColorRampEffect, &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayCustomEffect = py::register_python_type(module.get(), type_name_LampArrayCustomEffect, &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr);
-    if (!state->type_LampArrayCustomEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayCustomEffect, &type_spec_LampArrayCustomEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayCustomEffect, &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayEffectPlaylist = py::register_python_type(module.get(), type_name_LampArrayEffectPlaylist, &type_spec_LampArrayEffectPlaylist, object_bases.get(), nullptr);
-    if (!state->type_LampArrayEffectPlaylist)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayEffectPlaylist, &type_spec_LampArrayEffectPlaylist, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayEffectPlaylist, &type_spec_LampArrayEffectPlaylist, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArraySolidEffect = py::register_python_type(module.get(), type_name_LampArraySolidEffect, &type_spec_LampArraySolidEffect, object_bases.get(), nullptr);
-    if (!state->type_LampArraySolidEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArraySolidEffect, &type_spec_LampArraySolidEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArraySolidEffect, &type_spec_LampArraySolidEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArrayUpdateRequestedEventArgs = py::register_python_type(module.get(), type_name_LampArrayUpdateRequestedEventArgs, &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LampArrayUpdateRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArrayUpdateRequestedEventArgs, &type_spec_LampArrayUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArrayUpdateRequestedEventArgs, &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILampArrayEffect = py::register_python_type(module.get(), type_name_ILampArrayEffect, &type_spec_ILampArrayEffect, object_bases.get(), nullptr);
-    if (!state->type_ILampArrayEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILampArrayEffect, &type_spec_ILampArrayEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILampArrayEffect, &type_spec_ILampArrayEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayBitmapEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayBitmapRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayBlinkEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayColorRampEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayCustomEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayEffectPlaylist;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArraySolidEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArrayUpdateRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILampArrayEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Effects::ILampArrayEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

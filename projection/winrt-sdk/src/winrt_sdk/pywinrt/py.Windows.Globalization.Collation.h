@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Collation::CharacterGrouping>
+    struct py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.collation";
+        static constexpr const char* type_name = "CharacterGrouping";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Collation::CharacterGroupings>
+    struct py_type<winrt::Windows::Globalization::Collation::CharacterGroupings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.collation";
+        static constexpr const char* type_name = "CharacterGroupings";
     };
 }

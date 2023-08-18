@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Bluetooth::Background
 {
-    struct module_state
-    {
-        PyTypeObject* type_BluetoothLEAdvertisementPublisherTriggerDetails;
-        PyTypeObject* type_BluetoothLEAdvertisementWatcherTriggerDetails;
-        PyTypeObject* type_GattCharacteristicNotificationTriggerDetails;
-        PyTypeObject* type_GattServiceProviderConnection;
-        PyTypeObject* type_GattServiceProviderTriggerDetails;
-        PyTypeObject* type_RfcommConnectionTriggerDetails;
-        PyTypeObject* type_RfcommInboundConnectionInformation;
-        PyTypeObject* type_RfcommOutboundConnectionInformation;
-    };
-
     // ----- BluetoothLEAdvertisementPublisherTriggerDetails class --------------------
     static constexpr const char* const type_name_BluetoothLEAdvertisementPublisherTriggerDetails = "BluetoothLEAdvertisementPublisherTriggerDetails";
 
@@ -1225,58 +1213,15 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::Background");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BluetoothLEAdvertisementPublisherTriggerDetails);
-        Py_VISIT(state->type_BluetoothLEAdvertisementWatcherTriggerDetails);
-        Py_VISIT(state->type_GattCharacteristicNotificationTriggerDetails);
-        Py_VISIT(state->type_GattServiceProviderConnection);
-        Py_VISIT(state->type_GattServiceProviderTriggerDetails);
-        Py_VISIT(state->type_RfcommConnectionTriggerDetails);
-        Py_VISIT(state->type_RfcommInboundConnectionInformation);
-        Py_VISIT(state->type_RfcommOutboundConnectionInformation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BluetoothLEAdvertisementPublisherTriggerDetails);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementWatcherTriggerDetails);
-        Py_CLEAR(state->type_GattCharacteristicNotificationTriggerDetails);
-        Py_CLEAR(state->type_GattServiceProviderConnection);
-        Py_CLEAR(state->type_GattServiceProviderTriggerDetails);
-        Py_CLEAR(state->type_RfcommConnectionTriggerDetails);
-        Py_CLEAR(state->type_RfcommInboundConnectionInformation);
-        Py_CLEAR(state->type_RfcommOutboundConnectionInformation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Bluetooth_Background",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Bluetooth::Background
@@ -1292,7 +1237,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Background(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1305,23 +1250,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Background(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BluetoothLEAdvertisementPublisherTriggerDetails = py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTriggerDetails, &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_BluetoothLEAdvertisementPublisherTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTriggerDetails, &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTriggerDetails, &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BluetoothLEAdvertisementWatcherTriggerDetails = py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTriggerDetails, &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_BluetoothLEAdvertisementWatcherTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTriggerDetails, &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTriggerDetails, &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattCharacteristicNotificationTriggerDetails = py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTriggerDetails, &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_GattCharacteristicNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTriggerDetails, &type_spec_GattCharacteristicNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTriggerDetails, &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1332,220 +1283,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Background(void) noexcept
         return nullptr;
     }
 
-    state->type_GattServiceProviderConnection = py::register_python_type(module.get(), type_name_GattServiceProviderConnection, &type_spec_GattServiceProviderConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get()));
-    if (!state->type_GattServiceProviderConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderConnection, &type_spec_GattServiceProviderConnection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderConnection, &type_spec_GattServiceProviderConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderTriggerDetails = py::register_python_type(module.get(), type_name_GattServiceProviderTriggerDetails, &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerDetails, &type_spec_GattServiceProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerDetails, &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommConnectionTriggerDetails = py::register_python_type(module.get(), type_name_RfcommConnectionTriggerDetails, &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_RfcommConnectionTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommConnectionTriggerDetails, &type_spec_RfcommConnectionTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommConnectionTriggerDetails, &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommInboundConnectionInformation = py::register_python_type(module.get(), type_name_RfcommInboundConnectionInformation, &type_spec_RfcommInboundConnectionInformation, object_bases.get(), nullptr);
-    if (!state->type_RfcommInboundConnectionInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommInboundConnectionInformation, &type_spec_RfcommInboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommInboundConnectionInformation, &type_spec_RfcommInboundConnectionInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommOutboundConnectionInformation = py::register_python_type(module.get(), type_name_RfcommOutboundConnectionInformation, &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), nullptr);
-    if (!state->type_RfcommOutboundConnectionInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommOutboundConnectionInformation, &type_spec_RfcommOutboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommOutboundConnectionInformation, &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementPublisherTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementWatcherTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattCharacteristicNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommConnectionTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommInboundConnectionInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommOutboundConnectionInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

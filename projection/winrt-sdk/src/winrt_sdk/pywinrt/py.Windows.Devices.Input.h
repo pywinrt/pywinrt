@@ -68,98 +68,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::KeyboardCapabilities>
+    struct py_type<winrt::Windows::Devices::Input::KeyboardCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "KeyboardCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::MouseCapabilities>
+    struct py_type<winrt::Windows::Devices::Input::MouseCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "MouseCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::MouseDevice>
+    struct py_type<winrt::Windows::Devices::Input::MouseDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "MouseDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::MouseEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::MouseEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "MouseEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenButtonListener>
+    struct py_type<winrt::Windows::Devices::Input::PenButtonListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenButtonListener";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenDevice>
+    struct py_type<winrt::Windows::Devices::Input::PenDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenDockListener>
+    struct py_type<winrt::Windows::Devices::Input::PenDockListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenDockListener";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenDockedEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenDockedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenTailButtonClickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenTailButtonDoubleClickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenTailButtonLongPressedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PenUndockedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PointerDevice>
+    struct py_type<winrt::Windows::Devices::Input::PointerDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PointerDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::TouchCapabilities>
+    struct py_type<winrt::Windows::Devices::Input::TouchCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "TouchCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::MouseDelta>
+    struct py_type<winrt::Windows::Devices::Input::MouseDelta>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "MouseDelta";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::PointerDeviceUsage>
+    struct py_type<winrt::Windows::Devices::Input::PointerDeviceUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input";
+        static constexpr const char* type_name = "PointerDeviceUsage";
     };
 }

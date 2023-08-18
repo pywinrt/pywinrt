@@ -6,27 +6,6 @@
 
 namespace py::cpp::Windows::Foundation::Diagnostics
 {
-    struct module_state
-    {
-        PyTypeObject* type_AsyncCausalityTracer;
-        PyTypeObject* type_ErrorDetails;
-        PyTypeObject* type_FileLoggingSession;
-        PyTypeObject* type_LogFileGeneratedEventArgs;
-        PyTypeObject* type_LoggingActivity;
-        PyTypeObject* type_LoggingChannel;
-        PyTypeObject* type_LoggingChannelOptions;
-        PyTypeObject* type_LoggingFields;
-        PyTypeObject* type_LoggingOptions;
-        PyTypeObject* type_LoggingSession;
-        PyTypeObject* type_RuntimeBrokerErrorSettings;
-        PyTypeObject* type_TracingStatusChangedEventArgs;
-        PyTypeObject* type_IErrorReportingSettings;
-        PyTypeObject* type_IFileLoggingSession;
-        PyTypeObject* type_ILoggingChannel;
-        PyTypeObject* type_ILoggingSession;
-        PyTypeObject* type_ILoggingTarget;
-    };
-
     // ----- AsyncCausalityTracer class --------------------
     static constexpr const char* const type_name_AsyncCausalityTracer = "AsyncCausalityTracer";
 
@@ -7916,76 +7895,15 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     PyDoc_STRVAR(module_doc, "Windows::Foundation::Diagnostics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AsyncCausalityTracer);
-        Py_VISIT(state->type_ErrorDetails);
-        Py_VISIT(state->type_FileLoggingSession);
-        Py_VISIT(state->type_LogFileGeneratedEventArgs);
-        Py_VISIT(state->type_LoggingActivity);
-        Py_VISIT(state->type_LoggingChannel);
-        Py_VISIT(state->type_LoggingChannelOptions);
-        Py_VISIT(state->type_LoggingFields);
-        Py_VISIT(state->type_LoggingOptions);
-        Py_VISIT(state->type_LoggingSession);
-        Py_VISIT(state->type_RuntimeBrokerErrorSettings);
-        Py_VISIT(state->type_TracingStatusChangedEventArgs);
-        Py_VISIT(state->type_IErrorReportingSettings);
-        Py_VISIT(state->type_IFileLoggingSession);
-        Py_VISIT(state->type_ILoggingChannel);
-        Py_VISIT(state->type_ILoggingSession);
-        Py_VISIT(state->type_ILoggingTarget);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AsyncCausalityTracer);
-        Py_CLEAR(state->type_ErrorDetails);
-        Py_CLEAR(state->type_FileLoggingSession);
-        Py_CLEAR(state->type_LogFileGeneratedEventArgs);
-        Py_CLEAR(state->type_LoggingActivity);
-        Py_CLEAR(state->type_LoggingChannel);
-        Py_CLEAR(state->type_LoggingChannelOptions);
-        Py_CLEAR(state->type_LoggingFields);
-        Py_CLEAR(state->type_LoggingOptions);
-        Py_CLEAR(state->type_LoggingSession);
-        Py_CLEAR(state->type_RuntimeBrokerErrorSettings);
-        Py_CLEAR(state->type_TracingStatusChangedEventArgs);
-        Py_CLEAR(state->type_IErrorReportingSettings);
-        Py_CLEAR(state->type_IFileLoggingSession);
-        Py_CLEAR(state->type_ILoggingChannel);
-        Py_CLEAR(state->type_ILoggingSession);
-        Py_CLEAR(state->type_ILoggingTarget);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Foundation_Diagnostics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Foundation::Diagnostics
@@ -8001,7 +7919,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8014,502 +7932,159 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AsyncCausalityTracer = py::register_python_type(module.get(), type_name_AsyncCausalityTracer, &type_spec_AsyncCausalityTracer, object_bases.get(), nullptr);
-    if (!state->type_AsyncCausalityTracer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AsyncCausalityTracer, &type_spec_AsyncCausalityTracer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AsyncCausalityTracer, &type_spec_AsyncCausalityTracer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ErrorDetails = py::register_python_type(module.get(), type_name_ErrorDetails, &type_spec_ErrorDetails, object_bases.get(), nullptr);
-    if (!state->type_ErrorDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ErrorDetails, &type_spec_ErrorDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ErrorDetails, &type_spec_ErrorDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileLoggingSession = py::register_python_type(module.get(), type_name_FileLoggingSession, &type_spec_FileLoggingSession, object_bases.get(), nullptr);
-    if (!state->type_FileLoggingSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileLoggingSession, &type_spec_FileLoggingSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileLoggingSession, &type_spec_FileLoggingSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LogFileGeneratedEventArgs = py::register_python_type(module.get(), type_name_LogFileGeneratedEventArgs, &type_spec_LogFileGeneratedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LogFileGeneratedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LogFileGeneratedEventArgs, &type_spec_LogFileGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LogFileGeneratedEventArgs, &type_spec_LogFileGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingActivity = py::register_python_type(module.get(), type_name_LoggingActivity, &type_spec_LoggingActivity, object_bases.get(), nullptr);
-    if (!state->type_LoggingActivity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingActivity, &type_spec_LoggingActivity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingActivity, &type_spec_LoggingActivity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingChannel = py::register_python_type(module.get(), type_name_LoggingChannel, &type_spec_LoggingChannel, object_bases.get(), nullptr);
-    if (!state->type_LoggingChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingChannel, &type_spec_LoggingChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingChannel, &type_spec_LoggingChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingChannelOptions = py::register_python_type(module.get(), type_name_LoggingChannelOptions, &type_spec_LoggingChannelOptions, object_bases.get(), nullptr);
-    if (!state->type_LoggingChannelOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingChannelOptions, &type_spec_LoggingChannelOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingChannelOptions, &type_spec_LoggingChannelOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingFields = py::register_python_type(module.get(), type_name_LoggingFields, &type_spec_LoggingFields, object_bases.get(), nullptr);
-    if (!state->type_LoggingFields)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingFields, &type_spec_LoggingFields, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingFields, &type_spec_LoggingFields, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingOptions = py::register_python_type(module.get(), type_name_LoggingOptions, &type_spec_LoggingOptions, object_bases.get(), nullptr);
-    if (!state->type_LoggingOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingOptions, &type_spec_LoggingOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingOptions, &type_spec_LoggingOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoggingSession = py::register_python_type(module.get(), type_name_LoggingSession, &type_spec_LoggingSession, object_bases.get(), nullptr);
-    if (!state->type_LoggingSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoggingSession, &type_spec_LoggingSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoggingSession, &type_spec_LoggingSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RuntimeBrokerErrorSettings = py::register_python_type(module.get(), type_name_RuntimeBrokerErrorSettings, &type_spec_RuntimeBrokerErrorSettings, object_bases.get(), nullptr);
-    if (!state->type_RuntimeBrokerErrorSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RuntimeBrokerErrorSettings, &type_spec_RuntimeBrokerErrorSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RuntimeBrokerErrorSettings, &type_spec_RuntimeBrokerErrorSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TracingStatusChangedEventArgs = py::register_python_type(module.get(), type_name_TracingStatusChangedEventArgs, &type_spec_TracingStatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TracingStatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TracingStatusChangedEventArgs, &type_spec_TracingStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TracingStatusChangedEventArgs, &type_spec_TracingStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IErrorReportingSettings = py::register_python_type(module.get(), type_name_IErrorReportingSettings, &type_spec_IErrorReportingSettings, object_bases.get(), nullptr);
-    if (!state->type_IErrorReportingSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IErrorReportingSettings, &type_spec_IErrorReportingSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IErrorReportingSettings, &type_spec_IErrorReportingSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileLoggingSession = py::register_python_type(module.get(), type_name_IFileLoggingSession, &type_spec_IFileLoggingSession, object_bases.get(), nullptr);
-    if (!state->type_IFileLoggingSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileLoggingSession, &type_spec_IFileLoggingSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileLoggingSession, &type_spec_IFileLoggingSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILoggingChannel = py::register_python_type(module.get(), type_name_ILoggingChannel, &type_spec_ILoggingChannel, object_bases.get(), nullptr);
-    if (!state->type_ILoggingChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILoggingChannel, &type_spec_ILoggingChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILoggingChannel, &type_spec_ILoggingChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILoggingSession = py::register_python_type(module.get(), type_name_ILoggingSession, &type_spec_ILoggingSession, object_bases.get(), nullptr);
-    if (!state->type_ILoggingSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILoggingSession, &type_spec_ILoggingSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILoggingSession, &type_spec_ILoggingSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILoggingTarget = py::register_python_type(module.get(), type_name_ILoggingTarget, &type_spec_ILoggingTarget, object_bases.get(), nullptr);
-    if (!state->type_ILoggingTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILoggingTarget, &type_spec_ILoggingTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILoggingTarget, &type_spec_ILoggingTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AsyncCausalityTracer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ErrorDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::ErrorDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileLoggingSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::FileLoggingSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LogFileGeneratedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingActivity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingActivity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingActivity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingChannelOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingFields>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingFields;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingFields is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoggingSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::LoggingSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RuntimeBrokerErrorSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TracingStatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IErrorReportingSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileLoggingSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::IFileLoggingSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILoggingChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::ILoggingChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILoggingSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::ILoggingSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILoggingTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Diagnostics::ILoggingTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

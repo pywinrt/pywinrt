@@ -96,62 +96,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactAddress>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactAddress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactAddress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactChangeRecord";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactInformation>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactQueryOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactQueryResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::ContactStore>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "ContactStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "KnownContactProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::StoredContact>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::StoredContact>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "StoredContact";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "IContactInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>
+    struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
+        static constexpr const char* type_name = "IContactInformation2";
     };
 }

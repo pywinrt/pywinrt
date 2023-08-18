@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Media::PlayTo
 {
-    struct module_state
-    {
-        PyTypeObject* type_CurrentTimeChangeRequestedEventArgs;
-        PyTypeObject* type_MuteChangeRequestedEventArgs;
-        PyTypeObject* type_PlayToConnection;
-        PyTypeObject* type_PlayToConnectionErrorEventArgs;
-        PyTypeObject* type_PlayToConnectionStateChangedEventArgs;
-        PyTypeObject* type_PlayToConnectionTransferredEventArgs;
-        PyTypeObject* type_PlayToManager;
-        PyTypeObject* type_PlayToReceiver;
-        PyTypeObject* type_PlayToSource;
-        PyTypeObject* type_PlayToSourceDeferral;
-        PyTypeObject* type_PlayToSourceRequest;
-        PyTypeObject* type_PlayToSourceRequestedEventArgs;
-        PyTypeObject* type_PlayToSourceSelectedEventArgs;
-        PyTypeObject* type_PlaybackRateChangeRequestedEventArgs;
-        PyTypeObject* type_SourceChangeRequestedEventArgs;
-        PyTypeObject* type_VolumeChangeRequestedEventArgs;
-    };
-
     // ----- CurrentTimeChangeRequestedEventArgs class --------------------
     static constexpr const char* const type_name_CurrentTimeChangeRequestedEventArgs = "CurrentTimeChangeRequestedEventArgs";
 
@@ -3479,74 +3459,15 @@ namespace py::cpp::Windows::Media::PlayTo
     PyDoc_STRVAR(module_doc, "Windows::Media::PlayTo");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CurrentTimeChangeRequestedEventArgs);
-        Py_VISIT(state->type_MuteChangeRequestedEventArgs);
-        Py_VISIT(state->type_PlayToConnection);
-        Py_VISIT(state->type_PlayToConnectionErrorEventArgs);
-        Py_VISIT(state->type_PlayToConnectionStateChangedEventArgs);
-        Py_VISIT(state->type_PlayToConnectionTransferredEventArgs);
-        Py_VISIT(state->type_PlayToManager);
-        Py_VISIT(state->type_PlayToReceiver);
-        Py_VISIT(state->type_PlayToSource);
-        Py_VISIT(state->type_PlayToSourceDeferral);
-        Py_VISIT(state->type_PlayToSourceRequest);
-        Py_VISIT(state->type_PlayToSourceRequestedEventArgs);
-        Py_VISIT(state->type_PlayToSourceSelectedEventArgs);
-        Py_VISIT(state->type_PlaybackRateChangeRequestedEventArgs);
-        Py_VISIT(state->type_SourceChangeRequestedEventArgs);
-        Py_VISIT(state->type_VolumeChangeRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CurrentTimeChangeRequestedEventArgs);
-        Py_CLEAR(state->type_MuteChangeRequestedEventArgs);
-        Py_CLEAR(state->type_PlayToConnection);
-        Py_CLEAR(state->type_PlayToConnectionErrorEventArgs);
-        Py_CLEAR(state->type_PlayToConnectionStateChangedEventArgs);
-        Py_CLEAR(state->type_PlayToConnectionTransferredEventArgs);
-        Py_CLEAR(state->type_PlayToManager);
-        Py_CLEAR(state->type_PlayToReceiver);
-        Py_CLEAR(state->type_PlayToSource);
-        Py_CLEAR(state->type_PlayToSourceDeferral);
-        Py_CLEAR(state->type_PlayToSourceRequest);
-        Py_CLEAR(state->type_PlayToSourceRequestedEventArgs);
-        Py_CLEAR(state->type_PlayToSourceSelectedEventArgs);
-        Py_CLEAR(state->type_PlaybackRateChangeRequestedEventArgs);
-        Py_CLEAR(state->type_SourceChangeRequestedEventArgs);
-        Py_CLEAR(state->type_VolumeChangeRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_PlayTo",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::PlayTo
@@ -3562,7 +3483,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_PlayTo(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3575,473 +3496,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_PlayTo(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CurrentTimeChangeRequestedEventArgs = py::register_python_type(module.get(), type_name_CurrentTimeChangeRequestedEventArgs, &type_spec_CurrentTimeChangeRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CurrentTimeChangeRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CurrentTimeChangeRequestedEventArgs, &type_spec_CurrentTimeChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CurrentTimeChangeRequestedEventArgs, &type_spec_CurrentTimeChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MuteChangeRequestedEventArgs = py::register_python_type(module.get(), type_name_MuteChangeRequestedEventArgs, &type_spec_MuteChangeRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MuteChangeRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MuteChangeRequestedEventArgs, &type_spec_MuteChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MuteChangeRequestedEventArgs, &type_spec_MuteChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToConnection = py::register_python_type(module.get(), type_name_PlayToConnection, &type_spec_PlayToConnection, object_bases.get(), nullptr);
-    if (!state->type_PlayToConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToConnection, &type_spec_PlayToConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToConnection, &type_spec_PlayToConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToConnectionErrorEventArgs = py::register_python_type(module.get(), type_name_PlayToConnectionErrorEventArgs, &type_spec_PlayToConnectionErrorEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlayToConnectionErrorEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionErrorEventArgs, &type_spec_PlayToConnectionErrorEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionErrorEventArgs, &type_spec_PlayToConnectionErrorEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToConnectionStateChangedEventArgs = py::register_python_type(module.get(), type_name_PlayToConnectionStateChangedEventArgs, &type_spec_PlayToConnectionStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlayToConnectionStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionStateChangedEventArgs, &type_spec_PlayToConnectionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionStateChangedEventArgs, &type_spec_PlayToConnectionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToConnectionTransferredEventArgs = py::register_python_type(module.get(), type_name_PlayToConnectionTransferredEventArgs, &type_spec_PlayToConnectionTransferredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlayToConnectionTransferredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionTransferredEventArgs, &type_spec_PlayToConnectionTransferredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToConnectionTransferredEventArgs, &type_spec_PlayToConnectionTransferredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToManager = py::register_python_type(module.get(), type_name_PlayToManager, &type_spec_PlayToManager, object_bases.get(), nullptr);
-    if (!state->type_PlayToManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToManager, &type_spec_PlayToManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToManager, &type_spec_PlayToManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToReceiver = py::register_python_type(module.get(), type_name_PlayToReceiver, &type_spec_PlayToReceiver, object_bases.get(), nullptr);
-    if (!state->type_PlayToReceiver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToReceiver, &type_spec_PlayToReceiver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToReceiver, &type_spec_PlayToReceiver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToSource = py::register_python_type(module.get(), type_name_PlayToSource, &type_spec_PlayToSource, object_bases.get(), nullptr);
-    if (!state->type_PlayToSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToSource, &type_spec_PlayToSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToSource, &type_spec_PlayToSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToSourceDeferral = py::register_python_type(module.get(), type_name_PlayToSourceDeferral, &type_spec_PlayToSourceDeferral, object_bases.get(), nullptr);
-    if (!state->type_PlayToSourceDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToSourceDeferral, &type_spec_PlayToSourceDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToSourceDeferral, &type_spec_PlayToSourceDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToSourceRequest = py::register_python_type(module.get(), type_name_PlayToSourceRequest, &type_spec_PlayToSourceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayToSourceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToSourceRequest, &type_spec_PlayToSourceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToSourceRequest, &type_spec_PlayToSourceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToSourceRequestedEventArgs = py::register_python_type(module.get(), type_name_PlayToSourceRequestedEventArgs, &type_spec_PlayToSourceRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlayToSourceRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToSourceRequestedEventArgs, &type_spec_PlayToSourceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToSourceRequestedEventArgs, &type_spec_PlayToSourceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayToSourceSelectedEventArgs = py::register_python_type(module.get(), type_name_PlayToSourceSelectedEventArgs, &type_spec_PlayToSourceSelectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlayToSourceSelectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayToSourceSelectedEventArgs, &type_spec_PlayToSourceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayToSourceSelectedEventArgs, &type_spec_PlayToSourceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlaybackRateChangeRequestedEventArgs = py::register_python_type(module.get(), type_name_PlaybackRateChangeRequestedEventArgs, &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlaybackRateChangeRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaybackRateChangeRequestedEventArgs, &type_spec_PlaybackRateChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaybackRateChangeRequestedEventArgs, &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SourceChangeRequestedEventArgs = py::register_python_type(module.get(), type_name_SourceChangeRequestedEventArgs, &type_spec_SourceChangeRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SourceChangeRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SourceChangeRequestedEventArgs, &type_spec_SourceChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SourceChangeRequestedEventArgs, &type_spec_SourceChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VolumeChangeRequestedEventArgs = py::register_python_type(module.get(), type_name_VolumeChangeRequestedEventArgs, &type_spec_VolumeChangeRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VolumeChangeRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VolumeChangeRequestedEventArgs, &type_spec_VolumeChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VolumeChangeRequestedEventArgs, &type_spec_VolumeChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrentTimeChangeRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MuteChangeRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnectionErrorEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnectionStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToConnectionTransferredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToReceiver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToReceiver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToReceiver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToSourceDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToSourceDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToSourceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToSourceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToSourceRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayToSourceSelectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaybackRateChangeRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SourceChangeRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::PlayTo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::PlayTo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VolumeChangeRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

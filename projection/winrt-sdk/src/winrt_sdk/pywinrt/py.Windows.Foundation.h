@@ -3571,159 +3571,199 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Deferral>
+    struct py_type<winrt::Windows::Foundation::Deferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "Deferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::GuidHelper>
+    struct py_type<winrt::Windows::Foundation::GuidHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "GuidHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::MemoryBuffer>
+    struct py_type<winrt::Windows::Foundation::MemoryBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "MemoryBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::PropertyValue>
+    struct py_type<winrt::Windows::Foundation::PropertyValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "PropertyValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Uri>
+    struct py_type<winrt::Windows::Foundation::Uri>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "Uri";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::WwwFormUrlDecoder>
+    struct py_type<winrt::Windows::Foundation::WwwFormUrlDecoder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "WwwFormUrlDecoder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::WwwFormUrlDecoderEntry>
+    struct py_type<winrt::Windows::Foundation::WwwFormUrlDecoderEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "WwwFormUrlDecoderEntry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IAsyncAction>
+    struct py_type<winrt::Windows::Foundation::IAsyncAction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IAsyncAction";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>
+    struct py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IAsyncActionWithProgress`1";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IAsyncInfo>
+    struct py_type<winrt::Windows::Foundation::IAsyncInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IAsyncInfo";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>
+    struct py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IAsyncOperationWithProgress`2";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::IAsyncOperation>
+    struct py_type<py::proj::Windows::Foundation::IAsyncOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IAsyncOperation`1";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IClosable>
+    struct py_type<winrt::Windows::Foundation::IClosable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IClosable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IGetActivationFactory>
+    struct py_type<winrt::Windows::Foundation::IGetActivationFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IGetActivationFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IMemoryBuffer>
+    struct py_type<winrt::Windows::Foundation::IMemoryBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IMemoryBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IMemoryBufferReference>
+    struct py_type<winrt::Windows::Foundation::IMemoryBufferReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IMemoryBufferReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IPropertyValue>
+    struct py_type<winrt::Windows::Foundation::IPropertyValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IPropertyValue";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::IReferenceArray>
+    struct py_type<py::proj::Windows::Foundation::IReferenceArray>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IReferenceArray`1";
     };
 
     template<>
-    struct winrt_type<py::proj::Windows::Foundation::IReference>
+    struct py_type<py::proj::Windows::Foundation::IReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IReference`1";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IStringable>
+    struct py_type<winrt::Windows::Foundation::IStringable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IStringable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>
+    struct py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "IWwwFormUrlDecoderEntry";
     };
 
     template<>
-    struct winrt_type<winrt::event_token>
+    struct py_type<winrt::Windows::Foundation::DateTime>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "DateTime";
     };
 
     template<>
-    struct winrt_type<winrt::hresult>
+    struct py_type<winrt::event_token>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "EventRegistrationToken";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Point>
+    struct py_type<winrt::hresult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "HResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Rect>
+    struct py_type<winrt::Windows::Foundation::Point>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "Point";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Size>
+    struct py_type<winrt::Windows::Foundation::Rect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "Rect";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Foundation::Size>
+    {
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "Size";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Foundation::TimeSpan>
+    {
+        static constexpr const char* module_name = "winrt.windows.foundation";
+        static constexpr const char* type_name = "TimeSpan";
     };
     template <typename TProgress>
     struct pinterface_python_type<winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress>>

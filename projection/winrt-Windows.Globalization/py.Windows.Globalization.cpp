@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Globalization
 {
-    struct module_state
-    {
-        PyTypeObject* type_ApplicationLanguages;
-        PyTypeObject* type_Calendar;
-        PyTypeObject* type_CalendarIdentifiers;
-        PyTypeObject* type_ClockIdentifiers;
-        PyTypeObject* type_CurrencyAmount;
-        PyTypeObject* type_CurrencyIdentifiers;
-        PyTypeObject* type_GeographicRegion;
-        PyTypeObject* type_JapanesePhoneme;
-        PyTypeObject* type_JapanesePhoneticAnalyzer;
-        PyTypeObject* type_Language;
-        PyTypeObject* type_NumeralSystemIdentifiers;
-    };
-
     // ----- ApplicationLanguages class --------------------
     static constexpr const char* const type_name_ApplicationLanguages = "ApplicationLanguages";
 
@@ -8791,64 +8776,15 @@ namespace py::cpp::Windows::Globalization
     PyDoc_STRVAR(module_doc, "Windows::Globalization");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ApplicationLanguages);
-        Py_VISIT(state->type_Calendar);
-        Py_VISIT(state->type_CalendarIdentifiers);
-        Py_VISIT(state->type_ClockIdentifiers);
-        Py_VISIT(state->type_CurrencyAmount);
-        Py_VISIT(state->type_CurrencyIdentifiers);
-        Py_VISIT(state->type_GeographicRegion);
-        Py_VISIT(state->type_JapanesePhoneme);
-        Py_VISIT(state->type_JapanesePhoneticAnalyzer);
-        Py_VISIT(state->type_Language);
-        Py_VISIT(state->type_NumeralSystemIdentifiers);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ApplicationLanguages);
-        Py_CLEAR(state->type_Calendar);
-        Py_CLEAR(state->type_CalendarIdentifiers);
-        Py_CLEAR(state->type_ClockIdentifiers);
-        Py_CLEAR(state->type_CurrencyAmount);
-        Py_CLEAR(state->type_CurrencyIdentifiers);
-        Py_CLEAR(state->type_GeographicRegion);
-        Py_CLEAR(state->type_JapanesePhoneme);
-        Py_CLEAR(state->type_JapanesePhoneticAnalyzer);
-        Py_CLEAR(state->type_Language);
-        Py_CLEAR(state->type_NumeralSystemIdentifiers);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Globalization",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Globalization
@@ -8864,7 +8800,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8877,23 +8813,26 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_ApplicationLanguages_Meta{PyType_FromSpec(&type_spec_ApplicationLanguages_Meta)};
     if (!type_ApplicationLanguages_Meta)
     {
         return nullptr;
     }
 
-    state->type_ApplicationLanguages = py::register_python_type(module.get(), type_name_ApplicationLanguages, &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get()));
-    if (!state->type_ApplicationLanguages)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationLanguages, &type_spec_ApplicationLanguages, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationLanguages, &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Calendar = py::register_python_type(module.get(), type_name_Calendar, &type_spec_Calendar, object_bases.get(), nullptr);
-    if (!state->type_Calendar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Calendar, &type_spec_Calendar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Calendar, &type_spec_Calendar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8904,8 +8843,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    state->type_CalendarIdentifiers = py::register_python_type(module.get(), type_name_CalendarIdentifiers, &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get()));
-    if (!state->type_CalendarIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CalendarIdentifiers, &type_spec_CalendarIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CalendarIdentifiers, &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8916,14 +8858,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    state->type_ClockIdentifiers = py::register_python_type(module.get(), type_name_ClockIdentifiers, &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get()));
-    if (!state->type_ClockIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClockIdentifiers, &type_spec_ClockIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClockIdentifiers, &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CurrencyAmount = py::register_python_type(module.get(), type_name_CurrencyAmount, &type_spec_CurrencyAmount, object_bases.get(), nullptr);
-    if (!state->type_CurrencyAmount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CurrencyAmount, &type_spec_CurrencyAmount, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CurrencyAmount, &type_spec_CurrencyAmount, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8934,26 +8882,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    state->type_CurrencyIdentifiers = py::register_python_type(module.get(), type_name_CurrencyIdentifiers, &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get()));
-    if (!state->type_CurrencyIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CurrencyIdentifiers, &type_spec_CurrencyIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CurrencyIdentifiers, &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeographicRegion = py::register_python_type(module.get(), type_name_GeographicRegion, &type_spec_GeographicRegion, object_bases.get(), nullptr);
-    if (!state->type_GeographicRegion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeographicRegion, &type_spec_GeographicRegion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeographicRegion, &type_spec_GeographicRegion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JapanesePhoneme = py::register_python_type(module.get(), type_name_JapanesePhoneme, &type_spec_JapanesePhoneme, object_bases.get(), nullptr);
-    if (!state->type_JapanesePhoneme)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JapanesePhoneme, &type_spec_JapanesePhoneme, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JapanesePhoneme, &type_spec_JapanesePhoneme, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JapanesePhoneticAnalyzer = py::register_python_type(module.get(), type_name_JapanesePhoneticAnalyzer, &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), nullptr);
-    if (!state->type_JapanesePhoneticAnalyzer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JapanesePhoneticAnalyzer, &type_spec_JapanesePhoneticAnalyzer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JapanesePhoneticAnalyzer, &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8964,8 +8924,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    state->type_Language = py::register_python_type(module.get(), type_name_Language, &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get()));
-    if (!state->type_Language)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Language, &type_spec_Language, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Language, &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8976,265 +8939,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
         return nullptr;
     }
 
-    state->type_NumeralSystemIdentifiers = py::register_python_type(module.get(), type_name_NumeralSystemIdentifiers, &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get()));
-    if (!state->type_NumeralSystemIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NumeralSystemIdentifiers, &type_spec_NumeralSystemIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NumeralSystemIdentifiers, &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::ApplicationLanguages>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationLanguages;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::ApplicationLanguages is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::Calendar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Calendar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::Calendar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::CalendarIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CalendarIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::CalendarIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::ClockIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClockIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::ClockIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::CurrencyAmount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrencyAmount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::CurrencyAmount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::CurrencyIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrencyIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::CurrencyIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::GeographicRegion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeographicRegion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::GeographicRegion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::JapanesePhoneme>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JapanesePhoneme;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::JapanesePhoneme is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JapanesePhoneticAnalyzer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::JapanesePhoneticAnalyzer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::Language>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Language;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::Language is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NumeralSystemIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumeralSystemIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

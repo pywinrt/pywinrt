@@ -6,65 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
-    struct module_state
-    {
-        PyTypeObject* type_CustomMapTileDataSource;
-        PyTypeObject* type_HttpMapTileDataSource;
-        PyTypeObject* type_LocalMapTileDataSource;
-        PyTypeObject* type_MapActualCameraChangedEventArgs;
-        PyTypeObject* type_MapActualCameraChangingEventArgs;
-        PyTypeObject* type_MapBillboard;
-        PyTypeObject* type_MapCamera;
-        PyTypeObject* type_MapContextRequestedEventArgs;
-        PyTypeObject* type_MapControl;
-        PyTypeObject* type_MapControlBusinessLandmarkClickEventArgs;
-        PyTypeObject* type_MapControlBusinessLandmarkPointerEnteredEventArgs;
-        PyTypeObject* type_MapControlBusinessLandmarkPointerExitedEventArgs;
-        PyTypeObject* type_MapControlBusinessLandmarkRightTappedEventArgs;
-        PyTypeObject* type_MapControlDataHelper;
-        PyTypeObject* type_MapControlTransitFeatureClickEventArgs;
-        PyTypeObject* type_MapControlTransitFeaturePointerEnteredEventArgs;
-        PyTypeObject* type_MapControlTransitFeaturePointerExitedEventArgs;
-        PyTypeObject* type_MapControlTransitFeatureRightTappedEventArgs;
-        PyTypeObject* type_MapCustomExperience;
-        PyTypeObject* type_MapCustomExperienceChangedEventArgs;
-        PyTypeObject* type_MapElement;
-        PyTypeObject* type_MapElement3D;
-        PyTypeObject* type_MapElementClickEventArgs;
-        PyTypeObject* type_MapElementPointerEnteredEventArgs;
-        PyTypeObject* type_MapElementPointerExitedEventArgs;
-        PyTypeObject* type_MapElementsLayer;
-        PyTypeObject* type_MapElementsLayerClickEventArgs;
-        PyTypeObject* type_MapElementsLayerContextRequestedEventArgs;
-        PyTypeObject* type_MapElementsLayerPointerEnteredEventArgs;
-        PyTypeObject* type_MapElementsLayerPointerExitedEventArgs;
-        PyTypeObject* type_MapIcon;
-        PyTypeObject* type_MapInputEventArgs;
-        PyTypeObject* type_MapItemsControl;
-        PyTypeObject* type_MapLayer;
-        PyTypeObject* type_MapModel3D;
-        PyTypeObject* type_MapPolygon;
-        PyTypeObject* type_MapPolyline;
-        PyTypeObject* type_MapRightTappedEventArgs;
-        PyTypeObject* type_MapRouteView;
-        PyTypeObject* type_MapScene;
-        PyTypeObject* type_MapStyleSheet;
-        PyTypeObject* type_MapStyleSheetEntries;
-        PyTypeObject* type_MapStyleSheetEntryStates;
-        PyTypeObject* type_MapTargetCameraChangedEventArgs;
-        PyTypeObject* type_MapTileBitmapRequest;
-        PyTypeObject* type_MapTileBitmapRequestDeferral;
-        PyTypeObject* type_MapTileBitmapRequestedEventArgs;
-        PyTypeObject* type_MapTileDataSource;
-        PyTypeObject* type_MapTileSource;
-        PyTypeObject* type_MapTileUriRequest;
-        PyTypeObject* type_MapTileUriRequestDeferral;
-        PyTypeObject* type_MapTileUriRequestedEventArgs;
-        PyTypeObject* type_StreetsideExperience;
-        PyTypeObject* type_StreetsidePanorama;
-        PyTypeObject* type_MapZoomLevelRange;
-    };
-
     // ----- CustomMapTileDataSource class --------------------
     static constexpr const char* const type_name_CustomMapTileDataSource = "CustomMapTileDataSource";
 
@@ -18679,152 +18620,15 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Controls::Maps");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CustomMapTileDataSource);
-        Py_VISIT(state->type_HttpMapTileDataSource);
-        Py_VISIT(state->type_LocalMapTileDataSource);
-        Py_VISIT(state->type_MapActualCameraChangedEventArgs);
-        Py_VISIT(state->type_MapActualCameraChangingEventArgs);
-        Py_VISIT(state->type_MapBillboard);
-        Py_VISIT(state->type_MapCamera);
-        Py_VISIT(state->type_MapContextRequestedEventArgs);
-        Py_VISIT(state->type_MapControl);
-        Py_VISIT(state->type_MapControlBusinessLandmarkClickEventArgs);
-        Py_VISIT(state->type_MapControlBusinessLandmarkPointerEnteredEventArgs);
-        Py_VISIT(state->type_MapControlBusinessLandmarkPointerExitedEventArgs);
-        Py_VISIT(state->type_MapControlBusinessLandmarkRightTappedEventArgs);
-        Py_VISIT(state->type_MapControlDataHelper);
-        Py_VISIT(state->type_MapControlTransitFeatureClickEventArgs);
-        Py_VISIT(state->type_MapControlTransitFeaturePointerEnteredEventArgs);
-        Py_VISIT(state->type_MapControlTransitFeaturePointerExitedEventArgs);
-        Py_VISIT(state->type_MapControlTransitFeatureRightTappedEventArgs);
-        Py_VISIT(state->type_MapCustomExperience);
-        Py_VISIT(state->type_MapCustomExperienceChangedEventArgs);
-        Py_VISIT(state->type_MapElement);
-        Py_VISIT(state->type_MapElement3D);
-        Py_VISIT(state->type_MapElementClickEventArgs);
-        Py_VISIT(state->type_MapElementPointerEnteredEventArgs);
-        Py_VISIT(state->type_MapElementPointerExitedEventArgs);
-        Py_VISIT(state->type_MapElementsLayer);
-        Py_VISIT(state->type_MapElementsLayerClickEventArgs);
-        Py_VISIT(state->type_MapElementsLayerContextRequestedEventArgs);
-        Py_VISIT(state->type_MapElementsLayerPointerEnteredEventArgs);
-        Py_VISIT(state->type_MapElementsLayerPointerExitedEventArgs);
-        Py_VISIT(state->type_MapIcon);
-        Py_VISIT(state->type_MapInputEventArgs);
-        Py_VISIT(state->type_MapItemsControl);
-        Py_VISIT(state->type_MapLayer);
-        Py_VISIT(state->type_MapModel3D);
-        Py_VISIT(state->type_MapPolygon);
-        Py_VISIT(state->type_MapPolyline);
-        Py_VISIT(state->type_MapRightTappedEventArgs);
-        Py_VISIT(state->type_MapRouteView);
-        Py_VISIT(state->type_MapScene);
-        Py_VISIT(state->type_MapStyleSheet);
-        Py_VISIT(state->type_MapStyleSheetEntries);
-        Py_VISIT(state->type_MapStyleSheetEntryStates);
-        Py_VISIT(state->type_MapTargetCameraChangedEventArgs);
-        Py_VISIT(state->type_MapTileBitmapRequest);
-        Py_VISIT(state->type_MapTileBitmapRequestDeferral);
-        Py_VISIT(state->type_MapTileBitmapRequestedEventArgs);
-        Py_VISIT(state->type_MapTileDataSource);
-        Py_VISIT(state->type_MapTileSource);
-        Py_VISIT(state->type_MapTileUriRequest);
-        Py_VISIT(state->type_MapTileUriRequestDeferral);
-        Py_VISIT(state->type_MapTileUriRequestedEventArgs);
-        Py_VISIT(state->type_StreetsideExperience);
-        Py_VISIT(state->type_StreetsidePanorama);
-        Py_VISIT(state->type_MapZoomLevelRange);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CustomMapTileDataSource);
-        Py_CLEAR(state->type_HttpMapTileDataSource);
-        Py_CLEAR(state->type_LocalMapTileDataSource);
-        Py_CLEAR(state->type_MapActualCameraChangedEventArgs);
-        Py_CLEAR(state->type_MapActualCameraChangingEventArgs);
-        Py_CLEAR(state->type_MapBillboard);
-        Py_CLEAR(state->type_MapCamera);
-        Py_CLEAR(state->type_MapContextRequestedEventArgs);
-        Py_CLEAR(state->type_MapControl);
-        Py_CLEAR(state->type_MapControlBusinessLandmarkClickEventArgs);
-        Py_CLEAR(state->type_MapControlBusinessLandmarkPointerEnteredEventArgs);
-        Py_CLEAR(state->type_MapControlBusinessLandmarkPointerExitedEventArgs);
-        Py_CLEAR(state->type_MapControlBusinessLandmarkRightTappedEventArgs);
-        Py_CLEAR(state->type_MapControlDataHelper);
-        Py_CLEAR(state->type_MapControlTransitFeatureClickEventArgs);
-        Py_CLEAR(state->type_MapControlTransitFeaturePointerEnteredEventArgs);
-        Py_CLEAR(state->type_MapControlTransitFeaturePointerExitedEventArgs);
-        Py_CLEAR(state->type_MapControlTransitFeatureRightTappedEventArgs);
-        Py_CLEAR(state->type_MapCustomExperience);
-        Py_CLEAR(state->type_MapCustomExperienceChangedEventArgs);
-        Py_CLEAR(state->type_MapElement);
-        Py_CLEAR(state->type_MapElement3D);
-        Py_CLEAR(state->type_MapElementClickEventArgs);
-        Py_CLEAR(state->type_MapElementPointerEnteredEventArgs);
-        Py_CLEAR(state->type_MapElementPointerExitedEventArgs);
-        Py_CLEAR(state->type_MapElementsLayer);
-        Py_CLEAR(state->type_MapElementsLayerClickEventArgs);
-        Py_CLEAR(state->type_MapElementsLayerContextRequestedEventArgs);
-        Py_CLEAR(state->type_MapElementsLayerPointerEnteredEventArgs);
-        Py_CLEAR(state->type_MapElementsLayerPointerExitedEventArgs);
-        Py_CLEAR(state->type_MapIcon);
-        Py_CLEAR(state->type_MapInputEventArgs);
-        Py_CLEAR(state->type_MapItemsControl);
-        Py_CLEAR(state->type_MapLayer);
-        Py_CLEAR(state->type_MapModel3D);
-        Py_CLEAR(state->type_MapPolygon);
-        Py_CLEAR(state->type_MapPolyline);
-        Py_CLEAR(state->type_MapRightTappedEventArgs);
-        Py_CLEAR(state->type_MapRouteView);
-        Py_CLEAR(state->type_MapScene);
-        Py_CLEAR(state->type_MapStyleSheet);
-        Py_CLEAR(state->type_MapStyleSheetEntries);
-        Py_CLEAR(state->type_MapStyleSheetEntryStates);
-        Py_CLEAR(state->type_MapTargetCameraChangedEventArgs);
-        Py_CLEAR(state->type_MapTileBitmapRequest);
-        Py_CLEAR(state->type_MapTileBitmapRequestDeferral);
-        Py_CLEAR(state->type_MapTileBitmapRequestedEventArgs);
-        Py_CLEAR(state->type_MapTileDataSource);
-        Py_CLEAR(state->type_MapTileSource);
-        Py_CLEAR(state->type_MapTileUriRequest);
-        Py_CLEAR(state->type_MapTileUriRequestDeferral);
-        Py_CLEAR(state->type_MapTileUriRequestedEventArgs);
-        Py_CLEAR(state->type_StreetsideExperience);
-        Py_CLEAR(state->type_StreetsidePanorama);
-        Py_CLEAR(state->type_MapZoomLevelRange);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Controls_Maps",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Controls::Maps
@@ -18840,7 +18644,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -18853,35 +18657,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CustomMapTileDataSource = py::register_python_type(module.get(), type_name_CustomMapTileDataSource, &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr);
-    if (!state->type_CustomMapTileDataSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CustomMapTileDataSource, &type_spec_CustomMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CustomMapTileDataSource, &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMapTileDataSource = py::register_python_type(module.get(), type_name_HttpMapTileDataSource, &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr);
-    if (!state->type_HttpMapTileDataSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMapTileDataSource, &type_spec_HttpMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMapTileDataSource, &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalMapTileDataSource = py::register_python_type(module.get(), type_name_LocalMapTileDataSource, &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr);
-    if (!state->type_LocalMapTileDataSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalMapTileDataSource, &type_spec_LocalMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalMapTileDataSource, &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapActualCameraChangedEventArgs = py::register_python_type(module.get(), type_name_MapActualCameraChangedEventArgs, &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapActualCameraChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapActualCameraChangedEventArgs, &type_spec_MapActualCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapActualCameraChangedEventArgs, &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapActualCameraChangingEventArgs = py::register_python_type(module.get(), type_name_MapActualCameraChangingEventArgs, &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapActualCameraChangingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapActualCameraChangingEventArgs, &type_spec_MapActualCameraChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapActualCameraChangingEventArgs, &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -18892,20 +18708,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapBillboard = py::register_python_type(module.get(), type_name_MapBillboard, &type_spec_MapBillboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get()));
-    if (!state->type_MapBillboard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapBillboard, &type_spec_MapBillboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapBillboard, &type_spec_MapBillboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapCamera = py::register_python_type(module.get(), type_name_MapCamera, &type_spec_MapCamera, object_bases.get(), nullptr);
-    if (!state->type_MapCamera)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapCamera, &type_spec_MapCamera, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapCamera, &type_spec_MapCamera, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapContextRequestedEventArgs = py::register_python_type(module.get(), type_name_MapContextRequestedEventArgs, &type_spec_MapContextRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapContextRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapContextRequestedEventArgs, &type_spec_MapContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapContextRequestedEventArgs, &type_spec_MapContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -18916,74 +18741,110 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapControl = py::register_python_type(module.get(), type_name_MapControl, &type_spec_MapControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get()));
-    if (!state->type_MapControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControl, &type_spec_MapControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControl, &type_spec_MapControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlBusinessLandmarkClickEventArgs = py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkClickEventArgs, &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlBusinessLandmarkClickEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkClickEventArgs, &type_spec_MapControlBusinessLandmarkClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkClickEventArgs, &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlBusinessLandmarkPointerEnteredEventArgs = py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerEnteredEventArgs, &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlBusinessLandmarkPointerEnteredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerEnteredEventArgs, &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerEnteredEventArgs, &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlBusinessLandmarkPointerExitedEventArgs = py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerExitedEventArgs, &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlBusinessLandmarkPointerExitedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerExitedEventArgs, &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerExitedEventArgs, &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlBusinessLandmarkRightTappedEventArgs = py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkRightTappedEventArgs, &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlBusinessLandmarkRightTappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkRightTappedEventArgs, &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkRightTappedEventArgs, &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlDataHelper = py::register_python_type(module.get(), type_name_MapControlDataHelper, &type_spec_MapControlDataHelper, object_bases.get(), nullptr);
-    if (!state->type_MapControlDataHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlDataHelper, &type_spec_MapControlDataHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlDataHelper, &type_spec_MapControlDataHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlTransitFeatureClickEventArgs = py::register_python_type(module.get(), type_name_MapControlTransitFeatureClickEventArgs, &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlTransitFeatureClickEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureClickEventArgs, &type_spec_MapControlTransitFeatureClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureClickEventArgs, &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlTransitFeaturePointerEnteredEventArgs = py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerEnteredEventArgs, &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlTransitFeaturePointerEnteredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerEnteredEventArgs, &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerEnteredEventArgs, &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlTransitFeaturePointerExitedEventArgs = py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerExitedEventArgs, &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlTransitFeaturePointerExitedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerExitedEventArgs, &type_spec_MapControlTransitFeaturePointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerExitedEventArgs, &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlTransitFeatureRightTappedEventArgs = py::register_python_type(module.get(), type_name_MapControlTransitFeatureRightTappedEventArgs, &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapControlTransitFeatureRightTappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureRightTappedEventArgs, &type_spec_MapControlTransitFeatureRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureRightTappedEventArgs, &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapCustomExperience = py::register_python_type(module.get(), type_name_MapCustomExperience, &type_spec_MapCustomExperience, object_bases.get(), nullptr);
-    if (!state->type_MapCustomExperience)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapCustomExperience, &type_spec_MapCustomExperience, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapCustomExperience, &type_spec_MapCustomExperience, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapCustomExperienceChangedEventArgs = py::register_python_type(module.get(), type_name_MapCustomExperienceChangedEventArgs, &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapCustomExperienceChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapCustomExperienceChangedEventArgs, &type_spec_MapCustomExperienceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapCustomExperienceChangedEventArgs, &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -18994,8 +18855,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapElement = py::register_python_type(module.get(), type_name_MapElement, &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get()));
-    if (!state->type_MapElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElement, &type_spec_MapElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElement, &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19006,26 +18870,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapElement3D = py::register_python_type(module.get(), type_name_MapElement3D, &type_spec_MapElement3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get()));
-    if (!state->type_MapElement3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElement3D, &type_spec_MapElement3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElement3D, &type_spec_MapElement3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementClickEventArgs = py::register_python_type(module.get(), type_name_MapElementClickEventArgs, &type_spec_MapElementClickEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementClickEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementClickEventArgs, &type_spec_MapElementClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementClickEventArgs, &type_spec_MapElementClickEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementPointerEnteredEventArgs = py::register_python_type(module.get(), type_name_MapElementPointerEnteredEventArgs, &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementPointerEnteredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementPointerEnteredEventArgs, &type_spec_MapElementPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementPointerEnteredEventArgs, &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementPointerExitedEventArgs = py::register_python_type(module.get(), type_name_MapElementPointerExitedEventArgs, &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementPointerExitedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementPointerExitedEventArgs, &type_spec_MapElementPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementPointerExitedEventArgs, &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19036,32 +18912,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapElementsLayer = py::register_python_type(module.get(), type_name_MapElementsLayer, &type_spec_MapElementsLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get()));
-    if (!state->type_MapElementsLayer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementsLayer, &type_spec_MapElementsLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementsLayer, &type_spec_MapElementsLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementsLayerClickEventArgs = py::register_python_type(module.get(), type_name_MapElementsLayerClickEventArgs, &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementsLayerClickEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerClickEventArgs, &type_spec_MapElementsLayerClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerClickEventArgs, &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementsLayerContextRequestedEventArgs = py::register_python_type(module.get(), type_name_MapElementsLayerContextRequestedEventArgs, &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementsLayerContextRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerContextRequestedEventArgs, &type_spec_MapElementsLayerContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerContextRequestedEventArgs, &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementsLayerPointerEnteredEventArgs = py::register_python_type(module.get(), type_name_MapElementsLayerPointerEnteredEventArgs, &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementsLayerPointerEnteredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerEnteredEventArgs, &type_spec_MapElementsLayerPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerEnteredEventArgs, &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapElementsLayerPointerExitedEventArgs = py::register_python_type(module.get(), type_name_MapElementsLayerPointerExitedEventArgs, &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapElementsLayerPointerExitedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerExitedEventArgs, &type_spec_MapElementsLayerPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerExitedEventArgs, &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19072,14 +18963,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapIcon = py::register_python_type(module.get(), type_name_MapIcon, &type_spec_MapIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get()));
-    if (!state->type_MapIcon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapIcon, &type_spec_MapIcon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapIcon, &type_spec_MapIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapInputEventArgs = py::register_python_type(module.get(), type_name_MapInputEventArgs, &type_spec_MapInputEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapInputEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapInputEventArgs, &type_spec_MapInputEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapInputEventArgs, &type_spec_MapInputEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19090,8 +18987,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapItemsControl = py::register_python_type(module.get(), type_name_MapItemsControl, &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get()));
-    if (!state->type_MapItemsControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapItemsControl, &type_spec_MapItemsControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapItemsControl, &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19102,14 +19002,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapLayer = py::register_python_type(module.get(), type_name_MapLayer, &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get()));
-    if (!state->type_MapLayer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapLayer, &type_spec_MapLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapLayer, &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapModel3D = py::register_python_type(module.get(), type_name_MapModel3D, &type_spec_MapModel3D, object_bases.get(), nullptr);
-    if (!state->type_MapModel3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapModel3D, &type_spec_MapModel3D, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapModel3D, &type_spec_MapModel3D, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19120,8 +19026,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapPolygon = py::register_python_type(module.get(), type_name_MapPolygon, &type_spec_MapPolygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get()));
-    if (!state->type_MapPolygon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapPolygon, &type_spec_MapPolygon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapPolygon, &type_spec_MapPolygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19132,32 +19041,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapPolyline = py::register_python_type(module.get(), type_name_MapPolyline, &type_spec_MapPolyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get()));
-    if (!state->type_MapPolyline)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapPolyline, &type_spec_MapPolyline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapPolyline, &type_spec_MapPolyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRightTappedEventArgs = py::register_python_type(module.get(), type_name_MapRightTappedEventArgs, &type_spec_MapRightTappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapRightTappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRightTappedEventArgs, &type_spec_MapRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRightTappedEventArgs, &type_spec_MapRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteView = py::register_python_type(module.get(), type_name_MapRouteView, &type_spec_MapRouteView, object_bases.get(), nullptr);
-    if (!state->type_MapRouteView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteView, &type_spec_MapRouteView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteView, &type_spec_MapRouteView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapScene = py::register_python_type(module.get(), type_name_MapScene, &type_spec_MapScene, object_bases.get(), nullptr);
-    if (!state->type_MapScene)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapScene, &type_spec_MapScene, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapScene, &type_spec_MapScene, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapStyleSheet = py::register_python_type(module.get(), type_name_MapStyleSheet, &type_spec_MapStyleSheet, object_bases.get(), nullptr);
-    if (!state->type_MapStyleSheet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapStyleSheet, &type_spec_MapStyleSheet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapStyleSheet, &type_spec_MapStyleSheet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19168,8 +19092,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapStyleSheetEntries = py::register_python_type(module.get(), type_name_MapStyleSheetEntries, &type_spec_MapStyleSheetEntries, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get()));
-    if (!state->type_MapStyleSheetEntries)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntries, &type_spec_MapStyleSheetEntries, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntries, &type_spec_MapStyleSheetEntries, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19180,38 +19107,56 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapStyleSheetEntryStates = py::register_python_type(module.get(), type_name_MapStyleSheetEntryStates, &type_spec_MapStyleSheetEntryStates, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get()));
-    if (!state->type_MapStyleSheetEntryStates)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntryStates, &type_spec_MapStyleSheetEntryStates, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntryStates, &type_spec_MapStyleSheetEntryStates, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTargetCameraChangedEventArgs = py::register_python_type(module.get(), type_name_MapTargetCameraChangedEventArgs, &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapTargetCameraChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTargetCameraChangedEventArgs, &type_spec_MapTargetCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTargetCameraChangedEventArgs, &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileBitmapRequest = py::register_python_type(module.get(), type_name_MapTileBitmapRequest, &type_spec_MapTileBitmapRequest, object_bases.get(), nullptr);
-    if (!state->type_MapTileBitmapRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequest, &type_spec_MapTileBitmapRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequest, &type_spec_MapTileBitmapRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileBitmapRequestDeferral = py::register_python_type(module.get(), type_name_MapTileBitmapRequestDeferral, &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_MapTileBitmapRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestDeferral, &type_spec_MapTileBitmapRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestDeferral, &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileBitmapRequestedEventArgs = py::register_python_type(module.get(), type_name_MapTileBitmapRequestedEventArgs, &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapTileBitmapRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestedEventArgs, &type_spec_MapTileBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestedEventArgs, &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileDataSource = py::register_python_type(module.get(), type_name_MapTileDataSource, &type_spec_MapTileDataSource, object_bases.get(), nullptr);
-    if (!state->type_MapTileDataSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileDataSource, &type_spec_MapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileDataSource, &type_spec_MapTileDataSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -19222,1313 +19167,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapTileSource = py::register_python_type(module.get(), type_name_MapTileSource, &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get()));
-    if (!state->type_MapTileSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileSource, &type_spec_MapTileSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileSource, &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileUriRequest = py::register_python_type(module.get(), type_name_MapTileUriRequest, &type_spec_MapTileUriRequest, object_bases.get(), nullptr);
-    if (!state->type_MapTileUriRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequest, &type_spec_MapTileUriRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequest, &type_spec_MapTileUriRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileUriRequestDeferral = py::register_python_type(module.get(), type_name_MapTileUriRequestDeferral, &type_spec_MapTileUriRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_MapTileUriRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequestDeferral, &type_spec_MapTileUriRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequestDeferral, &type_spec_MapTileUriRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapTileUriRequestedEventArgs = py::register_python_type(module.get(), type_name_MapTileUriRequestedEventArgs, &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MapTileUriRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequestedEventArgs, &type_spec_MapTileUriRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapTileUriRequestedEventArgs, &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreetsideExperience = py::register_python_type(module.get(), type_name_StreetsideExperience, &type_spec_StreetsideExperience, object_bases.get(), nullptr);
-    if (!state->type_StreetsideExperience)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreetsideExperience, &type_spec_StreetsideExperience, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreetsideExperience, &type_spec_StreetsideExperience, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StreetsidePanorama = py::register_python_type(module.get(), type_name_StreetsidePanorama, &type_spec_StreetsidePanorama, object_bases.get(), nullptr);
-    if (!state->type_StreetsidePanorama)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StreetsidePanorama, &type_spec_StreetsidePanorama, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StreetsidePanorama, &type_spec_StreetsidePanorama, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapZoomLevelRange = py::register_python_type(module.get(), type_name_MapZoomLevelRange, &type_spec_MapZoomLevelRange, nullptr, nullptr);
-    if (!state->type_MapZoomLevelRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapZoomLevelRange, &type_spec_MapZoomLevelRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapZoomLevelRange, &type_spec_MapZoomLevelRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CustomMapTileDataSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMapTileDataSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalMapTileDataSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapActualCameraChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapActualCameraChangingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapBillboard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapCamera;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapCamera is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapContextRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlBusinessLandmarkClickEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlBusinessLandmarkPointerEnteredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlBusinessLandmarkPointerExitedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlBusinessLandmarkRightTappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlDataHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlTransitFeatureClickEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlTransitFeaturePointerEnteredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlTransitFeaturePointerExitedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlTransitFeatureRightTappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapCustomExperience;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapCustomExperienceChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElement3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementClickEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementPointerEnteredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementPointerExitedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementsLayer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementsLayerClickEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementsLayerContextRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementsLayerPointerEnteredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapElementsLayerPointerExitedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapIcon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapIcon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapInputEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapItemsControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapLayer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapLayer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapModel3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapPolygon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapPolyline;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRightTappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapScene;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapScene is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapStyleSheet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapStyleSheetEntries;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapStyleSheetEntryStates;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTargetCameraChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileBitmapRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileBitmapRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileBitmapRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileDataSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileUriRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileUriRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapTileUriRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreetsideExperience;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StreetsidePanorama;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapZoomLevelRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

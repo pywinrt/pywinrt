@@ -33,38 +33,44 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ColorHelper>
+    struct py_type<winrt::Windows::UI::ColorHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "ColorHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Colors>
+    struct py_type<winrt::Windows::UI::Colors>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "Colors";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIContentRoot>
+    struct py_type<winrt::Windows::UI::UIContentRoot>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "UIContentRoot";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIContext>
+    struct py_type<winrt::Windows::UI::UIContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "UIContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Color>
+    struct py_type<winrt::Windows::UI::Color>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "Color";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowId>
+    struct py_type<winrt::Windows::UI::WindowId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui";
+        static constexpr const char* type_name = "WindowId";
     };
 }

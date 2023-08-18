@@ -106,32 +106,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::Interop::WebViewControl>
+    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlAcceleratorKeyPressedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlMoveFocusRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::Interop::WebViewControlProcess>
+    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcess>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlProcess";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>
+    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
+        static constexpr const char* type_name = "WebViewControlProcessOptions";
     };
 }

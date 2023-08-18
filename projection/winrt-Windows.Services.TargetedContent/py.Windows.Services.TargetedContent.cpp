@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::Services::TargetedContent
 {
-    struct module_state
-    {
-        PyTypeObject* type_TargetedContentAction;
-        PyTypeObject* type_TargetedContentAvailabilityChangedEventArgs;
-        PyTypeObject* type_TargetedContentChangedEventArgs;
-        PyTypeObject* type_TargetedContentCollection;
-        PyTypeObject* type_TargetedContentContainer;
-        PyTypeObject* type_TargetedContentFile;
-        PyTypeObject* type_TargetedContentImage;
-        PyTypeObject* type_TargetedContentItem;
-        PyTypeObject* type_TargetedContentItemState;
-        PyTypeObject* type_TargetedContentObject;
-        PyTypeObject* type_TargetedContentStateChangedEventArgs;
-        PyTypeObject* type_TargetedContentSubscription;
-        PyTypeObject* type_TargetedContentSubscriptionOptions;
-        PyTypeObject* type_TargetedContentValue;
-    };
-
     // ----- TargetedContentAction class --------------------
     static constexpr const char* const type_name_TargetedContentAction = "TargetedContentAction";
 
@@ -2602,70 +2584,15 @@ namespace py::cpp::Windows::Services::TargetedContent
     PyDoc_STRVAR(module_doc, "Windows::Services::TargetedContent");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_TargetedContentAction);
-        Py_VISIT(state->type_TargetedContentAvailabilityChangedEventArgs);
-        Py_VISIT(state->type_TargetedContentChangedEventArgs);
-        Py_VISIT(state->type_TargetedContentCollection);
-        Py_VISIT(state->type_TargetedContentContainer);
-        Py_VISIT(state->type_TargetedContentFile);
-        Py_VISIT(state->type_TargetedContentImage);
-        Py_VISIT(state->type_TargetedContentItem);
-        Py_VISIT(state->type_TargetedContentItemState);
-        Py_VISIT(state->type_TargetedContentObject);
-        Py_VISIT(state->type_TargetedContentStateChangedEventArgs);
-        Py_VISIT(state->type_TargetedContentSubscription);
-        Py_VISIT(state->type_TargetedContentSubscriptionOptions);
-        Py_VISIT(state->type_TargetedContentValue);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_TargetedContentAction);
-        Py_CLEAR(state->type_TargetedContentAvailabilityChangedEventArgs);
-        Py_CLEAR(state->type_TargetedContentChangedEventArgs);
-        Py_CLEAR(state->type_TargetedContentCollection);
-        Py_CLEAR(state->type_TargetedContentContainer);
-        Py_CLEAR(state->type_TargetedContentFile);
-        Py_CLEAR(state->type_TargetedContentImage);
-        Py_CLEAR(state->type_TargetedContentItem);
-        Py_CLEAR(state->type_TargetedContentItemState);
-        Py_CLEAR(state->type_TargetedContentObject);
-        Py_CLEAR(state->type_TargetedContentStateChangedEventArgs);
-        Py_CLEAR(state->type_TargetedContentSubscription);
-        Py_CLEAR(state->type_TargetedContentSubscriptionOptions);
-        Py_CLEAR(state->type_TargetedContentValue);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_TargetedContent",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::TargetedContent
@@ -2681,7 +2608,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_TargetedContent(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2694,415 +2621,132 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_TargetedContent(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_TargetedContentAction = py::register_python_type(module.get(), type_name_TargetedContentAction, &type_spec_TargetedContentAction, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentAction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentAction, &type_spec_TargetedContentAction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentAction, &type_spec_TargetedContentAction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentAvailabilityChangedEventArgs = py::register_python_type(module.get(), type_name_TargetedContentAvailabilityChangedEventArgs, &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentAvailabilityChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentAvailabilityChangedEventArgs, &type_spec_TargetedContentAvailabilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentAvailabilityChangedEventArgs, &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentChangedEventArgs = py::register_python_type(module.get(), type_name_TargetedContentChangedEventArgs, &type_spec_TargetedContentChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentChangedEventArgs, &type_spec_TargetedContentChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentChangedEventArgs, &type_spec_TargetedContentChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentCollection = py::register_python_type(module.get(), type_name_TargetedContentCollection, &type_spec_TargetedContentCollection, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentCollection, &type_spec_TargetedContentCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentCollection, &type_spec_TargetedContentCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentContainer = py::register_python_type(module.get(), type_name_TargetedContentContainer, &type_spec_TargetedContentContainer, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentContainer, &type_spec_TargetedContentContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentContainer, &type_spec_TargetedContentContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentFile = py::register_python_type(module.get(), type_name_TargetedContentFile, &type_spec_TargetedContentFile, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentFile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentFile, &type_spec_TargetedContentFile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentFile, &type_spec_TargetedContentFile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentImage = py::register_python_type(module.get(), type_name_TargetedContentImage, &type_spec_TargetedContentImage, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentImage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentImage, &type_spec_TargetedContentImage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentImage, &type_spec_TargetedContentImage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentItem = py::register_python_type(module.get(), type_name_TargetedContentItem, &type_spec_TargetedContentItem, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentItem, &type_spec_TargetedContentItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentItem, &type_spec_TargetedContentItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentItemState = py::register_python_type(module.get(), type_name_TargetedContentItemState, &type_spec_TargetedContentItemState, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentItemState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentItemState, &type_spec_TargetedContentItemState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentItemState, &type_spec_TargetedContentItemState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentObject = py::register_python_type(module.get(), type_name_TargetedContentObject, &type_spec_TargetedContentObject, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentObject, &type_spec_TargetedContentObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentObject, &type_spec_TargetedContentObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentStateChangedEventArgs = py::register_python_type(module.get(), type_name_TargetedContentStateChangedEventArgs, &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentStateChangedEventArgs, &type_spec_TargetedContentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentStateChangedEventArgs, &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentSubscription = py::register_python_type(module.get(), type_name_TargetedContentSubscription, &type_spec_TargetedContentSubscription, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentSubscription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentSubscription, &type_spec_TargetedContentSubscription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentSubscription, &type_spec_TargetedContentSubscription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentSubscriptionOptions = py::register_python_type(module.get(), type_name_TargetedContentSubscriptionOptions, &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentSubscriptionOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentSubscriptionOptions, &type_spec_TargetedContentSubscriptionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentSubscriptionOptions, &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetedContentValue = py::register_python_type(module.get(), type_name_TargetedContentValue, &type_spec_TargetedContentValue, object_bases.get(), nullptr);
-    if (!state->type_TargetedContentValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetedContentValue, &type_spec_TargetedContentValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetedContentValue, &type_spec_TargetedContentValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentAvailabilityChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentFile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentFile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentImage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentImage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentItemState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentItemState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentSubscription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentSubscription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentSubscriptionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::TargetedContent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::TargetedContent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetedContentValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::TargetedContent::TargetedContentValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

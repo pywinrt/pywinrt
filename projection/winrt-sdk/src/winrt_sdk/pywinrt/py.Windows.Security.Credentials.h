@@ -107,68 +107,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::KeyCredential>
+    struct py_type<winrt::Windows::Security::Credentials::KeyCredential>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "KeyCredential";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>
+    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "KeyCredentialAttestationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::KeyCredentialManager>
+    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "KeyCredentialManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>
+    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "KeyCredentialOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>
+    struct py_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "KeyCredentialRetrievalResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::PasswordCredential>
+    struct py_type<winrt::Windows::Security::Credentials::PasswordCredential>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "PasswordCredential";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>
+    struct py_type<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "PasswordCredentialPropertyStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::PasswordVault>
+    struct py_type<winrt::Windows::Security::Credentials::PasswordVault>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "PasswordVault";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::WebAccount>
+    struct py_type<winrt::Windows::Security::Credentials::WebAccount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "WebAccount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::WebAccountProvider>
+    struct py_type<winrt::Windows::Security::Credentials::WebAccountProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "WebAccountProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::IWebAccount>
+    struct py_type<winrt::Windows::Security::Credentials::IWebAccount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials";
+        static constexpr const char* type_name = "IWebAccount";
     };
 }

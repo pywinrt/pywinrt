@@ -92,98 +92,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlContentLoadingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlDOMContentLoadedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlDeferredPermissionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlLongRunningScriptDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlNavigationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlNavigationStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlNewWindowRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlPermissionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlPermissionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlScriptNotifyEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlSettings>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlUnviewableContentIdentifiedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>
+    struct py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "WebViewControlWebResourceRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::IWebViewControl>
+    struct py_type<winrt::Windows::Web::UI::IWebViewControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "IWebViewControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::UI::IWebViewControl2>
+    struct py_type<winrt::Windows::Web::UI::IWebViewControl2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.ui";
+        static constexpr const char* type_name = "IWebViewControl2";
     };
 }

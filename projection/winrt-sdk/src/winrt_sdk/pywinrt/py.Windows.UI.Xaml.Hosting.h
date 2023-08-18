@@ -85,86 +85,100 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesignerAppExitedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesignerAppManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesignerAppView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesktopWindowXamlSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesktopWindowXamlSourceGotFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "ElementCompositionPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "WindowsXamlManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "XamlSourceFocusNavigationRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "XamlSourceFocusNavigationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "XamlUIPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "IXamlUIPresenterHost";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "IXamlUIPresenterHost2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
+    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
+        static constexpr const char* type_name = "IXamlUIPresenterHost3";
     };
 }

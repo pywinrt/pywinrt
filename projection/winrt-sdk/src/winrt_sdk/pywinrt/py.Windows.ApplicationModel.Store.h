@@ -97,57 +97,66 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::CurrentApp>
+    struct py_type<winrt::Windows::ApplicationModel::Store::CurrentApp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "CurrentApp";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>
+    struct py_type<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "CurrentAppSimulator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::LicenseInformation>
+    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "LicenseInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::ListingInformation>
+    struct py_type<winrt::Windows::ApplicationModel::Store::ListingInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ListingInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::ProductLicense>
+    struct py_type<winrt::Windows::ApplicationModel::Store::ProductLicense>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ProductLicense";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::ProductListing>
+    struct py_type<winrt::Windows::ApplicationModel::Store::ProductListing>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ProductListing";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>
+    struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "ProductPurchaseDisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::PurchaseResults>
+    struct py_type<winrt::Windows::ApplicationModel::Store::PurchaseResults>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "PurchaseResults";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>
+    struct py_type<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
+        static constexpr const char* type_name = "UnfulfilledConsumable";
     };
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Store::LicenseChangedEventHandler>

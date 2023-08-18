@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Embedded::DeviceLockdown
 {
-    struct module_state
-    {
-        PyTypeObject* type_DeviceLockdownProfile;
-        PyTypeObject* type_DeviceLockdownProfileInformation;
-    };
-
     // ----- DeviceLockdownProfile class --------------------
     static constexpr const char* const type_name_DeviceLockdownProfile = "DeviceLockdownProfile";
 
@@ -269,46 +263,15 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
     PyDoc_STRVAR(module_doc, "Windows::Embedded::DeviceLockdown");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DeviceLockdownProfile);
-        Py_VISIT(state->type_DeviceLockdownProfileInformation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DeviceLockdownProfile);
-        Py_CLEAR(state->type_DeviceLockdownProfileInformation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Embedded_DeviceLockdown",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Embedded::DeviceLockdown
@@ -324,7 +287,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Embedded_DeviceLockdown(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -337,67 +300,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Embedded_DeviceLockdown(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DeviceLockdownProfile = py::register_python_type(module.get(), type_name_DeviceLockdownProfile, &type_spec_DeviceLockdownProfile, object_bases.get(), nullptr);
-    if (!state->type_DeviceLockdownProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfile, &type_spec_DeviceLockdownProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfile, &type_spec_DeviceLockdownProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceLockdownProfileInformation = py::register_python_type(module.get(), type_name_DeviceLockdownProfileInformation, &type_spec_DeviceLockdownProfileInformation, object_bases.get(), nullptr);
-    if (!state->type_DeviceLockdownProfileInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfileInformation, &type_spec_DeviceLockdownProfileInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfileInformation, &type_spec_DeviceLockdownProfileInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Embedded::DeviceLockdown;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Embedded::DeviceLockdown");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceLockdownProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Embedded::DeviceLockdown;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Embedded::DeviceLockdown");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceLockdownProfileInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

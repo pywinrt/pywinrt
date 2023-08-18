@@ -96,62 +96,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportExtensionSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportExtensionTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportPrintDeviceCapabilitiesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportPrintDeviceCapabilitiesUpdatePolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportPrintTicketElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportPrintTicketValidationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportPrinterSelectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportSessionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportSettingsUISession";
     };
 }

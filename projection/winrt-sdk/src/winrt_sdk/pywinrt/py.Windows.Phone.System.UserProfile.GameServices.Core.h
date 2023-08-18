@@ -53,14 +53,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>
+    struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
+        static constexpr const char* type_name = "GameService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>
+    struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
+        static constexpr const char* type_name = "GameServicePropertyCollection";
     };
 }

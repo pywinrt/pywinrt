@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::Gaming::Input
 {
-    struct module_state
-    {
-        PyTypeObject* type_ArcadeStick;
-        PyTypeObject* type_FlightStick;
-        PyTypeObject* type_Gamepad;
-        PyTypeObject* type_Headset;
-        PyTypeObject* type_RacingWheel;
-        PyTypeObject* type_RawGameController;
-        PyTypeObject* type_UINavigationController;
-        PyTypeObject* type_IGameController;
-        PyTypeObject* type_IGameControllerBatteryInfo;
-        PyTypeObject* type_ArcadeStickReading;
-        PyTypeObject* type_FlightStickReading;
-        PyTypeObject* type_GamepadReading;
-        PyTypeObject* type_GamepadVibration;
-        PyTypeObject* type_RacingWheelReading;
-        PyTypeObject* type_UINavigationReading;
-    };
-
     // ----- ArcadeStick class --------------------
     static constexpr const char* const type_name_ArcadeStick = "ArcadeStick";
 
@@ -5639,72 +5620,15 @@ namespace py::cpp::Windows::Gaming::Input
     PyDoc_STRVAR(module_doc, "Windows::Gaming::Input");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ArcadeStick);
-        Py_VISIT(state->type_FlightStick);
-        Py_VISIT(state->type_Gamepad);
-        Py_VISIT(state->type_Headset);
-        Py_VISIT(state->type_RacingWheel);
-        Py_VISIT(state->type_RawGameController);
-        Py_VISIT(state->type_UINavigationController);
-        Py_VISIT(state->type_IGameController);
-        Py_VISIT(state->type_IGameControllerBatteryInfo);
-        Py_VISIT(state->type_ArcadeStickReading);
-        Py_VISIT(state->type_FlightStickReading);
-        Py_VISIT(state->type_GamepadReading);
-        Py_VISIT(state->type_GamepadVibration);
-        Py_VISIT(state->type_RacingWheelReading);
-        Py_VISIT(state->type_UINavigationReading);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ArcadeStick);
-        Py_CLEAR(state->type_FlightStick);
-        Py_CLEAR(state->type_Gamepad);
-        Py_CLEAR(state->type_Headset);
-        Py_CLEAR(state->type_RacingWheel);
-        Py_CLEAR(state->type_RawGameController);
-        Py_CLEAR(state->type_UINavigationController);
-        Py_CLEAR(state->type_IGameController);
-        Py_CLEAR(state->type_IGameControllerBatteryInfo);
-        Py_CLEAR(state->type_ArcadeStickReading);
-        Py_CLEAR(state->type_FlightStickReading);
-        Py_CLEAR(state->type_GamepadReading);
-        Py_CLEAR(state->type_GamepadVibration);
-        Py_CLEAR(state->type_RacingWheelReading);
-        Py_CLEAR(state->type_UINavigationReading);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Gaming_Input",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Gaming::Input
@@ -5720,7 +5644,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5733,17 +5657,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_ArcadeStick_Meta{PyType_FromSpec(&type_spec_ArcadeStick_Meta)};
     if (!type_ArcadeStick_Meta)
     {
         return nullptr;
     }
 
-    state->type_ArcadeStick = py::register_python_type(module.get(), type_name_ArcadeStick, &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get()));
-    if (!state->type_ArcadeStick)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ArcadeStick, &type_spec_ArcadeStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ArcadeStick, &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5754,8 +5678,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_FlightStick = py::register_python_type(module.get(), type_name_FlightStick, &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get()));
-    if (!state->type_FlightStick)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlightStick, &type_spec_FlightStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlightStick, &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5766,14 +5693,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_Gamepad = py::register_python_type(module.get(), type_name_Gamepad, &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get()));
-    if (!state->type_Gamepad)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Gamepad, &type_spec_Gamepad, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Gamepad, &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Headset = py::register_python_type(module.get(), type_name_Headset, &type_spec_Headset, object_bases.get(), nullptr);
-    if (!state->type_Headset)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Headset, &type_spec_Headset, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Headset, &type_spec_Headset, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5784,8 +5717,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_RacingWheel = py::register_python_type(module.get(), type_name_RacingWheel, &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get()));
-    if (!state->type_RacingWheel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RacingWheel, &type_spec_RacingWheel, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RacingWheel, &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5796,8 +5732,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_RawGameController = py::register_python_type(module.get(), type_name_RawGameController, &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get()));
-    if (!state->type_RawGameController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RawGameController, &type_spec_RawGameController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RawGameController, &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5808,405 +5747,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_UINavigationController = py::register_python_type(module.get(), type_name_UINavigationController, &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get()));
-    if (!state->type_UINavigationController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UINavigationController, &type_spec_UINavigationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UINavigationController, &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGameController = py::register_python_type(module.get(), type_name_IGameController, &type_spec_IGameController, object_bases.get(), nullptr);
-    if (!state->type_IGameController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGameController, &type_spec_IGameController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGameController, &type_spec_IGameController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGameControllerBatteryInfo = py::register_python_type(module.get(), type_name_IGameControllerBatteryInfo, &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr);
-    if (!state->type_IGameControllerBatteryInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGameControllerBatteryInfo, &type_spec_IGameControllerBatteryInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGameControllerBatteryInfo, &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ArcadeStickReading = py::register_python_type(module.get(), type_name_ArcadeStickReading, &type_spec_ArcadeStickReading, nullptr, nullptr);
-    if (!state->type_ArcadeStickReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ArcadeStickReading, &type_spec_ArcadeStickReading, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ArcadeStickReading, &type_spec_ArcadeStickReading, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlightStickReading = py::register_python_type(module.get(), type_name_FlightStickReading, &type_spec_FlightStickReading, nullptr, nullptr);
-    if (!state->type_FlightStickReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlightStickReading, &type_spec_FlightStickReading, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlightStickReading, &type_spec_FlightStickReading, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GamepadReading = py::register_python_type(module.get(), type_name_GamepadReading, &type_spec_GamepadReading, nullptr, nullptr);
-    if (!state->type_GamepadReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GamepadReading, &type_spec_GamepadReading, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GamepadReading, &type_spec_GamepadReading, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GamepadVibration = py::register_python_type(module.get(), type_name_GamepadVibration, &type_spec_GamepadVibration, nullptr, nullptr);
-    if (!state->type_GamepadVibration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GamepadVibration, &type_spec_GamepadVibration, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GamepadVibration, &type_spec_GamepadVibration, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RacingWheelReading = py::register_python_type(module.get(), type_name_RacingWheelReading, &type_spec_RacingWheelReading, nullptr, nullptr);
-    if (!state->type_RacingWheelReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RacingWheelReading, &type_spec_RacingWheelReading, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RacingWheelReading, &type_spec_RacingWheelReading, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UINavigationReading = py::register_python_type(module.get(), type_name_UINavigationReading, &type_spec_UINavigationReading, nullptr, nullptr);
-    if (!state->type_UINavigationReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UINavigationReading, &type_spec_UINavigationReading, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UINavigationReading, &type_spec_UINavigationReading, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::ArcadeStick>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ArcadeStick;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ArcadeStick is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::FlightStick>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlightStick;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::FlightStick is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Gamepad>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Gamepad;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Gamepad is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Headset>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Headset;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Headset is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::RacingWheel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RacingWheel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::RacingWheel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::RawGameController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RawGameController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::RawGameController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::UINavigationController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UINavigationController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::UINavigationController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::IGameController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGameController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::IGameController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGameControllerBatteryInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::IGameControllerBatteryInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::ArcadeStickReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ArcadeStickReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::ArcadeStickReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::FlightStickReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlightStickReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::FlightStickReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::GamepadReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GamepadReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::GamepadReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::GamepadVibration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GamepadVibration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::GamepadVibration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::RacingWheelReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RacingWheelReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::RacingWheelReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::UINavigationReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UINavigationReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::UINavigationReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

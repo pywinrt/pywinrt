@@ -96,32 +96,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
+        static constexpr const char* type_name = "UserDataAccountStoreChangedEventArgs";
     };
 }

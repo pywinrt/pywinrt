@@ -205,116 +205,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::AccessibilitySettings>
+    struct py_type<winrt::Windows::UI::ViewManagement::AccessibilitySettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "AccessibilitySettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>
+    struct py_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ActivationViewSwitcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationView>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewConsolidatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewScaling";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewSwitcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewTitleBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>
+    struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ApplicationViewTransferContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::InputPane>
+    struct py_type<winrt::Windows::UI::ViewManagement::InputPane>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "InputPane";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "InputPaneVisibilityEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ProjectionManager>
+    struct py_type<winrt::Windows::UI::ViewManagement::ProjectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ProjectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::StatusBar>
+    struct py_type<winrt::Windows::UI::ViewManagement::StatusBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "StatusBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>
+    struct py_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "StatusBarProgressIndicator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::UISettings>
+    struct py_type<winrt::Windows::UI::ViewManagement::UISettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UISettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UISettingsAnimationsEnabledChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UISettingsAutoHideScrollBarsChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UISettingsMessageDurationChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::UIViewSettings>
+    struct py_type<winrt::Windows::UI::ViewManagement::UIViewSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "UIViewSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>
+    struct py_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
+        static constexpr const char* type_name = "ViewModePreferences";
     };
 }

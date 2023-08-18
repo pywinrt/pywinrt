@@ -119,20 +119,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
+    struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasClientDeviceInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
+    struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasClientSecurityPolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
+    struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
+        static constexpr const char* type_name = "EasComplianceResults";
     };
 }

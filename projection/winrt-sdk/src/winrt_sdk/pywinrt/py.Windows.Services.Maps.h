@@ -177,98 +177,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::EnhancedWaypoint>
+    struct py_type<winrt::Windows::Services::Maps::EnhancedWaypoint>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "EnhancedWaypoint";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::ManeuverWarning>
+    struct py_type<winrt::Windows::Services::Maps::ManeuverWarning>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "ManeuverWarning";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapAddress>
+    struct py_type<winrt::Windows::Services::Maps::MapAddress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapAddress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapLocation>
+    struct py_type<winrt::Windows::Services::Maps::MapLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapLocationFinder>
+    struct py_type<winrt::Windows::Services::Maps::MapLocationFinder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapLocationFinder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapLocationFinderResult>
+    struct py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapLocationFinderResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapManager>
+    struct py_type<winrt::Windows::Services::Maps::MapManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRoute>
+    struct py_type<winrt::Windows::Services::Maps::MapRoute>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRoute";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRouteDrivingOptions>
+    struct py_type<winrt::Windows::Services::Maps::MapRouteDrivingOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteDrivingOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRouteFinder>
+    struct py_type<winrt::Windows::Services::Maps::MapRouteFinder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteFinder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRouteFinderResult>
+    struct py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteFinderResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRouteLeg>
+    struct py_type<winrt::Windows::Services::Maps::MapRouteLeg>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteLeg";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapRouteManeuver>
+    struct py_type<winrt::Windows::Services::Maps::MapRouteManeuver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapRouteManeuver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::MapService>
+    struct py_type<winrt::Windows::Services::Maps::MapService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "MapService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::PlaceInfo>
+    struct py_type<winrt::Windows::Services::Maps::PlaceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "PlaceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>
+    struct py_type<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps";
+        static constexpr const char* type_name = "PlaceInfoCreateOptions";
     };
 }

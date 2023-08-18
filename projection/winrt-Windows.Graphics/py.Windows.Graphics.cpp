@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Graphics
 {
-    struct module_state
-    {
-        PyTypeObject* type_IGeometrySource2D;
-        PyTypeObject* type_DisplayAdapterId;
-        PyTypeObject* type_DisplayId;
-        PyTypeObject* type_PointInt32;
-        PyTypeObject* type_RectInt32;
-        PyTypeObject* type_SizeInt32;
-    };
-
     // ----- IGeometrySource2D interface --------------------
     static constexpr const char* const type_name_IGeometrySource2D = "IGeometrySource2D";
 
@@ -805,54 +795,15 @@ namespace py::cpp::Windows::Graphics
     PyDoc_STRVAR(module_doc, "Windows::Graphics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IGeometrySource2D);
-        Py_VISIT(state->type_DisplayAdapterId);
-        Py_VISIT(state->type_DisplayId);
-        Py_VISIT(state->type_PointInt32);
-        Py_VISIT(state->type_RectInt32);
-        Py_VISIT(state->type_SizeInt32);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IGeometrySource2D);
-        Py_CLEAR(state->type_DisplayAdapterId);
-        Py_CLEAR(state->type_DisplayId);
-        Py_CLEAR(state->type_PointInt32);
-        Py_CLEAR(state->type_RectInt32);
-        Py_CLEAR(state->type_SizeInt32);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics
@@ -868,7 +819,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -881,183 +832,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IGeometrySource2D = py::register_python_type(module.get(), type_name_IGeometrySource2D, &type_spec_IGeometrySource2D, object_bases.get(), nullptr);
-    if (!state->type_IGeometrySource2D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGeometrySource2D, &type_spec_IGeometrySource2D, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGeometrySource2D, &type_spec_IGeometrySource2D, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayAdapterId = py::register_python_type(module.get(), type_name_DisplayAdapterId, &type_spec_DisplayAdapterId, nullptr, nullptr);
-    if (!state->type_DisplayAdapterId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayAdapterId, &type_spec_DisplayAdapterId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayAdapterId, &type_spec_DisplayAdapterId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayId = py::register_python_type(module.get(), type_name_DisplayId, &type_spec_DisplayId, nullptr, nullptr);
-    if (!state->type_DisplayId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayId, &type_spec_DisplayId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayId, &type_spec_DisplayId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointInt32 = py::register_python_type(module.get(), type_name_PointInt32, &type_spec_PointInt32, nullptr, nullptr);
-    if (!state->type_PointInt32)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointInt32, &type_spec_PointInt32, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointInt32, &type_spec_PointInt32, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RectInt32 = py::register_python_type(module.get(), type_name_RectInt32, &type_spec_RectInt32, nullptr, nullptr);
-    if (!state->type_RectInt32)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RectInt32, &type_spec_RectInt32, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RectInt32, &type_spec_RectInt32, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SizeInt32 = py::register_python_type(module.get(), type_name_SizeInt32, &type_spec_SizeInt32, nullptr, nullptr);
-    if (!state->type_SizeInt32)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SizeInt32, &type_spec_SizeInt32, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SizeInt32, &type_spec_SizeInt32, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::IGeometrySource2D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGeometrySource2D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::IGeometrySource2D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DisplayAdapterId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayAdapterId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DisplayAdapterId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::DisplayId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::DisplayId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::PointInt32>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointInt32;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::PointInt32 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::RectInt32>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RectInt32;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::RectInt32 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::SizeInt32>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SizeInt32;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::SizeInt32 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -82,8 +82,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
+    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
+        static constexpr const char* type_name = "ClosedCaptionProperties";
     };
 }

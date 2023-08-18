@@ -208,25 +208,7 @@ namespace py
     };
 
     /**
-     * Empty type for getting `_winrt.Object` Python type via
-     * `get_python_type<py::Object>()`.
-     */
-    struct Object
-    {
-    };
-
-    /**
-     * Type registration for the base `_winrt.Object` Python type.
-     */
-    template<>
-    struct winrt_type<Object>
-    {
-        static PyTypeObject* get_python_type() noexcept;
-    };
-
-    /**
-     * Type for getting `_winrt.Array` Python type via
-     * `get_python_type<py::Array>()`.
+     * Generic WinRT array type (System.Array) implementation.
      */
     struct Array
     {
@@ -286,15 +268,6 @@ namespace py
         virtual ~Array() = default;
     };
 
-    /**
-     * Type registration for the base `_winrt.Array` Python type.
-     */
-    template<>
-    struct winrt_type<Array>
-    {
-        static PyTypeObject* get_python_type() noexcept;
-    };
-
     namespace cpp::_winrt
     {
         PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
@@ -310,23 +283,6 @@ namespace py
     template<typename T>
     struct false_type : std::false_type
     {
-    };
-
-    /**
-     * Empty type for getting `_winrt.MappingIter` Python type via
-     * `get_python_type<py::MappingIter>()`.
-     */
-    struct MappingIter
-    {
-    };
-
-    /**
-     * Type registration for the base `_winrt.MappingIter` Python type.
-     */
-    template<>
-    struct winrt_type<MappingIter>
-    {
-        static PyTypeObject* get_python_type() noexcept;
     };
 
     /**
@@ -1219,7 +1175,7 @@ namespace py
         static PyObject* convert(
             winrt::Windows::Foundation::IInspectable const& value) noexcept
         {
-            auto object_type = get_python_type<Object>();
+            auto object_type = get_object_type();
 
             if (!object_type)
             {
@@ -1233,7 +1189,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            auto object_type = get_python_type<Object>();
+            auto object_type = get_object_type();
 
             if (!object_type)
             {
@@ -1522,7 +1478,7 @@ namespace py
             return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
         }
 
-        auto object_type = get_python_type<Object>();
+        auto object_type = get_object_type();
 
         if (!object_type)
         {

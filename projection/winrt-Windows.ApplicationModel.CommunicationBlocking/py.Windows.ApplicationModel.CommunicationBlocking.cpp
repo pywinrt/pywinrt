@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 {
-    struct module_state
-    {
-        PyTypeObject* type_CommunicationBlockingAccessManager;
-        PyTypeObject* type_CommunicationBlockingAppManager;
-    };
-
     // ----- CommunicationBlockingAccessManager class --------------------
     static constexpr const char* const type_name_CommunicationBlockingAccessManager = "CommunicationBlockingAccessManager";
 
@@ -383,46 +377,15 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::CommunicationBlocking");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CommunicationBlockingAccessManager);
-        Py_VISIT(state->type_CommunicationBlockingAppManager);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CommunicationBlockingAccessManager);
-        Py_CLEAR(state->type_CommunicationBlockingAppManager);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_CommunicationBlocking",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::CommunicationBlocking
@@ -438,7 +401,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_CommunicationBlocking(void
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -451,17 +414,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_CommunicationBlocking(void
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_CommunicationBlockingAccessManager_Meta{PyType_FromSpec(&type_spec_CommunicationBlockingAccessManager_Meta)};
     if (!type_CommunicationBlockingAccessManager_Meta)
     {
         return nullptr;
     }
 
-    state->type_CommunicationBlockingAccessManager = py::register_python_type(module.get(), type_name_CommunicationBlockingAccessManager, &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get()));
-    if (!state->type_CommunicationBlockingAccessManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAccessManager, &type_spec_CommunicationBlockingAccessManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAccessManager, &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -472,58 +435,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_CommunicationBlocking(void
         return nullptr;
     }
 
-    state->type_CommunicationBlockingAppManager = py::register_python_type(module.get(), type_name_CommunicationBlockingAppManager, &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get()));
-    if (!state->type_CommunicationBlockingAppManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppManager, &type_spec_CommunicationBlockingAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppManager, &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::CommunicationBlocking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommunicationBlockingAccessManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::CommunicationBlocking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommunicationBlockingAppManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

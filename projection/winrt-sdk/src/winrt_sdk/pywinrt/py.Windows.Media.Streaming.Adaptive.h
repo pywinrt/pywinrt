@@ -95,86 +95,100 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceAdvancedSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceCorrelatedTimes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceCreationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnosticAvailableEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDiagnostics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadBitrateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadRequestedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourceDownloadStatistics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
+        static constexpr const char* type_name = "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs";
     };
 }

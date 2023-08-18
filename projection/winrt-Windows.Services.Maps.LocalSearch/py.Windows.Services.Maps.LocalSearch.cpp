@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Services::Maps::LocalSearch
 {
-    struct module_state
-    {
-        PyTypeObject* type_LocalCategories;
-        PyTypeObject* type_LocalLocation;
-        PyTypeObject* type_LocalLocationFinder;
-        PyTypeObject* type_LocalLocationFinderResult;
-        PyTypeObject* type_LocalLocationHoursOfOperationItem;
-        PyTypeObject* type_LocalLocationRatingInfo;
-        PyTypeObject* type_PlaceInfoHelper;
-    };
-
     // ----- LocalCategories class --------------------
     static constexpr const char* const type_name_LocalCategories = "LocalCategories";
 
@@ -1030,56 +1019,15 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     PyDoc_STRVAR(module_doc, "Windows::Services::Maps::LocalSearch");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_LocalCategories);
-        Py_VISIT(state->type_LocalLocation);
-        Py_VISIT(state->type_LocalLocationFinder);
-        Py_VISIT(state->type_LocalLocationFinderResult);
-        Py_VISIT(state->type_LocalLocationHoursOfOperationItem);
-        Py_VISIT(state->type_LocalLocationRatingInfo);
-        Py_VISIT(state->type_PlaceInfoHelper);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_LocalCategories);
-        Py_CLEAR(state->type_LocalLocation);
-        Py_CLEAR(state->type_LocalLocationFinder);
-        Py_CLEAR(state->type_LocalLocationFinderResult);
-        Py_CLEAR(state->type_LocalLocationHoursOfOperationItem);
-        Py_CLEAR(state->type_LocalLocationRatingInfo);
-        Py_CLEAR(state->type_PlaceInfoHelper);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_Maps_LocalSearch",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::Maps::LocalSearch
@@ -1095,7 +1043,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_LocalSearch(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1108,218 +1056,75 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_LocalSearch(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_LocalCategories_Meta{PyType_FromSpec(&type_spec_LocalCategories_Meta)};
     if (!type_LocalCategories_Meta)
     {
         return nullptr;
     }
 
-    state->type_LocalCategories = py::register_python_type(module.get(), type_name_LocalCategories, &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get()));
-    if (!state->type_LocalCategories)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalCategories, &type_spec_LocalCategories, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalCategories, &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalLocation = py::register_python_type(module.get(), type_name_LocalLocation, &type_spec_LocalLocation, object_bases.get(), nullptr);
-    if (!state->type_LocalLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalLocation, &type_spec_LocalLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalLocation, &type_spec_LocalLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalLocationFinder = py::register_python_type(module.get(), type_name_LocalLocationFinder, &type_spec_LocalLocationFinder, object_bases.get(), nullptr);
-    if (!state->type_LocalLocationFinder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalLocationFinder, &type_spec_LocalLocationFinder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalLocationFinder, &type_spec_LocalLocationFinder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalLocationFinderResult = py::register_python_type(module.get(), type_name_LocalLocationFinderResult, &type_spec_LocalLocationFinderResult, object_bases.get(), nullptr);
-    if (!state->type_LocalLocationFinderResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalLocationFinderResult, &type_spec_LocalLocationFinderResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalLocationFinderResult, &type_spec_LocalLocationFinderResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalLocationHoursOfOperationItem = py::register_python_type(module.get(), type_name_LocalLocationHoursOfOperationItem, &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), nullptr);
-    if (!state->type_LocalLocationHoursOfOperationItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalLocationHoursOfOperationItem, &type_spec_LocalLocationHoursOfOperationItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalLocationHoursOfOperationItem, &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocalLocationRatingInfo = py::register_python_type(module.get(), type_name_LocalLocationRatingInfo, &type_spec_LocalLocationRatingInfo, object_bases.get(), nullptr);
-    if (!state->type_LocalLocationRatingInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalLocationRatingInfo, &type_spec_LocalLocationRatingInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalLocationRatingInfo, &type_spec_LocalLocationRatingInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlaceInfoHelper = py::register_python_type(module.get(), type_name_PlaceInfoHelper, &type_spec_PlaceInfoHelper, object_bases.get(), nullptr);
-    if (!state->type_PlaceInfoHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaceInfoHelper, &type_spec_PlaceInfoHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaceInfoHelper, &type_spec_PlaceInfoHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalCategories;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalCategories is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalLocationFinder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalLocationFinderResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalLocationHoursOfOperationItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalLocationRatingInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::LocalSearch;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::LocalSearch");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaceInfoHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

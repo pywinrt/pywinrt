@@ -6,47 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 {
-    struct module_state
-    {
-        PyTypeObject* type_GattCharacteristic;
-        PyTypeObject* type_GattCharacteristicUuids;
-        PyTypeObject* type_GattCharacteristicsResult;
-        PyTypeObject* type_GattClientNotificationResult;
-        PyTypeObject* type_GattDescriptor;
-        PyTypeObject* type_GattDescriptorUuids;
-        PyTypeObject* type_GattDescriptorsResult;
-        PyTypeObject* type_GattDeviceService;
-        PyTypeObject* type_GattDeviceServicesResult;
-        PyTypeObject* type_GattLocalCharacteristic;
-        PyTypeObject* type_GattLocalCharacteristicParameters;
-        PyTypeObject* type_GattLocalCharacteristicResult;
-        PyTypeObject* type_GattLocalDescriptor;
-        PyTypeObject* type_GattLocalDescriptorParameters;
-        PyTypeObject* type_GattLocalDescriptorResult;
-        PyTypeObject* type_GattLocalService;
-        PyTypeObject* type_GattPresentationFormat;
-        PyTypeObject* type_GattPresentationFormatTypes;
-        PyTypeObject* type_GattProtocolError;
-        PyTypeObject* type_GattReadClientCharacteristicConfigurationDescriptorResult;
-        PyTypeObject* type_GattReadRequest;
-        PyTypeObject* type_GattReadRequestedEventArgs;
-        PyTypeObject* type_GattReadResult;
-        PyTypeObject* type_GattReliableWriteTransaction;
-        PyTypeObject* type_GattRequestStateChangedEventArgs;
-        PyTypeObject* type_GattServiceProvider;
-        PyTypeObject* type_GattServiceProviderAdvertisementStatusChangedEventArgs;
-        PyTypeObject* type_GattServiceProviderAdvertisingParameters;
-        PyTypeObject* type_GattServiceProviderResult;
-        PyTypeObject* type_GattServiceUuids;
-        PyTypeObject* type_GattSession;
-        PyTypeObject* type_GattSessionStatusChangedEventArgs;
-        PyTypeObject* type_GattSubscribedClient;
-        PyTypeObject* type_GattValueChangedEventArgs;
-        PyTypeObject* type_GattWriteRequest;
-        PyTypeObject* type_GattWriteRequestedEventArgs;
-        PyTypeObject* type_GattWriteResult;
-    };
-
     // ----- GattCharacteristic class --------------------
     static constexpr const char* const type_name_GattCharacteristic = "GattCharacteristic";
 
@@ -10899,116 +10858,15 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::GenericAttributeProfile");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GattCharacteristic);
-        Py_VISIT(state->type_GattCharacteristicUuids);
-        Py_VISIT(state->type_GattCharacteristicsResult);
-        Py_VISIT(state->type_GattClientNotificationResult);
-        Py_VISIT(state->type_GattDescriptor);
-        Py_VISIT(state->type_GattDescriptorUuids);
-        Py_VISIT(state->type_GattDescriptorsResult);
-        Py_VISIT(state->type_GattDeviceService);
-        Py_VISIT(state->type_GattDeviceServicesResult);
-        Py_VISIT(state->type_GattLocalCharacteristic);
-        Py_VISIT(state->type_GattLocalCharacteristicParameters);
-        Py_VISIT(state->type_GattLocalCharacteristicResult);
-        Py_VISIT(state->type_GattLocalDescriptor);
-        Py_VISIT(state->type_GattLocalDescriptorParameters);
-        Py_VISIT(state->type_GattLocalDescriptorResult);
-        Py_VISIT(state->type_GattLocalService);
-        Py_VISIT(state->type_GattPresentationFormat);
-        Py_VISIT(state->type_GattPresentationFormatTypes);
-        Py_VISIT(state->type_GattProtocolError);
-        Py_VISIT(state->type_GattReadClientCharacteristicConfigurationDescriptorResult);
-        Py_VISIT(state->type_GattReadRequest);
-        Py_VISIT(state->type_GattReadRequestedEventArgs);
-        Py_VISIT(state->type_GattReadResult);
-        Py_VISIT(state->type_GattReliableWriteTransaction);
-        Py_VISIT(state->type_GattRequestStateChangedEventArgs);
-        Py_VISIT(state->type_GattServiceProvider);
-        Py_VISIT(state->type_GattServiceProviderAdvertisementStatusChangedEventArgs);
-        Py_VISIT(state->type_GattServiceProviderAdvertisingParameters);
-        Py_VISIT(state->type_GattServiceProviderResult);
-        Py_VISIT(state->type_GattServiceUuids);
-        Py_VISIT(state->type_GattSession);
-        Py_VISIT(state->type_GattSessionStatusChangedEventArgs);
-        Py_VISIT(state->type_GattSubscribedClient);
-        Py_VISIT(state->type_GattValueChangedEventArgs);
-        Py_VISIT(state->type_GattWriteRequest);
-        Py_VISIT(state->type_GattWriteRequestedEventArgs);
-        Py_VISIT(state->type_GattWriteResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GattCharacteristic);
-        Py_CLEAR(state->type_GattCharacteristicUuids);
-        Py_CLEAR(state->type_GattCharacteristicsResult);
-        Py_CLEAR(state->type_GattClientNotificationResult);
-        Py_CLEAR(state->type_GattDescriptor);
-        Py_CLEAR(state->type_GattDescriptorUuids);
-        Py_CLEAR(state->type_GattDescriptorsResult);
-        Py_CLEAR(state->type_GattDeviceService);
-        Py_CLEAR(state->type_GattDeviceServicesResult);
-        Py_CLEAR(state->type_GattLocalCharacteristic);
-        Py_CLEAR(state->type_GattLocalCharacteristicParameters);
-        Py_CLEAR(state->type_GattLocalCharacteristicResult);
-        Py_CLEAR(state->type_GattLocalDescriptor);
-        Py_CLEAR(state->type_GattLocalDescriptorParameters);
-        Py_CLEAR(state->type_GattLocalDescriptorResult);
-        Py_CLEAR(state->type_GattLocalService);
-        Py_CLEAR(state->type_GattPresentationFormat);
-        Py_CLEAR(state->type_GattPresentationFormatTypes);
-        Py_CLEAR(state->type_GattProtocolError);
-        Py_CLEAR(state->type_GattReadClientCharacteristicConfigurationDescriptorResult);
-        Py_CLEAR(state->type_GattReadRequest);
-        Py_CLEAR(state->type_GattReadRequestedEventArgs);
-        Py_CLEAR(state->type_GattReadResult);
-        Py_CLEAR(state->type_GattReliableWriteTransaction);
-        Py_CLEAR(state->type_GattRequestStateChangedEventArgs);
-        Py_CLEAR(state->type_GattServiceProvider);
-        Py_CLEAR(state->type_GattServiceProviderAdvertisementStatusChangedEventArgs);
-        Py_CLEAR(state->type_GattServiceProviderAdvertisingParameters);
-        Py_CLEAR(state->type_GattServiceProviderResult);
-        Py_CLEAR(state->type_GattServiceUuids);
-        Py_CLEAR(state->type_GattSession);
-        Py_CLEAR(state->type_GattSessionStatusChangedEventArgs);
-        Py_CLEAR(state->type_GattSubscribedClient);
-        Py_CLEAR(state->type_GattValueChangedEventArgs);
-        Py_CLEAR(state->type_GattWriteRequest);
-        Py_CLEAR(state->type_GattWriteRequestedEventArgs);
-        Py_CLEAR(state->type_GattWriteResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
@@ -11024,7 +10882,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -11037,11 +10895,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GattCharacteristic = py::register_python_type(module.get(), type_name_GattCharacteristic, &type_spec_GattCharacteristic, object_bases.get(), nullptr);
-    if (!state->type_GattCharacteristic)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattCharacteristic, &type_spec_GattCharacteristic, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattCharacteristic, &type_spec_GattCharacteristic, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11052,26 +10910,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattCharacteristicUuids = py::register_python_type(module.get(), type_name_GattCharacteristicUuids, &type_spec_GattCharacteristicUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristicUuids_Meta.get()));
-    if (!state->type_GattCharacteristicUuids)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicUuids, &type_spec_GattCharacteristicUuids, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristicUuids_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicUuids, &type_spec_GattCharacteristicUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristicUuids_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattCharacteristicsResult = py::register_python_type(module.get(), type_name_GattCharacteristicsResult, &type_spec_GattCharacteristicsResult, object_bases.get(), nullptr);
-    if (!state->type_GattCharacteristicsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicsResult, &type_spec_GattCharacteristicsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicsResult, &type_spec_GattCharacteristicsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattClientNotificationResult = py::register_python_type(module.get(), type_name_GattClientNotificationResult, &type_spec_GattClientNotificationResult, object_bases.get(), nullptr);
-    if (!state->type_GattClientNotificationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattClientNotificationResult, &type_spec_GattClientNotificationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattClientNotificationResult, &type_spec_GattClientNotificationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattDescriptor = py::register_python_type(module.get(), type_name_GattDescriptor, &type_spec_GattDescriptor, object_bases.get(), nullptr);
-    if (!state->type_GattDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattDescriptor, &type_spec_GattDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattDescriptor, &type_spec_GattDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11082,68 +10952,101 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattDescriptorUuids = py::register_python_type(module.get(), type_name_GattDescriptorUuids, &type_spec_GattDescriptorUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptorUuids_Meta.get()));
-    if (!state->type_GattDescriptorUuids)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattDescriptorUuids, &type_spec_GattDescriptorUuids, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptorUuids_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattDescriptorUuids, &type_spec_GattDescriptorUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptorUuids_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattDescriptorsResult = py::register_python_type(module.get(), type_name_GattDescriptorsResult, &type_spec_GattDescriptorsResult, object_bases.get(), nullptr);
-    if (!state->type_GattDescriptorsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattDescriptorsResult, &type_spec_GattDescriptorsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattDescriptorsResult, &type_spec_GattDescriptorsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattDeviceService = py::register_python_type(module.get(), type_name_GattDeviceService, &type_spec_GattDeviceService, object_bases.get(), nullptr);
-    if (!state->type_GattDeviceService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattDeviceService, &type_spec_GattDeviceService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattDeviceService, &type_spec_GattDeviceService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattDeviceServicesResult = py::register_python_type(module.get(), type_name_GattDeviceServicesResult, &type_spec_GattDeviceServicesResult, object_bases.get(), nullptr);
-    if (!state->type_GattDeviceServicesResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattDeviceServicesResult, &type_spec_GattDeviceServicesResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattDeviceServicesResult, &type_spec_GattDeviceServicesResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalCharacteristic = py::register_python_type(module.get(), type_name_GattLocalCharacteristic, &type_spec_GattLocalCharacteristic, object_bases.get(), nullptr);
-    if (!state->type_GattLocalCharacteristic)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristic, &type_spec_GattLocalCharacteristic, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristic, &type_spec_GattLocalCharacteristic, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalCharacteristicParameters = py::register_python_type(module.get(), type_name_GattLocalCharacteristicParameters, &type_spec_GattLocalCharacteristicParameters, object_bases.get(), nullptr);
-    if (!state->type_GattLocalCharacteristicParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristicParameters, &type_spec_GattLocalCharacteristicParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristicParameters, &type_spec_GattLocalCharacteristicParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalCharacteristicResult = py::register_python_type(module.get(), type_name_GattLocalCharacteristicResult, &type_spec_GattLocalCharacteristicResult, object_bases.get(), nullptr);
-    if (!state->type_GattLocalCharacteristicResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristicResult, &type_spec_GattLocalCharacteristicResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalCharacteristicResult, &type_spec_GattLocalCharacteristicResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalDescriptor = py::register_python_type(module.get(), type_name_GattLocalDescriptor, &type_spec_GattLocalDescriptor, object_bases.get(), nullptr);
-    if (!state->type_GattLocalDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptor, &type_spec_GattLocalDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptor, &type_spec_GattLocalDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalDescriptorParameters = py::register_python_type(module.get(), type_name_GattLocalDescriptorParameters, &type_spec_GattLocalDescriptorParameters, object_bases.get(), nullptr);
-    if (!state->type_GattLocalDescriptorParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptorParameters, &type_spec_GattLocalDescriptorParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptorParameters, &type_spec_GattLocalDescriptorParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalDescriptorResult = py::register_python_type(module.get(), type_name_GattLocalDescriptorResult, &type_spec_GattLocalDescriptorResult, object_bases.get(), nullptr);
-    if (!state->type_GattLocalDescriptorResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptorResult, &type_spec_GattLocalDescriptorResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalDescriptorResult, &type_spec_GattLocalDescriptorResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattLocalService = py::register_python_type(module.get(), type_name_GattLocalService, &type_spec_GattLocalService, object_bases.get(), nullptr);
-    if (!state->type_GattLocalService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattLocalService, &type_spec_GattLocalService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattLocalService, &type_spec_GattLocalService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11154,8 +11057,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattPresentationFormat = py::register_python_type(module.get(), type_name_GattPresentationFormat, &type_spec_GattPresentationFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormat_Meta.get()));
-    if (!state->type_GattPresentationFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattPresentationFormat, &type_spec_GattPresentationFormat, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormat_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattPresentationFormat, &type_spec_GattPresentationFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormat_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11166,8 +11072,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattPresentationFormatTypes = py::register_python_type(module.get(), type_name_GattPresentationFormatTypes, &type_spec_GattPresentationFormatTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormatTypes_Meta.get()));
-    if (!state->type_GattPresentationFormatTypes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattPresentationFormatTypes, &type_spec_GattPresentationFormatTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormatTypes_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattPresentationFormatTypes, &type_spec_GattPresentationFormatTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormatTypes_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11178,68 +11087,101 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattProtocolError = py::register_python_type(module.get(), type_name_GattProtocolError, &type_spec_GattProtocolError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattProtocolError_Meta.get()));
-    if (!state->type_GattProtocolError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattProtocolError, &type_spec_GattProtocolError, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattProtocolError_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattProtocolError, &type_spec_GattProtocolError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattProtocolError_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattReadClientCharacteristicConfigurationDescriptorResult = py::register_python_type(module.get(), type_name_GattReadClientCharacteristicConfigurationDescriptorResult, &type_spec_GattReadClientCharacteristicConfigurationDescriptorResult, object_bases.get(), nullptr);
-    if (!state->type_GattReadClientCharacteristicConfigurationDescriptorResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattReadClientCharacteristicConfigurationDescriptorResult, &type_spec_GattReadClientCharacteristicConfigurationDescriptorResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattReadClientCharacteristicConfigurationDescriptorResult, &type_spec_GattReadClientCharacteristicConfigurationDescriptorResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattReadRequest = py::register_python_type(module.get(), type_name_GattReadRequest, &type_spec_GattReadRequest, object_bases.get(), nullptr);
-    if (!state->type_GattReadRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattReadRequest, &type_spec_GattReadRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattReadRequest, &type_spec_GattReadRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattReadRequestedEventArgs = py::register_python_type(module.get(), type_name_GattReadRequestedEventArgs, &type_spec_GattReadRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattReadRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattReadRequestedEventArgs, &type_spec_GattReadRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattReadRequestedEventArgs, &type_spec_GattReadRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattReadResult = py::register_python_type(module.get(), type_name_GattReadResult, &type_spec_GattReadResult, object_bases.get(), nullptr);
-    if (!state->type_GattReadResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattReadResult, &type_spec_GattReadResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattReadResult, &type_spec_GattReadResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattReliableWriteTransaction = py::register_python_type(module.get(), type_name_GattReliableWriteTransaction, &type_spec_GattReliableWriteTransaction, object_bases.get(), nullptr);
-    if (!state->type_GattReliableWriteTransaction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattReliableWriteTransaction, &type_spec_GattReliableWriteTransaction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattReliableWriteTransaction, &type_spec_GattReliableWriteTransaction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattRequestStateChangedEventArgs = py::register_python_type(module.get(), type_name_GattRequestStateChangedEventArgs, &type_spec_GattRequestStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattRequestStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattRequestStateChangedEventArgs, &type_spec_GattRequestStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattRequestStateChangedEventArgs, &type_spec_GattRequestStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProvider = py::register_python_type(module.get(), type_name_GattServiceProvider, &type_spec_GattServiceProvider, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProvider, &type_spec_GattServiceProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProvider, &type_spec_GattServiceProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderAdvertisementStatusChangedEventArgs = py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisementStatusChangedEventArgs, &type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderAdvertisementStatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisementStatusChangedEventArgs, &type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisementStatusChangedEventArgs, &type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderAdvertisingParameters = py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisingParameters, &type_spec_GattServiceProviderAdvertisingParameters, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderAdvertisingParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisingParameters, &type_spec_GattServiceProviderAdvertisingParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderAdvertisingParameters, &type_spec_GattServiceProviderAdvertisingParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderResult = py::register_python_type(module.get(), type_name_GattServiceProviderResult, &type_spec_GattServiceProviderResult, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderResult, &type_spec_GattServiceProviderResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderResult, &type_spec_GattServiceProviderResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11250,905 +11192,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(v
         return nullptr;
     }
 
-    state->type_GattServiceUuids = py::register_python_type(module.get(), type_name_GattServiceUuids, &type_spec_GattServiceUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceUuids_Meta.get()));
-    if (!state->type_GattServiceUuids)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceUuids, &type_spec_GattServiceUuids, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceUuids_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceUuids, &type_spec_GattServiceUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceUuids_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattSession = py::register_python_type(module.get(), type_name_GattSession, &type_spec_GattSession, object_bases.get(), nullptr);
-    if (!state->type_GattSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattSession, &type_spec_GattSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattSession, &type_spec_GattSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattSessionStatusChangedEventArgs = py::register_python_type(module.get(), type_name_GattSessionStatusChangedEventArgs, &type_spec_GattSessionStatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattSessionStatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattSessionStatusChangedEventArgs, &type_spec_GattSessionStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattSessionStatusChangedEventArgs, &type_spec_GattSessionStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattSubscribedClient = py::register_python_type(module.get(), type_name_GattSubscribedClient, &type_spec_GattSubscribedClient, object_bases.get(), nullptr);
-    if (!state->type_GattSubscribedClient)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattSubscribedClient, &type_spec_GattSubscribedClient, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattSubscribedClient, &type_spec_GattSubscribedClient, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattValueChangedEventArgs = py::register_python_type(module.get(), type_name_GattValueChangedEventArgs, &type_spec_GattValueChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattValueChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattValueChangedEventArgs, &type_spec_GattValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattValueChangedEventArgs, &type_spec_GattValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattWriteRequest = py::register_python_type(module.get(), type_name_GattWriteRequest, &type_spec_GattWriteRequest, object_bases.get(), nullptr);
-    if (!state->type_GattWriteRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattWriteRequest, &type_spec_GattWriteRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattWriteRequest, &type_spec_GattWriteRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattWriteRequestedEventArgs = py::register_python_type(module.get(), type_name_GattWriteRequestedEventArgs, &type_spec_GattWriteRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GattWriteRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattWriteRequestedEventArgs, &type_spec_GattWriteRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattWriteRequestedEventArgs, &type_spec_GattWriteRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattWriteResult = py::register_python_type(module.get(), type_name_GattWriteResult, &type_spec_GattWriteResult, object_bases.get(), nullptr);
-    if (!state->type_GattWriteResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattWriteResult, &type_spec_GattWriteResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattWriteResult, &type_spec_GattWriteResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattCharacteristic;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattCharacteristicUuids;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattCharacteristicsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattClientNotificationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattDescriptorUuids;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattDescriptorsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattDeviceService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattDeviceServicesResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalCharacteristic;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalCharacteristicParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalCharacteristicResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalDescriptorParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalDescriptorResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattLocalService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattPresentationFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattPresentationFormatTypes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattProtocolError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattReadClientCharacteristicConfigurationDescriptorResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattReadRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattReadRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattReadResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattReliableWriteTransaction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattRequestStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderAdvertisementStatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderAdvertisingParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceUuids;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattSessionStatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattSubscribedClient;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattValueChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattWriteRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattWriteRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::GenericAttributeProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattWriteResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,62 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Contacts
 {
-    struct module_state
-    {
-        PyTypeObject* type_AggregateContactManager;
-        PyTypeObject* type_Contact;
-        PyTypeObject* type_ContactAddress;
-        PyTypeObject* type_ContactAnnotation;
-        PyTypeObject* type_ContactAnnotationList;
-        PyTypeObject* type_ContactAnnotationStore;
-        PyTypeObject* type_ContactBatch;
-        PyTypeObject* type_ContactCardDelayedDataLoader;
-        PyTypeObject* type_ContactCardOptions;
-        PyTypeObject* type_ContactChange;
-        PyTypeObject* type_ContactChangeReader;
-        PyTypeObject* type_ContactChangeTracker;
-        PyTypeObject* type_ContactChangedDeferral;
-        PyTypeObject* type_ContactChangedEventArgs;
-        PyTypeObject* type_ContactConnectedServiceAccount;
-        PyTypeObject* type_ContactDate;
-        PyTypeObject* type_ContactEmail;
-        PyTypeObject* type_ContactField;
-        PyTypeObject* type_ContactFieldFactory;
-        PyTypeObject* type_ContactGroup;
-        PyTypeObject* type_ContactInformation;
-        PyTypeObject* type_ContactInstantMessageField;
-        PyTypeObject* type_ContactJobInfo;
-        PyTypeObject* type_ContactLaunchActionVerbs;
-        PyTypeObject* type_ContactList;
-        PyTypeObject* type_ContactListLimitedWriteOperations;
-        PyTypeObject* type_ContactListSyncConstraints;
-        PyTypeObject* type_ContactListSyncManager;
-        PyTypeObject* type_ContactLocationField;
-        PyTypeObject* type_ContactManager;
-        PyTypeObject* type_ContactManagerForUser;
-        PyTypeObject* type_ContactMatchReason;
-        PyTypeObject* type_ContactPanel;
-        PyTypeObject* type_ContactPanelClosingEventArgs;
-        PyTypeObject* type_ContactPanelLaunchFullAppRequestedEventArgs;
-        PyTypeObject* type_ContactPhone;
-        PyTypeObject* type_ContactPicker;
-        PyTypeObject* type_ContactQueryOptions;
-        PyTypeObject* type_ContactQueryTextSearch;
-        PyTypeObject* type_ContactReader;
-        PyTypeObject* type_ContactSignificantOther;
-        PyTypeObject* type_ContactStore;
-        PyTypeObject* type_ContactStoreNotificationTriggerDetails;
-        PyTypeObject* type_ContactWebsite;
-        PyTypeObject* type_FullContactCardOptions;
-        PyTypeObject* type_KnownContactField;
-        PyTypeObject* type_PinnedContactIdsQueryResult;
-        PyTypeObject* type_PinnedContactManager;
-        PyTypeObject* type_IContactField;
-        PyTypeObject* type_IContactFieldFactory;
-        PyTypeObject* type_IContactInstantMessageFieldFactory;
-        PyTypeObject* type_IContactLocationFieldFactory;
-    };
-
     // ----- AggregateContactManager class --------------------
     static constexpr const char* const type_name_AggregateContactManager = "AggregateContactManager";
 
@@ -15441,146 +15385,15 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Contacts");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AggregateContactManager);
-        Py_VISIT(state->type_Contact);
-        Py_VISIT(state->type_ContactAddress);
-        Py_VISIT(state->type_ContactAnnotation);
-        Py_VISIT(state->type_ContactAnnotationList);
-        Py_VISIT(state->type_ContactAnnotationStore);
-        Py_VISIT(state->type_ContactBatch);
-        Py_VISIT(state->type_ContactCardDelayedDataLoader);
-        Py_VISIT(state->type_ContactCardOptions);
-        Py_VISIT(state->type_ContactChange);
-        Py_VISIT(state->type_ContactChangeReader);
-        Py_VISIT(state->type_ContactChangeTracker);
-        Py_VISIT(state->type_ContactChangedDeferral);
-        Py_VISIT(state->type_ContactChangedEventArgs);
-        Py_VISIT(state->type_ContactConnectedServiceAccount);
-        Py_VISIT(state->type_ContactDate);
-        Py_VISIT(state->type_ContactEmail);
-        Py_VISIT(state->type_ContactField);
-        Py_VISIT(state->type_ContactFieldFactory);
-        Py_VISIT(state->type_ContactGroup);
-        Py_VISIT(state->type_ContactInformation);
-        Py_VISIT(state->type_ContactInstantMessageField);
-        Py_VISIT(state->type_ContactJobInfo);
-        Py_VISIT(state->type_ContactLaunchActionVerbs);
-        Py_VISIT(state->type_ContactList);
-        Py_VISIT(state->type_ContactListLimitedWriteOperations);
-        Py_VISIT(state->type_ContactListSyncConstraints);
-        Py_VISIT(state->type_ContactListSyncManager);
-        Py_VISIT(state->type_ContactLocationField);
-        Py_VISIT(state->type_ContactManager);
-        Py_VISIT(state->type_ContactManagerForUser);
-        Py_VISIT(state->type_ContactMatchReason);
-        Py_VISIT(state->type_ContactPanel);
-        Py_VISIT(state->type_ContactPanelClosingEventArgs);
-        Py_VISIT(state->type_ContactPanelLaunchFullAppRequestedEventArgs);
-        Py_VISIT(state->type_ContactPhone);
-        Py_VISIT(state->type_ContactPicker);
-        Py_VISIT(state->type_ContactQueryOptions);
-        Py_VISIT(state->type_ContactQueryTextSearch);
-        Py_VISIT(state->type_ContactReader);
-        Py_VISIT(state->type_ContactSignificantOther);
-        Py_VISIT(state->type_ContactStore);
-        Py_VISIT(state->type_ContactStoreNotificationTriggerDetails);
-        Py_VISIT(state->type_ContactWebsite);
-        Py_VISIT(state->type_FullContactCardOptions);
-        Py_VISIT(state->type_KnownContactField);
-        Py_VISIT(state->type_PinnedContactIdsQueryResult);
-        Py_VISIT(state->type_PinnedContactManager);
-        Py_VISIT(state->type_IContactField);
-        Py_VISIT(state->type_IContactFieldFactory);
-        Py_VISIT(state->type_IContactInstantMessageFieldFactory);
-        Py_VISIT(state->type_IContactLocationFieldFactory);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AggregateContactManager);
-        Py_CLEAR(state->type_Contact);
-        Py_CLEAR(state->type_ContactAddress);
-        Py_CLEAR(state->type_ContactAnnotation);
-        Py_CLEAR(state->type_ContactAnnotationList);
-        Py_CLEAR(state->type_ContactAnnotationStore);
-        Py_CLEAR(state->type_ContactBatch);
-        Py_CLEAR(state->type_ContactCardDelayedDataLoader);
-        Py_CLEAR(state->type_ContactCardOptions);
-        Py_CLEAR(state->type_ContactChange);
-        Py_CLEAR(state->type_ContactChangeReader);
-        Py_CLEAR(state->type_ContactChangeTracker);
-        Py_CLEAR(state->type_ContactChangedDeferral);
-        Py_CLEAR(state->type_ContactChangedEventArgs);
-        Py_CLEAR(state->type_ContactConnectedServiceAccount);
-        Py_CLEAR(state->type_ContactDate);
-        Py_CLEAR(state->type_ContactEmail);
-        Py_CLEAR(state->type_ContactField);
-        Py_CLEAR(state->type_ContactFieldFactory);
-        Py_CLEAR(state->type_ContactGroup);
-        Py_CLEAR(state->type_ContactInformation);
-        Py_CLEAR(state->type_ContactInstantMessageField);
-        Py_CLEAR(state->type_ContactJobInfo);
-        Py_CLEAR(state->type_ContactLaunchActionVerbs);
-        Py_CLEAR(state->type_ContactList);
-        Py_CLEAR(state->type_ContactListLimitedWriteOperations);
-        Py_CLEAR(state->type_ContactListSyncConstraints);
-        Py_CLEAR(state->type_ContactListSyncManager);
-        Py_CLEAR(state->type_ContactLocationField);
-        Py_CLEAR(state->type_ContactManager);
-        Py_CLEAR(state->type_ContactManagerForUser);
-        Py_CLEAR(state->type_ContactMatchReason);
-        Py_CLEAR(state->type_ContactPanel);
-        Py_CLEAR(state->type_ContactPanelClosingEventArgs);
-        Py_CLEAR(state->type_ContactPanelLaunchFullAppRequestedEventArgs);
-        Py_CLEAR(state->type_ContactPhone);
-        Py_CLEAR(state->type_ContactPicker);
-        Py_CLEAR(state->type_ContactQueryOptions);
-        Py_CLEAR(state->type_ContactQueryTextSearch);
-        Py_CLEAR(state->type_ContactReader);
-        Py_CLEAR(state->type_ContactSignificantOther);
-        Py_CLEAR(state->type_ContactStore);
-        Py_CLEAR(state->type_ContactStoreNotificationTriggerDetails);
-        Py_CLEAR(state->type_ContactWebsite);
-        Py_CLEAR(state->type_FullContactCardOptions);
-        Py_CLEAR(state->type_KnownContactField);
-        Py_CLEAR(state->type_PinnedContactIdsQueryResult);
-        Py_CLEAR(state->type_PinnedContactManager);
-        Py_CLEAR(state->type_IContactField);
-        Py_CLEAR(state->type_IContactFieldFactory);
-        Py_CLEAR(state->type_IContactInstantMessageFieldFactory);
-        Py_CLEAR(state->type_IContactLocationFieldFactory);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Contacts",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Contacts
@@ -15596,7 +15409,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -15609,143 +15422,209 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AggregateContactManager = py::register_python_type(module.get(), type_name_AggregateContactManager, &type_spec_AggregateContactManager, object_bases.get(), nullptr);
-    if (!state->type_AggregateContactManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AggregateContactManager, &type_spec_AggregateContactManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AggregateContactManager, &type_spec_AggregateContactManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Contact = py::register_python_type(module.get(), type_name_Contact, &type_spec_Contact, object_bases.get(), nullptr);
-    if (!state->type_Contact)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Contact, &type_spec_Contact, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Contact, &type_spec_Contact, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactAddress = py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, object_bases.get(), nullptr);
-    if (!state->type_ContactAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactAnnotation = py::register_python_type(module.get(), type_name_ContactAnnotation, &type_spec_ContactAnnotation, object_bases.get(), nullptr);
-    if (!state->type_ContactAnnotation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactAnnotation, &type_spec_ContactAnnotation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactAnnotation, &type_spec_ContactAnnotation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactAnnotationList = py::register_python_type(module.get(), type_name_ContactAnnotationList, &type_spec_ContactAnnotationList, object_bases.get(), nullptr);
-    if (!state->type_ContactAnnotationList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactAnnotationList, &type_spec_ContactAnnotationList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactAnnotationList, &type_spec_ContactAnnotationList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactAnnotationStore = py::register_python_type(module.get(), type_name_ContactAnnotationStore, &type_spec_ContactAnnotationStore, object_bases.get(), nullptr);
-    if (!state->type_ContactAnnotationStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactAnnotationStore, &type_spec_ContactAnnotationStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactAnnotationStore, &type_spec_ContactAnnotationStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactBatch = py::register_python_type(module.get(), type_name_ContactBatch, &type_spec_ContactBatch, object_bases.get(), nullptr);
-    if (!state->type_ContactBatch)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactBatch, &type_spec_ContactBatch, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactBatch, &type_spec_ContactBatch, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactCardDelayedDataLoader = py::register_python_type(module.get(), type_name_ContactCardDelayedDataLoader, &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr);
-    if (!state->type_ContactCardDelayedDataLoader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactCardDelayedDataLoader, &type_spec_ContactCardDelayedDataLoader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactCardDelayedDataLoader, &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactCardOptions = py::register_python_type(module.get(), type_name_ContactCardOptions, &type_spec_ContactCardOptions, object_bases.get(), nullptr);
-    if (!state->type_ContactCardOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactCardOptions, &type_spec_ContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactCardOptions, &type_spec_ContactCardOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChange = py::register_python_type(module.get(), type_name_ContactChange, &type_spec_ContactChange, object_bases.get(), nullptr);
-    if (!state->type_ContactChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChange, &type_spec_ContactChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChange, &type_spec_ContactChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChangeReader = py::register_python_type(module.get(), type_name_ContactChangeReader, &type_spec_ContactChangeReader, object_bases.get(), nullptr);
-    if (!state->type_ContactChangeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChangeReader, &type_spec_ContactChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChangeReader, &type_spec_ContactChangeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChangeTracker = py::register_python_type(module.get(), type_name_ContactChangeTracker, &type_spec_ContactChangeTracker, object_bases.get(), nullptr);
-    if (!state->type_ContactChangeTracker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChangeTracker, &type_spec_ContactChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChangeTracker, &type_spec_ContactChangeTracker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChangedDeferral = py::register_python_type(module.get(), type_name_ContactChangedDeferral, &type_spec_ContactChangedDeferral, object_bases.get(), nullptr);
-    if (!state->type_ContactChangedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChangedDeferral, &type_spec_ContactChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChangedDeferral, &type_spec_ContactChangedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChangedEventArgs = py::register_python_type(module.get(), type_name_ContactChangedEventArgs, &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChangedEventArgs, &type_spec_ContactChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChangedEventArgs, &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactConnectedServiceAccount = py::register_python_type(module.get(), type_name_ContactConnectedServiceAccount, &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr);
-    if (!state->type_ContactConnectedServiceAccount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactConnectedServiceAccount, &type_spec_ContactConnectedServiceAccount, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactConnectedServiceAccount, &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactDate = py::register_python_type(module.get(), type_name_ContactDate, &type_spec_ContactDate, object_bases.get(), nullptr);
-    if (!state->type_ContactDate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactDate, &type_spec_ContactDate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactDate, &type_spec_ContactDate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactEmail = py::register_python_type(module.get(), type_name_ContactEmail, &type_spec_ContactEmail, object_bases.get(), nullptr);
-    if (!state->type_ContactEmail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactEmail, &type_spec_ContactEmail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactEmail, &type_spec_ContactEmail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactField = py::register_python_type(module.get(), type_name_ContactField, &type_spec_ContactField, object_bases.get(), nullptr);
-    if (!state->type_ContactField)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactField, &type_spec_ContactField, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactField, &type_spec_ContactField, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactFieldFactory = py::register_python_type(module.get(), type_name_ContactFieldFactory, &type_spec_ContactFieldFactory, object_bases.get(), nullptr);
-    if (!state->type_ContactFieldFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactFieldFactory, &type_spec_ContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactFieldFactory, &type_spec_ContactFieldFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactGroup = py::register_python_type(module.get(), type_name_ContactGroup, &type_spec_ContactGroup, object_bases.get(), nullptr);
-    if (!state->type_ContactGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactGroup, &type_spec_ContactGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactGroup, &type_spec_ContactGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactInformation = py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, object_bases.get(), nullptr);
-    if (!state->type_ContactInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactInstantMessageField = py::register_python_type(module.get(), type_name_ContactInstantMessageField, &type_spec_ContactInstantMessageField, object_bases.get(), nullptr);
-    if (!state->type_ContactInstantMessageField)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactInstantMessageField, &type_spec_ContactInstantMessageField, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactInstantMessageField, &type_spec_ContactInstantMessageField, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactJobInfo = py::register_python_type(module.get(), type_name_ContactJobInfo, &type_spec_ContactJobInfo, object_bases.get(), nullptr);
-    if (!state->type_ContactJobInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactJobInfo, &type_spec_ContactJobInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactJobInfo, &type_spec_ContactJobInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -15756,38 +15635,56 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
         return nullptr;
     }
 
-    state->type_ContactLaunchActionVerbs = py::register_python_type(module.get(), type_name_ContactLaunchActionVerbs, &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get()));
-    if (!state->type_ContactLaunchActionVerbs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactLaunchActionVerbs, &type_spec_ContactLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactLaunchActionVerbs, &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactList = py::register_python_type(module.get(), type_name_ContactList, &type_spec_ContactList, object_bases.get(), nullptr);
-    if (!state->type_ContactList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactList, &type_spec_ContactList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactList, &type_spec_ContactList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactListLimitedWriteOperations = py::register_python_type(module.get(), type_name_ContactListLimitedWriteOperations, &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr);
-    if (!state->type_ContactListLimitedWriteOperations)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactListLimitedWriteOperations, &type_spec_ContactListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactListLimitedWriteOperations, &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactListSyncConstraints = py::register_python_type(module.get(), type_name_ContactListSyncConstraints, &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr);
-    if (!state->type_ContactListSyncConstraints)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactListSyncConstraints, &type_spec_ContactListSyncConstraints, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactListSyncConstraints, &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactListSyncManager = py::register_python_type(module.get(), type_name_ContactListSyncManager, &type_spec_ContactListSyncManager, object_bases.get(), nullptr);
-    if (!state->type_ContactListSyncManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactListSyncManager, &type_spec_ContactListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactListSyncManager, &type_spec_ContactListSyncManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactLocationField = py::register_python_type(module.get(), type_name_ContactLocationField, &type_spec_ContactLocationField, object_bases.get(), nullptr);
-    if (!state->type_ContactLocationField)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactLocationField, &type_spec_ContactLocationField, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactLocationField, &type_spec_ContactLocationField, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -15798,98 +15695,146 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
         return nullptr;
     }
 
-    state->type_ContactManager = py::register_python_type(module.get(), type_name_ContactManager, &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get()));
-    if (!state->type_ContactManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactManager, &type_spec_ContactManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactManager, &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactManagerForUser = py::register_python_type(module.get(), type_name_ContactManagerForUser, &type_spec_ContactManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_ContactManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactManagerForUser, &type_spec_ContactManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactManagerForUser, &type_spec_ContactManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactMatchReason = py::register_python_type(module.get(), type_name_ContactMatchReason, &type_spec_ContactMatchReason, object_bases.get(), nullptr);
-    if (!state->type_ContactMatchReason)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactMatchReason, &type_spec_ContactMatchReason, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactMatchReason, &type_spec_ContactMatchReason, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPanel = py::register_python_type(module.get(), type_name_ContactPanel, &type_spec_ContactPanel, object_bases.get(), nullptr);
-    if (!state->type_ContactPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPanel, &type_spec_ContactPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPanel, &type_spec_ContactPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPanelClosingEventArgs = py::register_python_type(module.get(), type_name_ContactPanelClosingEventArgs, &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactPanelClosingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPanelClosingEventArgs, &type_spec_ContactPanelClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPanelClosingEventArgs, &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPanelLaunchFullAppRequestedEventArgs = py::register_python_type(module.get(), type_name_ContactPanelLaunchFullAppRequestedEventArgs, &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactPanelLaunchFullAppRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPanelLaunchFullAppRequestedEventArgs, &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPanelLaunchFullAppRequestedEventArgs, &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPhone = py::register_python_type(module.get(), type_name_ContactPhone, &type_spec_ContactPhone, object_bases.get(), nullptr);
-    if (!state->type_ContactPhone)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPhone, &type_spec_ContactPhone, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPhone, &type_spec_ContactPhone, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPicker = py::register_python_type(module.get(), type_name_ContactPicker, &type_spec_ContactPicker, object_bases.get(), nullptr);
-    if (!state->type_ContactPicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPicker, &type_spec_ContactPicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPicker, &type_spec_ContactPicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactQueryOptions = py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, object_bases.get(), nullptr);
-    if (!state->type_ContactQueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactQueryTextSearch = py::register_python_type(module.get(), type_name_ContactQueryTextSearch, &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr);
-    if (!state->type_ContactQueryTextSearch)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactQueryTextSearch, &type_spec_ContactQueryTextSearch, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactQueryTextSearch, &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactReader = py::register_python_type(module.get(), type_name_ContactReader, &type_spec_ContactReader, object_bases.get(), nullptr);
-    if (!state->type_ContactReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactReader, &type_spec_ContactReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactReader, &type_spec_ContactReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactSignificantOther = py::register_python_type(module.get(), type_name_ContactSignificantOther, &type_spec_ContactSignificantOther, object_bases.get(), nullptr);
-    if (!state->type_ContactSignificantOther)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactSignificantOther, &type_spec_ContactSignificantOther, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactSignificantOther, &type_spec_ContactSignificantOther, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactStore = py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, object_bases.get(), nullptr);
-    if (!state->type_ContactStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactStoreNotificationTriggerDetails = py::register_python_type(module.get(), type_name_ContactStoreNotificationTriggerDetails, &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ContactStoreNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTriggerDetails, &type_spec_ContactStoreNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTriggerDetails, &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactWebsite = py::register_python_type(module.get(), type_name_ContactWebsite, &type_spec_ContactWebsite, object_bases.get(), nullptr);
-    if (!state->type_ContactWebsite)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactWebsite, &type_spec_ContactWebsite, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactWebsite, &type_spec_ContactWebsite, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FullContactCardOptions = py::register_python_type(module.get(), type_name_FullContactCardOptions, &type_spec_FullContactCardOptions, object_bases.get(), nullptr);
-    if (!state->type_FullContactCardOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FullContactCardOptions, &type_spec_FullContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FullContactCardOptions, &type_spec_FullContactCardOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -15900,1244 +15845,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownContactField = py::register_python_type(module.get(), type_name_KnownContactField, &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get()));
-    if (!state->type_KnownContactField)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownContactField, &type_spec_KnownContactField, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownContactField, &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PinnedContactIdsQueryResult = py::register_python_type(module.get(), type_name_PinnedContactIdsQueryResult, &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr);
-    if (!state->type_PinnedContactIdsQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PinnedContactIdsQueryResult, &type_spec_PinnedContactIdsQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PinnedContactIdsQueryResult, &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PinnedContactManager = py::register_python_type(module.get(), type_name_PinnedContactManager, &type_spec_PinnedContactManager, object_bases.get(), nullptr);
-    if (!state->type_PinnedContactManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PinnedContactManager, &type_spec_PinnedContactManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PinnedContactManager, &type_spec_PinnedContactManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactField = py::register_python_type(module.get(), type_name_IContactField, &type_spec_IContactField, object_bases.get(), nullptr);
-    if (!state->type_IContactField)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactField, &type_spec_IContactField, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactField, &type_spec_IContactField, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactFieldFactory = py::register_python_type(module.get(), type_name_IContactFieldFactory, &type_spec_IContactFieldFactory, object_bases.get(), nullptr);
-    if (!state->type_IContactFieldFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactFieldFactory, &type_spec_IContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactFieldFactory, &type_spec_IContactFieldFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactInstantMessageFieldFactory = py::register_python_type(module.get(), type_name_IContactInstantMessageFieldFactory, &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr);
-    if (!state->type_IContactInstantMessageFieldFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactInstantMessageFieldFactory, &type_spec_IContactInstantMessageFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactInstantMessageFieldFactory, &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactLocationFieldFactory = py::register_python_type(module.get(), type_name_IContactLocationFieldFactory, &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr);
-    if (!state->type_IContactLocationFieldFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactLocationFieldFactory, &type_spec_IContactLocationFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactLocationFieldFactory, &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AggregateContactManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::AggregateContactManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::Contact>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Contact;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::Contact is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactAnnotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactAnnotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactAnnotationList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactAnnotationStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactBatch;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactBatch is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactCardDelayedDataLoader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactCardOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactCardOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactChangeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangeTracker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactConnectedServiceAccount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactDate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactDate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactDate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactEmail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactEmail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactEmail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactField>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactField;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactField is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactFieldFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactInstantMessageField;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactJobInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactJobInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactLaunchActionVerbs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactListLimitedWriteOperations;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactListSyncConstraints;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactListSyncManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactLocationField;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactLocationField is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactMatchReason;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactMatchReason is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPanelClosingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPanelLaunchFullAppRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPhone>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPhone;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactPhone is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactPicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactQueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactQueryTextSearch;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactSignificantOther;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStoreNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactWebsite;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::ContactWebsite is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FullContactCardOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownContactField;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::KnownContactField is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PinnedContactIdsQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PinnedContactManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::PinnedContactManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactField;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::IContactField is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactFieldFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactInstantMessageFieldFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Contacts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Contacts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactLocationFieldFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

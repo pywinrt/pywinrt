@@ -6,34 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Midi
 {
-    struct module_state
-    {
-        PyTypeObject* type_MidiActiveSensingMessage;
-        PyTypeObject* type_MidiChannelPressureMessage;
-        PyTypeObject* type_MidiContinueMessage;
-        PyTypeObject* type_MidiControlChangeMessage;
-        PyTypeObject* type_MidiInPort;
-        PyTypeObject* type_MidiMessageReceivedEventArgs;
-        PyTypeObject* type_MidiNoteOffMessage;
-        PyTypeObject* type_MidiNoteOnMessage;
-        PyTypeObject* type_MidiOutPort;
-        PyTypeObject* type_MidiPitchBendChangeMessage;
-        PyTypeObject* type_MidiPolyphonicKeyPressureMessage;
-        PyTypeObject* type_MidiProgramChangeMessage;
-        PyTypeObject* type_MidiSongPositionPointerMessage;
-        PyTypeObject* type_MidiSongSelectMessage;
-        PyTypeObject* type_MidiStartMessage;
-        PyTypeObject* type_MidiStopMessage;
-        PyTypeObject* type_MidiSynthesizer;
-        PyTypeObject* type_MidiSystemExclusiveMessage;
-        PyTypeObject* type_MidiSystemResetMessage;
-        PyTypeObject* type_MidiTimeCodeMessage;
-        PyTypeObject* type_MidiTimingClockMessage;
-        PyTypeObject* type_MidiTuneRequestMessage;
-        PyTypeObject* type_IMidiMessage;
-        PyTypeObject* type_IMidiOutPort;
-    };
-
     // ----- MidiActiveSensingMessage class --------------------
     static constexpr const char* const type_name_MidiActiveSensingMessage = "MidiActiveSensingMessage";
 
@@ -4695,90 +4667,15 @@ namespace py::cpp::Windows::Devices::Midi
     PyDoc_STRVAR(module_doc, "Windows::Devices::Midi");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_MidiActiveSensingMessage);
-        Py_VISIT(state->type_MidiChannelPressureMessage);
-        Py_VISIT(state->type_MidiContinueMessage);
-        Py_VISIT(state->type_MidiControlChangeMessage);
-        Py_VISIT(state->type_MidiInPort);
-        Py_VISIT(state->type_MidiMessageReceivedEventArgs);
-        Py_VISIT(state->type_MidiNoteOffMessage);
-        Py_VISIT(state->type_MidiNoteOnMessage);
-        Py_VISIT(state->type_MidiOutPort);
-        Py_VISIT(state->type_MidiPitchBendChangeMessage);
-        Py_VISIT(state->type_MidiPolyphonicKeyPressureMessage);
-        Py_VISIT(state->type_MidiProgramChangeMessage);
-        Py_VISIT(state->type_MidiSongPositionPointerMessage);
-        Py_VISIT(state->type_MidiSongSelectMessage);
-        Py_VISIT(state->type_MidiStartMessage);
-        Py_VISIT(state->type_MidiStopMessage);
-        Py_VISIT(state->type_MidiSynthesizer);
-        Py_VISIT(state->type_MidiSystemExclusiveMessage);
-        Py_VISIT(state->type_MidiSystemResetMessage);
-        Py_VISIT(state->type_MidiTimeCodeMessage);
-        Py_VISIT(state->type_MidiTimingClockMessage);
-        Py_VISIT(state->type_MidiTuneRequestMessage);
-        Py_VISIT(state->type_IMidiMessage);
-        Py_VISIT(state->type_IMidiOutPort);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_MidiActiveSensingMessage);
-        Py_CLEAR(state->type_MidiChannelPressureMessage);
-        Py_CLEAR(state->type_MidiContinueMessage);
-        Py_CLEAR(state->type_MidiControlChangeMessage);
-        Py_CLEAR(state->type_MidiInPort);
-        Py_CLEAR(state->type_MidiMessageReceivedEventArgs);
-        Py_CLEAR(state->type_MidiNoteOffMessage);
-        Py_CLEAR(state->type_MidiNoteOnMessage);
-        Py_CLEAR(state->type_MidiOutPort);
-        Py_CLEAR(state->type_MidiPitchBendChangeMessage);
-        Py_CLEAR(state->type_MidiPolyphonicKeyPressureMessage);
-        Py_CLEAR(state->type_MidiProgramChangeMessage);
-        Py_CLEAR(state->type_MidiSongPositionPointerMessage);
-        Py_CLEAR(state->type_MidiSongSelectMessage);
-        Py_CLEAR(state->type_MidiStartMessage);
-        Py_CLEAR(state->type_MidiStopMessage);
-        Py_CLEAR(state->type_MidiSynthesizer);
-        Py_CLEAR(state->type_MidiSystemExclusiveMessage);
-        Py_CLEAR(state->type_MidiSystemResetMessage);
-        Py_CLEAR(state->type_MidiTimeCodeMessage);
-        Py_CLEAR(state->type_MidiTimingClockMessage);
-        Py_CLEAR(state->type_MidiTuneRequestMessage);
-        Py_CLEAR(state->type_IMidiMessage);
-        Py_CLEAR(state->type_IMidiOutPort);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Midi",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Midi
@@ -4794,7 +4691,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Midi(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4807,705 +4704,222 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Midi(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_MidiActiveSensingMessage = py::register_python_type(module.get(), type_name_MidiActiveSensingMessage, &type_spec_MidiActiveSensingMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiActiveSensingMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiActiveSensingMessage, &type_spec_MidiActiveSensingMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiActiveSensingMessage, &type_spec_MidiActiveSensingMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiChannelPressureMessage = py::register_python_type(module.get(), type_name_MidiChannelPressureMessage, &type_spec_MidiChannelPressureMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiChannelPressureMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiChannelPressureMessage, &type_spec_MidiChannelPressureMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiChannelPressureMessage, &type_spec_MidiChannelPressureMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiContinueMessage = py::register_python_type(module.get(), type_name_MidiContinueMessage, &type_spec_MidiContinueMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiContinueMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiContinueMessage, &type_spec_MidiContinueMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiContinueMessage, &type_spec_MidiContinueMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiControlChangeMessage = py::register_python_type(module.get(), type_name_MidiControlChangeMessage, &type_spec_MidiControlChangeMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiControlChangeMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiControlChangeMessage, &type_spec_MidiControlChangeMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiControlChangeMessage, &type_spec_MidiControlChangeMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiInPort = py::register_python_type(module.get(), type_name_MidiInPort, &type_spec_MidiInPort, object_bases.get(), nullptr);
-    if (!state->type_MidiInPort)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiInPort, &type_spec_MidiInPort, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiInPort, &type_spec_MidiInPort, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiMessageReceivedEventArgs = py::register_python_type(module.get(), type_name_MidiMessageReceivedEventArgs, &type_spec_MidiMessageReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MidiMessageReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiMessageReceivedEventArgs, &type_spec_MidiMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiMessageReceivedEventArgs, &type_spec_MidiMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiNoteOffMessage = py::register_python_type(module.get(), type_name_MidiNoteOffMessage, &type_spec_MidiNoteOffMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiNoteOffMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiNoteOffMessage, &type_spec_MidiNoteOffMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiNoteOffMessage, &type_spec_MidiNoteOffMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiNoteOnMessage = py::register_python_type(module.get(), type_name_MidiNoteOnMessage, &type_spec_MidiNoteOnMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiNoteOnMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiNoteOnMessage, &type_spec_MidiNoteOnMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiNoteOnMessage, &type_spec_MidiNoteOnMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiOutPort = py::register_python_type(module.get(), type_name_MidiOutPort, &type_spec_MidiOutPort, object_bases.get(), nullptr);
-    if (!state->type_MidiOutPort)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiOutPort, &type_spec_MidiOutPort, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiOutPort, &type_spec_MidiOutPort, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiPitchBendChangeMessage = py::register_python_type(module.get(), type_name_MidiPitchBendChangeMessage, &type_spec_MidiPitchBendChangeMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiPitchBendChangeMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiPitchBendChangeMessage, &type_spec_MidiPitchBendChangeMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiPitchBendChangeMessage, &type_spec_MidiPitchBendChangeMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiPolyphonicKeyPressureMessage = py::register_python_type(module.get(), type_name_MidiPolyphonicKeyPressureMessage, &type_spec_MidiPolyphonicKeyPressureMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiPolyphonicKeyPressureMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiPolyphonicKeyPressureMessage, &type_spec_MidiPolyphonicKeyPressureMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiPolyphonicKeyPressureMessage, &type_spec_MidiPolyphonicKeyPressureMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiProgramChangeMessage = py::register_python_type(module.get(), type_name_MidiProgramChangeMessage, &type_spec_MidiProgramChangeMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiProgramChangeMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiProgramChangeMessage, &type_spec_MidiProgramChangeMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiProgramChangeMessage, &type_spec_MidiProgramChangeMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiSongPositionPointerMessage = py::register_python_type(module.get(), type_name_MidiSongPositionPointerMessage, &type_spec_MidiSongPositionPointerMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiSongPositionPointerMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiSongPositionPointerMessage, &type_spec_MidiSongPositionPointerMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiSongPositionPointerMessage, &type_spec_MidiSongPositionPointerMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiSongSelectMessage = py::register_python_type(module.get(), type_name_MidiSongSelectMessage, &type_spec_MidiSongSelectMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiSongSelectMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiSongSelectMessage, &type_spec_MidiSongSelectMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiSongSelectMessage, &type_spec_MidiSongSelectMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiStartMessage = py::register_python_type(module.get(), type_name_MidiStartMessage, &type_spec_MidiStartMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiStartMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiStartMessage, &type_spec_MidiStartMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiStartMessage, &type_spec_MidiStartMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiStopMessage = py::register_python_type(module.get(), type_name_MidiStopMessage, &type_spec_MidiStopMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiStopMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiStopMessage, &type_spec_MidiStopMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiStopMessage, &type_spec_MidiStopMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiSynthesizer = py::register_python_type(module.get(), type_name_MidiSynthesizer, &type_spec_MidiSynthesizer, object_bases.get(), nullptr);
-    if (!state->type_MidiSynthesizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiSynthesizer, &type_spec_MidiSynthesizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiSynthesizer, &type_spec_MidiSynthesizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiSystemExclusiveMessage = py::register_python_type(module.get(), type_name_MidiSystemExclusiveMessage, &type_spec_MidiSystemExclusiveMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiSystemExclusiveMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiSystemExclusiveMessage, &type_spec_MidiSystemExclusiveMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiSystemExclusiveMessage, &type_spec_MidiSystemExclusiveMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiSystemResetMessage = py::register_python_type(module.get(), type_name_MidiSystemResetMessage, &type_spec_MidiSystemResetMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiSystemResetMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiSystemResetMessage, &type_spec_MidiSystemResetMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiSystemResetMessage, &type_spec_MidiSystemResetMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiTimeCodeMessage = py::register_python_type(module.get(), type_name_MidiTimeCodeMessage, &type_spec_MidiTimeCodeMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiTimeCodeMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiTimeCodeMessage, &type_spec_MidiTimeCodeMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiTimeCodeMessage, &type_spec_MidiTimeCodeMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiTimingClockMessage = py::register_python_type(module.get(), type_name_MidiTimingClockMessage, &type_spec_MidiTimingClockMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiTimingClockMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiTimingClockMessage, &type_spec_MidiTimingClockMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiTimingClockMessage, &type_spec_MidiTimingClockMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MidiTuneRequestMessage = py::register_python_type(module.get(), type_name_MidiTuneRequestMessage, &type_spec_MidiTuneRequestMessage, object_bases.get(), nullptr);
-    if (!state->type_MidiTuneRequestMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MidiTuneRequestMessage, &type_spec_MidiTuneRequestMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MidiTuneRequestMessage, &type_spec_MidiTuneRequestMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMidiMessage = py::register_python_type(module.get(), type_name_IMidiMessage, &type_spec_IMidiMessage, object_bases.get(), nullptr);
-    if (!state->type_IMidiMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMidiMessage, &type_spec_IMidiMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMidiMessage, &type_spec_IMidiMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMidiOutPort = py::register_python_type(module.get(), type_name_IMidiOutPort, &type_spec_IMidiOutPort, object_bases.get(), nullptr);
-    if (!state->type_IMidiOutPort)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMidiOutPort, &type_spec_IMidiOutPort, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMidiOutPort, &type_spec_IMidiOutPort, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiActiveSensingMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiActiveSensingMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiChannelPressureMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiChannelPressureMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiContinueMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiContinueMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiContinueMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiControlChangeMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiControlChangeMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiControlChangeMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiInPort>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiInPort;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiInPort is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiMessageReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiNoteOffMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiNoteOffMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiNoteOffMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiNoteOnMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiNoteOnMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiNoteOnMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiOutPort>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiOutPort;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiOutPort is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiPitchBendChangeMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiPolyphonicKeyPressureMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiProgramChangeMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiProgramChangeMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiSongPositionPointerMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiSongSelectMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiSongSelectMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiSongSelectMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiStartMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiStartMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiStartMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiStopMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiStopMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiStopMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiSynthesizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiSynthesizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiSynthesizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiSystemExclusiveMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiSystemResetMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiSystemResetMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiSystemResetMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiTimeCodeMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiTimeCodeMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiTimingClockMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiTimingClockMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiTimingClockMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MidiTuneRequestMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::MidiTuneRequestMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::IMidiMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMidiMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::IMidiMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Midi::IMidiOutPort>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Midi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Midi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMidiOutPort;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Midi::IMidiOutPort is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

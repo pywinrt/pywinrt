@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 {
-    struct module_state
-    {
-        PyTypeObject* type_QuickLink;
-        PyTypeObject* type_ShareOperation;
-    };
-
     // ----- QuickLink class --------------------
     static constexpr const char* const type_name_QuickLink = "QuickLink";
 
@@ -673,46 +667,15 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::ShareTarget");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_QuickLink);
-        Py_VISIT(state->type_ShareOperation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_QuickLink);
-        Py_CLEAR(state->type_ShareOperation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_DataTransfer_ShareTarget",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
@@ -728,7 +691,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_ShareTarget(v
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -741,67 +704,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_ShareTarget(v
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_QuickLink = py::register_python_type(module.get(), type_name_QuickLink, &type_spec_QuickLink, object_bases.get(), nullptr);
-    if (!state->type_QuickLink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuickLink, &type_spec_QuickLink, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuickLink, &type_spec_QuickLink, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareOperation = py::register_python_type(module.get(), type_name_ShareOperation, &type_spec_ShareOperation, object_bases.get(), nullptr);
-    if (!state->type_ShareOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareOperation, &type_spec_ShareOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareOperation, &type_spec_ShareOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::ShareTarget");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuickLink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::ShareTarget");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

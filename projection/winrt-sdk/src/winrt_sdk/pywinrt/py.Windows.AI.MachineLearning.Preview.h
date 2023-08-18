@@ -87,68 +87,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "ImageVariableDescriptorPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "InferencingOptionsPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelBindingPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelDescriptionPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelEvaluationResultPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "LearningModelVariableDescriptorPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "MapVariableDescriptorPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "SequenceVariableDescriptorPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "TensorVariableDescriptorPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>
+    struct py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
+        static constexpr const char* type_name = "ILearningModelVariableDescriptorPreview";
     };
 }

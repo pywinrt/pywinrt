@@ -26,36 +26,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
 namespace py::cpp::Windows::Foundation
 {
-    struct module_state
-    {
-        PyTypeObject* type_Deferral;
-        PyTypeObject* type_GuidHelper;
-        PyTypeObject* type_MemoryBuffer;
-        PyTypeObject* type_PropertyValue;
-        PyTypeObject* type_Uri;
-        PyTypeObject* type_WwwFormUrlDecoder;
-        PyTypeObject* type_WwwFormUrlDecoderEntry;
-        PyTypeObject* type_IAsyncAction;
-        PyTypeObject* type_IAsyncActionWithProgress;
-        PyTypeObject* type_IAsyncInfo;
-        PyTypeObject* type_IAsyncOperationWithProgress;
-        PyTypeObject* type_IAsyncOperation;
-        PyTypeObject* type_IClosable;
-        PyTypeObject* type_IGetActivationFactory;
-        PyTypeObject* type_IMemoryBuffer;
-        PyTypeObject* type_IMemoryBufferReference;
-        PyTypeObject* type_IPropertyValue;
-        PyTypeObject* type_IReferenceArray;
-        PyTypeObject* type_IReference;
-        PyTypeObject* type_IStringable;
-        PyTypeObject* type_IWwwFormUrlDecoderEntry;
-        PyTypeObject* type_EventRegistrationToken;
-        PyTypeObject* type_HResult;
-        PyTypeObject* type_Point;
-        PyTypeObject* type_Rect;
-        PyTypeObject* type_Size;
-    };
-
     // ----- Deferral class --------------------
     static constexpr const char* const type_name_Deferral = "Deferral";
 
@@ -7456,94 +7426,15 @@ namespace py::cpp::Windows::Foundation
     PyDoc_STRVAR(module_doc, "Windows::Foundation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Deferral);
-        Py_VISIT(state->type_GuidHelper);
-        Py_VISIT(state->type_MemoryBuffer);
-        Py_VISIT(state->type_PropertyValue);
-        Py_VISIT(state->type_Uri);
-        Py_VISIT(state->type_WwwFormUrlDecoder);
-        Py_VISIT(state->type_WwwFormUrlDecoderEntry);
-        Py_VISIT(state->type_IAsyncAction);
-        Py_VISIT(state->type_IAsyncActionWithProgress);
-        Py_VISIT(state->type_IAsyncInfo);
-        Py_VISIT(state->type_IAsyncOperationWithProgress);
-        Py_VISIT(state->type_IAsyncOperation);
-        Py_VISIT(state->type_IClosable);
-        Py_VISIT(state->type_IGetActivationFactory);
-        Py_VISIT(state->type_IMemoryBuffer);
-        Py_VISIT(state->type_IMemoryBufferReference);
-        Py_VISIT(state->type_IPropertyValue);
-        Py_VISIT(state->type_IReferenceArray);
-        Py_VISIT(state->type_IReference);
-        Py_VISIT(state->type_IStringable);
-        Py_VISIT(state->type_IWwwFormUrlDecoderEntry);
-        Py_VISIT(state->type_EventRegistrationToken);
-        Py_VISIT(state->type_HResult);
-        Py_VISIT(state->type_Point);
-        Py_VISIT(state->type_Rect);
-        Py_VISIT(state->type_Size);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Deferral);
-        Py_CLEAR(state->type_GuidHelper);
-        Py_CLEAR(state->type_MemoryBuffer);
-        Py_CLEAR(state->type_PropertyValue);
-        Py_CLEAR(state->type_Uri);
-        Py_CLEAR(state->type_WwwFormUrlDecoder);
-        Py_CLEAR(state->type_WwwFormUrlDecoderEntry);
-        Py_CLEAR(state->type_IAsyncAction);
-        Py_CLEAR(state->type_IAsyncActionWithProgress);
-        Py_CLEAR(state->type_IAsyncInfo);
-        Py_CLEAR(state->type_IAsyncOperationWithProgress);
-        Py_CLEAR(state->type_IAsyncOperation);
-        Py_CLEAR(state->type_IClosable);
-        Py_CLEAR(state->type_IGetActivationFactory);
-        Py_CLEAR(state->type_IMemoryBuffer);
-        Py_CLEAR(state->type_IMemoryBufferReference);
-        Py_CLEAR(state->type_IPropertyValue);
-        Py_CLEAR(state->type_IReferenceArray);
-        Py_CLEAR(state->type_IReference);
-        Py_CLEAR(state->type_IStringable);
-        Py_CLEAR(state->type_IWwwFormUrlDecoderEntry);
-        Py_CLEAR(state->type_EventRegistrationToken);
-        Py_CLEAR(state->type_HResult);
-        Py_CLEAR(state->type_Point);
-        Py_CLEAR(state->type_Rect);
-        Py_CLEAR(state->type_Size);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Foundation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Foundation
@@ -7559,7 +7450,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7572,11 +7463,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Deferral = py::register_python_type(module.get(), type_name_Deferral, &type_spec_Deferral, object_bases.get(), nullptr);
-    if (!state->type_Deferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Deferral, &type_spec_Deferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Deferral, &type_spec_Deferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7587,758 +7478,231 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation(void) noexcept
         return nullptr;
     }
 
-    state->type_GuidHelper = py::register_python_type(module.get(), type_name_GuidHelper, &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get()));
-    if (!state->type_GuidHelper)
-    {
-        return nullptr;
-    }
-
-    state->type_MemoryBuffer = py::register_python_type(module.get(), type_name_MemoryBuffer, &type_spec_MemoryBuffer, object_bases.get(), nullptr);
-    if (!state->type_MemoryBuffer)
-    {
-        return nullptr;
-    }
-
-    state->type_PropertyValue = py::register_python_type(module.get(), type_name_PropertyValue, &type_spec_PropertyValue, object_bases.get(), nullptr);
-    if (!state->type_PropertyValue)
-    {
-        return nullptr;
-    }
-
-    state->type_Uri = py::register_python_type(module.get(), type_name_Uri, &type_spec_Uri, object_bases.get(), nullptr);
-    if (!state->type_Uri)
-    {
-        return nullptr;
-    }
-
-    state->type_WwwFormUrlDecoder = py::register_python_type(module.get(), type_name_WwwFormUrlDecoder, &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr);
-    if (!state->type_WwwFormUrlDecoder)
-    {
-        return nullptr;
-    }
-
-    state->type_WwwFormUrlDecoderEntry = py::register_python_type(module.get(), type_name_WwwFormUrlDecoderEntry, &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr);
-    if (!state->type_WwwFormUrlDecoderEntry)
-    {
-        return nullptr;
-    }
-
-    state->type_IAsyncAction = py::register_python_type(module.get(), type_name_IAsyncAction, &type_spec_IAsyncAction, object_bases.get(), nullptr);
-    if (!state->type_IAsyncAction)
-    {
-        return nullptr;
-    }
-
-    state->type_IAsyncActionWithProgress = py::register_python_type(module.get(), type_name_IAsyncActionWithProgress, &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr);
-    if (!state->type_IAsyncActionWithProgress)
-    {
-        return nullptr;
-    }
-
-    state->type_IAsyncInfo = py::register_python_type(module.get(), type_name_IAsyncInfo, &type_spec_IAsyncInfo, object_bases.get(), nullptr);
-    if (!state->type_IAsyncInfo)
-    {
-        return nullptr;
-    }
-
-    state->type_IAsyncOperationWithProgress = py::register_python_type(module.get(), type_name_IAsyncOperationWithProgress, &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr);
-    if (!state->type_IAsyncOperationWithProgress)
-    {
-        return nullptr;
-    }
-
-    state->type_IAsyncOperation = py::register_python_type(module.get(), type_name_IAsyncOperation, &type_spec_IAsyncOperation, object_bases.get(), nullptr);
-    if (!state->type_IAsyncOperation)
-    {
-        return nullptr;
-    }
-
-    state->type_IClosable = py::register_python_type(module.get(), type_name_IClosable, &type_spec_IClosable, object_bases.get(), nullptr);
-    if (!state->type_IClosable)
-    {
-        return nullptr;
-    }
-
-    state->type_IGetActivationFactory = py::register_python_type(module.get(), type_name_IGetActivationFactory, &type_spec_IGetActivationFactory, object_bases.get(), nullptr);
-    if (!state->type_IGetActivationFactory)
-    {
-        return nullptr;
-    }
-
-    state->type_IMemoryBuffer = py::register_python_type(module.get(), type_name_IMemoryBuffer, &type_spec_IMemoryBuffer, object_bases.get(), nullptr);
-    if (!state->type_IMemoryBuffer)
-    {
-        return nullptr;
-    }
-
-    state->type_IMemoryBufferReference = py::register_python_type(module.get(), type_name_IMemoryBufferReference, &type_spec_IMemoryBufferReference, object_bases.get(), nullptr);
-    if (!state->type_IMemoryBufferReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidHelper, &type_spec_GuidHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidHelper, &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    state->type_IMemoryBufferReference->tp_as_buffer = &_PyBufferProcs_IMemoryBufferReference;
+    if (py::register_python_type(module.get(), type_name_MemoryBuffer, &type_spec_MemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MemoryBuffer, &type_spec_MemoryBuffer, object_bases.get(), nullptr) == -1)
     #endif
-
-    state->type_IPropertyValue = py::register_python_type(module.get(), type_name_IPropertyValue, &type_spec_IPropertyValue, object_bases.get(), nullptr);
-    if (!state->type_IPropertyValue)
     {
         return nullptr;
     }
 
-    state->type_IReferenceArray = py::register_python_type(module.get(), type_name_IReferenceArray, &type_spec_IReferenceArray, object_bases.get(), nullptr);
-    if (!state->type_IReferenceArray)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PropertyValue, &type_spec_PropertyValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PropertyValue, &type_spec_PropertyValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IReference = py::register_python_type(module.get(), type_name_IReference, &type_spec_IReference, object_bases.get(), nullptr);
-    if (!state->type_IReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Uri, &type_spec_Uri, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Uri, &type_spec_Uri, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStringable = py::register_python_type(module.get(), type_name_IStringable, &type_spec_IStringable, object_bases.get(), nullptr);
-    if (!state->type_IStringable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoder, &type_spec_WwwFormUrlDecoder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoder, &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWwwFormUrlDecoderEntry = py::register_python_type(module.get(), type_name_IWwwFormUrlDecoderEntry, &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr);
-    if (!state->type_IWwwFormUrlDecoderEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoderEntry, &type_spec_WwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoderEntry, &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EventRegistrationToken = py::register_python_type(module.get(), type_name_EventRegistrationToken, &type_spec_EventRegistrationToken, nullptr, nullptr);
-    if (!state->type_EventRegistrationToken)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAsyncAction, &type_spec_IAsyncAction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAsyncAction, &type_spec_IAsyncAction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HResult = py::register_python_type(module.get(), type_name_HResult, &type_spec_HResult, nullptr, nullptr);
-    if (!state->type_HResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAsyncActionWithProgress, &type_spec_IAsyncActionWithProgress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAsyncActionWithProgress, &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Point = py::register_python_type(module.get(), type_name_Point, &type_spec_Point, nullptr, nullptr);
-    if (!state->type_Point)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAsyncInfo, &type_spec_IAsyncInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAsyncInfo, &type_spec_IAsyncInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Rect = py::register_python_type(module.get(), type_name_Rect, &type_spec_Rect, nullptr, nullptr);
-    if (!state->type_Rect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAsyncOperationWithProgress, &type_spec_IAsyncOperationWithProgress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAsyncOperationWithProgress, &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Size = py::register_python_type(module.get(), type_name_Size, &type_spec_Size, nullptr, nullptr);
-    if (!state->type_Size)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAsyncOperation, &type_spec_IAsyncOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAsyncOperation, &type_spec_IAsyncOperation, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IClosable, &type_spec_IClosable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IClosable, &type_spec_IClosable, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGetActivationFactory, &type_spec_IGetActivationFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGetActivationFactory, &type_spec_IGetActivationFactory, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMemoryBuffer, &type_spec_IMemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMemoryBuffer, &type_spec_IMemoryBuffer, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMemoryBufferReference, &type_spec_IMemoryBufferReference, &_PyBufferProcs_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMemoryBufferReference, &type_spec_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPropertyValue, &type_spec_IPropertyValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPropertyValue, &type_spec_IPropertyValue, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IReferenceArray, &type_spec_IReferenceArray, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IReferenceArray, &type_spec_IReferenceArray, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IReference, &type_spec_IReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IReference, &type_spec_IReference, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStringable, &type_spec_IStringable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStringable, &type_spec_IStringable, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWwwFormUrlDecoderEntry, &type_spec_IWwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWwwFormUrlDecoderEntry, &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EventRegistrationToken, &type_spec_EventRegistrationToken, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EventRegistrationToken, &type_spec_EventRegistrationToken, nullptr, nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HResult, &type_spec_HResult, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HResult, &type_spec_HResult, nullptr, nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Point, &type_spec_Point, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Point, &type_spec_Point, nullptr, nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Rect, &type_spec_Rect, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Rect, &type_spec_Rect, nullptr, nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Size, &type_spec_Size, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Size, &type_spec_Size, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Deferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Deferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Deferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::GuidHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::GuidHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::MemoryBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MemoryBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::MemoryBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::PropertyValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::PropertyValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Uri>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Uri;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Uri is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::WwwFormUrlDecoder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WwwFormUrlDecoder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::WwwFormUrlDecoder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::WwwFormUrlDecoderEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WwwFormUrlDecoderEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::WwwFormUrlDecoderEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IAsyncAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAsyncAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IAsyncAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAsyncActionWithProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::IAsyncActionWithProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IAsyncInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAsyncInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IAsyncInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAsyncOperationWithProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::IAsyncOperationWithProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::IAsyncOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAsyncOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::IAsyncOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IClosable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IClosable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IClosable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IGetActivationFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGetActivationFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IGetActivationFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IMemoryBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMemoryBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IMemoryBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IMemoryBufferReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMemoryBufferReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IMemoryBufferReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IPropertyValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPropertyValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IPropertyValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::IReferenceArray>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IReferenceArray;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::IReferenceArray is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::IReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::IReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IStringable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStringable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IStringable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWwwFormUrlDecoderEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::IWwwFormUrlDecoderEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::event_token>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EventRegistrationToken;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::event_token is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::hresult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::hresult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Point>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Point;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Point is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Rect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Rect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Rect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Size>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Size;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Size is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

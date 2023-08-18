@@ -6,76 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Sensors
 {
-    struct module_state
-    {
-        PyTypeObject* type_Accelerometer;
-        PyTypeObject* type_AccelerometerDataThreshold;
-        PyTypeObject* type_AccelerometerReading;
-        PyTypeObject* type_AccelerometerReadingChangedEventArgs;
-        PyTypeObject* type_AccelerometerShakenEventArgs;
-        PyTypeObject* type_ActivitySensor;
-        PyTypeObject* type_ActivitySensorReading;
-        PyTypeObject* type_ActivitySensorReadingChangeReport;
-        PyTypeObject* type_ActivitySensorReadingChangedEventArgs;
-        PyTypeObject* type_ActivitySensorTriggerDetails;
-        PyTypeObject* type_AdaptiveDimmingOptions;
-        PyTypeObject* type_Altimeter;
-        PyTypeObject* type_AltimeterReading;
-        PyTypeObject* type_AltimeterReadingChangedEventArgs;
-        PyTypeObject* type_Barometer;
-        PyTypeObject* type_BarometerDataThreshold;
-        PyTypeObject* type_BarometerReading;
-        PyTypeObject* type_BarometerReadingChangedEventArgs;
-        PyTypeObject* type_Compass;
-        PyTypeObject* type_CompassDataThreshold;
-        PyTypeObject* type_CompassReading;
-        PyTypeObject* type_CompassReadingChangedEventArgs;
-        PyTypeObject* type_Gyrometer;
-        PyTypeObject* type_GyrometerDataThreshold;
-        PyTypeObject* type_GyrometerReading;
-        PyTypeObject* type_GyrometerReadingChangedEventArgs;
-        PyTypeObject* type_HingeAngleReading;
-        PyTypeObject* type_HingeAngleSensor;
-        PyTypeObject* type_HingeAngleSensorReadingChangedEventArgs;
-        PyTypeObject* type_HumanPresenceFeatures;
-        PyTypeObject* type_HumanPresenceSensor;
-        PyTypeObject* type_HumanPresenceSensorReading;
-        PyTypeObject* type_HumanPresenceSensorReadingChangedEventArgs;
-        PyTypeObject* type_HumanPresenceSettings;
-        PyTypeObject* type_Inclinometer;
-        PyTypeObject* type_InclinometerDataThreshold;
-        PyTypeObject* type_InclinometerReading;
-        PyTypeObject* type_InclinometerReadingChangedEventArgs;
-        PyTypeObject* type_LightSensor;
-        PyTypeObject* type_LightSensorDataThreshold;
-        PyTypeObject* type_LightSensorReading;
-        PyTypeObject* type_LightSensorReadingChangedEventArgs;
-        PyTypeObject* type_LockOnLeaveOptions;
-        PyTypeObject* type_Magnetometer;
-        PyTypeObject* type_MagnetometerDataThreshold;
-        PyTypeObject* type_MagnetometerReading;
-        PyTypeObject* type_MagnetometerReadingChangedEventArgs;
-        PyTypeObject* type_OrientationSensor;
-        PyTypeObject* type_OrientationSensorReading;
-        PyTypeObject* type_OrientationSensorReadingChangedEventArgs;
-        PyTypeObject* type_Pedometer;
-        PyTypeObject* type_PedometerDataThreshold;
-        PyTypeObject* type_PedometerReading;
-        PyTypeObject* type_PedometerReadingChangedEventArgs;
-        PyTypeObject* type_ProximitySensor;
-        PyTypeObject* type_ProximitySensorDataThreshold;
-        PyTypeObject* type_ProximitySensorDisplayOnOffController;
-        PyTypeObject* type_ProximitySensorReading;
-        PyTypeObject* type_ProximitySensorReadingChangedEventArgs;
-        PyTypeObject* type_SensorDataThresholdTriggerDetails;
-        PyTypeObject* type_SensorQuaternion;
-        PyTypeObject* type_SensorRotationMatrix;
-        PyTypeObject* type_SimpleOrientationSensor;
-        PyTypeObject* type_SimpleOrientationSensorOrientationChangedEventArgs;
-        PyTypeObject* type_WakeOnApproachOptions;
-        PyTypeObject* type_ISensorDataThreshold;
-    };
-
     // ----- Accelerometer class --------------------
     static constexpr const char* const type_name_Accelerometer = "Accelerometer";
 
@@ -14289,174 +14219,15 @@ namespace py::cpp::Windows::Devices::Sensors
     PyDoc_STRVAR(module_doc, "Windows::Devices::Sensors");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Accelerometer);
-        Py_VISIT(state->type_AccelerometerDataThreshold);
-        Py_VISIT(state->type_AccelerometerReading);
-        Py_VISIT(state->type_AccelerometerReadingChangedEventArgs);
-        Py_VISIT(state->type_AccelerometerShakenEventArgs);
-        Py_VISIT(state->type_ActivitySensor);
-        Py_VISIT(state->type_ActivitySensorReading);
-        Py_VISIT(state->type_ActivitySensorReadingChangeReport);
-        Py_VISIT(state->type_ActivitySensorReadingChangedEventArgs);
-        Py_VISIT(state->type_ActivitySensorTriggerDetails);
-        Py_VISIT(state->type_AdaptiveDimmingOptions);
-        Py_VISIT(state->type_Altimeter);
-        Py_VISIT(state->type_AltimeterReading);
-        Py_VISIT(state->type_AltimeterReadingChangedEventArgs);
-        Py_VISIT(state->type_Barometer);
-        Py_VISIT(state->type_BarometerDataThreshold);
-        Py_VISIT(state->type_BarometerReading);
-        Py_VISIT(state->type_BarometerReadingChangedEventArgs);
-        Py_VISIT(state->type_Compass);
-        Py_VISIT(state->type_CompassDataThreshold);
-        Py_VISIT(state->type_CompassReading);
-        Py_VISIT(state->type_CompassReadingChangedEventArgs);
-        Py_VISIT(state->type_Gyrometer);
-        Py_VISIT(state->type_GyrometerDataThreshold);
-        Py_VISIT(state->type_GyrometerReading);
-        Py_VISIT(state->type_GyrometerReadingChangedEventArgs);
-        Py_VISIT(state->type_HingeAngleReading);
-        Py_VISIT(state->type_HingeAngleSensor);
-        Py_VISIT(state->type_HingeAngleSensorReadingChangedEventArgs);
-        Py_VISIT(state->type_HumanPresenceFeatures);
-        Py_VISIT(state->type_HumanPresenceSensor);
-        Py_VISIT(state->type_HumanPresenceSensorReading);
-        Py_VISIT(state->type_HumanPresenceSensorReadingChangedEventArgs);
-        Py_VISIT(state->type_HumanPresenceSettings);
-        Py_VISIT(state->type_Inclinometer);
-        Py_VISIT(state->type_InclinometerDataThreshold);
-        Py_VISIT(state->type_InclinometerReading);
-        Py_VISIT(state->type_InclinometerReadingChangedEventArgs);
-        Py_VISIT(state->type_LightSensor);
-        Py_VISIT(state->type_LightSensorDataThreshold);
-        Py_VISIT(state->type_LightSensorReading);
-        Py_VISIT(state->type_LightSensorReadingChangedEventArgs);
-        Py_VISIT(state->type_LockOnLeaveOptions);
-        Py_VISIT(state->type_Magnetometer);
-        Py_VISIT(state->type_MagnetometerDataThreshold);
-        Py_VISIT(state->type_MagnetometerReading);
-        Py_VISIT(state->type_MagnetometerReadingChangedEventArgs);
-        Py_VISIT(state->type_OrientationSensor);
-        Py_VISIT(state->type_OrientationSensorReading);
-        Py_VISIT(state->type_OrientationSensorReadingChangedEventArgs);
-        Py_VISIT(state->type_Pedometer);
-        Py_VISIT(state->type_PedometerDataThreshold);
-        Py_VISIT(state->type_PedometerReading);
-        Py_VISIT(state->type_PedometerReadingChangedEventArgs);
-        Py_VISIT(state->type_ProximitySensor);
-        Py_VISIT(state->type_ProximitySensorDataThreshold);
-        Py_VISIT(state->type_ProximitySensorDisplayOnOffController);
-        Py_VISIT(state->type_ProximitySensorReading);
-        Py_VISIT(state->type_ProximitySensorReadingChangedEventArgs);
-        Py_VISIT(state->type_SensorDataThresholdTriggerDetails);
-        Py_VISIT(state->type_SensorQuaternion);
-        Py_VISIT(state->type_SensorRotationMatrix);
-        Py_VISIT(state->type_SimpleOrientationSensor);
-        Py_VISIT(state->type_SimpleOrientationSensorOrientationChangedEventArgs);
-        Py_VISIT(state->type_WakeOnApproachOptions);
-        Py_VISIT(state->type_ISensorDataThreshold);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Accelerometer);
-        Py_CLEAR(state->type_AccelerometerDataThreshold);
-        Py_CLEAR(state->type_AccelerometerReading);
-        Py_CLEAR(state->type_AccelerometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_AccelerometerShakenEventArgs);
-        Py_CLEAR(state->type_ActivitySensor);
-        Py_CLEAR(state->type_ActivitySensorReading);
-        Py_CLEAR(state->type_ActivitySensorReadingChangeReport);
-        Py_CLEAR(state->type_ActivitySensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_ActivitySensorTriggerDetails);
-        Py_CLEAR(state->type_AdaptiveDimmingOptions);
-        Py_CLEAR(state->type_Altimeter);
-        Py_CLEAR(state->type_AltimeterReading);
-        Py_CLEAR(state->type_AltimeterReadingChangedEventArgs);
-        Py_CLEAR(state->type_Barometer);
-        Py_CLEAR(state->type_BarometerDataThreshold);
-        Py_CLEAR(state->type_BarometerReading);
-        Py_CLEAR(state->type_BarometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_Compass);
-        Py_CLEAR(state->type_CompassDataThreshold);
-        Py_CLEAR(state->type_CompassReading);
-        Py_CLEAR(state->type_CompassReadingChangedEventArgs);
-        Py_CLEAR(state->type_Gyrometer);
-        Py_CLEAR(state->type_GyrometerDataThreshold);
-        Py_CLEAR(state->type_GyrometerReading);
-        Py_CLEAR(state->type_GyrometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_HingeAngleReading);
-        Py_CLEAR(state->type_HingeAngleSensor);
-        Py_CLEAR(state->type_HingeAngleSensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_HumanPresenceFeatures);
-        Py_CLEAR(state->type_HumanPresenceSensor);
-        Py_CLEAR(state->type_HumanPresenceSensorReading);
-        Py_CLEAR(state->type_HumanPresenceSensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_HumanPresenceSettings);
-        Py_CLEAR(state->type_Inclinometer);
-        Py_CLEAR(state->type_InclinometerDataThreshold);
-        Py_CLEAR(state->type_InclinometerReading);
-        Py_CLEAR(state->type_InclinometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_LightSensor);
-        Py_CLEAR(state->type_LightSensorDataThreshold);
-        Py_CLEAR(state->type_LightSensorReading);
-        Py_CLEAR(state->type_LightSensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_LockOnLeaveOptions);
-        Py_CLEAR(state->type_Magnetometer);
-        Py_CLEAR(state->type_MagnetometerDataThreshold);
-        Py_CLEAR(state->type_MagnetometerReading);
-        Py_CLEAR(state->type_MagnetometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_OrientationSensor);
-        Py_CLEAR(state->type_OrientationSensorReading);
-        Py_CLEAR(state->type_OrientationSensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_Pedometer);
-        Py_CLEAR(state->type_PedometerDataThreshold);
-        Py_CLEAR(state->type_PedometerReading);
-        Py_CLEAR(state->type_PedometerReadingChangedEventArgs);
-        Py_CLEAR(state->type_ProximitySensor);
-        Py_CLEAR(state->type_ProximitySensorDataThreshold);
-        Py_CLEAR(state->type_ProximitySensorDisplayOnOffController);
-        Py_CLEAR(state->type_ProximitySensorReading);
-        Py_CLEAR(state->type_ProximitySensorReadingChangedEventArgs);
-        Py_CLEAR(state->type_SensorDataThresholdTriggerDetails);
-        Py_CLEAR(state->type_SensorQuaternion);
-        Py_CLEAR(state->type_SensorRotationMatrix);
-        Py_CLEAR(state->type_SimpleOrientationSensor);
-        Py_CLEAR(state->type_SimpleOrientationSensorOrientationChangedEventArgs);
-        Py_CLEAR(state->type_WakeOnApproachOptions);
-        Py_CLEAR(state->type_ISensorDataThreshold);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Sensors",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Sensors
@@ -14472,7 +14243,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -14485,1923 +14256,600 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Accelerometer = py::register_python_type(module.get(), type_name_Accelerometer, &type_spec_Accelerometer, object_bases.get(), nullptr);
-    if (!state->type_Accelerometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Accelerometer, &type_spec_Accelerometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Accelerometer, &type_spec_Accelerometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccelerometerDataThreshold = py::register_python_type(module.get(), type_name_AccelerometerDataThreshold, &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_AccelerometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccelerometerDataThreshold, &type_spec_AccelerometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccelerometerDataThreshold, &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccelerometerReading = py::register_python_type(module.get(), type_name_AccelerometerReading, &type_spec_AccelerometerReading, object_bases.get(), nullptr);
-    if (!state->type_AccelerometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccelerometerReading, &type_spec_AccelerometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccelerometerReading, &type_spec_AccelerometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccelerometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_AccelerometerReadingChangedEventArgs, &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccelerometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccelerometerReadingChangedEventArgs, &type_spec_AccelerometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccelerometerReadingChangedEventArgs, &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccelerometerShakenEventArgs = py::register_python_type(module.get(), type_name_AccelerometerShakenEventArgs, &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccelerometerShakenEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccelerometerShakenEventArgs, &type_spec_AccelerometerShakenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccelerometerShakenEventArgs, &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivitySensor = py::register_python_type(module.get(), type_name_ActivitySensor, &type_spec_ActivitySensor, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensor, &type_spec_ActivitySensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensor, &type_spec_ActivitySensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivitySensorReading = py::register_python_type(module.get(), type_name_ActivitySensorReading, &type_spec_ActivitySensorReading, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReading, &type_spec_ActivitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReading, &type_spec_ActivitySensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivitySensorReadingChangeReport = py::register_python_type(module.get(), type_name_ActivitySensorReadingChangeReport, &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensorReadingChangeReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangeReport, &type_spec_ActivitySensorReadingChangeReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangeReport, &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivitySensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_ActivitySensorReadingChangedEventArgs, &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangedEventArgs, &type_spec_ActivitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangedEventArgs, &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivitySensorTriggerDetails = py::register_python_type(module.get(), type_name_ActivitySensorTriggerDetails, &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensorTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensorTriggerDetails, &type_spec_ActivitySensorTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensorTriggerDetails, &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveDimmingOptions = py::register_python_type(module.get(), type_name_AdaptiveDimmingOptions, &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveDimmingOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveDimmingOptions, &type_spec_AdaptiveDimmingOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveDimmingOptions, &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Altimeter = py::register_python_type(module.get(), type_name_Altimeter, &type_spec_Altimeter, object_bases.get(), nullptr);
-    if (!state->type_Altimeter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Altimeter, &type_spec_Altimeter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Altimeter, &type_spec_Altimeter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AltimeterReading = py::register_python_type(module.get(), type_name_AltimeterReading, &type_spec_AltimeterReading, object_bases.get(), nullptr);
-    if (!state->type_AltimeterReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AltimeterReading, &type_spec_AltimeterReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AltimeterReading, &type_spec_AltimeterReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AltimeterReadingChangedEventArgs = py::register_python_type(module.get(), type_name_AltimeterReadingChangedEventArgs, &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AltimeterReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AltimeterReadingChangedEventArgs, &type_spec_AltimeterReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AltimeterReadingChangedEventArgs, &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Barometer = py::register_python_type(module.get(), type_name_Barometer, &type_spec_Barometer, object_bases.get(), nullptr);
-    if (!state->type_Barometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Barometer, &type_spec_Barometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Barometer, &type_spec_Barometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarometerDataThreshold = py::register_python_type(module.get(), type_name_BarometerDataThreshold, &type_spec_BarometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_BarometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarometerDataThreshold, &type_spec_BarometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarometerDataThreshold, &type_spec_BarometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarometerReading = py::register_python_type(module.get(), type_name_BarometerReading, &type_spec_BarometerReading, object_bases.get(), nullptr);
-    if (!state->type_BarometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarometerReading, &type_spec_BarometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarometerReading, &type_spec_BarometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_BarometerReadingChangedEventArgs, &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarometerReadingChangedEventArgs, &type_spec_BarometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarometerReadingChangedEventArgs, &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Compass = py::register_python_type(module.get(), type_name_Compass, &type_spec_Compass, object_bases.get(), nullptr);
-    if (!state->type_Compass)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Compass, &type_spec_Compass, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Compass, &type_spec_Compass, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompassDataThreshold = py::register_python_type(module.get(), type_name_CompassDataThreshold, &type_spec_CompassDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_CompassDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompassDataThreshold, &type_spec_CompassDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompassDataThreshold, &type_spec_CompassDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompassReading = py::register_python_type(module.get(), type_name_CompassReading, &type_spec_CompassReading, object_bases.get(), nullptr);
-    if (!state->type_CompassReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompassReading, &type_spec_CompassReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompassReading, &type_spec_CompassReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompassReadingChangedEventArgs = py::register_python_type(module.get(), type_name_CompassReadingChangedEventArgs, &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CompassReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompassReadingChangedEventArgs, &type_spec_CompassReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompassReadingChangedEventArgs, &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Gyrometer = py::register_python_type(module.get(), type_name_Gyrometer, &type_spec_Gyrometer, object_bases.get(), nullptr);
-    if (!state->type_Gyrometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Gyrometer, &type_spec_Gyrometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Gyrometer, &type_spec_Gyrometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GyrometerDataThreshold = py::register_python_type(module.get(), type_name_GyrometerDataThreshold, &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_GyrometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GyrometerDataThreshold, &type_spec_GyrometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GyrometerDataThreshold, &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GyrometerReading = py::register_python_type(module.get(), type_name_GyrometerReading, &type_spec_GyrometerReading, object_bases.get(), nullptr);
-    if (!state->type_GyrometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GyrometerReading, &type_spec_GyrometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GyrometerReading, &type_spec_GyrometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GyrometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_GyrometerReadingChangedEventArgs, &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GyrometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GyrometerReadingChangedEventArgs, &type_spec_GyrometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GyrometerReadingChangedEventArgs, &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HingeAngleReading = py::register_python_type(module.get(), type_name_HingeAngleReading, &type_spec_HingeAngleReading, object_bases.get(), nullptr);
-    if (!state->type_HingeAngleReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HingeAngleReading, &type_spec_HingeAngleReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HingeAngleReading, &type_spec_HingeAngleReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HingeAngleSensor = py::register_python_type(module.get(), type_name_HingeAngleSensor, &type_spec_HingeAngleSensor, object_bases.get(), nullptr);
-    if (!state->type_HingeAngleSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HingeAngleSensor, &type_spec_HingeAngleSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HingeAngleSensor, &type_spec_HingeAngleSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HingeAngleSensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_HingeAngleSensorReadingChangedEventArgs, &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HingeAngleSensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HingeAngleSensorReadingChangedEventArgs, &type_spec_HingeAngleSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HingeAngleSensorReadingChangedEventArgs, &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HumanPresenceFeatures = py::register_python_type(module.get(), type_name_HumanPresenceFeatures, &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr);
-    if (!state->type_HumanPresenceFeatures)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HumanPresenceFeatures, &type_spec_HumanPresenceFeatures, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HumanPresenceFeatures, &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HumanPresenceSensor = py::register_python_type(module.get(), type_name_HumanPresenceSensor, &type_spec_HumanPresenceSensor, object_bases.get(), nullptr);
-    if (!state->type_HumanPresenceSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensor, &type_spec_HumanPresenceSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensor, &type_spec_HumanPresenceSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HumanPresenceSensorReading = py::register_python_type(module.get(), type_name_HumanPresenceSensorReading, &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr);
-    if (!state->type_HumanPresenceSensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReading, &type_spec_HumanPresenceSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReading, &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HumanPresenceSensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_HumanPresenceSensorReadingChangedEventArgs, &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HumanPresenceSensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReadingChangedEventArgs, &type_spec_HumanPresenceSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReadingChangedEventArgs, &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HumanPresenceSettings = py::register_python_type(module.get(), type_name_HumanPresenceSettings, &type_spec_HumanPresenceSettings, object_bases.get(), nullptr);
-    if (!state->type_HumanPresenceSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSettings, &type_spec_HumanPresenceSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HumanPresenceSettings, &type_spec_HumanPresenceSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Inclinometer = py::register_python_type(module.get(), type_name_Inclinometer, &type_spec_Inclinometer, object_bases.get(), nullptr);
-    if (!state->type_Inclinometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Inclinometer, &type_spec_Inclinometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Inclinometer, &type_spec_Inclinometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InclinometerDataThreshold = py::register_python_type(module.get(), type_name_InclinometerDataThreshold, &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_InclinometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InclinometerDataThreshold, &type_spec_InclinometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InclinometerDataThreshold, &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InclinometerReading = py::register_python_type(module.get(), type_name_InclinometerReading, &type_spec_InclinometerReading, object_bases.get(), nullptr);
-    if (!state->type_InclinometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InclinometerReading, &type_spec_InclinometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InclinometerReading, &type_spec_InclinometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InclinometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_InclinometerReadingChangedEventArgs, &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InclinometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InclinometerReadingChangedEventArgs, &type_spec_InclinometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InclinometerReadingChangedEventArgs, &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LightSensor = py::register_python_type(module.get(), type_name_LightSensor, &type_spec_LightSensor, object_bases.get(), nullptr);
-    if (!state->type_LightSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LightSensor, &type_spec_LightSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LightSensor, &type_spec_LightSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LightSensorDataThreshold = py::register_python_type(module.get(), type_name_LightSensorDataThreshold, &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_LightSensorDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LightSensorDataThreshold, &type_spec_LightSensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LightSensorDataThreshold, &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LightSensorReading = py::register_python_type(module.get(), type_name_LightSensorReading, &type_spec_LightSensorReading, object_bases.get(), nullptr);
-    if (!state->type_LightSensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LightSensorReading, &type_spec_LightSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LightSensorReading, &type_spec_LightSensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LightSensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_LightSensorReadingChangedEventArgs, &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LightSensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LightSensorReadingChangedEventArgs, &type_spec_LightSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LightSensorReadingChangedEventArgs, &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockOnLeaveOptions = py::register_python_type(module.get(), type_name_LockOnLeaveOptions, &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr);
-    if (!state->type_LockOnLeaveOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockOnLeaveOptions, &type_spec_LockOnLeaveOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockOnLeaveOptions, &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Magnetometer = py::register_python_type(module.get(), type_name_Magnetometer, &type_spec_Magnetometer, object_bases.get(), nullptr);
-    if (!state->type_Magnetometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Magnetometer, &type_spec_Magnetometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Magnetometer, &type_spec_Magnetometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagnetometerDataThreshold = py::register_python_type(module.get(), type_name_MagnetometerDataThreshold, &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_MagnetometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagnetometerDataThreshold, &type_spec_MagnetometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagnetometerDataThreshold, &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagnetometerReading = py::register_python_type(module.get(), type_name_MagnetometerReading, &type_spec_MagnetometerReading, object_bases.get(), nullptr);
-    if (!state->type_MagnetometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagnetometerReading, &type_spec_MagnetometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagnetometerReading, &type_spec_MagnetometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagnetometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_MagnetometerReadingChangedEventArgs, &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagnetometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagnetometerReadingChangedEventArgs, &type_spec_MagnetometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagnetometerReadingChangedEventArgs, &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OrientationSensor = py::register_python_type(module.get(), type_name_OrientationSensor, &type_spec_OrientationSensor, object_bases.get(), nullptr);
-    if (!state->type_OrientationSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OrientationSensor, &type_spec_OrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OrientationSensor, &type_spec_OrientationSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OrientationSensorReading = py::register_python_type(module.get(), type_name_OrientationSensorReading, &type_spec_OrientationSensorReading, object_bases.get(), nullptr);
-    if (!state->type_OrientationSensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OrientationSensorReading, &type_spec_OrientationSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OrientationSensorReading, &type_spec_OrientationSensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OrientationSensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_OrientationSensorReadingChangedEventArgs, &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_OrientationSensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OrientationSensorReadingChangedEventArgs, &type_spec_OrientationSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OrientationSensorReadingChangedEventArgs, &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Pedometer = py::register_python_type(module.get(), type_name_Pedometer, &type_spec_Pedometer, object_bases.get(), nullptr);
-    if (!state->type_Pedometer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Pedometer, &type_spec_Pedometer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Pedometer, &type_spec_Pedometer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PedometerDataThreshold = py::register_python_type(module.get(), type_name_PedometerDataThreshold, &type_spec_PedometerDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_PedometerDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PedometerDataThreshold, &type_spec_PedometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PedometerDataThreshold, &type_spec_PedometerDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PedometerReading = py::register_python_type(module.get(), type_name_PedometerReading, &type_spec_PedometerReading, object_bases.get(), nullptr);
-    if (!state->type_PedometerReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PedometerReading, &type_spec_PedometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PedometerReading, &type_spec_PedometerReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PedometerReadingChangedEventArgs = py::register_python_type(module.get(), type_name_PedometerReadingChangedEventArgs, &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PedometerReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PedometerReadingChangedEventArgs, &type_spec_PedometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PedometerReadingChangedEventArgs, &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximitySensor = py::register_python_type(module.get(), type_name_ProximitySensor, &type_spec_ProximitySensor, object_bases.get(), nullptr);
-    if (!state->type_ProximitySensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximitySensor, &type_spec_ProximitySensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximitySensor, &type_spec_ProximitySensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximitySensorDataThreshold = py::register_python_type(module.get(), type_name_ProximitySensorDataThreshold, &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_ProximitySensorDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximitySensorDataThreshold, &type_spec_ProximitySensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximitySensorDataThreshold, &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximitySensorDisplayOnOffController = py::register_python_type(module.get(), type_name_ProximitySensorDisplayOnOffController, &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr);
-    if (!state->type_ProximitySensorDisplayOnOffController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximitySensorDisplayOnOffController, &type_spec_ProximitySensorDisplayOnOffController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximitySensorDisplayOnOffController, &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximitySensorReading = py::register_python_type(module.get(), type_name_ProximitySensorReading, &type_spec_ProximitySensorReading, object_bases.get(), nullptr);
-    if (!state->type_ProximitySensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximitySensorReading, &type_spec_ProximitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximitySensorReading, &type_spec_ProximitySensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximitySensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_ProximitySensorReadingChangedEventArgs, &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProximitySensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximitySensorReadingChangedEventArgs, &type_spec_ProximitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximitySensorReadingChangedEventArgs, &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SensorDataThresholdTriggerDetails = py::register_python_type(module.get(), type_name_SensorDataThresholdTriggerDetails, &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_SensorDataThresholdTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTriggerDetails, &type_spec_SensorDataThresholdTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTriggerDetails, &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SensorQuaternion = py::register_python_type(module.get(), type_name_SensorQuaternion, &type_spec_SensorQuaternion, object_bases.get(), nullptr);
-    if (!state->type_SensorQuaternion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SensorQuaternion, &type_spec_SensorQuaternion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SensorQuaternion, &type_spec_SensorQuaternion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SensorRotationMatrix = py::register_python_type(module.get(), type_name_SensorRotationMatrix, &type_spec_SensorRotationMatrix, object_bases.get(), nullptr);
-    if (!state->type_SensorRotationMatrix)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SensorRotationMatrix, &type_spec_SensorRotationMatrix, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SensorRotationMatrix, &type_spec_SensorRotationMatrix, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SimpleOrientationSensor = py::register_python_type(module.get(), type_name_SimpleOrientationSensor, &type_spec_SimpleOrientationSensor, object_bases.get(), nullptr);
-    if (!state->type_SimpleOrientationSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensor, &type_spec_SimpleOrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensor, &type_spec_SimpleOrientationSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SimpleOrientationSensorOrientationChangedEventArgs = py::register_python_type(module.get(), type_name_SimpleOrientationSensorOrientationChangedEventArgs, &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SimpleOrientationSensorOrientationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensorOrientationChangedEventArgs, &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensorOrientationChangedEventArgs, &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WakeOnApproachOptions = py::register_python_type(module.get(), type_name_WakeOnApproachOptions, &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr);
-    if (!state->type_WakeOnApproachOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WakeOnApproachOptions, &type_spec_WakeOnApproachOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WakeOnApproachOptions, &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISensorDataThreshold = py::register_python_type(module.get(), type_name_ISensorDataThreshold, &type_spec_ISensorDataThreshold, object_bases.get(), nullptr);
-    if (!state->type_ISensorDataThreshold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISensorDataThreshold, &type_spec_ISensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISensorDataThreshold, &type_spec_ISensorDataThreshold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Accelerometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Accelerometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Accelerometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccelerometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AccelerometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AccelerometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccelerometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AccelerometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccelerometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccelerometerShakenEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ActivitySensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ActivitySensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ActivitySensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensorReadingChangeReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensorTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveDimmingOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Altimeter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Altimeter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Altimeter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AltimeterReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AltimeterReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AltimeterReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AltimeterReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Barometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Barometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Barometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::BarometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::BarometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::BarometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Compass>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Compass;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Compass is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompassDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::CompassDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::CompassReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompassReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::CompassReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompassReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Gyrometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Gyrometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Gyrometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GyrometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::GyrometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::GyrometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GyrometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::GyrometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GyrometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HingeAngleReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HingeAngleReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HingeAngleReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HingeAngleSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HingeAngleSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HingeAngleSensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HumanPresenceFeatures;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HumanPresenceFeatures is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HumanPresenceSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HumanPresenceSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HumanPresenceSensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HumanPresenceSensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HumanPresenceSensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HumanPresenceSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::HumanPresenceSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Inclinometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Inclinometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Inclinometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InclinometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::InclinometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::InclinometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InclinometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::InclinometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InclinometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::LightSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LightSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::LightSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LightSensorDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::LightSensorDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::LightSensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LightSensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::LightSensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LightSensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockOnLeaveOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::LockOnLeaveOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Magnetometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Magnetometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Magnetometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagnetometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::MagnetometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::MagnetometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagnetometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::MagnetometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagnetometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::OrientationSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OrientationSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::OrientationSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OrientationSensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::OrientationSensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OrientationSensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Pedometer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Pedometer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Pedometer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::PedometerDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PedometerDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::PedometerDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::PedometerReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PedometerReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::PedometerReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PedometerReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ProximitySensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximitySensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ProximitySensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximitySensorDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximitySensorDisplayOnOffController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximitySensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ProximitySensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximitySensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SensorDataThresholdTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::SensorQuaternion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SensorQuaternion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::SensorQuaternion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SensorRotationMatrix;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::SensorRotationMatrix is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SimpleOrientationSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::SimpleOrientationSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SimpleOrientationSensorOrientationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WakeOnApproachOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::WakeOnApproachOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISensorDataThreshold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::ISensorDataThreshold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

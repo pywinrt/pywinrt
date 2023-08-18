@@ -42,8 +42,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource>
+    struct py_type<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.core";
+        static constexpr const char* type_name = "RadialControllerIndependentInputSource";
     };
 }

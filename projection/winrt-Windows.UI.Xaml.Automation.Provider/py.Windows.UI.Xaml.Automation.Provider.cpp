@@ -6,46 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_IRawElementProviderSimple;
-        PyTypeObject* type_IAnnotationProvider;
-        PyTypeObject* type_ICustomNavigationProvider;
-        PyTypeObject* type_IDockProvider;
-        PyTypeObject* type_IDragProvider;
-        PyTypeObject* type_IDropTargetProvider;
-        PyTypeObject* type_IExpandCollapseProvider;
-        PyTypeObject* type_IGridItemProvider;
-        PyTypeObject* type_IGridProvider;
-        PyTypeObject* type_IInvokeProvider;
-        PyTypeObject* type_IItemContainerProvider;
-        PyTypeObject* type_IMultipleViewProvider;
-        PyTypeObject* type_IObjectModelProvider;
-        PyTypeObject* type_IRangeValueProvider;
-        PyTypeObject* type_IScrollItemProvider;
-        PyTypeObject* type_IScrollProvider;
-        PyTypeObject* type_ISelectionItemProvider;
-        PyTypeObject* type_ISelectionProvider;
-        PyTypeObject* type_ISpreadsheetItemProvider;
-        PyTypeObject* type_ISpreadsheetProvider;
-        PyTypeObject* type_IStylesProvider;
-        PyTypeObject* type_ISynchronizedInputProvider;
-        PyTypeObject* type_ITableItemProvider;
-        PyTypeObject* type_ITableProvider;
-        PyTypeObject* type_ITextChildProvider;
-        PyTypeObject* type_ITextEditProvider;
-        PyTypeObject* type_ITextProvider;
-        PyTypeObject* type_ITextProvider2;
-        PyTypeObject* type_ITextRangeProvider;
-        PyTypeObject* type_ITextRangeProvider2;
-        PyTypeObject* type_IToggleProvider;
-        PyTypeObject* type_ITransformProvider;
-        PyTypeObject* type_ITransformProvider2;
-        PyTypeObject* type_IValueProvider;
-        PyTypeObject* type_IVirtualizedItemProvider;
-        PyTypeObject* type_IWindowProvider;
-    };
-
     // ----- IRawElementProviderSimple class --------------------
     static constexpr const char* const type_name_IRawElementProviderSimple = "IRawElementProviderSimple";
 
@@ -7275,114 +7235,15 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Automation::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IRawElementProviderSimple);
-        Py_VISIT(state->type_IAnnotationProvider);
-        Py_VISIT(state->type_ICustomNavigationProvider);
-        Py_VISIT(state->type_IDockProvider);
-        Py_VISIT(state->type_IDragProvider);
-        Py_VISIT(state->type_IDropTargetProvider);
-        Py_VISIT(state->type_IExpandCollapseProvider);
-        Py_VISIT(state->type_IGridItemProvider);
-        Py_VISIT(state->type_IGridProvider);
-        Py_VISIT(state->type_IInvokeProvider);
-        Py_VISIT(state->type_IItemContainerProvider);
-        Py_VISIT(state->type_IMultipleViewProvider);
-        Py_VISIT(state->type_IObjectModelProvider);
-        Py_VISIT(state->type_IRangeValueProvider);
-        Py_VISIT(state->type_IScrollItemProvider);
-        Py_VISIT(state->type_IScrollProvider);
-        Py_VISIT(state->type_ISelectionItemProvider);
-        Py_VISIT(state->type_ISelectionProvider);
-        Py_VISIT(state->type_ISpreadsheetItemProvider);
-        Py_VISIT(state->type_ISpreadsheetProvider);
-        Py_VISIT(state->type_IStylesProvider);
-        Py_VISIT(state->type_ISynchronizedInputProvider);
-        Py_VISIT(state->type_ITableItemProvider);
-        Py_VISIT(state->type_ITableProvider);
-        Py_VISIT(state->type_ITextChildProvider);
-        Py_VISIT(state->type_ITextEditProvider);
-        Py_VISIT(state->type_ITextProvider);
-        Py_VISIT(state->type_ITextProvider2);
-        Py_VISIT(state->type_ITextRangeProvider);
-        Py_VISIT(state->type_ITextRangeProvider2);
-        Py_VISIT(state->type_IToggleProvider);
-        Py_VISIT(state->type_ITransformProvider);
-        Py_VISIT(state->type_ITransformProvider2);
-        Py_VISIT(state->type_IValueProvider);
-        Py_VISIT(state->type_IVirtualizedItemProvider);
-        Py_VISIT(state->type_IWindowProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IRawElementProviderSimple);
-        Py_CLEAR(state->type_IAnnotationProvider);
-        Py_CLEAR(state->type_ICustomNavigationProvider);
-        Py_CLEAR(state->type_IDockProvider);
-        Py_CLEAR(state->type_IDragProvider);
-        Py_CLEAR(state->type_IDropTargetProvider);
-        Py_CLEAR(state->type_IExpandCollapseProvider);
-        Py_CLEAR(state->type_IGridItemProvider);
-        Py_CLEAR(state->type_IGridProvider);
-        Py_CLEAR(state->type_IInvokeProvider);
-        Py_CLEAR(state->type_IItemContainerProvider);
-        Py_CLEAR(state->type_IMultipleViewProvider);
-        Py_CLEAR(state->type_IObjectModelProvider);
-        Py_CLEAR(state->type_IRangeValueProvider);
-        Py_CLEAR(state->type_IScrollItemProvider);
-        Py_CLEAR(state->type_IScrollProvider);
-        Py_CLEAR(state->type_ISelectionItemProvider);
-        Py_CLEAR(state->type_ISelectionProvider);
-        Py_CLEAR(state->type_ISpreadsheetItemProvider);
-        Py_CLEAR(state->type_ISpreadsheetProvider);
-        Py_CLEAR(state->type_IStylesProvider);
-        Py_CLEAR(state->type_ISynchronizedInputProvider);
-        Py_CLEAR(state->type_ITableItemProvider);
-        Py_CLEAR(state->type_ITableProvider);
-        Py_CLEAR(state->type_ITextChildProvider);
-        Py_CLEAR(state->type_ITextEditProvider);
-        Py_CLEAR(state->type_ITextProvider);
-        Py_CLEAR(state->type_ITextProvider2);
-        Py_CLEAR(state->type_ITextRangeProvider);
-        Py_CLEAR(state->type_ITextRangeProvider2);
-        Py_CLEAR(state->type_IToggleProvider);
-        Py_CLEAR(state->type_ITransformProvider);
-        Py_CLEAR(state->type_ITransformProvider2);
-        Py_CLEAR(state->type_IValueProvider);
-        Py_CLEAR(state->type_IVirtualizedItemProvider);
-        Py_CLEAR(state->type_IWindowProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Automation_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Automation::Provider
@@ -7398,7 +7259,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7411,1053 +7272,330 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IRawElementProviderSimple = py::register_python_type(module.get(), type_name_IRawElementProviderSimple, &type_spec_IRawElementProviderSimple, object_bases.get(), nullptr);
-    if (!state->type_IRawElementProviderSimple)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRawElementProviderSimple, &type_spec_IRawElementProviderSimple, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRawElementProviderSimple, &type_spec_IRawElementProviderSimple, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAnnotationProvider = py::register_python_type(module.get(), type_name_IAnnotationProvider, &type_spec_IAnnotationProvider, object_bases.get(), nullptr);
-    if (!state->type_IAnnotationProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAnnotationProvider, &type_spec_IAnnotationProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAnnotationProvider, &type_spec_IAnnotationProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICustomNavigationProvider = py::register_python_type(module.get(), type_name_ICustomNavigationProvider, &type_spec_ICustomNavigationProvider, object_bases.get(), nullptr);
-    if (!state->type_ICustomNavigationProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICustomNavigationProvider, &type_spec_ICustomNavigationProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICustomNavigationProvider, &type_spec_ICustomNavigationProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDockProvider = py::register_python_type(module.get(), type_name_IDockProvider, &type_spec_IDockProvider, object_bases.get(), nullptr);
-    if (!state->type_IDockProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDockProvider, &type_spec_IDockProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDockProvider, &type_spec_IDockProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDragProvider = py::register_python_type(module.get(), type_name_IDragProvider, &type_spec_IDragProvider, object_bases.get(), nullptr);
-    if (!state->type_IDragProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDragProvider, &type_spec_IDragProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDragProvider, &type_spec_IDragProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDropTargetProvider = py::register_python_type(module.get(), type_name_IDropTargetProvider, &type_spec_IDropTargetProvider, object_bases.get(), nullptr);
-    if (!state->type_IDropTargetProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDropTargetProvider, &type_spec_IDropTargetProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDropTargetProvider, &type_spec_IDropTargetProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IExpandCollapseProvider = py::register_python_type(module.get(), type_name_IExpandCollapseProvider, &type_spec_IExpandCollapseProvider, object_bases.get(), nullptr);
-    if (!state->type_IExpandCollapseProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IExpandCollapseProvider, &type_spec_IExpandCollapseProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IExpandCollapseProvider, &type_spec_IExpandCollapseProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGridItemProvider = py::register_python_type(module.get(), type_name_IGridItemProvider, &type_spec_IGridItemProvider, object_bases.get(), nullptr);
-    if (!state->type_IGridItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGridItemProvider, &type_spec_IGridItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGridItemProvider, &type_spec_IGridItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGridProvider = py::register_python_type(module.get(), type_name_IGridProvider, &type_spec_IGridProvider, object_bases.get(), nullptr);
-    if (!state->type_IGridProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGridProvider, &type_spec_IGridProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGridProvider, &type_spec_IGridProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInvokeProvider = py::register_python_type(module.get(), type_name_IInvokeProvider, &type_spec_IInvokeProvider, object_bases.get(), nullptr);
-    if (!state->type_IInvokeProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInvokeProvider, &type_spec_IInvokeProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInvokeProvider, &type_spec_IInvokeProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IItemContainerProvider = py::register_python_type(module.get(), type_name_IItemContainerProvider, &type_spec_IItemContainerProvider, object_bases.get(), nullptr);
-    if (!state->type_IItemContainerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IItemContainerProvider, &type_spec_IItemContainerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IItemContainerProvider, &type_spec_IItemContainerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMultipleViewProvider = py::register_python_type(module.get(), type_name_IMultipleViewProvider, &type_spec_IMultipleViewProvider, object_bases.get(), nullptr);
-    if (!state->type_IMultipleViewProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMultipleViewProvider, &type_spec_IMultipleViewProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMultipleViewProvider, &type_spec_IMultipleViewProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IObjectModelProvider = py::register_python_type(module.get(), type_name_IObjectModelProvider, &type_spec_IObjectModelProvider, object_bases.get(), nullptr);
-    if (!state->type_IObjectModelProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IObjectModelProvider, &type_spec_IObjectModelProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IObjectModelProvider, &type_spec_IObjectModelProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRangeValueProvider = py::register_python_type(module.get(), type_name_IRangeValueProvider, &type_spec_IRangeValueProvider, object_bases.get(), nullptr);
-    if (!state->type_IRangeValueProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRangeValueProvider, &type_spec_IRangeValueProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRangeValueProvider, &type_spec_IRangeValueProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IScrollItemProvider = py::register_python_type(module.get(), type_name_IScrollItemProvider, &type_spec_IScrollItemProvider, object_bases.get(), nullptr);
-    if (!state->type_IScrollItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IScrollItemProvider, &type_spec_IScrollItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IScrollItemProvider, &type_spec_IScrollItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IScrollProvider = py::register_python_type(module.get(), type_name_IScrollProvider, &type_spec_IScrollProvider, object_bases.get(), nullptr);
-    if (!state->type_IScrollProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IScrollProvider, &type_spec_IScrollProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IScrollProvider, &type_spec_IScrollProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISelectionItemProvider = py::register_python_type(module.get(), type_name_ISelectionItemProvider, &type_spec_ISelectionItemProvider, object_bases.get(), nullptr);
-    if (!state->type_ISelectionItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISelectionItemProvider, &type_spec_ISelectionItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISelectionItemProvider, &type_spec_ISelectionItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISelectionProvider = py::register_python_type(module.get(), type_name_ISelectionProvider, &type_spec_ISelectionProvider, object_bases.get(), nullptr);
-    if (!state->type_ISelectionProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISelectionProvider, &type_spec_ISelectionProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISelectionProvider, &type_spec_ISelectionProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpreadsheetItemProvider = py::register_python_type(module.get(), type_name_ISpreadsheetItemProvider, &type_spec_ISpreadsheetItemProvider, object_bases.get(), nullptr);
-    if (!state->type_ISpreadsheetItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpreadsheetItemProvider, &type_spec_ISpreadsheetItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpreadsheetItemProvider, &type_spec_ISpreadsheetItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpreadsheetProvider = py::register_python_type(module.get(), type_name_ISpreadsheetProvider, &type_spec_ISpreadsheetProvider, object_bases.get(), nullptr);
-    if (!state->type_ISpreadsheetProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpreadsheetProvider, &type_spec_ISpreadsheetProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpreadsheetProvider, &type_spec_ISpreadsheetProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStylesProvider = py::register_python_type(module.get(), type_name_IStylesProvider, &type_spec_IStylesProvider, object_bases.get(), nullptr);
-    if (!state->type_IStylesProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStylesProvider, &type_spec_IStylesProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStylesProvider, &type_spec_IStylesProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISynchronizedInputProvider = py::register_python_type(module.get(), type_name_ISynchronizedInputProvider, &type_spec_ISynchronizedInputProvider, object_bases.get(), nullptr);
-    if (!state->type_ISynchronizedInputProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISynchronizedInputProvider, &type_spec_ISynchronizedInputProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISynchronizedInputProvider, &type_spec_ISynchronizedInputProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITableItemProvider = py::register_python_type(module.get(), type_name_ITableItemProvider, &type_spec_ITableItemProvider, object_bases.get(), nullptr);
-    if (!state->type_ITableItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITableItemProvider, &type_spec_ITableItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITableItemProvider, &type_spec_ITableItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITableProvider = py::register_python_type(module.get(), type_name_ITableProvider, &type_spec_ITableProvider, object_bases.get(), nullptr);
-    if (!state->type_ITableProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITableProvider, &type_spec_ITableProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITableProvider, &type_spec_ITableProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextChildProvider = py::register_python_type(module.get(), type_name_ITextChildProvider, &type_spec_ITextChildProvider, object_bases.get(), nullptr);
-    if (!state->type_ITextChildProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextChildProvider, &type_spec_ITextChildProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextChildProvider, &type_spec_ITextChildProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextEditProvider = py::register_python_type(module.get(), type_name_ITextEditProvider, &type_spec_ITextEditProvider, object_bases.get(), nullptr);
-    if (!state->type_ITextEditProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextEditProvider, &type_spec_ITextEditProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextEditProvider, &type_spec_ITextEditProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextProvider = py::register_python_type(module.get(), type_name_ITextProvider, &type_spec_ITextProvider, object_bases.get(), nullptr);
-    if (!state->type_ITextProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextProvider, &type_spec_ITextProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextProvider, &type_spec_ITextProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextProvider2 = py::register_python_type(module.get(), type_name_ITextProvider2, &type_spec_ITextProvider2, object_bases.get(), nullptr);
-    if (!state->type_ITextProvider2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextProvider2, &type_spec_ITextProvider2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextProvider2, &type_spec_ITextProvider2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextRangeProvider = py::register_python_type(module.get(), type_name_ITextRangeProvider, &type_spec_ITextRangeProvider, object_bases.get(), nullptr);
-    if (!state->type_ITextRangeProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextRangeProvider, &type_spec_ITextRangeProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextRangeProvider, &type_spec_ITextRangeProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextRangeProvider2 = py::register_python_type(module.get(), type_name_ITextRangeProvider2, &type_spec_ITextRangeProvider2, object_bases.get(), nullptr);
-    if (!state->type_ITextRangeProvider2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextRangeProvider2, &type_spec_ITextRangeProvider2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextRangeProvider2, &type_spec_ITextRangeProvider2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IToggleProvider = py::register_python_type(module.get(), type_name_IToggleProvider, &type_spec_IToggleProvider, object_bases.get(), nullptr);
-    if (!state->type_IToggleProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IToggleProvider, &type_spec_IToggleProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IToggleProvider, &type_spec_IToggleProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITransformProvider = py::register_python_type(module.get(), type_name_ITransformProvider, &type_spec_ITransformProvider, object_bases.get(), nullptr);
-    if (!state->type_ITransformProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITransformProvider, &type_spec_ITransformProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITransformProvider, &type_spec_ITransformProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITransformProvider2 = py::register_python_type(module.get(), type_name_ITransformProvider2, &type_spec_ITransformProvider2, object_bases.get(), nullptr);
-    if (!state->type_ITransformProvider2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITransformProvider2, &type_spec_ITransformProvider2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITransformProvider2, &type_spec_ITransformProvider2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IValueProvider = py::register_python_type(module.get(), type_name_IValueProvider, &type_spec_IValueProvider, object_bases.get(), nullptr);
-    if (!state->type_IValueProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IValueProvider, &type_spec_IValueProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IValueProvider, &type_spec_IValueProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVirtualizedItemProvider = py::register_python_type(module.get(), type_name_IVirtualizedItemProvider, &type_spec_IVirtualizedItemProvider, object_bases.get(), nullptr);
-    if (!state->type_IVirtualizedItemProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVirtualizedItemProvider, &type_spec_IVirtualizedItemProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVirtualizedItemProvider, &type_spec_IVirtualizedItemProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWindowProvider = py::register_python_type(module.get(), type_name_IWindowProvider, &type_spec_IWindowProvider, object_bases.get(), nullptr);
-    if (!state->type_IWindowProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWindowProvider, &type_spec_IWindowProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWindowProvider, &type_spec_IWindowProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRawElementProviderSimple;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAnnotationProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICustomNavigationProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDockProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDragProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDropTargetProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IExpandCollapseProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGridItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGridProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInvokeProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IItemContainerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMultipleViewProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IObjectModelProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRangeValueProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IScrollItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IScrollProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISelectionItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISelectionProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpreadsheetItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpreadsheetProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStylesProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISynchronizedInputProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITableItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITableProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextChildProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextEditProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextProvider2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextRangeProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextRangeProvider2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IToggleProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITransformProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITransformProvider2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IValueProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVirtualizedItemProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWindowProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

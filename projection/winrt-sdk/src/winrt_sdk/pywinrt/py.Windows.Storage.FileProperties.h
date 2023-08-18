@@ -115,56 +115,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::BasicProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::BasicProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "BasicProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::DocumentProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::DocumentProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "DocumentProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::GeotagHelper>
+    struct py_type<winrt::Windows::Storage::FileProperties::GeotagHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "GeotagHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::ImageProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::ImageProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "ImageProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::MusicProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::MusicProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "MusicProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "StorageItemContentProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>
+    struct py_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "StorageItemThumbnail";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::VideoProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::VideoProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "VideoProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>
+    struct py_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
+        static constexpr const char* type_name = "IStorageItemExtraProperties";
     };
 }

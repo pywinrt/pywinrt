@@ -152,158 +152,184 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchor>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorExportSufficiency";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorExporter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorRawCoordinateSystemAdjustedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialAnchorTransferManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialBoundingVolume";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialCoordinateSystem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntity>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntity";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialEntityWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialLocation>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialLocator>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialLocator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLocator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLocatorAttachedFrameOfReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialLocatorPositionalTrackingDeactivatingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialStageFrameOfReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialStationaryFrameOfReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingBox>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialBoundingBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialBoundingFrustum";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialBoundingOrientedBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialBoundingSphere";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::SpatialRay>
+    struct py_type<winrt::Windows::Perception::Spatial::SpatialRay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial";
+        static constexpr const char* type_name = "SpatialRay";
     };
 }

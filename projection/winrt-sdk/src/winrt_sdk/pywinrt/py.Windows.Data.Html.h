@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Html::HtmlUtilities>
+    struct py_type<winrt::Windows::Data::Html::HtmlUtilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.html";
+        static constexpr const char* type_name = "HtmlUtilities";
     };
 }

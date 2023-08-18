@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::UI::WindowManagement
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppWindow;
-        PyTypeObject* type_AppWindowChangedEventArgs;
-        PyTypeObject* type_AppWindowCloseRequestedEventArgs;
-        PyTypeObject* type_AppWindowClosedEventArgs;
-        PyTypeObject* type_AppWindowFrame;
-        PyTypeObject* type_AppWindowPlacement;
-        PyTypeObject* type_AppWindowPresentationConfiguration;
-        PyTypeObject* type_AppWindowPresenter;
-        PyTypeObject* type_AppWindowTitleBar;
-        PyTypeObject* type_AppWindowTitleBarOcclusion;
-        PyTypeObject* type_CompactOverlayPresentationConfiguration;
-        PyTypeObject* type_DefaultPresentationConfiguration;
-        PyTypeObject* type_DisplayRegion;
-        PyTypeObject* type_FullScreenPresentationConfiguration;
-        PyTypeObject* type_WindowServices;
-        PyTypeObject* type_WindowingEnvironment;
-        PyTypeObject* type_WindowingEnvironmentAddedEventArgs;
-        PyTypeObject* type_WindowingEnvironmentChangedEventArgs;
-        PyTypeObject* type_WindowingEnvironmentRemovedEventArgs;
-    };
-
     // ----- AppWindow class --------------------
     static constexpr const char* const type_name_AppWindow = "AppWindow";
 
@@ -4022,80 +3999,15 @@ namespace py::cpp::Windows::UI::WindowManagement
     PyDoc_STRVAR(module_doc, "Windows::UI::WindowManagement");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppWindow);
-        Py_VISIT(state->type_AppWindowChangedEventArgs);
-        Py_VISIT(state->type_AppWindowCloseRequestedEventArgs);
-        Py_VISIT(state->type_AppWindowClosedEventArgs);
-        Py_VISIT(state->type_AppWindowFrame);
-        Py_VISIT(state->type_AppWindowPlacement);
-        Py_VISIT(state->type_AppWindowPresentationConfiguration);
-        Py_VISIT(state->type_AppWindowPresenter);
-        Py_VISIT(state->type_AppWindowTitleBar);
-        Py_VISIT(state->type_AppWindowTitleBarOcclusion);
-        Py_VISIT(state->type_CompactOverlayPresentationConfiguration);
-        Py_VISIT(state->type_DefaultPresentationConfiguration);
-        Py_VISIT(state->type_DisplayRegion);
-        Py_VISIT(state->type_FullScreenPresentationConfiguration);
-        Py_VISIT(state->type_WindowServices);
-        Py_VISIT(state->type_WindowingEnvironment);
-        Py_VISIT(state->type_WindowingEnvironmentAddedEventArgs);
-        Py_VISIT(state->type_WindowingEnvironmentChangedEventArgs);
-        Py_VISIT(state->type_WindowingEnvironmentRemovedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppWindow);
-        Py_CLEAR(state->type_AppWindowChangedEventArgs);
-        Py_CLEAR(state->type_AppWindowCloseRequestedEventArgs);
-        Py_CLEAR(state->type_AppWindowClosedEventArgs);
-        Py_CLEAR(state->type_AppWindowFrame);
-        Py_CLEAR(state->type_AppWindowPlacement);
-        Py_CLEAR(state->type_AppWindowPresentationConfiguration);
-        Py_CLEAR(state->type_AppWindowPresenter);
-        Py_CLEAR(state->type_AppWindowTitleBar);
-        Py_CLEAR(state->type_AppWindowTitleBarOcclusion);
-        Py_CLEAR(state->type_CompactOverlayPresentationConfiguration);
-        Py_CLEAR(state->type_DefaultPresentationConfiguration);
-        Py_CLEAR(state->type_DisplayRegion);
-        Py_CLEAR(state->type_FullScreenPresentationConfiguration);
-        Py_CLEAR(state->type_WindowServices);
-        Py_CLEAR(state->type_WindowingEnvironment);
-        Py_CLEAR(state->type_WindowingEnvironmentAddedEventArgs);
-        Py_CLEAR(state->type_WindowingEnvironmentChangedEventArgs);
-        Py_CLEAR(state->type_WindowingEnvironmentRemovedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_WindowManagement",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::WindowManagement
@@ -4111,7 +4023,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WindowManagement(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4124,560 +4036,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WindowManagement(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppWindow = py::register_python_type(module.get(), type_name_AppWindow, &type_spec_AppWindow, object_bases.get(), nullptr);
-    if (!state->type_AppWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindow, &type_spec_AppWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindow, &type_spec_AppWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowChangedEventArgs = py::register_python_type(module.get(), type_name_AppWindowChangedEventArgs, &type_spec_AppWindowChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppWindowChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowChangedEventArgs, &type_spec_AppWindowChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowChangedEventArgs, &type_spec_AppWindowChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowCloseRequestedEventArgs = py::register_python_type(module.get(), type_name_AppWindowCloseRequestedEventArgs, &type_spec_AppWindowCloseRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppWindowCloseRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowCloseRequestedEventArgs, &type_spec_AppWindowCloseRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowCloseRequestedEventArgs, &type_spec_AppWindowCloseRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowClosedEventArgs = py::register_python_type(module.get(), type_name_AppWindowClosedEventArgs, &type_spec_AppWindowClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppWindowClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowClosedEventArgs, &type_spec_AppWindowClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowClosedEventArgs, &type_spec_AppWindowClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowFrame = py::register_python_type(module.get(), type_name_AppWindowFrame, &type_spec_AppWindowFrame, object_bases.get(), nullptr);
-    if (!state->type_AppWindowFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowFrame, &type_spec_AppWindowFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowFrame, &type_spec_AppWindowFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowPlacement = py::register_python_type(module.get(), type_name_AppWindowPlacement, &type_spec_AppWindowPlacement, object_bases.get(), nullptr);
-    if (!state->type_AppWindowPlacement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowPlacement, &type_spec_AppWindowPlacement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowPlacement, &type_spec_AppWindowPlacement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowPresentationConfiguration = py::register_python_type(module.get(), type_name_AppWindowPresentationConfiguration, &type_spec_AppWindowPresentationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_AppWindowPresentationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowPresentationConfiguration, &type_spec_AppWindowPresentationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowPresentationConfiguration, &type_spec_AppWindowPresentationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowPresenter = py::register_python_type(module.get(), type_name_AppWindowPresenter, &type_spec_AppWindowPresenter, object_bases.get(), nullptr);
-    if (!state->type_AppWindowPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowPresenter, &type_spec_AppWindowPresenter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowPresenter, &type_spec_AppWindowPresenter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowTitleBar = py::register_python_type(module.get(), type_name_AppWindowTitleBar, &type_spec_AppWindowTitleBar, object_bases.get(), nullptr);
-    if (!state->type_AppWindowTitleBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowTitleBar, &type_spec_AppWindowTitleBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowTitleBar, &type_spec_AppWindowTitleBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppWindowTitleBarOcclusion = py::register_python_type(module.get(), type_name_AppWindowTitleBarOcclusion, &type_spec_AppWindowTitleBarOcclusion, object_bases.get(), nullptr);
-    if (!state->type_AppWindowTitleBarOcclusion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppWindowTitleBarOcclusion, &type_spec_AppWindowTitleBarOcclusion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppWindowTitleBarOcclusion, &type_spec_AppWindowTitleBarOcclusion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompactOverlayPresentationConfiguration = py::register_python_type(module.get(), type_name_CompactOverlayPresentationConfiguration, &type_spec_CompactOverlayPresentationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_CompactOverlayPresentationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompactOverlayPresentationConfiguration, &type_spec_CompactOverlayPresentationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompactOverlayPresentationConfiguration, &type_spec_CompactOverlayPresentationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DefaultPresentationConfiguration = py::register_python_type(module.get(), type_name_DefaultPresentationConfiguration, &type_spec_DefaultPresentationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_DefaultPresentationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DefaultPresentationConfiguration, &type_spec_DefaultPresentationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DefaultPresentationConfiguration, &type_spec_DefaultPresentationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayRegion = py::register_python_type(module.get(), type_name_DisplayRegion, &type_spec_DisplayRegion, object_bases.get(), nullptr);
-    if (!state->type_DisplayRegion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayRegion, &type_spec_DisplayRegion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayRegion, &type_spec_DisplayRegion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FullScreenPresentationConfiguration = py::register_python_type(module.get(), type_name_FullScreenPresentationConfiguration, &type_spec_FullScreenPresentationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_FullScreenPresentationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FullScreenPresentationConfiguration, &type_spec_FullScreenPresentationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FullScreenPresentationConfiguration, &type_spec_FullScreenPresentationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowServices = py::register_python_type(module.get(), type_name_WindowServices, &type_spec_WindowServices, object_bases.get(), nullptr);
-    if (!state->type_WindowServices)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowServices, &type_spec_WindowServices, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowServices, &type_spec_WindowServices, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowingEnvironment = py::register_python_type(module.get(), type_name_WindowingEnvironment, &type_spec_WindowingEnvironment, object_bases.get(), nullptr);
-    if (!state->type_WindowingEnvironment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironment, &type_spec_WindowingEnvironment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironment, &type_spec_WindowingEnvironment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowingEnvironmentAddedEventArgs = py::register_python_type(module.get(), type_name_WindowingEnvironmentAddedEventArgs, &type_spec_WindowingEnvironmentAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowingEnvironmentAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentAddedEventArgs, &type_spec_WindowingEnvironmentAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentAddedEventArgs, &type_spec_WindowingEnvironmentAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowingEnvironmentChangedEventArgs = py::register_python_type(module.get(), type_name_WindowingEnvironmentChangedEventArgs, &type_spec_WindowingEnvironmentChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowingEnvironmentChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentChangedEventArgs, &type_spec_WindowingEnvironmentChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentChangedEventArgs, &type_spec_WindowingEnvironmentChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowingEnvironmentRemovedEventArgs = py::register_python_type(module.get(), type_name_WindowingEnvironmentRemovedEventArgs, &type_spec_WindowingEnvironmentRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowingEnvironmentRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentRemovedEventArgs, &type_spec_WindowingEnvironmentRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowingEnvironmentRemovedEventArgs, &type_spec_WindowingEnvironmentRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowCloseRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowPlacement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowPlacement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowPresentationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowTitleBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowTitleBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppWindowTitleBarOcclusion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompactOverlayPresentationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DefaultPresentationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::DisplayRegion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayRegion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::DisplayRegion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FullScreenPresentationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::WindowServices>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowServices;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowServices is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowingEnvironment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowingEnvironment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowingEnvironmentAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowingEnvironmentChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WindowManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WindowManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowingEnvironmentRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

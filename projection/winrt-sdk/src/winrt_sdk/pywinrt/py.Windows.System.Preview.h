@@ -44,20 +44,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>
+    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.preview";
+        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>
+    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.preview";
+        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>
+    struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.preview";
+        static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
     };
 }

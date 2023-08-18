@@ -44,20 +44,23 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>
+    struct py_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
+        static constexpr const char* type_name = "DetectedFace";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>
+    struct py_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
+        static constexpr const char* type_name = "FaceDetector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>
+    struct py_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
+        static constexpr const char* type_name = "FaceTracker";
     };
 }

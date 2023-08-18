@@ -143,27 +143,31 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "AddPagesEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "GetPreviewPageEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Printing::PaginateEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::PaginateEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "PaginateEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Printing::PrintDocument>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::PrintDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "PrintDocument";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventHandler>

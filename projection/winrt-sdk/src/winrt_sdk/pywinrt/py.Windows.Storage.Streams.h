@@ -106,152 +106,177 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::Buffer>
+    struct py_type<winrt::Windows::Storage::Streams::Buffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "Buffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::DataReader>
+    struct py_type<winrt::Windows::Storage::Streams::DataReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "DataReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>
+    struct py_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "DataReaderLoadOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::DataWriter>
+    struct py_type<winrt::Windows::Storage::Streams::DataWriter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "DataWriter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>
+    struct py_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "DataWriterStoreOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::FileInputStream>
+    struct py_type<winrt::Windows::Storage::Streams::FileInputStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "FileInputStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::FileOutputStream>
+    struct py_type<winrt::Windows::Storage::Streams::FileOutputStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "FileOutputStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>
+    struct py_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "FileRandomAccessStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>
+    struct py_type<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "InMemoryRandomAccessStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::InputStreamOverStream>
+    struct py_type<winrt::Windows::Storage::Streams::InputStreamOverStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "InputStreamOverStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>
+    struct py_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "OutputStreamOverStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::RandomAccessStream>
+    struct py_type<winrt::Windows::Storage::Streams::RandomAccessStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "RandomAccessStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>
+    struct py_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "RandomAccessStreamOverStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>
+    struct py_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "RandomAccessStreamReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IBuffer>
+    struct py_type<winrt::Windows::Storage::Streams::IBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IContentTypeProvider>
+    struct py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IContentTypeProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IDataReader>
+    struct py_type<winrt::Windows::Storage::Streams::IDataReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IDataReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IDataWriter>
+    struct py_type<winrt::Windows::Storage::Streams::IDataWriter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IDataWriter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IInputStream>
+    struct py_type<winrt::Windows::Storage::Streams::IInputStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IInputStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IInputStreamReference>
+    struct py_type<winrt::Windows::Storage::Streams::IInputStreamReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IInputStreamReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IOutputStream>
+    struct py_type<winrt::Windows::Storage::Streams::IOutputStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IOutputStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>
+    struct py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IPropertySetSerializer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStream>
+    struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IRandomAccessStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>
+    struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IRandomAccessStreamReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>
+    struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.streams";
+        static constexpr const char* type_name = "IRandomAccessStreamWithContentType";
     };
 }

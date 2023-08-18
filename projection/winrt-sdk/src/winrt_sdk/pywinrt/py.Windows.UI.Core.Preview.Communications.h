@@ -72,38 +72,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamCleanupRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamCommandInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamDeviceCredentials";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamEndMeetingRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamJoinMeetingRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>
+    struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
+        static constexpr const char* type_name = "PreviewTeamView";
     };
 }

@@ -48,44 +48,51 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtension";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionCatalog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionPackageInstalledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionPackageStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionPackageUninstallingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionPackageUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
+        static constexpr const char* type_name = "AppExtensionPackageUpdatingEventArgs";
     };
 }

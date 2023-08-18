@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::System::Implementation::FileExplorer
 {
-    struct module_state
-    {
-        PyTypeObject* type_SysStorageProviderEventReceivedEventArgs;
-        PyTypeObject* type_ISysStorageProviderEventSource;
-        PyTypeObject* type_ISysStorageProviderHandlerFactory;
-        PyTypeObject* type_ISysStorageProviderHttpRequestProvider;
-    };
-
     // ----- SysStorageProviderEventReceivedEventArgs class --------------------
     static constexpr const char* const type_name_SysStorageProviderEventReceivedEventArgs = "SysStorageProviderEventReceivedEventArgs";
 
@@ -505,50 +497,15 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     PyDoc_STRVAR(module_doc, "Windows::System::Implementation::FileExplorer");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SysStorageProviderEventReceivedEventArgs);
-        Py_VISIT(state->type_ISysStorageProviderEventSource);
-        Py_VISIT(state->type_ISysStorageProviderHandlerFactory);
-        Py_VISIT(state->type_ISysStorageProviderHttpRequestProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SysStorageProviderEventReceivedEventArgs);
-        Py_CLEAR(state->type_ISysStorageProviderEventSource);
-        Py_CLEAR(state->type_ISysStorageProviderHandlerFactory);
-        Py_CLEAR(state->type_ISysStorageProviderHttpRequestProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Implementation_FileExplorer",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Implementation::FileExplorer
@@ -564,7 +521,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Implementation_FileExplorer(void) no
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -577,125 +534,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Implementation_FileExplorer(void) no
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SysStorageProviderEventReceivedEventArgs = py::register_python_type(module.get(), type_name_SysStorageProviderEventReceivedEventArgs, &type_spec_SysStorageProviderEventReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SysStorageProviderEventReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SysStorageProviderEventReceivedEventArgs, &type_spec_SysStorageProviderEventReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SysStorageProviderEventReceivedEventArgs, &type_spec_SysStorageProviderEventReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISysStorageProviderEventSource = py::register_python_type(module.get(), type_name_ISysStorageProviderEventSource, &type_spec_ISysStorageProviderEventSource, object_bases.get(), nullptr);
-    if (!state->type_ISysStorageProviderEventSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderEventSource, &type_spec_ISysStorageProviderEventSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderEventSource, &type_spec_ISysStorageProviderEventSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISysStorageProviderHandlerFactory = py::register_python_type(module.get(), type_name_ISysStorageProviderHandlerFactory, &type_spec_ISysStorageProviderHandlerFactory, object_bases.get(), nullptr);
-    if (!state->type_ISysStorageProviderHandlerFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderHandlerFactory, &type_spec_ISysStorageProviderHandlerFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderHandlerFactory, &type_spec_ISysStorageProviderHandlerFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISysStorageProviderHttpRequestProvider = py::register_python_type(module.get(), type_name_ISysStorageProviderHttpRequestProvider, &type_spec_ISysStorageProviderHttpRequestProvider, object_bases.get(), nullptr);
-    if (!state->type_ISysStorageProviderHttpRequestProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderHttpRequestProvider, &type_spec_ISysStorageProviderHttpRequestProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISysStorageProviderHttpRequestProvider, &type_spec_ISysStorageProviderHttpRequestProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Implementation::FileExplorer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Implementation::FileExplorer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SysStorageProviderEventReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Implementation::FileExplorer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Implementation::FileExplorer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISysStorageProviderEventSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Implementation::FileExplorer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Implementation::FileExplorer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISysStorageProviderHandlerFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Implementation::FileExplorer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Implementation::FileExplorer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISysStorageProviderHttpRequestProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -66,62 +66,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdAuthenticator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdServiceTicket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdServiceTicketRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdSystemAuthenticator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdSystemAuthenticatorForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdSystemIdentity";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "OnlineIdSystemTicketResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "SignOutUserOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "UserAuthenticationOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>
+    struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
+        static constexpr const char* type_name = "UserIdentity";
     };
 }

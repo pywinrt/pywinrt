@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Search
 {
-    struct module_state
-    {
-        PyTypeObject* type_LocalContentSuggestionSettings;
-        PyTypeObject* type_SearchPane;
-        PyTypeObject* type_SearchPaneQueryChangedEventArgs;
-        PyTypeObject* type_SearchPaneQueryLinguisticDetails;
-        PyTypeObject* type_SearchPaneQuerySubmittedEventArgs;
-        PyTypeObject* type_SearchPaneResultSuggestionChosenEventArgs;
-        PyTypeObject* type_SearchPaneSuggestionsRequest;
-        PyTypeObject* type_SearchPaneSuggestionsRequestDeferral;
-        PyTypeObject* type_SearchPaneSuggestionsRequestedEventArgs;
-        PyTypeObject* type_SearchPaneVisibilityChangedEventArgs;
-        PyTypeObject* type_SearchQueryLinguisticDetails;
-        PyTypeObject* type_SearchSuggestionCollection;
-        PyTypeObject* type_SearchSuggestionsRequest;
-        PyTypeObject* type_SearchSuggestionsRequestDeferral;
-        PyTypeObject* type_ISearchPaneQueryChangedEventArgs;
-    };
-
     // ----- LocalContentSuggestionSettings class --------------------
     static constexpr const char* const type_name_LocalContentSuggestionSettings = "LocalContentSuggestionSettings";
 
@@ -2773,72 +2754,15 @@ namespace py::cpp::Windows::ApplicationModel::Search
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Search");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_LocalContentSuggestionSettings);
-        Py_VISIT(state->type_SearchPane);
-        Py_VISIT(state->type_SearchPaneQueryChangedEventArgs);
-        Py_VISIT(state->type_SearchPaneQueryLinguisticDetails);
-        Py_VISIT(state->type_SearchPaneQuerySubmittedEventArgs);
-        Py_VISIT(state->type_SearchPaneResultSuggestionChosenEventArgs);
-        Py_VISIT(state->type_SearchPaneSuggestionsRequest);
-        Py_VISIT(state->type_SearchPaneSuggestionsRequestDeferral);
-        Py_VISIT(state->type_SearchPaneSuggestionsRequestedEventArgs);
-        Py_VISIT(state->type_SearchPaneVisibilityChangedEventArgs);
-        Py_VISIT(state->type_SearchQueryLinguisticDetails);
-        Py_VISIT(state->type_SearchSuggestionCollection);
-        Py_VISIT(state->type_SearchSuggestionsRequest);
-        Py_VISIT(state->type_SearchSuggestionsRequestDeferral);
-        Py_VISIT(state->type_ISearchPaneQueryChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_LocalContentSuggestionSettings);
-        Py_CLEAR(state->type_SearchPane);
-        Py_CLEAR(state->type_SearchPaneQueryChangedEventArgs);
-        Py_CLEAR(state->type_SearchPaneQueryLinguisticDetails);
-        Py_CLEAR(state->type_SearchPaneQuerySubmittedEventArgs);
-        Py_CLEAR(state->type_SearchPaneResultSuggestionChosenEventArgs);
-        Py_CLEAR(state->type_SearchPaneSuggestionsRequest);
-        Py_CLEAR(state->type_SearchPaneSuggestionsRequestDeferral);
-        Py_CLEAR(state->type_SearchPaneSuggestionsRequestedEventArgs);
-        Py_CLEAR(state->type_SearchPaneVisibilityChangedEventArgs);
-        Py_CLEAR(state->type_SearchQueryLinguisticDetails);
-        Py_CLEAR(state->type_SearchSuggestionCollection);
-        Py_CLEAR(state->type_SearchSuggestionsRequest);
-        Py_CLEAR(state->type_SearchSuggestionsRequestDeferral);
-        Py_CLEAR(state->type_ISearchPaneQueryChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Search",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Search
@@ -2854,7 +2778,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Search(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2867,444 +2791,141 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Search(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_LocalContentSuggestionSettings = py::register_python_type(module.get(), type_name_LocalContentSuggestionSettings, &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr);
-    if (!state->type_LocalContentSuggestionSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocalContentSuggestionSettings, &type_spec_LocalContentSuggestionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocalContentSuggestionSettings, &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPane = py::register_python_type(module.get(), type_name_SearchPane, &type_spec_SearchPane, object_bases.get(), nullptr);
-    if (!state->type_SearchPane)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPane, &type_spec_SearchPane, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPane, &type_spec_SearchPane, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneQueryChangedEventArgs = py::register_python_type(module.get(), type_name_SearchPaneQueryChangedEventArgs, &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneQueryChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneQueryChangedEventArgs, &type_spec_SearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneQueryChangedEventArgs, &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneQueryLinguisticDetails = py::register_python_type(module.get(), type_name_SearchPaneQueryLinguisticDetails, &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneQueryLinguisticDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneQueryLinguisticDetails, &type_spec_SearchPaneQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneQueryLinguisticDetails, &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneQuerySubmittedEventArgs = py::register_python_type(module.get(), type_name_SearchPaneQuerySubmittedEventArgs, &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneQuerySubmittedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneQuerySubmittedEventArgs, &type_spec_SearchPaneQuerySubmittedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneQuerySubmittedEventArgs, &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneResultSuggestionChosenEventArgs = py::register_python_type(module.get(), type_name_SearchPaneResultSuggestionChosenEventArgs, &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneResultSuggestionChosenEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneResultSuggestionChosenEventArgs, &type_spec_SearchPaneResultSuggestionChosenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneResultSuggestionChosenEventArgs, &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneSuggestionsRequest = py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequest, &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneSuggestionsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequest, &type_spec_SearchPaneSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequest, &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneSuggestionsRequestDeferral = py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestDeferral, &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneSuggestionsRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestDeferral, &type_spec_SearchPaneSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestDeferral, &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneSuggestionsRequestedEventArgs = py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestedEventArgs, &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneSuggestionsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestedEventArgs, &type_spec_SearchPaneSuggestionsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestedEventArgs, &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchPaneVisibilityChangedEventArgs = py::register_python_type(module.get(), type_name_SearchPaneVisibilityChangedEventArgs, &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchPaneVisibilityChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchPaneVisibilityChangedEventArgs, &type_spec_SearchPaneVisibilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchPaneVisibilityChangedEventArgs, &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchQueryLinguisticDetails = py::register_python_type(module.get(), type_name_SearchQueryLinguisticDetails, &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr);
-    if (!state->type_SearchQueryLinguisticDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchQueryLinguisticDetails, &type_spec_SearchQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchQueryLinguisticDetails, &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestionCollection = py::register_python_type(module.get(), type_name_SearchSuggestionCollection, &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestionCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionCollection, &type_spec_SearchSuggestionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionCollection, &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestionsRequest = py::register_python_type(module.get(), type_name_SearchSuggestionsRequest, &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestionsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequest, &type_spec_SearchSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequest, &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestionsRequestDeferral = py::register_python_type(module.get(), type_name_SearchSuggestionsRequestDeferral, &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestionsRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestDeferral, &type_spec_SearchSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestDeferral, &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISearchPaneQueryChangedEventArgs = py::register_python_type(module.get(), type_name_ISearchPaneQueryChangedEventArgs, &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ISearchPaneQueryChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISearchPaneQueryChangedEventArgs, &type_spec_ISearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISearchPaneQueryChangedEventArgs, &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocalContentSuggestionSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPane>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPane;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPane is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneQueryChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneQueryLinguisticDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneQuerySubmittedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneResultSuggestionChosenEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneSuggestionsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneSuggestionsRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneSuggestionsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchPaneVisibilityChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchQueryLinguisticDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestionCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestionsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestionsRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISearchPaneQueryChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -330,68 +330,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ContentLinkInfo>
+    struct py_type<winrt::Windows::UI::Text::ContentLinkInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ContentLinkInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::FontWeights>
+    struct py_type<winrt::Windows::UI::Text::FontWeights>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FontWeights";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::RichEditTextDocument>
+    struct py_type<winrt::Windows::UI::Text::RichEditTextDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "RichEditTextDocument";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::RichEditTextRange>
+    struct py_type<winrt::Windows::UI::Text::RichEditTextRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "RichEditTextRange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::TextConstants>
+    struct py_type<winrt::Windows::UI::Text::TextConstants>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "TextConstants";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ITextCharacterFormat>
+    struct py_type<winrt::Windows::UI::Text::ITextCharacterFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ITextCharacterFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ITextDocument>
+    struct py_type<winrt::Windows::UI::Text::ITextDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ITextDocument";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ITextParagraphFormat>
+    struct py_type<winrt::Windows::UI::Text::ITextParagraphFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ITextParagraphFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ITextRange>
+    struct py_type<winrt::Windows::UI::Text::ITextRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ITextRange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::ITextSelection>
+    struct py_type<winrt::Windows::UI::Text::ITextSelection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "ITextSelection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Text::FontWeight>
+    struct py_type<winrt::Windows::UI::Text::FontWeight>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.text";
+        static constexpr const char* type_name = "FontWeight";
     };
 }

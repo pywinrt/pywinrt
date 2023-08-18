@@ -23,14 +23,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>
+    struct py_type<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment.preview";
+        static constexpr const char* type_name = "ClassicAppManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>
+    struct py_type<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment.preview";
+        static constexpr const char* type_name = "InstalledClassicAppInfo";
     };
 }

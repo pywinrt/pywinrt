@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Resources::Management
 {
-    struct module_state
-    {
-        PyTypeObject* type_IndexedResourceCandidate;
-        PyTypeObject* type_IndexedResourceQualifier;
-        PyTypeObject* type_ResourceIndexer;
-    };
-
     // ----- IndexedResourceCandidate class --------------------
     static constexpr const char* const type_name_IndexedResourceCandidate = "IndexedResourceCandidate";
 
@@ -519,48 +512,15 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Resources::Management");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IndexedResourceCandidate);
-        Py_VISIT(state->type_IndexedResourceQualifier);
-        Py_VISIT(state->type_ResourceIndexer);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IndexedResourceCandidate);
-        Py_CLEAR(state->type_IndexedResourceQualifier);
-        Py_CLEAR(state->type_ResourceIndexer);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Resources_Management",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Resources::Management
@@ -576,7 +536,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources_Management(void)
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -589,96 +549,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources_Management(void)
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IndexedResourceCandidate = py::register_python_type(module.get(), type_name_IndexedResourceCandidate, &type_spec_IndexedResourceCandidate, object_bases.get(), nullptr);
-    if (!state->type_IndexedResourceCandidate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IndexedResourceCandidate, &type_spec_IndexedResourceCandidate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IndexedResourceCandidate, &type_spec_IndexedResourceCandidate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IndexedResourceQualifier = py::register_python_type(module.get(), type_name_IndexedResourceQualifier, &type_spec_IndexedResourceQualifier, object_bases.get(), nullptr);
-    if (!state->type_IndexedResourceQualifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IndexedResourceQualifier, &type_spec_IndexedResourceQualifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IndexedResourceQualifier, &type_spec_IndexedResourceQualifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceIndexer = py::register_python_type(module.get(), type_name_ResourceIndexer, &type_spec_ResourceIndexer, object_bases.get(), nullptr);
-    if (!state->type_ResourceIndexer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceIndexer, &type_spec_ResourceIndexer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceIndexer, &type_spec_ResourceIndexer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IndexedResourceCandidate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IndexedResourceQualifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceIndexer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

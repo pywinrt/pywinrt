@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 {
-    struct module_state
-    {
-        PyTypeObject* type_UserDataTaskDataProviderConnection;
-        PyTypeObject* type_UserDataTaskDataProviderTriggerDetails;
-        PyTypeObject* type_UserDataTaskListCompleteTaskRequest;
-        PyTypeObject* type_UserDataTaskListCompleteTaskRequestEventArgs;
-        PyTypeObject* type_UserDataTaskListCreateOrUpdateTaskRequest;
-        PyTypeObject* type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs;
-        PyTypeObject* type_UserDataTaskListDeleteTaskRequest;
-        PyTypeObject* type_UserDataTaskListDeleteTaskRequestEventArgs;
-        PyTypeObject* type_UserDataTaskListSkipOccurrenceRequest;
-        PyTypeObject* type_UserDataTaskListSkipOccurrenceRequestEventArgs;
-        PyTypeObject* type_UserDataTaskListSyncManagerSyncRequest;
-        PyTypeObject* type_UserDataTaskListSyncManagerSyncRequestEventArgs;
-    };
-
     // ----- UserDataTaskDataProviderConnection class --------------------
     static constexpr const char* const type_name_UserDataTaskDataProviderConnection = "UserDataTaskDataProviderConnection";
 
@@ -1936,66 +1920,15 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataTasks::DataProvider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UserDataTaskDataProviderConnection);
-        Py_VISIT(state->type_UserDataTaskDataProviderTriggerDetails);
-        Py_VISIT(state->type_UserDataTaskListCompleteTaskRequest);
-        Py_VISIT(state->type_UserDataTaskListCompleteTaskRequestEventArgs);
-        Py_VISIT(state->type_UserDataTaskListCreateOrUpdateTaskRequest);
-        Py_VISIT(state->type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs);
-        Py_VISIT(state->type_UserDataTaskListDeleteTaskRequest);
-        Py_VISIT(state->type_UserDataTaskListDeleteTaskRequestEventArgs);
-        Py_VISIT(state->type_UserDataTaskListSkipOccurrenceRequest);
-        Py_VISIT(state->type_UserDataTaskListSkipOccurrenceRequestEventArgs);
-        Py_VISIT(state->type_UserDataTaskListSyncManagerSyncRequest);
-        Py_VISIT(state->type_UserDataTaskListSyncManagerSyncRequestEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UserDataTaskDataProviderConnection);
-        Py_CLEAR(state->type_UserDataTaskDataProviderTriggerDetails);
-        Py_CLEAR(state->type_UserDataTaskListCompleteTaskRequest);
-        Py_CLEAR(state->type_UserDataTaskListCompleteTaskRequestEventArgs);
-        Py_CLEAR(state->type_UserDataTaskListCreateOrUpdateTaskRequest);
-        Py_CLEAR(state->type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs);
-        Py_CLEAR(state->type_UserDataTaskListDeleteTaskRequest);
-        Py_CLEAR(state->type_UserDataTaskListDeleteTaskRequestEventArgs);
-        Py_CLEAR(state->type_UserDataTaskListSkipOccurrenceRequest);
-        Py_CLEAR(state->type_UserDataTaskListSkipOccurrenceRequestEventArgs);
-        Py_CLEAR(state->type_UserDataTaskListSyncManagerSyncRequest);
-        Py_CLEAR(state->type_UserDataTaskListSyncManagerSyncRequestEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
@@ -2011,7 +1944,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks_DataProvider
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2024,357 +1957,114 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks_DataProvider
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UserDataTaskDataProviderConnection = py::register_python_type(module.get(), type_name_UserDataTaskDataProviderConnection, &type_spec_UserDataTaskDataProviderConnection, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskDataProviderConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskDataProviderConnection, &type_spec_UserDataTaskDataProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskDataProviderConnection, &type_spec_UserDataTaskDataProviderConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskDataProviderTriggerDetails = py::register_python_type(module.get(), type_name_UserDataTaskDataProviderTriggerDetails, &type_spec_UserDataTaskDataProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskDataProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskDataProviderTriggerDetails, &type_spec_UserDataTaskDataProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskDataProviderTriggerDetails, &type_spec_UserDataTaskDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListCompleteTaskRequest = py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequest, &type_spec_UserDataTaskListCompleteTaskRequest, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListCompleteTaskRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequest, &type_spec_UserDataTaskListCompleteTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequest, &type_spec_UserDataTaskListCompleteTaskRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListCompleteTaskRequestEventArgs = py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequestEventArgs, &type_spec_UserDataTaskListCompleteTaskRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListCompleteTaskRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequestEventArgs, &type_spec_UserDataTaskListCompleteTaskRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCompleteTaskRequestEventArgs, &type_spec_UserDataTaskListCompleteTaskRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListCreateOrUpdateTaskRequest = py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequest, &type_spec_UserDataTaskListCreateOrUpdateTaskRequest, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListCreateOrUpdateTaskRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequest, &type_spec_UserDataTaskListCreateOrUpdateTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequest, &type_spec_UserDataTaskListCreateOrUpdateTaskRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs = py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, &type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, &type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, &type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListDeleteTaskRequest = py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequest, &type_spec_UserDataTaskListDeleteTaskRequest, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListDeleteTaskRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequest, &type_spec_UserDataTaskListDeleteTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequest, &type_spec_UserDataTaskListDeleteTaskRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListDeleteTaskRequestEventArgs = py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequestEventArgs, &type_spec_UserDataTaskListDeleteTaskRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListDeleteTaskRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequestEventArgs, &type_spec_UserDataTaskListDeleteTaskRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListDeleteTaskRequestEventArgs, &type_spec_UserDataTaskListDeleteTaskRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListSkipOccurrenceRequest = py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequest, &type_spec_UserDataTaskListSkipOccurrenceRequest, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListSkipOccurrenceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequest, &type_spec_UserDataTaskListSkipOccurrenceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequest, &type_spec_UserDataTaskListSkipOccurrenceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListSkipOccurrenceRequestEventArgs = py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequestEventArgs, &type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListSkipOccurrenceRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequestEventArgs, &type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSkipOccurrenceRequestEventArgs, &type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListSyncManagerSyncRequest = py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequest, &type_spec_UserDataTaskListSyncManagerSyncRequest, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListSyncManagerSyncRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequest, &type_spec_UserDataTaskListSyncManagerSyncRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequest, &type_spec_UserDataTaskListSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListSyncManagerSyncRequestEventArgs = py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequestEventArgs, &type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListSyncManagerSyncRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequestEventArgs, &type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManagerSyncRequestEventArgs, &type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskDataProviderConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskDataProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListCompleteTaskRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListCompleteTaskRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListCreateOrUpdateTaskRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListCreateOrUpdateTaskRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListDeleteTaskRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListDeleteTaskRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListSkipOccurrenceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListSkipOccurrenceRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListSyncManagerSyncRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListSyncManagerSyncRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

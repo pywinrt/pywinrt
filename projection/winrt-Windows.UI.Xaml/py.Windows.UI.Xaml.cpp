@@ -6,88 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdaptiveTrigger;
-        PyTypeObject* type_Application;
-        PyTypeObject* type_ApplicationInitializationCallbackParams;
-        PyTypeObject* type_BindingFailedEventArgs;
-        PyTypeObject* type_BringIntoViewOptions;
-        PyTypeObject* type_BringIntoViewRequestedEventArgs;
-        PyTypeObject* type_BrushTransition;
-        PyTypeObject* type_ColorPaletteResources;
-        PyTypeObject* type_CornerRadiusHelper;
-        PyTypeObject* type_DataContextChangedEventArgs;
-        PyTypeObject* type_DataTemplate;
-        PyTypeObject* type_DataTemplateKey;
-        PyTypeObject* type_DebugSettings;
-        PyTypeObject* type_DependencyObject;
-        PyTypeObject* type_DependencyObjectCollection;
-        PyTypeObject* type_DependencyProperty;
-        PyTypeObject* type_DependencyPropertyChangedEventArgs;
-        PyTypeObject* type_DispatcherTimer;
-        PyTypeObject* type_DragEventArgs;
-        PyTypeObject* type_DragOperationDeferral;
-        PyTypeObject* type_DragStartingEventArgs;
-        PyTypeObject* type_DragUI;
-        PyTypeObject* type_DragUIOverride;
-        PyTypeObject* type_DropCompletedEventArgs;
-        PyTypeObject* type_DurationHelper;
-        PyTypeObject* type_EffectiveViewportChangedEventArgs;
-        PyTypeObject* type_ElementFactoryGetArgs;
-        PyTypeObject* type_ElementFactoryRecycleArgs;
-        PyTypeObject* type_ElementSoundPlayer;
-        PyTypeObject* type_EventTrigger;
-        PyTypeObject* type_ExceptionRoutedEventArgs;
-        PyTypeObject* type_FrameworkElement;
-        PyTypeObject* type_FrameworkTemplate;
-        PyTypeObject* type_FrameworkView;
-        PyTypeObject* type_FrameworkViewSource;
-        PyTypeObject* type_GridLengthHelper;
-        PyTypeObject* type_MediaFailedRoutedEventArgs;
-        PyTypeObject* type_PointHelper;
-        PyTypeObject* type_PropertyMetadata;
-        PyTypeObject* type_PropertyPath;
-        PyTypeObject* type_RectHelper;
-        PyTypeObject* type_ResourceDictionary;
-        PyTypeObject* type_RoutedEvent;
-        PyTypeObject* type_RoutedEventArgs;
-        PyTypeObject* type_ScalarTransition;
-        PyTypeObject* type_Setter;
-        PyTypeObject* type_SetterBase;
-        PyTypeObject* type_SetterBaseCollection;
-        PyTypeObject* type_SizeChangedEventArgs;
-        PyTypeObject* type_SizeHelper;
-        PyTypeObject* type_StateTrigger;
-        PyTypeObject* type_StateTriggerBase;
-        PyTypeObject* type_Style;
-        PyTypeObject* type_TargetPropertyPath;
-        PyTypeObject* type_ThicknessHelper;
-        PyTypeObject* type_TriggerAction;
-        PyTypeObject* type_TriggerActionCollection;
-        PyTypeObject* type_TriggerBase;
-        PyTypeObject* type_TriggerCollection;
-        PyTypeObject* type_UIElement;
-        PyTypeObject* type_UIElementWeakCollection;
-        PyTypeObject* type_UnhandledExceptionEventArgs;
-        PyTypeObject* type_Vector3Transition;
-        PyTypeObject* type_VisualState;
-        PyTypeObject* type_VisualStateChangedEventArgs;
-        PyTypeObject* type_VisualStateGroup;
-        PyTypeObject* type_VisualStateManager;
-        PyTypeObject* type_VisualTransition;
-        PyTypeObject* type_Window;
-        PyTypeObject* type_WindowCreatedEventArgs;
-        PyTypeObject* type_XamlRoot;
-        PyTypeObject* type_XamlRootChangedEventArgs;
-        PyTypeObject* type_IDataTemplateExtension;
-        PyTypeObject* type_IElementFactory;
-        PyTypeObject* type_CornerRadius;
-        PyTypeObject* type_Duration;
-        PyTypeObject* type_GridLength;
-        PyTypeObject* type_Thickness;
-    };
-
     // ----- AdaptiveTrigger class --------------------
     static constexpr const char* const type_name_AdaptiveTrigger = "AdaptiveTrigger";
 
@@ -29671,198 +29589,15 @@ namespace py::cpp::Windows::UI::Xaml
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdaptiveTrigger);
-        Py_VISIT(state->type_Application);
-        Py_VISIT(state->type_ApplicationInitializationCallbackParams);
-        Py_VISIT(state->type_BindingFailedEventArgs);
-        Py_VISIT(state->type_BringIntoViewOptions);
-        Py_VISIT(state->type_BringIntoViewRequestedEventArgs);
-        Py_VISIT(state->type_BrushTransition);
-        Py_VISIT(state->type_ColorPaletteResources);
-        Py_VISIT(state->type_CornerRadiusHelper);
-        Py_VISIT(state->type_DataContextChangedEventArgs);
-        Py_VISIT(state->type_DataTemplate);
-        Py_VISIT(state->type_DataTemplateKey);
-        Py_VISIT(state->type_DebugSettings);
-        Py_VISIT(state->type_DependencyObject);
-        Py_VISIT(state->type_DependencyObjectCollection);
-        Py_VISIT(state->type_DependencyProperty);
-        Py_VISIT(state->type_DependencyPropertyChangedEventArgs);
-        Py_VISIT(state->type_DispatcherTimer);
-        Py_VISIT(state->type_DragEventArgs);
-        Py_VISIT(state->type_DragOperationDeferral);
-        Py_VISIT(state->type_DragStartingEventArgs);
-        Py_VISIT(state->type_DragUI);
-        Py_VISIT(state->type_DragUIOverride);
-        Py_VISIT(state->type_DropCompletedEventArgs);
-        Py_VISIT(state->type_DurationHelper);
-        Py_VISIT(state->type_EffectiveViewportChangedEventArgs);
-        Py_VISIT(state->type_ElementFactoryGetArgs);
-        Py_VISIT(state->type_ElementFactoryRecycleArgs);
-        Py_VISIT(state->type_ElementSoundPlayer);
-        Py_VISIT(state->type_EventTrigger);
-        Py_VISIT(state->type_ExceptionRoutedEventArgs);
-        Py_VISIT(state->type_FrameworkElement);
-        Py_VISIT(state->type_FrameworkTemplate);
-        Py_VISIT(state->type_FrameworkView);
-        Py_VISIT(state->type_FrameworkViewSource);
-        Py_VISIT(state->type_GridLengthHelper);
-        Py_VISIT(state->type_MediaFailedRoutedEventArgs);
-        Py_VISIT(state->type_PointHelper);
-        Py_VISIT(state->type_PropertyMetadata);
-        Py_VISIT(state->type_PropertyPath);
-        Py_VISIT(state->type_RectHelper);
-        Py_VISIT(state->type_ResourceDictionary);
-        Py_VISIT(state->type_RoutedEvent);
-        Py_VISIT(state->type_RoutedEventArgs);
-        Py_VISIT(state->type_ScalarTransition);
-        Py_VISIT(state->type_Setter);
-        Py_VISIT(state->type_SetterBase);
-        Py_VISIT(state->type_SetterBaseCollection);
-        Py_VISIT(state->type_SizeChangedEventArgs);
-        Py_VISIT(state->type_SizeHelper);
-        Py_VISIT(state->type_StateTrigger);
-        Py_VISIT(state->type_StateTriggerBase);
-        Py_VISIT(state->type_Style);
-        Py_VISIT(state->type_TargetPropertyPath);
-        Py_VISIT(state->type_ThicknessHelper);
-        Py_VISIT(state->type_TriggerAction);
-        Py_VISIT(state->type_TriggerActionCollection);
-        Py_VISIT(state->type_TriggerBase);
-        Py_VISIT(state->type_TriggerCollection);
-        Py_VISIT(state->type_UIElement);
-        Py_VISIT(state->type_UIElementWeakCollection);
-        Py_VISIT(state->type_UnhandledExceptionEventArgs);
-        Py_VISIT(state->type_Vector3Transition);
-        Py_VISIT(state->type_VisualState);
-        Py_VISIT(state->type_VisualStateChangedEventArgs);
-        Py_VISIT(state->type_VisualStateGroup);
-        Py_VISIT(state->type_VisualStateManager);
-        Py_VISIT(state->type_VisualTransition);
-        Py_VISIT(state->type_Window);
-        Py_VISIT(state->type_WindowCreatedEventArgs);
-        Py_VISIT(state->type_XamlRoot);
-        Py_VISIT(state->type_XamlRootChangedEventArgs);
-        Py_VISIT(state->type_IDataTemplateExtension);
-        Py_VISIT(state->type_IElementFactory);
-        Py_VISIT(state->type_CornerRadius);
-        Py_VISIT(state->type_Duration);
-        Py_VISIT(state->type_GridLength);
-        Py_VISIT(state->type_Thickness);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdaptiveTrigger);
-        Py_CLEAR(state->type_Application);
-        Py_CLEAR(state->type_ApplicationInitializationCallbackParams);
-        Py_CLEAR(state->type_BindingFailedEventArgs);
-        Py_CLEAR(state->type_BringIntoViewOptions);
-        Py_CLEAR(state->type_BringIntoViewRequestedEventArgs);
-        Py_CLEAR(state->type_BrushTransition);
-        Py_CLEAR(state->type_ColorPaletteResources);
-        Py_CLEAR(state->type_CornerRadiusHelper);
-        Py_CLEAR(state->type_DataContextChangedEventArgs);
-        Py_CLEAR(state->type_DataTemplate);
-        Py_CLEAR(state->type_DataTemplateKey);
-        Py_CLEAR(state->type_DebugSettings);
-        Py_CLEAR(state->type_DependencyObject);
-        Py_CLEAR(state->type_DependencyObjectCollection);
-        Py_CLEAR(state->type_DependencyProperty);
-        Py_CLEAR(state->type_DependencyPropertyChangedEventArgs);
-        Py_CLEAR(state->type_DispatcherTimer);
-        Py_CLEAR(state->type_DragEventArgs);
-        Py_CLEAR(state->type_DragOperationDeferral);
-        Py_CLEAR(state->type_DragStartingEventArgs);
-        Py_CLEAR(state->type_DragUI);
-        Py_CLEAR(state->type_DragUIOverride);
-        Py_CLEAR(state->type_DropCompletedEventArgs);
-        Py_CLEAR(state->type_DurationHelper);
-        Py_CLEAR(state->type_EffectiveViewportChangedEventArgs);
-        Py_CLEAR(state->type_ElementFactoryGetArgs);
-        Py_CLEAR(state->type_ElementFactoryRecycleArgs);
-        Py_CLEAR(state->type_ElementSoundPlayer);
-        Py_CLEAR(state->type_EventTrigger);
-        Py_CLEAR(state->type_ExceptionRoutedEventArgs);
-        Py_CLEAR(state->type_FrameworkElement);
-        Py_CLEAR(state->type_FrameworkTemplate);
-        Py_CLEAR(state->type_FrameworkView);
-        Py_CLEAR(state->type_FrameworkViewSource);
-        Py_CLEAR(state->type_GridLengthHelper);
-        Py_CLEAR(state->type_MediaFailedRoutedEventArgs);
-        Py_CLEAR(state->type_PointHelper);
-        Py_CLEAR(state->type_PropertyMetadata);
-        Py_CLEAR(state->type_PropertyPath);
-        Py_CLEAR(state->type_RectHelper);
-        Py_CLEAR(state->type_ResourceDictionary);
-        Py_CLEAR(state->type_RoutedEvent);
-        Py_CLEAR(state->type_RoutedEventArgs);
-        Py_CLEAR(state->type_ScalarTransition);
-        Py_CLEAR(state->type_Setter);
-        Py_CLEAR(state->type_SetterBase);
-        Py_CLEAR(state->type_SetterBaseCollection);
-        Py_CLEAR(state->type_SizeChangedEventArgs);
-        Py_CLEAR(state->type_SizeHelper);
-        Py_CLEAR(state->type_StateTrigger);
-        Py_CLEAR(state->type_StateTriggerBase);
-        Py_CLEAR(state->type_Style);
-        Py_CLEAR(state->type_TargetPropertyPath);
-        Py_CLEAR(state->type_ThicknessHelper);
-        Py_CLEAR(state->type_TriggerAction);
-        Py_CLEAR(state->type_TriggerActionCollection);
-        Py_CLEAR(state->type_TriggerBase);
-        Py_CLEAR(state->type_TriggerCollection);
-        Py_CLEAR(state->type_UIElement);
-        Py_CLEAR(state->type_UIElementWeakCollection);
-        Py_CLEAR(state->type_UnhandledExceptionEventArgs);
-        Py_CLEAR(state->type_Vector3Transition);
-        Py_CLEAR(state->type_VisualState);
-        Py_CLEAR(state->type_VisualStateChangedEventArgs);
-        Py_CLEAR(state->type_VisualStateGroup);
-        Py_CLEAR(state->type_VisualStateManager);
-        Py_CLEAR(state->type_VisualTransition);
-        Py_CLEAR(state->type_Window);
-        Py_CLEAR(state->type_WindowCreatedEventArgs);
-        Py_CLEAR(state->type_XamlRoot);
-        Py_CLEAR(state->type_XamlRootChangedEventArgs);
-        Py_CLEAR(state->type_IDataTemplateExtension);
-        Py_CLEAR(state->type_IElementFactory);
-        Py_CLEAR(state->type_CornerRadius);
-        Py_CLEAR(state->type_Duration);
-        Py_CLEAR(state->type_GridLength);
-        Py_CLEAR(state->type_Thickness);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml
@@ -29878,7 +29613,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -29891,17 +29626,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AdaptiveTrigger_Meta{PyType_FromSpec(&type_spec_AdaptiveTrigger_Meta)};
     if (!type_AdaptiveTrigger_Meta)
     {
         return nullptr;
     }
 
-    state->type_AdaptiveTrigger = py::register_python_type(module.get(), type_name_AdaptiveTrigger, &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get()));
-    if (!state->type_AdaptiveTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveTrigger, &type_spec_AdaptiveTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveTrigger, &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -29912,56 +29647,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_Application = py::register_python_type(module.get(), type_name_Application, &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get()));
-    if (!state->type_Application)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Application, &type_spec_Application, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Application, &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationInitializationCallbackParams = py::register_python_type(module.get(), type_name_ApplicationInitializationCallbackParams, &type_spec_ApplicationInitializationCallbackParams, object_bases.get(), nullptr);
-    if (!state->type_ApplicationInitializationCallbackParams)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationInitializationCallbackParams, &type_spec_ApplicationInitializationCallbackParams, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationInitializationCallbackParams, &type_spec_ApplicationInitializationCallbackParams, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BindingFailedEventArgs = py::register_python_type(module.get(), type_name_BindingFailedEventArgs, &type_spec_BindingFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BindingFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BindingFailedEventArgs, &type_spec_BindingFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BindingFailedEventArgs, &type_spec_BindingFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BringIntoViewOptions = py::register_python_type(module.get(), type_name_BringIntoViewOptions, &type_spec_BringIntoViewOptions, object_bases.get(), nullptr);
-    if (!state->type_BringIntoViewOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BringIntoViewOptions, &type_spec_BringIntoViewOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BringIntoViewOptions, &type_spec_BringIntoViewOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BringIntoViewRequestedEventArgs = py::register_python_type(module.get(), type_name_BringIntoViewRequestedEventArgs, &type_spec_BringIntoViewRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BringIntoViewRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BringIntoViewRequestedEventArgs, &type_spec_BringIntoViewRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BringIntoViewRequestedEventArgs, &type_spec_BringIntoViewRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BrushTransition = py::register_python_type(module.get(), type_name_BrushTransition, &type_spec_BrushTransition, object_bases.get(), nullptr);
-    if (!state->type_BrushTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BrushTransition, &type_spec_BrushTransition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BrushTransition, &type_spec_BrushTransition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorPaletteResources = py::register_python_type(module.get(), type_name_ColorPaletteResources, &type_spec_ColorPaletteResources, object_bases.get(), nullptr);
-    if (!state->type_ColorPaletteResources)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorPaletteResources, &type_spec_ColorPaletteResources, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorPaletteResources, &type_spec_ColorPaletteResources, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CornerRadiusHelper = py::register_python_type(module.get(), type_name_CornerRadiusHelper, &type_spec_CornerRadiusHelper, object_bases.get(), nullptr);
-    if (!state->type_CornerRadiusHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CornerRadiusHelper, &type_spec_CornerRadiusHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CornerRadiusHelper, &type_spec_CornerRadiusHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataContextChangedEventArgs = py::register_python_type(module.get(), type_name_DataContextChangedEventArgs, &type_spec_DataContextChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DataContextChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataContextChangedEventArgs, &type_spec_DataContextChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataContextChangedEventArgs, &type_spec_DataContextChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -29972,32 +29734,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_DataTemplate = py::register_python_type(module.get(), type_name_DataTemplate, &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get()));
-    if (!state->type_DataTemplate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataTemplate, &type_spec_DataTemplate, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataTemplate, &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataTemplateKey = py::register_python_type(module.get(), type_name_DataTemplateKey, &type_spec_DataTemplateKey, object_bases.get(), nullptr);
-    if (!state->type_DataTemplateKey)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataTemplateKey, &type_spec_DataTemplateKey, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataTemplateKey, &type_spec_DataTemplateKey, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DebugSettings = py::register_python_type(module.get(), type_name_DebugSettings, &type_spec_DebugSettings, object_bases.get(), nullptr);
-    if (!state->type_DebugSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DebugSettings, &type_spec_DebugSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DebugSettings, &type_spec_DebugSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DependencyObject = py::register_python_type(module.get(), type_name_DependencyObject, &type_spec_DependencyObject, object_bases.get(), nullptr);
-    if (!state->type_DependencyObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DependencyObject, &type_spec_DependencyObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DependencyObject, &type_spec_DependencyObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DependencyObjectCollection = py::register_python_type(module.get(), type_name_DependencyObjectCollection, &type_spec_DependencyObjectCollection, object_bases.get(), nullptr);
-    if (!state->type_DependencyObjectCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DependencyObjectCollection, &type_spec_DependencyObjectCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DependencyObjectCollection, &type_spec_DependencyObjectCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30008,56 +29785,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_DependencyProperty = py::register_python_type(module.get(), type_name_DependencyProperty, &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get()));
-    if (!state->type_DependencyProperty)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DependencyProperty, &type_spec_DependencyProperty, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DependencyProperty, &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DependencyPropertyChangedEventArgs = py::register_python_type(module.get(), type_name_DependencyPropertyChangedEventArgs, &type_spec_DependencyPropertyChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DependencyPropertyChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DependencyPropertyChangedEventArgs, &type_spec_DependencyPropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DependencyPropertyChangedEventArgs, &type_spec_DependencyPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DispatcherTimer = py::register_python_type(module.get(), type_name_DispatcherTimer, &type_spec_DispatcherTimer, object_bases.get(), nullptr);
-    if (!state->type_DispatcherTimer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DispatcherTimer, &type_spec_DispatcherTimer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DispatcherTimer, &type_spec_DispatcherTimer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragEventArgs = py::register_python_type(module.get(), type_name_DragEventArgs, &type_spec_DragEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DragEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragEventArgs, &type_spec_DragEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragEventArgs, &type_spec_DragEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragOperationDeferral = py::register_python_type(module.get(), type_name_DragOperationDeferral, &type_spec_DragOperationDeferral, object_bases.get(), nullptr);
-    if (!state->type_DragOperationDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragOperationDeferral, &type_spec_DragOperationDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragOperationDeferral, &type_spec_DragOperationDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragStartingEventArgs = py::register_python_type(module.get(), type_name_DragStartingEventArgs, &type_spec_DragStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DragStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragStartingEventArgs, &type_spec_DragStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragStartingEventArgs, &type_spec_DragStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragUI = py::register_python_type(module.get(), type_name_DragUI, &type_spec_DragUI, object_bases.get(), nullptr);
-    if (!state->type_DragUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragUI, &type_spec_DragUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragUI, &type_spec_DragUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragUIOverride = py::register_python_type(module.get(), type_name_DragUIOverride, &type_spec_DragUIOverride, object_bases.get(), nullptr);
-    if (!state->type_DragUIOverride)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragUIOverride, &type_spec_DragUIOverride, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragUIOverride, &type_spec_DragUIOverride, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DropCompletedEventArgs = py::register_python_type(module.get(), type_name_DropCompletedEventArgs, &type_spec_DropCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DropCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DropCompletedEventArgs, &type_spec_DropCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DropCompletedEventArgs, &type_spec_DropCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30068,26 +29872,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_DurationHelper = py::register_python_type(module.get(), type_name_DurationHelper, &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get()));
-    if (!state->type_DurationHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DurationHelper, &type_spec_DurationHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DurationHelper, &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EffectiveViewportChangedEventArgs = py::register_python_type(module.get(), type_name_EffectiveViewportChangedEventArgs, &type_spec_EffectiveViewportChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EffectiveViewportChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EffectiveViewportChangedEventArgs, &type_spec_EffectiveViewportChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EffectiveViewportChangedEventArgs, &type_spec_EffectiveViewportChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ElementFactoryGetArgs = py::register_python_type(module.get(), type_name_ElementFactoryGetArgs, &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr);
-    if (!state->type_ElementFactoryGetArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElementFactoryGetArgs, &type_spec_ElementFactoryGetArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElementFactoryGetArgs, &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ElementFactoryRecycleArgs = py::register_python_type(module.get(), type_name_ElementFactoryRecycleArgs, &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr);
-    if (!state->type_ElementFactoryRecycleArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElementFactoryRecycleArgs, &type_spec_ElementFactoryRecycleArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElementFactoryRecycleArgs, &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30098,20 +29914,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_ElementSoundPlayer = py::register_python_type(module.get(), type_name_ElementSoundPlayer, &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get()));
-    if (!state->type_ElementSoundPlayer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElementSoundPlayer, &type_spec_ElementSoundPlayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElementSoundPlayer, &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EventTrigger = py::register_python_type(module.get(), type_name_EventTrigger, &type_spec_EventTrigger, object_bases.get(), nullptr);
-    if (!state->type_EventTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EventTrigger, &type_spec_EventTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EventTrigger, &type_spec_EventTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExceptionRoutedEventArgs = py::register_python_type(module.get(), type_name_ExceptionRoutedEventArgs, &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ExceptionRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExceptionRoutedEventArgs, &type_spec_ExceptionRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExceptionRoutedEventArgs, &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30122,26 +29947,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_FrameworkElement = py::register_python_type(module.get(), type_name_FrameworkElement, &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get()));
-    if (!state->type_FrameworkElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameworkElement, &type_spec_FrameworkElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameworkElement, &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameworkTemplate = py::register_python_type(module.get(), type_name_FrameworkTemplate, &type_spec_FrameworkTemplate, object_bases.get(), nullptr);
-    if (!state->type_FrameworkTemplate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameworkTemplate, &type_spec_FrameworkTemplate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameworkTemplate, &type_spec_FrameworkTemplate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameworkView = py::register_python_type(module.get(), type_name_FrameworkView, &type_spec_FrameworkView, object_bases.get(), nullptr);
-    if (!state->type_FrameworkView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameworkView, &type_spec_FrameworkView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameworkView, &type_spec_FrameworkView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameworkViewSource = py::register_python_type(module.get(), type_name_FrameworkViewSource, &type_spec_FrameworkViewSource, object_bases.get(), nullptr);
-    if (!state->type_FrameworkViewSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameworkViewSource, &type_spec_FrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameworkViewSource, &type_spec_FrameworkViewSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30152,32 +29989,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_GridLengthHelper = py::register_python_type(module.get(), type_name_GridLengthHelper, &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get()));
-    if (!state->type_GridLengthHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridLengthHelper, &type_spec_GridLengthHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridLengthHelper, &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFailedRoutedEventArgs = py::register_python_type(module.get(), type_name_MediaFailedRoutedEventArgs, &type_spec_MediaFailedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaFailedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFailedRoutedEventArgs, &type_spec_MediaFailedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFailedRoutedEventArgs, &type_spec_MediaFailedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointHelper = py::register_python_type(module.get(), type_name_PointHelper, &type_spec_PointHelper, object_bases.get(), nullptr);
-    if (!state->type_PointHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointHelper, &type_spec_PointHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointHelper, &type_spec_PointHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PropertyMetadata = py::register_python_type(module.get(), type_name_PropertyMetadata, &type_spec_PropertyMetadata, object_bases.get(), nullptr);
-    if (!state->type_PropertyMetadata)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PropertyMetadata, &type_spec_PropertyMetadata, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PropertyMetadata, &type_spec_PropertyMetadata, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PropertyPath = py::register_python_type(module.get(), type_name_PropertyPath, &type_spec_PropertyPath, object_bases.get(), nullptr);
-    if (!state->type_PropertyPath)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PropertyPath, &type_spec_PropertyPath, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PropertyPath, &type_spec_PropertyPath, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30188,56 +30040,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_RectHelper = py::register_python_type(module.get(), type_name_RectHelper, &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get()));
-    if (!state->type_RectHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RectHelper, &type_spec_RectHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RectHelper, &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceDictionary = py::register_python_type(module.get(), type_name_ResourceDictionary, &type_spec_ResourceDictionary, object_bases.get(), nullptr);
-    if (!state->type_ResourceDictionary)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceDictionary, &type_spec_ResourceDictionary, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceDictionary, &type_spec_ResourceDictionary, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RoutedEvent = py::register_python_type(module.get(), type_name_RoutedEvent, &type_spec_RoutedEvent, object_bases.get(), nullptr);
-    if (!state->type_RoutedEvent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RoutedEvent, &type_spec_RoutedEvent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RoutedEvent, &type_spec_RoutedEvent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RoutedEventArgs = py::register_python_type(module.get(), type_name_RoutedEventArgs, &type_spec_RoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RoutedEventArgs, &type_spec_RoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RoutedEventArgs, &type_spec_RoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScalarTransition = py::register_python_type(module.get(), type_name_ScalarTransition, &type_spec_ScalarTransition, object_bases.get(), nullptr);
-    if (!state->type_ScalarTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScalarTransition, &type_spec_ScalarTransition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScalarTransition, &type_spec_ScalarTransition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Setter = py::register_python_type(module.get(), type_name_Setter, &type_spec_Setter, object_bases.get(), nullptr);
-    if (!state->type_Setter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Setter, &type_spec_Setter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Setter, &type_spec_Setter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SetterBase = py::register_python_type(module.get(), type_name_SetterBase, &type_spec_SetterBase, object_bases.get(), nullptr);
-    if (!state->type_SetterBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SetterBase, &type_spec_SetterBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SetterBase, &type_spec_SetterBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SetterBaseCollection = py::register_python_type(module.get(), type_name_SetterBaseCollection, &type_spec_SetterBaseCollection, object_bases.get(), nullptr);
-    if (!state->type_SetterBaseCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SetterBaseCollection, &type_spec_SetterBaseCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SetterBaseCollection, &type_spec_SetterBaseCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SizeChangedEventArgs = py::register_python_type(module.get(), type_name_SizeChangedEventArgs, &type_spec_SizeChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SizeChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SizeChangedEventArgs, &type_spec_SizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SizeChangedEventArgs, &type_spec_SizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30248,8 +30127,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_SizeHelper = py::register_python_type(module.get(), type_name_SizeHelper, &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get()));
-    if (!state->type_SizeHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SizeHelper, &type_spec_SizeHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SizeHelper, &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30260,56 +30142,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_StateTrigger = py::register_python_type(module.get(), type_name_StateTrigger, &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get()));
-    if (!state->type_StateTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StateTrigger, &type_spec_StateTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StateTrigger, &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StateTriggerBase = py::register_python_type(module.get(), type_name_StateTriggerBase, &type_spec_StateTriggerBase, object_bases.get(), nullptr);
-    if (!state->type_StateTriggerBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StateTriggerBase, &type_spec_StateTriggerBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StateTriggerBase, &type_spec_StateTriggerBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Style = py::register_python_type(module.get(), type_name_Style, &type_spec_Style, object_bases.get(), nullptr);
-    if (!state->type_Style)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Style, &type_spec_Style, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Style, &type_spec_Style, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetPropertyPath = py::register_python_type(module.get(), type_name_TargetPropertyPath, &type_spec_TargetPropertyPath, object_bases.get(), nullptr);
-    if (!state->type_TargetPropertyPath)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetPropertyPath, &type_spec_TargetPropertyPath, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetPropertyPath, &type_spec_TargetPropertyPath, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ThicknessHelper = py::register_python_type(module.get(), type_name_ThicknessHelper, &type_spec_ThicknessHelper, object_bases.get(), nullptr);
-    if (!state->type_ThicknessHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ThicknessHelper, &type_spec_ThicknessHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ThicknessHelper, &type_spec_ThicknessHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TriggerAction = py::register_python_type(module.get(), type_name_TriggerAction, &type_spec_TriggerAction, object_bases.get(), nullptr);
-    if (!state->type_TriggerAction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TriggerAction, &type_spec_TriggerAction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TriggerAction, &type_spec_TriggerAction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TriggerActionCollection = py::register_python_type(module.get(), type_name_TriggerActionCollection, &type_spec_TriggerActionCollection, object_bases.get(), nullptr);
-    if (!state->type_TriggerActionCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TriggerActionCollection, &type_spec_TriggerActionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TriggerActionCollection, &type_spec_TriggerActionCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TriggerBase = py::register_python_type(module.get(), type_name_TriggerBase, &type_spec_TriggerBase, object_bases.get(), nullptr);
-    if (!state->type_TriggerBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TriggerBase, &type_spec_TriggerBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TriggerBase, &type_spec_TriggerBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TriggerCollection = py::register_python_type(module.get(), type_name_TriggerCollection, &type_spec_TriggerCollection, object_bases.get(), nullptr);
-    if (!state->type_TriggerCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TriggerCollection, &type_spec_TriggerCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TriggerCollection, &type_spec_TriggerCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30320,44 +30229,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_UIElement = py::register_python_type(module.get(), type_name_UIElement, &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get()));
-    if (!state->type_UIElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UIElement, &type_spec_UIElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UIElement, &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UIElementWeakCollection = py::register_python_type(module.get(), type_name_UIElementWeakCollection, &type_spec_UIElementWeakCollection, object_bases.get(), nullptr);
-    if (!state->type_UIElementWeakCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UIElementWeakCollection, &type_spec_UIElementWeakCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UIElementWeakCollection, &type_spec_UIElementWeakCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnhandledExceptionEventArgs = py::register_python_type(module.get(), type_name_UnhandledExceptionEventArgs, &type_spec_UnhandledExceptionEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UnhandledExceptionEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnhandledExceptionEventArgs, &type_spec_UnhandledExceptionEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnhandledExceptionEventArgs, &type_spec_UnhandledExceptionEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector3Transition = py::register_python_type(module.get(), type_name_Vector3Transition, &type_spec_Vector3Transition, object_bases.get(), nullptr);
-    if (!state->type_Vector3Transition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector3Transition, &type_spec_Vector3Transition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector3Transition, &type_spec_Vector3Transition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualState = py::register_python_type(module.get(), type_name_VisualState, &type_spec_VisualState, object_bases.get(), nullptr);
-    if (!state->type_VisualState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualState, &type_spec_VisualState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualState, &type_spec_VisualState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualStateChangedEventArgs = py::register_python_type(module.get(), type_name_VisualStateChangedEventArgs, &type_spec_VisualStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VisualStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualStateChangedEventArgs, &type_spec_VisualStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualStateChangedEventArgs, &type_spec_VisualStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualStateGroup = py::register_python_type(module.get(), type_name_VisualStateGroup, &type_spec_VisualStateGroup, object_bases.get(), nullptr);
-    if (!state->type_VisualStateGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualStateGroup, &type_spec_VisualStateGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualStateGroup, &type_spec_VisualStateGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30368,14 +30298,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_VisualStateManager = py::register_python_type(module.get(), type_name_VisualStateManager, &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get()));
-    if (!state->type_VisualStateManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualStateManager, &type_spec_VisualStateManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualStateManager, &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualTransition = py::register_python_type(module.get(), type_name_VisualTransition, &type_spec_VisualTransition, object_bases.get(), nullptr);
-    if (!state->type_VisualTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualTransition, &type_spec_VisualTransition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualTransition, &type_spec_VisualTransition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30386,1860 +30322,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml(void) noexcept
         return nullptr;
     }
 
-    state->type_Window = py::register_python_type(module.get(), type_name_Window, &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get()));
-    if (!state->type_Window)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Window, &type_spec_Window, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Window, &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowCreatedEventArgs = py::register_python_type(module.get(), type_name_WindowCreatedEventArgs, &type_spec_WindowCreatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowCreatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowCreatedEventArgs, &type_spec_WindowCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowCreatedEventArgs, &type_spec_WindowCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlRoot = py::register_python_type(module.get(), type_name_XamlRoot, &type_spec_XamlRoot, object_bases.get(), nullptr);
-    if (!state->type_XamlRoot)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlRoot, &type_spec_XamlRoot, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlRoot, &type_spec_XamlRoot, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlRootChangedEventArgs = py::register_python_type(module.get(), type_name_XamlRootChangedEventArgs, &type_spec_XamlRootChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_XamlRootChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlRootChangedEventArgs, &type_spec_XamlRootChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlRootChangedEventArgs, &type_spec_XamlRootChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDataTemplateExtension = py::register_python_type(module.get(), type_name_IDataTemplateExtension, &type_spec_IDataTemplateExtension, object_bases.get(), nullptr);
-    if (!state->type_IDataTemplateExtension)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDataTemplateExtension, &type_spec_IDataTemplateExtension, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDataTemplateExtension, &type_spec_IDataTemplateExtension, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IElementFactory = py::register_python_type(module.get(), type_name_IElementFactory, &type_spec_IElementFactory, object_bases.get(), nullptr);
-    if (!state->type_IElementFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IElementFactory, &type_spec_IElementFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IElementFactory, &type_spec_IElementFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CornerRadius = py::register_python_type(module.get(), type_name_CornerRadius, &type_spec_CornerRadius, nullptr, nullptr);
-    if (!state->type_CornerRadius)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CornerRadius, &type_spec_CornerRadius, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CornerRadius, &type_spec_CornerRadius, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Duration = py::register_python_type(module.get(), type_name_Duration, &type_spec_Duration, nullptr, nullptr);
-    if (!state->type_Duration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Duration, &type_spec_Duration, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Duration, &type_spec_Duration, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridLength = py::register_python_type(module.get(), type_name_GridLength, &type_spec_GridLength, nullptr, nullptr);
-    if (!state->type_GridLength)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridLength, &type_spec_GridLength, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridLength, &type_spec_GridLength, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Thickness = py::register_python_type(module.get(), type_name_Thickness, &type_spec_Thickness, nullptr, nullptr);
-    if (!state->type_Thickness)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Thickness, &type_spec_Thickness, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Thickness, &type_spec_Thickness, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::AdaptiveTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::AdaptiveTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Application>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Application;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Application is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationInitializationCallbackParams;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::BindingFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BindingFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::BindingFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::BringIntoViewOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BringIntoViewOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::BringIntoViewOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BringIntoViewRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::BrushTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BrushTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::BrushTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ColorPaletteResources>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorPaletteResources;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ColorPaletteResources is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::CornerRadiusHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CornerRadiusHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::CornerRadiusHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataContextChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DataContextChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DataTemplate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataTemplate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DataTemplate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DataTemplateKey>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataTemplateKey;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DataTemplateKey is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DebugSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DebugSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DebugSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DependencyObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DependencyObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DependencyObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DependencyObjectCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DependencyObjectCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DependencyObjectCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DependencyProperty>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DependencyProperty;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DependencyProperty is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DependencyPropertyChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DispatcherTimer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DispatcherTimer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DispatcherTimer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DragEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DragEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DragOperationDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragOperationDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DragOperationDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DragStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DragStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DragUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DragUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DragUIOverride>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragUIOverride;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DragUIOverride is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DropCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DropCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DropCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::DurationHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DurationHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::DurationHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EffectiveViewportChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ElementFactoryGetArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElementFactoryGetArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ElementFactoryGetArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElementFactoryRecycleArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ElementSoundPlayer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElementSoundPlayer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ElementSoundPlayer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::EventTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EventTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::EventTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExceptionRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::FrameworkElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameworkElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::FrameworkElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::FrameworkTemplate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameworkTemplate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::FrameworkTemplate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::FrameworkView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameworkView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::FrameworkView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::FrameworkViewSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameworkViewSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::FrameworkViewSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::GridLengthHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridLengthHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::GridLengthHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFailedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::PointHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::PointHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::PropertyMetadata>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyMetadata;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::PropertyMetadata is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::PropertyPath>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyPath;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::PropertyPath is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::RectHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RectHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::RectHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ResourceDictionary>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceDictionary;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ResourceDictionary is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::RoutedEvent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RoutedEvent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::RoutedEvent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::RoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::RoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ScalarTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScalarTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ScalarTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Setter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Setter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Setter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::SetterBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SetterBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::SetterBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::SetterBaseCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SetterBaseCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::SetterBaseCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::SizeChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SizeChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::SizeChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::SizeHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SizeHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::SizeHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::StateTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StateTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::StateTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::StateTriggerBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StateTriggerBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::StateTriggerBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Style>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Style;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Style is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::TargetPropertyPath>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetPropertyPath;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::TargetPropertyPath is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::ThicknessHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThicknessHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::ThicknessHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::TriggerAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TriggerAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::TriggerAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::TriggerActionCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TriggerActionCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::TriggerActionCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::TriggerBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TriggerBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::TriggerBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::TriggerCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TriggerCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::TriggerCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::UIElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UIElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::UIElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::UIElementWeakCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UIElementWeakCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::UIElementWeakCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnhandledExceptionEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Vector3Transition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector3Transition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Vector3Transition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::VisualState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::VisualState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::VisualStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::VisualStateGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualStateGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::VisualStateGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::VisualStateManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualStateManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::VisualStateManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::VisualTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::VisualTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Window>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Window;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Window is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowCreatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::WindowCreatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::XamlRoot>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlRoot;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::XamlRoot is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlRootChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::XamlRootChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::IDataTemplateExtension>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDataTemplateExtension;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::IDataTemplateExtension is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::IElementFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IElementFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::IElementFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::CornerRadius>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CornerRadius;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::CornerRadius is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Duration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Duration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Duration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::GridLength>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridLength;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::GridLength is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Thickness>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Thickness;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Thickness is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

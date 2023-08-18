@@ -6,35 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Automation
 {
-    struct module_state
-    {
-        PyTypeObject* type_AnnotationPatternIdentifiers;
-        PyTypeObject* type_AutomationAnnotation;
-        PyTypeObject* type_AutomationElementIdentifiers;
-        PyTypeObject* type_AutomationProperties;
-        PyTypeObject* type_AutomationProperty;
-        PyTypeObject* type_DockPatternIdentifiers;
-        PyTypeObject* type_DragPatternIdentifiers;
-        PyTypeObject* type_DropTargetPatternIdentifiers;
-        PyTypeObject* type_ExpandCollapsePatternIdentifiers;
-        PyTypeObject* type_GridItemPatternIdentifiers;
-        PyTypeObject* type_GridPatternIdentifiers;
-        PyTypeObject* type_MultipleViewPatternIdentifiers;
-        PyTypeObject* type_RangeValuePatternIdentifiers;
-        PyTypeObject* type_ScrollPatternIdentifiers;
-        PyTypeObject* type_SelectionItemPatternIdentifiers;
-        PyTypeObject* type_SelectionPatternIdentifiers;
-        PyTypeObject* type_SpreadsheetItemPatternIdentifiers;
-        PyTypeObject* type_StylesPatternIdentifiers;
-        PyTypeObject* type_TableItemPatternIdentifiers;
-        PyTypeObject* type_TablePatternIdentifiers;
-        PyTypeObject* type_TogglePatternIdentifiers;
-        PyTypeObject* type_TransformPattern2Identifiers;
-        PyTypeObject* type_TransformPatternIdentifiers;
-        PyTypeObject* type_ValuePatternIdentifiers;
-        PyTypeObject* type_WindowPatternIdentifiers;
-    };
-
     // ----- AnnotationPatternIdentifiers class --------------------
     static constexpr const char* const type_name_AnnotationPatternIdentifiers = "AnnotationPatternIdentifiers";
 
@@ -7068,92 +7039,15 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Automation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AnnotationPatternIdentifiers);
-        Py_VISIT(state->type_AutomationAnnotation);
-        Py_VISIT(state->type_AutomationElementIdentifiers);
-        Py_VISIT(state->type_AutomationProperties);
-        Py_VISIT(state->type_AutomationProperty);
-        Py_VISIT(state->type_DockPatternIdentifiers);
-        Py_VISIT(state->type_DragPatternIdentifiers);
-        Py_VISIT(state->type_DropTargetPatternIdentifiers);
-        Py_VISIT(state->type_ExpandCollapsePatternIdentifiers);
-        Py_VISIT(state->type_GridItemPatternIdentifiers);
-        Py_VISIT(state->type_GridPatternIdentifiers);
-        Py_VISIT(state->type_MultipleViewPatternIdentifiers);
-        Py_VISIT(state->type_RangeValuePatternIdentifiers);
-        Py_VISIT(state->type_ScrollPatternIdentifiers);
-        Py_VISIT(state->type_SelectionItemPatternIdentifiers);
-        Py_VISIT(state->type_SelectionPatternIdentifiers);
-        Py_VISIT(state->type_SpreadsheetItemPatternIdentifiers);
-        Py_VISIT(state->type_StylesPatternIdentifiers);
-        Py_VISIT(state->type_TableItemPatternIdentifiers);
-        Py_VISIT(state->type_TablePatternIdentifiers);
-        Py_VISIT(state->type_TogglePatternIdentifiers);
-        Py_VISIT(state->type_TransformPattern2Identifiers);
-        Py_VISIT(state->type_TransformPatternIdentifiers);
-        Py_VISIT(state->type_ValuePatternIdentifiers);
-        Py_VISIT(state->type_WindowPatternIdentifiers);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AnnotationPatternIdentifiers);
-        Py_CLEAR(state->type_AutomationAnnotation);
-        Py_CLEAR(state->type_AutomationElementIdentifiers);
-        Py_CLEAR(state->type_AutomationProperties);
-        Py_CLEAR(state->type_AutomationProperty);
-        Py_CLEAR(state->type_DockPatternIdentifiers);
-        Py_CLEAR(state->type_DragPatternIdentifiers);
-        Py_CLEAR(state->type_DropTargetPatternIdentifiers);
-        Py_CLEAR(state->type_ExpandCollapsePatternIdentifiers);
-        Py_CLEAR(state->type_GridItemPatternIdentifiers);
-        Py_CLEAR(state->type_GridPatternIdentifiers);
-        Py_CLEAR(state->type_MultipleViewPatternIdentifiers);
-        Py_CLEAR(state->type_RangeValuePatternIdentifiers);
-        Py_CLEAR(state->type_ScrollPatternIdentifiers);
-        Py_CLEAR(state->type_SelectionItemPatternIdentifiers);
-        Py_CLEAR(state->type_SelectionPatternIdentifiers);
-        Py_CLEAR(state->type_SpreadsheetItemPatternIdentifiers);
-        Py_CLEAR(state->type_StylesPatternIdentifiers);
-        Py_CLEAR(state->type_TableItemPatternIdentifiers);
-        Py_CLEAR(state->type_TablePatternIdentifiers);
-        Py_CLEAR(state->type_TogglePatternIdentifiers);
-        Py_CLEAR(state->type_TransformPattern2Identifiers);
-        Py_CLEAR(state->type_TransformPatternIdentifiers);
-        Py_CLEAR(state->type_ValuePatternIdentifiers);
-        Py_CLEAR(state->type_WindowPatternIdentifiers);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Automation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Automation
@@ -7169,7 +7063,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7182,17 +7076,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AnnotationPatternIdentifiers_Meta{PyType_FromSpec(&type_spec_AnnotationPatternIdentifiers_Meta)};
     if (!type_AnnotationPatternIdentifiers_Meta)
     {
         return nullptr;
     }
 
-    state->type_AnnotationPatternIdentifiers = py::register_python_type(module.get(), type_name_AnnotationPatternIdentifiers, &type_spec_AnnotationPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Meta.get()));
-    if (!state->type_AnnotationPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnnotationPatternIdentifiers, &type_spec_AnnotationPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnnotationPatternIdentifiers, &type_spec_AnnotationPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7203,8 +7097,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_AutomationAnnotation = py::register_python_type(module.get(), type_name_AutomationAnnotation, &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Meta.get()));
-    if (!state->type_AutomationAnnotation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationAnnotation, &type_spec_AutomationAnnotation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationAnnotation, &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7215,8 +7112,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_AutomationElementIdentifiers = py::register_python_type(module.get(), type_name_AutomationElementIdentifiers, &type_spec_AutomationElementIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Meta.get()));
-    if (!state->type_AutomationElementIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationElementIdentifiers, &type_spec_AutomationElementIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationElementIdentifiers, &type_spec_AutomationElementIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7227,14 +7127,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_AutomationProperties = py::register_python_type(module.get(), type_name_AutomationProperties, &type_spec_AutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Meta.get()));
-    if (!state->type_AutomationProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationProperties, &type_spec_AutomationProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationProperties, &type_spec_AutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationProperty = py::register_python_type(module.get(), type_name_AutomationProperty, &type_spec_AutomationProperty, object_bases.get(), nullptr);
-    if (!state->type_AutomationProperty)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationProperty, &type_spec_AutomationProperty, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationProperty, &type_spec_AutomationProperty, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7245,8 +7151,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_DockPatternIdentifiers = py::register_python_type(module.get(), type_name_DockPatternIdentifiers, &type_spec_DockPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Meta.get()));
-    if (!state->type_DockPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DockPatternIdentifiers, &type_spec_DockPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DockPatternIdentifiers, &type_spec_DockPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7257,8 +7166,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_DragPatternIdentifiers = py::register_python_type(module.get(), type_name_DragPatternIdentifiers, &type_spec_DragPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Meta.get()));
-    if (!state->type_DragPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragPatternIdentifiers, &type_spec_DragPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragPatternIdentifiers, &type_spec_DragPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7269,8 +7181,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_DropTargetPatternIdentifiers = py::register_python_type(module.get(), type_name_DropTargetPatternIdentifiers, &type_spec_DropTargetPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Meta.get()));
-    if (!state->type_DropTargetPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DropTargetPatternIdentifiers, &type_spec_DropTargetPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DropTargetPatternIdentifiers, &type_spec_DropTargetPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7281,8 +7196,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_ExpandCollapsePatternIdentifiers = py::register_python_type(module.get(), type_name_ExpandCollapsePatternIdentifiers, &type_spec_ExpandCollapsePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Meta.get()));
-    if (!state->type_ExpandCollapsePatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExpandCollapsePatternIdentifiers, &type_spec_ExpandCollapsePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExpandCollapsePatternIdentifiers, &type_spec_ExpandCollapsePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7293,8 +7211,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_GridItemPatternIdentifiers = py::register_python_type(module.get(), type_name_GridItemPatternIdentifiers, &type_spec_GridItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Meta.get()));
-    if (!state->type_GridItemPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridItemPatternIdentifiers, &type_spec_GridItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridItemPatternIdentifiers, &type_spec_GridItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7305,8 +7226,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_GridPatternIdentifiers = py::register_python_type(module.get(), type_name_GridPatternIdentifiers, &type_spec_GridPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Meta.get()));
-    if (!state->type_GridPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridPatternIdentifiers, &type_spec_GridPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridPatternIdentifiers, &type_spec_GridPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7317,8 +7241,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_MultipleViewPatternIdentifiers = py::register_python_type(module.get(), type_name_MultipleViewPatternIdentifiers, &type_spec_MultipleViewPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Meta.get()));
-    if (!state->type_MultipleViewPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MultipleViewPatternIdentifiers, &type_spec_MultipleViewPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MultipleViewPatternIdentifiers, &type_spec_MultipleViewPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7329,8 +7256,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_RangeValuePatternIdentifiers = py::register_python_type(module.get(), type_name_RangeValuePatternIdentifiers, &type_spec_RangeValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Meta.get()));
-    if (!state->type_RangeValuePatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RangeValuePatternIdentifiers, &type_spec_RangeValuePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RangeValuePatternIdentifiers, &type_spec_RangeValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7341,8 +7271,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_ScrollPatternIdentifiers = py::register_python_type(module.get(), type_name_ScrollPatternIdentifiers, &type_spec_ScrollPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Meta.get()));
-    if (!state->type_ScrollPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScrollPatternIdentifiers, &type_spec_ScrollPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScrollPatternIdentifiers, &type_spec_ScrollPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7353,8 +7286,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_SelectionItemPatternIdentifiers = py::register_python_type(module.get(), type_name_SelectionItemPatternIdentifiers, &type_spec_SelectionItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Meta.get()));
-    if (!state->type_SelectionItemPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectionItemPatternIdentifiers, &type_spec_SelectionItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectionItemPatternIdentifiers, &type_spec_SelectionItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7365,8 +7301,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_SelectionPatternIdentifiers = py::register_python_type(module.get(), type_name_SelectionPatternIdentifiers, &type_spec_SelectionPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Meta.get()));
-    if (!state->type_SelectionPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectionPatternIdentifiers, &type_spec_SelectionPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectionPatternIdentifiers, &type_spec_SelectionPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7377,8 +7316,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_SpreadsheetItemPatternIdentifiers = py::register_python_type(module.get(), type_name_SpreadsheetItemPatternIdentifiers, &type_spec_SpreadsheetItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Meta.get()));
-    if (!state->type_SpreadsheetItemPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpreadsheetItemPatternIdentifiers, &type_spec_SpreadsheetItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpreadsheetItemPatternIdentifiers, &type_spec_SpreadsheetItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7389,8 +7331,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_StylesPatternIdentifiers = py::register_python_type(module.get(), type_name_StylesPatternIdentifiers, &type_spec_StylesPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Meta.get()));
-    if (!state->type_StylesPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StylesPatternIdentifiers, &type_spec_StylesPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StylesPatternIdentifiers, &type_spec_StylesPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7401,8 +7346,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_TableItemPatternIdentifiers = py::register_python_type(module.get(), type_name_TableItemPatternIdentifiers, &type_spec_TableItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Meta.get()));
-    if (!state->type_TableItemPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TableItemPatternIdentifiers, &type_spec_TableItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TableItemPatternIdentifiers, &type_spec_TableItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7413,8 +7361,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_TablePatternIdentifiers = py::register_python_type(module.get(), type_name_TablePatternIdentifiers, &type_spec_TablePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Meta.get()));
-    if (!state->type_TablePatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TablePatternIdentifiers, &type_spec_TablePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TablePatternIdentifiers, &type_spec_TablePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7425,8 +7376,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_TogglePatternIdentifiers = py::register_python_type(module.get(), type_name_TogglePatternIdentifiers, &type_spec_TogglePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Meta.get()));
-    if (!state->type_TogglePatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TogglePatternIdentifiers, &type_spec_TogglePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TogglePatternIdentifiers, &type_spec_TogglePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7437,8 +7391,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_TransformPattern2Identifiers = py::register_python_type(module.get(), type_name_TransformPattern2Identifiers, &type_spec_TransformPattern2Identifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Meta.get()));
-    if (!state->type_TransformPattern2Identifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TransformPattern2Identifiers, &type_spec_TransformPattern2Identifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TransformPattern2Identifiers, &type_spec_TransformPattern2Identifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7449,8 +7406,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_TransformPatternIdentifiers = py::register_python_type(module.get(), type_name_TransformPatternIdentifiers, &type_spec_TransformPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Meta.get()));
-    if (!state->type_TransformPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TransformPatternIdentifiers, &type_spec_TransformPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TransformPatternIdentifiers, &type_spec_TransformPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7461,8 +7421,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_ValuePatternIdentifiers = py::register_python_type(module.get(), type_name_ValuePatternIdentifiers, &type_spec_ValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Meta.get()));
-    if (!state->type_ValuePatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ValuePatternIdentifiers, &type_spec_ValuePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ValuePatternIdentifiers, &type_spec_ValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7473,587 +7436,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
         return nullptr;
     }
 
-    state->type_WindowPatternIdentifiers = py::register_python_type(module.get(), type_name_WindowPatternIdentifiers, &type_spec_WindowPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Meta.get()));
-    if (!state->type_WindowPatternIdentifiers)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowPatternIdentifiers, &type_spec_WindowPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowPatternIdentifiers, &type_spec_WindowPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnnotationPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationAnnotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::AutomationAnnotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationElementIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::AutomationProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationProperty>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationProperty;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::AutomationProperty is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DockPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DropTargetPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExpandCollapsePatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridItemPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MultipleViewPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RangeValuePatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScrollPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectionItemPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectionPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpreadsheetItemPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StylesPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TableItemPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TablePatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TogglePatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TransformPattern2Identifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TransformPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ValuePatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowPatternIdentifiers;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

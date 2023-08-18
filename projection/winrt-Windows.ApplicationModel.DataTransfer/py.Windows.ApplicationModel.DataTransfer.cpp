@@ -6,36 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::DataTransfer
 {
-    struct module_state
-    {
-        PyTypeObject* type_Clipboard;
-        PyTypeObject* type_ClipboardContentOptions;
-        PyTypeObject* type_ClipboardHistoryChangedEventArgs;
-        PyTypeObject* type_ClipboardHistoryItem;
-        PyTypeObject* type_ClipboardHistoryItemsResult;
-        PyTypeObject* type_DataPackage;
-        PyTypeObject* type_DataPackagePropertySet;
-        PyTypeObject* type_DataPackagePropertySetView;
-        PyTypeObject* type_DataPackageView;
-        PyTypeObject* type_DataProviderDeferral;
-        PyTypeObject* type_DataProviderRequest;
-        PyTypeObject* type_DataRequest;
-        PyTypeObject* type_DataRequestDeferral;
-        PyTypeObject* type_DataRequestedEventArgs;
-        PyTypeObject* type_DataTransferManager;
-        PyTypeObject* type_HtmlFormatHelper;
-        PyTypeObject* type_OperationCompletedEventArgs;
-        PyTypeObject* type_ShareCompletedEventArgs;
-        PyTypeObject* type_ShareProvider;
-        PyTypeObject* type_ShareProviderOperation;
-        PyTypeObject* type_ShareProvidersRequestedEventArgs;
-        PyTypeObject* type_ShareTargetInfo;
-        PyTypeObject* type_ShareUIOptions;
-        PyTypeObject* type_SharedStorageAccessManager;
-        PyTypeObject* type_StandardDataFormats;
-        PyTypeObject* type_TargetApplicationChosenEventArgs;
-    };
-
     // ----- Clipboard class --------------------
     static constexpr const char* const type_name_Clipboard = "Clipboard";
 
@@ -6713,94 +6683,15 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Clipboard);
-        Py_VISIT(state->type_ClipboardContentOptions);
-        Py_VISIT(state->type_ClipboardHistoryChangedEventArgs);
-        Py_VISIT(state->type_ClipboardHistoryItem);
-        Py_VISIT(state->type_ClipboardHistoryItemsResult);
-        Py_VISIT(state->type_DataPackage);
-        Py_VISIT(state->type_DataPackagePropertySet);
-        Py_VISIT(state->type_DataPackagePropertySetView);
-        Py_VISIT(state->type_DataPackageView);
-        Py_VISIT(state->type_DataProviderDeferral);
-        Py_VISIT(state->type_DataProviderRequest);
-        Py_VISIT(state->type_DataRequest);
-        Py_VISIT(state->type_DataRequestDeferral);
-        Py_VISIT(state->type_DataRequestedEventArgs);
-        Py_VISIT(state->type_DataTransferManager);
-        Py_VISIT(state->type_HtmlFormatHelper);
-        Py_VISIT(state->type_OperationCompletedEventArgs);
-        Py_VISIT(state->type_ShareCompletedEventArgs);
-        Py_VISIT(state->type_ShareProvider);
-        Py_VISIT(state->type_ShareProviderOperation);
-        Py_VISIT(state->type_ShareProvidersRequestedEventArgs);
-        Py_VISIT(state->type_ShareTargetInfo);
-        Py_VISIT(state->type_ShareUIOptions);
-        Py_VISIT(state->type_SharedStorageAccessManager);
-        Py_VISIT(state->type_StandardDataFormats);
-        Py_VISIT(state->type_TargetApplicationChosenEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Clipboard);
-        Py_CLEAR(state->type_ClipboardContentOptions);
-        Py_CLEAR(state->type_ClipboardHistoryChangedEventArgs);
-        Py_CLEAR(state->type_ClipboardHistoryItem);
-        Py_CLEAR(state->type_ClipboardHistoryItemsResult);
-        Py_CLEAR(state->type_DataPackage);
-        Py_CLEAR(state->type_DataPackagePropertySet);
-        Py_CLEAR(state->type_DataPackagePropertySetView);
-        Py_CLEAR(state->type_DataPackageView);
-        Py_CLEAR(state->type_DataProviderDeferral);
-        Py_CLEAR(state->type_DataProviderRequest);
-        Py_CLEAR(state->type_DataRequest);
-        Py_CLEAR(state->type_DataRequestDeferral);
-        Py_CLEAR(state->type_DataRequestedEventArgs);
-        Py_CLEAR(state->type_DataTransferManager);
-        Py_CLEAR(state->type_HtmlFormatHelper);
-        Py_CLEAR(state->type_OperationCompletedEventArgs);
-        Py_CLEAR(state->type_ShareCompletedEventArgs);
-        Py_CLEAR(state->type_ShareProvider);
-        Py_CLEAR(state->type_ShareProviderOperation);
-        Py_CLEAR(state->type_ShareProvidersRequestedEventArgs);
-        Py_CLEAR(state->type_ShareTargetInfo);
-        Py_CLEAR(state->type_ShareUIOptions);
-        Py_CLEAR(state->type_SharedStorageAccessManager);
-        Py_CLEAR(state->type_StandardDataFormats);
-        Py_CLEAR(state->type_TargetApplicationChosenEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_DataTransfer",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::DataTransfer
@@ -6816,7 +6707,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer(void) noexcep
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6829,149 +6720,218 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer(void) noexcep
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Clipboard = py::register_python_type(module.get(), type_name_Clipboard, &type_spec_Clipboard, object_bases.get(), nullptr);
-    if (!state->type_Clipboard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Clipboard, &type_spec_Clipboard, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Clipboard, &type_spec_Clipboard, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClipboardContentOptions = py::register_python_type(module.get(), type_name_ClipboardContentOptions, &type_spec_ClipboardContentOptions, object_bases.get(), nullptr);
-    if (!state->type_ClipboardContentOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClipboardContentOptions, &type_spec_ClipboardContentOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClipboardContentOptions, &type_spec_ClipboardContentOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClipboardHistoryChangedEventArgs = py::register_python_type(module.get(), type_name_ClipboardHistoryChangedEventArgs, &type_spec_ClipboardHistoryChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClipboardHistoryChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryChangedEventArgs, &type_spec_ClipboardHistoryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryChangedEventArgs, &type_spec_ClipboardHistoryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClipboardHistoryItem = py::register_python_type(module.get(), type_name_ClipboardHistoryItem, &type_spec_ClipboardHistoryItem, object_bases.get(), nullptr);
-    if (!state->type_ClipboardHistoryItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryItem, &type_spec_ClipboardHistoryItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryItem, &type_spec_ClipboardHistoryItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClipboardHistoryItemsResult = py::register_python_type(module.get(), type_name_ClipboardHistoryItemsResult, &type_spec_ClipboardHistoryItemsResult, object_bases.get(), nullptr);
-    if (!state->type_ClipboardHistoryItemsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryItemsResult, &type_spec_ClipboardHistoryItemsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClipboardHistoryItemsResult, &type_spec_ClipboardHistoryItemsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPackage = py::register_python_type(module.get(), type_name_DataPackage, &type_spec_DataPackage, object_bases.get(), nullptr);
-    if (!state->type_DataPackage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPackage, &type_spec_DataPackage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPackage, &type_spec_DataPackage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPackagePropertySet = py::register_python_type(module.get(), type_name_DataPackagePropertySet, &type_spec_DataPackagePropertySet, object_bases.get(), nullptr);
-    if (!state->type_DataPackagePropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPackagePropertySet, &type_spec_DataPackagePropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPackagePropertySet, &type_spec_DataPackagePropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPackagePropertySetView = py::register_python_type(module.get(), type_name_DataPackagePropertySetView, &type_spec_DataPackagePropertySetView, object_bases.get(), nullptr);
-    if (!state->type_DataPackagePropertySetView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPackagePropertySetView, &type_spec_DataPackagePropertySetView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPackagePropertySetView, &type_spec_DataPackagePropertySetView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPackageView = py::register_python_type(module.get(), type_name_DataPackageView, &type_spec_DataPackageView, object_bases.get(), nullptr);
-    if (!state->type_DataPackageView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPackageView, &type_spec_DataPackageView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPackageView, &type_spec_DataPackageView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataProviderDeferral = py::register_python_type(module.get(), type_name_DataProviderDeferral, &type_spec_DataProviderDeferral, object_bases.get(), nullptr);
-    if (!state->type_DataProviderDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataProviderDeferral, &type_spec_DataProviderDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataProviderDeferral, &type_spec_DataProviderDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataProviderRequest = py::register_python_type(module.get(), type_name_DataProviderRequest, &type_spec_DataProviderRequest, object_bases.get(), nullptr);
-    if (!state->type_DataProviderRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataProviderRequest, &type_spec_DataProviderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataProviderRequest, &type_spec_DataProviderRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataRequest = py::register_python_type(module.get(), type_name_DataRequest, &type_spec_DataRequest, object_bases.get(), nullptr);
-    if (!state->type_DataRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataRequest, &type_spec_DataRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataRequest, &type_spec_DataRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataRequestDeferral = py::register_python_type(module.get(), type_name_DataRequestDeferral, &type_spec_DataRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_DataRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataRequestDeferral, &type_spec_DataRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataRequestDeferral, &type_spec_DataRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataRequestedEventArgs = py::register_python_type(module.get(), type_name_DataRequestedEventArgs, &type_spec_DataRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DataRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataRequestedEventArgs, &type_spec_DataRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataRequestedEventArgs, &type_spec_DataRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataTransferManager = py::register_python_type(module.get(), type_name_DataTransferManager, &type_spec_DataTransferManager, object_bases.get(), nullptr);
-    if (!state->type_DataTransferManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataTransferManager, &type_spec_DataTransferManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataTransferManager, &type_spec_DataTransferManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HtmlFormatHelper = py::register_python_type(module.get(), type_name_HtmlFormatHelper, &type_spec_HtmlFormatHelper, object_bases.get(), nullptr);
-    if (!state->type_HtmlFormatHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HtmlFormatHelper, &type_spec_HtmlFormatHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HtmlFormatHelper, &type_spec_HtmlFormatHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OperationCompletedEventArgs = py::register_python_type(module.get(), type_name_OperationCompletedEventArgs, &type_spec_OperationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_OperationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OperationCompletedEventArgs, &type_spec_OperationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OperationCompletedEventArgs, &type_spec_OperationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareCompletedEventArgs = py::register_python_type(module.get(), type_name_ShareCompletedEventArgs, &type_spec_ShareCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ShareCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareCompletedEventArgs, &type_spec_ShareCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareCompletedEventArgs, &type_spec_ShareCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareProvider = py::register_python_type(module.get(), type_name_ShareProvider, &type_spec_ShareProvider, object_bases.get(), nullptr);
-    if (!state->type_ShareProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareProvider, &type_spec_ShareProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareProvider, &type_spec_ShareProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareProviderOperation = py::register_python_type(module.get(), type_name_ShareProviderOperation, &type_spec_ShareProviderOperation, object_bases.get(), nullptr);
-    if (!state->type_ShareProviderOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareProviderOperation, &type_spec_ShareProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareProviderOperation, &type_spec_ShareProviderOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareProvidersRequestedEventArgs = py::register_python_type(module.get(), type_name_ShareProvidersRequestedEventArgs, &type_spec_ShareProvidersRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ShareProvidersRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareProvidersRequestedEventArgs, &type_spec_ShareProvidersRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareProvidersRequestedEventArgs, &type_spec_ShareProvidersRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareTargetInfo = py::register_python_type(module.get(), type_name_ShareTargetInfo, &type_spec_ShareTargetInfo, object_bases.get(), nullptr);
-    if (!state->type_ShareTargetInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareTargetInfo, &type_spec_ShareTargetInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareTargetInfo, &type_spec_ShareTargetInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareUIOptions = py::register_python_type(module.get(), type_name_ShareUIOptions, &type_spec_ShareUIOptions, object_bases.get(), nullptr);
-    if (!state->type_ShareUIOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareUIOptions, &type_spec_ShareUIOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareUIOptions, &type_spec_ShareUIOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SharedStorageAccessManager = py::register_python_type(module.get(), type_name_SharedStorageAccessManager, &type_spec_SharedStorageAccessManager, object_bases.get(), nullptr);
-    if (!state->type_SharedStorageAccessManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SharedStorageAccessManager, &type_spec_SharedStorageAccessManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SharedStorageAccessManager, &type_spec_SharedStorageAccessManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6982,616 +6942,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer(void) noexcep
         return nullptr;
     }
 
-    state->type_StandardDataFormats = py::register_python_type(module.get(), type_name_StandardDataFormats, &type_spec_StandardDataFormats, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardDataFormats_Meta.get()));
-    if (!state->type_StandardDataFormats)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StandardDataFormats, &type_spec_StandardDataFormats, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardDataFormats_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StandardDataFormats, &type_spec_StandardDataFormats, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardDataFormats_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetApplicationChosenEventArgs = py::register_python_type(module.get(), type_name_TargetApplicationChosenEventArgs, &type_spec_TargetApplicationChosenEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TargetApplicationChosenEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetApplicationChosenEventArgs, &type_spec_TargetApplicationChosenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetApplicationChosenEventArgs, &type_spec_TargetApplicationChosenEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Clipboard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::Clipboard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClipboardContentOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClipboardHistoryChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClipboardHistoryItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClipboardHistoryItemsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPackage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataPackage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPackagePropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPackagePropertySetView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPackageView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataPackageView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataProviderDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataProviderRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataTransferManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HtmlFormatHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OperationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareProviderOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareProvidersRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareTargetInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareUIOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SharedStorageAccessManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StandardDataFormats;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetApplicationChosenEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -34,20 +34,23 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
+        static constexpr const char* type_name = "CustomSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
+        static constexpr const char* type_name = "CustomSensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
+        static constexpr const char* type_name = "CustomSensorReadingChangedEventArgs";
     };
 }

@@ -109,44 +109,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioChangeCounter>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioChangeCounter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioChangeCounter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioChangeReader>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioChangeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioChangeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioController>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioPin>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioPin>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioPin";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioPinValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioChangeCount>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioChangeCount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioChangeCount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>
+    struct py_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio";
+        static constexpr const char* type_name = "GpioChangeRecord";
     };
 }

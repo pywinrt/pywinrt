@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Networking::PushNotifications
 {
-    struct module_state
-    {
-        PyTypeObject* type_PushNotificationChannel;
-        PyTypeObject* type_PushNotificationChannelManager;
-        PyTypeObject* type_PushNotificationChannelManagerForUser;
-        PyTypeObject* type_PushNotificationChannelsRevokedEventArgs;
-        PyTypeObject* type_PushNotificationReceivedEventArgs;
-        PyTypeObject* type_RawNotification;
-    };
-
     // ----- PushNotificationChannel class --------------------
     static constexpr const char* const type_name_PushNotificationChannel = "PushNotificationChannel";
 
@@ -1119,54 +1109,15 @@ namespace py::cpp::Windows::Networking::PushNotifications
     PyDoc_STRVAR(module_doc, "Windows::Networking::PushNotifications");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PushNotificationChannel);
-        Py_VISIT(state->type_PushNotificationChannelManager);
-        Py_VISIT(state->type_PushNotificationChannelManagerForUser);
-        Py_VISIT(state->type_PushNotificationChannelsRevokedEventArgs);
-        Py_VISIT(state->type_PushNotificationReceivedEventArgs);
-        Py_VISIT(state->type_RawNotification);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PushNotificationChannel);
-        Py_CLEAR(state->type_PushNotificationChannelManager);
-        Py_CLEAR(state->type_PushNotificationChannelManagerForUser);
-        Py_CLEAR(state->type_PushNotificationChannelsRevokedEventArgs);
-        Py_CLEAR(state->type_PushNotificationReceivedEventArgs);
-        Py_CLEAR(state->type_RawNotification);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_PushNotifications",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::PushNotifications
@@ -1182,7 +1133,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_PushNotifications(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1195,183 +1146,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_PushNotifications(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PushNotificationChannel = py::register_python_type(module.get(), type_name_PushNotificationChannel, &type_spec_PushNotificationChannel, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannel, &type_spec_PushNotificationChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannel, &type_spec_PushNotificationChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PushNotificationChannelManager = py::register_python_type(module.get(), type_name_PushNotificationChannelManager, &type_spec_PushNotificationChannelManager, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationChannelManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManager, &type_spec_PushNotificationChannelManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManager, &type_spec_PushNotificationChannelManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PushNotificationChannelManagerForUser = py::register_python_type(module.get(), type_name_PushNotificationChannelManagerForUser, &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationChannelManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManagerForUser, &type_spec_PushNotificationChannelManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManagerForUser, &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PushNotificationChannelsRevokedEventArgs = py::register_python_type(module.get(), type_name_PushNotificationChannelsRevokedEventArgs, &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationChannelsRevokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelsRevokedEventArgs, &type_spec_PushNotificationChannelsRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationChannelsRevokedEventArgs, &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PushNotificationReceivedEventArgs = py::register_python_type(module.get(), type_name_PushNotificationReceivedEventArgs, &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationReceivedEventArgs, &type_spec_PushNotificationReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationReceivedEventArgs, &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RawNotification = py::register_python_type(module.get(), type_name_RawNotification, &type_spec_RawNotification, object_bases.get(), nullptr);
-    if (!state->type_RawNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RawNotification, &type_spec_RawNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RawNotification, &type_spec_RawNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::PushNotificationChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationChannelManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationChannelManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationChannelsRevokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::PushNotifications::RawNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::PushNotifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::PushNotifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RawNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::PushNotifications::RawNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

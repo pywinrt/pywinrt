@@ -85,56 +85,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayBitmapEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayBitmapRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayBlinkEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayColorRampEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayCustomEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayEffectPlaylist";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArraySolidEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "LampArrayUpdateRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>
+    struct py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
+        static constexpr const char* type_name = "ILampArrayEffect";
     };
 }

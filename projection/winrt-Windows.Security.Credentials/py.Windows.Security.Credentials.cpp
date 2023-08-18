@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Security::Credentials
 {
-    struct module_state
-    {
-        PyTypeObject* type_KeyCredential;
-        PyTypeObject* type_KeyCredentialAttestationResult;
-        PyTypeObject* type_KeyCredentialManager;
-        PyTypeObject* type_KeyCredentialOperationResult;
-        PyTypeObject* type_KeyCredentialRetrievalResult;
-        PyTypeObject* type_PasswordCredential;
-        PyTypeObject* type_PasswordCredentialPropertyStore;
-        PyTypeObject* type_PasswordVault;
-        PyTypeObject* type_WebAccount;
-        PyTypeObject* type_WebAccountProvider;
-        PyTypeObject* type_IWebAccount;
-    };
-
     // ----- KeyCredential class --------------------
     static constexpr const char* const type_name_KeyCredential = "KeyCredential";
 
@@ -2525,64 +2510,15 @@ namespace py::cpp::Windows::Security::Credentials
     PyDoc_STRVAR(module_doc, "Windows::Security::Credentials");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_KeyCredential);
-        Py_VISIT(state->type_KeyCredentialAttestationResult);
-        Py_VISIT(state->type_KeyCredentialManager);
-        Py_VISIT(state->type_KeyCredentialOperationResult);
-        Py_VISIT(state->type_KeyCredentialRetrievalResult);
-        Py_VISIT(state->type_PasswordCredential);
-        Py_VISIT(state->type_PasswordCredentialPropertyStore);
-        Py_VISIT(state->type_PasswordVault);
-        Py_VISIT(state->type_WebAccount);
-        Py_VISIT(state->type_WebAccountProvider);
-        Py_VISIT(state->type_IWebAccount);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_KeyCredential);
-        Py_CLEAR(state->type_KeyCredentialAttestationResult);
-        Py_CLEAR(state->type_KeyCredentialManager);
-        Py_CLEAR(state->type_KeyCredentialOperationResult);
-        Py_CLEAR(state->type_KeyCredentialRetrievalResult);
-        Py_CLEAR(state->type_PasswordCredential);
-        Py_CLEAR(state->type_PasswordCredentialPropertyStore);
-        Py_CLEAR(state->type_PasswordVault);
-        Py_CLEAR(state->type_WebAccount);
-        Py_CLEAR(state->type_WebAccountProvider);
-        Py_CLEAR(state->type_IWebAccount);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Credentials",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Credentials
@@ -2598,7 +2534,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2611,328 +2547,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_KeyCredential = py::register_python_type(module.get(), type_name_KeyCredential, &type_spec_KeyCredential, object_bases.get(), nullptr);
-    if (!state->type_KeyCredential)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyCredential, &type_spec_KeyCredential, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyCredential, &type_spec_KeyCredential, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyCredentialAttestationResult = py::register_python_type(module.get(), type_name_KeyCredentialAttestationResult, &type_spec_KeyCredentialAttestationResult, object_bases.get(), nullptr);
-    if (!state->type_KeyCredentialAttestationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyCredentialAttestationResult, &type_spec_KeyCredentialAttestationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyCredentialAttestationResult, &type_spec_KeyCredentialAttestationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyCredentialManager = py::register_python_type(module.get(), type_name_KeyCredentialManager, &type_spec_KeyCredentialManager, object_bases.get(), nullptr);
-    if (!state->type_KeyCredentialManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyCredentialManager, &type_spec_KeyCredentialManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyCredentialManager, &type_spec_KeyCredentialManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyCredentialOperationResult = py::register_python_type(module.get(), type_name_KeyCredentialOperationResult, &type_spec_KeyCredentialOperationResult, object_bases.get(), nullptr);
-    if (!state->type_KeyCredentialOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyCredentialOperationResult, &type_spec_KeyCredentialOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyCredentialOperationResult, &type_spec_KeyCredentialOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyCredentialRetrievalResult = py::register_python_type(module.get(), type_name_KeyCredentialRetrievalResult, &type_spec_KeyCredentialRetrievalResult, object_bases.get(), nullptr);
-    if (!state->type_KeyCredentialRetrievalResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyCredentialRetrievalResult, &type_spec_KeyCredentialRetrievalResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyCredentialRetrievalResult, &type_spec_KeyCredentialRetrievalResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PasswordCredential = py::register_python_type(module.get(), type_name_PasswordCredential, &type_spec_PasswordCredential, object_bases.get(), nullptr);
-    if (!state->type_PasswordCredential)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PasswordCredential, &type_spec_PasswordCredential, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PasswordCredential, &type_spec_PasswordCredential, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PasswordCredentialPropertyStore = py::register_python_type(module.get(), type_name_PasswordCredentialPropertyStore, &type_spec_PasswordCredentialPropertyStore, object_bases.get(), nullptr);
-    if (!state->type_PasswordCredentialPropertyStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PasswordCredentialPropertyStore, &type_spec_PasswordCredentialPropertyStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PasswordCredentialPropertyStore, &type_spec_PasswordCredentialPropertyStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PasswordVault = py::register_python_type(module.get(), type_name_PasswordVault, &type_spec_PasswordVault, object_bases.get(), nullptr);
-    if (!state->type_PasswordVault)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PasswordVault, &type_spec_PasswordVault, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PasswordVault, &type_spec_PasswordVault, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccount = py::register_python_type(module.get(), type_name_WebAccount, &type_spec_WebAccount, object_bases.get(), nullptr);
-    if (!state->type_WebAccount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccount, &type_spec_WebAccount, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccount, &type_spec_WebAccount, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProvider = py::register_python_type(module.get(), type_name_WebAccountProvider, &type_spec_WebAccountProvider, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProvider, &type_spec_WebAccountProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProvider, &type_spec_WebAccountProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccount = py::register_python_type(module.get(), type_name_IWebAccount, &type_spec_IWebAccount, object_bases.get(), nullptr);
-    if (!state->type_IWebAccount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccount, &type_spec_IWebAccount, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccount, &type_spec_IWebAccount, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::KeyCredential>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyCredential;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::KeyCredential is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyCredentialAttestationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::KeyCredentialAttestationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::KeyCredentialManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyCredentialManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::KeyCredentialManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyCredentialOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::KeyCredentialOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyCredentialRetrievalResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::PasswordCredential>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PasswordCredential;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::PasswordCredential is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PasswordCredentialPropertyStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::PasswordVault>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PasswordVault;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::PasswordVault is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::WebAccount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::WebAccount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::WebAccountProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::WebAccountProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Credentials::IWebAccount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Credentials;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Credentials");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Credentials::IWebAccount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

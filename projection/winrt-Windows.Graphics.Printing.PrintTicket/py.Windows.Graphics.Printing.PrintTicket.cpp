@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 {
-    struct module_state
-    {
-        PyTypeObject* type_PrintTicketCapabilities;
-        PyTypeObject* type_PrintTicketFeature;
-        PyTypeObject* type_PrintTicketOption;
-        PyTypeObject* type_PrintTicketParameterDefinition;
-        PyTypeObject* type_PrintTicketParameterInitializer;
-        PyTypeObject* type_PrintTicketValue;
-        PyTypeObject* type_WorkflowPrintTicket;
-        PyTypeObject* type_WorkflowPrintTicketValidationResult;
-    };
-
     // ----- PrintTicketCapabilities class --------------------
     static constexpr const char* const type_name_PrintTicketCapabilities = "PrintTicketCapabilities";
 
@@ -2460,58 +2448,15 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::PrintTicket");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PrintTicketCapabilities);
-        Py_VISIT(state->type_PrintTicketFeature);
-        Py_VISIT(state->type_PrintTicketOption);
-        Py_VISIT(state->type_PrintTicketParameterDefinition);
-        Py_VISIT(state->type_PrintTicketParameterInitializer);
-        Py_VISIT(state->type_PrintTicketValue);
-        Py_VISIT(state->type_WorkflowPrintTicket);
-        Py_VISIT(state->type_WorkflowPrintTicketValidationResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PrintTicketCapabilities);
-        Py_CLEAR(state->type_PrintTicketFeature);
-        Py_CLEAR(state->type_PrintTicketOption);
-        Py_CLEAR(state->type_PrintTicketParameterDefinition);
-        Py_CLEAR(state->type_PrintTicketParameterInitializer);
-        Py_CLEAR(state->type_PrintTicketValue);
-        Py_CLEAR(state->type_WorkflowPrintTicket);
-        Py_CLEAR(state->type_WorkflowPrintTicketValidationResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Printing_PrintTicket",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Printing::PrintTicket
@@ -2527,7 +2472,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintTicket(void) noexcep
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2540,241 +2485,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintTicket(void) noexcep
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PrintTicketCapabilities = py::register_python_type(module.get(), type_name_PrintTicketCapabilities, &type_spec_PrintTicketCapabilities, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketCapabilities, &type_spec_PrintTicketCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketCapabilities, &type_spec_PrintTicketCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTicketFeature = py::register_python_type(module.get(), type_name_PrintTicketFeature, &type_spec_PrintTicketFeature, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketFeature)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketFeature, &type_spec_PrintTicketFeature, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketFeature, &type_spec_PrintTicketFeature, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTicketOption = py::register_python_type(module.get(), type_name_PrintTicketOption, &type_spec_PrintTicketOption, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketOption)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketOption, &type_spec_PrintTicketOption, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketOption, &type_spec_PrintTicketOption, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTicketParameterDefinition = py::register_python_type(module.get(), type_name_PrintTicketParameterDefinition, &type_spec_PrintTicketParameterDefinition, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketParameterDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketParameterDefinition, &type_spec_PrintTicketParameterDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketParameterDefinition, &type_spec_PrintTicketParameterDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTicketParameterInitializer = py::register_python_type(module.get(), type_name_PrintTicketParameterInitializer, &type_spec_PrintTicketParameterInitializer, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketParameterInitializer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketParameterInitializer, &type_spec_PrintTicketParameterInitializer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketParameterInitializer, &type_spec_PrintTicketParameterInitializer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTicketValue = py::register_python_type(module.get(), type_name_PrintTicketValue, &type_spec_PrintTicketValue, object_bases.get(), nullptr);
-    if (!state->type_PrintTicketValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTicketValue, &type_spec_PrintTicketValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTicketValue, &type_spec_PrintTicketValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WorkflowPrintTicket = py::register_python_type(module.get(), type_name_WorkflowPrintTicket, &type_spec_WorkflowPrintTicket, object_bases.get(), nullptr);
-    if (!state->type_WorkflowPrintTicket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WorkflowPrintTicket, &type_spec_WorkflowPrintTicket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WorkflowPrintTicket, &type_spec_WorkflowPrintTicket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WorkflowPrintTicketValidationResult = py::register_python_type(module.get(), type_name_WorkflowPrintTicketValidationResult, &type_spec_WorkflowPrintTicketValidationResult, object_bases.get(), nullptr);
-    if (!state->type_WorkflowPrintTicketValidationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WorkflowPrintTicketValidationResult, &type_spec_WorkflowPrintTicketValidationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WorkflowPrintTicketValidationResult, &type_spec_WorkflowPrintTicketValidationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketFeature;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketParameterDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketParameterInitializer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTicketValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WorkflowPrintTicket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintTicket");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WorkflowPrintTicketValidationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Printers
 {
-    struct module_state
-    {
-        PyTypeObject* type_IppAttributeError;
-        PyTypeObject* type_IppAttributeValue;
-        PyTypeObject* type_IppIntegerRange;
-        PyTypeObject* type_IppPrintDevice;
-        PyTypeObject* type_IppResolution;
-        PyTypeObject* type_IppSetAttributesResult;
-        PyTypeObject* type_IppTextWithLanguage;
-        PyTypeObject* type_PageConfigurationSettings;
-        PyTypeObject* type_PdlPassthroughProvider;
-        PyTypeObject* type_PdlPassthroughTarget;
-        PyTypeObject* type_Print3DDevice;
-        PyTypeObject* type_PrintSchema;
-    };
-
     // ----- IppAttributeError class --------------------
     static constexpr const char* const type_name_IppAttributeError = "IppAttributeError";
 
@@ -3992,66 +3976,15 @@ namespace py::cpp::Windows::Devices::Printers
     PyDoc_STRVAR(module_doc, "Windows::Devices::Printers");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IppAttributeError);
-        Py_VISIT(state->type_IppAttributeValue);
-        Py_VISIT(state->type_IppIntegerRange);
-        Py_VISIT(state->type_IppPrintDevice);
-        Py_VISIT(state->type_IppResolution);
-        Py_VISIT(state->type_IppSetAttributesResult);
-        Py_VISIT(state->type_IppTextWithLanguage);
-        Py_VISIT(state->type_PageConfigurationSettings);
-        Py_VISIT(state->type_PdlPassthroughProvider);
-        Py_VISIT(state->type_PdlPassthroughTarget);
-        Py_VISIT(state->type_Print3DDevice);
-        Py_VISIT(state->type_PrintSchema);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IppAttributeError);
-        Py_CLEAR(state->type_IppAttributeValue);
-        Py_CLEAR(state->type_IppIntegerRange);
-        Py_CLEAR(state->type_IppPrintDevice);
-        Py_CLEAR(state->type_IppResolution);
-        Py_CLEAR(state->type_IppSetAttributesResult);
-        Py_CLEAR(state->type_IppTextWithLanguage);
-        Py_CLEAR(state->type_PageConfigurationSettings);
-        Py_CLEAR(state->type_PdlPassthroughProvider);
-        Py_CLEAR(state->type_PdlPassthroughTarget);
-        Py_CLEAR(state->type_Print3DDevice);
-        Py_CLEAR(state->type_PrintSchema);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Printers",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Printers
@@ -4067,7 +4000,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4080,357 +4013,114 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IppAttributeError = py::register_python_type(module.get(), type_name_IppAttributeError, &type_spec_IppAttributeError, object_bases.get(), nullptr);
-    if (!state->type_IppAttributeError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppAttributeError, &type_spec_IppAttributeError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppAttributeError, &type_spec_IppAttributeError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppAttributeValue = py::register_python_type(module.get(), type_name_IppAttributeValue, &type_spec_IppAttributeValue, object_bases.get(), nullptr);
-    if (!state->type_IppAttributeValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppAttributeValue, &type_spec_IppAttributeValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppAttributeValue, &type_spec_IppAttributeValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppIntegerRange = py::register_python_type(module.get(), type_name_IppIntegerRange, &type_spec_IppIntegerRange, object_bases.get(), nullptr);
-    if (!state->type_IppIntegerRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppIntegerRange, &type_spec_IppIntegerRange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppIntegerRange, &type_spec_IppIntegerRange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppPrintDevice = py::register_python_type(module.get(), type_name_IppPrintDevice, &type_spec_IppPrintDevice, object_bases.get(), nullptr);
-    if (!state->type_IppPrintDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppPrintDevice, &type_spec_IppPrintDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppPrintDevice, &type_spec_IppPrintDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppResolution = py::register_python_type(module.get(), type_name_IppResolution, &type_spec_IppResolution, object_bases.get(), nullptr);
-    if (!state->type_IppResolution)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppResolution, &type_spec_IppResolution, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppResolution, &type_spec_IppResolution, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppSetAttributesResult = py::register_python_type(module.get(), type_name_IppSetAttributesResult, &type_spec_IppSetAttributesResult, object_bases.get(), nullptr);
-    if (!state->type_IppSetAttributesResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppSetAttributesResult, &type_spec_IppSetAttributesResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppSetAttributesResult, &type_spec_IppSetAttributesResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IppTextWithLanguage = py::register_python_type(module.get(), type_name_IppTextWithLanguage, &type_spec_IppTextWithLanguage, object_bases.get(), nullptr);
-    if (!state->type_IppTextWithLanguage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IppTextWithLanguage, &type_spec_IppTextWithLanguage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IppTextWithLanguage, &type_spec_IppTextWithLanguage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PageConfigurationSettings = py::register_python_type(module.get(), type_name_PageConfigurationSettings, &type_spec_PageConfigurationSettings, object_bases.get(), nullptr);
-    if (!state->type_PageConfigurationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PageConfigurationSettings, &type_spec_PageConfigurationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PageConfigurationSettings, &type_spec_PageConfigurationSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PdlPassthroughProvider = py::register_python_type(module.get(), type_name_PdlPassthroughProvider, &type_spec_PdlPassthroughProvider, object_bases.get(), nullptr);
-    if (!state->type_PdlPassthroughProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PdlPassthroughProvider, &type_spec_PdlPassthroughProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PdlPassthroughProvider, &type_spec_PdlPassthroughProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PdlPassthroughTarget = py::register_python_type(module.get(), type_name_PdlPassthroughTarget, &type_spec_PdlPassthroughTarget, object_bases.get(), nullptr);
-    if (!state->type_PdlPassthroughTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PdlPassthroughTarget, &type_spec_PdlPassthroughTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PdlPassthroughTarget, &type_spec_PdlPassthroughTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DDevice = py::register_python_type(module.get(), type_name_Print3DDevice, &type_spec_Print3DDevice, object_bases.get(), nullptr);
-    if (!state->type_Print3DDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DDevice, &type_spec_Print3DDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DDevice, &type_spec_Print3DDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSchema = py::register_python_type(module.get(), type_name_PrintSchema, &type_spec_PrintSchema, object_bases.get(), nullptr);
-    if (!state->type_PrintSchema)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSchema, &type_spec_PrintSchema, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSchema, &type_spec_PrintSchema, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppAttributeError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppAttributeError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppAttributeError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppAttributeValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppAttributeValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppAttributeValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppIntegerRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppIntegerRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppIntegerRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppPrintDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppPrintDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppPrintDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppResolution>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppResolution;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppResolution is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppSetAttributesResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppSetAttributesResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::IppTextWithLanguage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IppTextWithLanguage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::IppTextWithLanguage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::PageConfigurationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PageConfigurationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::PageConfigurationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PdlPassthroughProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::PdlPassthroughProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PdlPassthroughTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::PdlPassthroughTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Print3DDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Print3DDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::PrintSchema>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSchema;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::PrintSchema is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

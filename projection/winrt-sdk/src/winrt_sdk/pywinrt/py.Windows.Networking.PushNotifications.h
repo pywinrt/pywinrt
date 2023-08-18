@@ -62,38 +62,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>
+    struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "PushNotificationChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>
+    struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "PushNotificationChannelManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>
+    struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "PushNotificationChannelManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>
+    struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "PushNotificationChannelsRevokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>
+    struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "PushNotificationReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::PushNotifications::RawNotification>
+    struct py_type<winrt::Windows::Networking::PushNotifications::RawNotification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
+        static constexpr const char* type_name = "RawNotification";
     };
 }

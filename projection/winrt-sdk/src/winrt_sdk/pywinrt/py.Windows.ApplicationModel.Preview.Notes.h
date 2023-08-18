@@ -40,26 +40,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
+        static constexpr const char* type_name = "NotePlacementChangedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
+        static constexpr const char* type_name = "NoteVisibilityChangedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
+        static constexpr const char* type_name = "NotesWindowManagerPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
+        static constexpr const char* type_name = "NotesWindowManagerPreviewShowNoteOptions";
     };
 }

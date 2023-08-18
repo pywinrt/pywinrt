@@ -6,32 +6,6 @@
 
 namespace py::cpp::Windows::Devices::PointOfService::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_BarcodeScannerDisableScannerRequest;
-        PyTypeObject* type_BarcodeScannerDisableScannerRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerEnableScannerRequest;
-        PyTypeObject* type_BarcodeScannerEnableScannerRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerFrameReader;
-        PyTypeObject* type_BarcodeScannerFrameReaderFrameArrivedEventArgs;
-        PyTypeObject* type_BarcodeScannerGetSymbologyAttributesRequest;
-        PyTypeObject* type_BarcodeScannerGetSymbologyAttributesRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerHideVideoPreviewRequest;
-        PyTypeObject* type_BarcodeScannerHideVideoPreviewRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerProviderConnection;
-        PyTypeObject* type_BarcodeScannerProviderTriggerDetails;
-        PyTypeObject* type_BarcodeScannerSetActiveSymbologiesRequest;
-        PyTypeObject* type_BarcodeScannerSetActiveSymbologiesRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerSetSymbologyAttributesRequest;
-        PyTypeObject* type_BarcodeScannerSetSymbologyAttributesRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerStartSoftwareTriggerRequest;
-        PyTypeObject* type_BarcodeScannerStartSoftwareTriggerRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerStopSoftwareTriggerRequest;
-        PyTypeObject* type_BarcodeScannerStopSoftwareTriggerRequestEventArgs;
-        PyTypeObject* type_BarcodeScannerVideoFrame;
-        PyTypeObject* type_BarcodeSymbologyAttributesBuilder;
-    };
-
     // ----- BarcodeScannerDisableScannerRequest class --------------------
     static constexpr const char* const type_name_BarcodeScannerDisableScannerRequest = "BarcodeScannerDisableScannerRequest";
 
@@ -4401,86 +4375,15 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     PyDoc_STRVAR(module_doc, "Windows::Devices::PointOfService::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BarcodeScannerDisableScannerRequest);
-        Py_VISIT(state->type_BarcodeScannerDisableScannerRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerEnableScannerRequest);
-        Py_VISIT(state->type_BarcodeScannerEnableScannerRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerFrameReader);
-        Py_VISIT(state->type_BarcodeScannerFrameReaderFrameArrivedEventArgs);
-        Py_VISIT(state->type_BarcodeScannerGetSymbologyAttributesRequest);
-        Py_VISIT(state->type_BarcodeScannerGetSymbologyAttributesRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerHideVideoPreviewRequest);
-        Py_VISIT(state->type_BarcodeScannerHideVideoPreviewRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerProviderConnection);
-        Py_VISIT(state->type_BarcodeScannerProviderTriggerDetails);
-        Py_VISIT(state->type_BarcodeScannerSetActiveSymbologiesRequest);
-        Py_VISIT(state->type_BarcodeScannerSetActiveSymbologiesRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerSetSymbologyAttributesRequest);
-        Py_VISIT(state->type_BarcodeScannerSetSymbologyAttributesRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerStartSoftwareTriggerRequest);
-        Py_VISIT(state->type_BarcodeScannerStartSoftwareTriggerRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerStopSoftwareTriggerRequest);
-        Py_VISIT(state->type_BarcodeScannerStopSoftwareTriggerRequestEventArgs);
-        Py_VISIT(state->type_BarcodeScannerVideoFrame);
-        Py_VISIT(state->type_BarcodeSymbologyAttributesBuilder);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BarcodeScannerDisableScannerRequest);
-        Py_CLEAR(state->type_BarcodeScannerDisableScannerRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerEnableScannerRequest);
-        Py_CLEAR(state->type_BarcodeScannerEnableScannerRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerFrameReader);
-        Py_CLEAR(state->type_BarcodeScannerFrameReaderFrameArrivedEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerGetSymbologyAttributesRequest);
-        Py_CLEAR(state->type_BarcodeScannerGetSymbologyAttributesRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerHideVideoPreviewRequest);
-        Py_CLEAR(state->type_BarcodeScannerHideVideoPreviewRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerProviderConnection);
-        Py_CLEAR(state->type_BarcodeScannerProviderTriggerDetails);
-        Py_CLEAR(state->type_BarcodeScannerSetActiveSymbologiesRequest);
-        Py_CLEAR(state->type_BarcodeScannerSetActiveSymbologiesRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerSetSymbologyAttributesRequest);
-        Py_CLEAR(state->type_BarcodeScannerSetSymbologyAttributesRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerStartSoftwareTriggerRequest);
-        Py_CLEAR(state->type_BarcodeScannerStartSoftwareTriggerRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerStopSoftwareTriggerRequest);
-        Py_CLEAR(state->type_BarcodeScannerStopSoftwareTriggerRequestEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerVideoFrame);
-        Py_CLEAR(state->type_BarcodeSymbologyAttributesBuilder);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_PointOfService_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::PointOfService::Provider
@@ -4496,7 +4399,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService_Provider(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4509,647 +4412,204 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService_Provider(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BarcodeScannerDisableScannerRequest = py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequest, &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerDisableScannerRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequest, &type_spec_BarcodeScannerDisableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequest, &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerDisableScannerRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequestEventArgs, &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerDisableScannerRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequestEventArgs, &type_spec_BarcodeScannerDisableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequestEventArgs, &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerEnableScannerRequest = py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequest, &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerEnableScannerRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequest, &type_spec_BarcodeScannerEnableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequest, &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerEnableScannerRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequestEventArgs, &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerEnableScannerRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequestEventArgs, &type_spec_BarcodeScannerEnableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequestEventArgs, &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerFrameReader = py::register_python_type(module.get(), type_name_BarcodeScannerFrameReader, &type_spec_BarcodeScannerFrameReader, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReader, &type_spec_BarcodeScannerFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReader, &type_spec_BarcodeScannerFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerFrameReaderFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerFrameReaderFrameArrivedEventArgs, &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerFrameReaderFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReaderFrameArrivedEventArgs, &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReaderFrameArrivedEventArgs, &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerGetSymbologyAttributesRequest = py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequest, &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerGetSymbologyAttributesRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequest, &type_spec_BarcodeScannerGetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequest, &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerGetSymbologyAttributesRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerGetSymbologyAttributesRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerHideVideoPreviewRequest = py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequest, &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerHideVideoPreviewRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequest, &type_spec_BarcodeScannerHideVideoPreviewRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequest, &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerHideVideoPreviewRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequestEventArgs, &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerHideVideoPreviewRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequestEventArgs, &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequestEventArgs, &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerProviderConnection = py::register_python_type(module.get(), type_name_BarcodeScannerProviderConnection, &type_spec_BarcodeScannerProviderConnection, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerProviderConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderConnection, &type_spec_BarcodeScannerProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderConnection, &type_spec_BarcodeScannerProviderConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerProviderTriggerDetails = py::register_python_type(module.get(), type_name_BarcodeScannerProviderTriggerDetails, &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderTriggerDetails, &type_spec_BarcodeScannerProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderTriggerDetails, &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerSetActiveSymbologiesRequest = py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequest, &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerSetActiveSymbologiesRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequest, &type_spec_BarcodeScannerSetActiveSymbologiesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequest, &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerSetActiveSymbologiesRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequestEventArgs, &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerSetActiveSymbologiesRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequestEventArgs, &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequestEventArgs, &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerSetSymbologyAttributesRequest = py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequest, &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerSetSymbologyAttributesRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequest, &type_spec_BarcodeScannerSetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequest, &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerSetSymbologyAttributesRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerSetSymbologyAttributesRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerStartSoftwareTriggerRequest = py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequest, &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerStartSoftwareTriggerRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequest, &type_spec_BarcodeScannerStartSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequest, &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerStartSoftwareTriggerRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerStartSoftwareTriggerRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerStopSoftwareTriggerRequest = py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequest, &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerStopSoftwareTriggerRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequest, &type_spec_BarcodeScannerStopSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequest, &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerStopSoftwareTriggerRequestEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerStopSoftwareTriggerRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerVideoFrame = py::register_python_type(module.get(), type_name_BarcodeScannerVideoFrame, &type_spec_BarcodeScannerVideoFrame, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerVideoFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerVideoFrame, &type_spec_BarcodeScannerVideoFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerVideoFrame, &type_spec_BarcodeScannerVideoFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeSymbologyAttributesBuilder = py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributesBuilder, &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), nullptr);
-    if (!state->type_BarcodeSymbologyAttributesBuilder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributesBuilder, &type_spec_BarcodeSymbologyAttributesBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributesBuilder, &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerDisableScannerRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerDisableScannerRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerEnableScannerRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerEnableScannerRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerFrameReaderFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerGetSymbologyAttributesRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerGetSymbologyAttributesRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerHideVideoPreviewRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerHideVideoPreviewRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerProviderConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerSetActiveSymbologiesRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerSetActiveSymbologiesRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerSetSymbologyAttributesRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerSetSymbologyAttributesRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerStartSoftwareTriggerRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerStartSoftwareTriggerRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerStopSoftwareTriggerRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerStopSoftwareTriggerRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerVideoFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeSymbologyAttributesBuilder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

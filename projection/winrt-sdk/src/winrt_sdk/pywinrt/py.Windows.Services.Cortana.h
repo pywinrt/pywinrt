@@ -70,26 +70,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>
+    struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaActionableInsights";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>
+    struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaActionableInsightsOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>
+    struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaPermissionsManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Cortana::CortanaSettings>
+    struct py_type<winrt::Windows::Services::Cortana::CortanaSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.cortana";
+        static constexpr const char* type_name = "CortanaSettings";
     };
 }

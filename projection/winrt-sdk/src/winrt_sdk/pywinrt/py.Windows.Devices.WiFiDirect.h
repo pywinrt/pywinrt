@@ -131,62 +131,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectAdvertisement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisherStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConnectionListener";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConnectionParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConnectionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectConnectionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectInformationElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
+        static constexpr const char* type_name = "WiFiDirectLegacySettings";
     };
 }

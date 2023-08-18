@@ -6,51 +6,6 @@
 
 namespace py::cpp::Windows::System::RemoteSystems
 {
-    struct module_state
-    {
-        PyTypeObject* type_KnownRemoteSystemCapabilities;
-        PyTypeObject* type_RemoteSystem;
-        PyTypeObject* type_RemoteSystemAddedEventArgs;
-        PyTypeObject* type_RemoteSystemApp;
-        PyTypeObject* type_RemoteSystemAppRegistration;
-        PyTypeObject* type_RemoteSystemAuthorizationKindFilter;
-        PyTypeObject* type_RemoteSystemConnectionInfo;
-        PyTypeObject* type_RemoteSystemConnectionRequest;
-        PyTypeObject* type_RemoteSystemDiscoveryTypeFilter;
-        PyTypeObject* type_RemoteSystemEnumerationCompletedEventArgs;
-        PyTypeObject* type_RemoteSystemKindFilter;
-        PyTypeObject* type_RemoteSystemKinds;
-        PyTypeObject* type_RemoteSystemRemovedEventArgs;
-        PyTypeObject* type_RemoteSystemSession;
-        PyTypeObject* type_RemoteSystemSessionAddedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionController;
-        PyTypeObject* type_RemoteSystemSessionCreationResult;
-        PyTypeObject* type_RemoteSystemSessionDisconnectedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionInfo;
-        PyTypeObject* type_RemoteSystemSessionInvitation;
-        PyTypeObject* type_RemoteSystemSessionInvitationListener;
-        PyTypeObject* type_RemoteSystemSessionInvitationReceivedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionJoinRequest;
-        PyTypeObject* type_RemoteSystemSessionJoinRequestedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionJoinResult;
-        PyTypeObject* type_RemoteSystemSessionMessageChannel;
-        PyTypeObject* type_RemoteSystemSessionOptions;
-        PyTypeObject* type_RemoteSystemSessionParticipant;
-        PyTypeObject* type_RemoteSystemSessionParticipantAddedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionParticipantRemovedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionParticipantWatcher;
-        PyTypeObject* type_RemoteSystemSessionRemovedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionUpdatedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionValueSetReceivedEventArgs;
-        PyTypeObject* type_RemoteSystemSessionWatcher;
-        PyTypeObject* type_RemoteSystemStatusTypeFilter;
-        PyTypeObject* type_RemoteSystemUpdatedEventArgs;
-        PyTypeObject* type_RemoteSystemWatcher;
-        PyTypeObject* type_RemoteSystemWatcherErrorOccurredEventArgs;
-        PyTypeObject* type_RemoteSystemWebAccountFilter;
-        PyTypeObject* type_IRemoteSystemFilter;
-    };
-
     // ----- KnownRemoteSystemCapabilities class --------------------
     static constexpr const char* const type_name_KnownRemoteSystemCapabilities = "KnownRemoteSystemCapabilities";
 
@@ -6593,124 +6548,15 @@ namespace py::cpp::Windows::System::RemoteSystems
     PyDoc_STRVAR(module_doc, "Windows::System::RemoteSystems");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_KnownRemoteSystemCapabilities);
-        Py_VISIT(state->type_RemoteSystem);
-        Py_VISIT(state->type_RemoteSystemAddedEventArgs);
-        Py_VISIT(state->type_RemoteSystemApp);
-        Py_VISIT(state->type_RemoteSystemAppRegistration);
-        Py_VISIT(state->type_RemoteSystemAuthorizationKindFilter);
-        Py_VISIT(state->type_RemoteSystemConnectionInfo);
-        Py_VISIT(state->type_RemoteSystemConnectionRequest);
-        Py_VISIT(state->type_RemoteSystemDiscoveryTypeFilter);
-        Py_VISIT(state->type_RemoteSystemEnumerationCompletedEventArgs);
-        Py_VISIT(state->type_RemoteSystemKindFilter);
-        Py_VISIT(state->type_RemoteSystemKinds);
-        Py_VISIT(state->type_RemoteSystemRemovedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSession);
-        Py_VISIT(state->type_RemoteSystemSessionAddedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionController);
-        Py_VISIT(state->type_RemoteSystemSessionCreationResult);
-        Py_VISIT(state->type_RemoteSystemSessionDisconnectedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionInfo);
-        Py_VISIT(state->type_RemoteSystemSessionInvitation);
-        Py_VISIT(state->type_RemoteSystemSessionInvitationListener);
-        Py_VISIT(state->type_RemoteSystemSessionInvitationReceivedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionJoinRequest);
-        Py_VISIT(state->type_RemoteSystemSessionJoinRequestedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionJoinResult);
-        Py_VISIT(state->type_RemoteSystemSessionMessageChannel);
-        Py_VISIT(state->type_RemoteSystemSessionOptions);
-        Py_VISIT(state->type_RemoteSystemSessionParticipant);
-        Py_VISIT(state->type_RemoteSystemSessionParticipantAddedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionParticipantRemovedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionParticipantWatcher);
-        Py_VISIT(state->type_RemoteSystemSessionRemovedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionUpdatedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionValueSetReceivedEventArgs);
-        Py_VISIT(state->type_RemoteSystemSessionWatcher);
-        Py_VISIT(state->type_RemoteSystemStatusTypeFilter);
-        Py_VISIT(state->type_RemoteSystemUpdatedEventArgs);
-        Py_VISIT(state->type_RemoteSystemWatcher);
-        Py_VISIT(state->type_RemoteSystemWatcherErrorOccurredEventArgs);
-        Py_VISIT(state->type_RemoteSystemWebAccountFilter);
-        Py_VISIT(state->type_IRemoteSystemFilter);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_KnownRemoteSystemCapabilities);
-        Py_CLEAR(state->type_RemoteSystem);
-        Py_CLEAR(state->type_RemoteSystemAddedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemApp);
-        Py_CLEAR(state->type_RemoteSystemAppRegistration);
-        Py_CLEAR(state->type_RemoteSystemAuthorizationKindFilter);
-        Py_CLEAR(state->type_RemoteSystemConnectionInfo);
-        Py_CLEAR(state->type_RemoteSystemConnectionRequest);
-        Py_CLEAR(state->type_RemoteSystemDiscoveryTypeFilter);
-        Py_CLEAR(state->type_RemoteSystemEnumerationCompletedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemKindFilter);
-        Py_CLEAR(state->type_RemoteSystemKinds);
-        Py_CLEAR(state->type_RemoteSystemRemovedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSession);
-        Py_CLEAR(state->type_RemoteSystemSessionAddedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionController);
-        Py_CLEAR(state->type_RemoteSystemSessionCreationResult);
-        Py_CLEAR(state->type_RemoteSystemSessionDisconnectedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionInfo);
-        Py_CLEAR(state->type_RemoteSystemSessionInvitation);
-        Py_CLEAR(state->type_RemoteSystemSessionInvitationListener);
-        Py_CLEAR(state->type_RemoteSystemSessionInvitationReceivedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionJoinRequest);
-        Py_CLEAR(state->type_RemoteSystemSessionJoinRequestedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionJoinResult);
-        Py_CLEAR(state->type_RemoteSystemSessionMessageChannel);
-        Py_CLEAR(state->type_RemoteSystemSessionOptions);
-        Py_CLEAR(state->type_RemoteSystemSessionParticipant);
-        Py_CLEAR(state->type_RemoteSystemSessionParticipantAddedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionParticipantRemovedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionParticipantWatcher);
-        Py_CLEAR(state->type_RemoteSystemSessionRemovedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionUpdatedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionValueSetReceivedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemSessionWatcher);
-        Py_CLEAR(state->type_RemoteSystemStatusTypeFilter);
-        Py_CLEAR(state->type_RemoteSystemUpdatedEventArgs);
-        Py_CLEAR(state->type_RemoteSystemWatcher);
-        Py_CLEAR(state->type_RemoteSystemWatcherErrorOccurredEventArgs);
-        Py_CLEAR(state->type_RemoteSystemWebAccountFilter);
-        Py_CLEAR(state->type_IRemoteSystemFilter);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_RemoteSystems",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::RemoteSystems
@@ -6726,7 +6572,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteSystems(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6739,77 +6585,107 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteSystems(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_KnownRemoteSystemCapabilities_Meta{PyType_FromSpec(&type_spec_KnownRemoteSystemCapabilities_Meta)};
     if (!type_KnownRemoteSystemCapabilities_Meta)
     {
         return nullptr;
     }
 
-    state->type_KnownRemoteSystemCapabilities = py::register_python_type(module.get(), type_name_KnownRemoteSystemCapabilities, &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Meta.get()));
-    if (!state->type_KnownRemoteSystemCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownRemoteSystemCapabilities, &type_spec_KnownRemoteSystemCapabilities, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownRemoteSystemCapabilities, &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystem = py::register_python_type(module.get(), type_name_RemoteSystem, &type_spec_RemoteSystem, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystem, &type_spec_RemoteSystem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystem, &type_spec_RemoteSystem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemAddedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemAddedEventArgs, &type_spec_RemoteSystemAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAddedEventArgs, &type_spec_RemoteSystemAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAddedEventArgs, &type_spec_RemoteSystemAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemApp = py::register_python_type(module.get(), type_name_RemoteSystemApp, &type_spec_RemoteSystemApp, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemApp)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemApp, &type_spec_RemoteSystemApp, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemApp, &type_spec_RemoteSystemApp, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemAppRegistration = py::register_python_type(module.get(), type_name_RemoteSystemAppRegistration, &type_spec_RemoteSystemAppRegistration, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemAppRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAppRegistration, &type_spec_RemoteSystemAppRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAppRegistration, &type_spec_RemoteSystemAppRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemAuthorizationKindFilter = py::register_python_type(module.get(), type_name_RemoteSystemAuthorizationKindFilter, &type_spec_RemoteSystemAuthorizationKindFilter, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemAuthorizationKindFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAuthorizationKindFilter, &type_spec_RemoteSystemAuthorizationKindFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemAuthorizationKindFilter, &type_spec_RemoteSystemAuthorizationKindFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemConnectionInfo = py::register_python_type(module.get(), type_name_RemoteSystemConnectionInfo, &type_spec_RemoteSystemConnectionInfo, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemConnectionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemConnectionInfo, &type_spec_RemoteSystemConnectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemConnectionInfo, &type_spec_RemoteSystemConnectionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemConnectionRequest = py::register_python_type(module.get(), type_name_RemoteSystemConnectionRequest, &type_spec_RemoteSystemConnectionRequest, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemConnectionRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemConnectionRequest, &type_spec_RemoteSystemConnectionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemConnectionRequest, &type_spec_RemoteSystemConnectionRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemDiscoveryTypeFilter = py::register_python_type(module.get(), type_name_RemoteSystemDiscoveryTypeFilter, &type_spec_RemoteSystemDiscoveryTypeFilter, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemDiscoveryTypeFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemDiscoveryTypeFilter, &type_spec_RemoteSystemDiscoveryTypeFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemDiscoveryTypeFilter, &type_spec_RemoteSystemDiscoveryTypeFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemEnumerationCompletedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemEnumerationCompletedEventArgs, &type_spec_RemoteSystemEnumerationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemEnumerationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemEnumerationCompletedEventArgs, &type_spec_RemoteSystemEnumerationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemEnumerationCompletedEventArgs, &type_spec_RemoteSystemEnumerationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemKindFilter = py::register_python_type(module.get(), type_name_RemoteSystemKindFilter, &type_spec_RemoteSystemKindFilter, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemKindFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemKindFilter, &type_spec_RemoteSystemKindFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemKindFilter, &type_spec_RemoteSystemKindFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6820,1129 +6696,276 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteSystems(void) noexcept
         return nullptr;
     }
 
-    state->type_RemoteSystemKinds = py::register_python_type(module.get(), type_name_RemoteSystemKinds, &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Meta.get()));
-    if (!state->type_RemoteSystemKinds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemKinds, &type_spec_RemoteSystemKinds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemKinds, &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemRemovedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemRemovedEventArgs, &type_spec_RemoteSystemRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemRemovedEventArgs, &type_spec_RemoteSystemRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemRemovedEventArgs, &type_spec_RemoteSystemRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSession = py::register_python_type(module.get(), type_name_RemoteSystemSession, &type_spec_RemoteSystemSession, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSession, &type_spec_RemoteSystemSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSession, &type_spec_RemoteSystemSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionAddedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionAddedEventArgs, &type_spec_RemoteSystemSessionAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionAddedEventArgs, &type_spec_RemoteSystemSessionAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionAddedEventArgs, &type_spec_RemoteSystemSessionAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionController = py::register_python_type(module.get(), type_name_RemoteSystemSessionController, &type_spec_RemoteSystemSessionController, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionController, &type_spec_RemoteSystemSessionController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionController, &type_spec_RemoteSystemSessionController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionCreationResult = py::register_python_type(module.get(), type_name_RemoteSystemSessionCreationResult, &type_spec_RemoteSystemSessionCreationResult, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionCreationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionCreationResult, &type_spec_RemoteSystemSessionCreationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionCreationResult, &type_spec_RemoteSystemSessionCreationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionDisconnectedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionDisconnectedEventArgs, &type_spec_RemoteSystemSessionDisconnectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionDisconnectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionDisconnectedEventArgs, &type_spec_RemoteSystemSessionDisconnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionDisconnectedEventArgs, &type_spec_RemoteSystemSessionDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionInfo = py::register_python_type(module.get(), type_name_RemoteSystemSessionInfo, &type_spec_RemoteSystemSessionInfo, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInfo, &type_spec_RemoteSystemSessionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInfo, &type_spec_RemoteSystemSessionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionInvitation = py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitation, &type_spec_RemoteSystemSessionInvitation, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionInvitation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitation, &type_spec_RemoteSystemSessionInvitation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitation, &type_spec_RemoteSystemSessionInvitation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionInvitationListener = py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationListener, &type_spec_RemoteSystemSessionInvitationListener, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionInvitationListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationListener, &type_spec_RemoteSystemSessionInvitationListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationListener, &type_spec_RemoteSystemSessionInvitationListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionInvitationReceivedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationReceivedEventArgs, &type_spec_RemoteSystemSessionInvitationReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionInvitationReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationReceivedEventArgs, &type_spec_RemoteSystemSessionInvitationReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionInvitationReceivedEventArgs, &type_spec_RemoteSystemSessionInvitationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionJoinRequest = py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequest, &type_spec_RemoteSystemSessionJoinRequest, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionJoinRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequest, &type_spec_RemoteSystemSessionJoinRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequest, &type_spec_RemoteSystemSessionJoinRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionJoinRequestedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequestedEventArgs, &type_spec_RemoteSystemSessionJoinRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionJoinRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequestedEventArgs, &type_spec_RemoteSystemSessionJoinRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinRequestedEventArgs, &type_spec_RemoteSystemSessionJoinRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionJoinResult = py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinResult, &type_spec_RemoteSystemSessionJoinResult, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionJoinResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinResult, &type_spec_RemoteSystemSessionJoinResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionJoinResult, &type_spec_RemoteSystemSessionJoinResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionMessageChannel = py::register_python_type(module.get(), type_name_RemoteSystemSessionMessageChannel, &type_spec_RemoteSystemSessionMessageChannel, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionMessageChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionMessageChannel, &type_spec_RemoteSystemSessionMessageChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionMessageChannel, &type_spec_RemoteSystemSessionMessageChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionOptions = py::register_python_type(module.get(), type_name_RemoteSystemSessionOptions, &type_spec_RemoteSystemSessionOptions, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionOptions, &type_spec_RemoteSystemSessionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionOptions, &type_spec_RemoteSystemSessionOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionParticipant = py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipant, &type_spec_RemoteSystemSessionParticipant, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionParticipant)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipant, &type_spec_RemoteSystemSessionParticipant, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipant, &type_spec_RemoteSystemSessionParticipant, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionParticipantAddedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantAddedEventArgs, &type_spec_RemoteSystemSessionParticipantAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionParticipantAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantAddedEventArgs, &type_spec_RemoteSystemSessionParticipantAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantAddedEventArgs, &type_spec_RemoteSystemSessionParticipantAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionParticipantRemovedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantRemovedEventArgs, &type_spec_RemoteSystemSessionParticipantRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionParticipantRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantRemovedEventArgs, &type_spec_RemoteSystemSessionParticipantRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantRemovedEventArgs, &type_spec_RemoteSystemSessionParticipantRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionParticipantWatcher = py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantWatcher, &type_spec_RemoteSystemSessionParticipantWatcher, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionParticipantWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantWatcher, &type_spec_RemoteSystemSessionParticipantWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionParticipantWatcher, &type_spec_RemoteSystemSessionParticipantWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionRemovedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionRemovedEventArgs, &type_spec_RemoteSystemSessionRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionRemovedEventArgs, &type_spec_RemoteSystemSessionRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionRemovedEventArgs, &type_spec_RemoteSystemSessionRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionUpdatedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionUpdatedEventArgs, &type_spec_RemoteSystemSessionUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionUpdatedEventArgs, &type_spec_RemoteSystemSessionUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionUpdatedEventArgs, &type_spec_RemoteSystemSessionUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionValueSetReceivedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemSessionValueSetReceivedEventArgs, &type_spec_RemoteSystemSessionValueSetReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionValueSetReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionValueSetReceivedEventArgs, &type_spec_RemoteSystemSessionValueSetReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionValueSetReceivedEventArgs, &type_spec_RemoteSystemSessionValueSetReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemSessionWatcher = py::register_python_type(module.get(), type_name_RemoteSystemSessionWatcher, &type_spec_RemoteSystemSessionWatcher, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemSessionWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionWatcher, &type_spec_RemoteSystemSessionWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemSessionWatcher, &type_spec_RemoteSystemSessionWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemStatusTypeFilter = py::register_python_type(module.get(), type_name_RemoteSystemStatusTypeFilter, &type_spec_RemoteSystemStatusTypeFilter, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemStatusTypeFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemStatusTypeFilter, &type_spec_RemoteSystemStatusTypeFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemStatusTypeFilter, &type_spec_RemoteSystemStatusTypeFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemUpdatedEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemUpdatedEventArgs, &type_spec_RemoteSystemUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemUpdatedEventArgs, &type_spec_RemoteSystemUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemUpdatedEventArgs, &type_spec_RemoteSystemUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemWatcher = py::register_python_type(module.get(), type_name_RemoteSystemWatcher, &type_spec_RemoteSystemWatcher, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWatcher, &type_spec_RemoteSystemWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWatcher, &type_spec_RemoteSystemWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemWatcherErrorOccurredEventArgs = py::register_python_type(module.get(), type_name_RemoteSystemWatcherErrorOccurredEventArgs, &type_spec_RemoteSystemWatcherErrorOccurredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemWatcherErrorOccurredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWatcherErrorOccurredEventArgs, &type_spec_RemoteSystemWatcherErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWatcherErrorOccurredEventArgs, &type_spec_RemoteSystemWatcherErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteSystemWebAccountFilter = py::register_python_type(module.get(), type_name_RemoteSystemWebAccountFilter, &type_spec_RemoteSystemWebAccountFilter, object_bases.get(), nullptr);
-    if (!state->type_RemoteSystemWebAccountFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWebAccountFilter, &type_spec_RemoteSystemWebAccountFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteSystemWebAccountFilter, &type_spec_RemoteSystemWebAccountFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRemoteSystemFilter = py::register_python_type(module.get(), type_name_IRemoteSystemFilter, &type_spec_IRemoteSystemFilter, object_bases.get(), nullptr);
-    if (!state->type_IRemoteSystemFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRemoteSystemFilter, &type_spec_IRemoteSystemFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRemoteSystemFilter, &type_spec_IRemoteSystemFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownRemoteSystemCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemApp>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemApp;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemApp is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemAppRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemAuthorizationKindFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemConnectionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemConnectionRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemDiscoveryTypeFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemEnumerationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemKindFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemKinds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemKinds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemKinds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionCreationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionDisconnectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionInvitation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionInvitationListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionInvitationReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionJoinRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionJoinRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionJoinResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionMessageChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionParticipant;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionParticipantAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionParticipantRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionParticipantWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionValueSetReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemSessionWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemStatusTypeFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemWatcherErrorOccurredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteSystemWebAccountFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::RemoteSystems;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::RemoteSystems");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRemoteSystemFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteSystems::IRemoteSystemFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

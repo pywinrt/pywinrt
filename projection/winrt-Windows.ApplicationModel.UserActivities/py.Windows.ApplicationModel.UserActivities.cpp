@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::UserActivities
 {
-    struct module_state
-    {
-        PyTypeObject* type_UserActivity;
-        PyTypeObject* type_UserActivityAttribution;
-        PyTypeObject* type_UserActivityChannel;
-        PyTypeObject* type_UserActivityContentInfo;
-        PyTypeObject* type_UserActivityRequest;
-        PyTypeObject* type_UserActivityRequestManager;
-        PyTypeObject* type_UserActivityRequestedEventArgs;
-        PyTypeObject* type_UserActivitySession;
-        PyTypeObject* type_UserActivitySessionHistoryItem;
-        PyTypeObject* type_UserActivityVisualElements;
-        PyTypeObject* type_IUserActivityContentInfo;
-    };
-
     // ----- UserActivity class --------------------
     static constexpr const char* const type_name_UserActivity = "UserActivity";
 
@@ -2546,64 +2531,15 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserActivities");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UserActivity);
-        Py_VISIT(state->type_UserActivityAttribution);
-        Py_VISIT(state->type_UserActivityChannel);
-        Py_VISIT(state->type_UserActivityContentInfo);
-        Py_VISIT(state->type_UserActivityRequest);
-        Py_VISIT(state->type_UserActivityRequestManager);
-        Py_VISIT(state->type_UserActivityRequestedEventArgs);
-        Py_VISIT(state->type_UserActivitySession);
-        Py_VISIT(state->type_UserActivitySessionHistoryItem);
-        Py_VISIT(state->type_UserActivityVisualElements);
-        Py_VISIT(state->type_IUserActivityContentInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UserActivity);
-        Py_CLEAR(state->type_UserActivityAttribution);
-        Py_CLEAR(state->type_UserActivityChannel);
-        Py_CLEAR(state->type_UserActivityContentInfo);
-        Py_CLEAR(state->type_UserActivityRequest);
-        Py_CLEAR(state->type_UserActivityRequestManager);
-        Py_CLEAR(state->type_UserActivityRequestedEventArgs);
-        Py_CLEAR(state->type_UserActivitySession);
-        Py_CLEAR(state->type_UserActivitySessionHistoryItem);
-        Py_CLEAR(state->type_UserActivityVisualElements);
-        Py_CLEAR(state->type_IUserActivityContentInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_UserActivities",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::UserActivities
@@ -2619,7 +2555,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserActivities(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2632,328 +2568,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserActivities(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UserActivity = py::register_python_type(module.get(), type_name_UserActivity, &type_spec_UserActivity, object_bases.get(), nullptr);
-    if (!state->type_UserActivity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivity, &type_spec_UserActivity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivity, &type_spec_UserActivity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityAttribution = py::register_python_type(module.get(), type_name_UserActivityAttribution, &type_spec_UserActivityAttribution, object_bases.get(), nullptr);
-    if (!state->type_UserActivityAttribution)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityAttribution, &type_spec_UserActivityAttribution, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityAttribution, &type_spec_UserActivityAttribution, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityChannel = py::register_python_type(module.get(), type_name_UserActivityChannel, &type_spec_UserActivityChannel, object_bases.get(), nullptr);
-    if (!state->type_UserActivityChannel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityChannel, &type_spec_UserActivityChannel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityChannel, &type_spec_UserActivityChannel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityContentInfo = py::register_python_type(module.get(), type_name_UserActivityContentInfo, &type_spec_UserActivityContentInfo, object_bases.get(), nullptr);
-    if (!state->type_UserActivityContentInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityContentInfo, &type_spec_UserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityContentInfo, &type_spec_UserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityRequest = py::register_python_type(module.get(), type_name_UserActivityRequest, &type_spec_UserActivityRequest, object_bases.get(), nullptr);
-    if (!state->type_UserActivityRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityRequest, &type_spec_UserActivityRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityRequest, &type_spec_UserActivityRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityRequestManager = py::register_python_type(module.get(), type_name_UserActivityRequestManager, &type_spec_UserActivityRequestManager, object_bases.get(), nullptr);
-    if (!state->type_UserActivityRequestManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityRequestManager, &type_spec_UserActivityRequestManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityRequestManager, &type_spec_UserActivityRequestManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityRequestedEventArgs = py::register_python_type(module.get(), type_name_UserActivityRequestedEventArgs, &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserActivityRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityRequestedEventArgs, &type_spec_UserActivityRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityRequestedEventArgs, &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivitySession = py::register_python_type(module.get(), type_name_UserActivitySession, &type_spec_UserActivitySession, object_bases.get(), nullptr);
-    if (!state->type_UserActivitySession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivitySession, &type_spec_UserActivitySession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivitySession, &type_spec_UserActivitySession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivitySessionHistoryItem = py::register_python_type(module.get(), type_name_UserActivitySessionHistoryItem, &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr);
-    if (!state->type_UserActivitySessionHistoryItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivitySessionHistoryItem, &type_spec_UserActivitySessionHistoryItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivitySessionHistoryItem, &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserActivityVisualElements = py::register_python_type(module.get(), type_name_UserActivityVisualElements, &type_spec_UserActivityVisualElements, object_bases.get(), nullptr);
-    if (!state->type_UserActivityVisualElements)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserActivityVisualElements, &type_spec_UserActivityVisualElements, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserActivityVisualElements, &type_spec_UserActivityVisualElements, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IUserActivityContentInfo = py::register_python_type(module.get(), type_name_IUserActivityContentInfo, &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr);
-    if (!state->type_IUserActivityContentInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IUserActivityContentInfo, &type_spec_IUserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IUserActivityContentInfo, &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityAttribution;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityChannel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityContentInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityRequestManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivitySession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivitySession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivitySessionHistoryItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserActivityVisualElements;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserActivities;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserActivities");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IUserActivityContentInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

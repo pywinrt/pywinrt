@@ -33,14 +33,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Workplace::MdmPolicy>
+    struct py_type<winrt::Windows::Management::Workplace::MdmPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.workplace";
+        static constexpr const char* type_name = "MdmPolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Workplace::WorkplaceSettings>
+    struct py_type<winrt::Windows::Management::Workplace::WorkplaceSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.workplace";
+        static constexpr const char* type_name = "WorkplaceSettings";
     };
 }

@@ -6,99 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Media::Animation
 {
-    struct module_state
-    {
-        PyTypeObject* type_AddDeleteThemeTransition;
-        PyTypeObject* type_BackEase;
-        PyTypeObject* type_BasicConnectedAnimationConfiguration;
-        PyTypeObject* type_BeginStoryboard;
-        PyTypeObject* type_BounceEase;
-        PyTypeObject* type_CircleEase;
-        PyTypeObject* type_ColorAnimation;
-        PyTypeObject* type_ColorAnimationUsingKeyFrames;
-        PyTypeObject* type_ColorKeyFrame;
-        PyTypeObject* type_ColorKeyFrameCollection;
-        PyTypeObject* type_CommonNavigationTransitionInfo;
-        PyTypeObject* type_ConnectedAnimation;
-        PyTypeObject* type_ConnectedAnimationConfiguration;
-        PyTypeObject* type_ConnectedAnimationService;
-        PyTypeObject* type_ContentThemeTransition;
-        PyTypeObject* type_ContinuumNavigationTransitionInfo;
-        PyTypeObject* type_CubicEase;
-        PyTypeObject* type_DirectConnectedAnimationConfiguration;
-        PyTypeObject* type_DiscreteColorKeyFrame;
-        PyTypeObject* type_DiscreteDoubleKeyFrame;
-        PyTypeObject* type_DiscreteObjectKeyFrame;
-        PyTypeObject* type_DiscretePointKeyFrame;
-        PyTypeObject* type_DoubleAnimation;
-        PyTypeObject* type_DoubleAnimationUsingKeyFrames;
-        PyTypeObject* type_DoubleKeyFrame;
-        PyTypeObject* type_DoubleKeyFrameCollection;
-        PyTypeObject* type_DragItemThemeAnimation;
-        PyTypeObject* type_DragOverThemeAnimation;
-        PyTypeObject* type_DrillInNavigationTransitionInfo;
-        PyTypeObject* type_DrillInThemeAnimation;
-        PyTypeObject* type_DrillOutThemeAnimation;
-        PyTypeObject* type_DropTargetItemThemeAnimation;
-        PyTypeObject* type_EasingColorKeyFrame;
-        PyTypeObject* type_EasingDoubleKeyFrame;
-        PyTypeObject* type_EasingFunctionBase;
-        PyTypeObject* type_EasingPointKeyFrame;
-        PyTypeObject* type_EdgeUIThemeTransition;
-        PyTypeObject* type_ElasticEase;
-        PyTypeObject* type_EntranceNavigationTransitionInfo;
-        PyTypeObject* type_EntranceThemeTransition;
-        PyTypeObject* type_ExponentialEase;
-        PyTypeObject* type_FadeInThemeAnimation;
-        PyTypeObject* type_FadeOutThemeAnimation;
-        PyTypeObject* type_GravityConnectedAnimationConfiguration;
-        PyTypeObject* type_KeySpline;
-        PyTypeObject* type_KeyTimeHelper;
-        PyTypeObject* type_LinearColorKeyFrame;
-        PyTypeObject* type_LinearDoubleKeyFrame;
-        PyTypeObject* type_LinearPointKeyFrame;
-        PyTypeObject* type_NavigationThemeTransition;
-        PyTypeObject* type_NavigationTransitionInfo;
-        PyTypeObject* type_ObjectAnimationUsingKeyFrames;
-        PyTypeObject* type_ObjectKeyFrame;
-        PyTypeObject* type_ObjectKeyFrameCollection;
-        PyTypeObject* type_PaneThemeTransition;
-        PyTypeObject* type_PointAnimation;
-        PyTypeObject* type_PointAnimationUsingKeyFrames;
-        PyTypeObject* type_PointKeyFrame;
-        PyTypeObject* type_PointKeyFrameCollection;
-        PyTypeObject* type_PointerDownThemeAnimation;
-        PyTypeObject* type_PointerUpThemeAnimation;
-        PyTypeObject* type_PopInThemeAnimation;
-        PyTypeObject* type_PopOutThemeAnimation;
-        PyTypeObject* type_PopupThemeTransition;
-        PyTypeObject* type_PowerEase;
-        PyTypeObject* type_QuadraticEase;
-        PyTypeObject* type_QuarticEase;
-        PyTypeObject* type_QuinticEase;
-        PyTypeObject* type_ReorderThemeTransition;
-        PyTypeObject* type_RepeatBehaviorHelper;
-        PyTypeObject* type_RepositionThemeAnimation;
-        PyTypeObject* type_RepositionThemeTransition;
-        PyTypeObject* type_SineEase;
-        PyTypeObject* type_SlideNavigationTransitionInfo;
-        PyTypeObject* type_SplineColorKeyFrame;
-        PyTypeObject* type_SplineDoubleKeyFrame;
-        PyTypeObject* type_SplinePointKeyFrame;
-        PyTypeObject* type_SplitCloseThemeAnimation;
-        PyTypeObject* type_SplitOpenThemeAnimation;
-        PyTypeObject* type_Storyboard;
-        PyTypeObject* type_SuppressNavigationTransitionInfo;
-        PyTypeObject* type_SwipeBackThemeAnimation;
-        PyTypeObject* type_SwipeHintThemeAnimation;
-        PyTypeObject* type_Timeline;
-        PyTypeObject* type_TimelineCollection;
-        PyTypeObject* type_Transition;
-        PyTypeObject* type_TransitionCollection;
-        PyTypeObject* type_KeyTime;
-        PyTypeObject* type_RepeatBehavior;
-    };
-
     // ----- AddDeleteThemeTransition class --------------------
     static constexpr const char* const type_name_AddDeleteThemeTransition = "AddDeleteThemeTransition";
 
@@ -22726,220 +22633,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media::Animation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AddDeleteThemeTransition);
-        Py_VISIT(state->type_BackEase);
-        Py_VISIT(state->type_BasicConnectedAnimationConfiguration);
-        Py_VISIT(state->type_BeginStoryboard);
-        Py_VISIT(state->type_BounceEase);
-        Py_VISIT(state->type_CircleEase);
-        Py_VISIT(state->type_ColorAnimation);
-        Py_VISIT(state->type_ColorAnimationUsingKeyFrames);
-        Py_VISIT(state->type_ColorKeyFrame);
-        Py_VISIT(state->type_ColorKeyFrameCollection);
-        Py_VISIT(state->type_CommonNavigationTransitionInfo);
-        Py_VISIT(state->type_ConnectedAnimation);
-        Py_VISIT(state->type_ConnectedAnimationConfiguration);
-        Py_VISIT(state->type_ConnectedAnimationService);
-        Py_VISIT(state->type_ContentThemeTransition);
-        Py_VISIT(state->type_ContinuumNavigationTransitionInfo);
-        Py_VISIT(state->type_CubicEase);
-        Py_VISIT(state->type_DirectConnectedAnimationConfiguration);
-        Py_VISIT(state->type_DiscreteColorKeyFrame);
-        Py_VISIT(state->type_DiscreteDoubleKeyFrame);
-        Py_VISIT(state->type_DiscreteObjectKeyFrame);
-        Py_VISIT(state->type_DiscretePointKeyFrame);
-        Py_VISIT(state->type_DoubleAnimation);
-        Py_VISIT(state->type_DoubleAnimationUsingKeyFrames);
-        Py_VISIT(state->type_DoubleKeyFrame);
-        Py_VISIT(state->type_DoubleKeyFrameCollection);
-        Py_VISIT(state->type_DragItemThemeAnimation);
-        Py_VISIT(state->type_DragOverThemeAnimation);
-        Py_VISIT(state->type_DrillInNavigationTransitionInfo);
-        Py_VISIT(state->type_DrillInThemeAnimation);
-        Py_VISIT(state->type_DrillOutThemeAnimation);
-        Py_VISIT(state->type_DropTargetItemThemeAnimation);
-        Py_VISIT(state->type_EasingColorKeyFrame);
-        Py_VISIT(state->type_EasingDoubleKeyFrame);
-        Py_VISIT(state->type_EasingFunctionBase);
-        Py_VISIT(state->type_EasingPointKeyFrame);
-        Py_VISIT(state->type_EdgeUIThemeTransition);
-        Py_VISIT(state->type_ElasticEase);
-        Py_VISIT(state->type_EntranceNavigationTransitionInfo);
-        Py_VISIT(state->type_EntranceThemeTransition);
-        Py_VISIT(state->type_ExponentialEase);
-        Py_VISIT(state->type_FadeInThemeAnimation);
-        Py_VISIT(state->type_FadeOutThemeAnimation);
-        Py_VISIT(state->type_GravityConnectedAnimationConfiguration);
-        Py_VISIT(state->type_KeySpline);
-        Py_VISIT(state->type_KeyTimeHelper);
-        Py_VISIT(state->type_LinearColorKeyFrame);
-        Py_VISIT(state->type_LinearDoubleKeyFrame);
-        Py_VISIT(state->type_LinearPointKeyFrame);
-        Py_VISIT(state->type_NavigationThemeTransition);
-        Py_VISIT(state->type_NavigationTransitionInfo);
-        Py_VISIT(state->type_ObjectAnimationUsingKeyFrames);
-        Py_VISIT(state->type_ObjectKeyFrame);
-        Py_VISIT(state->type_ObjectKeyFrameCollection);
-        Py_VISIT(state->type_PaneThemeTransition);
-        Py_VISIT(state->type_PointAnimation);
-        Py_VISIT(state->type_PointAnimationUsingKeyFrames);
-        Py_VISIT(state->type_PointKeyFrame);
-        Py_VISIT(state->type_PointKeyFrameCollection);
-        Py_VISIT(state->type_PointerDownThemeAnimation);
-        Py_VISIT(state->type_PointerUpThemeAnimation);
-        Py_VISIT(state->type_PopInThemeAnimation);
-        Py_VISIT(state->type_PopOutThemeAnimation);
-        Py_VISIT(state->type_PopupThemeTransition);
-        Py_VISIT(state->type_PowerEase);
-        Py_VISIT(state->type_QuadraticEase);
-        Py_VISIT(state->type_QuarticEase);
-        Py_VISIT(state->type_QuinticEase);
-        Py_VISIT(state->type_ReorderThemeTransition);
-        Py_VISIT(state->type_RepeatBehaviorHelper);
-        Py_VISIT(state->type_RepositionThemeAnimation);
-        Py_VISIT(state->type_RepositionThemeTransition);
-        Py_VISIT(state->type_SineEase);
-        Py_VISIT(state->type_SlideNavigationTransitionInfo);
-        Py_VISIT(state->type_SplineColorKeyFrame);
-        Py_VISIT(state->type_SplineDoubleKeyFrame);
-        Py_VISIT(state->type_SplinePointKeyFrame);
-        Py_VISIT(state->type_SplitCloseThemeAnimation);
-        Py_VISIT(state->type_SplitOpenThemeAnimation);
-        Py_VISIT(state->type_Storyboard);
-        Py_VISIT(state->type_SuppressNavigationTransitionInfo);
-        Py_VISIT(state->type_SwipeBackThemeAnimation);
-        Py_VISIT(state->type_SwipeHintThemeAnimation);
-        Py_VISIT(state->type_Timeline);
-        Py_VISIT(state->type_TimelineCollection);
-        Py_VISIT(state->type_Transition);
-        Py_VISIT(state->type_TransitionCollection);
-        Py_VISIT(state->type_KeyTime);
-        Py_VISIT(state->type_RepeatBehavior);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AddDeleteThemeTransition);
-        Py_CLEAR(state->type_BackEase);
-        Py_CLEAR(state->type_BasicConnectedAnimationConfiguration);
-        Py_CLEAR(state->type_BeginStoryboard);
-        Py_CLEAR(state->type_BounceEase);
-        Py_CLEAR(state->type_CircleEase);
-        Py_CLEAR(state->type_ColorAnimation);
-        Py_CLEAR(state->type_ColorAnimationUsingKeyFrames);
-        Py_CLEAR(state->type_ColorKeyFrame);
-        Py_CLEAR(state->type_ColorKeyFrameCollection);
-        Py_CLEAR(state->type_CommonNavigationTransitionInfo);
-        Py_CLEAR(state->type_ConnectedAnimation);
-        Py_CLEAR(state->type_ConnectedAnimationConfiguration);
-        Py_CLEAR(state->type_ConnectedAnimationService);
-        Py_CLEAR(state->type_ContentThemeTransition);
-        Py_CLEAR(state->type_ContinuumNavigationTransitionInfo);
-        Py_CLEAR(state->type_CubicEase);
-        Py_CLEAR(state->type_DirectConnectedAnimationConfiguration);
-        Py_CLEAR(state->type_DiscreteColorKeyFrame);
-        Py_CLEAR(state->type_DiscreteDoubleKeyFrame);
-        Py_CLEAR(state->type_DiscreteObjectKeyFrame);
-        Py_CLEAR(state->type_DiscretePointKeyFrame);
-        Py_CLEAR(state->type_DoubleAnimation);
-        Py_CLEAR(state->type_DoubleAnimationUsingKeyFrames);
-        Py_CLEAR(state->type_DoubleKeyFrame);
-        Py_CLEAR(state->type_DoubleKeyFrameCollection);
-        Py_CLEAR(state->type_DragItemThemeAnimation);
-        Py_CLEAR(state->type_DragOverThemeAnimation);
-        Py_CLEAR(state->type_DrillInNavigationTransitionInfo);
-        Py_CLEAR(state->type_DrillInThemeAnimation);
-        Py_CLEAR(state->type_DrillOutThemeAnimation);
-        Py_CLEAR(state->type_DropTargetItemThemeAnimation);
-        Py_CLEAR(state->type_EasingColorKeyFrame);
-        Py_CLEAR(state->type_EasingDoubleKeyFrame);
-        Py_CLEAR(state->type_EasingFunctionBase);
-        Py_CLEAR(state->type_EasingPointKeyFrame);
-        Py_CLEAR(state->type_EdgeUIThemeTransition);
-        Py_CLEAR(state->type_ElasticEase);
-        Py_CLEAR(state->type_EntranceNavigationTransitionInfo);
-        Py_CLEAR(state->type_EntranceThemeTransition);
-        Py_CLEAR(state->type_ExponentialEase);
-        Py_CLEAR(state->type_FadeInThemeAnimation);
-        Py_CLEAR(state->type_FadeOutThemeAnimation);
-        Py_CLEAR(state->type_GravityConnectedAnimationConfiguration);
-        Py_CLEAR(state->type_KeySpline);
-        Py_CLEAR(state->type_KeyTimeHelper);
-        Py_CLEAR(state->type_LinearColorKeyFrame);
-        Py_CLEAR(state->type_LinearDoubleKeyFrame);
-        Py_CLEAR(state->type_LinearPointKeyFrame);
-        Py_CLEAR(state->type_NavigationThemeTransition);
-        Py_CLEAR(state->type_NavigationTransitionInfo);
-        Py_CLEAR(state->type_ObjectAnimationUsingKeyFrames);
-        Py_CLEAR(state->type_ObjectKeyFrame);
-        Py_CLEAR(state->type_ObjectKeyFrameCollection);
-        Py_CLEAR(state->type_PaneThemeTransition);
-        Py_CLEAR(state->type_PointAnimation);
-        Py_CLEAR(state->type_PointAnimationUsingKeyFrames);
-        Py_CLEAR(state->type_PointKeyFrame);
-        Py_CLEAR(state->type_PointKeyFrameCollection);
-        Py_CLEAR(state->type_PointerDownThemeAnimation);
-        Py_CLEAR(state->type_PointerUpThemeAnimation);
-        Py_CLEAR(state->type_PopInThemeAnimation);
-        Py_CLEAR(state->type_PopOutThemeAnimation);
-        Py_CLEAR(state->type_PopupThemeTransition);
-        Py_CLEAR(state->type_PowerEase);
-        Py_CLEAR(state->type_QuadraticEase);
-        Py_CLEAR(state->type_QuarticEase);
-        Py_CLEAR(state->type_QuinticEase);
-        Py_CLEAR(state->type_ReorderThemeTransition);
-        Py_CLEAR(state->type_RepeatBehaviorHelper);
-        Py_CLEAR(state->type_RepositionThemeAnimation);
-        Py_CLEAR(state->type_RepositionThemeTransition);
-        Py_CLEAR(state->type_SineEase);
-        Py_CLEAR(state->type_SlideNavigationTransitionInfo);
-        Py_CLEAR(state->type_SplineColorKeyFrame);
-        Py_CLEAR(state->type_SplineDoubleKeyFrame);
-        Py_CLEAR(state->type_SplinePointKeyFrame);
-        Py_CLEAR(state->type_SplitCloseThemeAnimation);
-        Py_CLEAR(state->type_SplitOpenThemeAnimation);
-        Py_CLEAR(state->type_Storyboard);
-        Py_CLEAR(state->type_SuppressNavigationTransitionInfo);
-        Py_CLEAR(state->type_SwipeBackThemeAnimation);
-        Py_CLEAR(state->type_SwipeHintThemeAnimation);
-        Py_CLEAR(state->type_Timeline);
-        Py_CLEAR(state->type_TimelineCollection);
-        Py_CLEAR(state->type_Transition);
-        Py_CLEAR(state->type_TransitionCollection);
-        Py_CLEAR(state->type_KeyTime);
-        Py_CLEAR(state->type_RepeatBehavior);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Media_Animation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Media::Animation
@@ -22955,7 +22657,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -22968,11 +22670,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AddDeleteThemeTransition = py::register_python_type(module.get(), type_name_AddDeleteThemeTransition, &type_spec_AddDeleteThemeTransition, object_bases.get(), nullptr);
-    if (!state->type_AddDeleteThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AddDeleteThemeTransition, &type_spec_AddDeleteThemeTransition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AddDeleteThemeTransition, &type_spec_AddDeleteThemeTransition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22983,14 +22685,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_BackEase = py::register_python_type(module.get(), type_name_BackEase, &type_spec_BackEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Meta.get()));
-    if (!state->type_BackEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackEase, &type_spec_BackEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackEase, &type_spec_BackEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BasicConnectedAnimationConfiguration = py::register_python_type(module.get(), type_name_BasicConnectedAnimationConfiguration, &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_BasicConnectedAnimationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BasicConnectedAnimationConfiguration, &type_spec_BasicConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BasicConnectedAnimationConfiguration, &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23001,8 +22709,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_BeginStoryboard = py::register_python_type(module.get(), type_name_BeginStoryboard, &type_spec_BeginStoryboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Meta.get()));
-    if (!state->type_BeginStoryboard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BeginStoryboard, &type_spec_BeginStoryboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BeginStoryboard, &type_spec_BeginStoryboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23013,14 +22724,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_BounceEase = py::register_python_type(module.get(), type_name_BounceEase, &type_spec_BounceEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Meta.get()));
-    if (!state->type_BounceEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BounceEase, &type_spec_BounceEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BounceEase, &type_spec_BounceEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CircleEase = py::register_python_type(module.get(), type_name_CircleEase, &type_spec_CircleEase, object_bases.get(), nullptr);
-    if (!state->type_CircleEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CircleEase, &type_spec_CircleEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CircleEase, &type_spec_CircleEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23031,8 +22748,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ColorAnimation = py::register_python_type(module.get(), type_name_ColorAnimation, &type_spec_ColorAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Meta.get()));
-    if (!state->type_ColorAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorAnimation, &type_spec_ColorAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorAnimation, &type_spec_ColorAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23043,8 +22763,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ColorAnimationUsingKeyFrames = py::register_python_type(module.get(), type_name_ColorAnimationUsingKeyFrames, &type_spec_ColorAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Meta.get()));
-    if (!state->type_ColorAnimationUsingKeyFrames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorAnimationUsingKeyFrames, &type_spec_ColorAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorAnimationUsingKeyFrames, &type_spec_ColorAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23055,14 +22778,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ColorKeyFrame = py::register_python_type(module.get(), type_name_ColorKeyFrame, &type_spec_ColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Meta.get()));
-    if (!state->type_ColorKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrame, &type_spec_ColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrame, &type_spec_ColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorKeyFrameCollection = py::register_python_type(module.get(), type_name_ColorKeyFrameCollection, &type_spec_ColorKeyFrameCollection, object_bases.get(), nullptr);
-    if (!state->type_ColorKeyFrameCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrameCollection, &type_spec_ColorKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrameCollection, &type_spec_ColorKeyFrameCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23073,26 +22802,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_CommonNavigationTransitionInfo = py::register_python_type(module.get(), type_name_CommonNavigationTransitionInfo, &type_spec_CommonNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Meta.get()));
-    if (!state->type_CommonNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommonNavigationTransitionInfo, &type_spec_CommonNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommonNavigationTransitionInfo, &type_spec_CommonNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectedAnimation = py::register_python_type(module.get(), type_name_ConnectedAnimation, &type_spec_ConnectedAnimation, object_bases.get(), nullptr);
-    if (!state->type_ConnectedAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimation, &type_spec_ConnectedAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimation, &type_spec_ConnectedAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectedAnimationConfiguration = py::register_python_type(module.get(), type_name_ConnectedAnimationConfiguration, &type_spec_ConnectedAnimationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ConnectedAnimationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimationConfiguration, &type_spec_ConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimationConfiguration, &type_spec_ConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectedAnimationService = py::register_python_type(module.get(), type_name_ConnectedAnimationService, &type_spec_ConnectedAnimationService, object_bases.get(), nullptr);
-    if (!state->type_ConnectedAnimationService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimationService, &type_spec_ConnectedAnimationService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectedAnimationService, &type_spec_ConnectedAnimationService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23103,8 +22844,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ContentThemeTransition = py::register_python_type(module.get(), type_name_ContentThemeTransition, &type_spec_ContentThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Meta.get()));
-    if (!state->type_ContentThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentThemeTransition, &type_spec_ContentThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentThemeTransition, &type_spec_ContentThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23115,44 +22859,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ContinuumNavigationTransitionInfo = py::register_python_type(module.get(), type_name_ContinuumNavigationTransitionInfo, &type_spec_ContinuumNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Meta.get()));
-    if (!state->type_ContinuumNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContinuumNavigationTransitionInfo, &type_spec_ContinuumNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContinuumNavigationTransitionInfo, &type_spec_ContinuumNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CubicEase = py::register_python_type(module.get(), type_name_CubicEase, &type_spec_CubicEase, object_bases.get(), nullptr);
-    if (!state->type_CubicEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CubicEase, &type_spec_CubicEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CubicEase, &type_spec_CubicEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DirectConnectedAnimationConfiguration = py::register_python_type(module.get(), type_name_DirectConnectedAnimationConfiguration, &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_DirectConnectedAnimationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DirectConnectedAnimationConfiguration, &type_spec_DirectConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DirectConnectedAnimationConfiguration, &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DiscreteColorKeyFrame = py::register_python_type(module.get(), type_name_DiscreteColorKeyFrame, &type_spec_DiscreteColorKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_DiscreteColorKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiscreteColorKeyFrame, &type_spec_DiscreteColorKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiscreteColorKeyFrame, &type_spec_DiscreteColorKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DiscreteDoubleKeyFrame = py::register_python_type(module.get(), type_name_DiscreteDoubleKeyFrame, &type_spec_DiscreteDoubleKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_DiscreteDoubleKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiscreteDoubleKeyFrame, &type_spec_DiscreteDoubleKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiscreteDoubleKeyFrame, &type_spec_DiscreteDoubleKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DiscreteObjectKeyFrame = py::register_python_type(module.get(), type_name_DiscreteObjectKeyFrame, &type_spec_DiscreteObjectKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_DiscreteObjectKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiscreteObjectKeyFrame, &type_spec_DiscreteObjectKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiscreteObjectKeyFrame, &type_spec_DiscreteObjectKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DiscretePointKeyFrame = py::register_python_type(module.get(), type_name_DiscretePointKeyFrame, &type_spec_DiscretePointKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_DiscretePointKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiscretePointKeyFrame, &type_spec_DiscretePointKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiscretePointKeyFrame, &type_spec_DiscretePointKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23163,8 +22928,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DoubleAnimation = py::register_python_type(module.get(), type_name_DoubleAnimation, &type_spec_DoubleAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Meta.get()));
-    if (!state->type_DoubleAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleAnimation, &type_spec_DoubleAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleAnimation, &type_spec_DoubleAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23175,8 +22943,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DoubleAnimationUsingKeyFrames = py::register_python_type(module.get(), type_name_DoubleAnimationUsingKeyFrames, &type_spec_DoubleAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Meta.get()));
-    if (!state->type_DoubleAnimationUsingKeyFrames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleAnimationUsingKeyFrames, &type_spec_DoubleAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleAnimationUsingKeyFrames, &type_spec_DoubleAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23187,14 +22958,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DoubleKeyFrame = py::register_python_type(module.get(), type_name_DoubleKeyFrame, &type_spec_DoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Meta.get()));
-    if (!state->type_DoubleKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleKeyFrame, &type_spec_DoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleKeyFrame, &type_spec_DoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DoubleKeyFrameCollection = py::register_python_type(module.get(), type_name_DoubleKeyFrameCollection, &type_spec_DoubleKeyFrameCollection, object_bases.get(), nullptr);
-    if (!state->type_DoubleKeyFrameCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleKeyFrameCollection, &type_spec_DoubleKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleKeyFrameCollection, &type_spec_DoubleKeyFrameCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23205,8 +22982,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DragItemThemeAnimation = py::register_python_type(module.get(), type_name_DragItemThemeAnimation, &type_spec_DragItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Meta.get()));
-    if (!state->type_DragItemThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragItemThemeAnimation, &type_spec_DragItemThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragItemThemeAnimation, &type_spec_DragItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23217,14 +22997,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DragOverThemeAnimation = py::register_python_type(module.get(), type_name_DragOverThemeAnimation, &type_spec_DragOverThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Meta.get()));
-    if (!state->type_DragOverThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragOverThemeAnimation, &type_spec_DragOverThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragOverThemeAnimation, &type_spec_DragOverThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DrillInNavigationTransitionInfo = py::register_python_type(module.get(), type_name_DrillInNavigationTransitionInfo, &type_spec_DrillInNavigationTransitionInfo, object_bases.get(), nullptr);
-    if (!state->type_DrillInNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DrillInNavigationTransitionInfo, &type_spec_DrillInNavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DrillInNavigationTransitionInfo, &type_spec_DrillInNavigationTransitionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23235,8 +23021,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DrillInThemeAnimation = py::register_python_type(module.get(), type_name_DrillInThemeAnimation, &type_spec_DrillInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Meta.get()));
-    if (!state->type_DrillInThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DrillInThemeAnimation, &type_spec_DrillInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DrillInThemeAnimation, &type_spec_DrillInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23247,8 +23036,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DrillOutThemeAnimation = py::register_python_type(module.get(), type_name_DrillOutThemeAnimation, &type_spec_DrillOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Meta.get()));
-    if (!state->type_DrillOutThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DrillOutThemeAnimation, &type_spec_DrillOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DrillOutThemeAnimation, &type_spec_DrillOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23259,8 +23051,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_DropTargetItemThemeAnimation = py::register_python_type(module.get(), type_name_DropTargetItemThemeAnimation, &type_spec_DropTargetItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Meta.get()));
-    if (!state->type_DropTargetItemThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DropTargetItemThemeAnimation, &type_spec_DropTargetItemThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DropTargetItemThemeAnimation, &type_spec_DropTargetItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23271,8 +23066,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EasingColorKeyFrame = py::register_python_type(module.get(), type_name_EasingColorKeyFrame, &type_spec_EasingColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Meta.get()));
-    if (!state->type_EasingColorKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EasingColorKeyFrame, &type_spec_EasingColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EasingColorKeyFrame, &type_spec_EasingColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23283,8 +23081,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EasingDoubleKeyFrame = py::register_python_type(module.get(), type_name_EasingDoubleKeyFrame, &type_spec_EasingDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Meta.get()));
-    if (!state->type_EasingDoubleKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EasingDoubleKeyFrame, &type_spec_EasingDoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EasingDoubleKeyFrame, &type_spec_EasingDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23295,8 +23096,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EasingFunctionBase = py::register_python_type(module.get(), type_name_EasingFunctionBase, &type_spec_EasingFunctionBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Meta.get()));
-    if (!state->type_EasingFunctionBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EasingFunctionBase, &type_spec_EasingFunctionBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EasingFunctionBase, &type_spec_EasingFunctionBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23307,8 +23111,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EasingPointKeyFrame = py::register_python_type(module.get(), type_name_EasingPointKeyFrame, &type_spec_EasingPointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Meta.get()));
-    if (!state->type_EasingPointKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EasingPointKeyFrame, &type_spec_EasingPointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EasingPointKeyFrame, &type_spec_EasingPointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23319,8 +23126,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EdgeUIThemeTransition = py::register_python_type(module.get(), type_name_EdgeUIThemeTransition, &type_spec_EdgeUIThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Meta.get()));
-    if (!state->type_EdgeUIThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EdgeUIThemeTransition, &type_spec_EdgeUIThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EdgeUIThemeTransition, &type_spec_EdgeUIThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23331,8 +23141,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ElasticEase = py::register_python_type(module.get(), type_name_ElasticEase, &type_spec_ElasticEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Meta.get()));
-    if (!state->type_ElasticEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElasticEase, &type_spec_ElasticEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElasticEase, &type_spec_ElasticEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23343,8 +23156,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EntranceNavigationTransitionInfo = py::register_python_type(module.get(), type_name_EntranceNavigationTransitionInfo, &type_spec_EntranceNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Meta.get()));
-    if (!state->type_EntranceNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EntranceNavigationTransitionInfo, &type_spec_EntranceNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EntranceNavigationTransitionInfo, &type_spec_EntranceNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23355,8 +23171,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_EntranceThemeTransition = py::register_python_type(module.get(), type_name_EntranceThemeTransition, &type_spec_EntranceThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Meta.get()));
-    if (!state->type_EntranceThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EntranceThemeTransition, &type_spec_EntranceThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EntranceThemeTransition, &type_spec_EntranceThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23367,8 +23186,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ExponentialEase = py::register_python_type(module.get(), type_name_ExponentialEase, &type_spec_ExponentialEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Meta.get()));
-    if (!state->type_ExponentialEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExponentialEase, &type_spec_ExponentialEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExponentialEase, &type_spec_ExponentialEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23379,8 +23201,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_FadeInThemeAnimation = py::register_python_type(module.get(), type_name_FadeInThemeAnimation, &type_spec_FadeInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Meta.get()));
-    if (!state->type_FadeInThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FadeInThemeAnimation, &type_spec_FadeInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FadeInThemeAnimation, &type_spec_FadeInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23391,44 +23216,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_FadeOutThemeAnimation = py::register_python_type(module.get(), type_name_FadeOutThemeAnimation, &type_spec_FadeOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Meta.get()));
-    if (!state->type_FadeOutThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FadeOutThemeAnimation, &type_spec_FadeOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FadeOutThemeAnimation, &type_spec_FadeOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GravityConnectedAnimationConfiguration = py::register_python_type(module.get(), type_name_GravityConnectedAnimationConfiguration, &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), nullptr);
-    if (!state->type_GravityConnectedAnimationConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GravityConnectedAnimationConfiguration, &type_spec_GravityConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GravityConnectedAnimationConfiguration, &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeySpline = py::register_python_type(module.get(), type_name_KeySpline, &type_spec_KeySpline, object_bases.get(), nullptr);
-    if (!state->type_KeySpline)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeySpline, &type_spec_KeySpline, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeySpline, &type_spec_KeySpline, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyTimeHelper = py::register_python_type(module.get(), type_name_KeyTimeHelper, &type_spec_KeyTimeHelper, object_bases.get(), nullptr);
-    if (!state->type_KeyTimeHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyTimeHelper, &type_spec_KeyTimeHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyTimeHelper, &type_spec_KeyTimeHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LinearColorKeyFrame = py::register_python_type(module.get(), type_name_LinearColorKeyFrame, &type_spec_LinearColorKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_LinearColorKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LinearColorKeyFrame, &type_spec_LinearColorKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LinearColorKeyFrame, &type_spec_LinearColorKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LinearDoubleKeyFrame = py::register_python_type(module.get(), type_name_LinearDoubleKeyFrame, &type_spec_LinearDoubleKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_LinearDoubleKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LinearDoubleKeyFrame, &type_spec_LinearDoubleKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LinearDoubleKeyFrame, &type_spec_LinearDoubleKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LinearPointKeyFrame = py::register_python_type(module.get(), type_name_LinearPointKeyFrame, &type_spec_LinearPointKeyFrame, object_bases.get(), nullptr);
-    if (!state->type_LinearPointKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LinearPointKeyFrame, &type_spec_LinearPointKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LinearPointKeyFrame, &type_spec_LinearPointKeyFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23439,14 +23285,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_NavigationThemeTransition = py::register_python_type(module.get(), type_name_NavigationThemeTransition, &type_spec_NavigationThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Meta.get()));
-    if (!state->type_NavigationThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationThemeTransition, &type_spec_NavigationThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationThemeTransition, &type_spec_NavigationThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NavigationTransitionInfo = py::register_python_type(module.get(), type_name_NavigationTransitionInfo, &type_spec_NavigationTransitionInfo, object_bases.get(), nullptr);
-    if (!state->type_NavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationTransitionInfo, &type_spec_NavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationTransitionInfo, &type_spec_NavigationTransitionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23457,8 +23309,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ObjectAnimationUsingKeyFrames = py::register_python_type(module.get(), type_name_ObjectAnimationUsingKeyFrames, &type_spec_ObjectAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Meta.get()));
-    if (!state->type_ObjectAnimationUsingKeyFrames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ObjectAnimationUsingKeyFrames, &type_spec_ObjectAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ObjectAnimationUsingKeyFrames, &type_spec_ObjectAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23469,14 +23324,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_ObjectKeyFrame = py::register_python_type(module.get(), type_name_ObjectKeyFrame, &type_spec_ObjectKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Meta.get()));
-    if (!state->type_ObjectKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ObjectKeyFrame, &type_spec_ObjectKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ObjectKeyFrame, &type_spec_ObjectKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ObjectKeyFrameCollection = py::register_python_type(module.get(), type_name_ObjectKeyFrameCollection, &type_spec_ObjectKeyFrameCollection, object_bases.get(), nullptr);
-    if (!state->type_ObjectKeyFrameCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ObjectKeyFrameCollection, &type_spec_ObjectKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ObjectKeyFrameCollection, &type_spec_ObjectKeyFrameCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23487,8 +23348,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PaneThemeTransition = py::register_python_type(module.get(), type_name_PaneThemeTransition, &type_spec_PaneThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Meta.get()));
-    if (!state->type_PaneThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaneThemeTransition, &type_spec_PaneThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaneThemeTransition, &type_spec_PaneThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23499,8 +23363,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PointAnimation = py::register_python_type(module.get(), type_name_PointAnimation, &type_spec_PointAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Meta.get()));
-    if (!state->type_PointAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointAnimation, &type_spec_PointAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointAnimation, &type_spec_PointAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23511,8 +23378,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PointAnimationUsingKeyFrames = py::register_python_type(module.get(), type_name_PointAnimationUsingKeyFrames, &type_spec_PointAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Meta.get()));
-    if (!state->type_PointAnimationUsingKeyFrames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointAnimationUsingKeyFrames, &type_spec_PointAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointAnimationUsingKeyFrames, &type_spec_PointAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23523,14 +23393,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PointKeyFrame = py::register_python_type(module.get(), type_name_PointKeyFrame, &type_spec_PointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Meta.get()));
-    if (!state->type_PointKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointKeyFrame, &type_spec_PointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointKeyFrame, &type_spec_PointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointKeyFrameCollection = py::register_python_type(module.get(), type_name_PointKeyFrameCollection, &type_spec_PointKeyFrameCollection, object_bases.get(), nullptr);
-    if (!state->type_PointKeyFrameCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointKeyFrameCollection, &type_spec_PointKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointKeyFrameCollection, &type_spec_PointKeyFrameCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23541,8 +23417,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PointerDownThemeAnimation = py::register_python_type(module.get(), type_name_PointerDownThemeAnimation, &type_spec_PointerDownThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Meta.get()));
-    if (!state->type_PointerDownThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerDownThemeAnimation, &type_spec_PointerDownThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerDownThemeAnimation, &type_spec_PointerDownThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23553,8 +23432,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PointerUpThemeAnimation = py::register_python_type(module.get(), type_name_PointerUpThemeAnimation, &type_spec_PointerUpThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Meta.get()));
-    if (!state->type_PointerUpThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerUpThemeAnimation, &type_spec_PointerUpThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerUpThemeAnimation, &type_spec_PointerUpThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23565,8 +23447,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PopInThemeAnimation = py::register_python_type(module.get(), type_name_PopInThemeAnimation, &type_spec_PopInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Meta.get()));
-    if (!state->type_PopInThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PopInThemeAnimation, &type_spec_PopInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PopInThemeAnimation, &type_spec_PopInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23577,8 +23462,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PopOutThemeAnimation = py::register_python_type(module.get(), type_name_PopOutThemeAnimation, &type_spec_PopOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Meta.get()));
-    if (!state->type_PopOutThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PopOutThemeAnimation, &type_spec_PopOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PopOutThemeAnimation, &type_spec_PopOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23589,8 +23477,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PopupThemeTransition = py::register_python_type(module.get(), type_name_PopupThemeTransition, &type_spec_PopupThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Meta.get()));
-    if (!state->type_PopupThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PopupThemeTransition, &type_spec_PopupThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PopupThemeTransition, &type_spec_PopupThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23601,32 +23492,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_PowerEase = py::register_python_type(module.get(), type_name_PowerEase, &type_spec_PowerEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Meta.get()));
-    if (!state->type_PowerEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PowerEase, &type_spec_PowerEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PowerEase, &type_spec_PowerEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_QuadraticEase = py::register_python_type(module.get(), type_name_QuadraticEase, &type_spec_QuadraticEase, object_bases.get(), nullptr);
-    if (!state->type_QuadraticEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuadraticEase, &type_spec_QuadraticEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuadraticEase, &type_spec_QuadraticEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_QuarticEase = py::register_python_type(module.get(), type_name_QuarticEase, &type_spec_QuarticEase, object_bases.get(), nullptr);
-    if (!state->type_QuarticEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuarticEase, &type_spec_QuarticEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuarticEase, &type_spec_QuarticEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_QuinticEase = py::register_python_type(module.get(), type_name_QuinticEase, &type_spec_QuinticEase, object_bases.get(), nullptr);
-    if (!state->type_QuinticEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuinticEase, &type_spec_QuinticEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuinticEase, &type_spec_QuinticEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReorderThemeTransition = py::register_python_type(module.get(), type_name_ReorderThemeTransition, &type_spec_ReorderThemeTransition, object_bases.get(), nullptr);
-    if (!state->type_ReorderThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReorderThemeTransition, &type_spec_ReorderThemeTransition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReorderThemeTransition, &type_spec_ReorderThemeTransition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23637,8 +23543,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_RepeatBehaviorHelper = py::register_python_type(module.get(), type_name_RepeatBehaviorHelper, &type_spec_RepeatBehaviorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatBehaviorHelper_Meta.get()));
-    if (!state->type_RepeatBehaviorHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepeatBehaviorHelper, &type_spec_RepeatBehaviorHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatBehaviorHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepeatBehaviorHelper, &type_spec_RepeatBehaviorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatBehaviorHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23649,8 +23558,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_RepositionThemeAnimation = py::register_python_type(module.get(), type_name_RepositionThemeAnimation, &type_spec_RepositionThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Meta.get()));
-    if (!state->type_RepositionThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepositionThemeAnimation, &type_spec_RepositionThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepositionThemeAnimation, &type_spec_RepositionThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23661,14 +23573,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_RepositionThemeTransition = py::register_python_type(module.get(), type_name_RepositionThemeTransition, &type_spec_RepositionThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Meta.get()));
-    if (!state->type_RepositionThemeTransition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepositionThemeTransition, &type_spec_RepositionThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepositionThemeTransition, &type_spec_RepositionThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SineEase = py::register_python_type(module.get(), type_name_SineEase, &type_spec_SineEase, object_bases.get(), nullptr);
-    if (!state->type_SineEase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SineEase, &type_spec_SineEase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SineEase, &type_spec_SineEase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23679,8 +23597,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SlideNavigationTransitionInfo = py::register_python_type(module.get(), type_name_SlideNavigationTransitionInfo, &type_spec_SlideNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Meta.get()));
-    if (!state->type_SlideNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SlideNavigationTransitionInfo, &type_spec_SlideNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SlideNavigationTransitionInfo, &type_spec_SlideNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23691,8 +23612,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SplineColorKeyFrame = py::register_python_type(module.get(), type_name_SplineColorKeyFrame, &type_spec_SplineColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Meta.get()));
-    if (!state->type_SplineColorKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplineColorKeyFrame, &type_spec_SplineColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplineColorKeyFrame, &type_spec_SplineColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23703,8 +23627,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SplineDoubleKeyFrame = py::register_python_type(module.get(), type_name_SplineDoubleKeyFrame, &type_spec_SplineDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Meta.get()));
-    if (!state->type_SplineDoubleKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplineDoubleKeyFrame, &type_spec_SplineDoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplineDoubleKeyFrame, &type_spec_SplineDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23715,8 +23642,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SplinePointKeyFrame = py::register_python_type(module.get(), type_name_SplinePointKeyFrame, &type_spec_SplinePointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Meta.get()));
-    if (!state->type_SplinePointKeyFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplinePointKeyFrame, &type_spec_SplinePointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplinePointKeyFrame, &type_spec_SplinePointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23727,8 +23657,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SplitCloseThemeAnimation = py::register_python_type(module.get(), type_name_SplitCloseThemeAnimation, &type_spec_SplitCloseThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Meta.get()));
-    if (!state->type_SplitCloseThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplitCloseThemeAnimation, &type_spec_SplitCloseThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplitCloseThemeAnimation, &type_spec_SplitCloseThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23739,8 +23672,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SplitOpenThemeAnimation = py::register_python_type(module.get(), type_name_SplitOpenThemeAnimation, &type_spec_SplitOpenThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Meta.get()));
-    if (!state->type_SplitOpenThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplitOpenThemeAnimation, &type_spec_SplitOpenThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplitOpenThemeAnimation, &type_spec_SplitOpenThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23751,14 +23687,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_Storyboard = py::register_python_type(module.get(), type_name_Storyboard, &type_spec_Storyboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Meta.get()));
-    if (!state->type_Storyboard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Storyboard, &type_spec_Storyboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Storyboard, &type_spec_Storyboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SuppressNavigationTransitionInfo = py::register_python_type(module.get(), type_name_SuppressNavigationTransitionInfo, &type_spec_SuppressNavigationTransitionInfo, object_bases.get(), nullptr);
-    if (!state->type_SuppressNavigationTransitionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SuppressNavigationTransitionInfo, &type_spec_SuppressNavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SuppressNavigationTransitionInfo, &type_spec_SuppressNavigationTransitionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23769,8 +23711,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SwipeBackThemeAnimation = py::register_python_type(module.get(), type_name_SwipeBackThemeAnimation, &type_spec_SwipeBackThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Meta.get()));
-    if (!state->type_SwipeBackThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SwipeBackThemeAnimation, &type_spec_SwipeBackThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SwipeBackThemeAnimation, &type_spec_SwipeBackThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23781,8 +23726,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_SwipeHintThemeAnimation = py::register_python_type(module.get(), type_name_SwipeHintThemeAnimation, &type_spec_SwipeHintThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Meta.get()));
-    if (!state->type_SwipeHintThemeAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SwipeHintThemeAnimation, &type_spec_SwipeHintThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SwipeHintThemeAnimation, &type_spec_SwipeHintThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23793,2089 +23741,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Animation(void) noexcept
         return nullptr;
     }
 
-    state->type_Timeline = py::register_python_type(module.get(), type_name_Timeline, &type_spec_Timeline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Meta.get()));
-    if (!state->type_Timeline)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Timeline, &type_spec_Timeline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Timeline, &type_spec_Timeline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimelineCollection = py::register_python_type(module.get(), type_name_TimelineCollection, &type_spec_TimelineCollection, object_bases.get(), nullptr);
-    if (!state->type_TimelineCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimelineCollection, &type_spec_TimelineCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimelineCollection, &type_spec_TimelineCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Transition = py::register_python_type(module.get(), type_name_Transition, &type_spec_Transition, object_bases.get(), nullptr);
-    if (!state->type_Transition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Transition, &type_spec_Transition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Transition, &type_spec_Transition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TransitionCollection = py::register_python_type(module.get(), type_name_TransitionCollection, &type_spec_TransitionCollection, object_bases.get(), nullptr);
-    if (!state->type_TransitionCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TransitionCollection, &type_spec_TransitionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TransitionCollection, &type_spec_TransitionCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyTime = py::register_python_type(module.get(), type_name_KeyTime, &type_spec_KeyTime, nullptr, nullptr);
-    if (!state->type_KeyTime)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyTime, &type_spec_KeyTime, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyTime, &type_spec_KeyTime, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RepeatBehavior = py::register_python_type(module.get(), type_name_RepeatBehavior, &type_spec_RepeatBehavior, nullptr, nullptr);
-    if (!state->type_RepeatBehavior)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepeatBehavior, &type_spec_RepeatBehavior, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepeatBehavior, &type_spec_RepeatBehavior, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AddDeleteThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BackEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::BackEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BasicConnectedAnimationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BeginStoryboard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BounceEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BounceEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::BounceEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CircleEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CircleEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::CircleEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorAnimationUsingKeyFrames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorKeyFrameCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommonNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectedAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectedAnimationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectedAnimationService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContinuumNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CubicEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CubicEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::CubicEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DirectConnectedAnimationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiscreteColorKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiscreteDoubleKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiscreteObjectKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiscretePointKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleAnimationUsingKeyFrames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleKeyFrameCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragItemThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragOverThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DrillInNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DrillInThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DrillOutThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DropTargetItemThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EasingColorKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EasingDoubleKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EasingFunctionBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EasingPointKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EdgeUIThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ElasticEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElasticEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ElasticEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EntranceNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EntranceThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExponentialEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FadeInThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FadeOutThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GravityConnectedAnimationConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeySpline;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::KeySpline is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyTimeHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LinearColorKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LinearDoubleKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LinearPointKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ObjectAnimationUsingKeyFrames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ObjectKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ObjectKeyFrameCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaneThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointAnimationUsingKeyFrames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointKeyFrameCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerDownThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerUpThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PopInThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PopOutThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PopupThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PowerEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PowerEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::PowerEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuadraticEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuarticEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuarticEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::QuarticEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuinticEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuinticEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::QuinticEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReorderThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepeatBehaviorHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepositionThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepositionThemeTransition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SineEase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SineEase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SineEase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SlideNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplineColorKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplineDoubleKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplinePointKeyFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplitCloseThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplitOpenThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Storyboard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Storyboard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::Storyboard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SuppressNavigationTransitionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SwipeBackThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SwipeHintThemeAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Timeline;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::Timeline is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimelineCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Transition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::Transition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TransitionCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyTime;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::KeyTime is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Animation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepeatBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

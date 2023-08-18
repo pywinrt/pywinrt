@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::UI::Core::Preview
 {
-    struct module_state
-    {
-        PyTypeObject* type_CoreAppWindowPreview;
-        PyTypeObject* type_SystemNavigationCloseRequestedPreviewEventArgs;
-        PyTypeObject* type_SystemNavigationManagerPreview;
-    };
-
     // ----- CoreAppWindowPreview class --------------------
     static constexpr const char* const type_name_CoreAppWindowPreview = "CoreAppWindowPreview";
 
@@ -427,48 +420,15 @@ namespace py::cpp::Windows::UI::Core::Preview
     PyDoc_STRVAR(module_doc, "Windows::UI::Core::Preview");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CoreAppWindowPreview);
-        Py_VISIT(state->type_SystemNavigationCloseRequestedPreviewEventArgs);
-        Py_VISIT(state->type_SystemNavigationManagerPreview);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CoreAppWindowPreview);
-        Py_CLEAR(state->type_SystemNavigationCloseRequestedPreviewEventArgs);
-        Py_CLEAR(state->type_SystemNavigationManagerPreview);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Core_Preview",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Core::Preview
@@ -484,7 +444,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -497,96 +457,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CoreAppWindowPreview = py::register_python_type(module.get(), type_name_CoreAppWindowPreview, &type_spec_CoreAppWindowPreview, object_bases.get(), nullptr);
-    if (!state->type_CoreAppWindowPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreAppWindowPreview, &type_spec_CoreAppWindowPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreAppWindowPreview, &type_spec_CoreAppWindowPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemNavigationCloseRequestedPreviewEventArgs = py::register_python_type(module.get(), type_name_SystemNavigationCloseRequestedPreviewEventArgs, &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SystemNavigationCloseRequestedPreviewEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemNavigationCloseRequestedPreviewEventArgs, &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemNavigationCloseRequestedPreviewEventArgs, &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemNavigationManagerPreview = py::register_python_type(module.get(), type_name_SystemNavigationManagerPreview, &type_spec_SystemNavigationManagerPreview, object_bases.get(), nullptr);
-    if (!state->type_SystemNavigationManagerPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemNavigationManagerPreview, &type_spec_SystemNavigationManagerPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemNavigationManagerPreview, &type_spec_SystemNavigationManagerPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreAppWindowPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::CoreAppWindowPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemNavigationCloseRequestedPreviewEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemNavigationManagerPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

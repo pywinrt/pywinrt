@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Media::Casting
 {
-    struct module_state
-    {
-        PyTypeObject* type_CastingConnection;
-        PyTypeObject* type_CastingConnectionErrorOccurredEventArgs;
-        PyTypeObject* type_CastingDevice;
-        PyTypeObject* type_CastingDevicePicker;
-        PyTypeObject* type_CastingDevicePickerFilter;
-        PyTypeObject* type_CastingDeviceSelectedEventArgs;
-        PyTypeObject* type_CastingSource;
-    };
-
     // ----- CastingConnection class --------------------
     static constexpr const char* const type_name_CastingConnection = "CastingConnection";
 
@@ -1598,56 +1587,15 @@ namespace py::cpp::Windows::Media::Casting
     PyDoc_STRVAR(module_doc, "Windows::Media::Casting");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CastingConnection);
-        Py_VISIT(state->type_CastingConnectionErrorOccurredEventArgs);
-        Py_VISIT(state->type_CastingDevice);
-        Py_VISIT(state->type_CastingDevicePicker);
-        Py_VISIT(state->type_CastingDevicePickerFilter);
-        Py_VISIT(state->type_CastingDeviceSelectedEventArgs);
-        Py_VISIT(state->type_CastingSource);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CastingConnection);
-        Py_CLEAR(state->type_CastingConnectionErrorOccurredEventArgs);
-        Py_CLEAR(state->type_CastingDevice);
-        Py_CLEAR(state->type_CastingDevicePicker);
-        Py_CLEAR(state->type_CastingDevicePickerFilter);
-        Py_CLEAR(state->type_CastingDeviceSelectedEventArgs);
-        Py_CLEAR(state->type_CastingSource);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Casting",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Casting
@@ -1663,7 +1611,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Casting(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1676,212 +1624,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Casting(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CastingConnection = py::register_python_type(module.get(), type_name_CastingConnection, &type_spec_CastingConnection, object_bases.get(), nullptr);
-    if (!state->type_CastingConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingConnection, &type_spec_CastingConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingConnection, &type_spec_CastingConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingConnectionErrorOccurredEventArgs = py::register_python_type(module.get(), type_name_CastingConnectionErrorOccurredEventArgs, &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CastingConnectionErrorOccurredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingConnectionErrorOccurredEventArgs, &type_spec_CastingConnectionErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingConnectionErrorOccurredEventArgs, &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingDevice = py::register_python_type(module.get(), type_name_CastingDevice, &type_spec_CastingDevice, object_bases.get(), nullptr);
-    if (!state->type_CastingDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingDevice, &type_spec_CastingDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingDevice, &type_spec_CastingDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingDevicePicker = py::register_python_type(module.get(), type_name_CastingDevicePicker, &type_spec_CastingDevicePicker, object_bases.get(), nullptr);
-    if (!state->type_CastingDevicePicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingDevicePicker, &type_spec_CastingDevicePicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingDevicePicker, &type_spec_CastingDevicePicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingDevicePickerFilter = py::register_python_type(module.get(), type_name_CastingDevicePickerFilter, &type_spec_CastingDevicePickerFilter, object_bases.get(), nullptr);
-    if (!state->type_CastingDevicePickerFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingDevicePickerFilter, &type_spec_CastingDevicePickerFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingDevicePickerFilter, &type_spec_CastingDevicePickerFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingDeviceSelectedEventArgs = py::register_python_type(module.get(), type_name_CastingDeviceSelectedEventArgs, &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CastingDeviceSelectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingDeviceSelectedEventArgs, &type_spec_CastingDeviceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingDeviceSelectedEventArgs, &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CastingSource = py::register_python_type(module.get(), type_name_CastingSource, &type_spec_CastingSource, object_bases.get(), nullptr);
-    if (!state->type_CastingSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CastingSource, &type_spec_CastingSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CastingSource, &type_spec_CastingSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingConnectionErrorOccurredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingDevicePicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingDevicePicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingDevicePicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingDevicePickerFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingDevicePickerFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingDeviceSelectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Casting::CastingSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Casting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Casting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CastingSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Casting::CastingSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

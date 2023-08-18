@@ -139,56 +139,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputGamepadInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputKeyboardInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputMouseInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPenInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputTouchInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InputInjector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPoint";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputPointerInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
+    struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
+        static constexpr const char* type_name = "InjectedInputRectangle";
     };
 }

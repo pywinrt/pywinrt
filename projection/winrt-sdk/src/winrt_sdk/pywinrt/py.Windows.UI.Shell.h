@@ -114,110 +114,128 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>
+    struct py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "AdaptiveCardBuilder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::FocusSession>
+    struct py_type<winrt::Windows::UI::Shell::FocusSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "FocusSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::FocusSessionManager>
+    struct py_type<winrt::Windows::UI::Shell::FocusSessionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "FocusSessionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::SecurityAppManager>
+    struct py_type<winrt::Windows::UI::Shell::SecurityAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "SecurityAppManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>
+    struct py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "ShareWindowCommandEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>
+    struct py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "ShareWindowCommandSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::TaskbarManager>
+    struct py_type<winrt::Windows::UI::Shell::TaskbarManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "TaskbarManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTab>
+    struct py_type<winrt::Windows::UI::Shell::WindowTab>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTab";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabCloseRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabCollection>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabGroup>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabIcon>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabManager>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabSwitchRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabTearOutRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "WindowTabThumbnailRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::IAdaptiveCard>
+    struct py_type<winrt::Windows::UI::Shell::IAdaptiveCard>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "IAdaptiveCard";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>
+    struct py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.shell";
+        static constexpr const char* type_name = "IAdaptiveCardBuilderStatics";
     };
 }

@@ -266,662 +266,772 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "AppointmentsProviderAddAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "AppointmentsProviderRemoveAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "AppointmentsProviderReplaceAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "AppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "AppointmentsProviderShowTimeFrameActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "BackgroundActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "BarcodeScannerPreviewActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "CachedFileUpdaterActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "CameraSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "CommandLineActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "CommandLineActivationOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactMapActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactMessageActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactPanelActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactPostActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ContactVideoCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "DeviceActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "DevicePairingActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "DialReceiverActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FileActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FileOpenPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FileOpenPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FileSavePickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FileSavePickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "FolderPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "LaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "LockScreenActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "LockScreenCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "LockScreenComponentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "PhoneCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "PickerReturnedActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "Print3DWorkflowActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "PrintTaskSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ProtocolActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ProtocolForResultsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "RestrictedLaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "SearchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ShareTargetActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::SplashScreen>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::SplashScreen>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "SplashScreen";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "StartupTaskActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::TileActivatedInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::TileActivatedInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "TileActivatedInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ToastNotificationActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "UserDataAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "VoiceCommandActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "WalletActionActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "WebAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "WebAuthenticationBrokerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IActivatedEventArgsWithUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IApplicationViewActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderAddAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IAppointmentsProviderShowTimeFrameActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IBackgroundActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IBarcodeScannerPreviewActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ICachedFileUpdaterActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ICameraSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ICommandLineActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactMapActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactMessageActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactPanelActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactPostActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactVideoCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContactsProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IContinuationActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IDeviceActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IDevicePairingActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IDialReceiverActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileActivatedEventArgsWithCallerPackageFamilyName";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileActivatedEventArgsWithNeighboringFiles";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileOpenPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileOpenPickerActivatedEventArgs2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileOpenPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileSavePickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileSavePickerActivatedEventArgs2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFileSavePickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IFolderPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ILaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ILaunchActivatedEventArgs2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ILockScreenActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ILockScreenCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IPhoneCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IPickerReturnedActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IPrelaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IPrint3DWorkflowActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IPrintTaskSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IProtocolActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IProtocolForResultsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IRestrictedLaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ISearchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "ISearchActivatedEventArgsWithLinguisticDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IShareTargetActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IStartupTaskActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IToastNotificationActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IUserDataAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IViewSwitcherProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IVoiceCommandActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IWalletActionActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IWebAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.activation";
+        static constexpr const char* type_name = "IWebAuthenticationBrokerContinuationEventArgs";
     };
 }

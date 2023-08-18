@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
-    struct module_state
-    {
-        PyTypeObject* type_PrintSupportExtensionSession;
-        PyTypeObject* type_PrintSupportExtensionTriggerDetails;
-        PyTypeObject* type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs;
-        PyTypeObject* type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
-        PyTypeObject* type_PrintSupportPrintTicketElement;
-        PyTypeObject* type_PrintSupportPrintTicketValidationRequestedEventArgs;
-        PyTypeObject* type_PrintSupportPrinterSelectedEventArgs;
-        PyTypeObject* type_PrintSupportSessionInfo;
-        PyTypeObject* type_PrintSupportSettingsActivatedEventArgs;
-        PyTypeObject* type_PrintSupportSettingsUISession;
-    };
-
     // ----- PrintSupportExtensionSession class --------------------
     static constexpr const char* const type_name_PrintSupportExtensionSession = "PrintSupportExtensionSession";
 
@@ -1988,62 +1974,15 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::PrintSupport");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PrintSupportExtensionSession);
-        Py_VISIT(state->type_PrintSupportExtensionTriggerDetails);
-        Py_VISIT(state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs);
-        Py_VISIT(state->type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy);
-        Py_VISIT(state->type_PrintSupportPrintTicketElement);
-        Py_VISIT(state->type_PrintSupportPrintTicketValidationRequestedEventArgs);
-        Py_VISIT(state->type_PrintSupportPrinterSelectedEventArgs);
-        Py_VISIT(state->type_PrintSupportSessionInfo);
-        Py_VISIT(state->type_PrintSupportSettingsActivatedEventArgs);
-        Py_VISIT(state->type_PrintSupportSettingsUISession);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PrintSupportExtensionSession);
-        Py_CLEAR(state->type_PrintSupportExtensionTriggerDetails);
-        Py_CLEAR(state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs);
-        Py_CLEAR(state->type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy);
-        Py_CLEAR(state->type_PrintSupportPrintTicketElement);
-        Py_CLEAR(state->type_PrintSupportPrintTicketValidationRequestedEventArgs);
-        Py_CLEAR(state->type_PrintSupportPrinterSelectedEventArgs);
-        Py_CLEAR(state->type_PrintSupportSessionInfo);
-        Py_CLEAR(state->type_PrintSupportSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_PrintSupportSettingsUISession);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Printing_PrintSupport",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Printing::PrintSupport
@@ -2059,7 +1998,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintSupport(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2072,299 +2011,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintSupport(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PrintSupportExtensionSession = py::register_python_type(module.get(), type_name_PrintSupportExtensionSession, &type_spec_PrintSupportExtensionSession, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportExtensionSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportExtensionSession, &type_spec_PrintSupportExtensionSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportExtensionSession, &type_spec_PrintSupportExtensionSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportExtensionTriggerDetails = py::register_python_type(module.get(), type_name_PrintSupportExtensionTriggerDetails, &type_spec_PrintSupportExtensionTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportExtensionTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportExtensionTriggerDetails, &type_spec_PrintSupportExtensionTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportExtensionTriggerDetails, &type_spec_PrintSupportExtensionTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs = py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, &type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, &type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, &type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy = py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, &type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, &type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, &type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportPrintTicketElement = py::register_python_type(module.get(), type_name_PrintSupportPrintTicketElement, &type_spec_PrintSupportPrintTicketElement, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportPrintTicketElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintTicketElement, &type_spec_PrintSupportPrintTicketElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintTicketElement, &type_spec_PrintSupportPrintTicketElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportPrintTicketValidationRequestedEventArgs = py::register_python_type(module.get(), type_name_PrintSupportPrintTicketValidationRequestedEventArgs, &type_spec_PrintSupportPrintTicketValidationRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportPrintTicketValidationRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintTicketValidationRequestedEventArgs, &type_spec_PrintSupportPrintTicketValidationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrintTicketValidationRequestedEventArgs, &type_spec_PrintSupportPrintTicketValidationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportPrinterSelectedEventArgs = py::register_python_type(module.get(), type_name_PrintSupportPrinterSelectedEventArgs, &type_spec_PrintSupportPrinterSelectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportPrinterSelectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrinterSelectedEventArgs, &type_spec_PrintSupportPrinterSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportPrinterSelectedEventArgs, &type_spec_PrintSupportPrinterSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportSessionInfo = py::register_python_type(module.get(), type_name_PrintSupportSessionInfo, &type_spec_PrintSupportSessionInfo, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportSessionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportSessionInfo, &type_spec_PrintSupportSessionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportSessionInfo, &type_spec_PrintSupportSessionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_PrintSupportSettingsActivatedEventArgs, &type_spec_PrintSupportSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportSettingsActivatedEventArgs, &type_spec_PrintSupportSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportSettingsActivatedEventArgs, &type_spec_PrintSupportSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintSupportSettingsUISession = py::register_python_type(module.get(), type_name_PrintSupportSettingsUISession, &type_spec_PrintSupportSettingsUISession, object_bases.get(), nullptr);
-    if (!state->type_PrintSupportSettingsUISession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintSupportSettingsUISession, &type_spec_PrintSupportSettingsUISession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintSupportSettingsUISession, &type_spec_PrintSupportSettingsUISession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportExtensionSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportExtensionTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportPrintDeviceCapabilitiesChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportPrintTicketElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportPrintTicketValidationRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportPrinterSelectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportSessionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::PrintSupport");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintSupportSettingsUISession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

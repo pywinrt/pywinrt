@@ -221,33 +221,38 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>
+    struct py_type<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.navigation";
+        static constexpr const char* type_name = "FrameNavigationOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.navigation";
+        static constexpr const char* type_name = "NavigatingCancelEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.navigation";
+        static constexpr const char* type_name = "NavigationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.navigation";
+        static constexpr const char* type_name = "NavigationFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Navigation::PageStackEntry>
+    struct py_type<winrt::Windows::UI::Xaml::Navigation::PageStackEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.navigation";
+        static constexpr const char* type_name = "PageStackEntry";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Navigation::LoadCompletedEventHandler>

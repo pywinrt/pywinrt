@@ -43,44 +43,51 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Ellipse>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Ellipse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Ellipse";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Line>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Line>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Line";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Path>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Path>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Path";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Polygon>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Polygon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Polygon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Polyline>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Polyline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Polyline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Rectangle>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Rectangle>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Rectangle";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Shapes::Shape>
+    struct py_type<winrt::Windows::UI::Xaml::Shapes::Shape>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.shapes";
+        static constexpr const char* type_name = "Shape";
     };
 }

@@ -56,62 +56,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDevicePreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDeviceWatcherAddedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDeviceWatcherPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDeviceWatcherRemovedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeDeviceWatcherUpdatedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeEnteredPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeExitedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeInputSourcePreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazeMovedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Input::Preview::GazePointPreview>
+    struct py_type<winrt::Windows::Devices::Input::Preview::GazePointPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.input.preview";
+        static constexpr const char* type_name = "GazePointPreview";
     };
 }

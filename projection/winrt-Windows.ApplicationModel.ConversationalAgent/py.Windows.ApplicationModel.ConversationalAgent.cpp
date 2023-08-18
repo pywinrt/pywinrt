@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 {
-    struct module_state
-    {
-        PyTypeObject* type_ActivationSignalDetectionConfiguration;
-        PyTypeObject* type_ActivationSignalDetectionConfigurationCreationResult;
-        PyTypeObject* type_ActivationSignalDetector;
-        PyTypeObject* type_ConversationalAgentDetectorManager;
-        PyTypeObject* type_ConversationalAgentSession;
-        PyTypeObject* type_ConversationalAgentSessionInterruptedEventArgs;
-        PyTypeObject* type_ConversationalAgentSignal;
-        PyTypeObject* type_ConversationalAgentSignalDetectedEventArgs;
-        PyTypeObject* type_ConversationalAgentSystemStateChangedEventArgs;
-        PyTypeObject* type_DetectionConfigurationAvailabilityChangedEventArgs;
-        PyTypeObject* type_DetectionConfigurationAvailabilityInfo;
-    };
-
     // ----- ActivationSignalDetectionConfiguration class --------------------
     static constexpr const char* const type_name_ActivationSignalDetectionConfiguration = "ActivationSignalDetectionConfiguration";
 
@@ -4311,64 +4296,15 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ConversationalAgent");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ActivationSignalDetectionConfiguration);
-        Py_VISIT(state->type_ActivationSignalDetectionConfigurationCreationResult);
-        Py_VISIT(state->type_ActivationSignalDetector);
-        Py_VISIT(state->type_ConversationalAgentDetectorManager);
-        Py_VISIT(state->type_ConversationalAgentSession);
-        Py_VISIT(state->type_ConversationalAgentSessionInterruptedEventArgs);
-        Py_VISIT(state->type_ConversationalAgentSignal);
-        Py_VISIT(state->type_ConversationalAgentSignalDetectedEventArgs);
-        Py_VISIT(state->type_ConversationalAgentSystemStateChangedEventArgs);
-        Py_VISIT(state->type_DetectionConfigurationAvailabilityChangedEventArgs);
-        Py_VISIT(state->type_DetectionConfigurationAvailabilityInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ActivationSignalDetectionConfiguration);
-        Py_CLEAR(state->type_ActivationSignalDetectionConfigurationCreationResult);
-        Py_CLEAR(state->type_ActivationSignalDetector);
-        Py_CLEAR(state->type_ConversationalAgentDetectorManager);
-        Py_CLEAR(state->type_ConversationalAgentSession);
-        Py_CLEAR(state->type_ConversationalAgentSessionInterruptedEventArgs);
-        Py_CLEAR(state->type_ConversationalAgentSignal);
-        Py_CLEAR(state->type_ConversationalAgentSignalDetectedEventArgs);
-        Py_CLEAR(state->type_ConversationalAgentSystemStateChangedEventArgs);
-        Py_CLEAR(state->type_DetectionConfigurationAvailabilityChangedEventArgs);
-        Py_CLEAR(state->type_DetectionConfigurationAvailabilityInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_ConversationalAgent",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::ConversationalAgent
@@ -4384,7 +4320,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ConversationalAgent(void) 
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4397,23 +4333,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ConversationalAgent(void) 
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ActivationSignalDetectionConfiguration = py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfiguration, &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ActivationSignalDetectionConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfiguration, &type_spec_ActivationSignalDetectionConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfiguration, &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivationSignalDetectionConfigurationCreationResult = py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfigurationCreationResult, &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), nullptr);
-    if (!state->type_ActivationSignalDetectionConfigurationCreationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfigurationCreationResult, &type_spec_ActivationSignalDetectionConfigurationCreationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetectionConfigurationCreationResult, &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivationSignalDetector = py::register_python_type(module.get(), type_name_ActivationSignalDetector, &type_spec_ActivationSignalDetector, object_bases.get(), nullptr);
-    if (!state->type_ActivationSignalDetector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetector, &type_spec_ActivationSignalDetector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivationSignalDetector, &type_spec_ActivationSignalDetector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4424,307 +4366,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ConversationalAgent(void) 
         return nullptr;
     }
 
-    state->type_ConversationalAgentDetectorManager = py::register_python_type(module.get(), type_name_ConversationalAgentDetectorManager, &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Meta.get()));
-    if (!state->type_ConversationalAgentDetectorManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentDetectorManager, &type_spec_ConversationalAgentDetectorManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentDetectorManager, &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentSession = py::register_python_type(module.get(), type_name_ConversationalAgentSession, &type_spec_ConversationalAgentSession, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSession, &type_spec_ConversationalAgentSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSession, &type_spec_ConversationalAgentSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentSessionInterruptedEventArgs = py::register_python_type(module.get(), type_name_ConversationalAgentSessionInterruptedEventArgs, &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentSessionInterruptedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSessionInterruptedEventArgs, &type_spec_ConversationalAgentSessionInterruptedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSessionInterruptedEventArgs, &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentSignal = py::register_python_type(module.get(), type_name_ConversationalAgentSignal, &type_spec_ConversationalAgentSignal, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentSignal)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSignal, &type_spec_ConversationalAgentSignal, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSignal, &type_spec_ConversationalAgentSignal, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentSignalDetectedEventArgs = py::register_python_type(module.get(), type_name_ConversationalAgentSignalDetectedEventArgs, &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentSignalDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSignalDetectedEventArgs, &type_spec_ConversationalAgentSignalDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSignalDetectedEventArgs, &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentSystemStateChangedEventArgs = py::register_python_type(module.get(), type_name_ConversationalAgentSystemStateChangedEventArgs, &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentSystemStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSystemStateChangedEventArgs, &type_spec_ConversationalAgentSystemStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentSystemStateChangedEventArgs, &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DetectionConfigurationAvailabilityChangedEventArgs = py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityChangedEventArgs, &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DetectionConfigurationAvailabilityChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityChangedEventArgs, &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityChangedEventArgs, &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DetectionConfigurationAvailabilityInfo = py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityInfo, &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), nullptr);
-    if (!state->type_DetectionConfigurationAvailabilityInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityInfo, &type_spec_DetectionConfigurationAvailabilityInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DetectionConfigurationAvailabilityInfo, &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivationSignalDetectionConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivationSignalDetectionConfigurationCreationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivationSignalDetector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentDetectorManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentSessionInterruptedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentSignal;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentSignalDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentSystemStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DetectionConfigurationAvailabilityChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::ConversationalAgent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::ConversationalAgent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DetectionConfigurationAvailabilityInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -30,26 +30,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>
+    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
+        static constexpr const char* type_name = "OemSupportInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>
+    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
+        static constexpr const char* type_name = "SmbiosInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>
+    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
+        static constexpr const char* type_name = "SystemSupportDeviceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>
+    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
+        static constexpr const char* type_name = "SystemSupportInfo";
     };
 }

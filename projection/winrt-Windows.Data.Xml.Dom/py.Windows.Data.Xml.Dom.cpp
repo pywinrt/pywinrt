@@ -6,31 +6,6 @@
 
 namespace py::cpp::Windows::Data::Xml::Dom
 {
-    struct module_state
-    {
-        PyTypeObject* type_DtdEntity;
-        PyTypeObject* type_DtdNotation;
-        PyTypeObject* type_XmlAttribute;
-        PyTypeObject* type_XmlCDataSection;
-        PyTypeObject* type_XmlComment;
-        PyTypeObject* type_XmlDocument;
-        PyTypeObject* type_XmlDocumentFragment;
-        PyTypeObject* type_XmlDocumentType;
-        PyTypeObject* type_XmlDomImplementation;
-        PyTypeObject* type_XmlElement;
-        PyTypeObject* type_XmlEntityReference;
-        PyTypeObject* type_XmlLoadSettings;
-        PyTypeObject* type_XmlNamedNodeMap;
-        PyTypeObject* type_XmlNodeList;
-        PyTypeObject* type_XmlProcessingInstruction;
-        PyTypeObject* type_XmlText;
-        PyTypeObject* type_IXmlCharacterData;
-        PyTypeObject* type_IXmlNode;
-        PyTypeObject* type_IXmlNodeSelector;
-        PyTypeObject* type_IXmlNodeSerializer;
-        PyTypeObject* type_IXmlText;
-    };
-
     // ----- DtdEntity class --------------------
     static constexpr const char* const type_name_DtdEntity = "DtdEntity";
 
@@ -17243,84 +17218,15 @@ namespace py::cpp::Windows::Data::Xml::Dom
     PyDoc_STRVAR(module_doc, "Windows::Data::Xml::Dom");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DtdEntity);
-        Py_VISIT(state->type_DtdNotation);
-        Py_VISIT(state->type_XmlAttribute);
-        Py_VISIT(state->type_XmlCDataSection);
-        Py_VISIT(state->type_XmlComment);
-        Py_VISIT(state->type_XmlDocument);
-        Py_VISIT(state->type_XmlDocumentFragment);
-        Py_VISIT(state->type_XmlDocumentType);
-        Py_VISIT(state->type_XmlDomImplementation);
-        Py_VISIT(state->type_XmlElement);
-        Py_VISIT(state->type_XmlEntityReference);
-        Py_VISIT(state->type_XmlLoadSettings);
-        Py_VISIT(state->type_XmlNamedNodeMap);
-        Py_VISIT(state->type_XmlNodeList);
-        Py_VISIT(state->type_XmlProcessingInstruction);
-        Py_VISIT(state->type_XmlText);
-        Py_VISIT(state->type_IXmlCharacterData);
-        Py_VISIT(state->type_IXmlNode);
-        Py_VISIT(state->type_IXmlNodeSelector);
-        Py_VISIT(state->type_IXmlNodeSerializer);
-        Py_VISIT(state->type_IXmlText);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DtdEntity);
-        Py_CLEAR(state->type_DtdNotation);
-        Py_CLEAR(state->type_XmlAttribute);
-        Py_CLEAR(state->type_XmlCDataSection);
-        Py_CLEAR(state->type_XmlComment);
-        Py_CLEAR(state->type_XmlDocument);
-        Py_CLEAR(state->type_XmlDocumentFragment);
-        Py_CLEAR(state->type_XmlDocumentType);
-        Py_CLEAR(state->type_XmlDomImplementation);
-        Py_CLEAR(state->type_XmlElement);
-        Py_CLEAR(state->type_XmlEntityReference);
-        Py_CLEAR(state->type_XmlLoadSettings);
-        Py_CLEAR(state->type_XmlNamedNodeMap);
-        Py_CLEAR(state->type_XmlNodeList);
-        Py_CLEAR(state->type_XmlProcessingInstruction);
-        Py_CLEAR(state->type_XmlText);
-        Py_CLEAR(state->type_IXmlCharacterData);
-        Py_CLEAR(state->type_IXmlNode);
-        Py_CLEAR(state->type_IXmlNodeSelector);
-        Py_CLEAR(state->type_IXmlNodeSerializer);
-        Py_CLEAR(state->type_IXmlText);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Data_Xml_Dom",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Data::Xml::Dom
@@ -17336,7 +17242,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Xml_Dom(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -17349,618 +17255,195 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Xml_Dom(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DtdEntity = py::register_python_type(module.get(), type_name_DtdEntity, &type_spec_DtdEntity, object_bases.get(), nullptr);
-    if (!state->type_DtdEntity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DtdEntity, &type_spec_DtdEntity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DtdEntity, &type_spec_DtdEntity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DtdNotation = py::register_python_type(module.get(), type_name_DtdNotation, &type_spec_DtdNotation, object_bases.get(), nullptr);
-    if (!state->type_DtdNotation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DtdNotation, &type_spec_DtdNotation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DtdNotation, &type_spec_DtdNotation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlAttribute = py::register_python_type(module.get(), type_name_XmlAttribute, &type_spec_XmlAttribute, object_bases.get(), nullptr);
-    if (!state->type_XmlAttribute)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlAttribute, &type_spec_XmlAttribute, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlAttribute, &type_spec_XmlAttribute, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlCDataSection = py::register_python_type(module.get(), type_name_XmlCDataSection, &type_spec_XmlCDataSection, object_bases.get(), nullptr);
-    if (!state->type_XmlCDataSection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlCDataSection, &type_spec_XmlCDataSection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlCDataSection, &type_spec_XmlCDataSection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlComment = py::register_python_type(module.get(), type_name_XmlComment, &type_spec_XmlComment, object_bases.get(), nullptr);
-    if (!state->type_XmlComment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlComment, &type_spec_XmlComment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlComment, &type_spec_XmlComment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlDocument = py::register_python_type(module.get(), type_name_XmlDocument, &type_spec_XmlDocument, object_bases.get(), nullptr);
-    if (!state->type_XmlDocument)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlDocument, &type_spec_XmlDocument, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlDocument, &type_spec_XmlDocument, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlDocumentFragment = py::register_python_type(module.get(), type_name_XmlDocumentFragment, &type_spec_XmlDocumentFragment, object_bases.get(), nullptr);
-    if (!state->type_XmlDocumentFragment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlDocumentFragment, &type_spec_XmlDocumentFragment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlDocumentFragment, &type_spec_XmlDocumentFragment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlDocumentType = py::register_python_type(module.get(), type_name_XmlDocumentType, &type_spec_XmlDocumentType, object_bases.get(), nullptr);
-    if (!state->type_XmlDocumentType)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlDocumentType, &type_spec_XmlDocumentType, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlDocumentType, &type_spec_XmlDocumentType, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlDomImplementation = py::register_python_type(module.get(), type_name_XmlDomImplementation, &type_spec_XmlDomImplementation, object_bases.get(), nullptr);
-    if (!state->type_XmlDomImplementation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlDomImplementation, &type_spec_XmlDomImplementation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlDomImplementation, &type_spec_XmlDomImplementation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlElement = py::register_python_type(module.get(), type_name_XmlElement, &type_spec_XmlElement, object_bases.get(), nullptr);
-    if (!state->type_XmlElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlElement, &type_spec_XmlElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlElement, &type_spec_XmlElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlEntityReference = py::register_python_type(module.get(), type_name_XmlEntityReference, &type_spec_XmlEntityReference, object_bases.get(), nullptr);
-    if (!state->type_XmlEntityReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlEntityReference, &type_spec_XmlEntityReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlEntityReference, &type_spec_XmlEntityReference, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlLoadSettings = py::register_python_type(module.get(), type_name_XmlLoadSettings, &type_spec_XmlLoadSettings, object_bases.get(), nullptr);
-    if (!state->type_XmlLoadSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlLoadSettings, &type_spec_XmlLoadSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlLoadSettings, &type_spec_XmlLoadSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlNamedNodeMap = py::register_python_type(module.get(), type_name_XmlNamedNodeMap, &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr);
-    if (!state->type_XmlNamedNodeMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlNamedNodeMap, &type_spec_XmlNamedNodeMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlNamedNodeMap, &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlNodeList = py::register_python_type(module.get(), type_name_XmlNodeList, &type_spec_XmlNodeList, object_bases.get(), nullptr);
-    if (!state->type_XmlNodeList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlNodeList, &type_spec_XmlNodeList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlNodeList, &type_spec_XmlNodeList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlProcessingInstruction = py::register_python_type(module.get(), type_name_XmlProcessingInstruction, &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr);
-    if (!state->type_XmlProcessingInstruction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlProcessingInstruction, &type_spec_XmlProcessingInstruction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlProcessingInstruction, &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlText = py::register_python_type(module.get(), type_name_XmlText, &type_spec_XmlText, object_bases.get(), nullptr);
-    if (!state->type_XmlText)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlText, &type_spec_XmlText, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlText, &type_spec_XmlText, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXmlCharacterData = py::register_python_type(module.get(), type_name_IXmlCharacterData, &type_spec_IXmlCharacterData, object_bases.get(), nullptr);
-    if (!state->type_IXmlCharacterData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXmlCharacterData, &type_spec_IXmlCharacterData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXmlCharacterData, &type_spec_IXmlCharacterData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXmlNode = py::register_python_type(module.get(), type_name_IXmlNode, &type_spec_IXmlNode, object_bases.get(), nullptr);
-    if (!state->type_IXmlNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXmlNode, &type_spec_IXmlNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXmlNode, &type_spec_IXmlNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXmlNodeSelector = py::register_python_type(module.get(), type_name_IXmlNodeSelector, &type_spec_IXmlNodeSelector, object_bases.get(), nullptr);
-    if (!state->type_IXmlNodeSelector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXmlNodeSelector, &type_spec_IXmlNodeSelector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXmlNodeSelector, &type_spec_IXmlNodeSelector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXmlNodeSerializer = py::register_python_type(module.get(), type_name_IXmlNodeSerializer, &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr);
-    if (!state->type_IXmlNodeSerializer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXmlNodeSerializer, &type_spec_IXmlNodeSerializer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXmlNodeSerializer, &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXmlText = py::register_python_type(module.get(), type_name_IXmlText, &type_spec_IXmlText, object_bases.get(), nullptr);
-    if (!state->type_IXmlText)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXmlText, &type_spec_IXmlText, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXmlText, &type_spec_IXmlText, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DtdEntity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::DtdEntity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::DtdNotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DtdNotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::DtdNotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlAttribute;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlAttribute is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlCDataSection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlCDataSection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlComment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlComment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlComment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocument>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlDocument;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlDocument is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlDocumentFragment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlDocumentFragment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlDocumentType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlDocumentType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlDomImplementation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlDomImplementation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlEntityReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlEntityReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlLoadSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlLoadSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlNamedNodeMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlNodeList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlNodeList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlProcessingInstruction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::XmlText>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlText;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::XmlText is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXmlCharacterData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::IXmlCharacterData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXmlNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::IXmlNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXmlNodeSelector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::IXmlNodeSelector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXmlNodeSerializer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Xml::Dom::IXmlText>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Xml::Dom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Xml::Dom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXmlText;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Xml::Dom::IXmlText is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

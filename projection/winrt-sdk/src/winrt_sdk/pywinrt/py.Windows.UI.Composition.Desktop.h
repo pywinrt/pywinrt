@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>
+    struct py_type<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.desktop";
+        static constexpr const char* type_name = "DesktopWindowTarget";
     };
 }

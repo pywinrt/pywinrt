@@ -60,26 +60,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
+        static constexpr const char* type_name = "RfcommDeviceService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
+        static constexpr const char* type_name = "RfcommDeviceServicesResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
+        static constexpr const char* type_name = "RfcommServiceId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
+        static constexpr const char* type_name = "RfcommServiceProvider";
     };
 }

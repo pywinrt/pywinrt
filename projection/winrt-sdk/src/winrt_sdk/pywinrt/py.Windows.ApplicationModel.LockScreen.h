@@ -41,32 +41,37 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>
+    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
+        static constexpr const char* type_name = "LockApplicationHost";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>
+    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
+        static constexpr const char* type_name = "LockScreenBadge";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>
+    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
+        static constexpr const char* type_name = "LockScreenInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
+        static constexpr const char* type_name = "LockScreenUnlockingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
+        static constexpr const char* type_name = "LockScreenUnlockingEventArgs";
     };
 }

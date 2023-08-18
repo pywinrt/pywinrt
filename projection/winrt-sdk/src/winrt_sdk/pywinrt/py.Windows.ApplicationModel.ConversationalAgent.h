@@ -212,68 +212,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetectionConfigurationCreationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ActivationSignalDetector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentDetectorManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSessionInterruptedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSignal";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSignalDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "ConversationalAgentSystemStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "DetectionConfigurationAvailabilityChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
+    struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
+        static constexpr const char* type_name = "DetectionConfigurationAvailabilityInfo";
     };
 }

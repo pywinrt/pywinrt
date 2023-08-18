@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Media::SpeechSynthesis
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpeechSynthesisStream;
-        PyTypeObject* type_SpeechSynthesizer;
-        PyTypeObject* type_SpeechSynthesizerOptions;
-        PyTypeObject* type_VoiceInformation;
-    };
-
     // ----- SpeechSynthesisStream class --------------------
     static constexpr const char* const type_name_SpeechSynthesisStream = "SpeechSynthesisStream";
 
@@ -1498,50 +1490,15 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     PyDoc_STRVAR(module_doc, "Windows::Media::SpeechSynthesis");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpeechSynthesisStream);
-        Py_VISIT(state->type_SpeechSynthesizer);
-        Py_VISIT(state->type_SpeechSynthesizerOptions);
-        Py_VISIT(state->type_VoiceInformation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpeechSynthesisStream);
-        Py_CLEAR(state->type_SpeechSynthesizer);
-        Py_CLEAR(state->type_SpeechSynthesizerOptions);
-        Py_CLEAR(state->type_VoiceInformation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_SpeechSynthesis",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::SpeechSynthesis
@@ -1557,7 +1514,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechSynthesis(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1570,11 +1527,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechSynthesis(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpeechSynthesisStream = py::register_python_type(module.get(), type_name_SpeechSynthesisStream, &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr);
-    if (!state->type_SpeechSynthesisStream)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesisStream, &type_spec_SpeechSynthesisStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesisStream, &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1585,116 +1542,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechSynthesis(void) noexcept
         return nullptr;
     }
 
-    state->type_SpeechSynthesizer = py::register_python_type(module.get(), type_name_SpeechSynthesizer, &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get()));
-    if (!state->type_SpeechSynthesizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesizer, &type_spec_SpeechSynthesizer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesizer, &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechSynthesizerOptions = py::register_python_type(module.get(), type_name_SpeechSynthesizerOptions, &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr);
-    if (!state->type_SpeechSynthesizerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesizerOptions, &type_spec_SpeechSynthesizerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechSynthesizerOptions, &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceInformation = py::register_python_type(module.get(), type_name_VoiceInformation, &type_spec_VoiceInformation, object_bases.get(), nullptr);
-    if (!state->type_VoiceInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceInformation, &type_spec_VoiceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceInformation, &type_spec_VoiceInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechSynthesisStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechSynthesizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechSynthesizerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechSynthesis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechSynthesis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechSynthesis::VoiceInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

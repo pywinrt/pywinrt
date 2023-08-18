@@ -70,26 +70,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::Lamp>
+    struct py_type<winrt::Windows::Devices::Lights::Lamp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights";
+        static constexpr const char* type_name = "Lamp";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::LampArray>
+    struct py_type<winrt::Windows::Devices::Lights::LampArray>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights";
+        static constexpr const char* type_name = "LampArray";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights";
+        static constexpr const char* type_name = "LampAvailabilityChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Lights::LampInfo>
+    struct py_type<winrt::Windows::Devices::Lights::LampInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.lights";
+        static constexpr const char* type_name = "LampInfo";
     };
 }

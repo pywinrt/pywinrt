@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Core::ApplicationDataManager>
+    struct py_type<winrt::Windows::Management::Core::ApplicationDataManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.core";
+        static constexpr const char* type_name = "ApplicationDataManager";
     };
 }

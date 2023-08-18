@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 {
-    struct module_state
-    {
-        PyTypeObject* type_RfcommDeviceService;
-        PyTypeObject* type_RfcommDeviceServicesResult;
-        PyTypeObject* type_RfcommServiceId;
-        PyTypeObject* type_RfcommServiceProvider;
-    };
-
     // ----- RfcommDeviceService class --------------------
     static constexpr const char* const type_name_RfcommDeviceService = "RfcommDeviceService";
 
@@ -1245,50 +1237,15 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::Rfcomm");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_RfcommDeviceService);
-        Py_VISIT(state->type_RfcommDeviceServicesResult);
-        Py_VISIT(state->type_RfcommServiceId);
-        Py_VISIT(state->type_RfcommServiceProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_RfcommDeviceService);
-        Py_CLEAR(state->type_RfcommDeviceServicesResult);
-        Py_CLEAR(state->type_RfcommServiceId);
-        Py_CLEAR(state->type_RfcommServiceProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Bluetooth_Rfcomm",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Bluetooth::Rfcomm
@@ -1304,7 +1261,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Rfcomm(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1317,17 +1274,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Rfcomm(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_RfcommDeviceService = py::register_python_type(module.get(), type_name_RfcommDeviceService, &type_spec_RfcommDeviceService, object_bases.get(), nullptr);
-    if (!state->type_RfcommDeviceService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommDeviceService, &type_spec_RfcommDeviceService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommDeviceService, &type_spec_RfcommDeviceService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommDeviceServicesResult = py::register_python_type(module.get(), type_name_RfcommDeviceServicesResult, &type_spec_RfcommDeviceServicesResult, object_bases.get(), nullptr);
-    if (!state->type_RfcommDeviceServicesResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommDeviceServicesResult, &type_spec_RfcommDeviceServicesResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommDeviceServicesResult, &type_spec_RfcommDeviceServicesResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1338,110 +1298,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Rfcomm(void) noexcept
         return nullptr;
     }
 
-    state->type_RfcommServiceId = py::register_python_type(module.get(), type_name_RfcommServiceId, &type_spec_RfcommServiceId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceId_Meta.get()));
-    if (!state->type_RfcommServiceId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommServiceId, &type_spec_RfcommServiceId, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceId_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommServiceId, &type_spec_RfcommServiceId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceId_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommServiceProvider = py::register_python_type(module.get(), type_name_RfcommServiceProvider, &type_spec_RfcommServiceProvider, object_bases.get(), nullptr);
-    if (!state->type_RfcommServiceProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommServiceProvider, &type_spec_RfcommServiceProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommServiceProvider, &type_spec_RfcommServiceProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Rfcomm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommDeviceService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Rfcomm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommDeviceServicesResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Rfcomm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommServiceId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Bluetooth::Rfcomm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommServiceProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

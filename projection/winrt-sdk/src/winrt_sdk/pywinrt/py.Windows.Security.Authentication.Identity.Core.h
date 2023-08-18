@@ -76,32 +76,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorAuthenticationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorGetSessionsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorOneTimeCodedInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorSessionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.core";
+        static constexpr const char* type_name = "MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
     };
 }

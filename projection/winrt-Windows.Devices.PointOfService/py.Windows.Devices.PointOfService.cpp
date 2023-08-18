@@ -6,84 +6,6 @@
 
 namespace py::cpp::Windows::Devices::PointOfService
 {
-    struct module_state
-    {
-        PyTypeObject* type_BarcodeScanner;
-        PyTypeObject* type_BarcodeScannerCapabilities;
-        PyTypeObject* type_BarcodeScannerDataReceivedEventArgs;
-        PyTypeObject* type_BarcodeScannerErrorOccurredEventArgs;
-        PyTypeObject* type_BarcodeScannerImagePreviewReceivedEventArgs;
-        PyTypeObject* type_BarcodeScannerReport;
-        PyTypeObject* type_BarcodeScannerStatusUpdatedEventArgs;
-        PyTypeObject* type_BarcodeSymbologies;
-        PyTypeObject* type_BarcodeSymbologyAttributes;
-        PyTypeObject* type_CashDrawer;
-        PyTypeObject* type_CashDrawerCapabilities;
-        PyTypeObject* type_CashDrawerCloseAlarm;
-        PyTypeObject* type_CashDrawerClosedEventArgs;
-        PyTypeObject* type_CashDrawerEventSource;
-        PyTypeObject* type_CashDrawerOpenedEventArgs;
-        PyTypeObject* type_CashDrawerStatus;
-        PyTypeObject* type_CashDrawerStatusUpdatedEventArgs;
-        PyTypeObject* type_ClaimedBarcodeScanner;
-        PyTypeObject* type_ClaimedBarcodeScannerClosedEventArgs;
-        PyTypeObject* type_ClaimedCashDrawer;
-        PyTypeObject* type_ClaimedCashDrawerClosedEventArgs;
-        PyTypeObject* type_ClaimedJournalPrinter;
-        PyTypeObject* type_ClaimedLineDisplay;
-        PyTypeObject* type_ClaimedLineDisplayClosedEventArgs;
-        PyTypeObject* type_ClaimedMagneticStripeReader;
-        PyTypeObject* type_ClaimedMagneticStripeReaderClosedEventArgs;
-        PyTypeObject* type_ClaimedPosPrinter;
-        PyTypeObject* type_ClaimedPosPrinterClosedEventArgs;
-        PyTypeObject* type_ClaimedReceiptPrinter;
-        PyTypeObject* type_ClaimedSlipPrinter;
-        PyTypeObject* type_JournalPrintJob;
-        PyTypeObject* type_JournalPrinterCapabilities;
-        PyTypeObject* type_LineDisplay;
-        PyTypeObject* type_LineDisplayAttributes;
-        PyTypeObject* type_LineDisplayCapabilities;
-        PyTypeObject* type_LineDisplayCursor;
-        PyTypeObject* type_LineDisplayCursorAttributes;
-        PyTypeObject* type_LineDisplayCustomGlyphs;
-        PyTypeObject* type_LineDisplayMarquee;
-        PyTypeObject* type_LineDisplayStatisticsCategorySelector;
-        PyTypeObject* type_LineDisplayStatusUpdatedEventArgs;
-        PyTypeObject* type_LineDisplayStoredBitmap;
-        PyTypeObject* type_LineDisplayWindow;
-        PyTypeObject* type_MagneticStripeReader;
-        PyTypeObject* type_MagneticStripeReaderAamvaCardDataReceivedEventArgs;
-        PyTypeObject* type_MagneticStripeReaderBankCardDataReceivedEventArgs;
-        PyTypeObject* type_MagneticStripeReaderCapabilities;
-        PyTypeObject* type_MagneticStripeReaderCardTypes;
-        PyTypeObject* type_MagneticStripeReaderEncryptionAlgorithms;
-        PyTypeObject* type_MagneticStripeReaderErrorOccurredEventArgs;
-        PyTypeObject* type_MagneticStripeReaderReport;
-        PyTypeObject* type_MagneticStripeReaderStatusUpdatedEventArgs;
-        PyTypeObject* type_MagneticStripeReaderTrackData;
-        PyTypeObject* type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
-        PyTypeObject* type_PosPrinter;
-        PyTypeObject* type_PosPrinterCapabilities;
-        PyTypeObject* type_PosPrinterCharacterSetIds;
-        PyTypeObject* type_PosPrinterFontProperty;
-        PyTypeObject* type_PosPrinterPrintOptions;
-        PyTypeObject* type_PosPrinterReleaseDeviceRequestedEventArgs;
-        PyTypeObject* type_PosPrinterStatus;
-        PyTypeObject* type_PosPrinterStatusUpdatedEventArgs;
-        PyTypeObject* type_ReceiptPrintJob;
-        PyTypeObject* type_ReceiptPrinterCapabilities;
-        PyTypeObject* type_SlipPrintJob;
-        PyTypeObject* type_SlipPrinterCapabilities;
-        PyTypeObject* type_UnifiedPosErrorData;
-        PyTypeObject* type_ICashDrawerEventSourceEventArgs;
-        PyTypeObject* type_ICommonClaimedPosPrinterStation;
-        PyTypeObject* type_ICommonPosPrintStationCapabilities;
-        PyTypeObject* type_ICommonReceiptSlipCapabilities;
-        PyTypeObject* type_IPosPrinterJob;
-        PyTypeObject* type_IReceiptOrSlipJob;
-        PyTypeObject* type_SizeUInt32;
-    };
-
     // ----- BarcodeScanner class --------------------
     static constexpr const char* const type_name_BarcodeScanner = "BarcodeScanner";
 
@@ -26073,190 +25995,15 @@ namespace py::cpp::Windows::Devices::PointOfService
     PyDoc_STRVAR(module_doc, "Windows::Devices::PointOfService");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BarcodeScanner);
-        Py_VISIT(state->type_BarcodeScannerCapabilities);
-        Py_VISIT(state->type_BarcodeScannerDataReceivedEventArgs);
-        Py_VISIT(state->type_BarcodeScannerErrorOccurredEventArgs);
-        Py_VISIT(state->type_BarcodeScannerImagePreviewReceivedEventArgs);
-        Py_VISIT(state->type_BarcodeScannerReport);
-        Py_VISIT(state->type_BarcodeScannerStatusUpdatedEventArgs);
-        Py_VISIT(state->type_BarcodeSymbologies);
-        Py_VISIT(state->type_BarcodeSymbologyAttributes);
-        Py_VISIT(state->type_CashDrawer);
-        Py_VISIT(state->type_CashDrawerCapabilities);
-        Py_VISIT(state->type_CashDrawerCloseAlarm);
-        Py_VISIT(state->type_CashDrawerClosedEventArgs);
-        Py_VISIT(state->type_CashDrawerEventSource);
-        Py_VISIT(state->type_CashDrawerOpenedEventArgs);
-        Py_VISIT(state->type_CashDrawerStatus);
-        Py_VISIT(state->type_CashDrawerStatusUpdatedEventArgs);
-        Py_VISIT(state->type_ClaimedBarcodeScanner);
-        Py_VISIT(state->type_ClaimedBarcodeScannerClosedEventArgs);
-        Py_VISIT(state->type_ClaimedCashDrawer);
-        Py_VISIT(state->type_ClaimedCashDrawerClosedEventArgs);
-        Py_VISIT(state->type_ClaimedJournalPrinter);
-        Py_VISIT(state->type_ClaimedLineDisplay);
-        Py_VISIT(state->type_ClaimedLineDisplayClosedEventArgs);
-        Py_VISIT(state->type_ClaimedMagneticStripeReader);
-        Py_VISIT(state->type_ClaimedMagneticStripeReaderClosedEventArgs);
-        Py_VISIT(state->type_ClaimedPosPrinter);
-        Py_VISIT(state->type_ClaimedPosPrinterClosedEventArgs);
-        Py_VISIT(state->type_ClaimedReceiptPrinter);
-        Py_VISIT(state->type_ClaimedSlipPrinter);
-        Py_VISIT(state->type_JournalPrintJob);
-        Py_VISIT(state->type_JournalPrinterCapabilities);
-        Py_VISIT(state->type_LineDisplay);
-        Py_VISIT(state->type_LineDisplayAttributes);
-        Py_VISIT(state->type_LineDisplayCapabilities);
-        Py_VISIT(state->type_LineDisplayCursor);
-        Py_VISIT(state->type_LineDisplayCursorAttributes);
-        Py_VISIT(state->type_LineDisplayCustomGlyphs);
-        Py_VISIT(state->type_LineDisplayMarquee);
-        Py_VISIT(state->type_LineDisplayStatisticsCategorySelector);
-        Py_VISIT(state->type_LineDisplayStatusUpdatedEventArgs);
-        Py_VISIT(state->type_LineDisplayStoredBitmap);
-        Py_VISIT(state->type_LineDisplayWindow);
-        Py_VISIT(state->type_MagneticStripeReader);
-        Py_VISIT(state->type_MagneticStripeReaderAamvaCardDataReceivedEventArgs);
-        Py_VISIT(state->type_MagneticStripeReaderBankCardDataReceivedEventArgs);
-        Py_VISIT(state->type_MagneticStripeReaderCapabilities);
-        Py_VISIT(state->type_MagneticStripeReaderCardTypes);
-        Py_VISIT(state->type_MagneticStripeReaderEncryptionAlgorithms);
-        Py_VISIT(state->type_MagneticStripeReaderErrorOccurredEventArgs);
-        Py_VISIT(state->type_MagneticStripeReaderReport);
-        Py_VISIT(state->type_MagneticStripeReaderStatusUpdatedEventArgs);
-        Py_VISIT(state->type_MagneticStripeReaderTrackData);
-        Py_VISIT(state->type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs);
-        Py_VISIT(state->type_PosPrinter);
-        Py_VISIT(state->type_PosPrinterCapabilities);
-        Py_VISIT(state->type_PosPrinterCharacterSetIds);
-        Py_VISIT(state->type_PosPrinterFontProperty);
-        Py_VISIT(state->type_PosPrinterPrintOptions);
-        Py_VISIT(state->type_PosPrinterReleaseDeviceRequestedEventArgs);
-        Py_VISIT(state->type_PosPrinterStatus);
-        Py_VISIT(state->type_PosPrinterStatusUpdatedEventArgs);
-        Py_VISIT(state->type_ReceiptPrintJob);
-        Py_VISIT(state->type_ReceiptPrinterCapabilities);
-        Py_VISIT(state->type_SlipPrintJob);
-        Py_VISIT(state->type_SlipPrinterCapabilities);
-        Py_VISIT(state->type_UnifiedPosErrorData);
-        Py_VISIT(state->type_ICashDrawerEventSourceEventArgs);
-        Py_VISIT(state->type_ICommonClaimedPosPrinterStation);
-        Py_VISIT(state->type_ICommonPosPrintStationCapabilities);
-        Py_VISIT(state->type_ICommonReceiptSlipCapabilities);
-        Py_VISIT(state->type_IPosPrinterJob);
-        Py_VISIT(state->type_IReceiptOrSlipJob);
-        Py_VISIT(state->type_SizeUInt32);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BarcodeScanner);
-        Py_CLEAR(state->type_BarcodeScannerCapabilities);
-        Py_CLEAR(state->type_BarcodeScannerDataReceivedEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerErrorOccurredEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerImagePreviewReceivedEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerReport);
-        Py_CLEAR(state->type_BarcodeScannerStatusUpdatedEventArgs);
-        Py_CLEAR(state->type_BarcodeSymbologies);
-        Py_CLEAR(state->type_BarcodeSymbologyAttributes);
-        Py_CLEAR(state->type_CashDrawer);
-        Py_CLEAR(state->type_CashDrawerCapabilities);
-        Py_CLEAR(state->type_CashDrawerCloseAlarm);
-        Py_CLEAR(state->type_CashDrawerClosedEventArgs);
-        Py_CLEAR(state->type_CashDrawerEventSource);
-        Py_CLEAR(state->type_CashDrawerOpenedEventArgs);
-        Py_CLEAR(state->type_CashDrawerStatus);
-        Py_CLEAR(state->type_CashDrawerStatusUpdatedEventArgs);
-        Py_CLEAR(state->type_ClaimedBarcodeScanner);
-        Py_CLEAR(state->type_ClaimedBarcodeScannerClosedEventArgs);
-        Py_CLEAR(state->type_ClaimedCashDrawer);
-        Py_CLEAR(state->type_ClaimedCashDrawerClosedEventArgs);
-        Py_CLEAR(state->type_ClaimedJournalPrinter);
-        Py_CLEAR(state->type_ClaimedLineDisplay);
-        Py_CLEAR(state->type_ClaimedLineDisplayClosedEventArgs);
-        Py_CLEAR(state->type_ClaimedMagneticStripeReader);
-        Py_CLEAR(state->type_ClaimedMagneticStripeReaderClosedEventArgs);
-        Py_CLEAR(state->type_ClaimedPosPrinter);
-        Py_CLEAR(state->type_ClaimedPosPrinterClosedEventArgs);
-        Py_CLEAR(state->type_ClaimedReceiptPrinter);
-        Py_CLEAR(state->type_ClaimedSlipPrinter);
-        Py_CLEAR(state->type_JournalPrintJob);
-        Py_CLEAR(state->type_JournalPrinterCapabilities);
-        Py_CLEAR(state->type_LineDisplay);
-        Py_CLEAR(state->type_LineDisplayAttributes);
-        Py_CLEAR(state->type_LineDisplayCapabilities);
-        Py_CLEAR(state->type_LineDisplayCursor);
-        Py_CLEAR(state->type_LineDisplayCursorAttributes);
-        Py_CLEAR(state->type_LineDisplayCustomGlyphs);
-        Py_CLEAR(state->type_LineDisplayMarquee);
-        Py_CLEAR(state->type_LineDisplayStatisticsCategorySelector);
-        Py_CLEAR(state->type_LineDisplayStatusUpdatedEventArgs);
-        Py_CLEAR(state->type_LineDisplayStoredBitmap);
-        Py_CLEAR(state->type_LineDisplayWindow);
-        Py_CLEAR(state->type_MagneticStripeReader);
-        Py_CLEAR(state->type_MagneticStripeReaderAamvaCardDataReceivedEventArgs);
-        Py_CLEAR(state->type_MagneticStripeReaderBankCardDataReceivedEventArgs);
-        Py_CLEAR(state->type_MagneticStripeReaderCapabilities);
-        Py_CLEAR(state->type_MagneticStripeReaderCardTypes);
-        Py_CLEAR(state->type_MagneticStripeReaderEncryptionAlgorithms);
-        Py_CLEAR(state->type_MagneticStripeReaderErrorOccurredEventArgs);
-        Py_CLEAR(state->type_MagneticStripeReaderReport);
-        Py_CLEAR(state->type_MagneticStripeReaderStatusUpdatedEventArgs);
-        Py_CLEAR(state->type_MagneticStripeReaderTrackData);
-        Py_CLEAR(state->type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs);
-        Py_CLEAR(state->type_PosPrinter);
-        Py_CLEAR(state->type_PosPrinterCapabilities);
-        Py_CLEAR(state->type_PosPrinterCharacterSetIds);
-        Py_CLEAR(state->type_PosPrinterFontProperty);
-        Py_CLEAR(state->type_PosPrinterPrintOptions);
-        Py_CLEAR(state->type_PosPrinterReleaseDeviceRequestedEventArgs);
-        Py_CLEAR(state->type_PosPrinterStatus);
-        Py_CLEAR(state->type_PosPrinterStatusUpdatedEventArgs);
-        Py_CLEAR(state->type_ReceiptPrintJob);
-        Py_CLEAR(state->type_ReceiptPrinterCapabilities);
-        Py_CLEAR(state->type_SlipPrintJob);
-        Py_CLEAR(state->type_SlipPrinterCapabilities);
-        Py_CLEAR(state->type_UnifiedPosErrorData);
-        Py_CLEAR(state->type_ICashDrawerEventSourceEventArgs);
-        Py_CLEAR(state->type_ICommonClaimedPosPrinterStation);
-        Py_CLEAR(state->type_ICommonPosPrintStationCapabilities);
-        Py_CLEAR(state->type_ICommonReceiptSlipCapabilities);
-        Py_CLEAR(state->type_IPosPrinterJob);
-        Py_CLEAR(state->type_IReceiptOrSlipJob);
-        Py_CLEAR(state->type_SizeUInt32);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_PointOfService",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::PointOfService
@@ -26272,7 +26019,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -26285,47 +26032,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BarcodeScanner = py::register_python_type(module.get(), type_name_BarcodeScanner, &type_spec_BarcodeScanner, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScanner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScanner, &type_spec_BarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScanner, &type_spec_BarcodeScanner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerCapabilities = py::register_python_type(module.get(), type_name_BarcodeScannerCapabilities, &type_spec_BarcodeScannerCapabilities, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerCapabilities, &type_spec_BarcodeScannerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerCapabilities, &type_spec_BarcodeScannerCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerDataReceivedEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerDataReceivedEventArgs, &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDataReceivedEventArgs, &type_spec_BarcodeScannerDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerDataReceivedEventArgs, &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerErrorOccurredEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerErrorOccurredEventArgs, &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerErrorOccurredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerErrorOccurredEventArgs, &type_spec_BarcodeScannerErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerErrorOccurredEventArgs, &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerImagePreviewReceivedEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerImagePreviewReceivedEventArgs, &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerImagePreviewReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerImagePreviewReceivedEventArgs, &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerImagePreviewReceivedEventArgs, &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerReport = py::register_python_type(module.get(), type_name_BarcodeScannerReport, &type_spec_BarcodeScannerReport, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerReport, &type_spec_BarcodeScannerReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerReport, &type_spec_BarcodeScannerReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerStatusUpdatedEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerStatusUpdatedEventArgs, &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerStatusUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStatusUpdatedEventArgs, &type_spec_BarcodeScannerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerStatusUpdatedEventArgs, &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -26336,152 +26101,227 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    state->type_BarcodeSymbologies = py::register_python_type(module.get(), type_name_BarcodeSymbologies, &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get()));
-    if (!state->type_BarcodeSymbologies)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologies, &type_spec_BarcodeSymbologies, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologies, &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeSymbologyAttributes = py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributes, &type_spec_BarcodeSymbologyAttributes, object_bases.get(), nullptr);
-    if (!state->type_BarcodeSymbologyAttributes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributes, &type_spec_BarcodeSymbologyAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributes, &type_spec_BarcodeSymbologyAttributes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawer = py::register_python_type(module.get(), type_name_CashDrawer, &type_spec_CashDrawer, object_bases.get(), nullptr);
-    if (!state->type_CashDrawer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawer, &type_spec_CashDrawer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawer, &type_spec_CashDrawer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerCapabilities = py::register_python_type(module.get(), type_name_CashDrawerCapabilities, &type_spec_CashDrawerCapabilities, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerCapabilities, &type_spec_CashDrawerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerCapabilities, &type_spec_CashDrawerCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerCloseAlarm = py::register_python_type(module.get(), type_name_CashDrawerCloseAlarm, &type_spec_CashDrawerCloseAlarm, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerCloseAlarm)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerCloseAlarm, &type_spec_CashDrawerCloseAlarm, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerCloseAlarm, &type_spec_CashDrawerCloseAlarm, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerClosedEventArgs = py::register_python_type(module.get(), type_name_CashDrawerClosedEventArgs, &type_spec_CashDrawerClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerClosedEventArgs, &type_spec_CashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerClosedEventArgs, &type_spec_CashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerEventSource = py::register_python_type(module.get(), type_name_CashDrawerEventSource, &type_spec_CashDrawerEventSource, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerEventSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerEventSource, &type_spec_CashDrawerEventSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerEventSource, &type_spec_CashDrawerEventSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerOpenedEventArgs = py::register_python_type(module.get(), type_name_CashDrawerOpenedEventArgs, &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerOpenedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerOpenedEventArgs, &type_spec_CashDrawerOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerOpenedEventArgs, &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerStatus = py::register_python_type(module.get(), type_name_CashDrawerStatus, &type_spec_CashDrawerStatus, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerStatus, &type_spec_CashDrawerStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerStatus, &type_spec_CashDrawerStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CashDrawerStatusUpdatedEventArgs = py::register_python_type(module.get(), type_name_CashDrawerStatusUpdatedEventArgs, &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CashDrawerStatusUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CashDrawerStatusUpdatedEventArgs, &type_spec_CashDrawerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CashDrawerStatusUpdatedEventArgs, &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedBarcodeScanner = py::register_python_type(module.get(), type_name_ClaimedBarcodeScanner, &type_spec_ClaimedBarcodeScanner, object_bases.get(), nullptr);
-    if (!state->type_ClaimedBarcodeScanner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScanner, &type_spec_ClaimedBarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScanner, &type_spec_ClaimedBarcodeScanner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedBarcodeScannerClosedEventArgs = py::register_python_type(module.get(), type_name_ClaimedBarcodeScannerClosedEventArgs, &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClaimedBarcodeScannerClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScannerClosedEventArgs, &type_spec_ClaimedBarcodeScannerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScannerClosedEventArgs, &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedCashDrawer = py::register_python_type(module.get(), type_name_ClaimedCashDrawer, &type_spec_ClaimedCashDrawer, object_bases.get(), nullptr);
-    if (!state->type_ClaimedCashDrawer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawer, &type_spec_ClaimedCashDrawer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawer, &type_spec_ClaimedCashDrawer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedCashDrawerClosedEventArgs = py::register_python_type(module.get(), type_name_ClaimedCashDrawerClosedEventArgs, &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClaimedCashDrawerClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawerClosedEventArgs, &type_spec_ClaimedCashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawerClosedEventArgs, &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedJournalPrinter = py::register_python_type(module.get(), type_name_ClaimedJournalPrinter, &type_spec_ClaimedJournalPrinter, object_bases.get(), nullptr);
-    if (!state->type_ClaimedJournalPrinter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedJournalPrinter, &type_spec_ClaimedJournalPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedJournalPrinter, &type_spec_ClaimedJournalPrinter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedLineDisplay = py::register_python_type(module.get(), type_name_ClaimedLineDisplay, &type_spec_ClaimedLineDisplay, object_bases.get(), nullptr);
-    if (!state->type_ClaimedLineDisplay)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplay, &type_spec_ClaimedLineDisplay, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplay, &type_spec_ClaimedLineDisplay, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedLineDisplayClosedEventArgs = py::register_python_type(module.get(), type_name_ClaimedLineDisplayClosedEventArgs, &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClaimedLineDisplayClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplayClosedEventArgs, &type_spec_ClaimedLineDisplayClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplayClosedEventArgs, &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedMagneticStripeReader = py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReader, &type_spec_ClaimedMagneticStripeReader, object_bases.get(), nullptr);
-    if (!state->type_ClaimedMagneticStripeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReader, &type_spec_ClaimedMagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReader, &type_spec_ClaimedMagneticStripeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedMagneticStripeReaderClosedEventArgs = py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReaderClosedEventArgs, &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClaimedMagneticStripeReaderClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReaderClosedEventArgs, &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReaderClosedEventArgs, &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedPosPrinter = py::register_python_type(module.get(), type_name_ClaimedPosPrinter, &type_spec_ClaimedPosPrinter, object_bases.get(), nullptr);
-    if (!state->type_ClaimedPosPrinter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinter, &type_spec_ClaimedPosPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinter, &type_spec_ClaimedPosPrinter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedPosPrinterClosedEventArgs = py::register_python_type(module.get(), type_name_ClaimedPosPrinterClosedEventArgs, &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClaimedPosPrinterClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinterClosedEventArgs, &type_spec_ClaimedPosPrinterClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinterClosedEventArgs, &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedReceiptPrinter = py::register_python_type(module.get(), type_name_ClaimedReceiptPrinter, &type_spec_ClaimedReceiptPrinter, object_bases.get(), nullptr);
-    if (!state->type_ClaimedReceiptPrinter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedReceiptPrinter, &type_spec_ClaimedReceiptPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedReceiptPrinter, &type_spec_ClaimedReceiptPrinter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClaimedSlipPrinter = py::register_python_type(module.get(), type_name_ClaimedSlipPrinter, &type_spec_ClaimedSlipPrinter, object_bases.get(), nullptr);
-    if (!state->type_ClaimedSlipPrinter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClaimedSlipPrinter, &type_spec_ClaimedSlipPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClaimedSlipPrinter, &type_spec_ClaimedSlipPrinter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JournalPrintJob = py::register_python_type(module.get(), type_name_JournalPrintJob, &type_spec_JournalPrintJob, object_bases.get(), nullptr);
-    if (!state->type_JournalPrintJob)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JournalPrintJob, &type_spec_JournalPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JournalPrintJob, &type_spec_JournalPrintJob, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JournalPrinterCapabilities = py::register_python_type(module.get(), type_name_JournalPrinterCapabilities, &type_spec_JournalPrinterCapabilities, object_bases.get(), nullptr);
-    if (!state->type_JournalPrinterCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JournalPrinterCapabilities, &type_spec_JournalPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JournalPrinterCapabilities, &type_spec_JournalPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -26492,92 +26332,137 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    state->type_LineDisplay = py::register_python_type(module.get(), type_name_LineDisplay, &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get()));
-    if (!state->type_LineDisplay)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplay, &type_spec_LineDisplay, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplay, &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayAttributes = py::register_python_type(module.get(), type_name_LineDisplayAttributes, &type_spec_LineDisplayAttributes, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayAttributes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayAttributes, &type_spec_LineDisplayAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayAttributes, &type_spec_LineDisplayAttributes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayCapabilities = py::register_python_type(module.get(), type_name_LineDisplayCapabilities, &type_spec_LineDisplayCapabilities, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayCapabilities, &type_spec_LineDisplayCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayCapabilities, &type_spec_LineDisplayCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayCursor = py::register_python_type(module.get(), type_name_LineDisplayCursor, &type_spec_LineDisplayCursor, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayCursor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayCursor, &type_spec_LineDisplayCursor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayCursor, &type_spec_LineDisplayCursor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayCursorAttributes = py::register_python_type(module.get(), type_name_LineDisplayCursorAttributes, &type_spec_LineDisplayCursorAttributes, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayCursorAttributes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayCursorAttributes, &type_spec_LineDisplayCursorAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayCursorAttributes, &type_spec_LineDisplayCursorAttributes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayCustomGlyphs = py::register_python_type(module.get(), type_name_LineDisplayCustomGlyphs, &type_spec_LineDisplayCustomGlyphs, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayCustomGlyphs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayCustomGlyphs, &type_spec_LineDisplayCustomGlyphs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayCustomGlyphs, &type_spec_LineDisplayCustomGlyphs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayMarquee = py::register_python_type(module.get(), type_name_LineDisplayMarquee, &type_spec_LineDisplayMarquee, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayMarquee)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayMarquee, &type_spec_LineDisplayMarquee, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayMarquee, &type_spec_LineDisplayMarquee, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayStatisticsCategorySelector = py::register_python_type(module.get(), type_name_LineDisplayStatisticsCategorySelector, &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayStatisticsCategorySelector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayStatisticsCategorySelector, &type_spec_LineDisplayStatisticsCategorySelector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayStatisticsCategorySelector, &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayStatusUpdatedEventArgs = py::register_python_type(module.get(), type_name_LineDisplayStatusUpdatedEventArgs, &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayStatusUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayStatusUpdatedEventArgs, &type_spec_LineDisplayStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayStatusUpdatedEventArgs, &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayStoredBitmap = py::register_python_type(module.get(), type_name_LineDisplayStoredBitmap, &type_spec_LineDisplayStoredBitmap, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayStoredBitmap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayStoredBitmap, &type_spec_LineDisplayStoredBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayStoredBitmap, &type_spec_LineDisplayStoredBitmap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineDisplayWindow = py::register_python_type(module.get(), type_name_LineDisplayWindow, &type_spec_LineDisplayWindow, object_bases.get(), nullptr);
-    if (!state->type_LineDisplayWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineDisplayWindow, &type_spec_LineDisplayWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineDisplayWindow, &type_spec_LineDisplayWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReader = py::register_python_type(module.get(), type_name_MagneticStripeReader, &type_spec_MagneticStripeReader, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReader, &type_spec_MagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReader, &type_spec_MagneticStripeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderAamvaCardDataReceivedEventArgs = py::register_python_type(module.get(), type_name_MagneticStripeReaderAamvaCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderAamvaCardDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderAamvaCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderAamvaCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderBankCardDataReceivedEventArgs = py::register_python_type(module.get(), type_name_MagneticStripeReaderBankCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderBankCardDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderBankCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderBankCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderCapabilities = py::register_python_type(module.get(), type_name_MagneticStripeReaderCapabilities, &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCapabilities, &type_spec_MagneticStripeReaderCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCapabilities, &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -26588,8 +26473,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderCardTypes = py::register_python_type(module.get(), type_name_MagneticStripeReaderCardTypes, &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get()));
-    if (!state->type_MagneticStripeReaderCardTypes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCardTypes, &type_spec_MagneticStripeReaderCardTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCardTypes, &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -26600,50 +26488,74 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderEncryptionAlgorithms = py::register_python_type(module.get(), type_name_MagneticStripeReaderEncryptionAlgorithms, &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get()));
-    if (!state->type_MagneticStripeReaderEncryptionAlgorithms)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderEncryptionAlgorithms, &type_spec_MagneticStripeReaderEncryptionAlgorithms, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderEncryptionAlgorithms, &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderErrorOccurredEventArgs = py::register_python_type(module.get(), type_name_MagneticStripeReaderErrorOccurredEventArgs, &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderErrorOccurredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderErrorOccurredEventArgs, &type_spec_MagneticStripeReaderErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderErrorOccurredEventArgs, &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderReport = py::register_python_type(module.get(), type_name_MagneticStripeReaderReport, &type_spec_MagneticStripeReaderReport, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderReport, &type_spec_MagneticStripeReaderReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderReport, &type_spec_MagneticStripeReaderReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderStatusUpdatedEventArgs = py::register_python_type(module.get(), type_name_MagneticStripeReaderStatusUpdatedEventArgs, &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderStatusUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderStatusUpdatedEventArgs, &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderStatusUpdatedEventArgs, &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderTrackData = py::register_python_type(module.get(), type_name_MagneticStripeReaderTrackData, &type_spec_MagneticStripeReaderTrackData, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderTrackData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderTrackData, &type_spec_MagneticStripeReaderTrackData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderTrackData, &type_spec_MagneticStripeReaderTrackData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs = py::register_python_type(module.get(), type_name_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinter = py::register_python_type(module.get(), type_name_PosPrinter, &type_spec_PosPrinter, object_bases.get(), nullptr);
-    if (!state->type_PosPrinter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinter, &type_spec_PosPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinter, &type_spec_PosPrinter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterCapabilities = py::register_python_type(module.get(), type_name_PosPrinterCapabilities, &type_spec_PosPrinterCapabilities, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterCapabilities, &type_spec_PosPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterCapabilities, &type_spec_PosPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -26654,1816 +26566,168 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
         return nullptr;
     }
 
-    state->type_PosPrinterCharacterSetIds = py::register_python_type(module.get(), type_name_PosPrinterCharacterSetIds, &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get()));
-    if (!state->type_PosPrinterCharacterSetIds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterCharacterSetIds, &type_spec_PosPrinterCharacterSetIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterCharacterSetIds, &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterFontProperty = py::register_python_type(module.get(), type_name_PosPrinterFontProperty, &type_spec_PosPrinterFontProperty, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterFontProperty)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterFontProperty, &type_spec_PosPrinterFontProperty, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterFontProperty, &type_spec_PosPrinterFontProperty, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterPrintOptions = py::register_python_type(module.get(), type_name_PosPrinterPrintOptions, &type_spec_PosPrinterPrintOptions, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterPrintOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterPrintOptions, &type_spec_PosPrinterPrintOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterPrintOptions, &type_spec_PosPrinterPrintOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterReleaseDeviceRequestedEventArgs = py::register_python_type(module.get(), type_name_PosPrinterReleaseDeviceRequestedEventArgs, &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterReleaseDeviceRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterReleaseDeviceRequestedEventArgs, &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterReleaseDeviceRequestedEventArgs, &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterStatus = py::register_python_type(module.get(), type_name_PosPrinterStatus, &type_spec_PosPrinterStatus, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterStatus, &type_spec_PosPrinterStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterStatus, &type_spec_PosPrinterStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PosPrinterStatusUpdatedEventArgs = py::register_python_type(module.get(), type_name_PosPrinterStatusUpdatedEventArgs, &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PosPrinterStatusUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PosPrinterStatusUpdatedEventArgs, &type_spec_PosPrinterStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PosPrinterStatusUpdatedEventArgs, &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReceiptPrintJob = py::register_python_type(module.get(), type_name_ReceiptPrintJob, &type_spec_ReceiptPrintJob, object_bases.get(), nullptr);
-    if (!state->type_ReceiptPrintJob)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReceiptPrintJob, &type_spec_ReceiptPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReceiptPrintJob, &type_spec_ReceiptPrintJob, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReceiptPrinterCapabilities = py::register_python_type(module.get(), type_name_ReceiptPrinterCapabilities, &type_spec_ReceiptPrinterCapabilities, object_bases.get(), nullptr);
-    if (!state->type_ReceiptPrinterCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReceiptPrinterCapabilities, &type_spec_ReceiptPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReceiptPrinterCapabilities, &type_spec_ReceiptPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SlipPrintJob = py::register_python_type(module.get(), type_name_SlipPrintJob, &type_spec_SlipPrintJob, object_bases.get(), nullptr);
-    if (!state->type_SlipPrintJob)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SlipPrintJob, &type_spec_SlipPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SlipPrintJob, &type_spec_SlipPrintJob, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SlipPrinterCapabilities = py::register_python_type(module.get(), type_name_SlipPrinterCapabilities, &type_spec_SlipPrinterCapabilities, object_bases.get(), nullptr);
-    if (!state->type_SlipPrinterCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SlipPrinterCapabilities, &type_spec_SlipPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SlipPrinterCapabilities, &type_spec_SlipPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnifiedPosErrorData = py::register_python_type(module.get(), type_name_UnifiedPosErrorData, &type_spec_UnifiedPosErrorData, object_bases.get(), nullptr);
-    if (!state->type_UnifiedPosErrorData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnifiedPosErrorData, &type_spec_UnifiedPosErrorData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnifiedPosErrorData, &type_spec_UnifiedPosErrorData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICashDrawerEventSourceEventArgs = py::register_python_type(module.get(), type_name_ICashDrawerEventSourceEventArgs, &type_spec_ICashDrawerEventSourceEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ICashDrawerEventSourceEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICashDrawerEventSourceEventArgs, &type_spec_ICashDrawerEventSourceEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICashDrawerEventSourceEventArgs, &type_spec_ICashDrawerEventSourceEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICommonClaimedPosPrinterStation = py::register_python_type(module.get(), type_name_ICommonClaimedPosPrinterStation, &type_spec_ICommonClaimedPosPrinterStation, object_bases.get(), nullptr);
-    if (!state->type_ICommonClaimedPosPrinterStation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICommonClaimedPosPrinterStation, &type_spec_ICommonClaimedPosPrinterStation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICommonClaimedPosPrinterStation, &type_spec_ICommonClaimedPosPrinterStation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICommonPosPrintStationCapabilities = py::register_python_type(module.get(), type_name_ICommonPosPrintStationCapabilities, &type_spec_ICommonPosPrintStationCapabilities, object_bases.get(), nullptr);
-    if (!state->type_ICommonPosPrintStationCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICommonPosPrintStationCapabilities, &type_spec_ICommonPosPrintStationCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICommonPosPrintStationCapabilities, &type_spec_ICommonPosPrintStationCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICommonReceiptSlipCapabilities = py::register_python_type(module.get(), type_name_ICommonReceiptSlipCapabilities, &type_spec_ICommonReceiptSlipCapabilities, object_bases.get(), nullptr);
-    if (!state->type_ICommonReceiptSlipCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICommonReceiptSlipCapabilities, &type_spec_ICommonReceiptSlipCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICommonReceiptSlipCapabilities, &type_spec_ICommonReceiptSlipCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPosPrinterJob = py::register_python_type(module.get(), type_name_IPosPrinterJob, &type_spec_IPosPrinterJob, object_bases.get(), nullptr);
-    if (!state->type_IPosPrinterJob)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPosPrinterJob, &type_spec_IPosPrinterJob, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPosPrinterJob, &type_spec_IPosPrinterJob, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IReceiptOrSlipJob = py::register_python_type(module.get(), type_name_IReceiptOrSlipJob, &type_spec_IReceiptOrSlipJob, object_bases.get(), nullptr);
-    if (!state->type_IReceiptOrSlipJob)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IReceiptOrSlipJob, &type_spec_IReceiptOrSlipJob, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IReceiptOrSlipJob, &type_spec_IReceiptOrSlipJob, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SizeUInt32 = py::register_python_type(module.get(), type_name_SizeUInt32, &type_spec_SizeUInt32, nullptr, nullptr);
-    if (!state->type_SizeUInt32)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SizeUInt32, &type_spec_SizeUInt32, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SizeUInt32, &type_spec_SizeUInt32, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScanner>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScanner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScanner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerErrorOccurredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerImagePreviewReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerStatusUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeSymbologies;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeSymbologies is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeSymbologyAttributes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerCloseAlarm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerEventSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerEventSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerOpenedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CashDrawerStatusUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedBarcodeScanner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedBarcodeScannerClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedCashDrawer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedCashDrawer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedCashDrawerClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedJournalPrinter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedLineDisplay;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedLineDisplay is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedLineDisplayClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedMagneticStripeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedMagneticStripeReaderClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedPosPrinter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedPosPrinter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedPosPrinterClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedReceiptPrinter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClaimedSlipPrinter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::JournalPrintJob>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JournalPrintJob;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::JournalPrintJob is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JournalPrinterCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplay>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplay;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplay is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayAttributes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayAttributes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCursor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayCursor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayCursor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayCursorAttributes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayCustomGlyphs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayMarquee;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayMarquee is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayStatisticsCategorySelector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayStatusUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayStoredBitmap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineDisplayWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::LineDisplayWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderAamvaCardDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderBankCardDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderCardTypes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderEncryptionAlgorithms;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderErrorOccurredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderStatusUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderTrackData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterCharacterSetIds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterFontProperty;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterFontProperty is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterPrintOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterReleaseDeviceRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PosPrinterStatusUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReceiptPrintJob;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ReceiptPrintJob is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReceiptPrinterCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::SlipPrintJob>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SlipPrintJob;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::SlipPrintJob is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SlipPrinterCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnifiedPosErrorData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::UnifiedPosErrorData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICashDrawerEventSourceEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICommonClaimedPosPrinterStation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICommonPosPrintStationCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICommonReceiptSlipCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPosPrinterJob;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::IPosPrinterJob is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IReceiptOrSlipJob;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::PointOfService::SizeUInt32>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::PointOfService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::PointOfService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SizeUInt32;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::PointOfService::SizeUInt32 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

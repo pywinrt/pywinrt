@@ -87,38 +87,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedChildItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialFeedSharedItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialItemThumbnail";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>
+    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
+        static constexpr const char* type_name = "SocialUserInfo";
     };
 }

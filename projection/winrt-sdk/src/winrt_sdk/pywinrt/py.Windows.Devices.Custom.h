@@ -75,26 +75,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Custom::CustomDevice>
+    struct py_type<winrt::Windows::Devices::Custom::CustomDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.custom";
+        static constexpr const char* type_name = "CustomDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Custom::IOControlCode>
+    struct py_type<winrt::Windows::Devices::Custom::IOControlCode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.custom";
+        static constexpr const char* type_name = "IOControlCode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>
+    struct py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.custom";
+        static constexpr const char* type_name = "KnownDeviceTypes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Custom::IIOControlCode>
+    struct py_type<winrt::Windows::Devices::Custom::IIOControlCode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.custom";
+        static constexpr const char* type_name = "IIOControlCode";
     };
 }

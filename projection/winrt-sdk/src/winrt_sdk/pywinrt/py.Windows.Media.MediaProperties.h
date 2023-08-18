@@ -138,74 +138,86 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "AudioEncodingProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "ContainerEncodingProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>
+    struct py_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "H264ProfileIds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "ImageEncodingProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>
+    struct py_type<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaEncodingProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>
+    struct py_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaEncodingSubtypes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::MediaPropertySet>
+    struct py_type<winrt::Windows::Media::MediaProperties::MediaPropertySet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaPropertySet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::MediaRatio>
+    struct py_type<winrt::Windows::Media::MediaProperties::MediaRatio>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "MediaRatio";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>
+    struct py_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "Mpeg2ProfileIds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "TimedMetadataEncodingProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "VideoEncodingProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>
+    struct py_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "IMediaEncodingProperties";
     };
 }

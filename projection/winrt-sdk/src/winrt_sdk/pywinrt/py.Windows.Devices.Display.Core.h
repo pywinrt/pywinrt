@@ -288,146 +288,170 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayAdapter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayDevice>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayFence>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayFence>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayFence";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManager>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManagerChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManagerDisabledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManagerEnabledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManagerPathsFailedOrInvalidatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayManagerResultWithState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayModeInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayPath>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayPath>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayPath";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayPrimaryDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayScanout>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayScanout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayScanout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplaySource>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplaySource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplaySource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayState>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayStateOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplaySurface>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplaySurface>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplaySurface";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayTarget>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayTarget";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayTask>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayTask>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayTask";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayTaskPool";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayTaskResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayView>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayWireFormat>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayWireFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayPresentationRate";
     };
 }

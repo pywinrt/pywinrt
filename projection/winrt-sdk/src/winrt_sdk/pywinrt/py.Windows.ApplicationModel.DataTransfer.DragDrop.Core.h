@@ -57,38 +57,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDragDropManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDragInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDragOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDragUIOverride";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "CoreDropOperationTargetRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
+        static constexpr const char* type_name = "ICoreDropOperationTarget";
     };
 }

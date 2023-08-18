@@ -75,26 +75,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>
+    struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "CredentialPicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>
+    struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "CredentialPickerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>
+    struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "CredentialPickerResults";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>
+    struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
+        static constexpr const char* type_name = "UserConsentVerifier";
     };
 }

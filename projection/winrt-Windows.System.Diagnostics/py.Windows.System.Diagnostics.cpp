@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::System::Diagnostics
 {
-    struct module_state
-    {
-        PyTypeObject* type_DiagnosticActionResult;
-        PyTypeObject* type_DiagnosticInvoker;
-        PyTypeObject* type_ProcessCpuUsage;
-        PyTypeObject* type_ProcessCpuUsageReport;
-        PyTypeObject* type_ProcessDiagnosticInfo;
-        PyTypeObject* type_ProcessDiskUsage;
-        PyTypeObject* type_ProcessDiskUsageReport;
-        PyTypeObject* type_ProcessMemoryUsage;
-        PyTypeObject* type_ProcessMemoryUsageReport;
-        PyTypeObject* type_SystemCpuUsage;
-        PyTypeObject* type_SystemCpuUsageReport;
-        PyTypeObject* type_SystemDiagnosticInfo;
-        PyTypeObject* type_SystemMemoryUsage;
-        PyTypeObject* type_SystemMemoryUsageReport;
-    };
-
     // ----- DiagnosticActionResult class --------------------
     static constexpr const char* const type_name_DiagnosticActionResult = "DiagnosticActionResult";
 
@@ -2378,70 +2360,15 @@ namespace py::cpp::Windows::System::Diagnostics
     PyDoc_STRVAR(module_doc, "Windows::System::Diagnostics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DiagnosticActionResult);
-        Py_VISIT(state->type_DiagnosticInvoker);
-        Py_VISIT(state->type_ProcessCpuUsage);
-        Py_VISIT(state->type_ProcessCpuUsageReport);
-        Py_VISIT(state->type_ProcessDiagnosticInfo);
-        Py_VISIT(state->type_ProcessDiskUsage);
-        Py_VISIT(state->type_ProcessDiskUsageReport);
-        Py_VISIT(state->type_ProcessMemoryUsage);
-        Py_VISIT(state->type_ProcessMemoryUsageReport);
-        Py_VISIT(state->type_SystemCpuUsage);
-        Py_VISIT(state->type_SystemCpuUsageReport);
-        Py_VISIT(state->type_SystemDiagnosticInfo);
-        Py_VISIT(state->type_SystemMemoryUsage);
-        Py_VISIT(state->type_SystemMemoryUsageReport);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DiagnosticActionResult);
-        Py_CLEAR(state->type_DiagnosticInvoker);
-        Py_CLEAR(state->type_ProcessCpuUsage);
-        Py_CLEAR(state->type_ProcessCpuUsageReport);
-        Py_CLEAR(state->type_ProcessDiagnosticInfo);
-        Py_CLEAR(state->type_ProcessDiskUsage);
-        Py_CLEAR(state->type_ProcessDiskUsageReport);
-        Py_CLEAR(state->type_ProcessMemoryUsage);
-        Py_CLEAR(state->type_ProcessMemoryUsageReport);
-        Py_CLEAR(state->type_SystemCpuUsage);
-        Py_CLEAR(state->type_SystemCpuUsageReport);
-        Py_CLEAR(state->type_SystemDiagnosticInfo);
-        Py_CLEAR(state->type_SystemMemoryUsage);
-        Py_CLEAR(state->type_SystemMemoryUsageReport);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Diagnostics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Diagnostics
@@ -2457,7 +2384,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2470,11 +2397,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DiagnosticActionResult = py::register_python_type(module.get(), type_name_DiagnosticActionResult, &type_spec_DiagnosticActionResult, object_bases.get(), nullptr);
-    if (!state->type_DiagnosticActionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiagnosticActionResult, &type_spec_DiagnosticActionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiagnosticActionResult, &type_spec_DiagnosticActionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2485,62 +2412,92 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    state->type_DiagnosticInvoker = py::register_python_type(module.get(), type_name_DiagnosticInvoker, &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get()));
-    if (!state->type_DiagnosticInvoker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiagnosticInvoker, &type_spec_DiagnosticInvoker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiagnosticInvoker, &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessCpuUsage = py::register_python_type(module.get(), type_name_ProcessCpuUsage, &type_spec_ProcessCpuUsage, object_bases.get(), nullptr);
-    if (!state->type_ProcessCpuUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessCpuUsage, &type_spec_ProcessCpuUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessCpuUsage, &type_spec_ProcessCpuUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessCpuUsageReport = py::register_python_type(module.get(), type_name_ProcessCpuUsageReport, &type_spec_ProcessCpuUsageReport, object_bases.get(), nullptr);
-    if (!state->type_ProcessCpuUsageReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessCpuUsageReport, &type_spec_ProcessCpuUsageReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessCpuUsageReport, &type_spec_ProcessCpuUsageReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessDiagnosticInfo = py::register_python_type(module.get(), type_name_ProcessDiagnosticInfo, &type_spec_ProcessDiagnosticInfo, object_bases.get(), nullptr);
-    if (!state->type_ProcessDiagnosticInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessDiagnosticInfo, &type_spec_ProcessDiagnosticInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessDiagnosticInfo, &type_spec_ProcessDiagnosticInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessDiskUsage = py::register_python_type(module.get(), type_name_ProcessDiskUsage, &type_spec_ProcessDiskUsage, object_bases.get(), nullptr);
-    if (!state->type_ProcessDiskUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessDiskUsage, &type_spec_ProcessDiskUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessDiskUsage, &type_spec_ProcessDiskUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessDiskUsageReport = py::register_python_type(module.get(), type_name_ProcessDiskUsageReport, &type_spec_ProcessDiskUsageReport, object_bases.get(), nullptr);
-    if (!state->type_ProcessDiskUsageReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessDiskUsageReport, &type_spec_ProcessDiskUsageReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessDiskUsageReport, &type_spec_ProcessDiskUsageReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessMemoryUsage = py::register_python_type(module.get(), type_name_ProcessMemoryUsage, &type_spec_ProcessMemoryUsage, object_bases.get(), nullptr);
-    if (!state->type_ProcessMemoryUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryUsage, &type_spec_ProcessMemoryUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryUsage, &type_spec_ProcessMemoryUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessMemoryUsageReport = py::register_python_type(module.get(), type_name_ProcessMemoryUsageReport, &type_spec_ProcessMemoryUsageReport, object_bases.get(), nullptr);
-    if (!state->type_ProcessMemoryUsageReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryUsageReport, &type_spec_ProcessMemoryUsageReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryUsageReport, &type_spec_ProcessMemoryUsageReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemCpuUsage = py::register_python_type(module.get(), type_name_SystemCpuUsage, &type_spec_SystemCpuUsage, object_bases.get(), nullptr);
-    if (!state->type_SystemCpuUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemCpuUsage, &type_spec_SystemCpuUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemCpuUsage, &type_spec_SystemCpuUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemCpuUsageReport = py::register_python_type(module.get(), type_name_SystemCpuUsageReport, &type_spec_SystemCpuUsageReport, object_bases.get(), nullptr);
-    if (!state->type_SystemCpuUsageReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemCpuUsageReport, &type_spec_SystemCpuUsageReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemCpuUsageReport, &type_spec_SystemCpuUsageReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2551,346 +2508,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    state->type_SystemDiagnosticInfo = py::register_python_type(module.get(), type_name_SystemDiagnosticInfo, &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get()));
-    if (!state->type_SystemDiagnosticInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemDiagnosticInfo, &type_spec_SystemDiagnosticInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemDiagnosticInfo, &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemMemoryUsage = py::register_python_type(module.get(), type_name_SystemMemoryUsage, &type_spec_SystemMemoryUsage, object_bases.get(), nullptr);
-    if (!state->type_SystemMemoryUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemMemoryUsage, &type_spec_SystemMemoryUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemMemoryUsage, &type_spec_SystemMemoryUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemMemoryUsageReport = py::register_python_type(module.get(), type_name_SystemMemoryUsageReport, &type_spec_SystemMemoryUsageReport, object_bases.get(), nullptr);
-    if (!state->type_SystemMemoryUsageReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemMemoryUsageReport, &type_spec_SystemMemoryUsageReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemMemoryUsageReport, &type_spec_SystemMemoryUsageReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiagnosticActionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::DiagnosticActionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiagnosticInvoker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::DiagnosticInvoker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessCpuUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessCpuUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessCpuUsageReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessCpuUsageReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessDiagnosticInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessDiskUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessDiskUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessDiskUsageReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessDiskUsageReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessMemoryUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessMemoryUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessMemoryUsageReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemCpuUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::SystemCpuUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemCpuUsageReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::SystemCpuUsageReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemDiagnosticInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::SystemDiagnosticInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemMemoryUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::SystemMemoryUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemMemoryUsageReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Diagnostics::SystemMemoryUsageReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

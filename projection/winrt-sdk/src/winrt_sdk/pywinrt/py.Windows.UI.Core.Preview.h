@@ -34,20 +34,23 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>
+    struct py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview";
+        static constexpr const char* type_name = "CoreAppWindowPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>
+    struct py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview";
+        static constexpr const char* type_name = "SystemNavigationCloseRequestedPreviewEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>
+    struct py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.preview";
+        static constexpr const char* type_name = "SystemNavigationManagerPreview";
     };
 }

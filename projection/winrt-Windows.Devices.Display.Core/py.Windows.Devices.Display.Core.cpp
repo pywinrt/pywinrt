@@ -6,34 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Display::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_DisplayAdapter;
-        PyTypeObject* type_DisplayDevice;
-        PyTypeObject* type_DisplayFence;
-        PyTypeObject* type_DisplayManager;
-        PyTypeObject* type_DisplayManagerChangedEventArgs;
-        PyTypeObject* type_DisplayManagerDisabledEventArgs;
-        PyTypeObject* type_DisplayManagerEnabledEventArgs;
-        PyTypeObject* type_DisplayManagerPathsFailedOrInvalidatedEventArgs;
-        PyTypeObject* type_DisplayManagerResultWithState;
-        PyTypeObject* type_DisplayModeInfo;
-        PyTypeObject* type_DisplayPath;
-        PyTypeObject* type_DisplayPrimaryDescription;
-        PyTypeObject* type_DisplayScanout;
-        PyTypeObject* type_DisplaySource;
-        PyTypeObject* type_DisplayState;
-        PyTypeObject* type_DisplayStateOperationResult;
-        PyTypeObject* type_DisplaySurface;
-        PyTypeObject* type_DisplayTarget;
-        PyTypeObject* type_DisplayTask;
-        PyTypeObject* type_DisplayTaskPool;
-        PyTypeObject* type_DisplayTaskResult;
-        PyTypeObject* type_DisplayView;
-        PyTypeObject* type_DisplayWireFormat;
-        PyTypeObject* type_DisplayPresentationRate;
-    };
-
     // ----- DisplayAdapter class --------------------
     static constexpr const char* const type_name_DisplayAdapter = "DisplayAdapter";
 
@@ -5826,90 +5798,15 @@ namespace py::cpp::Windows::Devices::Display::Core
     PyDoc_STRVAR(module_doc, "Windows::Devices::Display::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DisplayAdapter);
-        Py_VISIT(state->type_DisplayDevice);
-        Py_VISIT(state->type_DisplayFence);
-        Py_VISIT(state->type_DisplayManager);
-        Py_VISIT(state->type_DisplayManagerChangedEventArgs);
-        Py_VISIT(state->type_DisplayManagerDisabledEventArgs);
-        Py_VISIT(state->type_DisplayManagerEnabledEventArgs);
-        Py_VISIT(state->type_DisplayManagerPathsFailedOrInvalidatedEventArgs);
-        Py_VISIT(state->type_DisplayManagerResultWithState);
-        Py_VISIT(state->type_DisplayModeInfo);
-        Py_VISIT(state->type_DisplayPath);
-        Py_VISIT(state->type_DisplayPrimaryDescription);
-        Py_VISIT(state->type_DisplayScanout);
-        Py_VISIT(state->type_DisplaySource);
-        Py_VISIT(state->type_DisplayState);
-        Py_VISIT(state->type_DisplayStateOperationResult);
-        Py_VISIT(state->type_DisplaySurface);
-        Py_VISIT(state->type_DisplayTarget);
-        Py_VISIT(state->type_DisplayTask);
-        Py_VISIT(state->type_DisplayTaskPool);
-        Py_VISIT(state->type_DisplayTaskResult);
-        Py_VISIT(state->type_DisplayView);
-        Py_VISIT(state->type_DisplayWireFormat);
-        Py_VISIT(state->type_DisplayPresentationRate);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DisplayAdapter);
-        Py_CLEAR(state->type_DisplayDevice);
-        Py_CLEAR(state->type_DisplayFence);
-        Py_CLEAR(state->type_DisplayManager);
-        Py_CLEAR(state->type_DisplayManagerChangedEventArgs);
-        Py_CLEAR(state->type_DisplayManagerDisabledEventArgs);
-        Py_CLEAR(state->type_DisplayManagerEnabledEventArgs);
-        Py_CLEAR(state->type_DisplayManagerPathsFailedOrInvalidatedEventArgs);
-        Py_CLEAR(state->type_DisplayManagerResultWithState);
-        Py_CLEAR(state->type_DisplayModeInfo);
-        Py_CLEAR(state->type_DisplayPath);
-        Py_CLEAR(state->type_DisplayPrimaryDescription);
-        Py_CLEAR(state->type_DisplayScanout);
-        Py_CLEAR(state->type_DisplaySource);
-        Py_CLEAR(state->type_DisplayState);
-        Py_CLEAR(state->type_DisplayStateOperationResult);
-        Py_CLEAR(state->type_DisplaySurface);
-        Py_CLEAR(state->type_DisplayTarget);
-        Py_CLEAR(state->type_DisplayTask);
-        Py_CLEAR(state->type_DisplayTaskPool);
-        Py_CLEAR(state->type_DisplayTaskResult);
-        Py_CLEAR(state->type_DisplayView);
-        Py_CLEAR(state->type_DisplayWireFormat);
-        Py_CLEAR(state->type_DisplayPresentationRate);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Display_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Display::Core
@@ -5925,7 +5822,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Display_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5938,705 +5835,222 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Display_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DisplayAdapter = py::register_python_type(module.get(), type_name_DisplayAdapter, &type_spec_DisplayAdapter, object_bases.get(), nullptr);
-    if (!state->type_DisplayAdapter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayAdapter, &type_spec_DisplayAdapter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayAdapter, &type_spec_DisplayAdapter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayDevice = py::register_python_type(module.get(), type_name_DisplayDevice, &type_spec_DisplayDevice, object_bases.get(), nullptr);
-    if (!state->type_DisplayDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayDevice, &type_spec_DisplayDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayDevice, &type_spec_DisplayDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayFence = py::register_python_type(module.get(), type_name_DisplayFence, &type_spec_DisplayFence, object_bases.get(), nullptr);
-    if (!state->type_DisplayFence)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayFence, &type_spec_DisplayFence, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayFence, &type_spec_DisplayFence, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManager = py::register_python_type(module.get(), type_name_DisplayManager, &type_spec_DisplayManager, object_bases.get(), nullptr);
-    if (!state->type_DisplayManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManager, &type_spec_DisplayManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManager, &type_spec_DisplayManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManagerChangedEventArgs = py::register_python_type(module.get(), type_name_DisplayManagerChangedEventArgs, &type_spec_DisplayManagerChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DisplayManagerChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManagerChangedEventArgs, &type_spec_DisplayManagerChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManagerChangedEventArgs, &type_spec_DisplayManagerChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManagerDisabledEventArgs = py::register_python_type(module.get(), type_name_DisplayManagerDisabledEventArgs, &type_spec_DisplayManagerDisabledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DisplayManagerDisabledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManagerDisabledEventArgs, &type_spec_DisplayManagerDisabledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManagerDisabledEventArgs, &type_spec_DisplayManagerDisabledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManagerEnabledEventArgs = py::register_python_type(module.get(), type_name_DisplayManagerEnabledEventArgs, &type_spec_DisplayManagerEnabledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DisplayManagerEnabledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManagerEnabledEventArgs, &type_spec_DisplayManagerEnabledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManagerEnabledEventArgs, &type_spec_DisplayManagerEnabledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManagerPathsFailedOrInvalidatedEventArgs = py::register_python_type(module.get(), type_name_DisplayManagerPathsFailedOrInvalidatedEventArgs, &type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DisplayManagerPathsFailedOrInvalidatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManagerPathsFailedOrInvalidatedEventArgs, &type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManagerPathsFailedOrInvalidatedEventArgs, &type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayManagerResultWithState = py::register_python_type(module.get(), type_name_DisplayManagerResultWithState, &type_spec_DisplayManagerResultWithState, object_bases.get(), nullptr);
-    if (!state->type_DisplayManagerResultWithState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayManagerResultWithState, &type_spec_DisplayManagerResultWithState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayManagerResultWithState, &type_spec_DisplayManagerResultWithState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayModeInfo = py::register_python_type(module.get(), type_name_DisplayModeInfo, &type_spec_DisplayModeInfo, object_bases.get(), nullptr);
-    if (!state->type_DisplayModeInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayModeInfo, &type_spec_DisplayModeInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayModeInfo, &type_spec_DisplayModeInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayPath = py::register_python_type(module.get(), type_name_DisplayPath, &type_spec_DisplayPath, object_bases.get(), nullptr);
-    if (!state->type_DisplayPath)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayPath, &type_spec_DisplayPath, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayPath, &type_spec_DisplayPath, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayPrimaryDescription = py::register_python_type(module.get(), type_name_DisplayPrimaryDescription, &type_spec_DisplayPrimaryDescription, object_bases.get(), nullptr);
-    if (!state->type_DisplayPrimaryDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayPrimaryDescription, &type_spec_DisplayPrimaryDescription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayPrimaryDescription, &type_spec_DisplayPrimaryDescription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayScanout = py::register_python_type(module.get(), type_name_DisplayScanout, &type_spec_DisplayScanout, object_bases.get(), nullptr);
-    if (!state->type_DisplayScanout)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayScanout, &type_spec_DisplayScanout, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayScanout, &type_spec_DisplayScanout, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplaySource = py::register_python_type(module.get(), type_name_DisplaySource, &type_spec_DisplaySource, object_bases.get(), nullptr);
-    if (!state->type_DisplaySource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplaySource, &type_spec_DisplaySource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplaySource, &type_spec_DisplaySource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayState = py::register_python_type(module.get(), type_name_DisplayState, &type_spec_DisplayState, object_bases.get(), nullptr);
-    if (!state->type_DisplayState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayState, &type_spec_DisplayState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayState, &type_spec_DisplayState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayStateOperationResult = py::register_python_type(module.get(), type_name_DisplayStateOperationResult, &type_spec_DisplayStateOperationResult, object_bases.get(), nullptr);
-    if (!state->type_DisplayStateOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayStateOperationResult, &type_spec_DisplayStateOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayStateOperationResult, &type_spec_DisplayStateOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplaySurface = py::register_python_type(module.get(), type_name_DisplaySurface, &type_spec_DisplaySurface, object_bases.get(), nullptr);
-    if (!state->type_DisplaySurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplaySurface, &type_spec_DisplaySurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplaySurface, &type_spec_DisplaySurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayTarget = py::register_python_type(module.get(), type_name_DisplayTarget, &type_spec_DisplayTarget, object_bases.get(), nullptr);
-    if (!state->type_DisplayTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayTarget, &type_spec_DisplayTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayTarget, &type_spec_DisplayTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayTask = py::register_python_type(module.get(), type_name_DisplayTask, &type_spec_DisplayTask, object_bases.get(), nullptr);
-    if (!state->type_DisplayTask)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayTask, &type_spec_DisplayTask, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayTask, &type_spec_DisplayTask, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayTaskPool = py::register_python_type(module.get(), type_name_DisplayTaskPool, &type_spec_DisplayTaskPool, object_bases.get(), nullptr);
-    if (!state->type_DisplayTaskPool)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayTaskPool, &type_spec_DisplayTaskPool, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayTaskPool, &type_spec_DisplayTaskPool, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayTaskResult = py::register_python_type(module.get(), type_name_DisplayTaskResult, &type_spec_DisplayTaskResult, object_bases.get(), nullptr);
-    if (!state->type_DisplayTaskResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayTaskResult, &type_spec_DisplayTaskResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayTaskResult, &type_spec_DisplayTaskResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayView = py::register_python_type(module.get(), type_name_DisplayView, &type_spec_DisplayView, object_bases.get(), nullptr);
-    if (!state->type_DisplayView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayView, &type_spec_DisplayView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayView, &type_spec_DisplayView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayWireFormat = py::register_python_type(module.get(), type_name_DisplayWireFormat, &type_spec_DisplayWireFormat, object_bases.get(), nullptr);
-    if (!state->type_DisplayWireFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayWireFormat, &type_spec_DisplayWireFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayWireFormat, &type_spec_DisplayWireFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayPresentationRate = py::register_python_type(module.get(), type_name_DisplayPresentationRate, &type_spec_DisplayPresentationRate, nullptr, nullptr);
-    if (!state->type_DisplayPresentationRate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayPresentationRate, &type_spec_DisplayPresentationRate, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayPresentationRate, &type_spec_DisplayPresentationRate, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayAdapter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayAdapter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayFence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayFence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayFence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManagerChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManagerDisabledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManagerEnabledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManagerPathsFailedOrInvalidatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayManagerResultWithState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayModeInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayModeInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayPath>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayPath;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayPath is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayPrimaryDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayScanout>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayScanout;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayScanout is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplaySource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplaySource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplaySource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayStateOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayStateOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplaySurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplaySurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplaySurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayTask>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayTask;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayTask is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayTaskPool;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayTaskPool is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayTaskResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayTaskResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayWireFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayWireFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayWireFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Display::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Display::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayPresentationRate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Display::Core::DisplayPresentationRate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

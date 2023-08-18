@@ -48,14 +48,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Pwm::PwmController>
+    struct py_type<winrt::Windows::Devices::Pwm::PwmController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pwm";
+        static constexpr const char* type_name = "PwmController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Pwm::PwmPin>
+    struct py_type<winrt::Windows::Devices::Pwm::PwmPin>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pwm";
+        static constexpr const char* type_name = "PwmPin";
     };
 }

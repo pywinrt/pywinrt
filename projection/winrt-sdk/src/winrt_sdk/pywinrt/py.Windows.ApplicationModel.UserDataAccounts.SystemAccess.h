@@ -88,14 +88,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "DeviceAccountConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
+        static constexpr const char* type_name = "UserDataAccountSystemAccessManager";
     };
 }

@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Media::Control
 {
-    struct module_state
-    {
-        PyTypeObject* type_CurrentSessionChangedEventArgs;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSession;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSessionManager;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSessionMediaProperties;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSessionPlaybackControls;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSessionPlaybackInfo;
-        PyTypeObject* type_GlobalSystemMediaTransportControlsSessionTimelineProperties;
-        PyTypeObject* type_MediaPropertiesChangedEventArgs;
-        PyTypeObject* type_PlaybackInfoChangedEventArgs;
-        PyTypeObject* type_SessionsChangedEventArgs;
-        PyTypeObject* type_TimelinePropertiesChangedEventArgs;
-    };
-
     // ----- CurrentSessionChangedEventArgs class --------------------
     static constexpr const char* const type_name_CurrentSessionChangedEventArgs = "CurrentSessionChangedEventArgs";
 
@@ -2473,64 +2458,15 @@ namespace py::cpp::Windows::Media::Control
     PyDoc_STRVAR(module_doc, "Windows::Media::Control");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CurrentSessionChangedEventArgs);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSession);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSessionManager);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSessionMediaProperties);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSessionPlaybackControls);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSessionPlaybackInfo);
-        Py_VISIT(state->type_GlobalSystemMediaTransportControlsSessionTimelineProperties);
-        Py_VISIT(state->type_MediaPropertiesChangedEventArgs);
-        Py_VISIT(state->type_PlaybackInfoChangedEventArgs);
-        Py_VISIT(state->type_SessionsChangedEventArgs);
-        Py_VISIT(state->type_TimelinePropertiesChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CurrentSessionChangedEventArgs);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSession);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSessionManager);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSessionMediaProperties);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSessionPlaybackControls);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSessionPlaybackInfo);
-        Py_CLEAR(state->type_GlobalSystemMediaTransportControlsSessionTimelineProperties);
-        Py_CLEAR(state->type_MediaPropertiesChangedEventArgs);
-        Py_CLEAR(state->type_PlaybackInfoChangedEventArgs);
-        Py_CLEAR(state->type_SessionsChangedEventArgs);
-        Py_CLEAR(state->type_TimelinePropertiesChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Control",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Control
@@ -2546,7 +2482,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Control(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2559,328 +2495,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Control(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CurrentSessionChangedEventArgs = py::register_python_type(module.get(), type_name_CurrentSessionChangedEventArgs, &type_spec_CurrentSessionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CurrentSessionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CurrentSessionChangedEventArgs, &type_spec_CurrentSessionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CurrentSessionChangedEventArgs, &type_spec_CurrentSessionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSession = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSession, &type_spec_GlobalSystemMediaTransportControlsSession, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSession, &type_spec_GlobalSystemMediaTransportControlsSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSession, &type_spec_GlobalSystemMediaTransportControlsSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSessionManager = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionManager, &type_spec_GlobalSystemMediaTransportControlsSessionManager, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSessionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionManager, &type_spec_GlobalSystemMediaTransportControlsSessionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionManager, &type_spec_GlobalSystemMediaTransportControlsSessionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSessionMediaProperties = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionMediaProperties, &type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSessionMediaProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionMediaProperties, &type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionMediaProperties, &type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSessionPlaybackControls = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackControls, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSessionPlaybackControls)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackControls, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackControls, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSessionPlaybackInfo = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackInfo, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSessionPlaybackInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackInfo, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionPlaybackInfo, &type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalSystemMediaTransportControlsSessionTimelineProperties = py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionTimelineProperties, &type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties, object_bases.get(), nullptr);
-    if (!state->type_GlobalSystemMediaTransportControlsSessionTimelineProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionTimelineProperties, &type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalSystemMediaTransportControlsSessionTimelineProperties, &type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaPropertiesChangedEventArgs = py::register_python_type(module.get(), type_name_MediaPropertiesChangedEventArgs, &type_spec_MediaPropertiesChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaPropertiesChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaPropertiesChangedEventArgs, &type_spec_MediaPropertiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaPropertiesChangedEventArgs, &type_spec_MediaPropertiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlaybackInfoChangedEventArgs = py::register_python_type(module.get(), type_name_PlaybackInfoChangedEventArgs, &type_spec_PlaybackInfoChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PlaybackInfoChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaybackInfoChangedEventArgs, &type_spec_PlaybackInfoChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaybackInfoChangedEventArgs, &type_spec_PlaybackInfoChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SessionsChangedEventArgs = py::register_python_type(module.get(), type_name_SessionsChangedEventArgs, &type_spec_SessionsChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SessionsChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SessionsChangedEventArgs, &type_spec_SessionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SessionsChangedEventArgs, &type_spec_SessionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimelinePropertiesChangedEventArgs = py::register_python_type(module.get(), type_name_TimelinePropertiesChangedEventArgs, &type_spec_TimelinePropertiesChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TimelinePropertiesChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimelinePropertiesChangedEventArgs, &type_spec_TimelinePropertiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimelinePropertiesChangedEventArgs, &type_spec_TimelinePropertiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrentSessionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::CurrentSessionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSessionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSessionMediaProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSessionPlaybackControls;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSessionPlaybackInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalSystemMediaTransportControlsSessionTimelineProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaPropertiesChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaybackInfoChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SessionsChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::SessionsChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Control;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Control");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimelinePropertiesChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

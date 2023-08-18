@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::UI::UIAutomation
 {
-    struct module_state
-    {
-        PyTypeObject* type_AutomationConnection;
-        PyTypeObject* type_AutomationConnectionBoundObject;
-        PyTypeObject* type_AutomationElement;
-        PyTypeObject* type_AutomationTextRange;
-    };
-
     // ----- AutomationConnection class --------------------
     static constexpr const char* const type_name_AutomationConnection = "AutomationConnection";
 
@@ -458,50 +450,15 @@ namespace py::cpp::Windows::UI::UIAutomation
     PyDoc_STRVAR(module_doc, "Windows::UI::UIAutomation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AutomationConnection);
-        Py_VISIT(state->type_AutomationConnectionBoundObject);
-        Py_VISIT(state->type_AutomationElement);
-        Py_VISIT(state->type_AutomationTextRange);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AutomationConnection);
-        Py_CLEAR(state->type_AutomationConnectionBoundObject);
-        Py_CLEAR(state->type_AutomationElement);
-        Py_CLEAR(state->type_AutomationTextRange);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_UIAutomation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::UIAutomation
@@ -517,7 +474,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -530,125 +487,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AutomationConnection = py::register_python_type(module.get(), type_name_AutomationConnection, &type_spec_AutomationConnection, object_bases.get(), nullptr);
-    if (!state->type_AutomationConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationConnection, &type_spec_AutomationConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationConnection, &type_spec_AutomationConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationConnectionBoundObject = py::register_python_type(module.get(), type_name_AutomationConnectionBoundObject, &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr);
-    if (!state->type_AutomationConnectionBoundObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationConnectionBoundObject, &type_spec_AutomationConnectionBoundObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationConnectionBoundObject, &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationElement = py::register_python_type(module.get(), type_name_AutomationElement, &type_spec_AutomationElement, object_bases.get(), nullptr);
-    if (!state->type_AutomationElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationElement, &type_spec_AutomationElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationElement, &type_spec_AutomationElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationTextRange = py::register_python_type(module.get(), type_name_AutomationTextRange, &type_spec_AutomationTextRange, object_bases.get(), nullptr);
-    if (!state->type_AutomationTextRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationTextRange, &type_spec_AutomationTextRange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationTextRange, &type_spec_AutomationTextRange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::AutomationConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::AutomationConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationConnectionBoundObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::AutomationElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::AutomationElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationTextRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::AutomationTextRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -93,74 +93,86 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppAttributeError>
+    struct py_type<winrt::Windows::Devices::Printers::IppAttributeError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppAttributeError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppAttributeValue>
+    struct py_type<winrt::Windows::Devices::Printers::IppAttributeValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppAttributeValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppIntegerRange>
+    struct py_type<winrt::Windows::Devices::Printers::IppIntegerRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppIntegerRange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppPrintDevice>
+    struct py_type<winrt::Windows::Devices::Printers::IppPrintDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppPrintDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppResolution>
+    struct py_type<winrt::Windows::Devices::Printers::IppResolution>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppResolution";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>
+    struct py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppSetAttributesResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::IppTextWithLanguage>
+    struct py_type<winrt::Windows::Devices::Printers::IppTextWithLanguage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppTextWithLanguage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::PageConfigurationSettings>
+    struct py_type<winrt::Windows::Devices::Printers::PageConfigurationSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "PageConfigurationSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>
+    struct py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "PdlPassthroughProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>
+    struct py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "PdlPassthroughTarget";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Print3DDevice>
+    struct py_type<winrt::Windows::Devices::Printers::Print3DDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "Print3DDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::PrintSchema>
+    struct py_type<winrt::Windows::Devices::Printers::PrintSchema>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "PrintSchema";
     };
 }

@@ -66,32 +66,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Management::Deployment::Enterprise>
+    struct py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "Enterprise";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>
+    struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "EnterpriseEnrollmentManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>
+    struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "EnterpriseEnrollmentResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>
+    struct py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "InstallationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>
+    struct py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
+        static constexpr const char* type_name = "PackageInstallResult";
     };
 }

@@ -126,33 +126,38 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListEntry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameModeConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameModeUserConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "IGameListEntry";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>

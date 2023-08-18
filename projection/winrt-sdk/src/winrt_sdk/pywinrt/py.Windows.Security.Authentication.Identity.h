@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
+        static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
+        static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationManager";
     };
 }

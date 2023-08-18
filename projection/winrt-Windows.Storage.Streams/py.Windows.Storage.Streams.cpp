@@ -6,35 +6,6 @@
 
 namespace py::cpp::Windows::Storage::Streams
 {
-    struct module_state
-    {
-        PyTypeObject* type_Buffer;
-        PyTypeObject* type_DataReader;
-        PyTypeObject* type_DataReaderLoadOperation;
-        PyTypeObject* type_DataWriter;
-        PyTypeObject* type_DataWriterStoreOperation;
-        PyTypeObject* type_FileInputStream;
-        PyTypeObject* type_FileOutputStream;
-        PyTypeObject* type_FileRandomAccessStream;
-        PyTypeObject* type_InMemoryRandomAccessStream;
-        PyTypeObject* type_InputStreamOverStream;
-        PyTypeObject* type_OutputStreamOverStream;
-        PyTypeObject* type_RandomAccessStream;
-        PyTypeObject* type_RandomAccessStreamOverStream;
-        PyTypeObject* type_RandomAccessStreamReference;
-        PyTypeObject* type_IBuffer;
-        PyTypeObject* type_IContentTypeProvider;
-        PyTypeObject* type_IDataReader;
-        PyTypeObject* type_IDataWriter;
-        PyTypeObject* type_IInputStream;
-        PyTypeObject* type_IInputStreamReference;
-        PyTypeObject* type_IOutputStream;
-        PyTypeObject* type_IPropertySetSerializer;
-        PyTypeObject* type_IRandomAccessStream;
-        PyTypeObject* type_IRandomAccessStreamReference;
-        PyTypeObject* type_IRandomAccessStreamWithContentType;
-    };
-
     // ----- Buffer class --------------------
     static constexpr const char* const type_name_Buffer = "Buffer";
 
@@ -9028,92 +8999,15 @@ namespace py::cpp::Windows::Storage::Streams
     PyDoc_STRVAR(module_doc, "Windows::Storage::Streams");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Buffer);
-        Py_VISIT(state->type_DataReader);
-        Py_VISIT(state->type_DataReaderLoadOperation);
-        Py_VISIT(state->type_DataWriter);
-        Py_VISIT(state->type_DataWriterStoreOperation);
-        Py_VISIT(state->type_FileInputStream);
-        Py_VISIT(state->type_FileOutputStream);
-        Py_VISIT(state->type_FileRandomAccessStream);
-        Py_VISIT(state->type_InMemoryRandomAccessStream);
-        Py_VISIT(state->type_InputStreamOverStream);
-        Py_VISIT(state->type_OutputStreamOverStream);
-        Py_VISIT(state->type_RandomAccessStream);
-        Py_VISIT(state->type_RandomAccessStreamOverStream);
-        Py_VISIT(state->type_RandomAccessStreamReference);
-        Py_VISIT(state->type_IBuffer);
-        Py_VISIT(state->type_IContentTypeProvider);
-        Py_VISIT(state->type_IDataReader);
-        Py_VISIT(state->type_IDataWriter);
-        Py_VISIT(state->type_IInputStream);
-        Py_VISIT(state->type_IInputStreamReference);
-        Py_VISIT(state->type_IOutputStream);
-        Py_VISIT(state->type_IPropertySetSerializer);
-        Py_VISIT(state->type_IRandomAccessStream);
-        Py_VISIT(state->type_IRandomAccessStreamReference);
-        Py_VISIT(state->type_IRandomAccessStreamWithContentType);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Buffer);
-        Py_CLEAR(state->type_DataReader);
-        Py_CLEAR(state->type_DataReaderLoadOperation);
-        Py_CLEAR(state->type_DataWriter);
-        Py_CLEAR(state->type_DataWriterStoreOperation);
-        Py_CLEAR(state->type_FileInputStream);
-        Py_CLEAR(state->type_FileOutputStream);
-        Py_CLEAR(state->type_FileRandomAccessStream);
-        Py_CLEAR(state->type_InMemoryRandomAccessStream);
-        Py_CLEAR(state->type_InputStreamOverStream);
-        Py_CLEAR(state->type_OutputStreamOverStream);
-        Py_CLEAR(state->type_RandomAccessStream);
-        Py_CLEAR(state->type_RandomAccessStreamOverStream);
-        Py_CLEAR(state->type_RandomAccessStreamReference);
-        Py_CLEAR(state->type_IBuffer);
-        Py_CLEAR(state->type_IContentTypeProvider);
-        Py_CLEAR(state->type_IDataReader);
-        Py_CLEAR(state->type_IDataWriter);
-        Py_CLEAR(state->type_IInputStream);
-        Py_CLEAR(state->type_IInputStreamReference);
-        Py_CLEAR(state->type_IOutputStream);
-        Py_CLEAR(state->type_IPropertySetSerializer);
-        Py_CLEAR(state->type_IRandomAccessStream);
-        Py_CLEAR(state->type_IRandomAccessStreamReference);
-        Py_CLEAR(state->type_IRandomAccessStreamWithContentType);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_Streams",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::Streams
@@ -9129,7 +9023,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Streams(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -9142,742 +9036,231 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Streams(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Buffer = py::register_python_type(module.get(), type_name_Buffer, &type_spec_Buffer, object_bases.get(), nullptr);
-    if (!state->type_Buffer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Buffer, &type_spec_Buffer, &_PyBufferProcs_Buffer, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Buffer, &type_spec_Buffer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    state->type_Buffer->tp_as_buffer = &_PyBufferProcs_Buffer;
+    if (py::register_python_type(module.get(), type_name_DataReader, &type_spec_DataReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataReader, &type_spec_DataReader, object_bases.get(), nullptr) == -1)
     #endif
-
-    state->type_DataReader = py::register_python_type(module.get(), type_name_DataReader, &type_spec_DataReader, object_bases.get(), nullptr);
-    if (!state->type_DataReader)
-    {
-        return nullptr;
-    }
-
-    state->type_DataReaderLoadOperation = py::register_python_type(module.get(), type_name_DataReaderLoadOperation, &type_spec_DataReaderLoadOperation, object_bases.get(), nullptr);
-    if (!state->type_DataReaderLoadOperation)
-    {
-        return nullptr;
-    }
-
-    state->type_DataWriter = py::register_python_type(module.get(), type_name_DataWriter, &type_spec_DataWriter, object_bases.get(), nullptr);
-    if (!state->type_DataWriter)
-    {
-        return nullptr;
-    }
-
-    state->type_DataWriterStoreOperation = py::register_python_type(module.get(), type_name_DataWriterStoreOperation, &type_spec_DataWriterStoreOperation, object_bases.get(), nullptr);
-    if (!state->type_DataWriterStoreOperation)
-    {
-        return nullptr;
-    }
-
-    state->type_FileInputStream = py::register_python_type(module.get(), type_name_FileInputStream, &type_spec_FileInputStream, object_bases.get(), nullptr);
-    if (!state->type_FileInputStream)
-    {
-        return nullptr;
-    }
-
-    state->type_FileOutputStream = py::register_python_type(module.get(), type_name_FileOutputStream, &type_spec_FileOutputStream, object_bases.get(), nullptr);
-    if (!state->type_FileOutputStream)
-    {
-        return nullptr;
-    }
-
-    state->type_FileRandomAccessStream = py::register_python_type(module.get(), type_name_FileRandomAccessStream, &type_spec_FileRandomAccessStream, object_bases.get(), nullptr);
-    if (!state->type_FileRandomAccessStream)
-    {
-        return nullptr;
-    }
-
-    state->type_InMemoryRandomAccessStream = py::register_python_type(module.get(), type_name_InMemoryRandomAccessStream, &type_spec_InMemoryRandomAccessStream, object_bases.get(), nullptr);
-    if (!state->type_InMemoryRandomAccessStream)
-    {
-        return nullptr;
-    }
-
-    state->type_InputStreamOverStream = py::register_python_type(module.get(), type_name_InputStreamOverStream, &type_spec_InputStreamOverStream, object_bases.get(), nullptr);
-    if (!state->type_InputStreamOverStream)
-    {
-        return nullptr;
-    }
-
-    state->type_OutputStreamOverStream = py::register_python_type(module.get(), type_name_OutputStreamOverStream, &type_spec_OutputStreamOverStream, object_bases.get(), nullptr);
-    if (!state->type_OutputStreamOverStream)
-    {
-        return nullptr;
-    }
-
-    state->type_RandomAccessStream = py::register_python_type(module.get(), type_name_RandomAccessStream, &type_spec_RandomAccessStream, object_bases.get(), nullptr);
-    if (!state->type_RandomAccessStream)
-    {
-        return nullptr;
-    }
-
-    state->type_RandomAccessStreamOverStream = py::register_python_type(module.get(), type_name_RandomAccessStreamOverStream, &type_spec_RandomAccessStreamOverStream, object_bases.get(), nullptr);
-    if (!state->type_RandomAccessStreamOverStream)
-    {
-        return nullptr;
-    }
-
-    state->type_RandomAccessStreamReference = py::register_python_type(module.get(), type_name_RandomAccessStreamReference, &type_spec_RandomAccessStreamReference, object_bases.get(), nullptr);
-    if (!state->type_RandomAccessStreamReference)
-    {
-        return nullptr;
-    }
-
-    state->type_IBuffer = py::register_python_type(module.get(), type_name_IBuffer, &type_spec_IBuffer, object_bases.get(), nullptr);
-    if (!state->type_IBuffer)
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    state->type_IBuffer->tp_as_buffer = &_PyBufferProcs_IBuffer;
+    if (py::register_python_type(module.get(), type_name_DataReaderLoadOperation, &type_spec_DataReaderLoadOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataReaderLoadOperation, &type_spec_DataReaderLoadOperation, object_bases.get(), nullptr) == -1)
     #endif
-
-    state->type_IContentTypeProvider = py::register_python_type(module.get(), type_name_IContentTypeProvider, &type_spec_IContentTypeProvider, object_bases.get(), nullptr);
-    if (!state->type_IContentTypeProvider)
     {
         return nullptr;
     }
 
-    state->type_IDataReader = py::register_python_type(module.get(), type_name_IDataReader, &type_spec_IDataReader, object_bases.get(), nullptr);
-    if (!state->type_IDataReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataWriter, &type_spec_DataWriter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataWriter, &type_spec_DataWriter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDataWriter = py::register_python_type(module.get(), type_name_IDataWriter, &type_spec_IDataWriter, object_bases.get(), nullptr);
-    if (!state->type_IDataWriter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataWriterStoreOperation, &type_spec_DataWriterStoreOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataWriterStoreOperation, &type_spec_DataWriterStoreOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInputStream = py::register_python_type(module.get(), type_name_IInputStream, &type_spec_IInputStream, object_bases.get(), nullptr);
-    if (!state->type_IInputStream)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileInputStream, &type_spec_FileInputStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileInputStream, &type_spec_FileInputStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInputStreamReference = py::register_python_type(module.get(), type_name_IInputStreamReference, &type_spec_IInputStreamReference, object_bases.get(), nullptr);
-    if (!state->type_IInputStreamReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileOutputStream, &type_spec_FileOutputStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileOutputStream, &type_spec_FileOutputStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IOutputStream = py::register_python_type(module.get(), type_name_IOutputStream, &type_spec_IOutputStream, object_bases.get(), nullptr);
-    if (!state->type_IOutputStream)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileRandomAccessStream, &type_spec_FileRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileRandomAccessStream, &type_spec_FileRandomAccessStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPropertySetSerializer = py::register_python_type(module.get(), type_name_IPropertySetSerializer, &type_spec_IPropertySetSerializer, object_bases.get(), nullptr);
-    if (!state->type_IPropertySetSerializer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InMemoryRandomAccessStream, &type_spec_InMemoryRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InMemoryRandomAccessStream, &type_spec_InMemoryRandomAccessStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRandomAccessStream = py::register_python_type(module.get(), type_name_IRandomAccessStream, &type_spec_IRandomAccessStream, object_bases.get(), nullptr);
-    if (!state->type_IRandomAccessStream)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputStreamOverStream, &type_spec_InputStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputStreamOverStream, &type_spec_InputStreamOverStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRandomAccessStreamReference = py::register_python_type(module.get(), type_name_IRandomAccessStreamReference, &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr);
-    if (!state->type_IRandomAccessStreamReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OutputStreamOverStream, &type_spec_OutputStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OutputStreamOverStream, &type_spec_OutputStreamOverStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRandomAccessStreamWithContentType = py::register_python_type(module.get(), type_name_IRandomAccessStreamWithContentType, &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr);
-    if (!state->type_IRandomAccessStreamWithContentType)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RandomAccessStream, &type_spec_RandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RandomAccessStream, &type_spec_RandomAccessStream, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RandomAccessStreamOverStream, &type_spec_RandomAccessStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RandomAccessStreamOverStream, &type_spec_RandomAccessStreamOverStream, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RandomAccessStreamReference, &type_spec_RandomAccessStreamReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RandomAccessStreamReference, &type_spec_RandomAccessStreamReference, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBuffer, &type_spec_IBuffer, &_PyBufferProcs_IBuffer, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBuffer, &type_spec_IBuffer, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContentTypeProvider, &type_spec_IContentTypeProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContentTypeProvider, &type_spec_IContentTypeProvider, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDataReader, &type_spec_IDataReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDataReader, &type_spec_IDataReader, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDataWriter, &type_spec_IDataWriter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDataWriter, &type_spec_IDataWriter, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInputStream, &type_spec_IInputStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInputStream, &type_spec_IInputStream, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInputStreamReference, &type_spec_IInputStreamReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInputStreamReference, &type_spec_IInputStreamReference, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IOutputStream, &type_spec_IOutputStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IOutputStream, &type_spec_IOutputStream, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPropertySetSerializer, &type_spec_IPropertySetSerializer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPropertySetSerializer, &type_spec_IPropertySetSerializer, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStream, &type_spec_IRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStream, &type_spec_IRandomAccessStream, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStreamReference, &type_spec_IRandomAccessStreamReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStreamReference, &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr) == -1)
+    #endif
+    {
+        return nullptr;
+    }
+
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStreamWithContentType, &type_spec_IRandomAccessStreamWithContentType, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRandomAccessStreamWithContentType, &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::Buffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Buffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::Buffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::DataReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::DataReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataReaderLoadOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::DataReaderLoadOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::DataWriter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataWriter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::DataWriter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataWriterStoreOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::DataWriterStoreOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::FileInputStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileInputStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::FileInputStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::FileOutputStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileOutputStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::FileOutputStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileRandomAccessStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::FileRandomAccessStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InMemoryRandomAccessStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::InMemoryRandomAccessStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::InputStreamOverStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputStreamOverStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::InputStreamOverStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OutputStreamOverStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::OutputStreamOverStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::RandomAccessStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RandomAccessStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::RandomAccessStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RandomAccessStreamOverStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::RandomAccessStreamOverStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RandomAccessStreamReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::RandomAccessStreamReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IContentTypeProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContentTypeProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IContentTypeProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IDataReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDataReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IDataReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IDataWriter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDataWriter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IDataWriter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IInputStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInputStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IInputStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IInputStreamReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInputStreamReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IInputStreamReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IOutputStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IOutputStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IOutputStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPropertySetSerializer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IPropertySetSerializer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRandomAccessStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IRandomAccessStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRandomAccessStreamReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IRandomAccessStreamReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Streams;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Streams");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRandomAccessStreamWithContentType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

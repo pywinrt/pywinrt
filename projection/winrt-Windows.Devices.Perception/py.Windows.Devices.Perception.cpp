@@ -6,44 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Perception
 {
-    struct module_state
-    {
-        PyTypeObject* type_KnownCameraIntrinsicsProperties;
-        PyTypeObject* type_KnownPerceptionColorFrameSourceProperties;
-        PyTypeObject* type_KnownPerceptionDepthFrameSourceProperties;
-        PyTypeObject* type_KnownPerceptionFrameSourceProperties;
-        PyTypeObject* type_KnownPerceptionInfraredFrameSourceProperties;
-        PyTypeObject* type_KnownPerceptionVideoFrameSourceProperties;
-        PyTypeObject* type_KnownPerceptionVideoProfileProperties;
-        PyTypeObject* type_PerceptionColorFrame;
-        PyTypeObject* type_PerceptionColorFrameArrivedEventArgs;
-        PyTypeObject* type_PerceptionColorFrameReader;
-        PyTypeObject* type_PerceptionColorFrameSource;
-        PyTypeObject* type_PerceptionColorFrameSourceAddedEventArgs;
-        PyTypeObject* type_PerceptionColorFrameSourceRemovedEventArgs;
-        PyTypeObject* type_PerceptionColorFrameSourceWatcher;
-        PyTypeObject* type_PerceptionControlSession;
-        PyTypeObject* type_PerceptionDepthCorrelatedCameraIntrinsics;
-        PyTypeObject* type_PerceptionDepthCorrelatedCoordinateMapper;
-        PyTypeObject* type_PerceptionDepthFrame;
-        PyTypeObject* type_PerceptionDepthFrameArrivedEventArgs;
-        PyTypeObject* type_PerceptionDepthFrameReader;
-        PyTypeObject* type_PerceptionDepthFrameSource;
-        PyTypeObject* type_PerceptionDepthFrameSourceAddedEventArgs;
-        PyTypeObject* type_PerceptionDepthFrameSourceRemovedEventArgs;
-        PyTypeObject* type_PerceptionDepthFrameSourceWatcher;
-        PyTypeObject* type_PerceptionFrameSourcePropertiesChangedEventArgs;
-        PyTypeObject* type_PerceptionFrameSourcePropertyChangeResult;
-        PyTypeObject* type_PerceptionInfraredFrame;
-        PyTypeObject* type_PerceptionInfraredFrameArrivedEventArgs;
-        PyTypeObject* type_PerceptionInfraredFrameReader;
-        PyTypeObject* type_PerceptionInfraredFrameSource;
-        PyTypeObject* type_PerceptionInfraredFrameSourceAddedEventArgs;
-        PyTypeObject* type_PerceptionInfraredFrameSourceRemovedEventArgs;
-        PyTypeObject* type_PerceptionInfraredFrameSourceWatcher;
-        PyTypeObject* type_PerceptionVideoProfile;
-    };
-
     // ----- KnownCameraIntrinsicsProperties class --------------------
     static constexpr const char* const type_name_KnownCameraIntrinsicsProperties = "KnownCameraIntrinsicsProperties";
 
@@ -8129,110 +8091,15 @@ namespace py::cpp::Windows::Devices::Perception
     PyDoc_STRVAR(module_doc, "Windows::Devices::Perception");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_KnownCameraIntrinsicsProperties);
-        Py_VISIT(state->type_KnownPerceptionColorFrameSourceProperties);
-        Py_VISIT(state->type_KnownPerceptionDepthFrameSourceProperties);
-        Py_VISIT(state->type_KnownPerceptionFrameSourceProperties);
-        Py_VISIT(state->type_KnownPerceptionInfraredFrameSourceProperties);
-        Py_VISIT(state->type_KnownPerceptionVideoFrameSourceProperties);
-        Py_VISIT(state->type_KnownPerceptionVideoProfileProperties);
-        Py_VISIT(state->type_PerceptionColorFrame);
-        Py_VISIT(state->type_PerceptionColorFrameArrivedEventArgs);
-        Py_VISIT(state->type_PerceptionColorFrameReader);
-        Py_VISIT(state->type_PerceptionColorFrameSource);
-        Py_VISIT(state->type_PerceptionColorFrameSourceAddedEventArgs);
-        Py_VISIT(state->type_PerceptionColorFrameSourceRemovedEventArgs);
-        Py_VISIT(state->type_PerceptionColorFrameSourceWatcher);
-        Py_VISIT(state->type_PerceptionControlSession);
-        Py_VISIT(state->type_PerceptionDepthCorrelatedCameraIntrinsics);
-        Py_VISIT(state->type_PerceptionDepthCorrelatedCoordinateMapper);
-        Py_VISIT(state->type_PerceptionDepthFrame);
-        Py_VISIT(state->type_PerceptionDepthFrameArrivedEventArgs);
-        Py_VISIT(state->type_PerceptionDepthFrameReader);
-        Py_VISIT(state->type_PerceptionDepthFrameSource);
-        Py_VISIT(state->type_PerceptionDepthFrameSourceAddedEventArgs);
-        Py_VISIT(state->type_PerceptionDepthFrameSourceRemovedEventArgs);
-        Py_VISIT(state->type_PerceptionDepthFrameSourceWatcher);
-        Py_VISIT(state->type_PerceptionFrameSourcePropertiesChangedEventArgs);
-        Py_VISIT(state->type_PerceptionFrameSourcePropertyChangeResult);
-        Py_VISIT(state->type_PerceptionInfraredFrame);
-        Py_VISIT(state->type_PerceptionInfraredFrameArrivedEventArgs);
-        Py_VISIT(state->type_PerceptionInfraredFrameReader);
-        Py_VISIT(state->type_PerceptionInfraredFrameSource);
-        Py_VISIT(state->type_PerceptionInfraredFrameSourceAddedEventArgs);
-        Py_VISIT(state->type_PerceptionInfraredFrameSourceRemovedEventArgs);
-        Py_VISIT(state->type_PerceptionInfraredFrameSourceWatcher);
-        Py_VISIT(state->type_PerceptionVideoProfile);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_KnownCameraIntrinsicsProperties);
-        Py_CLEAR(state->type_KnownPerceptionColorFrameSourceProperties);
-        Py_CLEAR(state->type_KnownPerceptionDepthFrameSourceProperties);
-        Py_CLEAR(state->type_KnownPerceptionFrameSourceProperties);
-        Py_CLEAR(state->type_KnownPerceptionInfraredFrameSourceProperties);
-        Py_CLEAR(state->type_KnownPerceptionVideoFrameSourceProperties);
-        Py_CLEAR(state->type_KnownPerceptionVideoProfileProperties);
-        Py_CLEAR(state->type_PerceptionColorFrame);
-        Py_CLEAR(state->type_PerceptionColorFrameArrivedEventArgs);
-        Py_CLEAR(state->type_PerceptionColorFrameReader);
-        Py_CLEAR(state->type_PerceptionColorFrameSource);
-        Py_CLEAR(state->type_PerceptionColorFrameSourceAddedEventArgs);
-        Py_CLEAR(state->type_PerceptionColorFrameSourceRemovedEventArgs);
-        Py_CLEAR(state->type_PerceptionColorFrameSourceWatcher);
-        Py_CLEAR(state->type_PerceptionControlSession);
-        Py_CLEAR(state->type_PerceptionDepthCorrelatedCameraIntrinsics);
-        Py_CLEAR(state->type_PerceptionDepthCorrelatedCoordinateMapper);
-        Py_CLEAR(state->type_PerceptionDepthFrame);
-        Py_CLEAR(state->type_PerceptionDepthFrameArrivedEventArgs);
-        Py_CLEAR(state->type_PerceptionDepthFrameReader);
-        Py_CLEAR(state->type_PerceptionDepthFrameSource);
-        Py_CLEAR(state->type_PerceptionDepthFrameSourceAddedEventArgs);
-        Py_CLEAR(state->type_PerceptionDepthFrameSourceRemovedEventArgs);
-        Py_CLEAR(state->type_PerceptionDepthFrameSourceWatcher);
-        Py_CLEAR(state->type_PerceptionFrameSourcePropertiesChangedEventArgs);
-        Py_CLEAR(state->type_PerceptionFrameSourcePropertyChangeResult);
-        Py_CLEAR(state->type_PerceptionInfraredFrame);
-        Py_CLEAR(state->type_PerceptionInfraredFrameArrivedEventArgs);
-        Py_CLEAR(state->type_PerceptionInfraredFrameReader);
-        Py_CLEAR(state->type_PerceptionInfraredFrameSource);
-        Py_CLEAR(state->type_PerceptionInfraredFrameSourceAddedEventArgs);
-        Py_CLEAR(state->type_PerceptionInfraredFrameSourceRemovedEventArgs);
-        Py_CLEAR(state->type_PerceptionInfraredFrameSourceWatcher);
-        Py_CLEAR(state->type_PerceptionVideoProfile);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Perception",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Perception
@@ -8248,7 +8115,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8261,17 +8128,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_KnownCameraIntrinsicsProperties_Meta{PyType_FromSpec(&type_spec_KnownCameraIntrinsicsProperties_Meta)};
     if (!type_KnownCameraIntrinsicsProperties_Meta)
     {
         return nullptr;
     }
 
-    state->type_KnownCameraIntrinsicsProperties = py::register_python_type(module.get(), type_name_KnownCameraIntrinsicsProperties, &type_spec_KnownCameraIntrinsicsProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Meta.get()));
-    if (!state->type_KnownCameraIntrinsicsProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownCameraIntrinsicsProperties, &type_spec_KnownCameraIntrinsicsProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownCameraIntrinsicsProperties, &type_spec_KnownCameraIntrinsicsProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8282,8 +8149,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionColorFrameSourceProperties = py::register_python_type(module.get(), type_name_KnownPerceptionColorFrameSourceProperties, &type_spec_KnownPerceptionColorFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Meta.get()));
-    if (!state->type_KnownPerceptionColorFrameSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionColorFrameSourceProperties, &type_spec_KnownPerceptionColorFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionColorFrameSourceProperties, &type_spec_KnownPerceptionColorFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8294,8 +8164,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionDepthFrameSourceProperties = py::register_python_type(module.get(), type_name_KnownPerceptionDepthFrameSourceProperties, &type_spec_KnownPerceptionDepthFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Meta.get()));
-    if (!state->type_KnownPerceptionDepthFrameSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionDepthFrameSourceProperties, &type_spec_KnownPerceptionDepthFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionDepthFrameSourceProperties, &type_spec_KnownPerceptionDepthFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8306,8 +8179,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionFrameSourceProperties = py::register_python_type(module.get(), type_name_KnownPerceptionFrameSourceProperties, &type_spec_KnownPerceptionFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Meta.get()));
-    if (!state->type_KnownPerceptionFrameSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameSourceProperties, &type_spec_KnownPerceptionFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameSourceProperties, &type_spec_KnownPerceptionFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8318,8 +8194,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionInfraredFrameSourceProperties = py::register_python_type(module.get(), type_name_KnownPerceptionInfraredFrameSourceProperties, &type_spec_KnownPerceptionInfraredFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Meta.get()));
-    if (!state->type_KnownPerceptionInfraredFrameSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionInfraredFrameSourceProperties, &type_spec_KnownPerceptionInfraredFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionInfraredFrameSourceProperties, &type_spec_KnownPerceptionInfraredFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8330,8 +8209,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionVideoFrameSourceProperties = py::register_python_type(module.get(), type_name_KnownPerceptionVideoFrameSourceProperties, &type_spec_KnownPerceptionVideoFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Meta.get()));
-    if (!state->type_KnownPerceptionVideoFrameSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionVideoFrameSourceProperties, &type_spec_KnownPerceptionVideoFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionVideoFrameSourceProperties, &type_spec_KnownPerceptionVideoFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8342,956 +8224,258 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownPerceptionVideoProfileProperties = py::register_python_type(module.get(), type_name_KnownPerceptionVideoProfileProperties, &type_spec_KnownPerceptionVideoProfileProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Meta.get()));
-    if (!state->type_KnownPerceptionVideoProfileProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionVideoProfileProperties, &type_spec_KnownPerceptionVideoProfileProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionVideoProfileProperties, &type_spec_KnownPerceptionVideoProfileProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrame = py::register_python_type(module.get(), type_name_PerceptionColorFrame, &type_spec_PerceptionColorFrame, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrame, &type_spec_PerceptionColorFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrame, &type_spec_PerceptionColorFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_PerceptionColorFrameArrivedEventArgs, &type_spec_PerceptionColorFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameArrivedEventArgs, &type_spec_PerceptionColorFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameArrivedEventArgs, &type_spec_PerceptionColorFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameReader = py::register_python_type(module.get(), type_name_PerceptionColorFrameReader, &type_spec_PerceptionColorFrameReader, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameReader, &type_spec_PerceptionColorFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameReader, &type_spec_PerceptionColorFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameSource = py::register_python_type(module.get(), type_name_PerceptionColorFrameSource, &type_spec_PerceptionColorFrameSource, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSource, &type_spec_PerceptionColorFrameSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSource, &type_spec_PerceptionColorFrameSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameSourceAddedEventArgs = py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceAddedEventArgs, &type_spec_PerceptionColorFrameSourceAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameSourceAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceAddedEventArgs, &type_spec_PerceptionColorFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceAddedEventArgs, &type_spec_PerceptionColorFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameSourceRemovedEventArgs = py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceRemovedEventArgs, &type_spec_PerceptionColorFrameSourceRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameSourceRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceRemovedEventArgs, &type_spec_PerceptionColorFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceRemovedEventArgs, &type_spec_PerceptionColorFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionColorFrameSourceWatcher = py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceWatcher, &type_spec_PerceptionColorFrameSourceWatcher, object_bases.get(), nullptr);
-    if (!state->type_PerceptionColorFrameSourceWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceWatcher, &type_spec_PerceptionColorFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionColorFrameSourceWatcher, &type_spec_PerceptionColorFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionControlSession = py::register_python_type(module.get(), type_name_PerceptionControlSession, &type_spec_PerceptionControlSession, object_bases.get(), nullptr);
-    if (!state->type_PerceptionControlSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionControlSession, &type_spec_PerceptionControlSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionControlSession, &type_spec_PerceptionControlSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthCorrelatedCameraIntrinsics = py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCameraIntrinsics, &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthCorrelatedCameraIntrinsics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCameraIntrinsics, &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCameraIntrinsics, &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthCorrelatedCoordinateMapper = py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCoordinateMapper, &type_spec_PerceptionDepthCorrelatedCoordinateMapper, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthCorrelatedCoordinateMapper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCoordinateMapper, &type_spec_PerceptionDepthCorrelatedCoordinateMapper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthCorrelatedCoordinateMapper, &type_spec_PerceptionDepthCorrelatedCoordinateMapper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrame = py::register_python_type(module.get(), type_name_PerceptionDepthFrame, &type_spec_PerceptionDepthFrame, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrame, &type_spec_PerceptionDepthFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrame, &type_spec_PerceptionDepthFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_PerceptionDepthFrameArrivedEventArgs, &type_spec_PerceptionDepthFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameArrivedEventArgs, &type_spec_PerceptionDepthFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameArrivedEventArgs, &type_spec_PerceptionDepthFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameReader = py::register_python_type(module.get(), type_name_PerceptionDepthFrameReader, &type_spec_PerceptionDepthFrameReader, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameReader, &type_spec_PerceptionDepthFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameReader, &type_spec_PerceptionDepthFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameSource = py::register_python_type(module.get(), type_name_PerceptionDepthFrameSource, &type_spec_PerceptionDepthFrameSource, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSource, &type_spec_PerceptionDepthFrameSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSource, &type_spec_PerceptionDepthFrameSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameSourceAddedEventArgs = py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceAddedEventArgs, &type_spec_PerceptionDepthFrameSourceAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameSourceAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceAddedEventArgs, &type_spec_PerceptionDepthFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceAddedEventArgs, &type_spec_PerceptionDepthFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameSourceRemovedEventArgs = py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceRemovedEventArgs, &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameSourceRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceRemovedEventArgs, &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceRemovedEventArgs, &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionDepthFrameSourceWatcher = py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceWatcher, &type_spec_PerceptionDepthFrameSourceWatcher, object_bases.get(), nullptr);
-    if (!state->type_PerceptionDepthFrameSourceWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceWatcher, &type_spec_PerceptionDepthFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionDepthFrameSourceWatcher, &type_spec_PerceptionDepthFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFrameSourcePropertiesChangedEventArgs = py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertiesChangedEventArgs, &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFrameSourcePropertiesChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertiesChangedEventArgs, &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertiesChangedEventArgs, &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFrameSourcePropertyChangeResult = py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertyChangeResult, &type_spec_PerceptionFrameSourcePropertyChangeResult, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFrameSourcePropertyChangeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertyChangeResult, &type_spec_PerceptionFrameSourcePropertyChangeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameSourcePropertyChangeResult, &type_spec_PerceptionFrameSourcePropertyChangeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrame = py::register_python_type(module.get(), type_name_PerceptionInfraredFrame, &type_spec_PerceptionInfraredFrame, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrame, &type_spec_PerceptionInfraredFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrame, &type_spec_PerceptionInfraredFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameArrivedEventArgs, &type_spec_PerceptionInfraredFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameArrivedEventArgs, &type_spec_PerceptionInfraredFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameArrivedEventArgs, &type_spec_PerceptionInfraredFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameReader = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameReader, &type_spec_PerceptionInfraredFrameReader, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameReader, &type_spec_PerceptionInfraredFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameReader, &type_spec_PerceptionInfraredFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameSource = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSource, &type_spec_PerceptionInfraredFrameSource, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSource, &type_spec_PerceptionInfraredFrameSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSource, &type_spec_PerceptionInfraredFrameSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameSourceAddedEventArgs = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceAddedEventArgs, &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameSourceAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceAddedEventArgs, &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceAddedEventArgs, &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameSourceRemovedEventArgs = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceRemovedEventArgs, &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameSourceRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceRemovedEventArgs, &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceRemovedEventArgs, &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionInfraredFrameSourceWatcher = py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceWatcher, &type_spec_PerceptionInfraredFrameSourceWatcher, object_bases.get(), nullptr);
-    if (!state->type_PerceptionInfraredFrameSourceWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceWatcher, &type_spec_PerceptionInfraredFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionInfraredFrameSourceWatcher, &type_spec_PerceptionInfraredFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionVideoProfile = py::register_python_type(module.get(), type_name_PerceptionVideoProfile, &type_spec_PerceptionVideoProfile, object_bases.get(), nullptr);
-    if (!state->type_PerceptionVideoProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionVideoProfile, &type_spec_PerceptionVideoProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionVideoProfile, &type_spec_PerceptionVideoProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownCameraIntrinsicsProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionColorFrameSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionDepthFrameSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionFrameSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionInfraredFrameSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionVideoFrameSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionVideoProfileProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameSourceAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameSourceRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionColorFrameSourceWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionControlSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionControlSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionControlSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthCorrelatedCameraIntrinsics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthCorrelatedCoordinateMapper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameSourceAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameSourceRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionDepthFrameSourceWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFrameSourcePropertiesChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFrameSourcePropertyChangeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameSourceAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameSourceRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionInfraredFrameSourceWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionVideoProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::PerceptionVideoProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

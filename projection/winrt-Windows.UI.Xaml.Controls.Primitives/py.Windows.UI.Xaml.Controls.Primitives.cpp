@@ -6,68 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppBarButtonTemplateSettings;
-        PyTypeObject* type_AppBarTemplateSettings;
-        PyTypeObject* type_AppBarToggleButtonTemplateSettings;
-        PyTypeObject* type_ButtonBase;
-        PyTypeObject* type_CalendarPanel;
-        PyTypeObject* type_CalendarViewTemplateSettings;
-        PyTypeObject* type_CarouselPanel;
-        PyTypeObject* type_ColorPickerSlider;
-        PyTypeObject* type_ColorSpectrum;
-        PyTypeObject* type_ComboBoxTemplateSettings;
-        PyTypeObject* type_CommandBarFlyoutCommandBar;
-        PyTypeObject* type_CommandBarFlyoutCommandBarTemplateSettings;
-        PyTypeObject* type_CommandBarTemplateSettings;
-        PyTypeObject* type_DragCompletedEventArgs;
-        PyTypeObject* type_DragDeltaEventArgs;
-        PyTypeObject* type_DragStartedEventArgs;
-        PyTypeObject* type_FlyoutBase;
-        PyTypeObject* type_FlyoutBaseClosingEventArgs;
-        PyTypeObject* type_FlyoutShowOptions;
-        PyTypeObject* type_GeneratorPositionHelper;
-        PyTypeObject* type_GridViewItemPresenter;
-        PyTypeObject* type_GridViewItemTemplateSettings;
-        PyTypeObject* type_ItemsChangedEventArgs;
-        PyTypeObject* type_JumpListItemBackgroundConverter;
-        PyTypeObject* type_JumpListItemForegroundConverter;
-        PyTypeObject* type_LayoutInformation;
-        PyTypeObject* type_ListViewItemPresenter;
-        PyTypeObject* type_ListViewItemTemplateSettings;
-        PyTypeObject* type_LoopingSelector;
-        PyTypeObject* type_LoopingSelectorItem;
-        PyTypeObject* type_LoopingSelectorPanel;
-        PyTypeObject* type_MenuFlyoutItemTemplateSettings;
-        PyTypeObject* type_MenuFlyoutPresenterTemplateSettings;
-        PyTypeObject* type_NavigationViewItemPresenter;
-        PyTypeObject* type_OrientedVirtualizingPanel;
-        PyTypeObject* type_PickerFlyoutBase;
-        PyTypeObject* type_PivotHeaderItem;
-        PyTypeObject* type_PivotHeaderPanel;
-        PyTypeObject* type_PivotPanel;
-        PyTypeObject* type_Popup;
-        PyTypeObject* type_ProgressBarTemplateSettings;
-        PyTypeObject* type_ProgressRingTemplateSettings;
-        PyTypeObject* type_RangeBase;
-        PyTypeObject* type_RangeBaseValueChangedEventArgs;
-        PyTypeObject* type_RepeatButton;
-        PyTypeObject* type_ScrollBar;
-        PyTypeObject* type_ScrollEventArgs;
-        PyTypeObject* type_Selector;
-        PyTypeObject* type_SelectorItem;
-        PyTypeObject* type_SettingsFlyoutTemplateSettings;
-        PyTypeObject* type_SplitViewTemplateSettings;
-        PyTypeObject* type_Thumb;
-        PyTypeObject* type_TickBar;
-        PyTypeObject* type_ToggleButton;
-        PyTypeObject* type_ToggleSwitchTemplateSettings;
-        PyTypeObject* type_ToolTipTemplateSettings;
-        PyTypeObject* type_IScrollSnapPointsInfo;
-        PyTypeObject* type_GeneratorPosition;
-    };
-
     // ----- AppBarButtonTemplateSettings class --------------------
     static constexpr const char* const type_name_AppBarButtonTemplateSettings = "AppBarButtonTemplateSettings";
 
@@ -22561,158 +22499,15 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Controls::Primitives");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppBarButtonTemplateSettings);
-        Py_VISIT(state->type_AppBarTemplateSettings);
-        Py_VISIT(state->type_AppBarToggleButtonTemplateSettings);
-        Py_VISIT(state->type_ButtonBase);
-        Py_VISIT(state->type_CalendarPanel);
-        Py_VISIT(state->type_CalendarViewTemplateSettings);
-        Py_VISIT(state->type_CarouselPanel);
-        Py_VISIT(state->type_ColorPickerSlider);
-        Py_VISIT(state->type_ColorSpectrum);
-        Py_VISIT(state->type_ComboBoxTemplateSettings);
-        Py_VISIT(state->type_CommandBarFlyoutCommandBar);
-        Py_VISIT(state->type_CommandBarFlyoutCommandBarTemplateSettings);
-        Py_VISIT(state->type_CommandBarTemplateSettings);
-        Py_VISIT(state->type_DragCompletedEventArgs);
-        Py_VISIT(state->type_DragDeltaEventArgs);
-        Py_VISIT(state->type_DragStartedEventArgs);
-        Py_VISIT(state->type_FlyoutBase);
-        Py_VISIT(state->type_FlyoutBaseClosingEventArgs);
-        Py_VISIT(state->type_FlyoutShowOptions);
-        Py_VISIT(state->type_GeneratorPositionHelper);
-        Py_VISIT(state->type_GridViewItemPresenter);
-        Py_VISIT(state->type_GridViewItemTemplateSettings);
-        Py_VISIT(state->type_ItemsChangedEventArgs);
-        Py_VISIT(state->type_JumpListItemBackgroundConverter);
-        Py_VISIT(state->type_JumpListItemForegroundConverter);
-        Py_VISIT(state->type_LayoutInformation);
-        Py_VISIT(state->type_ListViewItemPresenter);
-        Py_VISIT(state->type_ListViewItemTemplateSettings);
-        Py_VISIT(state->type_LoopingSelector);
-        Py_VISIT(state->type_LoopingSelectorItem);
-        Py_VISIT(state->type_LoopingSelectorPanel);
-        Py_VISIT(state->type_MenuFlyoutItemTemplateSettings);
-        Py_VISIT(state->type_MenuFlyoutPresenterTemplateSettings);
-        Py_VISIT(state->type_NavigationViewItemPresenter);
-        Py_VISIT(state->type_OrientedVirtualizingPanel);
-        Py_VISIT(state->type_PickerFlyoutBase);
-        Py_VISIT(state->type_PivotHeaderItem);
-        Py_VISIT(state->type_PivotHeaderPanel);
-        Py_VISIT(state->type_PivotPanel);
-        Py_VISIT(state->type_Popup);
-        Py_VISIT(state->type_ProgressBarTemplateSettings);
-        Py_VISIT(state->type_ProgressRingTemplateSettings);
-        Py_VISIT(state->type_RangeBase);
-        Py_VISIT(state->type_RangeBaseValueChangedEventArgs);
-        Py_VISIT(state->type_RepeatButton);
-        Py_VISIT(state->type_ScrollBar);
-        Py_VISIT(state->type_ScrollEventArgs);
-        Py_VISIT(state->type_Selector);
-        Py_VISIT(state->type_SelectorItem);
-        Py_VISIT(state->type_SettingsFlyoutTemplateSettings);
-        Py_VISIT(state->type_SplitViewTemplateSettings);
-        Py_VISIT(state->type_Thumb);
-        Py_VISIT(state->type_TickBar);
-        Py_VISIT(state->type_ToggleButton);
-        Py_VISIT(state->type_ToggleSwitchTemplateSettings);
-        Py_VISIT(state->type_ToolTipTemplateSettings);
-        Py_VISIT(state->type_IScrollSnapPointsInfo);
-        Py_VISIT(state->type_GeneratorPosition);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppBarButtonTemplateSettings);
-        Py_CLEAR(state->type_AppBarTemplateSettings);
-        Py_CLEAR(state->type_AppBarToggleButtonTemplateSettings);
-        Py_CLEAR(state->type_ButtonBase);
-        Py_CLEAR(state->type_CalendarPanel);
-        Py_CLEAR(state->type_CalendarViewTemplateSettings);
-        Py_CLEAR(state->type_CarouselPanel);
-        Py_CLEAR(state->type_ColorPickerSlider);
-        Py_CLEAR(state->type_ColorSpectrum);
-        Py_CLEAR(state->type_ComboBoxTemplateSettings);
-        Py_CLEAR(state->type_CommandBarFlyoutCommandBar);
-        Py_CLEAR(state->type_CommandBarFlyoutCommandBarTemplateSettings);
-        Py_CLEAR(state->type_CommandBarTemplateSettings);
-        Py_CLEAR(state->type_DragCompletedEventArgs);
-        Py_CLEAR(state->type_DragDeltaEventArgs);
-        Py_CLEAR(state->type_DragStartedEventArgs);
-        Py_CLEAR(state->type_FlyoutBase);
-        Py_CLEAR(state->type_FlyoutBaseClosingEventArgs);
-        Py_CLEAR(state->type_FlyoutShowOptions);
-        Py_CLEAR(state->type_GeneratorPositionHelper);
-        Py_CLEAR(state->type_GridViewItemPresenter);
-        Py_CLEAR(state->type_GridViewItemTemplateSettings);
-        Py_CLEAR(state->type_ItemsChangedEventArgs);
-        Py_CLEAR(state->type_JumpListItemBackgroundConverter);
-        Py_CLEAR(state->type_JumpListItemForegroundConverter);
-        Py_CLEAR(state->type_LayoutInformation);
-        Py_CLEAR(state->type_ListViewItemPresenter);
-        Py_CLEAR(state->type_ListViewItemTemplateSettings);
-        Py_CLEAR(state->type_LoopingSelector);
-        Py_CLEAR(state->type_LoopingSelectorItem);
-        Py_CLEAR(state->type_LoopingSelectorPanel);
-        Py_CLEAR(state->type_MenuFlyoutItemTemplateSettings);
-        Py_CLEAR(state->type_MenuFlyoutPresenterTemplateSettings);
-        Py_CLEAR(state->type_NavigationViewItemPresenter);
-        Py_CLEAR(state->type_OrientedVirtualizingPanel);
-        Py_CLEAR(state->type_PickerFlyoutBase);
-        Py_CLEAR(state->type_PivotHeaderItem);
-        Py_CLEAR(state->type_PivotHeaderPanel);
-        Py_CLEAR(state->type_PivotPanel);
-        Py_CLEAR(state->type_Popup);
-        Py_CLEAR(state->type_ProgressBarTemplateSettings);
-        Py_CLEAR(state->type_ProgressRingTemplateSettings);
-        Py_CLEAR(state->type_RangeBase);
-        Py_CLEAR(state->type_RangeBaseValueChangedEventArgs);
-        Py_CLEAR(state->type_RepeatButton);
-        Py_CLEAR(state->type_ScrollBar);
-        Py_CLEAR(state->type_ScrollEventArgs);
-        Py_CLEAR(state->type_Selector);
-        Py_CLEAR(state->type_SelectorItem);
-        Py_CLEAR(state->type_SettingsFlyoutTemplateSettings);
-        Py_CLEAR(state->type_SplitViewTemplateSettings);
-        Py_CLEAR(state->type_Thumb);
-        Py_CLEAR(state->type_TickBar);
-        Py_CLEAR(state->type_ToggleButton);
-        Py_CLEAR(state->type_ToggleSwitchTemplateSettings);
-        Py_CLEAR(state->type_ToolTipTemplateSettings);
-        Py_CLEAR(state->type_IScrollSnapPointsInfo);
-        Py_CLEAR(state->type_GeneratorPosition);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Controls_Primitives",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Controls::Primitives
@@ -22728,7 +22523,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -22741,23 +22536,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppBarButtonTemplateSettings = py::register_python_type(module.get(), type_name_AppBarButtonTemplateSettings, &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_AppBarButtonTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarButtonTemplateSettings, &type_spec_AppBarButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarButtonTemplateSettings, &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBarTemplateSettings = py::register_python_type(module.get(), type_name_AppBarTemplateSettings, &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_AppBarTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarTemplateSettings, &type_spec_AppBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarTemplateSettings, &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBarToggleButtonTemplateSettings = py::register_python_type(module.get(), type_name_AppBarToggleButtonTemplateSettings, &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_AppBarToggleButtonTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonTemplateSettings, &type_spec_AppBarToggleButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonTemplateSettings, &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22768,26 +22569,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ButtonBase = py::register_python_type(module.get(), type_name_ButtonBase, &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get()));
-    if (!state->type_ButtonBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ButtonBase, &type_spec_ButtonBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ButtonBase, &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CalendarPanel = py::register_python_type(module.get(), type_name_CalendarPanel, &type_spec_CalendarPanel, object_bases.get(), nullptr);
-    if (!state->type_CalendarPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CalendarPanel, &type_spec_CalendarPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CalendarPanel, &type_spec_CalendarPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CalendarViewTemplateSettings = py::register_python_type(module.get(), type_name_CalendarViewTemplateSettings, &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_CalendarViewTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CalendarViewTemplateSettings, &type_spec_CalendarViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CalendarViewTemplateSettings, &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CarouselPanel = py::register_python_type(module.get(), type_name_CarouselPanel, &type_spec_CarouselPanel, object_bases.get(), nullptr);
-    if (!state->type_CarouselPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CarouselPanel, &type_spec_CarouselPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CarouselPanel, &type_spec_CarouselPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22798,8 +22611,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ColorPickerSlider = py::register_python_type(module.get(), type_name_ColorPickerSlider, &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get()));
-    if (!state->type_ColorPickerSlider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorPickerSlider, &type_spec_ColorPickerSlider, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorPickerSlider, &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22810,50 +22626,74 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ColorSpectrum = py::register_python_type(module.get(), type_name_ColorSpectrum, &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get()));
-    if (!state->type_ColorSpectrum)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorSpectrum, &type_spec_ColorSpectrum, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorSpectrum, &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ComboBoxTemplateSettings = py::register_python_type(module.get(), type_name_ComboBoxTemplateSettings, &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ComboBoxTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComboBoxTemplateSettings, &type_spec_ComboBoxTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComboBoxTemplateSettings, &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommandBarFlyoutCommandBar = py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBar, &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), nullptr);
-    if (!state->type_CommandBarFlyoutCommandBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBar, &type_spec_CommandBarFlyoutCommandBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBar, &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommandBarFlyoutCommandBarTemplateSettings = py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBarTemplateSettings, &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_CommandBarFlyoutCommandBarTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBarTemplateSettings, &type_spec_CommandBarFlyoutCommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBarTemplateSettings, &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommandBarTemplateSettings = py::register_python_type(module.get(), type_name_CommandBarTemplateSettings, &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_CommandBarTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommandBarTemplateSettings, &type_spec_CommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommandBarTemplateSettings, &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragCompletedEventArgs = py::register_python_type(module.get(), type_name_DragCompletedEventArgs, &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DragCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragCompletedEventArgs, &type_spec_DragCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragCompletedEventArgs, &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragDeltaEventArgs = py::register_python_type(module.get(), type_name_DragDeltaEventArgs, &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DragDeltaEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragDeltaEventArgs, &type_spec_DragDeltaEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragDeltaEventArgs, &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DragStartedEventArgs = py::register_python_type(module.get(), type_name_DragStartedEventArgs, &type_spec_DragStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DragStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DragStartedEventArgs, &type_spec_DragStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DragStartedEventArgs, &type_spec_DragStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22864,26 +22704,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_FlyoutBase = py::register_python_type(module.get(), type_name_FlyoutBase, &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get()));
-    if (!state->type_FlyoutBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlyoutBase, &type_spec_FlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlyoutBase, &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlyoutBaseClosingEventArgs = py::register_python_type(module.get(), type_name_FlyoutBaseClosingEventArgs, &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FlyoutBaseClosingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlyoutBaseClosingEventArgs, &type_spec_FlyoutBaseClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlyoutBaseClosingEventArgs, &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlyoutShowOptions = py::register_python_type(module.get(), type_name_FlyoutShowOptions, &type_spec_FlyoutShowOptions, object_bases.get(), nullptr);
-    if (!state->type_FlyoutShowOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlyoutShowOptions, &type_spec_FlyoutShowOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlyoutShowOptions, &type_spec_FlyoutShowOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeneratorPositionHelper = py::register_python_type(module.get(), type_name_GeneratorPositionHelper, &type_spec_GeneratorPositionHelper, object_bases.get(), nullptr);
-    if (!state->type_GeneratorPositionHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeneratorPositionHelper, &type_spec_GeneratorPositionHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeneratorPositionHelper, &type_spec_GeneratorPositionHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22894,20 +22746,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_GridViewItemPresenter = py::register_python_type(module.get(), type_name_GridViewItemPresenter, &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get()));
-    if (!state->type_GridViewItemPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewItemPresenter, &type_spec_GridViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewItemPresenter, &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridViewItemTemplateSettings = py::register_python_type(module.get(), type_name_GridViewItemTemplateSettings, &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_GridViewItemTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewItemTemplateSettings, &type_spec_GridViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewItemTemplateSettings, &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ItemsChangedEventArgs = py::register_python_type(module.get(), type_name_ItemsChangedEventArgs, &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ItemsChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ItemsChangedEventArgs, &type_spec_ItemsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ItemsChangedEventArgs, &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22918,8 +22779,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_JumpListItemBackgroundConverter = py::register_python_type(module.get(), type_name_JumpListItemBackgroundConverter, &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get()));
-    if (!state->type_JumpListItemBackgroundConverter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JumpListItemBackgroundConverter, &type_spec_JumpListItemBackgroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JumpListItemBackgroundConverter, &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22930,14 +22794,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_JumpListItemForegroundConverter = py::register_python_type(module.get(), type_name_JumpListItemForegroundConverter, &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get()));
-    if (!state->type_JumpListItemForegroundConverter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JumpListItemForegroundConverter, &type_spec_JumpListItemForegroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JumpListItemForegroundConverter, &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LayoutInformation = py::register_python_type(module.get(), type_name_LayoutInformation, &type_spec_LayoutInformation, object_bases.get(), nullptr);
-    if (!state->type_LayoutInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LayoutInformation, &type_spec_LayoutInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LayoutInformation, &type_spec_LayoutInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22948,14 +22818,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ListViewItemPresenter = py::register_python_type(module.get(), type_name_ListViewItemPresenter, &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get()));
-    if (!state->type_ListViewItemPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewItemPresenter, &type_spec_ListViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewItemPresenter, &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewItemTemplateSettings = py::register_python_type(module.get(), type_name_ListViewItemTemplateSettings, &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ListViewItemTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewItemTemplateSettings, &type_spec_ListViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewItemTemplateSettings, &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -22966,32 +22842,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_LoopingSelector = py::register_python_type(module.get(), type_name_LoopingSelector, &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get()));
-    if (!state->type_LoopingSelector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelector, &type_spec_LoopingSelector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelector, &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoopingSelectorItem = py::register_python_type(module.get(), type_name_LoopingSelectorItem, &type_spec_LoopingSelectorItem, object_bases.get(), nullptr);
-    if (!state->type_LoopingSelectorItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItem, &type_spec_LoopingSelectorItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItem, &type_spec_LoopingSelectorItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoopingSelectorPanel = py::register_python_type(module.get(), type_name_LoopingSelectorPanel, &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr);
-    if (!state->type_LoopingSelectorPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorPanel, &type_spec_LoopingSelectorPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorPanel, &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuFlyoutItemTemplateSettings = py::register_python_type(module.get(), type_name_MenuFlyoutItemTemplateSettings, &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_MenuFlyoutItemTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemTemplateSettings, &type_spec_MenuFlyoutItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemTemplateSettings, &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuFlyoutPresenterTemplateSettings = py::register_python_type(module.get(), type_name_MenuFlyoutPresenterTemplateSettings, &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_MenuFlyoutPresenterTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterTemplateSettings, &type_spec_MenuFlyoutPresenterTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterTemplateSettings, &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23002,14 +22893,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_NavigationViewItemPresenter = py::register_python_type(module.get(), type_name_NavigationViewItemPresenter, &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get()));
-    if (!state->type_NavigationViewItemPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationViewItemPresenter, &type_spec_NavigationViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationViewItemPresenter, &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OrientedVirtualizingPanel = py::register_python_type(module.get(), type_name_OrientedVirtualizingPanel, &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr);
-    if (!state->type_OrientedVirtualizingPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OrientedVirtualizingPanel, &type_spec_OrientedVirtualizingPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OrientedVirtualizingPanel, &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23020,26 +22917,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_PickerFlyoutBase = py::register_python_type(module.get(), type_name_PickerFlyoutBase, &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get()));
-    if (!state->type_PickerFlyoutBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerFlyoutBase, &type_spec_PickerFlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerFlyoutBase, &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotHeaderItem = py::register_python_type(module.get(), type_name_PivotHeaderItem, &type_spec_PivotHeaderItem, object_bases.get(), nullptr);
-    if (!state->type_PivotHeaderItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotHeaderItem, &type_spec_PivotHeaderItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotHeaderItem, &type_spec_PivotHeaderItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotHeaderPanel = py::register_python_type(module.get(), type_name_PivotHeaderPanel, &type_spec_PivotHeaderPanel, object_bases.get(), nullptr);
-    if (!state->type_PivotHeaderPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotHeaderPanel, &type_spec_PivotHeaderPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotHeaderPanel, &type_spec_PivotHeaderPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotPanel = py::register_python_type(module.get(), type_name_PivotPanel, &type_spec_PivotPanel, object_bases.get(), nullptr);
-    if (!state->type_PivotPanel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotPanel, &type_spec_PivotPanel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotPanel, &type_spec_PivotPanel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23050,20 +22959,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_Popup = py::register_python_type(module.get(), type_name_Popup, &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get()));
-    if (!state->type_Popup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Popup, &type_spec_Popup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Popup, &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProgressBarTemplateSettings = py::register_python_type(module.get(), type_name_ProgressBarTemplateSettings, &type_spec_ProgressBarTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ProgressBarTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProgressBarTemplateSettings, &type_spec_ProgressBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProgressBarTemplateSettings, &type_spec_ProgressBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProgressRingTemplateSettings = py::register_python_type(module.get(), type_name_ProgressRingTemplateSettings, &type_spec_ProgressRingTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ProgressRingTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProgressRingTemplateSettings, &type_spec_ProgressRingTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProgressRingTemplateSettings, &type_spec_ProgressRingTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23074,14 +22992,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_RangeBase = py::register_python_type(module.get(), type_name_RangeBase, &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get()));
-    if (!state->type_RangeBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RangeBase, &type_spec_RangeBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RangeBase, &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RangeBaseValueChangedEventArgs = py::register_python_type(module.get(), type_name_RangeBaseValueChangedEventArgs, &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RangeBaseValueChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RangeBaseValueChangedEventArgs, &type_spec_RangeBaseValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RangeBaseValueChangedEventArgs, &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23092,8 +23016,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_RepeatButton = py::register_python_type(module.get(), type_name_RepeatButton, &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get()));
-    if (!state->type_RepeatButton)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepeatButton, &type_spec_RepeatButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepeatButton, &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23104,14 +23031,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ScrollBar = py::register_python_type(module.get(), type_name_ScrollBar, &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get()));
-    if (!state->type_ScrollBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScrollBar, &type_spec_ScrollBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScrollBar, &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScrollEventArgs = py::register_python_type(module.get(), type_name_ScrollEventArgs, &type_spec_ScrollEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ScrollEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScrollEventArgs, &type_spec_ScrollEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScrollEventArgs, &type_spec_ScrollEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23122,8 +23055,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_Selector = py::register_python_type(module.get(), type_name_Selector, &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get()));
-    if (!state->type_Selector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Selector, &type_spec_Selector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Selector, &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23134,20 +23070,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_SelectorItem = py::register_python_type(module.get(), type_name_SelectorItem, &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get()));
-    if (!state->type_SelectorItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectorItem, &type_spec_SelectorItem, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectorItem, &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SettingsFlyoutTemplateSettings = py::register_python_type(module.get(), type_name_SettingsFlyoutTemplateSettings, &type_spec_SettingsFlyoutTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_SettingsFlyoutTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsFlyoutTemplateSettings, &type_spec_SettingsFlyoutTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsFlyoutTemplateSettings, &type_spec_SettingsFlyoutTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SplitViewTemplateSettings = py::register_python_type(module.get(), type_name_SplitViewTemplateSettings, &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_SplitViewTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplitViewTemplateSettings, &type_spec_SplitViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplitViewTemplateSettings, &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23158,8 +23103,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_Thumb = py::register_python_type(module.get(), type_name_Thumb, &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get()));
-    if (!state->type_Thumb)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Thumb, &type_spec_Thumb, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Thumb, &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23170,8 +23118,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_TickBar = py::register_python_type(module.get(), type_name_TickBar, &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get()));
-    if (!state->type_TickBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TickBar, &type_spec_TickBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TickBar, &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -23182,1370 +23133,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Primitives(void) noexcept
         return nullptr;
     }
 
-    state->type_ToggleButton = py::register_python_type(module.get(), type_name_ToggleButton, &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get()));
-    if (!state->type_ToggleButton)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToggleButton, &type_spec_ToggleButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToggleButton, &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToggleSwitchTemplateSettings = py::register_python_type(module.get(), type_name_ToggleSwitchTemplateSettings, &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ToggleSwitchTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToggleSwitchTemplateSettings, &type_spec_ToggleSwitchTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToggleSwitchTemplateSettings, &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToolTipTemplateSettings = py::register_python_type(module.get(), type_name_ToolTipTemplateSettings, &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr);
-    if (!state->type_ToolTipTemplateSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToolTipTemplateSettings, &type_spec_ToolTipTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToolTipTemplateSettings, &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IScrollSnapPointsInfo = py::register_python_type(module.get(), type_name_IScrollSnapPointsInfo, &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr);
-    if (!state->type_IScrollSnapPointsInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IScrollSnapPointsInfo, &type_spec_IScrollSnapPointsInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IScrollSnapPointsInfo, &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeneratorPosition = py::register_python_type(module.get(), type_name_GeneratorPosition, &type_spec_GeneratorPosition, nullptr, nullptr);
-    if (!state->type_GeneratorPosition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeneratorPosition, &type_spec_GeneratorPosition, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeneratorPosition, &type_spec_GeneratorPosition, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarButtonTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarToggleButtonTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ButtonBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CalendarPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CalendarPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CalendarViewTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CarouselPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorPickerSlider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorSpectrum;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComboBoxTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommandBarFlyoutCommandBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommandBarFlyoutCommandBarTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommandBarTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragDeltaEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DragStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlyoutBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlyoutBaseClosingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlyoutShowOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeneratorPositionHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewItemPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewItemTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ItemsChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpListItemBackgroundConverter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpListItemForegroundConverter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LayoutInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewItemPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewItemTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelectorItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelectorPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuFlyoutItemTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuFlyoutPresenterTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationViewItemPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OrientedVirtualizingPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerFlyoutBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotHeaderItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotHeaderPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotPanel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotPanel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::PivotPanel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::Popup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Popup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::Popup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProgressBarTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProgressRingTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RangeBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RangeBaseValueChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepeatButton;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScrollBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScrollEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Selector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::Selector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectorItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsFlyoutTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplitViewTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::Thumb>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Thumb;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::Thumb is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::TickBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TickBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::TickBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToggleButton;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToggleSwitchTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToolTipTemplateSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IScrollSnapPointsInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Controls::Primitives;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Controls::Primitives");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeneratorPosition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

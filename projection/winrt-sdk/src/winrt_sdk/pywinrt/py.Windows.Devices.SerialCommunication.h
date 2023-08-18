@@ -84,20 +84,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "ErrorReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "PinChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>
+    struct py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
+        static constexpr const char* type_name = "SerialDevice";
     };
 }

@@ -6,30 +6,6 @@
 
 namespace py::cpp::Windows::Security::Isolation
 {
-    struct module_state
-    {
-        PyTypeObject* type_IsolatedWindowsEnvironment;
-        PyTypeObject* type_IsolatedWindowsEnvironmentCreateResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentFile;
-        PyTypeObject* type_IsolatedWindowsEnvironmentHost;
-        PyTypeObject* type_IsolatedWindowsEnvironmentLaunchFileResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentOptions;
-        PyTypeObject* type_IsolatedWindowsEnvironmentOwnerRegistration;
-        PyTypeObject* type_IsolatedWindowsEnvironmentOwnerRegistrationData;
-        PyTypeObject* type_IsolatedWindowsEnvironmentOwnerRegistrationResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentPostMessageResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentProcess;
-        PyTypeObject* type_IsolatedWindowsEnvironmentShareFileRequestOptions;
-        PyTypeObject* type_IsolatedWindowsEnvironmentShareFileResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentShareFolderRequestOptions;
-        PyTypeObject* type_IsolatedWindowsEnvironmentShareFolderResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentStartProcessResult;
-        PyTypeObject* type_IsolatedWindowsEnvironmentTelemetryParameters;
-        PyTypeObject* type_IsolatedWindowsEnvironmentUserInfo;
-        PyTypeObject* type_IsolatedWindowsHostMessenger;
-        PyTypeObject* type_IsolatedWindowsEnvironmentCreateProgress;
-    };
-
     // ----- IsolatedWindowsEnvironment class --------------------
     static constexpr const char* const type_name_IsolatedWindowsEnvironment = "IsolatedWindowsEnvironment";
 
@@ -4005,82 +3981,15 @@ namespace py::cpp::Windows::Security::Isolation
     PyDoc_STRVAR(module_doc, "Windows::Security::Isolation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IsolatedWindowsEnvironment);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentCreateResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentFile);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentHost);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentLaunchFileResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentOptions);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentOwnerRegistration);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentOwnerRegistrationData);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentOwnerRegistrationResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentPostMessageResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentProcess);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentShareFileRequestOptions);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentShareFileResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentShareFolderRequestOptions);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentShareFolderResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentStartProcessResult);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentTelemetryParameters);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentUserInfo);
-        Py_VISIT(state->type_IsolatedWindowsHostMessenger);
-        Py_VISIT(state->type_IsolatedWindowsEnvironmentCreateProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IsolatedWindowsEnvironment);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentCreateResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentFile);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentHost);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentLaunchFileResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentOptions);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentOwnerRegistration);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentOwnerRegistrationData);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentOwnerRegistrationResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentPostMessageResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentProcess);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentShareFileRequestOptions);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentShareFileResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentShareFolderRequestOptions);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentShareFolderResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentStartProcessResult);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentTelemetryParameters);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentUserInfo);
-        Py_CLEAR(state->type_IsolatedWindowsHostMessenger);
-        Py_CLEAR(state->type_IsolatedWindowsEnvironmentCreateProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Isolation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Isolation
@@ -4096,7 +4005,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Isolation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4109,23 +4018,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Isolation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IsolatedWindowsEnvironment = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironment, &type_spec_IsolatedWindowsEnvironment, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironment, &type_spec_IsolatedWindowsEnvironment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironment, &type_spec_IsolatedWindowsEnvironment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentCreateResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateResult, &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentCreateResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateResult, &type_spec_IsolatedWindowsEnvironmentCreateResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateResult, &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentFile = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentFile, &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentFile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentFile, &type_spec_IsolatedWindowsEnvironmentFile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentFile, &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4136,568 +4051,159 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Isolation(void) noexcept
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentHost = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentHost, &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get()));
-    if (!state->type_IsolatedWindowsEnvironmentHost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentHost, &type_spec_IsolatedWindowsEnvironmentHost, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentHost, &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentLaunchFileResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentLaunchFileResult, &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentLaunchFileResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentLaunchFileResult, &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentLaunchFileResult, &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentOptions = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOptions, &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOptions, &type_spec_IsolatedWindowsEnvironmentOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOptions, &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentOwnerRegistration = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistration, &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentOwnerRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistration, &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistration, &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentOwnerRegistrationData = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationData, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentOwnerRegistrationData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationData, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationData, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentOwnerRegistrationResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentOwnerRegistrationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentPostMessageResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentPostMessageResult, &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentPostMessageResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentPostMessageResult, &type_spec_IsolatedWindowsEnvironmentPostMessageResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentPostMessageResult, &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentProcess = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentProcess, &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentProcess)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentProcess, &type_spec_IsolatedWindowsEnvironmentProcess, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentProcess, &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentShareFileRequestOptions = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentShareFileRequestOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentShareFileResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileResult, &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentShareFileResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileResult, &type_spec_IsolatedWindowsEnvironmentShareFileResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileResult, &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentShareFolderRequestOptions = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentShareFolderRequestOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentShareFolderResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderResult, &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentShareFolderResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderResult, &type_spec_IsolatedWindowsEnvironmentShareFolderResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderResult, &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentStartProcessResult = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentStartProcessResult, &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentStartProcessResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentStartProcessResult, &type_spec_IsolatedWindowsEnvironmentStartProcessResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentStartProcessResult, &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentTelemetryParameters = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentTelemetryParameters, &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentTelemetryParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentTelemetryParameters, &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentTelemetryParameters, &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentUserInfo = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentUserInfo, &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentUserInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentUserInfo, &type_spec_IsolatedWindowsEnvironmentUserInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentUserInfo, &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsHostMessenger = py::register_python_type(module.get(), type_name_IsolatedWindowsHostMessenger, &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), nullptr);
-    if (!state->type_IsolatedWindowsHostMessenger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsHostMessenger, &type_spec_IsolatedWindowsHostMessenger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsHostMessenger, &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsolatedWindowsEnvironmentCreateProgress = py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateProgress, &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr);
-    if (!state->type_IsolatedWindowsEnvironmentCreateProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateProgress, &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateProgress, &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentCreateResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentFile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentHost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentLaunchFileResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentOwnerRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentOwnerRegistrationData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentOwnerRegistrationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentPostMessageResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentProcess;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentShareFileRequestOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentShareFileResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentShareFolderRequestOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentShareFolderResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentStartProcessResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentTelemetryParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentUserInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsHostMessenger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Isolation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Isolation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsolatedWindowsEnvironmentCreateProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

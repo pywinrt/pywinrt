@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::ResourceLoader>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::ResourceLoader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources";
+        static constexpr const char* type_name = "ResourceLoader";
     };
 }

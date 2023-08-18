@@ -84,92 +84,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "NamedResource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceCandidate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceCandidateVectorView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceContextLanguagesVectorView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceMapIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceMapMapView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceMapMapViewIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceQualifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceQualifierMapView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceQualifierObservableMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceQualifierVectorView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
+        static constexpr const char* type_name = "ResourceLayoutInfo";
     };
 }

@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Scanners
 {
-    struct module_state
-    {
-        PyTypeObject* type_ImageScanner;
-        PyTypeObject* type_ImageScannerAutoConfiguration;
-        PyTypeObject* type_ImageScannerFeederConfiguration;
-        PyTypeObject* type_ImageScannerFlatbedConfiguration;
-        PyTypeObject* type_ImageScannerPreviewResult;
-        PyTypeObject* type_ImageScannerScanResult;
-        PyTypeObject* type_IImageScannerFormatConfiguration;
-        PyTypeObject* type_IImageScannerSourceConfiguration;
-        PyTypeObject* type_ImageScannerResolution;
-    };
-
     // ----- ImageScanner class --------------------
     static constexpr const char* const type_name_ImageScanner = "ImageScanner";
 
@@ -3967,60 +3954,15 @@ namespace py::cpp::Windows::Devices::Scanners
     PyDoc_STRVAR(module_doc, "Windows::Devices::Scanners");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ImageScanner);
-        Py_VISIT(state->type_ImageScannerAutoConfiguration);
-        Py_VISIT(state->type_ImageScannerFeederConfiguration);
-        Py_VISIT(state->type_ImageScannerFlatbedConfiguration);
-        Py_VISIT(state->type_ImageScannerPreviewResult);
-        Py_VISIT(state->type_ImageScannerScanResult);
-        Py_VISIT(state->type_IImageScannerFormatConfiguration);
-        Py_VISIT(state->type_IImageScannerSourceConfiguration);
-        Py_VISIT(state->type_ImageScannerResolution);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ImageScanner);
-        Py_CLEAR(state->type_ImageScannerAutoConfiguration);
-        Py_CLEAR(state->type_ImageScannerFeederConfiguration);
-        Py_CLEAR(state->type_ImageScannerFlatbedConfiguration);
-        Py_CLEAR(state->type_ImageScannerPreviewResult);
-        Py_CLEAR(state->type_ImageScannerScanResult);
-        Py_CLEAR(state->type_IImageScannerFormatConfiguration);
-        Py_CLEAR(state->type_IImageScannerSourceConfiguration);
-        Py_CLEAR(state->type_ImageScannerResolution);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Scanners",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Scanners
@@ -4036,7 +3978,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Scanners(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4049,270 +3991,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Scanners(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ImageScanner = py::register_python_type(module.get(), type_name_ImageScanner, &type_spec_ImageScanner, object_bases.get(), nullptr);
-    if (!state->type_ImageScanner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScanner, &type_spec_ImageScanner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScanner, &type_spec_ImageScanner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerAutoConfiguration = py::register_python_type(module.get(), type_name_ImageScannerAutoConfiguration, &type_spec_ImageScannerAutoConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ImageScannerAutoConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerAutoConfiguration, &type_spec_ImageScannerAutoConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerAutoConfiguration, &type_spec_ImageScannerAutoConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerFeederConfiguration = py::register_python_type(module.get(), type_name_ImageScannerFeederConfiguration, &type_spec_ImageScannerFeederConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ImageScannerFeederConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerFeederConfiguration, &type_spec_ImageScannerFeederConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerFeederConfiguration, &type_spec_ImageScannerFeederConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerFlatbedConfiguration = py::register_python_type(module.get(), type_name_ImageScannerFlatbedConfiguration, &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ImageScannerFlatbedConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerFlatbedConfiguration, &type_spec_ImageScannerFlatbedConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerFlatbedConfiguration, &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerPreviewResult = py::register_python_type(module.get(), type_name_ImageScannerPreviewResult, &type_spec_ImageScannerPreviewResult, object_bases.get(), nullptr);
-    if (!state->type_ImageScannerPreviewResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerPreviewResult, &type_spec_ImageScannerPreviewResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerPreviewResult, &type_spec_ImageScannerPreviewResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerScanResult = py::register_python_type(module.get(), type_name_ImageScannerScanResult, &type_spec_ImageScannerScanResult, object_bases.get(), nullptr);
-    if (!state->type_ImageScannerScanResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerScanResult, &type_spec_ImageScannerScanResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerScanResult, &type_spec_ImageScannerScanResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IImageScannerFormatConfiguration = py::register_python_type(module.get(), type_name_IImageScannerFormatConfiguration, &type_spec_IImageScannerFormatConfiguration, object_bases.get(), nullptr);
-    if (!state->type_IImageScannerFormatConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IImageScannerFormatConfiguration, &type_spec_IImageScannerFormatConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IImageScannerFormatConfiguration, &type_spec_IImageScannerFormatConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IImageScannerSourceConfiguration = py::register_python_type(module.get(), type_name_IImageScannerSourceConfiguration, &type_spec_IImageScannerSourceConfiguration, object_bases.get(), nullptr);
-    if (!state->type_IImageScannerSourceConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IImageScannerSourceConfiguration, &type_spec_IImageScannerSourceConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IImageScannerSourceConfiguration, &type_spec_IImageScannerSourceConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageScannerResolution = py::register_python_type(module.get(), type_name_ImageScannerResolution, &type_spec_ImageScannerResolution, nullptr, nullptr);
-    if (!state->type_ImageScannerResolution)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageScannerResolution, &type_spec_ImageScannerResolution, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageScannerResolution, &type_spec_ImageScannerResolution, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScanner>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScanner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScanner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerAutoConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerFeederConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerFlatbedConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerPreviewResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerPreviewResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerScanResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerScanResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IImageScannerFormatConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IImageScannerSourceConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Scanners;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Scanners");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageScannerResolution;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Scanners::ImageScannerResolution is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

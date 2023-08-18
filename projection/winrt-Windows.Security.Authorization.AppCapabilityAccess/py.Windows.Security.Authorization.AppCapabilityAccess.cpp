@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppCapability;
-        PyTypeObject* type_AppCapabilityAccessChangedEventArgs;
-    };
-
     // ----- AppCapability class --------------------
     static constexpr const char* const type_name_AppCapability = "AppCapability";
 
@@ -490,46 +484,15 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     PyDoc_STRVAR(module_doc, "Windows::Security::Authorization::AppCapabilityAccess");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppCapability);
-        Py_VISIT(state->type_AppCapabilityAccessChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppCapability);
-        Py_CLEAR(state->type_AppCapabilityAccessChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Authorization_AppCapabilityAccess",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Authorization::AppCapabilityAccess
@@ -545,7 +508,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authorization_AppCapabilityAccess(
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -558,67 +521,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authorization_AppCapabilityAccess(
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppCapability = py::register_python_type(module.get(), type_name_AppCapability, &type_spec_AppCapability, object_bases.get(), nullptr);
-    if (!state->type_AppCapability)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCapability, &type_spec_AppCapability, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCapability, &type_spec_AppCapability, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCapabilityAccessChangedEventArgs = py::register_python_type(module.get(), type_name_AppCapabilityAccessChangedEventArgs, &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppCapabilityAccessChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCapabilityAccessChangedEventArgs, &type_spec_AppCapabilityAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCapabilityAccessChangedEventArgs, &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authorization::AppCapabilityAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCapability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authorization::AppCapabilityAccess");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCapabilityAccessChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

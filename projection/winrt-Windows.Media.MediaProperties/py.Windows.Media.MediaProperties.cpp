@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::Media::MediaProperties
 {
-    struct module_state
-    {
-        PyTypeObject* type_AudioEncodingProperties;
-        PyTypeObject* type_ContainerEncodingProperties;
-        PyTypeObject* type_H264ProfileIds;
-        PyTypeObject* type_ImageEncodingProperties;
-        PyTypeObject* type_MediaEncodingProfile;
-        PyTypeObject* type_MediaEncodingSubtypes;
-        PyTypeObject* type_MediaPropertySet;
-        PyTypeObject* type_MediaRatio;
-        PyTypeObject* type_Mpeg2ProfileIds;
-        PyTypeObject* type_TimedMetadataEncodingProperties;
-        PyTypeObject* type_VideoEncodingProperties;
-        PyTypeObject* type_IMediaEncodingProperties;
-    };
-
     // ----- AudioEncodingProperties class --------------------
     static constexpr const char* const type_name_AudioEncodingProperties = "AudioEncodingProperties";
 
@@ -5651,66 +5635,15 @@ namespace py::cpp::Windows::Media::MediaProperties
     PyDoc_STRVAR(module_doc, "Windows::Media::MediaProperties");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AudioEncodingProperties);
-        Py_VISIT(state->type_ContainerEncodingProperties);
-        Py_VISIT(state->type_H264ProfileIds);
-        Py_VISIT(state->type_ImageEncodingProperties);
-        Py_VISIT(state->type_MediaEncodingProfile);
-        Py_VISIT(state->type_MediaEncodingSubtypes);
-        Py_VISIT(state->type_MediaPropertySet);
-        Py_VISIT(state->type_MediaRatio);
-        Py_VISIT(state->type_Mpeg2ProfileIds);
-        Py_VISIT(state->type_TimedMetadataEncodingProperties);
-        Py_VISIT(state->type_VideoEncodingProperties);
-        Py_VISIT(state->type_IMediaEncodingProperties);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AudioEncodingProperties);
-        Py_CLEAR(state->type_ContainerEncodingProperties);
-        Py_CLEAR(state->type_H264ProfileIds);
-        Py_CLEAR(state->type_ImageEncodingProperties);
-        Py_CLEAR(state->type_MediaEncodingProfile);
-        Py_CLEAR(state->type_MediaEncodingSubtypes);
-        Py_CLEAR(state->type_MediaPropertySet);
-        Py_CLEAR(state->type_MediaRatio);
-        Py_CLEAR(state->type_Mpeg2ProfileIds);
-        Py_CLEAR(state->type_TimedMetadataEncodingProperties);
-        Py_CLEAR(state->type_VideoEncodingProperties);
-        Py_CLEAR(state->type_IMediaEncodingProperties);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_MediaProperties",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::MediaProperties
@@ -5726,7 +5659,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5739,17 +5672,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AudioEncodingProperties = py::register_python_type(module.get(), type_name_AudioEncodingProperties, &type_spec_AudioEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_AudioEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioEncodingProperties, &type_spec_AudioEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioEncodingProperties, &type_spec_AudioEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContainerEncodingProperties = py::register_python_type(module.get(), type_name_ContainerEncodingProperties, &type_spec_ContainerEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_ContainerEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContainerEncodingProperties, &type_spec_ContainerEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContainerEncodingProperties, &type_spec_ContainerEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5760,20 +5696,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
         return nullptr;
     }
 
-    state->type_H264ProfileIds = py::register_python_type(module.get(), type_name_H264ProfileIds, &type_spec_H264ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get()));
-    if (!state->type_H264ProfileIds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_H264ProfileIds, &type_spec_H264ProfileIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_H264ProfileIds, &type_spec_H264ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageEncodingProperties = py::register_python_type(module.get(), type_name_ImageEncodingProperties, &type_spec_ImageEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_ImageEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageEncodingProperties, &type_spec_ImageEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageEncodingProperties, &type_spec_ImageEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaEncodingProfile = py::register_python_type(module.get(), type_name_MediaEncodingProfile, &type_spec_MediaEncodingProfile, object_bases.get(), nullptr);
-    if (!state->type_MediaEncodingProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaEncodingProfile, &type_spec_MediaEncodingProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaEncodingProfile, &type_spec_MediaEncodingProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5784,20 +5729,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
         return nullptr;
     }
 
-    state->type_MediaEncodingSubtypes = py::register_python_type(module.get(), type_name_MediaEncodingSubtypes, &type_spec_MediaEncodingSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get()));
-    if (!state->type_MediaEncodingSubtypes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaEncodingSubtypes, &type_spec_MediaEncodingSubtypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaEncodingSubtypes, &type_spec_MediaEncodingSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaPropertySet = py::register_python_type(module.get(), type_name_MediaPropertySet, &type_spec_MediaPropertySet, object_bases.get(), nullptr);
-    if (!state->type_MediaPropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaPropertySet, &type_spec_MediaPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaPropertySet, &type_spec_MediaPropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaRatio = py::register_python_type(module.get(), type_name_MediaRatio, &type_spec_MediaRatio, object_bases.get(), nullptr);
-    if (!state->type_MediaRatio)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaRatio, &type_spec_MediaRatio, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaRatio, &type_spec_MediaRatio, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5808,306 +5762,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
         return nullptr;
     }
 
-    state->type_Mpeg2ProfileIds = py::register_python_type(module.get(), type_name_Mpeg2ProfileIds, &type_spec_Mpeg2ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get()));
-    if (!state->type_Mpeg2ProfileIds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Mpeg2ProfileIds, &type_spec_Mpeg2ProfileIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Mpeg2ProfileIds, &type_spec_Mpeg2ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedMetadataEncodingProperties = py::register_python_type(module.get(), type_name_TimedMetadataEncodingProperties, &type_spec_TimedMetadataEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_TimedMetadataEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedMetadataEncodingProperties, &type_spec_TimedMetadataEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedMetadataEncodingProperties, &type_spec_TimedMetadataEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoEncodingProperties = py::register_python_type(module.get(), type_name_VideoEncodingProperties, &type_spec_VideoEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_VideoEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoEncodingProperties, &type_spec_VideoEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoEncodingProperties, &type_spec_VideoEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaEncodingProperties = py::register_python_type(module.get(), type_name_IMediaEncodingProperties, &type_spec_IMediaEncodingProperties, object_bases.get(), nullptr);
-    if (!state->type_IMediaEncodingProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaEncodingProperties, &type_spec_IMediaEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaEncodingProperties, &type_spec_IMediaEncodingProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::AudioEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContainerEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::ContainerEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_H264ProfileIds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::H264ProfileIds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::ImageEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaEncodingProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaEncodingProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaEncodingSubtypes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::MediaPropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaPropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaPropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::MediaRatio>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaRatio;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::MediaRatio is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Mpeg2ProfileIds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedMetadataEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::VideoEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::MediaProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::MediaProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaEncodingProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::MediaProperties::IMediaEncodingProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

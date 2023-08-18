@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Perception::People
 {
-    struct module_state
-    {
-        PyTypeObject* type_EyesPose;
-        PyTypeObject* type_HandMeshObserver;
-        PyTypeObject* type_HandMeshVertexState;
-        PyTypeObject* type_HandPose;
-        PyTypeObject* type_HeadPose;
-        PyTypeObject* type_HandMeshVertex;
-        PyTypeObject* type_JointPose;
-    };
-
     // ----- EyesPose class --------------------
     static constexpr const char* const type_name_EyesPose = "EyesPose";
 
@@ -1322,56 +1311,15 @@ namespace py::cpp::Windows::Perception::People
     PyDoc_STRVAR(module_doc, "Windows::Perception::People");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_EyesPose);
-        Py_VISIT(state->type_HandMeshObserver);
-        Py_VISIT(state->type_HandMeshVertexState);
-        Py_VISIT(state->type_HandPose);
-        Py_VISIT(state->type_HeadPose);
-        Py_VISIT(state->type_HandMeshVertex);
-        Py_VISIT(state->type_JointPose);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_EyesPose);
-        Py_CLEAR(state->type_HandMeshObserver);
-        Py_CLEAR(state->type_HandMeshVertexState);
-        Py_CLEAR(state->type_HandPose);
-        Py_CLEAR(state->type_HeadPose);
-        Py_CLEAR(state->type_HandMeshVertex);
-        Py_CLEAR(state->type_JointPose);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Perception_People",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Perception::People
@@ -1387,7 +1335,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_People(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1400,212 +1348,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_People(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_EyesPose = py::register_python_type(module.get(), type_name_EyesPose, &type_spec_EyesPose, object_bases.get(), nullptr);
-    if (!state->type_EyesPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EyesPose, &type_spec_EyesPose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EyesPose, &type_spec_EyesPose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HandMeshObserver = py::register_python_type(module.get(), type_name_HandMeshObserver, &type_spec_HandMeshObserver, object_bases.get(), nullptr);
-    if (!state->type_HandMeshObserver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HandMeshObserver, &type_spec_HandMeshObserver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HandMeshObserver, &type_spec_HandMeshObserver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HandMeshVertexState = py::register_python_type(module.get(), type_name_HandMeshVertexState, &type_spec_HandMeshVertexState, object_bases.get(), nullptr);
-    if (!state->type_HandMeshVertexState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HandMeshVertexState, &type_spec_HandMeshVertexState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HandMeshVertexState, &type_spec_HandMeshVertexState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HandPose = py::register_python_type(module.get(), type_name_HandPose, &type_spec_HandPose, object_bases.get(), nullptr);
-    if (!state->type_HandPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HandPose, &type_spec_HandPose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HandPose, &type_spec_HandPose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HeadPose = py::register_python_type(module.get(), type_name_HeadPose, &type_spec_HeadPose, object_bases.get(), nullptr);
-    if (!state->type_HeadPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HeadPose, &type_spec_HeadPose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HeadPose, &type_spec_HeadPose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HandMeshVertex = py::register_python_type(module.get(), type_name_HandMeshVertex, &type_spec_HandMeshVertex, nullptr, nullptr);
-    if (!state->type_HandMeshVertex)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HandMeshVertex, &type_spec_HandMeshVertex, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HandMeshVertex, &type_spec_HandMeshVertex, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JointPose = py::register_python_type(module.get(), type_name_JointPose, &type_spec_JointPose, nullptr, nullptr);
-    if (!state->type_JointPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JointPose, &type_spec_JointPose, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JointPose, &type_spec_JointPose, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::EyesPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EyesPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::EyesPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::HandMeshObserver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HandMeshObserver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HandMeshObserver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::HandMeshVertexState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HandMeshVertexState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HandMeshVertexState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::HandPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HandPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HandPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::HeadPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HeadPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HeadPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::HandMeshVertex>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HandMeshVertex;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::HandMeshVertex is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::People::JointPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::People;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::People");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JointPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::People::JointPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

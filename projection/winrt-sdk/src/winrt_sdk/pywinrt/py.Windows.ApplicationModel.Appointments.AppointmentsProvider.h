@@ -35,26 +35,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>
+    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
+        static constexpr const char* type_name = "AddAppointmentOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>
+    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
+        static constexpr const char* type_name = "AppointmentsProviderLaunchActionVerbs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>
+    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
+        static constexpr const char* type_name = "RemoveAppointmentOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>
+    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
+        static constexpr const char* type_name = "ReplaceAppointmentOperation";
     };
 }

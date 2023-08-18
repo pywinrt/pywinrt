@@ -89,20 +89,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>
+    struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticActions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
+    struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticTraceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
+    struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
+        static constexpr const char* type_name = "PlatformDiagnosticTraceRuntimeInfo";
     };
 }

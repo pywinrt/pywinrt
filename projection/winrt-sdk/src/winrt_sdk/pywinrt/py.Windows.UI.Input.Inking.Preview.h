@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview>
+    struct py_type<winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.preview";
+        static constexpr const char* type_name = "PalmRejectionDelayZonePreview";
     };
 }

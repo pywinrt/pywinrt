@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Store::Preview
 {
-    struct module_state
-    {
-        PyTypeObject* type_DeliveryOptimizationSettings;
-        PyTypeObject* type_StoreConfiguration;
-        PyTypeObject* type_StoreHardwareManufacturerInfo;
-        PyTypeObject* type_StorePreview;
-        PyTypeObject* type_StorePreviewProductInfo;
-        PyTypeObject* type_StorePreviewPurchaseResults;
-        PyTypeObject* type_StorePreviewSkuInfo;
-        PyTypeObject* type_WebAuthenticationCoreManagerHelper;
-    };
-
     // ----- DeliveryOptimizationSettings class --------------------
     static constexpr const char* const type_name_DeliveryOptimizationSettings = "DeliveryOptimizationSettings";
 
@@ -1954,58 +1942,15 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::Preview");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DeliveryOptimizationSettings);
-        Py_VISIT(state->type_StoreConfiguration);
-        Py_VISIT(state->type_StoreHardwareManufacturerInfo);
-        Py_VISIT(state->type_StorePreview);
-        Py_VISIT(state->type_StorePreviewProductInfo);
-        Py_VISIT(state->type_StorePreviewPurchaseResults);
-        Py_VISIT(state->type_StorePreviewSkuInfo);
-        Py_VISIT(state->type_WebAuthenticationCoreManagerHelper);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DeliveryOptimizationSettings);
-        Py_CLEAR(state->type_StoreConfiguration);
-        Py_CLEAR(state->type_StoreHardwareManufacturerInfo);
-        Py_CLEAR(state->type_StorePreview);
-        Py_CLEAR(state->type_StorePreviewProductInfo);
-        Py_CLEAR(state->type_StorePreviewPurchaseResults);
-        Py_CLEAR(state->type_StorePreviewSkuInfo);
-        Py_CLEAR(state->type_WebAuthenticationCoreManagerHelper);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Store_Preview",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Store::Preview
@@ -2021,7 +1966,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2034,11 +1979,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DeliveryOptimizationSettings = py::register_python_type(module.get(), type_name_DeliveryOptimizationSettings, &type_spec_DeliveryOptimizationSettings, object_bases.get(), nullptr);
-    if (!state->type_DeliveryOptimizationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeliveryOptimizationSettings, &type_spec_DeliveryOptimizationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeliveryOptimizationSettings, &type_spec_DeliveryOptimizationSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2049,232 +1994,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview(void) noexce
         return nullptr;
     }
 
-    state->type_StoreConfiguration = py::register_python_type(module.get(), type_name_StoreConfiguration, &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get()));
-    if (!state->type_StoreConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StoreConfiguration, &type_spec_StoreConfiguration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StoreConfiguration, &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StoreHardwareManufacturerInfo = py::register_python_type(module.get(), type_name_StoreHardwareManufacturerInfo, &type_spec_StoreHardwareManufacturerInfo, object_bases.get(), nullptr);
-    if (!state->type_StoreHardwareManufacturerInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StoreHardwareManufacturerInfo, &type_spec_StoreHardwareManufacturerInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StoreHardwareManufacturerInfo, &type_spec_StoreHardwareManufacturerInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorePreview = py::register_python_type(module.get(), type_name_StorePreview, &type_spec_StorePreview, object_bases.get(), nullptr);
-    if (!state->type_StorePreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorePreview, &type_spec_StorePreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorePreview, &type_spec_StorePreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorePreviewProductInfo = py::register_python_type(module.get(), type_name_StorePreviewProductInfo, &type_spec_StorePreviewProductInfo, object_bases.get(), nullptr);
-    if (!state->type_StorePreviewProductInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorePreviewProductInfo, &type_spec_StorePreviewProductInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorePreviewProductInfo, &type_spec_StorePreviewProductInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorePreviewPurchaseResults = py::register_python_type(module.get(), type_name_StorePreviewPurchaseResults, &type_spec_StorePreviewPurchaseResults, object_bases.get(), nullptr);
-    if (!state->type_StorePreviewPurchaseResults)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorePreviewPurchaseResults, &type_spec_StorePreviewPurchaseResults, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorePreviewPurchaseResults, &type_spec_StorePreviewPurchaseResults, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorePreviewSkuInfo = py::register_python_type(module.get(), type_name_StorePreviewSkuInfo, &type_spec_StorePreviewSkuInfo, object_bases.get(), nullptr);
-    if (!state->type_StorePreviewSkuInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorePreviewSkuInfo, &type_spec_StorePreviewSkuInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorePreviewSkuInfo, &type_spec_StorePreviewSkuInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAuthenticationCoreManagerHelper = py::register_python_type(module.get(), type_name_WebAuthenticationCoreManagerHelper, &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), nullptr);
-    if (!state->type_WebAuthenticationCoreManagerHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManagerHelper, &type_spec_WebAuthenticationCoreManagerHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManagerHelper, &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeliveryOptimizationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StoreConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StoreHardwareManufacturerInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorePreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StorePreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorePreviewProductInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorePreviewPurchaseResults;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorePreviewSkuInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAuthenticationCoreManagerHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

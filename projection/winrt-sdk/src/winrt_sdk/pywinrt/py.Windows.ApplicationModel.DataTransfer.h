@@ -177,159 +177,185 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "Clipboard";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ClipboardContentOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ClipboardHistoryChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ClipboardHistoryItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ClipboardHistoryItemsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataPackage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataPackagePropertySet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataPackagePropertySetView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataPackageView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataProviderDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataProviderRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "DataTransferManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "HtmlFormatHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "OperationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvider>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareProviderOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareProvidersRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareTargetInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "ShareUIOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "SharedStorageAccessManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "StandardDataFormats";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
+        static constexpr const char* type_name = "TargetApplicationChosenEventArgs";
     };
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderHandler>

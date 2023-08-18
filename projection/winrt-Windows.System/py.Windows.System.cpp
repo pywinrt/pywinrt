@@ -6,57 +6,6 @@
 
 namespace py::cpp::Windows::System
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppActivationResult;
-        PyTypeObject* type_AppDiagnosticInfo;
-        PyTypeObject* type_AppDiagnosticInfoWatcher;
-        PyTypeObject* type_AppDiagnosticInfoWatcherEventArgs;
-        PyTypeObject* type_AppExecutionStateChangeResult;
-        PyTypeObject* type_AppMemoryReport;
-        PyTypeObject* type_AppMemoryUsageLimitChangingEventArgs;
-        PyTypeObject* type_AppResourceGroupBackgroundTaskReport;
-        PyTypeObject* type_AppResourceGroupInfo;
-        PyTypeObject* type_AppResourceGroupInfoWatcher;
-        PyTypeObject* type_AppResourceGroupInfoWatcherEventArgs;
-        PyTypeObject* type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs;
-        PyTypeObject* type_AppResourceGroupMemoryReport;
-        PyTypeObject* type_AppResourceGroupStateReport;
-        PyTypeObject* type_AppUriHandlerHost;
-        PyTypeObject* type_AppUriHandlerRegistration;
-        PyTypeObject* type_AppUriHandlerRegistrationManager;
-        PyTypeObject* type_DateTimeSettings;
-        PyTypeObject* type_DispatcherQueue;
-        PyTypeObject* type_DispatcherQueueController;
-        PyTypeObject* type_DispatcherQueueShutdownStartingEventArgs;
-        PyTypeObject* type_DispatcherQueueTimer;
-        PyTypeObject* type_FolderLauncherOptions;
-        PyTypeObject* type_KnownUserProperties;
-        PyTypeObject* type_LaunchUriResult;
-        PyTypeObject* type_Launcher;
-        PyTypeObject* type_LauncherOptions;
-        PyTypeObject* type_LauncherUIOptions;
-        PyTypeObject* type_MemoryManager;
-        PyTypeObject* type_ProcessLauncher;
-        PyTypeObject* type_ProcessLauncherOptions;
-        PyTypeObject* type_ProcessLauncherResult;
-        PyTypeObject* type_ProcessMemoryReport;
-        PyTypeObject* type_ProtocolForResultsOperation;
-        PyTypeObject* type_RemoteLauncher;
-        PyTypeObject* type_RemoteLauncherOptions;
-        PyTypeObject* type_ShutdownManager;
-        PyTypeObject* type_TimeZoneSettings;
-        PyTypeObject* type_User;
-        PyTypeObject* type_UserAuthenticationStatusChangeDeferral;
-        PyTypeObject* type_UserAuthenticationStatusChangingEventArgs;
-        PyTypeObject* type_UserChangedEventArgs;
-        PyTypeObject* type_UserDeviceAssociation;
-        PyTypeObject* type_UserDeviceAssociationChangedEventArgs;
-        PyTypeObject* type_UserPicker;
-        PyTypeObject* type_UserWatcher;
-        PyTypeObject* type_ILauncherViewOptions;
-    };
-
     // ----- AppActivationResult class --------------------
     static constexpr const char* const type_name_AppActivationResult = "AppActivationResult";
 
@@ -10177,136 +10126,15 @@ namespace py::cpp::Windows::System
     PyDoc_STRVAR(module_doc, "Windows::System");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppActivationResult);
-        Py_VISIT(state->type_AppDiagnosticInfo);
-        Py_VISIT(state->type_AppDiagnosticInfoWatcher);
-        Py_VISIT(state->type_AppDiagnosticInfoWatcherEventArgs);
-        Py_VISIT(state->type_AppExecutionStateChangeResult);
-        Py_VISIT(state->type_AppMemoryReport);
-        Py_VISIT(state->type_AppMemoryUsageLimitChangingEventArgs);
-        Py_VISIT(state->type_AppResourceGroupBackgroundTaskReport);
-        Py_VISIT(state->type_AppResourceGroupInfo);
-        Py_VISIT(state->type_AppResourceGroupInfoWatcher);
-        Py_VISIT(state->type_AppResourceGroupInfoWatcherEventArgs);
-        Py_VISIT(state->type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs);
-        Py_VISIT(state->type_AppResourceGroupMemoryReport);
-        Py_VISIT(state->type_AppResourceGroupStateReport);
-        Py_VISIT(state->type_AppUriHandlerHost);
-        Py_VISIT(state->type_AppUriHandlerRegistration);
-        Py_VISIT(state->type_AppUriHandlerRegistrationManager);
-        Py_VISIT(state->type_DateTimeSettings);
-        Py_VISIT(state->type_DispatcherQueue);
-        Py_VISIT(state->type_DispatcherQueueController);
-        Py_VISIT(state->type_DispatcherQueueShutdownStartingEventArgs);
-        Py_VISIT(state->type_DispatcherQueueTimer);
-        Py_VISIT(state->type_FolderLauncherOptions);
-        Py_VISIT(state->type_KnownUserProperties);
-        Py_VISIT(state->type_LaunchUriResult);
-        Py_VISIT(state->type_Launcher);
-        Py_VISIT(state->type_LauncherOptions);
-        Py_VISIT(state->type_LauncherUIOptions);
-        Py_VISIT(state->type_MemoryManager);
-        Py_VISIT(state->type_ProcessLauncher);
-        Py_VISIT(state->type_ProcessLauncherOptions);
-        Py_VISIT(state->type_ProcessLauncherResult);
-        Py_VISIT(state->type_ProcessMemoryReport);
-        Py_VISIT(state->type_ProtocolForResultsOperation);
-        Py_VISIT(state->type_RemoteLauncher);
-        Py_VISIT(state->type_RemoteLauncherOptions);
-        Py_VISIT(state->type_ShutdownManager);
-        Py_VISIT(state->type_TimeZoneSettings);
-        Py_VISIT(state->type_User);
-        Py_VISIT(state->type_UserAuthenticationStatusChangeDeferral);
-        Py_VISIT(state->type_UserAuthenticationStatusChangingEventArgs);
-        Py_VISIT(state->type_UserChangedEventArgs);
-        Py_VISIT(state->type_UserDeviceAssociation);
-        Py_VISIT(state->type_UserDeviceAssociationChangedEventArgs);
-        Py_VISIT(state->type_UserPicker);
-        Py_VISIT(state->type_UserWatcher);
-        Py_VISIT(state->type_ILauncherViewOptions);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppActivationResult);
-        Py_CLEAR(state->type_AppDiagnosticInfo);
-        Py_CLEAR(state->type_AppDiagnosticInfoWatcher);
-        Py_CLEAR(state->type_AppDiagnosticInfoWatcherEventArgs);
-        Py_CLEAR(state->type_AppExecutionStateChangeResult);
-        Py_CLEAR(state->type_AppMemoryReport);
-        Py_CLEAR(state->type_AppMemoryUsageLimitChangingEventArgs);
-        Py_CLEAR(state->type_AppResourceGroupBackgroundTaskReport);
-        Py_CLEAR(state->type_AppResourceGroupInfo);
-        Py_CLEAR(state->type_AppResourceGroupInfoWatcher);
-        Py_CLEAR(state->type_AppResourceGroupInfoWatcherEventArgs);
-        Py_CLEAR(state->type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs);
-        Py_CLEAR(state->type_AppResourceGroupMemoryReport);
-        Py_CLEAR(state->type_AppResourceGroupStateReport);
-        Py_CLEAR(state->type_AppUriHandlerHost);
-        Py_CLEAR(state->type_AppUriHandlerRegistration);
-        Py_CLEAR(state->type_AppUriHandlerRegistrationManager);
-        Py_CLEAR(state->type_DateTimeSettings);
-        Py_CLEAR(state->type_DispatcherQueue);
-        Py_CLEAR(state->type_DispatcherQueueController);
-        Py_CLEAR(state->type_DispatcherQueueShutdownStartingEventArgs);
-        Py_CLEAR(state->type_DispatcherQueueTimer);
-        Py_CLEAR(state->type_FolderLauncherOptions);
-        Py_CLEAR(state->type_KnownUserProperties);
-        Py_CLEAR(state->type_LaunchUriResult);
-        Py_CLEAR(state->type_Launcher);
-        Py_CLEAR(state->type_LauncherOptions);
-        Py_CLEAR(state->type_LauncherUIOptions);
-        Py_CLEAR(state->type_MemoryManager);
-        Py_CLEAR(state->type_ProcessLauncher);
-        Py_CLEAR(state->type_ProcessLauncherOptions);
-        Py_CLEAR(state->type_ProcessLauncherResult);
-        Py_CLEAR(state->type_ProcessMemoryReport);
-        Py_CLEAR(state->type_ProtocolForResultsOperation);
-        Py_CLEAR(state->type_RemoteLauncher);
-        Py_CLEAR(state->type_RemoteLauncherOptions);
-        Py_CLEAR(state->type_ShutdownManager);
-        Py_CLEAR(state->type_TimeZoneSettings);
-        Py_CLEAR(state->type_User);
-        Py_CLEAR(state->type_UserAuthenticationStatusChangeDeferral);
-        Py_CLEAR(state->type_UserAuthenticationStatusChangingEventArgs);
-        Py_CLEAR(state->type_UserChangedEventArgs);
-        Py_CLEAR(state->type_UserDeviceAssociation);
-        Py_CLEAR(state->type_UserDeviceAssociationChangedEventArgs);
-        Py_CLEAR(state->type_UserPicker);
-        Py_CLEAR(state->type_UserWatcher);
-        Py_CLEAR(state->type_ILauncherViewOptions);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System
@@ -10322,7 +10150,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -10335,143 +10163,209 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppActivationResult = py::register_python_type(module.get(), type_name_AppActivationResult, &type_spec_AppActivationResult, object_bases.get(), nullptr);
-    if (!state->type_AppActivationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppActivationResult, &type_spec_AppActivationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppActivationResult, &type_spec_AppActivationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppDiagnosticInfo = py::register_python_type(module.get(), type_name_AppDiagnosticInfo, &type_spec_AppDiagnosticInfo, object_bases.get(), nullptr);
-    if (!state->type_AppDiagnosticInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfo, &type_spec_AppDiagnosticInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfo, &type_spec_AppDiagnosticInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppDiagnosticInfoWatcher = py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcher, &type_spec_AppDiagnosticInfoWatcher, object_bases.get(), nullptr);
-    if (!state->type_AppDiagnosticInfoWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcher, &type_spec_AppDiagnosticInfoWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcher, &type_spec_AppDiagnosticInfoWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppDiagnosticInfoWatcherEventArgs = py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcherEventArgs, &type_spec_AppDiagnosticInfoWatcherEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppDiagnosticInfoWatcherEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcherEventArgs, &type_spec_AppDiagnosticInfoWatcherEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppDiagnosticInfoWatcherEventArgs, &type_spec_AppDiagnosticInfoWatcherEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExecutionStateChangeResult = py::register_python_type(module.get(), type_name_AppExecutionStateChangeResult, &type_spec_AppExecutionStateChangeResult, object_bases.get(), nullptr);
-    if (!state->type_AppExecutionStateChangeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExecutionStateChangeResult, &type_spec_AppExecutionStateChangeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExecutionStateChangeResult, &type_spec_AppExecutionStateChangeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppMemoryReport = py::register_python_type(module.get(), type_name_AppMemoryReport, &type_spec_AppMemoryReport, object_bases.get(), nullptr);
-    if (!state->type_AppMemoryReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppMemoryReport, &type_spec_AppMemoryReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppMemoryReport, &type_spec_AppMemoryReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppMemoryUsageLimitChangingEventArgs = py::register_python_type(module.get(), type_name_AppMemoryUsageLimitChangingEventArgs, &type_spec_AppMemoryUsageLimitChangingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppMemoryUsageLimitChangingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppMemoryUsageLimitChangingEventArgs, &type_spec_AppMemoryUsageLimitChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppMemoryUsageLimitChangingEventArgs, &type_spec_AppMemoryUsageLimitChangingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupBackgroundTaskReport = py::register_python_type(module.get(), type_name_AppResourceGroupBackgroundTaskReport, &type_spec_AppResourceGroupBackgroundTaskReport, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupBackgroundTaskReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupBackgroundTaskReport, &type_spec_AppResourceGroupBackgroundTaskReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupBackgroundTaskReport, &type_spec_AppResourceGroupBackgroundTaskReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupInfo = py::register_python_type(module.get(), type_name_AppResourceGroupInfo, &type_spec_AppResourceGroupInfo, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfo, &type_spec_AppResourceGroupInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfo, &type_spec_AppResourceGroupInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupInfoWatcher = py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcher, &type_spec_AppResourceGroupInfoWatcher, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupInfoWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcher, &type_spec_AppResourceGroupInfoWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcher, &type_spec_AppResourceGroupInfoWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupInfoWatcherEventArgs = py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherEventArgs, &type_spec_AppResourceGroupInfoWatcherEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupInfoWatcherEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherEventArgs, &type_spec_AppResourceGroupInfoWatcherEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherEventArgs, &type_spec_AppResourceGroupInfoWatcherEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, &type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, &type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, &type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupMemoryReport = py::register_python_type(module.get(), type_name_AppResourceGroupMemoryReport, &type_spec_AppResourceGroupMemoryReport, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupMemoryReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupMemoryReport, &type_spec_AppResourceGroupMemoryReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupMemoryReport, &type_spec_AppResourceGroupMemoryReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppResourceGroupStateReport = py::register_python_type(module.get(), type_name_AppResourceGroupStateReport, &type_spec_AppResourceGroupStateReport, object_bases.get(), nullptr);
-    if (!state->type_AppResourceGroupStateReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupStateReport, &type_spec_AppResourceGroupStateReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppResourceGroupStateReport, &type_spec_AppResourceGroupStateReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppUriHandlerHost = py::register_python_type(module.get(), type_name_AppUriHandlerHost, &type_spec_AppUriHandlerHost, object_bases.get(), nullptr);
-    if (!state->type_AppUriHandlerHost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerHost, &type_spec_AppUriHandlerHost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerHost, &type_spec_AppUriHandlerHost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppUriHandlerRegistration = py::register_python_type(module.get(), type_name_AppUriHandlerRegistration, &type_spec_AppUriHandlerRegistration, object_bases.get(), nullptr);
-    if (!state->type_AppUriHandlerRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerRegistration, &type_spec_AppUriHandlerRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerRegistration, &type_spec_AppUriHandlerRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppUriHandlerRegistrationManager = py::register_python_type(module.get(), type_name_AppUriHandlerRegistrationManager, &type_spec_AppUriHandlerRegistrationManager, object_bases.get(), nullptr);
-    if (!state->type_AppUriHandlerRegistrationManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerRegistrationManager, &type_spec_AppUriHandlerRegistrationManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppUriHandlerRegistrationManager, &type_spec_AppUriHandlerRegistrationManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DateTimeSettings = py::register_python_type(module.get(), type_name_DateTimeSettings, &type_spec_DateTimeSettings, object_bases.get(), nullptr);
-    if (!state->type_DateTimeSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DateTimeSettings, &type_spec_DateTimeSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DateTimeSettings, &type_spec_DateTimeSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DispatcherQueue = py::register_python_type(module.get(), type_name_DispatcherQueue, &type_spec_DispatcherQueue, object_bases.get(), nullptr);
-    if (!state->type_DispatcherQueue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DispatcherQueue, &type_spec_DispatcherQueue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DispatcherQueue, &type_spec_DispatcherQueue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DispatcherQueueController = py::register_python_type(module.get(), type_name_DispatcherQueueController, &type_spec_DispatcherQueueController, object_bases.get(), nullptr);
-    if (!state->type_DispatcherQueueController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueController, &type_spec_DispatcherQueueController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueController, &type_spec_DispatcherQueueController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DispatcherQueueShutdownStartingEventArgs = py::register_python_type(module.get(), type_name_DispatcherQueueShutdownStartingEventArgs, &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DispatcherQueueShutdownStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueShutdownStartingEventArgs, &type_spec_DispatcherQueueShutdownStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueShutdownStartingEventArgs, &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DispatcherQueueTimer = py::register_python_type(module.get(), type_name_DispatcherQueueTimer, &type_spec_DispatcherQueueTimer, object_bases.get(), nullptr);
-    if (!state->type_DispatcherQueueTimer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueTimer, &type_spec_DispatcherQueueTimer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DispatcherQueueTimer, &type_spec_DispatcherQueueTimer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FolderLauncherOptions = py::register_python_type(module.get(), type_name_FolderLauncherOptions, &type_spec_FolderLauncherOptions, object_bases.get(), nullptr);
-    if (!state->type_FolderLauncherOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FolderLauncherOptions, &type_spec_FolderLauncherOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FolderLauncherOptions, &type_spec_FolderLauncherOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10482,32 +10376,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownUserProperties = py::register_python_type(module.get(), type_name_KnownUserProperties, &type_spec_KnownUserProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUserProperties_Meta.get()));
-    if (!state->type_KnownUserProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownUserProperties, &type_spec_KnownUserProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUserProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownUserProperties, &type_spec_KnownUserProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUserProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LaunchUriResult = py::register_python_type(module.get(), type_name_LaunchUriResult, &type_spec_LaunchUriResult, object_bases.get(), nullptr);
-    if (!state->type_LaunchUriResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LaunchUriResult, &type_spec_LaunchUriResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LaunchUriResult, &type_spec_LaunchUriResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Launcher = py::register_python_type(module.get(), type_name_Launcher, &type_spec_Launcher, object_bases.get(), nullptr);
-    if (!state->type_Launcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Launcher, &type_spec_Launcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Launcher, &type_spec_Launcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LauncherOptions = py::register_python_type(module.get(), type_name_LauncherOptions, &type_spec_LauncherOptions, object_bases.get(), nullptr);
-    if (!state->type_LauncherOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LauncherOptions, &type_spec_LauncherOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LauncherOptions, &type_spec_LauncherOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LauncherUIOptions = py::register_python_type(module.get(), type_name_LauncherUIOptions, &type_spec_LauncherUIOptions, object_bases.get(), nullptr);
-    if (!state->type_LauncherUIOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LauncherUIOptions, &type_spec_LauncherUIOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LauncherUIOptions, &type_spec_LauncherUIOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10518,56 +10427,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System(void) noexcept
         return nullptr;
     }
 
-    state->type_MemoryManager = py::register_python_type(module.get(), type_name_MemoryManager, &type_spec_MemoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MemoryManager_Meta.get()));
-    if (!state->type_MemoryManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MemoryManager, &type_spec_MemoryManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MemoryManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MemoryManager, &type_spec_MemoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MemoryManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessLauncher = py::register_python_type(module.get(), type_name_ProcessLauncher, &type_spec_ProcessLauncher, object_bases.get(), nullptr);
-    if (!state->type_ProcessLauncher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessLauncher, &type_spec_ProcessLauncher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessLauncher, &type_spec_ProcessLauncher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessLauncherOptions = py::register_python_type(module.get(), type_name_ProcessLauncherOptions, &type_spec_ProcessLauncherOptions, object_bases.get(), nullptr);
-    if (!state->type_ProcessLauncherOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessLauncherOptions, &type_spec_ProcessLauncherOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessLauncherOptions, &type_spec_ProcessLauncherOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessLauncherResult = py::register_python_type(module.get(), type_name_ProcessLauncherResult, &type_spec_ProcessLauncherResult, object_bases.get(), nullptr);
-    if (!state->type_ProcessLauncherResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessLauncherResult, &type_spec_ProcessLauncherResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessLauncherResult, &type_spec_ProcessLauncherResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessMemoryReport = py::register_python_type(module.get(), type_name_ProcessMemoryReport, &type_spec_ProcessMemoryReport, object_bases.get(), nullptr);
-    if (!state->type_ProcessMemoryReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryReport, &type_spec_ProcessMemoryReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessMemoryReport, &type_spec_ProcessMemoryReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtocolForResultsOperation = py::register_python_type(module.get(), type_name_ProtocolForResultsOperation, &type_spec_ProtocolForResultsOperation, object_bases.get(), nullptr);
-    if (!state->type_ProtocolForResultsOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtocolForResultsOperation, &type_spec_ProtocolForResultsOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtocolForResultsOperation, &type_spec_ProtocolForResultsOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteLauncher = py::register_python_type(module.get(), type_name_RemoteLauncher, &type_spec_RemoteLauncher, object_bases.get(), nullptr);
-    if (!state->type_RemoteLauncher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteLauncher, &type_spec_RemoteLauncher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteLauncher, &type_spec_RemoteLauncher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteLauncherOptions = py::register_python_type(module.get(), type_name_RemoteLauncherOptions, &type_spec_RemoteLauncherOptions, object_bases.get(), nullptr);
-    if (!state->type_RemoteLauncherOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteLauncherOptions, &type_spec_RemoteLauncherOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteLauncherOptions, &type_spec_RemoteLauncherOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShutdownManager = py::register_python_type(module.get(), type_name_ShutdownManager, &type_spec_ShutdownManager, object_bases.get(), nullptr);
-    if (!state->type_ShutdownManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShutdownManager, &type_spec_ShutdownManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShutdownManager, &type_spec_ShutdownManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10578,1147 +10514,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System(void) noexcept
         return nullptr;
     }
 
-    state->type_TimeZoneSettings = py::register_python_type(module.get(), type_name_TimeZoneSettings, &type_spec_TimeZoneSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimeZoneSettings_Meta.get()));
-    if (!state->type_TimeZoneSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimeZoneSettings, &type_spec_TimeZoneSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimeZoneSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimeZoneSettings, &type_spec_TimeZoneSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimeZoneSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_User = py::register_python_type(module.get(), type_name_User, &type_spec_User, object_bases.get(), nullptr);
-    if (!state->type_User)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_User, &type_spec_User, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_User, &type_spec_User, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserAuthenticationStatusChangeDeferral = py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangeDeferral, &type_spec_UserAuthenticationStatusChangeDeferral, object_bases.get(), nullptr);
-    if (!state->type_UserAuthenticationStatusChangeDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangeDeferral, &type_spec_UserAuthenticationStatusChangeDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangeDeferral, &type_spec_UserAuthenticationStatusChangeDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserAuthenticationStatusChangingEventArgs = py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangingEventArgs, &type_spec_UserAuthenticationStatusChangingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserAuthenticationStatusChangingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangingEventArgs, &type_spec_UserAuthenticationStatusChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationStatusChangingEventArgs, &type_spec_UserAuthenticationStatusChangingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserChangedEventArgs = py::register_python_type(module.get(), type_name_UserChangedEventArgs, &type_spec_UserChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserChangedEventArgs, &type_spec_UserChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserChangedEventArgs, &type_spec_UserChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDeviceAssociation = py::register_python_type(module.get(), type_name_UserDeviceAssociation, &type_spec_UserDeviceAssociation, object_bases.get(), nullptr);
-    if (!state->type_UserDeviceAssociation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDeviceAssociation, &type_spec_UserDeviceAssociation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDeviceAssociation, &type_spec_UserDeviceAssociation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDeviceAssociationChangedEventArgs = py::register_python_type(module.get(), type_name_UserDeviceAssociationChangedEventArgs, &type_spec_UserDeviceAssociationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDeviceAssociationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDeviceAssociationChangedEventArgs, &type_spec_UserDeviceAssociationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDeviceAssociationChangedEventArgs, &type_spec_UserDeviceAssociationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserPicker = py::register_python_type(module.get(), type_name_UserPicker, &type_spec_UserPicker, object_bases.get(), nullptr);
-    if (!state->type_UserPicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserPicker, &type_spec_UserPicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserPicker, &type_spec_UserPicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserWatcher = py::register_python_type(module.get(), type_name_UserWatcher, &type_spec_UserWatcher, object_bases.get(), nullptr);
-    if (!state->type_UserWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserWatcher, &type_spec_UserWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserWatcher, &type_spec_UserWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILauncherViewOptions = py::register_python_type(module.get(), type_name_ILauncherViewOptions, &type_spec_ILauncherViewOptions, object_bases.get(), nullptr);
-    if (!state->type_ILauncherViewOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILauncherViewOptions, &type_spec_ILauncherViewOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILauncherViewOptions, &type_spec_ILauncherViewOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppActivationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppActivationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppActivationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppDiagnosticInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppDiagnosticInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppDiagnosticInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppDiagnosticInfoWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppDiagnosticInfoWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppDiagnosticInfoWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppDiagnosticInfoWatcherEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppExecutionStateChangeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExecutionStateChangeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppExecutionStateChangeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppMemoryReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppMemoryReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppMemoryReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppMemoryUsageLimitChangingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupBackgroundTaskReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupBackgroundTaskReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupInfoWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupInfoWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupInfoWatcherEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupMemoryReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupMemoryReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupMemoryReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppResourceGroupStateReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppResourceGroupStateReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppResourceGroupStateReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppUriHandlerHost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppUriHandlerHost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppUriHandlerHost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppUriHandlerRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppUriHandlerRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppUriHandlerRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::AppUriHandlerRegistrationManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppUriHandlerRegistrationManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::AppUriHandlerRegistrationManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::DateTimeSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DateTimeSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::DateTimeSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::DispatcherQueue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DispatcherQueue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::DispatcherQueue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::DispatcherQueueController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DispatcherQueueController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::DispatcherQueueController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DispatcherQueueShutdownStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::DispatcherQueueTimer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DispatcherQueueTimer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::DispatcherQueueTimer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::FolderLauncherOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FolderLauncherOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::FolderLauncherOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::KnownUserProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownUserProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::KnownUserProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::LaunchUriResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LaunchUriResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::LaunchUriResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Launcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Launcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Launcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::LauncherOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LauncherOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::LauncherOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::LauncherUIOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LauncherUIOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::LauncherUIOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::MemoryManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MemoryManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::MemoryManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ProcessLauncher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessLauncher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ProcessLauncher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ProcessLauncherOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessLauncherOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ProcessLauncherOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ProcessLauncherResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessLauncherResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ProcessLauncherResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ProcessMemoryReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessMemoryReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ProcessMemoryReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ProtocolForResultsOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtocolForResultsOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ProtocolForResultsOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteLauncher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteLauncher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteLauncher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::RemoteLauncherOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteLauncherOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::RemoteLauncherOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ShutdownManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShutdownManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ShutdownManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::TimeZoneSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimeZoneSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::TimeZoneSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::User>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_User;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::User is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserAuthenticationStatusChangeDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserAuthenticationStatusChangeDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserAuthenticationStatusChangingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserAuthenticationStatusChangingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserDeviceAssociation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDeviceAssociation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserDeviceAssociation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDeviceAssociationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserDeviceAssociationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserPicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserPicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserPicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::ILauncherViewOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILauncherViewOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::ILauncherViewOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

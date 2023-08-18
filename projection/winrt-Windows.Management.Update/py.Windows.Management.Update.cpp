@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Management::Update
 {
-    struct module_state
-    {
-        PyTypeObject* type_PreviewBuildsManager;
-        PyTypeObject* type_PreviewBuildsState;
-        PyTypeObject* type_WindowsUpdate;
-        PyTypeObject* type_WindowsUpdateActionCompletedEventArgs;
-        PyTypeObject* type_WindowsUpdateActionProgress;
-        PyTypeObject* type_WindowsUpdateActionResult;
-        PyTypeObject* type_WindowsUpdateAdministrator;
-        PyTypeObject* type_WindowsUpdateApprovalData;
-        PyTypeObject* type_WindowsUpdateAttentionRequiredInfo;
-        PyTypeObject* type_WindowsUpdateAttentionRequiredReasonChangedEventArgs;
-        PyTypeObject* type_WindowsUpdateGetAdministratorResult;
-        PyTypeObject* type_WindowsUpdateItem;
-        PyTypeObject* type_WindowsUpdateManager;
-        PyTypeObject* type_WindowsUpdateProgressChangedEventArgs;
-        PyTypeObject* type_WindowsUpdateRestartRequestOptions;
-        PyTypeObject* type_WindowsUpdateScanCompletedEventArgs;
-    };
-
     // ----- PreviewBuildsManager class --------------------
     static constexpr const char* const type_name_PreviewBuildsManager = "PreviewBuildsManager";
 
@@ -4032,74 +4012,15 @@ namespace py::cpp::Windows::Management::Update
     PyDoc_STRVAR(module_doc, "Windows::Management::Update");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PreviewBuildsManager);
-        Py_VISIT(state->type_PreviewBuildsState);
-        Py_VISIT(state->type_WindowsUpdate);
-        Py_VISIT(state->type_WindowsUpdateActionCompletedEventArgs);
-        Py_VISIT(state->type_WindowsUpdateActionProgress);
-        Py_VISIT(state->type_WindowsUpdateActionResult);
-        Py_VISIT(state->type_WindowsUpdateAdministrator);
-        Py_VISIT(state->type_WindowsUpdateApprovalData);
-        Py_VISIT(state->type_WindowsUpdateAttentionRequiredInfo);
-        Py_VISIT(state->type_WindowsUpdateAttentionRequiredReasonChangedEventArgs);
-        Py_VISIT(state->type_WindowsUpdateGetAdministratorResult);
-        Py_VISIT(state->type_WindowsUpdateItem);
-        Py_VISIT(state->type_WindowsUpdateManager);
-        Py_VISIT(state->type_WindowsUpdateProgressChangedEventArgs);
-        Py_VISIT(state->type_WindowsUpdateRestartRequestOptions);
-        Py_VISIT(state->type_WindowsUpdateScanCompletedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PreviewBuildsManager);
-        Py_CLEAR(state->type_PreviewBuildsState);
-        Py_CLEAR(state->type_WindowsUpdate);
-        Py_CLEAR(state->type_WindowsUpdateActionCompletedEventArgs);
-        Py_CLEAR(state->type_WindowsUpdateActionProgress);
-        Py_CLEAR(state->type_WindowsUpdateActionResult);
-        Py_CLEAR(state->type_WindowsUpdateAdministrator);
-        Py_CLEAR(state->type_WindowsUpdateApprovalData);
-        Py_CLEAR(state->type_WindowsUpdateAttentionRequiredInfo);
-        Py_CLEAR(state->type_WindowsUpdateAttentionRequiredReasonChangedEventArgs);
-        Py_CLEAR(state->type_WindowsUpdateGetAdministratorResult);
-        Py_CLEAR(state->type_WindowsUpdateItem);
-        Py_CLEAR(state->type_WindowsUpdateManager);
-        Py_CLEAR(state->type_WindowsUpdateProgressChangedEventArgs);
-        Py_CLEAR(state->type_WindowsUpdateRestartRequestOptions);
-        Py_CLEAR(state->type_WindowsUpdateScanCompletedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Management_Update",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Management::Update
@@ -4115,7 +4036,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Update(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4128,473 +4049,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Update(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PreviewBuildsManager = py::register_python_type(module.get(), type_name_PreviewBuildsManager, &type_spec_PreviewBuildsManager, object_bases.get(), nullptr);
-    if (!state->type_PreviewBuildsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewBuildsManager, &type_spec_PreviewBuildsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewBuildsManager, &type_spec_PreviewBuildsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewBuildsState = py::register_python_type(module.get(), type_name_PreviewBuildsState, &type_spec_PreviewBuildsState, object_bases.get(), nullptr);
-    if (!state->type_PreviewBuildsState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewBuildsState, &type_spec_PreviewBuildsState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewBuildsState, &type_spec_PreviewBuildsState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdate = py::register_python_type(module.get(), type_name_WindowsUpdate, &type_spec_WindowsUpdate, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdate, &type_spec_WindowsUpdate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdate, &type_spec_WindowsUpdate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateActionCompletedEventArgs = py::register_python_type(module.get(), type_name_WindowsUpdateActionCompletedEventArgs, &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateActionCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionCompletedEventArgs, &type_spec_WindowsUpdateActionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionCompletedEventArgs, &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateActionProgress = py::register_python_type(module.get(), type_name_WindowsUpdateActionProgress, &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateActionProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionProgress, &type_spec_WindowsUpdateActionProgress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionProgress, &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateActionResult = py::register_python_type(module.get(), type_name_WindowsUpdateActionResult, &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateActionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionResult, &type_spec_WindowsUpdateActionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionResult, &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateAdministrator = py::register_python_type(module.get(), type_name_WindowsUpdateAdministrator, &type_spec_WindowsUpdateAdministrator, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateAdministrator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAdministrator, &type_spec_WindowsUpdateAdministrator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAdministrator, &type_spec_WindowsUpdateAdministrator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateApprovalData = py::register_python_type(module.get(), type_name_WindowsUpdateApprovalData, &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateApprovalData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateApprovalData, &type_spec_WindowsUpdateApprovalData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateApprovalData, &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateAttentionRequiredInfo = py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredInfo, &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateAttentionRequiredInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredInfo, &type_spec_WindowsUpdateAttentionRequiredInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredInfo, &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateAttentionRequiredReasonChangedEventArgs = py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs, &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateAttentionRequiredReasonChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs, &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs, &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateGetAdministratorResult = py::register_python_type(module.get(), type_name_WindowsUpdateGetAdministratorResult, &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateGetAdministratorResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateGetAdministratorResult, &type_spec_WindowsUpdateGetAdministratorResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateGetAdministratorResult, &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateItem = py::register_python_type(module.get(), type_name_WindowsUpdateItem, &type_spec_WindowsUpdateItem, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateItem, &type_spec_WindowsUpdateItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateItem, &type_spec_WindowsUpdateItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateManager = py::register_python_type(module.get(), type_name_WindowsUpdateManager, &type_spec_WindowsUpdateManager, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateManager, &type_spec_WindowsUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateManager, &type_spec_WindowsUpdateManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateProgressChangedEventArgs = py::register_python_type(module.get(), type_name_WindowsUpdateProgressChangedEventArgs, &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateProgressChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateProgressChangedEventArgs, &type_spec_WindowsUpdateProgressChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateProgressChangedEventArgs, &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateRestartRequestOptions = py::register_python_type(module.get(), type_name_WindowsUpdateRestartRequestOptions, &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateRestartRequestOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateRestartRequestOptions, &type_spec_WindowsUpdateRestartRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateRestartRequestOptions, &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsUpdateScanCompletedEventArgs = py::register_python_type(module.get(), type_name_WindowsUpdateScanCompletedEventArgs, &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowsUpdateScanCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateScanCompletedEventArgs, &type_spec_WindowsUpdateScanCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsUpdateScanCompletedEventArgs, &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::PreviewBuildsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewBuildsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::PreviewBuildsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::PreviewBuildsState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewBuildsState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::PreviewBuildsState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateActionCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateActionProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateActionProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateActionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateActionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAdministrator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAdministrator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateApprovalData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateApprovalData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateApprovalData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAttentionRequiredInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateAttentionRequiredReasonChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateGetAdministratorResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateProgressChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateRestartRequestOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Update;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Update");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsUpdateScanCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

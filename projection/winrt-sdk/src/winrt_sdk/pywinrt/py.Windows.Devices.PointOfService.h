@@ -493,446 +493,520 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScanner>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScanner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScanner";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerErrorOccurredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerImagePreviewReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeScannerStatusUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeSymbologies";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>
+    struct py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "BarcodeSymbologyAttributes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawer>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerCloseAlarm";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerEventSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerOpenedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerStatus>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "CashDrawerStatusUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedBarcodeScanner";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedBarcodeScannerClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedCashDrawer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedCashDrawerClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedJournalPrinter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedLineDisplay";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedLineDisplayClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedMagneticStripeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedMagneticStripeReaderClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedPosPrinter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedPosPrinterClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedReceiptPrinter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>
+    struct py_type<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ClaimedSlipPrinter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::JournalPrintJob>
+    struct py_type<winrt::Windows::Devices::PointOfService::JournalPrintJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "JournalPrintJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "JournalPrinterCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplay>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplay";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayAttributes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCursor>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayCursor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayCursorAttributes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayCustomGlyphs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayMarquee";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayStatisticsCategorySelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayStatusUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayStoredBitmap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::LineDisplayWindow>
+    struct py_type<winrt::Windows::Devices::PointOfService::LineDisplayWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "LineDisplayWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReader>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderAamvaCardDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderBankCardDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderCardTypes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderEncryptionAlgorithms";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderErrorOccurredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderStatusUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderTrackData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinter>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterCharacterSetIds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterFontProperty";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterPrintOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterReleaseDeviceRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterStatus>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "PosPrinterStatusUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>
+    struct py_type<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ReceiptPrintJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ReceiptPrinterCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::SlipPrintJob>
+    struct py_type<winrt::Windows::Devices::PointOfService::SlipPrintJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "SlipPrintJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "SlipPrinterCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>
+    struct py_type<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "UnifiedPosErrorData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
+    struct py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ICashDrawerEventSourceEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    struct py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ICommonClaimedPosPrinterStation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ICommonPosPrintStationCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
+    struct py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "ICommonReceiptSlipCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>
+    struct py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "IPosPrinterJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>
+    struct py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "IReceiptOrSlipJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::PointOfService::SizeUInt32>
+    struct py_type<winrt::Windows::Devices::PointOfService::SizeUInt32>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
+        static constexpr const char* type_name = "SizeUInt32";
     };
 }

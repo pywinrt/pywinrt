@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::PerceptionTimestamp>
+    struct py_type<winrt::Windows::Perception::PerceptionTimestamp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception";
+        static constexpr const char* type_name = "PerceptionTimestamp";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::PerceptionTimestampHelper>
+    struct py_type<winrt::Windows::Perception::PerceptionTimestampHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception";
+        static constexpr const char* type_name = "PerceptionTimestampHelper";
     };
 }

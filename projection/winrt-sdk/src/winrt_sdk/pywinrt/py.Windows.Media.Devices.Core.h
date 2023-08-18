@@ -71,92 +71,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::CameraIntrinsics>
+    struct py_type<winrt::Windows::Media::Devices::Core::CameraIntrinsics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "CameraIntrinsics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>
+    struct py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "DepthCorrelatedCoordinateMapper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameControlCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameController>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameExposureCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameExposureCompensationCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameExposureCompensationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameExposureControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameFlashCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameFlashControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameFocusCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameFocusControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameIsoSpeedCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>
+    struct py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "FrameIsoSpeedControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>
+    struct py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices.core";
+        static constexpr const char* type_name = "VariablePhotoSequenceController";
     };
 }

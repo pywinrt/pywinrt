@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::Media::DialProtocol
 {
-    struct module_state
-    {
-        PyTypeObject* type_DialApp;
-        PyTypeObject* type_DialAppStateDetails;
-        PyTypeObject* type_DialDevice;
-        PyTypeObject* type_DialDevicePicker;
-        PyTypeObject* type_DialDevicePickerFilter;
-        PyTypeObject* type_DialDeviceSelectedEventArgs;
-        PyTypeObject* type_DialDisconnectButtonClickedEventArgs;
-        PyTypeObject* type_DialReceiverApp;
-    };
-
     // ----- DialApp class --------------------
     static constexpr const char* const type_name_DialApp = "DialApp";
 
@@ -1525,58 +1513,15 @@ namespace py::cpp::Windows::Media::DialProtocol
     PyDoc_STRVAR(module_doc, "Windows::Media::DialProtocol");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DialApp);
-        Py_VISIT(state->type_DialAppStateDetails);
-        Py_VISIT(state->type_DialDevice);
-        Py_VISIT(state->type_DialDevicePicker);
-        Py_VISIT(state->type_DialDevicePickerFilter);
-        Py_VISIT(state->type_DialDeviceSelectedEventArgs);
-        Py_VISIT(state->type_DialDisconnectButtonClickedEventArgs);
-        Py_VISIT(state->type_DialReceiverApp);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DialApp);
-        Py_CLEAR(state->type_DialAppStateDetails);
-        Py_CLEAR(state->type_DialDevice);
-        Py_CLEAR(state->type_DialDevicePicker);
-        Py_CLEAR(state->type_DialDevicePickerFilter);
-        Py_CLEAR(state->type_DialDeviceSelectedEventArgs);
-        Py_CLEAR(state->type_DialDisconnectButtonClickedEventArgs);
-        Py_CLEAR(state->type_DialReceiverApp);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_DialProtocol",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::DialProtocol
@@ -1592,7 +1537,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_DialProtocol(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1605,47 +1550,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_DialProtocol(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DialApp = py::register_python_type(module.get(), type_name_DialApp, &type_spec_DialApp, object_bases.get(), nullptr);
-    if (!state->type_DialApp)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialApp, &type_spec_DialApp, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialApp, &type_spec_DialApp, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialAppStateDetails = py::register_python_type(module.get(), type_name_DialAppStateDetails, &type_spec_DialAppStateDetails, object_bases.get(), nullptr);
-    if (!state->type_DialAppStateDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialAppStateDetails, &type_spec_DialAppStateDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialAppStateDetails, &type_spec_DialAppStateDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialDevice = py::register_python_type(module.get(), type_name_DialDevice, &type_spec_DialDevice, object_bases.get(), nullptr);
-    if (!state->type_DialDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialDevice, &type_spec_DialDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialDevice, &type_spec_DialDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialDevicePicker = py::register_python_type(module.get(), type_name_DialDevicePicker, &type_spec_DialDevicePicker, object_bases.get(), nullptr);
-    if (!state->type_DialDevicePicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialDevicePicker, &type_spec_DialDevicePicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialDevicePicker, &type_spec_DialDevicePicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialDevicePickerFilter = py::register_python_type(module.get(), type_name_DialDevicePickerFilter, &type_spec_DialDevicePickerFilter, object_bases.get(), nullptr);
-    if (!state->type_DialDevicePickerFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialDevicePickerFilter, &type_spec_DialDevicePickerFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialDevicePickerFilter, &type_spec_DialDevicePickerFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialDeviceSelectedEventArgs = py::register_python_type(module.get(), type_name_DialDeviceSelectedEventArgs, &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DialDeviceSelectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialDeviceSelectedEventArgs, &type_spec_DialDeviceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialDeviceSelectedEventArgs, &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialDisconnectButtonClickedEventArgs = py::register_python_type(module.get(), type_name_DialDisconnectButtonClickedEventArgs, &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DialDisconnectButtonClickedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialDisconnectButtonClickedEventArgs, &type_spec_DialDisconnectButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialDisconnectButtonClickedEventArgs, &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1656,196 +1619,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_DialProtocol(void) noexcept
         return nullptr;
     }
 
-    state->type_DialReceiverApp = py::register_python_type(module.get(), type_name_DialReceiverApp, &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Meta.get()));
-    if (!state->type_DialReceiverApp)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialReceiverApp, &type_spec_DialReceiverApp, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialReceiverApp, &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialApp>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialApp;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialApp is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialAppStateDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialAppStateDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialDevicePicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialDevicePicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialDevicePicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialDevicePickerFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialDevicePickerFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialDeviceSelectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialDisconnectButtonClickedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::DialProtocol;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::DialProtocol");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialReceiverApp;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::DialProtocol::DialReceiverApp is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::Foundation::Numerics
 {
-    struct module_state
-    {
-        PyTypeObject* type_Matrix3x2;
-        PyTypeObject* type_Matrix4x4;
-        PyTypeObject* type_Plane;
-        PyTypeObject* type_Quaternion;
-        PyTypeObject* type_Rational;
-        PyTypeObject* type_Vector2;
-        PyTypeObject* type_Vector3;
-        PyTypeObject* type_Vector4;
-    };
-
     // ----- Matrix3x2 struct --------------------
     static constexpr const char* const type_name_Matrix3x2 = "Matrix3x2";
 
@@ -1907,58 +1895,15 @@ namespace py::cpp::Windows::Foundation::Numerics
     PyDoc_STRVAR(module_doc, "Windows::Foundation::Numerics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Matrix3x2);
-        Py_VISIT(state->type_Matrix4x4);
-        Py_VISIT(state->type_Plane);
-        Py_VISIT(state->type_Quaternion);
-        Py_VISIT(state->type_Rational);
-        Py_VISIT(state->type_Vector2);
-        Py_VISIT(state->type_Vector3);
-        Py_VISIT(state->type_Vector4);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Matrix3x2);
-        Py_CLEAR(state->type_Matrix4x4);
-        Py_CLEAR(state->type_Plane);
-        Py_CLEAR(state->type_Quaternion);
-        Py_CLEAR(state->type_Rational);
-        Py_CLEAR(state->type_Vector2);
-        Py_CLEAR(state->type_Vector3);
-        Py_CLEAR(state->type_Vector4);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Foundation_Numerics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Foundation::Numerics
@@ -1974,7 +1919,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Numerics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1987,241 +1932,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Numerics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Matrix3x2 = py::register_python_type(module.get(), type_name_Matrix3x2, &type_spec_Matrix3x2, nullptr, nullptr);
-    if (!state->type_Matrix3x2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix3x2, &type_spec_Matrix3x2, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix3x2, &type_spec_Matrix3x2, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Matrix4x4 = py::register_python_type(module.get(), type_name_Matrix4x4, &type_spec_Matrix4x4, nullptr, nullptr);
-    if (!state->type_Matrix4x4)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix4x4, &type_spec_Matrix4x4, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix4x4, &type_spec_Matrix4x4, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Plane = py::register_python_type(module.get(), type_name_Plane, &type_spec_Plane, nullptr, nullptr);
-    if (!state->type_Plane)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Plane, &type_spec_Plane, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Plane, &type_spec_Plane, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Quaternion = py::register_python_type(module.get(), type_name_Quaternion, &type_spec_Quaternion, nullptr, nullptr);
-    if (!state->type_Quaternion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Quaternion, &type_spec_Quaternion, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Quaternion, &type_spec_Quaternion, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Rational = py::register_python_type(module.get(), type_name_Rational, &type_spec_Rational, nullptr, nullptr);
-    if (!state->type_Rational)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Rational, &type_spec_Rational, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Rational, &type_spec_Rational, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector2 = py::register_python_type(module.get(), type_name_Vector2, &type_spec_Vector2, nullptr, nullptr);
-    if (!state->type_Vector2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector2, &type_spec_Vector2, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector2, &type_spec_Vector2, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector3 = py::register_python_type(module.get(), type_name_Vector3, &type_spec_Vector3, nullptr, nullptr);
-    if (!state->type_Vector3)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector3, &type_spec_Vector3, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector3, &type_spec_Vector3, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector4 = py::register_python_type(module.get(), type_name_Vector4, &type_spec_Vector4, nullptr, nullptr);
-    if (!state->type_Vector4)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector4, &type_spec_Vector4, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector4, &type_spec_Vector4, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::float3x2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix3x2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::float3x2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::float4x4>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix4x4;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::float4x4 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::plane>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Plane;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::plane is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::quaternion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Quaternion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::quaternion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::Rational>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Rational;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::Rational is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::float2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::float2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::float3>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector3;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::float3 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Numerics::float4>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Numerics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Numerics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector4;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Numerics::float4 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

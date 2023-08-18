@@ -6,31 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Holographic
 {
-    struct module_state
-    {
-        PyTypeObject* type_HolographicCamera;
-        PyTypeObject* type_HolographicCameraPose;
-        PyTypeObject* type_HolographicCameraRenderingParameters;
-        PyTypeObject* type_HolographicCameraViewportParameters;
-        PyTypeObject* type_HolographicDisplay;
-        PyTypeObject* type_HolographicFrame;
-        PyTypeObject* type_HolographicFramePrediction;
-        PyTypeObject* type_HolographicFramePresentationMonitor;
-        PyTypeObject* type_HolographicFramePresentationReport;
-        PyTypeObject* type_HolographicFrameRenderingReport;
-        PyTypeObject* type_HolographicFrameScanoutMonitor;
-        PyTypeObject* type_HolographicFrameScanoutReport;
-        PyTypeObject* type_HolographicQuadLayer;
-        PyTypeObject* type_HolographicQuadLayerUpdateParameters;
-        PyTypeObject* type_HolographicSpace;
-        PyTypeObject* type_HolographicSpaceCameraAddedEventArgs;
-        PyTypeObject* type_HolographicSpaceCameraRemovedEventArgs;
-        PyTypeObject* type_HolographicViewConfiguration;
-        PyTypeObject* type_HolographicAdapterId;
-        PyTypeObject* type_HolographicFrameId;
-        PyTypeObject* type_HolographicStereoTransform;
-    };
-
     // ----- HolographicCamera class --------------------
     static constexpr const char* const type_name_HolographicCamera = "HolographicCamera";
 
@@ -5067,84 +5042,15 @@ namespace py::cpp::Windows::Graphics::Holographic
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Holographic");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HolographicCamera);
-        Py_VISIT(state->type_HolographicCameraPose);
-        Py_VISIT(state->type_HolographicCameraRenderingParameters);
-        Py_VISIT(state->type_HolographicCameraViewportParameters);
-        Py_VISIT(state->type_HolographicDisplay);
-        Py_VISIT(state->type_HolographicFrame);
-        Py_VISIT(state->type_HolographicFramePrediction);
-        Py_VISIT(state->type_HolographicFramePresentationMonitor);
-        Py_VISIT(state->type_HolographicFramePresentationReport);
-        Py_VISIT(state->type_HolographicFrameRenderingReport);
-        Py_VISIT(state->type_HolographicFrameScanoutMonitor);
-        Py_VISIT(state->type_HolographicFrameScanoutReport);
-        Py_VISIT(state->type_HolographicQuadLayer);
-        Py_VISIT(state->type_HolographicQuadLayerUpdateParameters);
-        Py_VISIT(state->type_HolographicSpace);
-        Py_VISIT(state->type_HolographicSpaceCameraAddedEventArgs);
-        Py_VISIT(state->type_HolographicSpaceCameraRemovedEventArgs);
-        Py_VISIT(state->type_HolographicViewConfiguration);
-        Py_VISIT(state->type_HolographicAdapterId);
-        Py_VISIT(state->type_HolographicFrameId);
-        Py_VISIT(state->type_HolographicStereoTransform);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HolographicCamera);
-        Py_CLEAR(state->type_HolographicCameraPose);
-        Py_CLEAR(state->type_HolographicCameraRenderingParameters);
-        Py_CLEAR(state->type_HolographicCameraViewportParameters);
-        Py_CLEAR(state->type_HolographicDisplay);
-        Py_CLEAR(state->type_HolographicFrame);
-        Py_CLEAR(state->type_HolographicFramePrediction);
-        Py_CLEAR(state->type_HolographicFramePresentationMonitor);
-        Py_CLEAR(state->type_HolographicFramePresentationReport);
-        Py_CLEAR(state->type_HolographicFrameRenderingReport);
-        Py_CLEAR(state->type_HolographicFrameScanoutMonitor);
-        Py_CLEAR(state->type_HolographicFrameScanoutReport);
-        Py_CLEAR(state->type_HolographicQuadLayer);
-        Py_CLEAR(state->type_HolographicQuadLayerUpdateParameters);
-        Py_CLEAR(state->type_HolographicSpace);
-        Py_CLEAR(state->type_HolographicSpaceCameraAddedEventArgs);
-        Py_CLEAR(state->type_HolographicSpaceCameraRemovedEventArgs);
-        Py_CLEAR(state->type_HolographicViewConfiguration);
-        Py_CLEAR(state->type_HolographicAdapterId);
-        Py_CLEAR(state->type_HolographicFrameId);
-        Py_CLEAR(state->type_HolographicStereoTransform);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Holographic",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Holographic
@@ -5160,7 +5066,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Holographic(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5173,89 +5079,128 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Holographic(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HolographicCamera = py::register_python_type(module.get(), type_name_HolographicCamera, &type_spec_HolographicCamera, object_bases.get(), nullptr);
-    if (!state->type_HolographicCamera)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicCamera, &type_spec_HolographicCamera, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicCamera, &type_spec_HolographicCamera, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicCameraPose = py::register_python_type(module.get(), type_name_HolographicCameraPose, &type_spec_HolographicCameraPose, object_bases.get(), nullptr);
-    if (!state->type_HolographicCameraPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicCameraPose, &type_spec_HolographicCameraPose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicCameraPose, &type_spec_HolographicCameraPose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicCameraRenderingParameters = py::register_python_type(module.get(), type_name_HolographicCameraRenderingParameters, &type_spec_HolographicCameraRenderingParameters, object_bases.get(), nullptr);
-    if (!state->type_HolographicCameraRenderingParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicCameraRenderingParameters, &type_spec_HolographicCameraRenderingParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicCameraRenderingParameters, &type_spec_HolographicCameraRenderingParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicCameraViewportParameters = py::register_python_type(module.get(), type_name_HolographicCameraViewportParameters, &type_spec_HolographicCameraViewportParameters, object_bases.get(), nullptr);
-    if (!state->type_HolographicCameraViewportParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicCameraViewportParameters, &type_spec_HolographicCameraViewportParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicCameraViewportParameters, &type_spec_HolographicCameraViewportParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicDisplay = py::register_python_type(module.get(), type_name_HolographicDisplay, &type_spec_HolographicDisplay, object_bases.get(), nullptr);
-    if (!state->type_HolographicDisplay)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicDisplay, &type_spec_HolographicDisplay, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicDisplay, &type_spec_HolographicDisplay, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFrame = py::register_python_type(module.get(), type_name_HolographicFrame, &type_spec_HolographicFrame, object_bases.get(), nullptr);
-    if (!state->type_HolographicFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFrame, &type_spec_HolographicFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFrame, &type_spec_HolographicFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFramePrediction = py::register_python_type(module.get(), type_name_HolographicFramePrediction, &type_spec_HolographicFramePrediction, object_bases.get(), nullptr);
-    if (!state->type_HolographicFramePrediction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFramePrediction, &type_spec_HolographicFramePrediction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFramePrediction, &type_spec_HolographicFramePrediction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFramePresentationMonitor = py::register_python_type(module.get(), type_name_HolographicFramePresentationMonitor, &type_spec_HolographicFramePresentationMonitor, object_bases.get(), nullptr);
-    if (!state->type_HolographicFramePresentationMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationMonitor, &type_spec_HolographicFramePresentationMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationMonitor, &type_spec_HolographicFramePresentationMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFramePresentationReport = py::register_python_type(module.get(), type_name_HolographicFramePresentationReport, &type_spec_HolographicFramePresentationReport, object_bases.get(), nullptr);
-    if (!state->type_HolographicFramePresentationReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationReport, &type_spec_HolographicFramePresentationReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationReport, &type_spec_HolographicFramePresentationReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFrameRenderingReport = py::register_python_type(module.get(), type_name_HolographicFrameRenderingReport, &type_spec_HolographicFrameRenderingReport, object_bases.get(), nullptr);
-    if (!state->type_HolographicFrameRenderingReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFrameRenderingReport, &type_spec_HolographicFrameRenderingReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFrameRenderingReport, &type_spec_HolographicFrameRenderingReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFrameScanoutMonitor = py::register_python_type(module.get(), type_name_HolographicFrameScanoutMonitor, &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), nullptr);
-    if (!state->type_HolographicFrameScanoutMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutMonitor, &type_spec_HolographicFrameScanoutMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutMonitor, &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFrameScanoutReport = py::register_python_type(module.get(), type_name_HolographicFrameScanoutReport, &type_spec_HolographicFrameScanoutReport, object_bases.get(), nullptr);
-    if (!state->type_HolographicFrameScanoutReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutReport, &type_spec_HolographicFrameScanoutReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutReport, &type_spec_HolographicFrameScanoutReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicQuadLayer = py::register_python_type(module.get(), type_name_HolographicQuadLayer, &type_spec_HolographicQuadLayer, object_bases.get(), nullptr);
-    if (!state->type_HolographicQuadLayer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicQuadLayer, &type_spec_HolographicQuadLayer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicQuadLayer, &type_spec_HolographicQuadLayer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicQuadLayerUpdateParameters = py::register_python_type(module.get(), type_name_HolographicQuadLayerUpdateParameters, &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), nullptr);
-    if (!state->type_HolographicQuadLayerUpdateParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicQuadLayerUpdateParameters, &type_spec_HolographicQuadLayerUpdateParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicQuadLayerUpdateParameters, &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5266,531 +5211,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Holographic(void) noexcept
         return nullptr;
     }
 
-    state->type_HolographicSpace = py::register_python_type(module.get(), type_name_HolographicSpace, &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get()));
-    if (!state->type_HolographicSpace)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicSpace, &type_spec_HolographicSpace, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicSpace, &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicSpaceCameraAddedEventArgs = py::register_python_type(module.get(), type_name_HolographicSpaceCameraAddedEventArgs, &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HolographicSpaceCameraAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraAddedEventArgs, &type_spec_HolographicSpaceCameraAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraAddedEventArgs, &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicSpaceCameraRemovedEventArgs = py::register_python_type(module.get(), type_name_HolographicSpaceCameraRemovedEventArgs, &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HolographicSpaceCameraRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraRemovedEventArgs, &type_spec_HolographicSpaceCameraRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraRemovedEventArgs, &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicViewConfiguration = py::register_python_type(module.get(), type_name_HolographicViewConfiguration, &type_spec_HolographicViewConfiguration, object_bases.get(), nullptr);
-    if (!state->type_HolographicViewConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicViewConfiguration, &type_spec_HolographicViewConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicViewConfiguration, &type_spec_HolographicViewConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicAdapterId = py::register_python_type(module.get(), type_name_HolographicAdapterId, &type_spec_HolographicAdapterId, nullptr, nullptr);
-    if (!state->type_HolographicAdapterId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicAdapterId, &type_spec_HolographicAdapterId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicAdapterId, &type_spec_HolographicAdapterId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicFrameId = py::register_python_type(module.get(), type_name_HolographicFrameId, &type_spec_HolographicFrameId, nullptr, nullptr);
-    if (!state->type_HolographicFrameId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicFrameId, &type_spec_HolographicFrameId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicFrameId, &type_spec_HolographicFrameId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HolographicStereoTransform = py::register_python_type(module.get(), type_name_HolographicStereoTransform, &type_spec_HolographicStereoTransform, nullptr, nullptr);
-    if (!state->type_HolographicStereoTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HolographicStereoTransform, &type_spec_HolographicStereoTransform, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HolographicStereoTransform, &type_spec_HolographicStereoTransform, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicCamera>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicCamera;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicCamera is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicCameraPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicCameraPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicCameraRenderingParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicCameraViewportParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicDisplay;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicDisplay is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFramePrediction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFramePrediction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFramePresentationMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFramePresentationReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFrameRenderingReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFrameScanoutMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFrameScanoutReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicQuadLayer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicQuadLayer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicQuadLayerUpdateParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpace>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicSpace;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicSpace is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicSpaceCameraAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicSpaceCameraRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicViewConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicViewConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicAdapterId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicAdapterId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicAdapterId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicFrameId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicFrameId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Holographic;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Holographic");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HolographicStereoTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Holographic::HolographicStereoTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

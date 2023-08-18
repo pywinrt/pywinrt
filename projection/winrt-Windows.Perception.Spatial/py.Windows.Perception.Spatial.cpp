@@ -6,36 +6,6 @@
 
 namespace py::cpp::Windows::Perception::Spatial
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpatialAnchor;
-        PyTypeObject* type_SpatialAnchorExportSufficiency;
-        PyTypeObject* type_SpatialAnchorExporter;
-        PyTypeObject* type_SpatialAnchorManager;
-        PyTypeObject* type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs;
-        PyTypeObject* type_SpatialAnchorStore;
-        PyTypeObject* type_SpatialAnchorTransferManager;
-        PyTypeObject* type_SpatialBoundingVolume;
-        PyTypeObject* type_SpatialCoordinateSystem;
-        PyTypeObject* type_SpatialEntity;
-        PyTypeObject* type_SpatialEntityAddedEventArgs;
-        PyTypeObject* type_SpatialEntityRemovedEventArgs;
-        PyTypeObject* type_SpatialEntityStore;
-        PyTypeObject* type_SpatialEntityUpdatedEventArgs;
-        PyTypeObject* type_SpatialEntityWatcher;
-        PyTypeObject* type_SpatialLocation;
-        PyTypeObject* type_SpatialLocator;
-        PyTypeObject* type_SpatialLocatorAttachedFrameOfReference;
-        PyTypeObject* type_SpatialLocatorPositionalTrackingDeactivatingEventArgs;
-        PyTypeObject* type_SpatialStageFrameOfReference;
-        PyTypeObject* type_SpatialStationaryFrameOfReference;
-        PyTypeObject* type_SpatialBoundingBox;
-        PyTypeObject* type_SpatialBoundingFrustum;
-        PyTypeObject* type_SpatialBoundingOrientedBox;
-        PyTypeObject* type_SpatialBoundingSphere;
-        PyTypeObject* type_SpatialRay;
-    };
-
     // ----- SpatialAnchor class --------------------
     static constexpr const char* const type_name_SpatialAnchor = "SpatialAnchor";
 
@@ -4794,94 +4764,15 @@ namespace py::cpp::Windows::Perception::Spatial
     PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpatialAnchor);
-        Py_VISIT(state->type_SpatialAnchorExportSufficiency);
-        Py_VISIT(state->type_SpatialAnchorExporter);
-        Py_VISIT(state->type_SpatialAnchorManager);
-        Py_VISIT(state->type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs);
-        Py_VISIT(state->type_SpatialAnchorStore);
-        Py_VISIT(state->type_SpatialAnchorTransferManager);
-        Py_VISIT(state->type_SpatialBoundingVolume);
-        Py_VISIT(state->type_SpatialCoordinateSystem);
-        Py_VISIT(state->type_SpatialEntity);
-        Py_VISIT(state->type_SpatialEntityAddedEventArgs);
-        Py_VISIT(state->type_SpatialEntityRemovedEventArgs);
-        Py_VISIT(state->type_SpatialEntityStore);
-        Py_VISIT(state->type_SpatialEntityUpdatedEventArgs);
-        Py_VISIT(state->type_SpatialEntityWatcher);
-        Py_VISIT(state->type_SpatialLocation);
-        Py_VISIT(state->type_SpatialLocator);
-        Py_VISIT(state->type_SpatialLocatorAttachedFrameOfReference);
-        Py_VISIT(state->type_SpatialLocatorPositionalTrackingDeactivatingEventArgs);
-        Py_VISIT(state->type_SpatialStageFrameOfReference);
-        Py_VISIT(state->type_SpatialStationaryFrameOfReference);
-        Py_VISIT(state->type_SpatialBoundingBox);
-        Py_VISIT(state->type_SpatialBoundingFrustum);
-        Py_VISIT(state->type_SpatialBoundingOrientedBox);
-        Py_VISIT(state->type_SpatialBoundingSphere);
-        Py_VISIT(state->type_SpatialRay);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpatialAnchor);
-        Py_CLEAR(state->type_SpatialAnchorExportSufficiency);
-        Py_CLEAR(state->type_SpatialAnchorExporter);
-        Py_CLEAR(state->type_SpatialAnchorManager);
-        Py_CLEAR(state->type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs);
-        Py_CLEAR(state->type_SpatialAnchorStore);
-        Py_CLEAR(state->type_SpatialAnchorTransferManager);
-        Py_CLEAR(state->type_SpatialBoundingVolume);
-        Py_CLEAR(state->type_SpatialCoordinateSystem);
-        Py_CLEAR(state->type_SpatialEntity);
-        Py_CLEAR(state->type_SpatialEntityAddedEventArgs);
-        Py_CLEAR(state->type_SpatialEntityRemovedEventArgs);
-        Py_CLEAR(state->type_SpatialEntityStore);
-        Py_CLEAR(state->type_SpatialEntityUpdatedEventArgs);
-        Py_CLEAR(state->type_SpatialEntityWatcher);
-        Py_CLEAR(state->type_SpatialLocation);
-        Py_CLEAR(state->type_SpatialLocator);
-        Py_CLEAR(state->type_SpatialLocatorAttachedFrameOfReference);
-        Py_CLEAR(state->type_SpatialLocatorPositionalTrackingDeactivatingEventArgs);
-        Py_CLEAR(state->type_SpatialStageFrameOfReference);
-        Py_CLEAR(state->type_SpatialStationaryFrameOfReference);
-        Py_CLEAR(state->type_SpatialBoundingBox);
-        Py_CLEAR(state->type_SpatialBoundingFrustum);
-        Py_CLEAR(state->type_SpatialBoundingOrientedBox);
-        Py_CLEAR(state->type_SpatialBoundingSphere);
-        Py_CLEAR(state->type_SpatialRay);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Perception_Spatial",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Perception::Spatial
@@ -4897,7 +4788,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4910,77 +4801,110 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpatialAnchor = py::register_python_type(module.get(), type_name_SpatialAnchor, &type_spec_SpatialAnchor, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchor, &type_spec_SpatialAnchor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchor, &type_spec_SpatialAnchor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorExportSufficiency = py::register_python_type(module.get(), type_name_SpatialAnchorExportSufficiency, &type_spec_SpatialAnchorExportSufficiency, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorExportSufficiency)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorExportSufficiency, &type_spec_SpatialAnchorExportSufficiency, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorExportSufficiency, &type_spec_SpatialAnchorExportSufficiency, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorExporter = py::register_python_type(module.get(), type_name_SpatialAnchorExporter, &type_spec_SpatialAnchorExporter, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorExporter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorExporter, &type_spec_SpatialAnchorExporter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorExporter, &type_spec_SpatialAnchorExporter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorManager = py::register_python_type(module.get(), type_name_SpatialAnchorManager, &type_spec_SpatialAnchorManager, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorManager, &type_spec_SpatialAnchorManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorManager, &type_spec_SpatialAnchorManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs = py::register_python_type(module.get(), type_name_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, &type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, &type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, &type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorStore = py::register_python_type(module.get(), type_name_SpatialAnchorStore, &type_spec_SpatialAnchorStore, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorStore, &type_spec_SpatialAnchorStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorStore, &type_spec_SpatialAnchorStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAnchorTransferManager = py::register_python_type(module.get(), type_name_SpatialAnchorTransferManager, &type_spec_SpatialAnchorTransferManager, object_bases.get(), nullptr);
-    if (!state->type_SpatialAnchorTransferManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorTransferManager, &type_spec_SpatialAnchorTransferManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAnchorTransferManager, &type_spec_SpatialAnchorTransferManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialBoundingVolume = py::register_python_type(module.get(), type_name_SpatialBoundingVolume, &type_spec_SpatialBoundingVolume, object_bases.get(), nullptr);
-    if (!state->type_SpatialBoundingVolume)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingVolume, &type_spec_SpatialBoundingVolume, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingVolume, &type_spec_SpatialBoundingVolume, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialCoordinateSystem = py::register_python_type(module.get(), type_name_SpatialCoordinateSystem, &type_spec_SpatialCoordinateSystem, object_bases.get(), nullptr);
-    if (!state->type_SpatialCoordinateSystem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialCoordinateSystem, &type_spec_SpatialCoordinateSystem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialCoordinateSystem, &type_spec_SpatialCoordinateSystem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialEntity = py::register_python_type(module.get(), type_name_SpatialEntity, &type_spec_SpatialEntity, object_bases.get(), nullptr);
-    if (!state->type_SpatialEntity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntity, &type_spec_SpatialEntity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntity, &type_spec_SpatialEntity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialEntityAddedEventArgs = py::register_python_type(module.get(), type_name_SpatialEntityAddedEventArgs, &type_spec_SpatialEntityAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialEntityAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntityAddedEventArgs, &type_spec_SpatialEntityAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntityAddedEventArgs, &type_spec_SpatialEntityAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialEntityRemovedEventArgs = py::register_python_type(module.get(), type_name_SpatialEntityRemovedEventArgs, &type_spec_SpatialEntityRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialEntityRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntityRemovedEventArgs, &type_spec_SpatialEntityRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntityRemovedEventArgs, &type_spec_SpatialEntityRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4991,44 +4915,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
         return nullptr;
     }
 
-    state->type_SpatialEntityStore = py::register_python_type(module.get(), type_name_SpatialEntityStore, &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Meta.get()));
-    if (!state->type_SpatialEntityStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntityStore, &type_spec_SpatialEntityStore, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntityStore, &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialEntityUpdatedEventArgs = py::register_python_type(module.get(), type_name_SpatialEntityUpdatedEventArgs, &type_spec_SpatialEntityUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialEntityUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntityUpdatedEventArgs, &type_spec_SpatialEntityUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntityUpdatedEventArgs, &type_spec_SpatialEntityUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialEntityWatcher = py::register_python_type(module.get(), type_name_SpatialEntityWatcher, &type_spec_SpatialEntityWatcher, object_bases.get(), nullptr);
-    if (!state->type_SpatialEntityWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialEntityWatcher, &type_spec_SpatialEntityWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialEntityWatcher, &type_spec_SpatialEntityWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialLocation = py::register_python_type(module.get(), type_name_SpatialLocation, &type_spec_SpatialLocation, object_bases.get(), nullptr);
-    if (!state->type_SpatialLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialLocation, &type_spec_SpatialLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialLocation, &type_spec_SpatialLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialLocator = py::register_python_type(module.get(), type_name_SpatialLocator, &type_spec_SpatialLocator, object_bases.get(), nullptr);
-    if (!state->type_SpatialLocator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialLocator, &type_spec_SpatialLocator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialLocator, &type_spec_SpatialLocator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialLocatorAttachedFrameOfReference = py::register_python_type(module.get(), type_name_SpatialLocatorAttachedFrameOfReference, &type_spec_SpatialLocatorAttachedFrameOfReference, object_bases.get(), nullptr);
-    if (!state->type_SpatialLocatorAttachedFrameOfReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialLocatorAttachedFrameOfReference, &type_spec_SpatialLocatorAttachedFrameOfReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialLocatorAttachedFrameOfReference, &type_spec_SpatialLocatorAttachedFrameOfReference, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialLocatorPositionalTrackingDeactivatingEventArgs = py::register_python_type(module.get(), type_name_SpatialLocatorPositionalTrackingDeactivatingEventArgs, &type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialLocatorPositionalTrackingDeactivatingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialLocatorPositionalTrackingDeactivatingEventArgs, &type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialLocatorPositionalTrackingDeactivatingEventArgs, &type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5039,646 +4984,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
         return nullptr;
     }
 
-    state->type_SpatialStageFrameOfReference = py::register_python_type(module.get(), type_name_SpatialStageFrameOfReference, &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Meta.get()));
-    if (!state->type_SpatialStageFrameOfReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialStageFrameOfReference, &type_spec_SpatialStageFrameOfReference, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialStageFrameOfReference, &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialStationaryFrameOfReference = py::register_python_type(module.get(), type_name_SpatialStationaryFrameOfReference, &type_spec_SpatialStationaryFrameOfReference, object_bases.get(), nullptr);
-    if (!state->type_SpatialStationaryFrameOfReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialStationaryFrameOfReference, &type_spec_SpatialStationaryFrameOfReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialStationaryFrameOfReference, &type_spec_SpatialStationaryFrameOfReference, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialBoundingBox = py::register_python_type(module.get(), type_name_SpatialBoundingBox, &type_spec_SpatialBoundingBox, nullptr, nullptr);
-    if (!state->type_SpatialBoundingBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingBox, &type_spec_SpatialBoundingBox, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingBox, &type_spec_SpatialBoundingBox, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialBoundingFrustum = py::register_python_type(module.get(), type_name_SpatialBoundingFrustum, &type_spec_SpatialBoundingFrustum, nullptr, nullptr);
-    if (!state->type_SpatialBoundingFrustum)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingFrustum, &type_spec_SpatialBoundingFrustum, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingFrustum, &type_spec_SpatialBoundingFrustum, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialBoundingOrientedBox = py::register_python_type(module.get(), type_name_SpatialBoundingOrientedBox, &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr);
-    if (!state->type_SpatialBoundingOrientedBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingOrientedBox, &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingOrientedBox, &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialBoundingSphere = py::register_python_type(module.get(), type_name_SpatialBoundingSphere, &type_spec_SpatialBoundingSphere, nullptr, nullptr);
-    if (!state->type_SpatialBoundingSphere)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingSphere, &type_spec_SpatialBoundingSphere, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialBoundingSphere, &type_spec_SpatialBoundingSphere, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialRay = py::register_python_type(module.get(), type_name_SpatialRay, &type_spec_SpatialRay, nullptr, nullptr);
-    if (!state->type_SpatialRay)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialRay, &type_spec_SpatialRay, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialRay, &type_spec_SpatialRay, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorExportSufficiency;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorExporter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorExporter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorRawCoordinateSystemAdjustedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAnchorTransferManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialBoundingVolume;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialBoundingVolume is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialCoordinateSystem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialCoordinateSystem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialEntityWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialEntityWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialLocator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLocator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLocator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLocatorAttachedFrameOfReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialLocatorPositionalTrackingDeactivatingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialStageFrameOfReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialStationaryFrameOfReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialBoundingBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialBoundingBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialBoundingFrustum;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialBoundingFrustum is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialBoundingOrientedBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialBoundingSphere;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialBoundingSphere is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::SpatialRay>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialRay;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::SpatialRay is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

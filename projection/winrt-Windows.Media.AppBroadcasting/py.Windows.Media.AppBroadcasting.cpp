@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Media::AppBroadcasting
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppBroadcastingMonitor;
-        PyTypeObject* type_AppBroadcastingStatus;
-        PyTypeObject* type_AppBroadcastingStatusDetails;
-        PyTypeObject* type_AppBroadcastingUI;
-    };
-
     // ----- AppBroadcastingMonitor class --------------------
     static constexpr const char* const type_name_AppBroadcastingMonitor = "AppBroadcastingMonitor";
 
@@ -729,50 +721,15 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     PyDoc_STRVAR(module_doc, "Windows::Media::AppBroadcasting");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppBroadcastingMonitor);
-        Py_VISIT(state->type_AppBroadcastingStatus);
-        Py_VISIT(state->type_AppBroadcastingStatusDetails);
-        Py_VISIT(state->type_AppBroadcastingUI);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppBroadcastingMonitor);
-        Py_CLEAR(state->type_AppBroadcastingStatus);
-        Py_CLEAR(state->type_AppBroadcastingStatusDetails);
-        Py_CLEAR(state->type_AppBroadcastingUI);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_AppBroadcasting",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::AppBroadcasting
@@ -788,7 +745,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppBroadcasting(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -801,125 +758,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppBroadcasting(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppBroadcastingMonitor = py::register_python_type(module.get(), type_name_AppBroadcastingMonitor, &type_spec_AppBroadcastingMonitor, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastingMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingMonitor, &type_spec_AppBroadcastingMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingMonitor, &type_spec_AppBroadcastingMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastingStatus = py::register_python_type(module.get(), type_name_AppBroadcastingStatus, &type_spec_AppBroadcastingStatus, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastingStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingStatus, &type_spec_AppBroadcastingStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingStatus, &type_spec_AppBroadcastingStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastingStatusDetails = py::register_python_type(module.get(), type_name_AppBroadcastingStatusDetails, &type_spec_AppBroadcastingStatusDetails, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastingStatusDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingStatusDetails, &type_spec_AppBroadcastingStatusDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingStatusDetails, &type_spec_AppBroadcastingStatusDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastingUI = py::register_python_type(module.get(), type_name_AppBroadcastingUI, &type_spec_AppBroadcastingUI, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastingUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingUI, &type_spec_AppBroadcastingUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastingUI, &type_spec_AppBroadcastingUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppBroadcasting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppBroadcasting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastingMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppBroadcasting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppBroadcasting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastingStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppBroadcasting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppBroadcasting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastingStatusDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::AppBroadcasting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::AppBroadcasting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastingUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -72,68 +72,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivity";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityAttribution";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityContentInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityRequestManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivitySession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivitySessionHistoryItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "UserActivityVisualElements";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
+    struct py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
+        static constexpr const char* type_name = "IUserActivityContentInfo";
     };
 }

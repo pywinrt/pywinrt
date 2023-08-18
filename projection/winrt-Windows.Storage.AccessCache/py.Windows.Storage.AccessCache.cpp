@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Storage::AccessCache
 {
-    struct module_state
-    {
-        PyTypeObject* type_AccessListEntryView;
-        PyTypeObject* type_ItemRemovedEventArgs;
-        PyTypeObject* type_StorageApplicationPermissions;
-        PyTypeObject* type_StorageItemAccessList;
-        PyTypeObject* type_StorageItemMostRecentlyUsedList;
-        PyTypeObject* type_IStorageItemAccessList;
-        PyTypeObject* type_AccessListEntry;
-    };
-
     // ----- AccessListEntryView class --------------------
     static constexpr const char* const type_name_AccessListEntryView = "AccessListEntryView";
 
@@ -2384,56 +2373,15 @@ namespace py::cpp::Windows::Storage::AccessCache
     PyDoc_STRVAR(module_doc, "Windows::Storage::AccessCache");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AccessListEntryView);
-        Py_VISIT(state->type_ItemRemovedEventArgs);
-        Py_VISIT(state->type_StorageApplicationPermissions);
-        Py_VISIT(state->type_StorageItemAccessList);
-        Py_VISIT(state->type_StorageItemMostRecentlyUsedList);
-        Py_VISIT(state->type_IStorageItemAccessList);
-        Py_VISIT(state->type_AccessListEntry);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AccessListEntryView);
-        Py_CLEAR(state->type_ItemRemovedEventArgs);
-        Py_CLEAR(state->type_StorageApplicationPermissions);
-        Py_CLEAR(state->type_StorageItemAccessList);
-        Py_CLEAR(state->type_StorageItemMostRecentlyUsedList);
-        Py_CLEAR(state->type_IStorageItemAccessList);
-        Py_CLEAR(state->type_AccessListEntry);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_AccessCache",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::AccessCache
@@ -2449,7 +2397,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_AccessCache(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2462,17 +2410,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_AccessCache(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AccessListEntryView = py::register_python_type(module.get(), type_name_AccessListEntryView, &type_spec_AccessListEntryView, object_bases.get(), nullptr);
-    if (!state->type_AccessListEntryView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessListEntryView, &type_spec_AccessListEntryView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessListEntryView, &type_spec_AccessListEntryView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ItemRemovedEventArgs = py::register_python_type(module.get(), type_name_ItemRemovedEventArgs, &type_spec_ItemRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ItemRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ItemRemovedEventArgs, &type_spec_ItemRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ItemRemovedEventArgs, &type_spec_ItemRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2483,197 +2434,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_AccessCache(void) noexcept
         return nullptr;
     }
 
-    state->type_StorageApplicationPermissions = py::register_python_type(module.get(), type_name_StorageApplicationPermissions, &type_spec_StorageApplicationPermissions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageApplicationPermissions_Meta.get()));
-    if (!state->type_StorageApplicationPermissions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageApplicationPermissions, &type_spec_StorageApplicationPermissions, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageApplicationPermissions_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageApplicationPermissions, &type_spec_StorageApplicationPermissions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageApplicationPermissions_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageItemAccessList = py::register_python_type(module.get(), type_name_StorageItemAccessList, &type_spec_StorageItemAccessList, object_bases.get(), nullptr);
-    if (!state->type_StorageItemAccessList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageItemAccessList, &type_spec_StorageItemAccessList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageItemAccessList, &type_spec_StorageItemAccessList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageItemMostRecentlyUsedList = py::register_python_type(module.get(), type_name_StorageItemMostRecentlyUsedList, &type_spec_StorageItemMostRecentlyUsedList, object_bases.get(), nullptr);
-    if (!state->type_StorageItemMostRecentlyUsedList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageItemMostRecentlyUsedList, &type_spec_StorageItemMostRecentlyUsedList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageItemMostRecentlyUsedList, &type_spec_StorageItemMostRecentlyUsedList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageItemAccessList = py::register_python_type(module.get(), type_name_IStorageItemAccessList, &type_spec_IStorageItemAccessList, object_bases.get(), nullptr);
-    if (!state->type_IStorageItemAccessList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageItemAccessList, &type_spec_IStorageItemAccessList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageItemAccessList, &type_spec_IStorageItemAccessList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccessListEntry = py::register_python_type(module.get(), type_name_AccessListEntry, &type_spec_AccessListEntry, nullptr, nullptr);
-    if (!state->type_AccessListEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessListEntry, &type_spec_AccessListEntry, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessListEntry, &type_spec_AccessListEntry, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessListEntryView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::AccessListEntryView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ItemRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageApplicationPermissions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::StorageApplicationPermissions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageItemAccessList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::StorageItemAccessList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageItemMostRecentlyUsedList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageItemAccessList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::IStorageItemAccessList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::AccessCache::AccessListEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::AccessCache;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::AccessCache");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessListEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::AccessCache::AccessListEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

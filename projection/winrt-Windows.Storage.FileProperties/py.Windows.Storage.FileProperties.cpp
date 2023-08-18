@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Storage::FileProperties
 {
-    struct module_state
-    {
-        PyTypeObject* type_BasicProperties;
-        PyTypeObject* type_DocumentProperties;
-        PyTypeObject* type_GeotagHelper;
-        PyTypeObject* type_ImageProperties;
-        PyTypeObject* type_MusicProperties;
-        PyTypeObject* type_StorageItemContentProperties;
-        PyTypeObject* type_StorageItemThumbnail;
-        PyTypeObject* type_VideoProperties;
-        PyTypeObject* type_IStorageItemExtraProperties;
-    };
-
     // ----- BasicProperties class --------------------
     static constexpr const char* const type_name_BasicProperties = "BasicProperties";
 
@@ -3541,60 +3528,15 @@ namespace py::cpp::Windows::Storage::FileProperties
     PyDoc_STRVAR(module_doc, "Windows::Storage::FileProperties");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BasicProperties);
-        Py_VISIT(state->type_DocumentProperties);
-        Py_VISIT(state->type_GeotagHelper);
-        Py_VISIT(state->type_ImageProperties);
-        Py_VISIT(state->type_MusicProperties);
-        Py_VISIT(state->type_StorageItemContentProperties);
-        Py_VISIT(state->type_StorageItemThumbnail);
-        Py_VISIT(state->type_VideoProperties);
-        Py_VISIT(state->type_IStorageItemExtraProperties);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BasicProperties);
-        Py_CLEAR(state->type_DocumentProperties);
-        Py_CLEAR(state->type_GeotagHelper);
-        Py_CLEAR(state->type_ImageProperties);
-        Py_CLEAR(state->type_MusicProperties);
-        Py_CLEAR(state->type_StorageItemContentProperties);
-        Py_CLEAR(state->type_StorageItemThumbnail);
-        Py_CLEAR(state->type_VideoProperties);
-        Py_CLEAR(state->type_IStorageItemExtraProperties);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_FileProperties",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::FileProperties
@@ -3610,7 +3552,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_FileProperties(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3623,270 +3565,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_FileProperties(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BasicProperties = py::register_python_type(module.get(), type_name_BasicProperties, &type_spec_BasicProperties, object_bases.get(), nullptr);
-    if (!state->type_BasicProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BasicProperties, &type_spec_BasicProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BasicProperties, &type_spec_BasicProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DocumentProperties = py::register_python_type(module.get(), type_name_DocumentProperties, &type_spec_DocumentProperties, object_bases.get(), nullptr);
-    if (!state->type_DocumentProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DocumentProperties, &type_spec_DocumentProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DocumentProperties, &type_spec_DocumentProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeotagHelper = py::register_python_type(module.get(), type_name_GeotagHelper, &type_spec_GeotagHelper, object_bases.get(), nullptr);
-    if (!state->type_GeotagHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeotagHelper, &type_spec_GeotagHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeotagHelper, &type_spec_GeotagHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageProperties = py::register_python_type(module.get(), type_name_ImageProperties, &type_spec_ImageProperties, object_bases.get(), nullptr);
-    if (!state->type_ImageProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageProperties, &type_spec_ImageProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageProperties, &type_spec_ImageProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MusicProperties = py::register_python_type(module.get(), type_name_MusicProperties, &type_spec_MusicProperties, object_bases.get(), nullptr);
-    if (!state->type_MusicProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MusicProperties, &type_spec_MusicProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MusicProperties, &type_spec_MusicProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageItemContentProperties = py::register_python_type(module.get(), type_name_StorageItemContentProperties, &type_spec_StorageItemContentProperties, object_bases.get(), nullptr);
-    if (!state->type_StorageItemContentProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageItemContentProperties, &type_spec_StorageItemContentProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageItemContentProperties, &type_spec_StorageItemContentProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageItemThumbnail = py::register_python_type(module.get(), type_name_StorageItemThumbnail, &type_spec_StorageItemThumbnail, object_bases.get(), nullptr);
-    if (!state->type_StorageItemThumbnail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageItemThumbnail, &type_spec_StorageItemThumbnail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageItemThumbnail, &type_spec_StorageItemThumbnail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoProperties = py::register_python_type(module.get(), type_name_VideoProperties, &type_spec_VideoProperties, object_bases.get(), nullptr);
-    if (!state->type_VideoProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoProperties, &type_spec_VideoProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoProperties, &type_spec_VideoProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageItemExtraProperties = py::register_python_type(module.get(), type_name_IStorageItemExtraProperties, &type_spec_IStorageItemExtraProperties, object_bases.get(), nullptr);
-    if (!state->type_IStorageItemExtraProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageItemExtraProperties, &type_spec_IStorageItemExtraProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageItemExtraProperties, &type_spec_IStorageItemExtraProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::BasicProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BasicProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::BasicProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::DocumentProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DocumentProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::DocumentProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::GeotagHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeotagHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::GeotagHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::ImageProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::ImageProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::MusicProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MusicProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::MusicProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageItemContentProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::StorageItemContentProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageItemThumbnail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::StorageItemThumbnail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::VideoProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::VideoProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::FileProperties;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::FileProperties");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageItemExtraProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

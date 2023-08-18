@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 {
-    struct module_state
-    {
-        PyTypeObject* type_UserDataAccount;
-        PyTypeObject* type_UserDataAccountManager;
-        PyTypeObject* type_UserDataAccountManagerForUser;
-        PyTypeObject* type_UserDataAccountStore;
-        PyTypeObject* type_UserDataAccountStoreChangedEventArgs;
-    };
-
     // ----- UserDataAccount class --------------------
     static constexpr const char* const type_name_UserDataAccount = "UserDataAccount";
 
@@ -1455,52 +1446,15 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UserDataAccount);
-        Py_VISIT(state->type_UserDataAccountManager);
-        Py_VISIT(state->type_UserDataAccountManagerForUser);
-        Py_VISIT(state->type_UserDataAccountStore);
-        Py_VISIT(state->type_UserDataAccountStoreChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UserDataAccount);
-        Py_CLEAR(state->type_UserDataAccountManager);
-        Py_CLEAR(state->type_UserDataAccountManagerForUser);
-        Py_CLEAR(state->type_UserDataAccountStore);
-        Py_CLEAR(state->type_UserDataAccountStoreChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_UserDataAccounts",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::UserDataAccounts
@@ -1516,7 +1470,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts(void) noe
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1529,154 +1483,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts(void) noe
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UserDataAccount = py::register_python_type(module.get(), type_name_UserDataAccount, &type_spec_UserDataAccount, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccount, &type_spec_UserDataAccount, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccount, &type_spec_UserDataAccount, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountManager = py::register_python_type(module.get(), type_name_UserDataAccountManager, &type_spec_UserDataAccountManager, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountManager, &type_spec_UserDataAccountManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountManager, &type_spec_UserDataAccountManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountManagerForUser = py::register_python_type(module.get(), type_name_UserDataAccountManagerForUser, &type_spec_UserDataAccountManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountManagerForUser, &type_spec_UserDataAccountManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountManagerForUser, &type_spec_UserDataAccountManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountStore = py::register_python_type(module.get(), type_name_UserDataAccountStore, &type_spec_UserDataAccountStore, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountStore, &type_spec_UserDataAccountStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountStore, &type_spec_UserDataAccountStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountStoreChangedEventArgs = py::register_python_type(module.get(), type_name_UserDataAccountStoreChangedEventArgs, &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountStoreChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountStoreChangedEventArgs, &type_spec_UserDataAccountStoreChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountStoreChangedEventArgs, &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountStoreChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

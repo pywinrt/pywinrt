@@ -6,50 +6,19 @@
 
 namespace py::cpp::Windows::UI::Xaml::Automation::Text
 {
-    struct module_state
-    {
-    };
-
     // ----- Windows.UI.Xaml.Automation.Text Initialization --------------------
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Automation::Text");
-
-
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-
-        return 0;
-    }
 
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Automation_Text",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Automation::Text
@@ -65,7 +34,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Text(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -77,9 +46,6 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Text(void) noexcept
     {
         return nullptr;
     }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
 
 
     return module.detach();

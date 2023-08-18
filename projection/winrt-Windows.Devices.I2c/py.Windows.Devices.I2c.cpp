@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::Devices::I2c
 {
-    struct module_state
-    {
-        PyTypeObject* type_I2cConnectionSettings;
-        PyTypeObject* type_I2cController;
-        PyTypeObject* type_I2cDevice;
-        PyTypeObject* type_II2cDeviceStatics;
-        PyTypeObject* type_I2cTransferResult;
-    };
-
     // ----- I2cConnectionSettings class --------------------
     static constexpr const char* const type_name_I2cConnectionSettings = "I2cConnectionSettings";
 
@@ -1173,52 +1164,15 @@ namespace py::cpp::Windows::Devices::I2c
     PyDoc_STRVAR(module_doc, "Windows::Devices::I2c");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_I2cConnectionSettings);
-        Py_VISIT(state->type_I2cController);
-        Py_VISIT(state->type_I2cDevice);
-        Py_VISIT(state->type_II2cDeviceStatics);
-        Py_VISIT(state->type_I2cTransferResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_I2cConnectionSettings);
-        Py_CLEAR(state->type_I2cController);
-        Py_CLEAR(state->type_I2cDevice);
-        Py_CLEAR(state->type_II2cDeviceStatics);
-        Py_CLEAR(state->type_I2cTransferResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_I2c",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::I2c
@@ -1234,7 +1188,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_I2c(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1247,154 +1201,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_I2c(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_I2cConnectionSettings = py::register_python_type(module.get(), type_name_I2cConnectionSettings, &type_spec_I2cConnectionSettings, object_bases.get(), nullptr);
-    if (!state->type_I2cConnectionSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_I2cConnectionSettings, &type_spec_I2cConnectionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_I2cConnectionSettings, &type_spec_I2cConnectionSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_I2cController = py::register_python_type(module.get(), type_name_I2cController, &type_spec_I2cController, object_bases.get(), nullptr);
-    if (!state->type_I2cController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_I2cController, &type_spec_I2cController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_I2cController, &type_spec_I2cController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_I2cDevice = py::register_python_type(module.get(), type_name_I2cDevice, &type_spec_I2cDevice, object_bases.get(), nullptr);
-    if (!state->type_I2cDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_I2cDevice, &type_spec_I2cDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_I2cDevice, &type_spec_I2cDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_II2cDeviceStatics = py::register_python_type(module.get(), type_name_II2cDeviceStatics, &type_spec_II2cDeviceStatics, object_bases.get(), nullptr);
-    if (!state->type_II2cDeviceStatics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_II2cDeviceStatics, &type_spec_II2cDeviceStatics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_II2cDeviceStatics, &type_spec_II2cDeviceStatics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_I2cTransferResult = py::register_python_type(module.get(), type_name_I2cTransferResult, &type_spec_I2cTransferResult, nullptr, nullptr);
-    if (!state->type_I2cTransferResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_I2cTransferResult, &type_spec_I2cTransferResult, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_I2cTransferResult, &type_spec_I2cTransferResult, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::I2cConnectionSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_I2cConnectionSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::I2cConnectionSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::I2cController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_I2cController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::I2cController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::I2cDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_I2cDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::I2cDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_II2cDeviceStatics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::II2cDeviceStatics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::I2c::I2cTransferResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::I2c;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::I2c");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_I2cTransferResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::I2c::I2cTransferResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

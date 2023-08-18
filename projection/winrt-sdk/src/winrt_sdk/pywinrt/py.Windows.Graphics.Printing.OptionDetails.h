@@ -85,146 +85,170 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintBindingOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintBorderingOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCollationOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintColorModeOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCopiesOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCustomItemDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCustomItemListOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCustomTextOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintCustomToggleOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintDuplexOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintHolePunchOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintMediaSizeOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintMediaTypeOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintOrientationOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintPageRangeOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintQualityOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintStapleOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintTaskOptionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "PrintTaskOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "IPrintCustomOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "IPrintItemListOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "IPrintNumberOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "IPrintOptionDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
+        static constexpr const char* type_name = "IPrintTextOptionDetails";
     };
 }

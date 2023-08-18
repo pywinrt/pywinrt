@@ -51,32 +51,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Json::JsonArray>
+    struct py_type<winrt::Windows::Data::Json::JsonArray>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonArray";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Json::JsonError>
+    struct py_type<winrt::Windows::Data::Json::JsonError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Json::JsonObject>
+    struct py_type<winrt::Windows::Data::Json::JsonObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Json::JsonValue>
+    struct py_type<winrt::Windows::Data::Json::JsonValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "JsonValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Json::IJsonValue>
+    struct py_type<winrt::Windows::Data::Json::IJsonValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.json";
+        static constexpr const char* type_name = "IJsonValue";
     };
 }

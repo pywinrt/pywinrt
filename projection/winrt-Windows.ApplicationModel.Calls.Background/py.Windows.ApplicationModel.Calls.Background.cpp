@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Calls::Background
 {
-    struct module_state
-    {
-        PyTypeObject* type_PhoneCallBlockedTriggerDetails;
-        PyTypeObject* type_PhoneCallOriginDataRequestTriggerDetails;
-        PyTypeObject* type_PhoneIncomingCallDismissedTriggerDetails;
-        PyTypeObject* type_PhoneIncomingCallNotificationTriggerDetails;
-        PyTypeObject* type_PhoneLineChangedTriggerDetails;
-        PyTypeObject* type_PhoneNewVoicemailMessageTriggerDetails;
-    };
-
     // ----- PhoneCallBlockedTriggerDetails class --------------------
     static constexpr const char* const type_name_PhoneCallBlockedTriggerDetails = "PhoneCallBlockedTriggerDetails";
 
@@ -862,54 +852,15 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Calls::Background");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PhoneCallBlockedTriggerDetails);
-        Py_VISIT(state->type_PhoneCallOriginDataRequestTriggerDetails);
-        Py_VISIT(state->type_PhoneIncomingCallDismissedTriggerDetails);
-        Py_VISIT(state->type_PhoneIncomingCallNotificationTriggerDetails);
-        Py_VISIT(state->type_PhoneLineChangedTriggerDetails);
-        Py_VISIT(state->type_PhoneNewVoicemailMessageTriggerDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PhoneCallBlockedTriggerDetails);
-        Py_CLEAR(state->type_PhoneCallOriginDataRequestTriggerDetails);
-        Py_CLEAR(state->type_PhoneIncomingCallDismissedTriggerDetails);
-        Py_CLEAR(state->type_PhoneIncomingCallNotificationTriggerDetails);
-        Py_CLEAR(state->type_PhoneLineChangedTriggerDetails);
-        Py_CLEAR(state->type_PhoneNewVoicemailMessageTriggerDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Calls_Background",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Calls::Background
@@ -925,7 +876,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Background(void) noe
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -938,183 +889,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Background(void) noe
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PhoneCallBlockedTriggerDetails = py::register_python_type(module.get(), type_name_PhoneCallBlockedTriggerDetails, &type_spec_PhoneCallBlockedTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallBlockedTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallBlockedTriggerDetails, &type_spec_PhoneCallBlockedTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallBlockedTriggerDetails, &type_spec_PhoneCallBlockedTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallOriginDataRequestTriggerDetails = py::register_python_type(module.get(), type_name_PhoneCallOriginDataRequestTriggerDetails, &type_spec_PhoneCallOriginDataRequestTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallOriginDataRequestTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallOriginDataRequestTriggerDetails, &type_spec_PhoneCallOriginDataRequestTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallOriginDataRequestTriggerDetails, &type_spec_PhoneCallOriginDataRequestTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneIncomingCallDismissedTriggerDetails = py::register_python_type(module.get(), type_name_PhoneIncomingCallDismissedTriggerDetails, &type_spec_PhoneIncomingCallDismissedTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneIncomingCallDismissedTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneIncomingCallDismissedTriggerDetails, &type_spec_PhoneIncomingCallDismissedTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneIncomingCallDismissedTriggerDetails, &type_spec_PhoneIncomingCallDismissedTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneIncomingCallNotificationTriggerDetails = py::register_python_type(module.get(), type_name_PhoneIncomingCallNotificationTriggerDetails, &type_spec_PhoneIncomingCallNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneIncomingCallNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneIncomingCallNotificationTriggerDetails, &type_spec_PhoneIncomingCallNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneIncomingCallNotificationTriggerDetails, &type_spec_PhoneIncomingCallNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineChangedTriggerDetails = py::register_python_type(module.get(), type_name_PhoneLineChangedTriggerDetails, &type_spec_PhoneLineChangedTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineChangedTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineChangedTriggerDetails, &type_spec_PhoneLineChangedTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineChangedTriggerDetails, &type_spec_PhoneLineChangedTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneNewVoicemailMessageTriggerDetails = py::register_python_type(module.get(), type_name_PhoneNewVoicemailMessageTriggerDetails, &type_spec_PhoneNewVoicemailMessageTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneNewVoicemailMessageTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneNewVoicemailMessageTriggerDetails, &type_spec_PhoneNewVoicemailMessageTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneNewVoicemailMessageTriggerDetails, &type_spec_PhoneNewVoicemailMessageTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallBlockedTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallOriginDataRequestTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneIncomingCallDismissedTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneIncomingCallNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineChangedTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneNewVoicemailMessageTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

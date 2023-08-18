@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_PhoneCallOrigin;
-        PyTypeObject* type_PhoneCallOriginManager;
-    };
-
     // ----- PhoneCallOrigin class --------------------
     static constexpr const char* const type_name_PhoneCallOrigin = "PhoneCallOrigin";
 
@@ -543,46 +537,15 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Calls::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PhoneCallOrigin);
-        Py_VISIT(state->type_PhoneCallOriginManager);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PhoneCallOrigin);
-        Py_CLEAR(state->type_PhoneCallOriginManager);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Calls_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Calls::Provider
@@ -598,7 +561,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Provider(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -611,11 +574,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Provider(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PhoneCallOrigin = py::register_python_type(module.get(), type_name_PhoneCallOrigin, &type_spec_PhoneCallOrigin, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallOrigin)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallOrigin, &type_spec_PhoneCallOrigin, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallOrigin, &type_spec_PhoneCallOrigin, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -626,58 +589,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Provider(void) noexc
         return nullptr;
     }
 
-    state->type_PhoneCallOriginManager = py::register_python_type(module.get(), type_name_PhoneCallOriginManager, &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get()));
-    if (!state->type_PhoneCallOriginManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallOriginManager, &type_spec_PhoneCallOriginManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallOriginManager, &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallOrigin;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallOriginManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

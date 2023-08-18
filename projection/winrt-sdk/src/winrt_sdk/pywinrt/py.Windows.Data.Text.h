@@ -153,75 +153,87 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::AlternateWordForm>
+    struct py_type<winrt::Windows::Data::Text::AlternateWordForm>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "AlternateWordForm";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::SelectableWordSegment>
+    struct py_type<winrt::Windows::Data::Text::SelectableWordSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "SelectableWordSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::SelectableWordsSegmenter>
+    struct py_type<winrt::Windows::Data::Text::SelectableWordsSegmenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "SelectableWordsSegmenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::SemanticTextQuery>
+    struct py_type<winrt::Windows::Data::Text::SemanticTextQuery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "SemanticTextQuery";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::TextConversionGenerator>
+    struct py_type<winrt::Windows::Data::Text::TextConversionGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextConversionGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::TextPhoneme>
+    struct py_type<winrt::Windows::Data::Text::TextPhoneme>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextPhoneme";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::TextPredictionGenerator>
+    struct py_type<winrt::Windows::Data::Text::TextPredictionGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextPredictionGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::TextReverseConversionGenerator>
+    struct py_type<winrt::Windows::Data::Text::TextReverseConversionGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextReverseConversionGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::UnicodeCharacters>
+    struct py_type<winrt::Windows::Data::Text::UnicodeCharacters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "UnicodeCharacters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::WordSegment>
+    struct py_type<winrt::Windows::Data::Text::WordSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "WordSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::WordsSegmenter>
+    struct py_type<winrt::Windows::Data::Text::WordsSegmenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "WordsSegmenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Text::TextSegment>
+    struct py_type<winrt::Windows::Data::Text::TextSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.text";
+        static constexpr const char* type_name = "TextSegment";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Data::Text::SelectableWordSegmentsTokenizingHandler>

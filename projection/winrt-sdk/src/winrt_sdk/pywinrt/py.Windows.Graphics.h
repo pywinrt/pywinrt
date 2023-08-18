@@ -42,38 +42,44 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::IGeometrySource2D>
+    struct py_type<winrt::Windows::Graphics::IGeometrySource2D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "IGeometrySource2D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DisplayAdapterId>
+    struct py_type<winrt::Windows::Graphics::DisplayAdapterId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "DisplayAdapterId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::DisplayId>
+    struct py_type<winrt::Windows::Graphics::DisplayId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "DisplayId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::PointInt32>
+    struct py_type<winrt::Windows::Graphics::PointInt32>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "PointInt32";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::RectInt32>
+    struct py_type<winrt::Windows::Graphics::RectInt32>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "RectInt32";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::SizeInt32>
+    struct py_type<winrt::Windows::Graphics::SizeInt32>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics";
+        static constexpr const char* type_name = "SizeInt32";
     };
 }

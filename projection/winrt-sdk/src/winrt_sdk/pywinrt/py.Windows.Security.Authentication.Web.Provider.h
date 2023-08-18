@@ -125,116 +125,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountClientView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderAddAccountOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderDeleteAccountOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderGetTokenSilentOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderManageAccountOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderRequestTokenOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderRetrieveCookiesOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderSignOutAccountOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebAccountProviderTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebProviderTokenRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "WebProviderTokenResponse";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderBaseReportOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderSilentReportOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderTokenObjects";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderTokenObjects2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderTokenOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
+        static constexpr const char* type_name = "IWebAccountProviderUIReportOperation";
     };
 }

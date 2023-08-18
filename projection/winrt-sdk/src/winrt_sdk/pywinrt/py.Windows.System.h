@@ -390,285 +390,332 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppActivationResult>
+    struct py_type<winrt::Windows::System::AppActivationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppActivationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppDiagnosticInfo>
+    struct py_type<winrt::Windows::System::AppDiagnosticInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppDiagnosticInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppDiagnosticInfoWatcher>
+    struct py_type<winrt::Windows::System::AppDiagnosticInfoWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppDiagnosticInfoWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>
+    struct py_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppDiagnosticInfoWatcherEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppExecutionStateChangeResult>
+    struct py_type<winrt::Windows::System::AppExecutionStateChangeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppExecutionStateChangeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppMemoryReport>
+    struct py_type<winrt::Windows::System::AppMemoryReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppMemoryReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>
+    struct py_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppMemoryUsageLimitChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>
+    struct py_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupBackgroundTaskReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupInfo>
+    struct py_type<winrt::Windows::System::AppResourceGroupInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcher>
+    struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupInfoWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>
+    struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupInfoWatcherEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>
+    struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupInfoWatcherExecutionStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupMemoryReport>
+    struct py_type<winrt::Windows::System::AppResourceGroupMemoryReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupMemoryReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppResourceGroupStateReport>
+    struct py_type<winrt::Windows::System::AppResourceGroupStateReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppResourceGroupStateReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppUriHandlerHost>
+    struct py_type<winrt::Windows::System::AppUriHandlerHost>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppUriHandlerHost";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppUriHandlerRegistration>
+    struct py_type<winrt::Windows::System::AppUriHandlerRegistration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppUriHandlerRegistration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::AppUriHandlerRegistrationManager>
+    struct py_type<winrt::Windows::System::AppUriHandlerRegistrationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "AppUriHandlerRegistrationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::DateTimeSettings>
+    struct py_type<winrt::Windows::System::DateTimeSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "DateTimeSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::DispatcherQueue>
+    struct py_type<winrt::Windows::System::DispatcherQueue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "DispatcherQueue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::DispatcherQueueController>
+    struct py_type<winrt::Windows::System::DispatcherQueueController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "DispatcherQueueController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>
+    struct py_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "DispatcherQueueShutdownStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::DispatcherQueueTimer>
+    struct py_type<winrt::Windows::System::DispatcherQueueTimer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "DispatcherQueueTimer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::FolderLauncherOptions>
+    struct py_type<winrt::Windows::System::FolderLauncherOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "FolderLauncherOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::KnownUserProperties>
+    struct py_type<winrt::Windows::System::KnownUserProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "KnownUserProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::LaunchUriResult>
+    struct py_type<winrt::Windows::System::LaunchUriResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "LaunchUriResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Launcher>
+    struct py_type<winrt::Windows::System::Launcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "Launcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::LauncherOptions>
+    struct py_type<winrt::Windows::System::LauncherOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "LauncherOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::LauncherUIOptions>
+    struct py_type<winrt::Windows::System::LauncherUIOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "LauncherUIOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::MemoryManager>
+    struct py_type<winrt::Windows::System::MemoryManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "MemoryManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ProcessLauncher>
+    struct py_type<winrt::Windows::System::ProcessLauncher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ProcessLauncher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ProcessLauncherOptions>
+    struct py_type<winrt::Windows::System::ProcessLauncherOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ProcessLauncherOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ProcessLauncherResult>
+    struct py_type<winrt::Windows::System::ProcessLauncherResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ProcessLauncherResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ProcessMemoryReport>
+    struct py_type<winrt::Windows::System::ProcessMemoryReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ProcessMemoryReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ProtocolForResultsOperation>
+    struct py_type<winrt::Windows::System::ProtocolForResultsOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ProtocolForResultsOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::RemoteLauncher>
+    struct py_type<winrt::Windows::System::RemoteLauncher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "RemoteLauncher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::RemoteLauncherOptions>
+    struct py_type<winrt::Windows::System::RemoteLauncherOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "RemoteLauncherOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ShutdownManager>
+    struct py_type<winrt::Windows::System::ShutdownManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ShutdownManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::TimeZoneSettings>
+    struct py_type<winrt::Windows::System::TimeZoneSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "TimeZoneSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::User>
+    struct py_type<winrt::Windows::System::User>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "User";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>
+    struct py_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserAuthenticationStatusChangeDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>
+    struct py_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserAuthenticationStatusChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserChangedEventArgs>
+    struct py_type<winrt::Windows::System::UserChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserDeviceAssociation>
+    struct py_type<winrt::Windows::System::UserDeviceAssociation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserDeviceAssociation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>
+    struct py_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserDeviceAssociationChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserPicker>
+    struct py_type<winrt::Windows::System::UserPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserPicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserWatcher>
+    struct py_type<winrt::Windows::System::UserWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "UserWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::ILauncherViewOptions>
+    struct py_type<winrt::Windows::System::ILauncherViewOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system";
+        static constexpr const char* type_name = "ILauncherViewOptions";
     };
     template <>
     struct delegate_python_type<winrt::Windows::System::DispatcherQueueHandler>

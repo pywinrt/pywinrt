@@ -130,122 +130,142 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundDownloader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferCompletionGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferCompletionGroupTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferContentPart";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferRangesDownloadedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundUploader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "ContentPrefetcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "DownloadOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "ResponseInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "UnconstrainedTransferRequestResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "UploadOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "IBackgroundTransferBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "IBackgroundTransferContentPartFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "IBackgroundTransferOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "IBackgroundTransferOperationPriority";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundDownloadProgress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundTransferFileRange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>
+    struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
+        static constexpr const char* type_name = "BackgroundUploadProgress";
     };
 }

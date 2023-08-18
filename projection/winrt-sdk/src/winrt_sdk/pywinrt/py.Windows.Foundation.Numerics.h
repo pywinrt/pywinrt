@@ -53,50 +53,58 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::float3x2>
+    struct py_type<winrt::Windows::Foundation::Numerics::float3x2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Matrix3x2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::float4x4>
+    struct py_type<winrt::Windows::Foundation::Numerics::float4x4>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Matrix4x4";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::plane>
+    struct py_type<winrt::Windows::Foundation::Numerics::plane>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Plane";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::quaternion>
+    struct py_type<winrt::Windows::Foundation::Numerics::quaternion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Quaternion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::Rational>
+    struct py_type<winrt::Windows::Foundation::Numerics::Rational>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Rational";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::float2>
+    struct py_type<winrt::Windows::Foundation::Numerics::float2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Vector2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::float3>
+    struct py_type<winrt::Windows::Foundation::Numerics::float3>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Vector3";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Numerics::float4>
+    struct py_type<winrt::Windows::Foundation::Numerics::float4>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.numerics";
+        static constexpr const char* type_name = "Vector4";
     };
 }

@@ -59,20 +59,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Power::BackgroundEnergyManager>
+    struct py_type<winrt::Windows::System::Power::BackgroundEnergyManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "BackgroundEnergyManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Power::ForegroundEnergyManager>
+    struct py_type<winrt::Windows::System::Power::ForegroundEnergyManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "ForegroundEnergyManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Power::PowerManager>
+    struct py_type<winrt::Windows::System::Power::PowerManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power";
+        static constexpr const char* type_name = "PowerManager";
     };
 }

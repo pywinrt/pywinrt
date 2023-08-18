@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo>
+    struct py_type<winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
+        static constexpr const char* type_name = "GameControllerProviderInfo";
     };
 }

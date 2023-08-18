@@ -61,32 +61,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::UI::GameBar>
+    struct py_type<winrt::Windows::Gaming::UI::GameBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>
+    struct py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameChatMessageReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::UI::GameChatOverlay>
+    struct py_type<winrt::Windows::Gaming::UI::GameChatOverlay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameChatOverlay";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>
+    struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameChatOverlayMessageSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.ui";
+        static constexpr const char* type_name = "GameUIProviderActivatedEventArgs";
     };
 }

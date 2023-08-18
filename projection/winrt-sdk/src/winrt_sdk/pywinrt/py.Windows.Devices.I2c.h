@@ -74,32 +74,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::I2cConnectionSettings>
+    struct py_type<winrt::Windows::Devices::I2c::I2cConnectionSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c";
+        static constexpr const char* type_name = "I2cConnectionSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::I2cController>
+    struct py_type<winrt::Windows::Devices::I2c::I2cController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c";
+        static constexpr const char* type_name = "I2cController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::I2cDevice>
+    struct py_type<winrt::Windows::Devices::I2c::I2cDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c";
+        static constexpr const char* type_name = "I2cDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>
+    struct py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c";
+        static constexpr const char* type_name = "II2cDeviceStatics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::I2cTransferResult>
+    struct py_type<winrt::Windows::Devices::I2c::I2cTransferResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c";
+        static constexpr const char* type_name = "I2cTransferResult";
     };
 }

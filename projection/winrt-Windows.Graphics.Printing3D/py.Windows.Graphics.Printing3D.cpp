@@ -6,38 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Printing3D
 {
-    struct module_state
-    {
-        PyTypeObject* type_Print3DManager;
-        PyTypeObject* type_Print3DTask;
-        PyTypeObject* type_Print3DTaskCompletedEventArgs;
-        PyTypeObject* type_Print3DTaskRequest;
-        PyTypeObject* type_Print3DTaskRequestedEventArgs;
-        PyTypeObject* type_Print3DTaskSourceChangedEventArgs;
-        PyTypeObject* type_Print3DTaskSourceRequestedArgs;
-        PyTypeObject* type_Printing3D3MFPackage;
-        PyTypeObject* type_Printing3DBaseMaterial;
-        PyTypeObject* type_Printing3DBaseMaterialGroup;
-        PyTypeObject* type_Printing3DColorMaterial;
-        PyTypeObject* type_Printing3DColorMaterialGroup;
-        PyTypeObject* type_Printing3DComponent;
-        PyTypeObject* type_Printing3DComponentWithMatrix;
-        PyTypeObject* type_Printing3DCompositeMaterial;
-        PyTypeObject* type_Printing3DCompositeMaterialGroup;
-        PyTypeObject* type_Printing3DFaceReductionOptions;
-        PyTypeObject* type_Printing3DMaterial;
-        PyTypeObject* type_Printing3DMesh;
-        PyTypeObject* type_Printing3DMeshVerificationResult;
-        PyTypeObject* type_Printing3DModel;
-        PyTypeObject* type_Printing3DModelTexture;
-        PyTypeObject* type_Printing3DMultiplePropertyMaterial;
-        PyTypeObject* type_Printing3DMultiplePropertyMaterialGroup;
-        PyTypeObject* type_Printing3DTexture2CoordMaterial;
-        PyTypeObject* type_Printing3DTexture2CoordMaterialGroup;
-        PyTypeObject* type_Printing3DTextureResource;
-        PyTypeObject* type_Printing3DBufferDescription;
-    };
-
     // ----- Print3DManager class --------------------
     static constexpr const char* const type_name_Print3DManager = "Print3DManager";
 
@@ -6181,98 +6149,15 @@ namespace py::cpp::Windows::Graphics::Printing3D
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing3D");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Print3DManager);
-        Py_VISIT(state->type_Print3DTask);
-        Py_VISIT(state->type_Print3DTaskCompletedEventArgs);
-        Py_VISIT(state->type_Print3DTaskRequest);
-        Py_VISIT(state->type_Print3DTaskRequestedEventArgs);
-        Py_VISIT(state->type_Print3DTaskSourceChangedEventArgs);
-        Py_VISIT(state->type_Print3DTaskSourceRequestedArgs);
-        Py_VISIT(state->type_Printing3D3MFPackage);
-        Py_VISIT(state->type_Printing3DBaseMaterial);
-        Py_VISIT(state->type_Printing3DBaseMaterialGroup);
-        Py_VISIT(state->type_Printing3DColorMaterial);
-        Py_VISIT(state->type_Printing3DColorMaterialGroup);
-        Py_VISIT(state->type_Printing3DComponent);
-        Py_VISIT(state->type_Printing3DComponentWithMatrix);
-        Py_VISIT(state->type_Printing3DCompositeMaterial);
-        Py_VISIT(state->type_Printing3DCompositeMaterialGroup);
-        Py_VISIT(state->type_Printing3DFaceReductionOptions);
-        Py_VISIT(state->type_Printing3DMaterial);
-        Py_VISIT(state->type_Printing3DMesh);
-        Py_VISIT(state->type_Printing3DMeshVerificationResult);
-        Py_VISIT(state->type_Printing3DModel);
-        Py_VISIT(state->type_Printing3DModelTexture);
-        Py_VISIT(state->type_Printing3DMultiplePropertyMaterial);
-        Py_VISIT(state->type_Printing3DMultiplePropertyMaterialGroup);
-        Py_VISIT(state->type_Printing3DTexture2CoordMaterial);
-        Py_VISIT(state->type_Printing3DTexture2CoordMaterialGroup);
-        Py_VISIT(state->type_Printing3DTextureResource);
-        Py_VISIT(state->type_Printing3DBufferDescription);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Print3DManager);
-        Py_CLEAR(state->type_Print3DTask);
-        Py_CLEAR(state->type_Print3DTaskCompletedEventArgs);
-        Py_CLEAR(state->type_Print3DTaskRequest);
-        Py_CLEAR(state->type_Print3DTaskRequestedEventArgs);
-        Py_CLEAR(state->type_Print3DTaskSourceChangedEventArgs);
-        Py_CLEAR(state->type_Print3DTaskSourceRequestedArgs);
-        Py_CLEAR(state->type_Printing3D3MFPackage);
-        Py_CLEAR(state->type_Printing3DBaseMaterial);
-        Py_CLEAR(state->type_Printing3DBaseMaterialGroup);
-        Py_CLEAR(state->type_Printing3DColorMaterial);
-        Py_CLEAR(state->type_Printing3DColorMaterialGroup);
-        Py_CLEAR(state->type_Printing3DComponent);
-        Py_CLEAR(state->type_Printing3DComponentWithMatrix);
-        Py_CLEAR(state->type_Printing3DCompositeMaterial);
-        Py_CLEAR(state->type_Printing3DCompositeMaterialGroup);
-        Py_CLEAR(state->type_Printing3DFaceReductionOptions);
-        Py_CLEAR(state->type_Printing3DMaterial);
-        Py_CLEAR(state->type_Printing3DMesh);
-        Py_CLEAR(state->type_Printing3DMeshVerificationResult);
-        Py_CLEAR(state->type_Printing3DModel);
-        Py_CLEAR(state->type_Printing3DModelTexture);
-        Py_CLEAR(state->type_Printing3DMultiplePropertyMaterial);
-        Py_CLEAR(state->type_Printing3DMultiplePropertyMaterialGroup);
-        Py_CLEAR(state->type_Printing3DTexture2CoordMaterial);
-        Py_CLEAR(state->type_Printing3DTexture2CoordMaterialGroup);
-        Py_CLEAR(state->type_Printing3DTextureResource);
-        Py_CLEAR(state->type_Printing3DBufferDescription);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Printing3D",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Printing3D
@@ -6288,7 +6173,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing3D(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6301,53 +6186,74 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing3D(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Print3DManager = py::register_python_type(module.get(), type_name_Print3DManager, &type_spec_Print3DManager, object_bases.get(), nullptr);
-    if (!state->type_Print3DManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DManager, &type_spec_Print3DManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DManager, &type_spec_Print3DManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTask = py::register_python_type(module.get(), type_name_Print3DTask, &type_spec_Print3DTask, object_bases.get(), nullptr);
-    if (!state->type_Print3DTask)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTask, &type_spec_Print3DTask, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTask, &type_spec_Print3DTask, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTaskCompletedEventArgs = py::register_python_type(module.get(), type_name_Print3DTaskCompletedEventArgs, &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DTaskCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTaskCompletedEventArgs, &type_spec_Print3DTaskCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTaskCompletedEventArgs, &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTaskRequest = py::register_python_type(module.get(), type_name_Print3DTaskRequest, &type_spec_Print3DTaskRequest, object_bases.get(), nullptr);
-    if (!state->type_Print3DTaskRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTaskRequest, &type_spec_Print3DTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTaskRequest, &type_spec_Print3DTaskRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTaskRequestedEventArgs = py::register_python_type(module.get(), type_name_Print3DTaskRequestedEventArgs, &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DTaskRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTaskRequestedEventArgs, &type_spec_Print3DTaskRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTaskRequestedEventArgs, &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTaskSourceChangedEventArgs = py::register_python_type(module.get(), type_name_Print3DTaskSourceChangedEventArgs, &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DTaskSourceChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceChangedEventArgs, &type_spec_Print3DTaskSourceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceChangedEventArgs, &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DTaskSourceRequestedArgs = py::register_python_type(module.get(), type_name_Print3DTaskSourceRequestedArgs, &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DTaskSourceRequestedArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceRequestedArgs, &type_spec_Print3DTaskSourceRequestedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceRequestedArgs, &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3D3MFPackage = py::register_python_type(module.get(), type_name_Printing3D3MFPackage, &type_spec_Printing3D3MFPackage, object_bases.get(), nullptr);
-    if (!state->type_Printing3D3MFPackage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3D3MFPackage, &type_spec_Printing3D3MFPackage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3D3MFPackage, &type_spec_Printing3D3MFPackage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6358,770 +6264,186 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing3D(void) noexcept
         return nullptr;
     }
 
-    state->type_Printing3DBaseMaterial = py::register_python_type(module.get(), type_name_Printing3DBaseMaterial, &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get()));
-    if (!state->type_Printing3DBaseMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterial, &type_spec_Printing3DBaseMaterial, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterial, &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DBaseMaterialGroup = py::register_python_type(module.get(), type_name_Printing3DBaseMaterialGroup, &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), nullptr);
-    if (!state->type_Printing3DBaseMaterialGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterialGroup, &type_spec_Printing3DBaseMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterialGroup, &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DColorMaterial = py::register_python_type(module.get(), type_name_Printing3DColorMaterial, &type_spec_Printing3DColorMaterial, object_bases.get(), nullptr);
-    if (!state->type_Printing3DColorMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterial, &type_spec_Printing3DColorMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterial, &type_spec_Printing3DColorMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DColorMaterialGroup = py::register_python_type(module.get(), type_name_Printing3DColorMaterialGroup, &type_spec_Printing3DColorMaterialGroup, object_bases.get(), nullptr);
-    if (!state->type_Printing3DColorMaterialGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterialGroup, &type_spec_Printing3DColorMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterialGroup, &type_spec_Printing3DColorMaterialGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DComponent = py::register_python_type(module.get(), type_name_Printing3DComponent, &type_spec_Printing3DComponent, object_bases.get(), nullptr);
-    if (!state->type_Printing3DComponent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DComponent, &type_spec_Printing3DComponent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DComponent, &type_spec_Printing3DComponent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DComponentWithMatrix = py::register_python_type(module.get(), type_name_Printing3DComponentWithMatrix, &type_spec_Printing3DComponentWithMatrix, object_bases.get(), nullptr);
-    if (!state->type_Printing3DComponentWithMatrix)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DComponentWithMatrix, &type_spec_Printing3DComponentWithMatrix, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DComponentWithMatrix, &type_spec_Printing3DComponentWithMatrix, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DCompositeMaterial = py::register_python_type(module.get(), type_name_Printing3DCompositeMaterial, &type_spec_Printing3DCompositeMaterial, object_bases.get(), nullptr);
-    if (!state->type_Printing3DCompositeMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterial, &type_spec_Printing3DCompositeMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterial, &type_spec_Printing3DCompositeMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DCompositeMaterialGroup = py::register_python_type(module.get(), type_name_Printing3DCompositeMaterialGroup, &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), nullptr);
-    if (!state->type_Printing3DCompositeMaterialGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterialGroup, &type_spec_Printing3DCompositeMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterialGroup, &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DFaceReductionOptions = py::register_python_type(module.get(), type_name_Printing3DFaceReductionOptions, &type_spec_Printing3DFaceReductionOptions, object_bases.get(), nullptr);
-    if (!state->type_Printing3DFaceReductionOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DFaceReductionOptions, &type_spec_Printing3DFaceReductionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DFaceReductionOptions, &type_spec_Printing3DFaceReductionOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DMaterial = py::register_python_type(module.get(), type_name_Printing3DMaterial, &type_spec_Printing3DMaterial, object_bases.get(), nullptr);
-    if (!state->type_Printing3DMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DMaterial, &type_spec_Printing3DMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DMaterial, &type_spec_Printing3DMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DMesh = py::register_python_type(module.get(), type_name_Printing3DMesh, &type_spec_Printing3DMesh, object_bases.get(), nullptr);
-    if (!state->type_Printing3DMesh)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DMesh, &type_spec_Printing3DMesh, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DMesh, &type_spec_Printing3DMesh, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DMeshVerificationResult = py::register_python_type(module.get(), type_name_Printing3DMeshVerificationResult, &type_spec_Printing3DMeshVerificationResult, object_bases.get(), nullptr);
-    if (!state->type_Printing3DMeshVerificationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DMeshVerificationResult, &type_spec_Printing3DMeshVerificationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DMeshVerificationResult, &type_spec_Printing3DMeshVerificationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DModel = py::register_python_type(module.get(), type_name_Printing3DModel, &type_spec_Printing3DModel, object_bases.get(), nullptr);
-    if (!state->type_Printing3DModel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DModel, &type_spec_Printing3DModel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DModel, &type_spec_Printing3DModel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DModelTexture = py::register_python_type(module.get(), type_name_Printing3DModelTexture, &type_spec_Printing3DModelTexture, object_bases.get(), nullptr);
-    if (!state->type_Printing3DModelTexture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DModelTexture, &type_spec_Printing3DModelTexture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DModelTexture, &type_spec_Printing3DModelTexture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DMultiplePropertyMaterial = py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterial, &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), nullptr);
-    if (!state->type_Printing3DMultiplePropertyMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterial, &type_spec_Printing3DMultiplePropertyMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterial, &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DMultiplePropertyMaterialGroup = py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterialGroup, &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), nullptr);
-    if (!state->type_Printing3DMultiplePropertyMaterialGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterialGroup, &type_spec_Printing3DMultiplePropertyMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterialGroup, &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DTexture2CoordMaterial = py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterial, &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), nullptr);
-    if (!state->type_Printing3DTexture2CoordMaterial)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterial, &type_spec_Printing3DTexture2CoordMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterial, &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DTexture2CoordMaterialGroup = py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterialGroup, &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), nullptr);
-    if (!state->type_Printing3DTexture2CoordMaterialGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterialGroup, &type_spec_Printing3DTexture2CoordMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterialGroup, &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DTextureResource = py::register_python_type(module.get(), type_name_Printing3DTextureResource, &type_spec_Printing3DTextureResource, object_bases.get(), nullptr);
-    if (!state->type_Printing3DTextureResource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DTextureResource, &type_spec_Printing3DTextureResource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DTextureResource, &type_spec_Printing3DTextureResource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Printing3DBufferDescription = py::register_python_type(module.get(), type_name_Printing3DBufferDescription, &type_spec_Printing3DBufferDescription, nullptr, nullptr);
-    if (!state->type_Printing3DBufferDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Printing3DBufferDescription, &type_spec_Printing3DBufferDescription, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Printing3DBufferDescription, &type_spec_Printing3DBufferDescription, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTask>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTask;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTask is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskSourceChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DTaskSourceRequestedArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3D3MFPackage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DBaseMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DBaseMaterialGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DColorMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DColorMaterialGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DComponentWithMatrix;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DCompositeMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DCompositeMaterialGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DFaceReductionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMesh>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMesh;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMesh is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMeshVerificationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DModel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DModel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DModel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DModelTexture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DModelTexture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMultiplePropertyMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DMultiplePropertyMaterialGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DTexture2CoordMaterial;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DTexture2CoordMaterialGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DTextureResource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DTextureResource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Printing3DBufferDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

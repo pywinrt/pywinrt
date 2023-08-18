@@ -58,14 +58,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::EndpointPair>
+    struct py_type<winrt::Windows::Networking::EndpointPair>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking";
+        static constexpr const char* type_name = "EndpointPair";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::HostName>
+    struct py_type<winrt::Windows::Networking::HostName>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking";
+        static constexpr const char* type_name = "HostName";
     };
 }

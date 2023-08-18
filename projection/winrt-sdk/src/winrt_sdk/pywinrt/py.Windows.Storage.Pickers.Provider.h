@@ -75,56 +75,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "FileOpenPickerUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "FileRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "FileSavePickerUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "PickerClosingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "PickerClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "PickerClosingOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "TargetFileRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "TargetFileRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>
+    struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
+        static constexpr const char* type_name = "TargetFileRequestedEventArgs";
     };
 }

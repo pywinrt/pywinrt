@@ -149,110 +149,128 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiver>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverApplySettingsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverConnection>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverConnectionCreatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverCursorImageChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverCursorImageChannelSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverDisconnectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverGameControllerDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverInputDevices";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverKeyboardDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverMediaSourceCreatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverSession>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverSessionStartResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverSettings>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverStatus>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverStreamControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastReceiverVideoStreamSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Miracast::MiracastTransmitter>
+    struct py_type<winrt::Windows::Media::Miracast::MiracastTransmitter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.miracast";
+        static constexpr const char* type_name = "MiracastTransmitter";
     };
 }

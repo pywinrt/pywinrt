@@ -6,11 +6,6 @@
 
 namespace py::cpp::Windows::Media::Playlists
 {
-    struct module_state
-    {
-        PyTypeObject* type_Playlist;
-    };
-
     // ----- Playlist class --------------------
     static constexpr const char* const type_name_Playlist = "Playlist";
 
@@ -252,44 +247,15 @@ namespace py::cpp::Windows::Media::Playlists
     PyDoc_STRVAR(module_doc, "Windows::Media::Playlists");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Playlist);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Playlist);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Playlists",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Playlists
@@ -305,7 +271,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Playlists(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -318,38 +284,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Playlists(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Playlist = py::register_python_type(module.get(), type_name_Playlist, &type_spec_Playlist, object_bases.get(), nullptr);
-    if (!state->type_Playlist)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Playlist, &type_spec_Playlist, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Playlist, &type_spec_Playlist, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Playlists::Playlist>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Playlists;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Playlists");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Playlist;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Playlists::Playlist is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

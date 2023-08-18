@@ -106,164 +106,191 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Block>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Block>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Block";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "BlockCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Bold>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Bold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Bold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "ContactContentLinkProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLink>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "ContentLink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "ContentLinkInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "ContentLinkProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "ContentLinkProviderCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Glyphs>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Glyphs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Glyphs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Hyperlink>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Hyperlink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Hyperlink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "HyperlinkClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Inline>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Inline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Inline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "InlineCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "InlineUIContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Italic>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Italic>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Italic";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::LineBreak>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::LineBreak>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "LineBreak";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Paragraph>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Paragraph>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Paragraph";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "PlaceContentLinkProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Run>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Run>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Run";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Span>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Span>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Span";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::TextElement>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::TextElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "TextElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::TextHighlighter>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "TextHighlighter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "TextHighlighterBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::TextPointer>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "TextPointer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Typography>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Typography>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Typography";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::Underline>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::Underline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "Underline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Documents::TextRange>
+    struct py_type<winrt::Windows::UI::Xaml::Documents::TextRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
+        static constexpr const char* type_name = "TextRange";
     };
 }

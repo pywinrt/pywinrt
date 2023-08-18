@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::SocialInfo
 {
-    struct module_state
-    {
-        PyTypeObject* type_SocialFeedChildItem;
-        PyTypeObject* type_SocialFeedContent;
-        PyTypeObject* type_SocialFeedItem;
-        PyTypeObject* type_SocialFeedSharedItem;
-        PyTypeObject* type_SocialItemThumbnail;
-        PyTypeObject* type_SocialUserInfo;
-    };
-
     // ----- SocialFeedChildItem class --------------------
     static constexpr const char* const type_name_SocialFeedChildItem = "SocialFeedChildItem";
 
@@ -1974,54 +1964,15 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::SocialInfo");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SocialFeedChildItem);
-        Py_VISIT(state->type_SocialFeedContent);
-        Py_VISIT(state->type_SocialFeedItem);
-        Py_VISIT(state->type_SocialFeedSharedItem);
-        Py_VISIT(state->type_SocialItemThumbnail);
-        Py_VISIT(state->type_SocialUserInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SocialFeedChildItem);
-        Py_CLEAR(state->type_SocialFeedContent);
-        Py_CLEAR(state->type_SocialFeedItem);
-        Py_CLEAR(state->type_SocialFeedSharedItem);
-        Py_CLEAR(state->type_SocialItemThumbnail);
-        Py_CLEAR(state->type_SocialUserInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_SocialInfo",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::SocialInfo
@@ -2037,7 +1988,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_SocialInfo(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2050,183 +2001,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_SocialInfo(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SocialFeedChildItem = py::register_python_type(module.get(), type_name_SocialFeedChildItem, &type_spec_SocialFeedChildItem, object_bases.get(), nullptr);
-    if (!state->type_SocialFeedChildItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialFeedChildItem, &type_spec_SocialFeedChildItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialFeedChildItem, &type_spec_SocialFeedChildItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocialFeedContent = py::register_python_type(module.get(), type_name_SocialFeedContent, &type_spec_SocialFeedContent, object_bases.get(), nullptr);
-    if (!state->type_SocialFeedContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialFeedContent, &type_spec_SocialFeedContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialFeedContent, &type_spec_SocialFeedContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocialFeedItem = py::register_python_type(module.get(), type_name_SocialFeedItem, &type_spec_SocialFeedItem, object_bases.get(), nullptr);
-    if (!state->type_SocialFeedItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialFeedItem, &type_spec_SocialFeedItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialFeedItem, &type_spec_SocialFeedItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocialFeedSharedItem = py::register_python_type(module.get(), type_name_SocialFeedSharedItem, &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr);
-    if (!state->type_SocialFeedSharedItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialFeedSharedItem, &type_spec_SocialFeedSharedItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialFeedSharedItem, &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocialItemThumbnail = py::register_python_type(module.get(), type_name_SocialItemThumbnail, &type_spec_SocialItemThumbnail, object_bases.get(), nullptr);
-    if (!state->type_SocialItemThumbnail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialItemThumbnail, &type_spec_SocialItemThumbnail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialItemThumbnail, &type_spec_SocialItemThumbnail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocialUserInfo = py::register_python_type(module.get(), type_name_SocialUserInfo, &type_spec_SocialUserInfo, object_bases.get(), nullptr);
-    if (!state->type_SocialUserInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocialUserInfo, &type_spec_SocialUserInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocialUserInfo, &type_spec_SocialUserInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedChildItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialFeedSharedItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialItemThumbnail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::SocialInfo");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocialUserInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

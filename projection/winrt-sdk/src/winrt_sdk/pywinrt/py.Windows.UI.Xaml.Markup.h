@@ -67,92 +67,107 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::MarkupExtension>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::MarkupExtension>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "MarkupExtension";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XamlBinaryWriter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XamlBindingHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XamlMarkupHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XamlReader>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XamlReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XamlReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IComponentConnector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IComponentConnector2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IDataTemplateComponent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IXamlBindScopeDiagnostics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IXamlMember";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IXamlMetadataProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlType>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IXamlType>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IXamlType";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "IXamlType2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XamlBinaryWriterErrorInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>
+    struct py_type<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
+        static constexpr const char* type_name = "XmlnsDefinition";
     };
 }

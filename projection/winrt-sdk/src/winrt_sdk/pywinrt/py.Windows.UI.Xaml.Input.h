@@ -552,243 +552,283 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyDisplayDismissedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyDisplayRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>
+    struct py_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "CanExecuteRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "CharacterReceivedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ContextRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "DoubleTappedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ExecuteRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::FindNextElementOptions>
+    struct py_type<winrt::Windows::UI::Xaml::Input::FindNextElementOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FindNextElementOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::FocusManager>
+    struct py_type<winrt::Windows::UI::Xaml::Input::FocusManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManagerGotFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManagerLostFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>
+    struct py_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "FocusMovementResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "GettingFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "HoldingRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>
+    struct py_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaExpansionBehavior";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>
+    struct py_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaRotationBehavior";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>
+    struct py_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaTranslationBehavior";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::InputScope>
+    struct py_type<winrt::Windows::UI::Xaml::Input::InputScope>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InputScope";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::InputScopeName>
+    struct py_type<winrt::Windows::UI::Xaml::Input::InputScopeName>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "InputScopeName";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>
+    struct py_type<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAccelerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAcceleratorInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "LosingFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationCompletedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationDeltaRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationInertiaStartingRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationPivot>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationPivot>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationPivot";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationStartedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationStartingRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "NoFocusCandidateFoundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::Pointer>
+    struct py_type<winrt::Windows::UI::Xaml::Input::Pointer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "Pointer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "PointerRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ProcessKeyboardAcceleratorEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "RightTappedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::StandardUICommand>
+    struct py_type<winrt::Windows::UI::Xaml::Input::StandardUICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "StandardUICommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "TappedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::XamlUICommand>
+    struct py_type<winrt::Windows::UI::Xaml::Input::XamlUICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "XamlUICommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Input::ICommand>
+    struct py_type<winrt::Windows::UI::Xaml::Input::ICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.input";
+        static constexpr const char* type_name = "ICommand";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Input::DoubleTappedEventHandler>

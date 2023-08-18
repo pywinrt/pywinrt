@@ -55,26 +55,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>
+    struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
+        static constexpr const char* type_name = "ProviderSpiConnectionSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>
+    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
+        static constexpr const char* type_name = "ISpiControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>
+    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
+        static constexpr const char* type_name = "ISpiDeviceProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>
+    struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
+        static constexpr const char* type_name = "ISpiProvider";
     };
 }

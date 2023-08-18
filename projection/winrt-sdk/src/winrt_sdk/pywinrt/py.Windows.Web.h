@@ -43,14 +43,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::WebError>
+    struct py_type<winrt::Windows::Web::WebError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web";
+        static constexpr const char* type_name = "WebError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::IUriToStreamResolver>
+    struct py_type<winrt::Windows::Web::IUriToStreamResolver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web";
+        static constexpr const char* type_name = "IUriToStreamResolver";
     };
 }

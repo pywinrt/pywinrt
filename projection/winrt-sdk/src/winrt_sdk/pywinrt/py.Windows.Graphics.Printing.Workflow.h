@@ -170,176 +170,205 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowBackgroundSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowBackgroundSetupRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowForegroundSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowForegroundSetupRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobBackgroundSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobNotificationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowJobUISession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowObjectModelSourceFileContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowObjectModelTargetPackage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlConverter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlDataAvailableEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlModificationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlSourceContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPdlTargetStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowPrinterJob";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSourceContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSpoolStreamContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowStreamTarget";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowSubmittedOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowTarget";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowUIActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowUILauncher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>
+    struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
+        static constexpr const char* type_name = "PrintWorkflowXpsDataAvailableEventArgs";
     };
 }

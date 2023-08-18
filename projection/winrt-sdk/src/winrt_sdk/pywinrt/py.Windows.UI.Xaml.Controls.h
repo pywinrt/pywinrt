@@ -1699,1773 +1699,2068 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AnchorRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AnchorRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AnchorRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AppBar>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AppBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AppBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AppBarButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AppBarButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AppBarButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AppBarElementContainer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AppBarElementContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AppBarElementContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AppBarSeparator>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AppBarSeparator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AppBarSeparator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AppBarToggleButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AutoSuggestBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxQuerySubmittedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxQuerySubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AutoSuggestBoxQuerySubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxSuggestionChosenEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxSuggestionChosenEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AutoSuggestBoxSuggestionChosenEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "AutoSuggestBoxTextChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::BackClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::BackClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "BackClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::BitmapIcon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::BitmapIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "BitmapIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::BitmapIconSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::BitmapIconSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "BitmapIconSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Border>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Border>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Border";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Button>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Button>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Button";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarDatePicker>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarDatePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarDatePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarDatePickerDateChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarDatePickerDateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarDatePickerDateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarViewDayItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarViewDayItemChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CalendarViewSelectedDatesChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CalendarViewSelectedDatesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CalendarViewSelectedDatesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CandidateWindowBoundsChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CandidateWindowBoundsChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CandidateWindowBoundsChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Canvas>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Canvas>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Canvas";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CaptureElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CaptureElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CaptureElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CheckBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CheckBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CheckBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ChoosingGroupHeaderContainerEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ChoosingItemContainerEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ChoosingItemContainerEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ChoosingItemContainerEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CleanUpVirtualizedItemEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ColorChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ColorPicker>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ColorPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ColorPicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ColumnDefinition>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ColumnDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ColumnDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ColumnDefinitionCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ColumnDefinitionCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ColumnDefinitionCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ComboBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ComboBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ComboBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ComboBoxItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ComboBoxItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ComboBoxItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ComboBoxTextSubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CommandBar>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CommandBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CommandBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CommandBarFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::CommandBarOverflowPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::CommandBarOverflowPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "CommandBarOverflowPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContainerContentChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialog>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickDeferral>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogButtonClickDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogButtonClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingDeferral>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogClosingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentDialogOpenedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentLinkChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentLinkChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentLinkChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContentPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContentPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContentPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ContextMenuEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Control>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Control>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Control";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ControlTemplate>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ControlTemplate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ControlTemplate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DataTemplateSelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePicker>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickerFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickerFlyoutItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickerFlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickerSelectedValueChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickerSelectedValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickerSelectedValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DatePickerValueChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DatePickerValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DatePickerValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DragItemsCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DragItemsCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DragItemsCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DragItemsStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DropDownButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DropDownButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DropDownButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DropDownButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DropDownButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DropDownButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "DynamicOverflowItemsChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FlipView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FlipView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FlipView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FlipViewItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FlipViewItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FlipViewItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Flyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Flyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Flyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FocusDisengagedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FocusDisengagedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FocusDisengagedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FocusEngagedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FocusEngagedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FocusEngagedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FontIcon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FontIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FontIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::FontIconSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::FontIconSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "FontIconSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Frame>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Frame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Frame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Grid>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Grid>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Grid";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GridView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GridView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GridView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GridViewHeaderItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GridViewItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GridViewItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GridViewItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GroupItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GroupItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GroupItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GroupStyle>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GroupStyle>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GroupStyle";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::GroupStyleSelector>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::GroupStyleSelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "GroupStyleSelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HandwritingPanelClosedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HandwritingPanelClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HandwritingPanelClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HandwritingPanelOpenedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HandwritingPanelOpenedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HandwritingPanelOpenedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HandwritingView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HandwritingView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HandwritingView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HandwritingViewCandidatesChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HandwritingViewCandidatesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HandwritingViewCandidatesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HandwritingViewTextSubmittedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HandwritingViewTextSubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HandwritingViewTextSubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Hub>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Hub>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Hub";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HubSection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HubSection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HubSection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HubSectionCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HubSectionCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HubSectionCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HubSectionHeaderClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "HyperlinkButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IconElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IconElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IconElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IconSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IconSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IconSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IconSourceElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IconSourceElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IconSourceElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Image>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Image>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Image";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkCanvas>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkCanvas>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkCanvas";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbar>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarBallpointPenButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPen>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPen>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarCustomPen";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarCustomPenButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarCustomToggleButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarCustomToolButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarEraserButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarFlyoutItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarHighlighterButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarIsStencilButtonCheckedChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarIsStencilButtonCheckedChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarIsStencilButtonCheckedChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarMenuButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarPenButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPenConfigurationControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPenConfigurationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarPenConfigurationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarPencilButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarRulerButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarStencilButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarToggleButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "InkToolbarToolButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IsTextTrimmedChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemContainerGenerator>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemContainerGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsPanelTemplate>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsPanelTemplate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsPanelTemplate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsPickedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsPickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsPickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsStackPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsStackPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsStackPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ItemsWrapGrid>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ItemsWrapGrid>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemsWrapGrid";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListBoxItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListBoxItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListBoxItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListPickerFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListPickerFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListPickerFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListPickerFlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListPickerFlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListPickerFlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListViewBase>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListViewBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListViewBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListViewBaseHeaderItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListViewHeaderItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListViewItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListViewItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListViewItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ListViewPersistenceHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ListViewPersistenceHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ListViewPersistenceHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MediaElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MediaElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MediaElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MediaPlayerElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MediaPlayerElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MediaPlayerElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MediaPlayerPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MediaPlayerPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MediaPlayerPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MediaTransportControls>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MediaTransportControls>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MediaTransportControls";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MediaTransportControlsHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MediaTransportControlsHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MediaTransportControlsHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuBar>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuBarItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuBarItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuBarItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuBarItemFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyoutItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItemBase>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItemBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyoutItemBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSeparator>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSeparator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyoutSeparator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSubItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSubItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "MenuFlyoutSubItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewBackRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayModeChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayModeChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewDisplayModeChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemBase>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewItemBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewItemHeader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewItemInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewItemSeparator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewList>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewPaneClosingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewPaneClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewPaneClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewSelectionChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewSelectionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewSelectionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NavigationViewTemplateSettings>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NavigationViewTemplateSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NavigationViewTemplateSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::NotifyEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::NotifyEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "NotifyEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Page>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Page>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Page";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Panel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Panel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Panel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ParallaxView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ParallaxView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ParallaxView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PasswordBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PasswordBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PasswordBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PasswordBoxPasswordChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PasswordBoxPasswordChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PasswordBoxPasswordChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PathIcon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PathIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PathIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PathIconSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PathIconSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PathIconSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PersonPicture>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PersonPicture>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PersonPicture";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PickerConfirmedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PickerConfirmedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PickerConfirmedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PickerFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PickerFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PickerFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PickerFlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PickerFlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PickerFlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Pivot>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Pivot>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Pivot";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PivotItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PivotItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PivotItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::PivotItemEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::PivotItemEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "PivotItemEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ProgressBar>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ProgressBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ProgressBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ProgressRing>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ProgressRing>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ProgressRing";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RadioButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RadioButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RadioButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RatingControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RatingControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RatingControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RatingItemFontInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RatingItemImageInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RatingItemImageInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RatingItemImageInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RatingItemInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RatingItemInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RatingItemInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RefreshContainer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RefreshContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RefreshContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RefreshInteractionRatioChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RefreshRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RefreshRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RefreshRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RefreshStateChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RefreshStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RefreshStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RefreshVisualizer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RefreshVisualizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RefreshVisualizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RelativePanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RelativePanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RelativePanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RichEditBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RichEditBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RichEditBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RichEditBoxSelectionChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RichEditBoxSelectionChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RichEditBoxSelectionChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RichEditBoxTextChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RichEditBoxTextChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RichEditBoxTextChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RichTextBlock>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RichTextBlock>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RichTextBlock";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RichTextBlockOverflow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RowDefinition>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RowDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RowDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::RowDefinitionCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::RowDefinitionCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "RowDefinitionCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ScrollContentPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ScrollContentPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollContentPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ScrollViewer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ScrollViewer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollViewer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollViewerView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollViewerViewChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollViewerViewChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SearchBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SearchBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SearchBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SearchBoxQueryChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SearchBoxQueryChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SearchBoxQueryChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SearchBoxQuerySubmittedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SearchBoxQuerySubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SearchBoxQuerySubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SearchBoxResultSuggestionChosenEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SearchBoxResultSuggestionChosenEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SearchBoxResultSuggestionChosenEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SearchBoxSuggestionsRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SearchBoxSuggestionsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SearchBoxSuggestionsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SectionsInViewChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SemanticZoom>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SemanticZoom>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SemanticZoom";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SemanticZoomLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SemanticZoomViewChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SettingsFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SettingsFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SettingsFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Slider>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Slider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Slider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SplitButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SplitButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SplitButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SplitButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SplitButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SplitButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SplitButtonClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SplitButtonClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SplitButtonClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SplitView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SplitView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SplitView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SplitViewPaneClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::StackPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::StackPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "StackPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::StyleSelector>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::StyleSelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "StyleSelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwapChainBackgroundPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwapChainBackgroundPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwapChainBackgroundPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwapChainPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwapChainPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwapChainPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwipeControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwipeControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwipeControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwipeItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwipeItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwipeItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwipeItemInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwipeItemInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwipeItemInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SwipeItems>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SwipeItems>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SwipeItems";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SymbolIcon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SymbolIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SymbolIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::SymbolIconSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::SymbolIconSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "SymbolIconSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextBlock>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextBlock>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextBlock";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextBox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextBoxBeforeTextChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextBoxSelectionChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextBoxSelectionChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextBoxSelectionChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextBoxTextChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextBoxTextChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextBoxTextChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextCommandBarFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextCompositionChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextCompositionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextCompositionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextCompositionEndedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextCompositionEndedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextCompositionEndedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextCompositionStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextCompositionStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextCompositionStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextControlCopyingToClipboardEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextControlCopyingToClipboardEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextControlCopyingToClipboardEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextControlCuttingToClipboardEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextControlCuttingToClipboardEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextControlCuttingToClipboardEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TextControlPasteEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePickedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePicker>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePickerFlyout>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePickerFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePickerFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePickerFlyoutPresenter>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePickerFlyoutPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePickerFlyoutPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePickerSelectedValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TimePickerValueChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TimePickerValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TimePickerValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToggleMenuFlyoutItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButton>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToggleSplitButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToggleSplitButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToggleSplitButtonIsCheckedChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToggleSwitch>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToggleSwitch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToggleSwitch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToolTip>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToolTip>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToolTip";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ToolTipService>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ToolTipService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ToolTipService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewCollapsedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewCollapsedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewCollapsedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewDragItemsCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsStartingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewDragItemsStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewExpandingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewExpandingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewExpandingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewItem>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewItemInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewItemInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewItemInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewItemTemplateSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewList>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TreeViewNode>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TreeViewNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TreeViewNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::TwoPaneView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::TwoPaneView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "TwoPaneView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::UIElementCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::UIElementCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "UIElementCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::UserControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::UserControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "UserControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::VariableSizedWrapGrid>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::VariableSizedWrapGrid>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "VariableSizedWrapGrid";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Viewbox>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Viewbox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "Viewbox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::VirtualizingPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::VirtualizingPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "VirtualizingPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "VirtualizingStackPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewContentLoadingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewContentLoadingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewContentLoadingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewDOMContentLoadedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewDOMContentLoadedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewDOMContentLoadedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewDeferredPermissionRequest>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewDeferredPermissionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewDeferredPermissionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewLongRunningScriptDetectedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewLongRunningScriptDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewLongRunningScriptDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewNavigationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewNavigationFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationStartingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewNavigationStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewNavigationStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewNewWindowRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewNewWindowRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewNewWindowRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequest>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewPermissionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewPermissionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewSeparateProcessLostEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewSeparateProcessLostEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewSeparateProcessLostEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewSettings>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewUnsupportedUriSchemeIdentifiedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewUnsupportedUriSchemeIdentifiedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewUnsupportedUriSchemeIdentifiedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewUnviewableContentIdentifiedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewUnviewableContentIdentifiedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewUnviewableContentIdentifiedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WebViewWebResourceRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WebViewWebResourceRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WebViewWebResourceRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::WrapGrid>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::WrapGrid>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "WrapGrid";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ICommandBarElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ICommandBarElement2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IInsertionPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IItemContainerMapping";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::INavigate>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::INavigate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "INavigate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "IScrollAnchorProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
+        static constexpr const char* type_name = "ISemanticZoomInformation";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Controls::BackClickEventHandler>

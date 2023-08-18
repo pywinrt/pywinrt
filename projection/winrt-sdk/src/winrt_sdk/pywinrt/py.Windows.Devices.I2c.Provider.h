@@ -69,32 +69,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>
+    struct py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "ProviderI2cConnectionSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>
+    struct py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "II2cControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>
+    struct py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "II2cDeviceProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>
+    struct py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "II2cProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>
+    struct py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
+        static constexpr const char* type_name = "ProviderI2cTransferResult";
     };
 }

@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Devices::WiFiDirect::Services
 {
-    struct module_state
-    {
-        PyTypeObject* type_WiFiDirectService;
-        PyTypeObject* type_WiFiDirectServiceAdvertiser;
-        PyTypeObject* type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs;
-        PyTypeObject* type_WiFiDirectServiceProvisioningInfo;
-        PyTypeObject* type_WiFiDirectServiceRemotePortAddedEventArgs;
-        PyTypeObject* type_WiFiDirectServiceSession;
-        PyTypeObject* type_WiFiDirectServiceSessionDeferredEventArgs;
-        PyTypeObject* type_WiFiDirectServiceSessionRequest;
-        PyTypeObject* type_WiFiDirectServiceSessionRequestedEventArgs;
-    };
-
     // ----- WiFiDirectService class --------------------
     static constexpr const char* const type_name_WiFiDirectService = "WiFiDirectService";
 
@@ -2389,60 +2376,15 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
     PyDoc_STRVAR(module_doc, "Windows::Devices::WiFiDirect::Services");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WiFiDirectService);
-        Py_VISIT(state->type_WiFiDirectServiceAdvertiser);
-        Py_VISIT(state->type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs);
-        Py_VISIT(state->type_WiFiDirectServiceProvisioningInfo);
-        Py_VISIT(state->type_WiFiDirectServiceRemotePortAddedEventArgs);
-        Py_VISIT(state->type_WiFiDirectServiceSession);
-        Py_VISIT(state->type_WiFiDirectServiceSessionDeferredEventArgs);
-        Py_VISIT(state->type_WiFiDirectServiceSessionRequest);
-        Py_VISIT(state->type_WiFiDirectServiceSessionRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WiFiDirectService);
-        Py_CLEAR(state->type_WiFiDirectServiceAdvertiser);
-        Py_CLEAR(state->type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs);
-        Py_CLEAR(state->type_WiFiDirectServiceProvisioningInfo);
-        Py_CLEAR(state->type_WiFiDirectServiceRemotePortAddedEventArgs);
-        Py_CLEAR(state->type_WiFiDirectServiceSession);
-        Py_CLEAR(state->type_WiFiDirectServiceSessionDeferredEventArgs);
-        Py_CLEAR(state->type_WiFiDirectServiceSessionRequest);
-        Py_CLEAR(state->type_WiFiDirectServiceSessionRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_WiFiDirect_Services",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::WiFiDirect::Services
@@ -2458,7 +2400,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFiDirect_Services(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2471,270 +2413,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFiDirect_Services(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WiFiDirectService = py::register_python_type(module.get(), type_name_WiFiDirectService, &type_spec_WiFiDirectService, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectService, &type_spec_WiFiDirectService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectService, &type_spec_WiFiDirectService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceAdvertiser = py::register_python_type(module.get(), type_name_WiFiDirectServiceAdvertiser, &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceAdvertiser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAdvertiser, &type_spec_WiFiDirectServiceAdvertiser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAdvertiser, &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs = py::register_python_type(module.get(), type_name_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceProvisioningInfo = py::register_python_type(module.get(), type_name_WiFiDirectServiceProvisioningInfo, &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceProvisioningInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceProvisioningInfo, &type_spec_WiFiDirectServiceProvisioningInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceProvisioningInfo, &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceRemotePortAddedEventArgs = py::register_python_type(module.get(), type_name_WiFiDirectServiceRemotePortAddedEventArgs, &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceRemotePortAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceRemotePortAddedEventArgs, &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceRemotePortAddedEventArgs, &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceSession = py::register_python_type(module.get(), type_name_WiFiDirectServiceSession, &type_spec_WiFiDirectServiceSession, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSession, &type_spec_WiFiDirectServiceSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSession, &type_spec_WiFiDirectServiceSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceSessionDeferredEventArgs = py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionDeferredEventArgs, &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceSessionDeferredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionDeferredEventArgs, &type_spec_WiFiDirectServiceSessionDeferredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionDeferredEventArgs, &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceSessionRequest = py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequest, &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceSessionRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequest, &type_spec_WiFiDirectServiceSessionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequest, &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiDirectServiceSessionRequestedEventArgs = py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequestedEventArgs, &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WiFiDirectServiceSessionRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequestedEventArgs, &type_spec_WiFiDirectServiceSessionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequestedEventArgs, &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceAdvertiser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceProvisioningInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceRemotePortAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceSessionDeferredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceSessionRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFiDirect::Services");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiDirectServiceSessionRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

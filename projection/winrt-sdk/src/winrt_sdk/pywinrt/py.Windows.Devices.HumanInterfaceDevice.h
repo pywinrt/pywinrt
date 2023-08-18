@@ -71,62 +71,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidBooleanControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidBooleanControlDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidFeatureReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidInputReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidInputReportReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidNumericControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidNumericControlDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>
+    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
+        static constexpr const char* type_name = "HidOutputReport";
     };
 }

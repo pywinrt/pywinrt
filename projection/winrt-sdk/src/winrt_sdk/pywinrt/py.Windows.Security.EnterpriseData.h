@@ -132,98 +132,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>
+    struct py_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "BufferProtectUnprotectResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>
+    struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "DataProtectionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>
+    struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "DataProtectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>
+    struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "FileProtectionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>
+    struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "FileProtectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>
+    struct py_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "FileRevocationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>
+    struct py_type<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "FileUnprotectOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedAccessResumedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedAccessSuspendingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedContainerExportResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedContainerImportResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedContentRevokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectedFileCreateResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectionPolicyAuditInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ProtectionPolicyManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>
+    struct py_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
+        static constexpr const char* type_name = "ThreadNetworkContext";
     };
 }

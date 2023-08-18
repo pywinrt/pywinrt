@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Media::Editing
 {
-    struct module_state
-    {
-        PyTypeObject* type_BackgroundAudioTrack;
-        PyTypeObject* type_EmbeddedAudioTrack;
-        PyTypeObject* type_MediaClip;
-        PyTypeObject* type_MediaComposition;
-        PyTypeObject* type_MediaOverlay;
-        PyTypeObject* type_MediaOverlayLayer;
-    };
-
     // ----- BackgroundAudioTrack class --------------------
     static constexpr const char* const type_name_BackgroundAudioTrack = "BackgroundAudioTrack";
 
@@ -2306,54 +2296,15 @@ namespace py::cpp::Windows::Media::Editing
     PyDoc_STRVAR(module_doc, "Windows::Media::Editing");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BackgroundAudioTrack);
-        Py_VISIT(state->type_EmbeddedAudioTrack);
-        Py_VISIT(state->type_MediaClip);
-        Py_VISIT(state->type_MediaComposition);
-        Py_VISIT(state->type_MediaOverlay);
-        Py_VISIT(state->type_MediaOverlayLayer);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BackgroundAudioTrack);
-        Py_CLEAR(state->type_EmbeddedAudioTrack);
-        Py_CLEAR(state->type_MediaClip);
-        Py_CLEAR(state->type_MediaComposition);
-        Py_CLEAR(state->type_MediaOverlay);
-        Py_CLEAR(state->type_MediaOverlayLayer);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Editing",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Editing
@@ -2369,7 +2320,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Editing(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2382,183 +2333,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Editing(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BackgroundAudioTrack = py::register_python_type(module.get(), type_name_BackgroundAudioTrack, &type_spec_BackgroundAudioTrack, object_bases.get(), nullptr);
-    if (!state->type_BackgroundAudioTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundAudioTrack, &type_spec_BackgroundAudioTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundAudioTrack, &type_spec_BackgroundAudioTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmbeddedAudioTrack = py::register_python_type(module.get(), type_name_EmbeddedAudioTrack, &type_spec_EmbeddedAudioTrack, object_bases.get(), nullptr);
-    if (!state->type_EmbeddedAudioTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmbeddedAudioTrack, &type_spec_EmbeddedAudioTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmbeddedAudioTrack, &type_spec_EmbeddedAudioTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaClip = py::register_python_type(module.get(), type_name_MediaClip, &type_spec_MediaClip, object_bases.get(), nullptr);
-    if (!state->type_MediaClip)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaClip, &type_spec_MediaClip, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaClip, &type_spec_MediaClip, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaComposition = py::register_python_type(module.get(), type_name_MediaComposition, &type_spec_MediaComposition, object_bases.get(), nullptr);
-    if (!state->type_MediaComposition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaComposition, &type_spec_MediaComposition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaComposition, &type_spec_MediaComposition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaOverlay = py::register_python_type(module.get(), type_name_MediaOverlay, &type_spec_MediaOverlay, object_bases.get(), nullptr);
-    if (!state->type_MediaOverlay)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaOverlay, &type_spec_MediaOverlay, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaOverlay, &type_spec_MediaOverlay, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaOverlayLayer = py::register_python_type(module.get(), type_name_MediaOverlayLayer, &type_spec_MediaOverlayLayer, object_bases.get(), nullptr);
-    if (!state->type_MediaOverlayLayer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaOverlayLayer, &type_spec_MediaOverlayLayer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaOverlayLayer, &type_spec_MediaOverlayLayer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundAudioTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::BackgroundAudioTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmbeddedAudioTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::EmbeddedAudioTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::MediaClip>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaClip;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::MediaClip is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::MediaComposition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaComposition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::MediaComposition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::MediaOverlay>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaOverlay;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::MediaOverlay is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Editing::MediaOverlayLayer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Editing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Editing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaOverlayLayer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Editing::MediaOverlayLayer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

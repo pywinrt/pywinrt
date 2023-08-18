@@ -80,26 +80,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>
+    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "SpeechSynthesisStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>
+    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "SpeechSynthesizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>
+    struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "SpeechSynthesizerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>
+    struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
+        static constexpr const char* type_name = "VoiceInformation";
     };
 }

@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Gaming::XboxLive::Storage
 {
-    struct module_state
-    {
-        PyTypeObject* type_GameSaveBlobGetResult;
-        PyTypeObject* type_GameSaveBlobInfo;
-        PyTypeObject* type_GameSaveBlobInfoGetResult;
-        PyTypeObject* type_GameSaveBlobInfoQuery;
-        PyTypeObject* type_GameSaveContainer;
-        PyTypeObject* type_GameSaveContainerInfo;
-        PyTypeObject* type_GameSaveContainerInfoGetResult;
-        PyTypeObject* type_GameSaveContainerInfoQuery;
-        PyTypeObject* type_GameSaveOperationResult;
-        PyTypeObject* type_GameSaveProvider;
-        PyTypeObject* type_GameSaveProviderGetResult;
-    };
-
     // ----- GameSaveBlobGetResult class --------------------
     static constexpr const char* const type_name_GameSaveBlobGetResult = "GameSaveBlobGetResult";
 
@@ -1786,64 +1771,15 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     PyDoc_STRVAR(module_doc, "Windows::Gaming::XboxLive::Storage");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GameSaveBlobGetResult);
-        Py_VISIT(state->type_GameSaveBlobInfo);
-        Py_VISIT(state->type_GameSaveBlobInfoGetResult);
-        Py_VISIT(state->type_GameSaveBlobInfoQuery);
-        Py_VISIT(state->type_GameSaveContainer);
-        Py_VISIT(state->type_GameSaveContainerInfo);
-        Py_VISIT(state->type_GameSaveContainerInfoGetResult);
-        Py_VISIT(state->type_GameSaveContainerInfoQuery);
-        Py_VISIT(state->type_GameSaveOperationResult);
-        Py_VISIT(state->type_GameSaveProvider);
-        Py_VISIT(state->type_GameSaveProviderGetResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GameSaveBlobGetResult);
-        Py_CLEAR(state->type_GameSaveBlobInfo);
-        Py_CLEAR(state->type_GameSaveBlobInfoGetResult);
-        Py_CLEAR(state->type_GameSaveBlobInfoQuery);
-        Py_CLEAR(state->type_GameSaveContainer);
-        Py_CLEAR(state->type_GameSaveContainerInfo);
-        Py_CLEAR(state->type_GameSaveContainerInfoGetResult);
-        Py_CLEAR(state->type_GameSaveContainerInfoQuery);
-        Py_CLEAR(state->type_GameSaveOperationResult);
-        Py_CLEAR(state->type_GameSaveProvider);
-        Py_CLEAR(state->type_GameSaveProviderGetResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Gaming_XboxLive_Storage",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Gaming::XboxLive::Storage
@@ -1859,7 +1795,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_XboxLive_Storage(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1872,328 +1808,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_XboxLive_Storage(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GameSaveBlobGetResult = py::register_python_type(module.get(), type_name_GameSaveBlobGetResult, &type_spec_GameSaveBlobGetResult, object_bases.get(), nullptr);
-    if (!state->type_GameSaveBlobGetResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobGetResult, &type_spec_GameSaveBlobGetResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobGetResult, &type_spec_GameSaveBlobGetResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveBlobInfo = py::register_python_type(module.get(), type_name_GameSaveBlobInfo, &type_spec_GameSaveBlobInfo, object_bases.get(), nullptr);
-    if (!state->type_GameSaveBlobInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfo, &type_spec_GameSaveBlobInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfo, &type_spec_GameSaveBlobInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveBlobInfoGetResult = py::register_python_type(module.get(), type_name_GameSaveBlobInfoGetResult, &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), nullptr);
-    if (!state->type_GameSaveBlobInfoGetResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfoGetResult, &type_spec_GameSaveBlobInfoGetResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfoGetResult, &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveBlobInfoQuery = py::register_python_type(module.get(), type_name_GameSaveBlobInfoQuery, &type_spec_GameSaveBlobInfoQuery, object_bases.get(), nullptr);
-    if (!state->type_GameSaveBlobInfoQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfoQuery, &type_spec_GameSaveBlobInfoQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveBlobInfoQuery, &type_spec_GameSaveBlobInfoQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveContainer = py::register_python_type(module.get(), type_name_GameSaveContainer, &type_spec_GameSaveContainer, object_bases.get(), nullptr);
-    if (!state->type_GameSaveContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveContainer, &type_spec_GameSaveContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveContainer, &type_spec_GameSaveContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveContainerInfo = py::register_python_type(module.get(), type_name_GameSaveContainerInfo, &type_spec_GameSaveContainerInfo, object_bases.get(), nullptr);
-    if (!state->type_GameSaveContainerInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfo, &type_spec_GameSaveContainerInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfo, &type_spec_GameSaveContainerInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveContainerInfoGetResult = py::register_python_type(module.get(), type_name_GameSaveContainerInfoGetResult, &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), nullptr);
-    if (!state->type_GameSaveContainerInfoGetResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfoGetResult, &type_spec_GameSaveContainerInfoGetResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfoGetResult, &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveContainerInfoQuery = py::register_python_type(module.get(), type_name_GameSaveContainerInfoQuery, &type_spec_GameSaveContainerInfoQuery, object_bases.get(), nullptr);
-    if (!state->type_GameSaveContainerInfoQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfoQuery, &type_spec_GameSaveContainerInfoQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveContainerInfoQuery, &type_spec_GameSaveContainerInfoQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveOperationResult = py::register_python_type(module.get(), type_name_GameSaveOperationResult, &type_spec_GameSaveOperationResult, object_bases.get(), nullptr);
-    if (!state->type_GameSaveOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveOperationResult, &type_spec_GameSaveOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveOperationResult, &type_spec_GameSaveOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveProvider = py::register_python_type(module.get(), type_name_GameSaveProvider, &type_spec_GameSaveProvider, object_bases.get(), nullptr);
-    if (!state->type_GameSaveProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveProvider, &type_spec_GameSaveProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveProvider, &type_spec_GameSaveProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameSaveProviderGetResult = py::register_python_type(module.get(), type_name_GameSaveProviderGetResult, &type_spec_GameSaveProviderGetResult, object_bases.get(), nullptr);
-    if (!state->type_GameSaveProviderGetResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameSaveProviderGetResult, &type_spec_GameSaveProviderGetResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameSaveProviderGetResult, &type_spec_GameSaveProviderGetResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveBlobGetResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveBlobInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveBlobInfoGetResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveBlobInfoQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveContainerInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveContainerInfoGetResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveContainerInfoQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::XboxLive::Storage");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameSaveProviderGetResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

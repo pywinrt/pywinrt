@@ -56,32 +56,37 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>
+    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
+        static constexpr const char* type_name = "SpatialSurfaceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>
+    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
+        static constexpr const char* type_name = "SpatialSurfaceMesh";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>
+    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
+        static constexpr const char* type_name = "SpatialSurfaceMeshBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>
+    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
+        static constexpr const char* type_name = "SpatialSurfaceMeshOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver>
+    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
+        static constexpr const char* type_name = "SpatialSurfaceObserver";
     };
 }

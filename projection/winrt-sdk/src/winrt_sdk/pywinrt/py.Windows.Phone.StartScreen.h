@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::StartScreen::DualSimTile>
+    struct py_type<winrt::Windows::Phone::StartScreen::DualSimTile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.startscreen";
+        static constexpr const char* type_name = "DualSimTile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
+    struct py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.startscreen";
+        static constexpr const char* type_name = "IToastNotificationManagerStatics3";
     };
 }

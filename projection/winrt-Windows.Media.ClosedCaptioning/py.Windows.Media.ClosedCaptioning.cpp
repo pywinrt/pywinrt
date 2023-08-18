@@ -6,11 +6,6 @@
 
 namespace py::cpp::Windows::Media::ClosedCaptioning
 {
-    struct module_state
-    {
-        PyTypeObject* type_ClosedCaptionProperties;
-    };
-
     // ----- ClosedCaptionProperties class --------------------
     static constexpr const char* const type_name_ClosedCaptionProperties = "ClosedCaptionProperties";
 
@@ -354,44 +349,15 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
     PyDoc_STRVAR(module_doc, "Windows::Media::ClosedCaptioning");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ClosedCaptionProperties);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ClosedCaptionProperties);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_ClosedCaptioning",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::ClosedCaptioning
@@ -407,7 +373,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_ClosedCaptioning(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -420,44 +386,21 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_ClosedCaptioning(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_ClosedCaptionProperties_Meta{PyType_FromSpec(&type_spec_ClosedCaptionProperties_Meta)};
     if (!type_ClosedCaptionProperties_Meta)
     {
         return nullptr;
     }
 
-    state->type_ClosedCaptionProperties = py::register_python_type(module.get(), type_name_ClosedCaptionProperties, &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Meta.get()));
-    if (!state->type_ClosedCaptionProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClosedCaptionProperties, &type_spec_ClosedCaptionProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClosedCaptionProperties, &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::ClosedCaptioning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::ClosedCaptioning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosedCaptionProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

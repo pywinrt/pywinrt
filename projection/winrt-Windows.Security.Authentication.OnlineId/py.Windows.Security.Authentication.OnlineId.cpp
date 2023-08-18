@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::Security::Authentication::OnlineId
 {
-    struct module_state
-    {
-        PyTypeObject* type_OnlineIdAuthenticator;
-        PyTypeObject* type_OnlineIdServiceTicket;
-        PyTypeObject* type_OnlineIdServiceTicketRequest;
-        PyTypeObject* type_OnlineIdSystemAuthenticator;
-        PyTypeObject* type_OnlineIdSystemAuthenticatorForUser;
-        PyTypeObject* type_OnlineIdSystemIdentity;
-        PyTypeObject* type_OnlineIdSystemTicketResult;
-        PyTypeObject* type_SignOutUserOperation;
-        PyTypeObject* type_UserAuthenticationOperation;
-        PyTypeObject* type_UserIdentity;
-    };
-
     // ----- OnlineIdAuthenticator class --------------------
     static constexpr const char* const type_name_OnlineIdAuthenticator = "OnlineIdAuthenticator";
 
@@ -1913,62 +1899,15 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::OnlineId");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_OnlineIdAuthenticator);
-        Py_VISIT(state->type_OnlineIdServiceTicket);
-        Py_VISIT(state->type_OnlineIdServiceTicketRequest);
-        Py_VISIT(state->type_OnlineIdSystemAuthenticator);
-        Py_VISIT(state->type_OnlineIdSystemAuthenticatorForUser);
-        Py_VISIT(state->type_OnlineIdSystemIdentity);
-        Py_VISIT(state->type_OnlineIdSystemTicketResult);
-        Py_VISIT(state->type_SignOutUserOperation);
-        Py_VISIT(state->type_UserAuthenticationOperation);
-        Py_VISIT(state->type_UserIdentity);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_OnlineIdAuthenticator);
-        Py_CLEAR(state->type_OnlineIdServiceTicket);
-        Py_CLEAR(state->type_OnlineIdServiceTicketRequest);
-        Py_CLEAR(state->type_OnlineIdSystemAuthenticator);
-        Py_CLEAR(state->type_OnlineIdSystemAuthenticatorForUser);
-        Py_CLEAR(state->type_OnlineIdSystemIdentity);
-        Py_CLEAR(state->type_OnlineIdSystemTicketResult);
-        Py_CLEAR(state->type_SignOutUserOperation);
-        Py_CLEAR(state->type_UserAuthenticationOperation);
-        Py_CLEAR(state->type_UserIdentity);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Authentication_OnlineId",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Authentication::OnlineId
@@ -1984,7 +1923,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_OnlineId(void) noex
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1997,23 +1936,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_OnlineId(void) noex
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_OnlineIdAuthenticator = py::register_python_type(module.get(), type_name_OnlineIdAuthenticator, &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdAuthenticator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdAuthenticator, &type_spec_OnlineIdAuthenticator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdAuthenticator, &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OnlineIdServiceTicket = py::register_python_type(module.get(), type_name_OnlineIdServiceTicket, &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdServiceTicket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicket, &type_spec_OnlineIdServiceTicket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicket, &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OnlineIdServiceTicketRequest = py::register_python_type(module.get(), type_name_OnlineIdServiceTicketRequest, &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdServiceTicketRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicketRequest, &type_spec_OnlineIdServiceTicketRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicketRequest, &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2024,278 +1969,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_OnlineId(void) noex
         return nullptr;
     }
 
-    state->type_OnlineIdSystemAuthenticator = py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticator, &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get()));
-    if (!state->type_OnlineIdSystemAuthenticator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticator, &type_spec_OnlineIdSystemAuthenticator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticator, &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OnlineIdSystemAuthenticatorForUser = py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticatorForUser, &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdSystemAuthenticatorForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticatorForUser, &type_spec_OnlineIdSystemAuthenticatorForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticatorForUser, &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OnlineIdSystemIdentity = py::register_python_type(module.get(), type_name_OnlineIdSystemIdentity, &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdSystemIdentity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemIdentity, &type_spec_OnlineIdSystemIdentity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemIdentity, &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OnlineIdSystemTicketResult = py::register_python_type(module.get(), type_name_OnlineIdSystemTicketResult, &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr);
-    if (!state->type_OnlineIdSystemTicketResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemTicketResult, &type_spec_OnlineIdSystemTicketResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OnlineIdSystemTicketResult, &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SignOutUserOperation = py::register_python_type(module.get(), type_name_SignOutUserOperation, &type_spec_SignOutUserOperation, object_bases.get(), nullptr);
-    if (!state->type_SignOutUserOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SignOutUserOperation, &type_spec_SignOutUserOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SignOutUserOperation, &type_spec_SignOutUserOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserAuthenticationOperation = py::register_python_type(module.get(), type_name_UserAuthenticationOperation, &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr);
-    if (!state->type_UserAuthenticationOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationOperation, &type_spec_UserAuthenticationOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserAuthenticationOperation, &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserIdentity = py::register_python_type(module.get(), type_name_UserIdentity, &type_spec_UserIdentity, object_bases.get(), nullptr);
-    if (!state->type_UserIdentity)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserIdentity, &type_spec_UserIdentity, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserIdentity, &type_spec_UserIdentity, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdAuthenticator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdServiceTicket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdServiceTicketRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdSystemAuthenticator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdSystemAuthenticatorForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdSystemIdentity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OnlineIdSystemTicketResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SignOutUserOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserAuthenticationOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::OnlineId;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::OnlineId");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserIdentity;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::OnlineId::UserIdentity is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

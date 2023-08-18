@@ -487,291 +487,339 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>
+    struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AdvancedPhotoCaptureSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>
+    struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AdvancedPhotoControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AudioDeviceController>
+    struct py_type<winrt::Windows::Media::Devices::AudioDeviceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AudioDeviceController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AudioDeviceModule>
+    struct py_type<winrt::Windows::Media::Devices::AudioDeviceModule>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AudioDeviceModule";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AudioDeviceModuleNotificationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::AudioDeviceModulesManager>
+    struct py_type<winrt::Windows::Media::Devices::AudioDeviceModulesManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "AudioDeviceModulesManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::CallControl>
+    struct py_type<winrt::Windows::Media::Devices::CallControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CallControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>
+    struct py_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CameraOcclusionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::CameraOcclusionState>
+    struct py_type<winrt::Windows::Media::Devices::CameraOcclusionState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CameraOcclusionState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "CameraOcclusionStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DefaultAudioCaptureDeviceChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DefaultAudioRenderDeviceChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DialRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DigitalWindowBounds>
+    struct py_type<winrt::Windows::Media::Devices::DigitalWindowBounds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DigitalWindowBounds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DigitalWindowCapability>
+    struct py_type<winrt::Windows::Media::Devices::DigitalWindowCapability>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DigitalWindowCapability";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::DigitalWindowControl>
+    struct py_type<winrt::Windows::Media::Devices::DigitalWindowControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "DigitalWindowControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ExposureCompensationControl>
+    struct py_type<winrt::Windows::Media::Devices::ExposureCompensationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ExposureCompensationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ExposureControl>
+    struct py_type<winrt::Windows::Media::Devices::ExposureControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ExposureControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>
+    struct py_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ExposurePriorityVideoControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::FlashControl>
+    struct py_type<winrt::Windows::Media::Devices::FlashControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "FlashControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::FocusControl>
+    struct py_type<winrt::Windows::Media::Devices::FocusControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "FocusControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::FocusSettings>
+    struct py_type<winrt::Windows::Media::Devices::FocusSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "FocusSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::HdrVideoControl>
+    struct py_type<winrt::Windows::Media::Devices::HdrVideoControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "HdrVideoControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::InfraredTorchControl>
+    struct py_type<winrt::Windows::Media::Devices::InfraredTorchControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "InfraredTorchControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::IsoSpeedControl>
+    struct py_type<winrt::Windows::Media::Devices::IsoSpeedControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "IsoSpeedControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "KeypadPressedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::LowLagPhotoControl>
+    struct py_type<winrt::Windows::Media::Devices::LowLagPhotoControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "LowLagPhotoControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>
+    struct py_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "LowLagPhotoSequenceControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::MediaDevice>
+    struct py_type<winrt::Windows::Media::Devices::MediaDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::MediaDeviceControl>
+    struct py_type<winrt::Windows::Media::Devices::MediaDeviceControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaDeviceControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>
+    struct py_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "MediaDeviceControlCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ModuleCommandResult>
+    struct py_type<winrt::Windows::Media::Devices::ModuleCommandResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ModuleCommandResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>
+    struct py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "OpticalImageStabilizationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>
+    struct py_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "PanelBasedOptimizationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>
+    struct py_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "PhotoConfirmationControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "RedialRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::RegionOfInterest>
+    struct py_type<winrt::Windows::Media::Devices::RegionOfInterest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "RegionOfInterest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>
+    struct py_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "RegionsOfInterestControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::SceneModeControl>
+    struct py_type<winrt::Windows::Media::Devices::SceneModeControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "SceneModeControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::TorchControl>
+    struct py_type<winrt::Windows::Media::Devices::TorchControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "TorchControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::VideoDeviceController>
+    struct py_type<winrt::Windows::Media::Devices::VideoDeviceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoDeviceController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>
+    struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoDeviceControllerGetDevicePropertyResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>
+    struct py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "VideoTemporalDenoisingControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::WhiteBalanceControl>
+    struct py_type<winrt::Windows::Media::Devices::WhiteBalanceControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "WhiteBalanceControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ZoomControl>
+    struct py_type<winrt::Windows::Media::Devices::ZoomControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ZoomControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::ZoomSettings>
+    struct py_type<winrt::Windows::Media::Devices::ZoomSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "ZoomSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "IDefaultAudioDeviceChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Devices::IMediaDeviceController>
+    struct py_type<winrt::Windows::Media::Devices::IMediaDeviceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.devices";
+        static constexpr const char* type_name = "IMediaDeviceController";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Media::Devices::CallControlEventHandler>

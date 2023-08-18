@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Portable
 {
-    struct module_state
-    {
-        PyTypeObject* type_ServiceDevice;
-        PyTypeObject* type_StorageDevice;
-    };
-
     // ----- ServiceDevice class --------------------
     static constexpr const char* const type_name_ServiceDevice = "ServiceDevice";
 
@@ -210,46 +204,15 @@ namespace py::cpp::Windows::Devices::Portable
     PyDoc_STRVAR(module_doc, "Windows::Devices::Portable");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ServiceDevice);
-        Py_VISIT(state->type_StorageDevice);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ServiceDevice);
-        Py_CLEAR(state->type_StorageDevice);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Portable",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Portable
@@ -265,7 +228,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Portable(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -278,67 +241,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Portable(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ServiceDevice = py::register_python_type(module.get(), type_name_ServiceDevice, &type_spec_ServiceDevice, object_bases.get(), nullptr);
-    if (!state->type_ServiceDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServiceDevice, &type_spec_ServiceDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServiceDevice, &type_spec_ServiceDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageDevice = py::register_python_type(module.get(), type_name_StorageDevice, &type_spec_StorageDevice, object_bases.get(), nullptr);
-    if (!state->type_StorageDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageDevice, &type_spec_StorageDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageDevice, &type_spec_StorageDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Portable::ServiceDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Portable;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Portable");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServiceDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Portable::ServiceDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Portable::StorageDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Portable;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Portable");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Portable::StorageDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

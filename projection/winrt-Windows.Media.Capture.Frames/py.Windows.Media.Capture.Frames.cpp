@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::Media::Capture::Frames
 {
-    struct module_state
-    {
-        PyTypeObject* type_AudioMediaFrame;
-        PyTypeObject* type_BufferMediaFrame;
-        PyTypeObject* type_DepthMediaFrame;
-        PyTypeObject* type_DepthMediaFrameFormat;
-        PyTypeObject* type_InfraredMediaFrame;
-        PyTypeObject* type_MediaFrameArrivedEventArgs;
-        PyTypeObject* type_MediaFrameFormat;
-        PyTypeObject* type_MediaFrameReader;
-        PyTypeObject* type_MediaFrameReference;
-        PyTypeObject* type_MediaFrameSource;
-        PyTypeObject* type_MediaFrameSourceController;
-        PyTypeObject* type_MediaFrameSourceGetPropertyResult;
-        PyTypeObject* type_MediaFrameSourceGroup;
-        PyTypeObject* type_MediaFrameSourceInfo;
-        PyTypeObject* type_MultiSourceMediaFrameArrivedEventArgs;
-        PyTypeObject* type_MultiSourceMediaFrameReader;
-        PyTypeObject* type_MultiSourceMediaFrameReference;
-        PyTypeObject* type_VideoMediaFrame;
-        PyTypeObject* type_VideoMediaFrameFormat;
-    };
-
     // ----- AudioMediaFrame class --------------------
     static constexpr const char* const type_name_AudioMediaFrame = "AudioMediaFrame";
 
@@ -3745,80 +3722,15 @@ namespace py::cpp::Windows::Media::Capture::Frames
     PyDoc_STRVAR(module_doc, "Windows::Media::Capture::Frames");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AudioMediaFrame);
-        Py_VISIT(state->type_BufferMediaFrame);
-        Py_VISIT(state->type_DepthMediaFrame);
-        Py_VISIT(state->type_DepthMediaFrameFormat);
-        Py_VISIT(state->type_InfraredMediaFrame);
-        Py_VISIT(state->type_MediaFrameArrivedEventArgs);
-        Py_VISIT(state->type_MediaFrameFormat);
-        Py_VISIT(state->type_MediaFrameReader);
-        Py_VISIT(state->type_MediaFrameReference);
-        Py_VISIT(state->type_MediaFrameSource);
-        Py_VISIT(state->type_MediaFrameSourceController);
-        Py_VISIT(state->type_MediaFrameSourceGetPropertyResult);
-        Py_VISIT(state->type_MediaFrameSourceGroup);
-        Py_VISIT(state->type_MediaFrameSourceInfo);
-        Py_VISIT(state->type_MultiSourceMediaFrameArrivedEventArgs);
-        Py_VISIT(state->type_MultiSourceMediaFrameReader);
-        Py_VISIT(state->type_MultiSourceMediaFrameReference);
-        Py_VISIT(state->type_VideoMediaFrame);
-        Py_VISIT(state->type_VideoMediaFrameFormat);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AudioMediaFrame);
-        Py_CLEAR(state->type_BufferMediaFrame);
-        Py_CLEAR(state->type_DepthMediaFrame);
-        Py_CLEAR(state->type_DepthMediaFrameFormat);
-        Py_CLEAR(state->type_InfraredMediaFrame);
-        Py_CLEAR(state->type_MediaFrameArrivedEventArgs);
-        Py_CLEAR(state->type_MediaFrameFormat);
-        Py_CLEAR(state->type_MediaFrameReader);
-        Py_CLEAR(state->type_MediaFrameReference);
-        Py_CLEAR(state->type_MediaFrameSource);
-        Py_CLEAR(state->type_MediaFrameSourceController);
-        Py_CLEAR(state->type_MediaFrameSourceGetPropertyResult);
-        Py_CLEAR(state->type_MediaFrameSourceGroup);
-        Py_CLEAR(state->type_MediaFrameSourceInfo);
-        Py_CLEAR(state->type_MultiSourceMediaFrameArrivedEventArgs);
-        Py_CLEAR(state->type_MultiSourceMediaFrameReader);
-        Py_CLEAR(state->type_MultiSourceMediaFrameReference);
-        Py_CLEAR(state->type_VideoMediaFrame);
-        Py_CLEAR(state->type_VideoMediaFrameFormat);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Capture_Frames",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Capture::Frames
@@ -3834,7 +3746,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture_Frames(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3847,560 +3759,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture_Frames(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AudioMediaFrame = py::register_python_type(module.get(), type_name_AudioMediaFrame, &type_spec_AudioMediaFrame, object_bases.get(), nullptr);
-    if (!state->type_AudioMediaFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioMediaFrame, &type_spec_AudioMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioMediaFrame, &type_spec_AudioMediaFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BufferMediaFrame = py::register_python_type(module.get(), type_name_BufferMediaFrame, &type_spec_BufferMediaFrame, object_bases.get(), nullptr);
-    if (!state->type_BufferMediaFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BufferMediaFrame, &type_spec_BufferMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BufferMediaFrame, &type_spec_BufferMediaFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DepthMediaFrame = py::register_python_type(module.get(), type_name_DepthMediaFrame, &type_spec_DepthMediaFrame, object_bases.get(), nullptr);
-    if (!state->type_DepthMediaFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DepthMediaFrame, &type_spec_DepthMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DepthMediaFrame, &type_spec_DepthMediaFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DepthMediaFrameFormat = py::register_python_type(module.get(), type_name_DepthMediaFrameFormat, &type_spec_DepthMediaFrameFormat, object_bases.get(), nullptr);
-    if (!state->type_DepthMediaFrameFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DepthMediaFrameFormat, &type_spec_DepthMediaFrameFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DepthMediaFrameFormat, &type_spec_DepthMediaFrameFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InfraredMediaFrame = py::register_python_type(module.get(), type_name_InfraredMediaFrame, &type_spec_InfraredMediaFrame, object_bases.get(), nullptr);
-    if (!state->type_InfraredMediaFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InfraredMediaFrame, &type_spec_InfraredMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InfraredMediaFrame, &type_spec_InfraredMediaFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_MediaFrameArrivedEventArgs, &type_spec_MediaFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameArrivedEventArgs, &type_spec_MediaFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameArrivedEventArgs, &type_spec_MediaFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameFormat = py::register_python_type(module.get(), type_name_MediaFrameFormat, &type_spec_MediaFrameFormat, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameFormat, &type_spec_MediaFrameFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameFormat, &type_spec_MediaFrameFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameReader = py::register_python_type(module.get(), type_name_MediaFrameReader, &type_spec_MediaFrameReader, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameReader, &type_spec_MediaFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameReader, &type_spec_MediaFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameReference = py::register_python_type(module.get(), type_name_MediaFrameReference, &type_spec_MediaFrameReference, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameReference, &type_spec_MediaFrameReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameReference, &type_spec_MediaFrameReference, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameSource = py::register_python_type(module.get(), type_name_MediaFrameSource, &type_spec_MediaFrameSource, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameSource, &type_spec_MediaFrameSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameSource, &type_spec_MediaFrameSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameSourceController = py::register_python_type(module.get(), type_name_MediaFrameSourceController, &type_spec_MediaFrameSourceController, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameSourceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceController, &type_spec_MediaFrameSourceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceController, &type_spec_MediaFrameSourceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameSourceGetPropertyResult = py::register_python_type(module.get(), type_name_MediaFrameSourceGetPropertyResult, &type_spec_MediaFrameSourceGetPropertyResult, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameSourceGetPropertyResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceGetPropertyResult, &type_spec_MediaFrameSourceGetPropertyResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceGetPropertyResult, &type_spec_MediaFrameSourceGetPropertyResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameSourceGroup = py::register_python_type(module.get(), type_name_MediaFrameSourceGroup, &type_spec_MediaFrameSourceGroup, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameSourceGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceGroup, &type_spec_MediaFrameSourceGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceGroup, &type_spec_MediaFrameSourceGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaFrameSourceInfo = py::register_python_type(module.get(), type_name_MediaFrameSourceInfo, &type_spec_MediaFrameSourceInfo, object_bases.get(), nullptr);
-    if (!state->type_MediaFrameSourceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceInfo, &type_spec_MediaFrameSourceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaFrameSourceInfo, &type_spec_MediaFrameSourceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MultiSourceMediaFrameArrivedEventArgs = py::register_python_type(module.get(), type_name_MultiSourceMediaFrameArrivedEventArgs, &type_spec_MultiSourceMediaFrameArrivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MultiSourceMediaFrameArrivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameArrivedEventArgs, &type_spec_MultiSourceMediaFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameArrivedEventArgs, &type_spec_MultiSourceMediaFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MultiSourceMediaFrameReader = py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReader, &type_spec_MultiSourceMediaFrameReader, object_bases.get(), nullptr);
-    if (!state->type_MultiSourceMediaFrameReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReader, &type_spec_MultiSourceMediaFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReader, &type_spec_MultiSourceMediaFrameReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MultiSourceMediaFrameReference = py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReference, &type_spec_MultiSourceMediaFrameReference, object_bases.get(), nullptr);
-    if (!state->type_MultiSourceMediaFrameReference)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReference, &type_spec_MultiSourceMediaFrameReference, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MultiSourceMediaFrameReference, &type_spec_MultiSourceMediaFrameReference, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoMediaFrame = py::register_python_type(module.get(), type_name_VideoMediaFrame, &type_spec_VideoMediaFrame, object_bases.get(), nullptr);
-    if (!state->type_VideoMediaFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoMediaFrame, &type_spec_VideoMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoMediaFrame, &type_spec_VideoMediaFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoMediaFrameFormat = py::register_python_type(module.get(), type_name_VideoMediaFrameFormat, &type_spec_VideoMediaFrameFormat, object_bases.get(), nullptr);
-    if (!state->type_VideoMediaFrameFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoMediaFrameFormat, &type_spec_VideoMediaFrameFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoMediaFrameFormat, &type_spec_VideoMediaFrameFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioMediaFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::AudioMediaFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BufferMediaFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::BufferMediaFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DepthMediaFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::DepthMediaFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DepthMediaFrameFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InfraredMediaFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::InfraredMediaFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceGetPropertyResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaFrameSourceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MultiSourceMediaFrameArrivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MultiSourceMediaFrameReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MultiSourceMediaFrameReference;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoMediaFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::VideoMediaFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture::Frames;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture::Frames");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoMediaFrameFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

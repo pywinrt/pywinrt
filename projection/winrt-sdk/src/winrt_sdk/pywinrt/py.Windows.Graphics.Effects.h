@@ -23,14 +23,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>
+    struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.effects";
+        static constexpr const char* type_name = "IGraphicsEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
+    struct py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.effects";
+        static constexpr const char* type_name = "IGraphicsEffectSource";
     };
 }

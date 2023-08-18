@@ -35,26 +35,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>
+    struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
+        static constexpr const char* type_name = "AppBroadcastingMonitor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>
+    struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
+        static constexpr const char* type_name = "AppBroadcastingStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>
+    struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
+        static constexpr const char* type_name = "AppBroadcastingStatusDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>
+    struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
+        static constexpr const char* type_name = "AppBroadcastingUI";
     };
 }

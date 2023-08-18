@@ -94,104 +94,121 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationAttribute>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationAttribute>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationAttribute";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationCategory>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationCategory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationCategory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationClient>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationContent>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationError>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationFeed>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationFeed>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationFeed";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationGenerator>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationItem>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationLink>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationLink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationLink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationNode>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationPerson>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationPerson>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationPerson";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::SyndicationText>
+    struct py_type<winrt::Windows::Web::Syndication::SyndicationText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "SyndicationText";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::ISyndicationClient>
+    struct py_type<winrt::Windows::Web::Syndication::ISyndicationClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "ISyndicationClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::ISyndicationNode>
+    struct py_type<winrt::Windows::Web::Syndication::ISyndicationNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "ISyndicationNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::ISyndicationText>
+    struct py_type<winrt::Windows::Web::Syndication::ISyndicationText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "ISyndicationText";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::RetrievalProgress>
+    struct py_type<winrt::Windows::Web::Syndication::RetrievalProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "RetrievalProgress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Syndication::TransferProgress>
+    struct py_type<winrt::Windows::Web::Syndication::TransferProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.syndication";
+        static constexpr const char* type_name = "TransferProgress";
     };
 }

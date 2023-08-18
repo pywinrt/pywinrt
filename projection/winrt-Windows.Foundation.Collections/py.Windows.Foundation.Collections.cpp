@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::Foundation::Collections
 {
-    struct module_state
-    {
-        PyTypeObject* type_PropertySet;
-        PyTypeObject* type_StringMap;
-        PyTypeObject* type_ValueSet;
-        PyTypeObject* type_IIterable;
-        PyTypeObject* type_IIterator;
-        PyTypeObject* type_IKeyValuePair;
-        PyTypeObject* type_IMapChangedEventArgs;
-        PyTypeObject* type_IMapView;
-        PyTypeObject* type_IMap;
-        PyTypeObject* type_IObservableMap;
-        PyTypeObject* type_IObservableVector;
-        PyTypeObject* type_IPropertySet;
-        PyTypeObject* type_IVectorChangedEventArgs;
-        PyTypeObject* type_IVectorView;
-        PyTypeObject* type_IVector;
-    };
-
     // ----- PropertySet class --------------------
     static constexpr const char* const type_name_PropertySet = "PropertySet";
 
@@ -3213,72 +3194,15 @@ namespace py::cpp::Windows::Foundation::Collections
     PyDoc_STRVAR(module_doc, "Windows::Foundation::Collections");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PropertySet);
-        Py_VISIT(state->type_StringMap);
-        Py_VISIT(state->type_ValueSet);
-        Py_VISIT(state->type_IIterable);
-        Py_VISIT(state->type_IIterator);
-        Py_VISIT(state->type_IKeyValuePair);
-        Py_VISIT(state->type_IMapChangedEventArgs);
-        Py_VISIT(state->type_IMapView);
-        Py_VISIT(state->type_IMap);
-        Py_VISIT(state->type_IObservableMap);
-        Py_VISIT(state->type_IObservableVector);
-        Py_VISIT(state->type_IPropertySet);
-        Py_VISIT(state->type_IVectorChangedEventArgs);
-        Py_VISIT(state->type_IVectorView);
-        Py_VISIT(state->type_IVector);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PropertySet);
-        Py_CLEAR(state->type_StringMap);
-        Py_CLEAR(state->type_ValueSet);
-        Py_CLEAR(state->type_IIterable);
-        Py_CLEAR(state->type_IIterator);
-        Py_CLEAR(state->type_IKeyValuePair);
-        Py_CLEAR(state->type_IMapChangedEventArgs);
-        Py_CLEAR(state->type_IMapView);
-        Py_CLEAR(state->type_IMap);
-        Py_CLEAR(state->type_IObservableMap);
-        Py_CLEAR(state->type_IObservableVector);
-        Py_CLEAR(state->type_IPropertySet);
-        Py_CLEAR(state->type_IVectorChangedEventArgs);
-        Py_CLEAR(state->type_IVectorView);
-        Py_CLEAR(state->type_IVector);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Foundation_Collections",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Foundation::Collections
@@ -3294,7 +3218,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Collections(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3307,444 +3231,141 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Collections(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PropertySet = py::register_python_type(module.get(), type_name_PropertySet, &type_spec_PropertySet, object_bases.get(), nullptr);
-    if (!state->type_PropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PropertySet, &type_spec_PropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PropertySet, &type_spec_PropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StringMap = py::register_python_type(module.get(), type_name_StringMap, &type_spec_StringMap, object_bases.get(), nullptr);
-    if (!state->type_StringMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StringMap, &type_spec_StringMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StringMap, &type_spec_StringMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ValueSet = py::register_python_type(module.get(), type_name_ValueSet, &type_spec_ValueSet, object_bases.get(), nullptr);
-    if (!state->type_ValueSet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ValueSet, &type_spec_ValueSet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ValueSet, &type_spec_ValueSet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IIterable = py::register_python_type(module.get(), type_name_IIterable, &type_spec_IIterable, object_bases.get(), nullptr);
-    if (!state->type_IIterable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IIterable, &type_spec_IIterable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IIterable, &type_spec_IIterable, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IIterator = py::register_python_type(module.get(), type_name_IIterator, &type_spec_IIterator, object_bases.get(), nullptr);
-    if (!state->type_IIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IIterator, &type_spec_IIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IIterator, &type_spec_IIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IKeyValuePair = py::register_python_type(module.get(), type_name_IKeyValuePair, &type_spec_IKeyValuePair, object_bases.get(), nullptr);
-    if (!state->type_IKeyValuePair)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IKeyValuePair, &type_spec_IKeyValuePair, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IKeyValuePair, &type_spec_IKeyValuePair, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMapChangedEventArgs = py::register_python_type(module.get(), type_name_IMapChangedEventArgs, &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IMapChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMapChangedEventArgs, &type_spec_IMapChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMapChangedEventArgs, &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMapView = py::register_python_type(module.get(), type_name_IMapView, &type_spec_IMapView, object_bases.get(), nullptr);
-    if (!state->type_IMapView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMapView, &type_spec_IMapView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMapView, &type_spec_IMapView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMap = py::register_python_type(module.get(), type_name_IMap, &type_spec_IMap, object_bases.get(), nullptr);
-    if (!state->type_IMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMap, &type_spec_IMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMap, &type_spec_IMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IObservableMap = py::register_python_type(module.get(), type_name_IObservableMap, &type_spec_IObservableMap, object_bases.get(), nullptr);
-    if (!state->type_IObservableMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IObservableMap, &type_spec_IObservableMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IObservableMap, &type_spec_IObservableMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IObservableVector = py::register_python_type(module.get(), type_name_IObservableVector, &type_spec_IObservableVector, object_bases.get(), nullptr);
-    if (!state->type_IObservableVector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IObservableVector, &type_spec_IObservableVector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IObservableVector, &type_spec_IObservableVector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPropertySet = py::register_python_type(module.get(), type_name_IPropertySet, &type_spec_IPropertySet, object_bases.get(), nullptr);
-    if (!state->type_IPropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPropertySet, &type_spec_IPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPropertySet, &type_spec_IPropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVectorChangedEventArgs = py::register_python_type(module.get(), type_name_IVectorChangedEventArgs, &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IVectorChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVectorChangedEventArgs, &type_spec_IVectorChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVectorChangedEventArgs, &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVectorView = py::register_python_type(module.get(), type_name_IVectorView, &type_spec_IVectorView, object_bases.get(), nullptr);
-    if (!state->type_IVectorView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVectorView, &type_spec_IVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVectorView, &type_spec_IVectorView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVector = py::register_python_type(module.get(), type_name_IVector, &type_spec_IVector, object_bases.get(), nullptr);
-    if (!state->type_IVector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVector, &type_spec_IVector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVector, &type_spec_IVector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::PropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::PropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::StringMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StringMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::StringMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::ValueSet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ValueSet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::ValueSet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IIterable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IIterable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IIterable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IKeyValuePair;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IKeyValuePair is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMapChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IMapChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IMapView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMapView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IMapView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IObservableMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IObservableMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IObservableMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IObservableVector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IObservableVector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IObservableVector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::IPropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::IPropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVectorChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Foundation::Collections::IVectorChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IVectorView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVectorView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IVectorView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<py::proj::Windows::Foundation::Collections::IVector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Foundation::Collections;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Foundation::Collections");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type py::proj::Windows::Foundation::Collections::IVector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

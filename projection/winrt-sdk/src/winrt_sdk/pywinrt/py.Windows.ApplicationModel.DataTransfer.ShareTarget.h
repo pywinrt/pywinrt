@@ -43,14 +43,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
+        static constexpr const char* type_name = "QuickLink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>
+    struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
+        static constexpr const char* type_name = "ShareOperation";
     };
 }

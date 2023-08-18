@@ -160,56 +160,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiAdapter>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiAdapter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiAdapter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiAvailableNetwork";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiConnectionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiNetworkReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiOnDemandHotspotConnectTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiOnDemandHotspotConnectionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiOnDemandHotspotNetwork";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiOnDemandHotspotNetworkProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>
+    struct py_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifi";
+        static constexpr const char* type_name = "WiFiWpsConfigurationResult";
     };
 }

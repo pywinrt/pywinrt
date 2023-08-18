@@ -72,98 +72,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "CurrentTimeChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "MuteChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToConnection>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnectionErrorEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnectionStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToConnectionTransferredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToManager>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToReceiver>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToReceiver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToReceiver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToSource>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToSourceDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceRequest>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToSourceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToSourceRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlayToSourceSelectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "PlaybackRateChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "SourceChangeRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playto";
+        static constexpr const char* type_name = "VolumeChangeRequestedEventArgs";
     };
 }

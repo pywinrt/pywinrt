@@ -6,50 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Input
 {
-    struct module_state
-    {
-        PyTypeObject* type_AccessKeyDisplayDismissedEventArgs;
-        PyTypeObject* type_AccessKeyDisplayRequestedEventArgs;
-        PyTypeObject* type_AccessKeyInvokedEventArgs;
-        PyTypeObject* type_AccessKeyManager;
-        PyTypeObject* type_CanExecuteRequestedEventArgs;
-        PyTypeObject* type_CharacterReceivedRoutedEventArgs;
-        PyTypeObject* type_ContextRequestedEventArgs;
-        PyTypeObject* type_DoubleTappedRoutedEventArgs;
-        PyTypeObject* type_ExecuteRequestedEventArgs;
-        PyTypeObject* type_FindNextElementOptions;
-        PyTypeObject* type_FocusManager;
-        PyTypeObject* type_FocusManagerGotFocusEventArgs;
-        PyTypeObject* type_FocusManagerLostFocusEventArgs;
-        PyTypeObject* type_FocusMovementResult;
-        PyTypeObject* type_GettingFocusEventArgs;
-        PyTypeObject* type_HoldingRoutedEventArgs;
-        PyTypeObject* type_InertiaExpansionBehavior;
-        PyTypeObject* type_InertiaRotationBehavior;
-        PyTypeObject* type_InertiaTranslationBehavior;
-        PyTypeObject* type_InputScope;
-        PyTypeObject* type_InputScopeName;
-        PyTypeObject* type_KeyRoutedEventArgs;
-        PyTypeObject* type_KeyboardAccelerator;
-        PyTypeObject* type_KeyboardAcceleratorInvokedEventArgs;
-        PyTypeObject* type_LosingFocusEventArgs;
-        PyTypeObject* type_ManipulationCompletedRoutedEventArgs;
-        PyTypeObject* type_ManipulationDeltaRoutedEventArgs;
-        PyTypeObject* type_ManipulationInertiaStartingRoutedEventArgs;
-        PyTypeObject* type_ManipulationPivot;
-        PyTypeObject* type_ManipulationStartedRoutedEventArgs;
-        PyTypeObject* type_ManipulationStartingRoutedEventArgs;
-        PyTypeObject* type_NoFocusCandidateFoundEventArgs;
-        PyTypeObject* type_Pointer;
-        PyTypeObject* type_PointerRoutedEventArgs;
-        PyTypeObject* type_ProcessKeyboardAcceleratorEventArgs;
-        PyTypeObject* type_RightTappedRoutedEventArgs;
-        PyTypeObject* type_StandardUICommand;
-        PyTypeObject* type_TappedRoutedEventArgs;
-        PyTypeObject* type_XamlUICommand;
-        PyTypeObject* type_ICommand;
-    };
-
     // ----- AccessKeyDisplayDismissedEventArgs class --------------------
     static constexpr const char* const type_name_AccessKeyDisplayDismissedEventArgs = "AccessKeyDisplayDismissedEventArgs";
 
@@ -9210,122 +9166,15 @@ namespace py::cpp::Windows::UI::Xaml::Input
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Input");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AccessKeyDisplayDismissedEventArgs);
-        Py_VISIT(state->type_AccessKeyDisplayRequestedEventArgs);
-        Py_VISIT(state->type_AccessKeyInvokedEventArgs);
-        Py_VISIT(state->type_AccessKeyManager);
-        Py_VISIT(state->type_CanExecuteRequestedEventArgs);
-        Py_VISIT(state->type_CharacterReceivedRoutedEventArgs);
-        Py_VISIT(state->type_ContextRequestedEventArgs);
-        Py_VISIT(state->type_DoubleTappedRoutedEventArgs);
-        Py_VISIT(state->type_ExecuteRequestedEventArgs);
-        Py_VISIT(state->type_FindNextElementOptions);
-        Py_VISIT(state->type_FocusManager);
-        Py_VISIT(state->type_FocusManagerGotFocusEventArgs);
-        Py_VISIT(state->type_FocusManagerLostFocusEventArgs);
-        Py_VISIT(state->type_FocusMovementResult);
-        Py_VISIT(state->type_GettingFocusEventArgs);
-        Py_VISIT(state->type_HoldingRoutedEventArgs);
-        Py_VISIT(state->type_InertiaExpansionBehavior);
-        Py_VISIT(state->type_InertiaRotationBehavior);
-        Py_VISIT(state->type_InertiaTranslationBehavior);
-        Py_VISIT(state->type_InputScope);
-        Py_VISIT(state->type_InputScopeName);
-        Py_VISIT(state->type_KeyRoutedEventArgs);
-        Py_VISIT(state->type_KeyboardAccelerator);
-        Py_VISIT(state->type_KeyboardAcceleratorInvokedEventArgs);
-        Py_VISIT(state->type_LosingFocusEventArgs);
-        Py_VISIT(state->type_ManipulationCompletedRoutedEventArgs);
-        Py_VISIT(state->type_ManipulationDeltaRoutedEventArgs);
-        Py_VISIT(state->type_ManipulationInertiaStartingRoutedEventArgs);
-        Py_VISIT(state->type_ManipulationPivot);
-        Py_VISIT(state->type_ManipulationStartedRoutedEventArgs);
-        Py_VISIT(state->type_ManipulationStartingRoutedEventArgs);
-        Py_VISIT(state->type_NoFocusCandidateFoundEventArgs);
-        Py_VISIT(state->type_Pointer);
-        Py_VISIT(state->type_PointerRoutedEventArgs);
-        Py_VISIT(state->type_ProcessKeyboardAcceleratorEventArgs);
-        Py_VISIT(state->type_RightTappedRoutedEventArgs);
-        Py_VISIT(state->type_StandardUICommand);
-        Py_VISIT(state->type_TappedRoutedEventArgs);
-        Py_VISIT(state->type_XamlUICommand);
-        Py_VISIT(state->type_ICommand);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AccessKeyDisplayDismissedEventArgs);
-        Py_CLEAR(state->type_AccessKeyDisplayRequestedEventArgs);
-        Py_CLEAR(state->type_AccessKeyInvokedEventArgs);
-        Py_CLEAR(state->type_AccessKeyManager);
-        Py_CLEAR(state->type_CanExecuteRequestedEventArgs);
-        Py_CLEAR(state->type_CharacterReceivedRoutedEventArgs);
-        Py_CLEAR(state->type_ContextRequestedEventArgs);
-        Py_CLEAR(state->type_DoubleTappedRoutedEventArgs);
-        Py_CLEAR(state->type_ExecuteRequestedEventArgs);
-        Py_CLEAR(state->type_FindNextElementOptions);
-        Py_CLEAR(state->type_FocusManager);
-        Py_CLEAR(state->type_FocusManagerGotFocusEventArgs);
-        Py_CLEAR(state->type_FocusManagerLostFocusEventArgs);
-        Py_CLEAR(state->type_FocusMovementResult);
-        Py_CLEAR(state->type_GettingFocusEventArgs);
-        Py_CLEAR(state->type_HoldingRoutedEventArgs);
-        Py_CLEAR(state->type_InertiaExpansionBehavior);
-        Py_CLEAR(state->type_InertiaRotationBehavior);
-        Py_CLEAR(state->type_InertiaTranslationBehavior);
-        Py_CLEAR(state->type_InputScope);
-        Py_CLEAR(state->type_InputScopeName);
-        Py_CLEAR(state->type_KeyRoutedEventArgs);
-        Py_CLEAR(state->type_KeyboardAccelerator);
-        Py_CLEAR(state->type_KeyboardAcceleratorInvokedEventArgs);
-        Py_CLEAR(state->type_LosingFocusEventArgs);
-        Py_CLEAR(state->type_ManipulationCompletedRoutedEventArgs);
-        Py_CLEAR(state->type_ManipulationDeltaRoutedEventArgs);
-        Py_CLEAR(state->type_ManipulationInertiaStartingRoutedEventArgs);
-        Py_CLEAR(state->type_ManipulationPivot);
-        Py_CLEAR(state->type_ManipulationStartedRoutedEventArgs);
-        Py_CLEAR(state->type_ManipulationStartingRoutedEventArgs);
-        Py_CLEAR(state->type_NoFocusCandidateFoundEventArgs);
-        Py_CLEAR(state->type_Pointer);
-        Py_CLEAR(state->type_PointerRoutedEventArgs);
-        Py_CLEAR(state->type_ProcessKeyboardAcceleratorEventArgs);
-        Py_CLEAR(state->type_RightTappedRoutedEventArgs);
-        Py_CLEAR(state->type_StandardUICommand);
-        Py_CLEAR(state->type_TappedRoutedEventArgs);
-        Py_CLEAR(state->type_XamlUICommand);
-        Py_CLEAR(state->type_ICommand);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Input",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Input
@@ -9341,7 +9190,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -9354,23 +9203,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AccessKeyDisplayDismissedEventArgs = py::register_python_type(module.get(), type_name_AccessKeyDisplayDismissedEventArgs, &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccessKeyDisplayDismissedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessKeyDisplayDismissedEventArgs, &type_spec_AccessKeyDisplayDismissedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessKeyDisplayDismissedEventArgs, &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccessKeyDisplayRequestedEventArgs = py::register_python_type(module.get(), type_name_AccessKeyDisplayRequestedEventArgs, &type_spec_AccessKeyDisplayRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccessKeyDisplayRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessKeyDisplayRequestedEventArgs, &type_spec_AccessKeyDisplayRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessKeyDisplayRequestedEventArgs, &type_spec_AccessKeyDisplayRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccessKeyInvokedEventArgs = py::register_python_type(module.get(), type_name_AccessKeyInvokedEventArgs, &type_spec_AccessKeyInvokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccessKeyInvokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessKeyInvokedEventArgs, &type_spec_AccessKeyInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessKeyInvokedEventArgs, &type_spec_AccessKeyInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9381,116 +9236,173 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_AccessKeyManager = py::register_python_type(module.get(), type_name_AccessKeyManager, &type_spec_AccessKeyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessKeyManager_Meta.get()));
-    if (!state->type_AccessKeyManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessKeyManager, &type_spec_AccessKeyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessKeyManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessKeyManager, &type_spec_AccessKeyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessKeyManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CanExecuteRequestedEventArgs = py::register_python_type(module.get(), type_name_CanExecuteRequestedEventArgs, &type_spec_CanExecuteRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CanExecuteRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CanExecuteRequestedEventArgs, &type_spec_CanExecuteRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CanExecuteRequestedEventArgs, &type_spec_CanExecuteRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CharacterReceivedRoutedEventArgs = py::register_python_type(module.get(), type_name_CharacterReceivedRoutedEventArgs, &type_spec_CharacterReceivedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CharacterReceivedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CharacterReceivedRoutedEventArgs, &type_spec_CharacterReceivedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CharacterReceivedRoutedEventArgs, &type_spec_CharacterReceivedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContextRequestedEventArgs = py::register_python_type(module.get(), type_name_ContextRequestedEventArgs, &type_spec_ContextRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContextRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContextRequestedEventArgs, &type_spec_ContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContextRequestedEventArgs, &type_spec_ContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DoubleTappedRoutedEventArgs = py::register_python_type(module.get(), type_name_DoubleTappedRoutedEventArgs, &type_spec_DoubleTappedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DoubleTappedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleTappedRoutedEventArgs, &type_spec_DoubleTappedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleTappedRoutedEventArgs, &type_spec_DoubleTappedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExecuteRequestedEventArgs = py::register_python_type(module.get(), type_name_ExecuteRequestedEventArgs, &type_spec_ExecuteRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ExecuteRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExecuteRequestedEventArgs, &type_spec_ExecuteRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExecuteRequestedEventArgs, &type_spec_ExecuteRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FindNextElementOptions = py::register_python_type(module.get(), type_name_FindNextElementOptions, &type_spec_FindNextElementOptions, object_bases.get(), nullptr);
-    if (!state->type_FindNextElementOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FindNextElementOptions, &type_spec_FindNextElementOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FindNextElementOptions, &type_spec_FindNextElementOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusManager = py::register_python_type(module.get(), type_name_FocusManager, &type_spec_FocusManager, object_bases.get(), nullptr);
-    if (!state->type_FocusManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusManager, &type_spec_FocusManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusManager, &type_spec_FocusManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusManagerGotFocusEventArgs = py::register_python_type(module.get(), type_name_FocusManagerGotFocusEventArgs, &type_spec_FocusManagerGotFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FocusManagerGotFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusManagerGotFocusEventArgs, &type_spec_FocusManagerGotFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusManagerGotFocusEventArgs, &type_spec_FocusManagerGotFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusManagerLostFocusEventArgs = py::register_python_type(module.get(), type_name_FocusManagerLostFocusEventArgs, &type_spec_FocusManagerLostFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FocusManagerLostFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusManagerLostFocusEventArgs, &type_spec_FocusManagerLostFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusManagerLostFocusEventArgs, &type_spec_FocusManagerLostFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusMovementResult = py::register_python_type(module.get(), type_name_FocusMovementResult, &type_spec_FocusMovementResult, object_bases.get(), nullptr);
-    if (!state->type_FocusMovementResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusMovementResult, &type_spec_FocusMovementResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusMovementResult, &type_spec_FocusMovementResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GettingFocusEventArgs = py::register_python_type(module.get(), type_name_GettingFocusEventArgs, &type_spec_GettingFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GettingFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GettingFocusEventArgs, &type_spec_GettingFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GettingFocusEventArgs, &type_spec_GettingFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HoldingRoutedEventArgs = py::register_python_type(module.get(), type_name_HoldingRoutedEventArgs, &type_spec_HoldingRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HoldingRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HoldingRoutedEventArgs, &type_spec_HoldingRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HoldingRoutedEventArgs, &type_spec_HoldingRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InertiaExpansionBehavior = py::register_python_type(module.get(), type_name_InertiaExpansionBehavior, &type_spec_InertiaExpansionBehavior, object_bases.get(), nullptr);
-    if (!state->type_InertiaExpansionBehavior)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InertiaExpansionBehavior, &type_spec_InertiaExpansionBehavior, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InertiaExpansionBehavior, &type_spec_InertiaExpansionBehavior, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InertiaRotationBehavior = py::register_python_type(module.get(), type_name_InertiaRotationBehavior, &type_spec_InertiaRotationBehavior, object_bases.get(), nullptr);
-    if (!state->type_InertiaRotationBehavior)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InertiaRotationBehavior, &type_spec_InertiaRotationBehavior, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InertiaRotationBehavior, &type_spec_InertiaRotationBehavior, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InertiaTranslationBehavior = py::register_python_type(module.get(), type_name_InertiaTranslationBehavior, &type_spec_InertiaTranslationBehavior, object_bases.get(), nullptr);
-    if (!state->type_InertiaTranslationBehavior)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InertiaTranslationBehavior, &type_spec_InertiaTranslationBehavior, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InertiaTranslationBehavior, &type_spec_InertiaTranslationBehavior, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputScope = py::register_python_type(module.get(), type_name_InputScope, &type_spec_InputScope, object_bases.get(), nullptr);
-    if (!state->type_InputScope)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputScope, &type_spec_InputScope, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputScope, &type_spec_InputScope, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputScopeName = py::register_python_type(module.get(), type_name_InputScopeName, &type_spec_InputScopeName, object_bases.get(), nullptr);
-    if (!state->type_InputScopeName)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputScopeName, &type_spec_InputScopeName, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputScopeName, &type_spec_InputScopeName, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyRoutedEventArgs = py::register_python_type(module.get(), type_name_KeyRoutedEventArgs, &type_spec_KeyRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_KeyRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyRoutedEventArgs, &type_spec_KeyRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyRoutedEventArgs, &type_spec_KeyRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9501,86 +9413,128 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_KeyboardAccelerator = py::register_python_type(module.get(), type_name_KeyboardAccelerator, &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Meta.get()));
-    if (!state->type_KeyboardAccelerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyboardAccelerator, &type_spec_KeyboardAccelerator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyboardAccelerator, &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyboardAcceleratorInvokedEventArgs = py::register_python_type(module.get(), type_name_KeyboardAcceleratorInvokedEventArgs, &type_spec_KeyboardAcceleratorInvokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_KeyboardAcceleratorInvokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyboardAcceleratorInvokedEventArgs, &type_spec_KeyboardAcceleratorInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyboardAcceleratorInvokedEventArgs, &type_spec_KeyboardAcceleratorInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LosingFocusEventArgs = py::register_python_type(module.get(), type_name_LosingFocusEventArgs, &type_spec_LosingFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LosingFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LosingFocusEventArgs, &type_spec_LosingFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LosingFocusEventArgs, &type_spec_LosingFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationCompletedRoutedEventArgs = py::register_python_type(module.get(), type_name_ManipulationCompletedRoutedEventArgs, &type_spec_ManipulationCompletedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationCompletedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationCompletedRoutedEventArgs, &type_spec_ManipulationCompletedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationCompletedRoutedEventArgs, &type_spec_ManipulationCompletedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationDeltaRoutedEventArgs = py::register_python_type(module.get(), type_name_ManipulationDeltaRoutedEventArgs, &type_spec_ManipulationDeltaRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationDeltaRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationDeltaRoutedEventArgs, &type_spec_ManipulationDeltaRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationDeltaRoutedEventArgs, &type_spec_ManipulationDeltaRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationInertiaStartingRoutedEventArgs = py::register_python_type(module.get(), type_name_ManipulationInertiaStartingRoutedEventArgs, &type_spec_ManipulationInertiaStartingRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationInertiaStartingRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingRoutedEventArgs, &type_spec_ManipulationInertiaStartingRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingRoutedEventArgs, &type_spec_ManipulationInertiaStartingRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationPivot = py::register_python_type(module.get(), type_name_ManipulationPivot, &type_spec_ManipulationPivot, object_bases.get(), nullptr);
-    if (!state->type_ManipulationPivot)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationPivot, &type_spec_ManipulationPivot, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationPivot, &type_spec_ManipulationPivot, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationStartedRoutedEventArgs = py::register_python_type(module.get(), type_name_ManipulationStartedRoutedEventArgs, &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationStartedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationStartedRoutedEventArgs, &type_spec_ManipulationStartedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationStartedRoutedEventArgs, &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManipulationStartingRoutedEventArgs = py::register_python_type(module.get(), type_name_ManipulationStartingRoutedEventArgs, &type_spec_ManipulationStartingRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ManipulationStartingRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManipulationStartingRoutedEventArgs, &type_spec_ManipulationStartingRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManipulationStartingRoutedEventArgs, &type_spec_ManipulationStartingRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NoFocusCandidateFoundEventArgs = py::register_python_type(module.get(), type_name_NoFocusCandidateFoundEventArgs, &type_spec_NoFocusCandidateFoundEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NoFocusCandidateFoundEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NoFocusCandidateFoundEventArgs, &type_spec_NoFocusCandidateFoundEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NoFocusCandidateFoundEventArgs, &type_spec_NoFocusCandidateFoundEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Pointer = py::register_python_type(module.get(), type_name_Pointer, &type_spec_Pointer, object_bases.get(), nullptr);
-    if (!state->type_Pointer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Pointer, &type_spec_Pointer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Pointer, &type_spec_Pointer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerRoutedEventArgs = py::register_python_type(module.get(), type_name_PointerRoutedEventArgs, &type_spec_PointerRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PointerRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerRoutedEventArgs, &type_spec_PointerRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerRoutedEventArgs, &type_spec_PointerRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessKeyboardAcceleratorEventArgs = py::register_python_type(module.get(), type_name_ProcessKeyboardAcceleratorEventArgs, &type_spec_ProcessKeyboardAcceleratorEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProcessKeyboardAcceleratorEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessKeyboardAcceleratorEventArgs, &type_spec_ProcessKeyboardAcceleratorEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessKeyboardAcceleratorEventArgs, &type_spec_ProcessKeyboardAcceleratorEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RightTappedRoutedEventArgs = py::register_python_type(module.get(), type_name_RightTappedRoutedEventArgs, &type_spec_RightTappedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RightTappedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RightTappedRoutedEventArgs, &type_spec_RightTappedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RightTappedRoutedEventArgs, &type_spec_RightTappedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9591,14 +9545,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_StandardUICommand = py::register_python_type(module.get(), type_name_StandardUICommand, &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Meta.get()));
-    if (!state->type_StandardUICommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StandardUICommand, &type_spec_StandardUICommand, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StandardUICommand, &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TappedRoutedEventArgs = py::register_python_type(module.get(), type_name_TappedRoutedEventArgs, &type_spec_TappedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TappedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TappedRoutedEventArgs, &type_spec_TappedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TappedRoutedEventArgs, &type_spec_TappedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9609,938 +9569,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Input(void) noexcept
         return nullptr;
     }
 
-    state->type_XamlUICommand = py::register_python_type(module.get(), type_name_XamlUICommand, &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Meta.get()));
-    if (!state->type_XamlUICommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlUICommand, &type_spec_XamlUICommand, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlUICommand, &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICommand = py::register_python_type(module.get(), type_name_ICommand, &type_spec_ICommand, object_bases.get(), nullptr);
-    if (!state->type_ICommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICommand, &type_spec_ICommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICommand, &type_spec_ICommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessKeyDisplayDismissedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessKeyDisplayRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessKeyInvokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessKeyManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::AccessKeyManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CanExecuteRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CharacterReceivedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContextRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleTappedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExecuteRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::FindNextElementOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FindNextElementOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::FindNextElementOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::FocusManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::FocusManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusManagerGotFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusManagerLostFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusMovementResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::FocusMovementResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GettingFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HoldingRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InertiaExpansionBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InertiaRotationBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InertiaTranslationBehavior;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::InputScope>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputScope;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::InputScope is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::InputScopeName>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputScopeName;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::InputScopeName is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyboardAccelerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::KeyboardAccelerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyboardAcceleratorInvokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LosingFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationCompletedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationDeltaRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationInertiaStartingRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationPivot>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationPivot;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationPivot is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationStartedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManipulationStartingRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NoFocusCandidateFoundEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::Pointer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Pointer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::Pointer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessKeyboardAcceleratorEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RightTappedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::StandardUICommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StandardUICommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::StandardUICommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TappedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::XamlUICommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlUICommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::XamlUICommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Input::ICommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Input::ICommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

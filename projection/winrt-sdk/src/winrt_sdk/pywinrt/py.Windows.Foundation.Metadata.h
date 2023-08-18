@@ -102,8 +102,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Metadata::ApiInformation>
+    struct py_type<winrt::Windows::Foundation::Metadata::ApiInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.metadata";
+        static constexpr const char* type_name = "ApiInformation";
     };
 }

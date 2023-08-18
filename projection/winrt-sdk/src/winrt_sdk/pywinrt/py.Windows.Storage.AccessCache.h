@@ -71,44 +71,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>
+    struct py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "AccessListEntryView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>
+    struct py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "ItemRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>
+    struct py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "StorageApplicationPermissions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>
+    struct py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "StorageItemAccessList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>
+    struct py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "StorageItemMostRecentlyUsedList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>
+    struct py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "IStorageItemAccessList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AccessCache::AccessListEntry>
+    struct py_type<winrt::Windows::Storage::AccessCache::AccessListEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.accesscache";
+        static constexpr const char* type_name = "AccessListEntry";
     };
 }

@@ -42,8 +42,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider>
+    struct py_type<winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.geolocation.provider";
+        static constexpr const char* type_name = "GeolocationProvider";
     };
 }

@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Gpio
 {
-    struct module_state
-    {
-        PyTypeObject* type_GpioChangeCounter;
-        PyTypeObject* type_GpioChangeReader;
-        PyTypeObject* type_GpioController;
-        PyTypeObject* type_GpioPin;
-        PyTypeObject* type_GpioPinValueChangedEventArgs;
-        PyTypeObject* type_GpioChangeCount;
-        PyTypeObject* type_GpioChangeRecord;
-    };
-
     // ----- GpioChangeCounter class --------------------
     static constexpr const char* const type_name_GpioChangeCounter = "GpioChangeCounter";
 
@@ -1972,56 +1961,15 @@ namespace py::cpp::Windows::Devices::Gpio
     PyDoc_STRVAR(module_doc, "Windows::Devices::Gpio");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GpioChangeCounter);
-        Py_VISIT(state->type_GpioChangeReader);
-        Py_VISIT(state->type_GpioController);
-        Py_VISIT(state->type_GpioPin);
-        Py_VISIT(state->type_GpioPinValueChangedEventArgs);
-        Py_VISIT(state->type_GpioChangeCount);
-        Py_VISIT(state->type_GpioChangeRecord);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GpioChangeCounter);
-        Py_CLEAR(state->type_GpioChangeReader);
-        Py_CLEAR(state->type_GpioController);
-        Py_CLEAR(state->type_GpioPin);
-        Py_CLEAR(state->type_GpioPinValueChangedEventArgs);
-        Py_CLEAR(state->type_GpioChangeCount);
-        Py_CLEAR(state->type_GpioChangeRecord);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Gpio",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Gpio
@@ -2037,7 +1985,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2050,212 +1998,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GpioChangeCounter = py::register_python_type(module.get(), type_name_GpioChangeCounter, &type_spec_GpioChangeCounter, object_bases.get(), nullptr);
-    if (!state->type_GpioChangeCounter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioChangeCounter, &type_spec_GpioChangeCounter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioChangeCounter, &type_spec_GpioChangeCounter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioChangeReader = py::register_python_type(module.get(), type_name_GpioChangeReader, &type_spec_GpioChangeReader, object_bases.get(), nullptr);
-    if (!state->type_GpioChangeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioChangeReader, &type_spec_GpioChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioChangeReader, &type_spec_GpioChangeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioController = py::register_python_type(module.get(), type_name_GpioController, &type_spec_GpioController, object_bases.get(), nullptr);
-    if (!state->type_GpioController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioController, &type_spec_GpioController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioController, &type_spec_GpioController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioPin = py::register_python_type(module.get(), type_name_GpioPin, &type_spec_GpioPin, object_bases.get(), nullptr);
-    if (!state->type_GpioPin)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioPin, &type_spec_GpioPin, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioPin, &type_spec_GpioPin, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioPinValueChangedEventArgs = py::register_python_type(module.get(), type_name_GpioPinValueChangedEventArgs, &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GpioPinValueChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioPinValueChangedEventArgs, &type_spec_GpioPinValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioPinValueChangedEventArgs, &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioChangeCount = py::register_python_type(module.get(), type_name_GpioChangeCount, &type_spec_GpioChangeCount, nullptr, nullptr);
-    if (!state->type_GpioChangeCount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioChangeCount, &type_spec_GpioChangeCount, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioChangeCount, &type_spec_GpioChangeCount, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GpioChangeRecord = py::register_python_type(module.get(), type_name_GpioChangeRecord, &type_spec_GpioChangeRecord, nullptr, nullptr);
-    if (!state->type_GpioChangeRecord)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioChangeRecord, &type_spec_GpioChangeRecord, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioChangeRecord, &type_spec_GpioChangeRecord, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioChangeCounter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioChangeCounter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioChangeCounter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioChangeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioChangeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioChangeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioPin>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPin;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioPin is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPinValueChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioChangeCount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioChangeCount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioChangeCount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioChangeRecord;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::GpioChangeRecord is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

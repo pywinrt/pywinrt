@@ -119,75 +119,87 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "BitmapImage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "BitmapSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "DownloadProgressEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "RenderTargetBitmap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SoftwareBitmapSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SurfaceImageSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SvgImageSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SvgImageSourceFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "SvgImageSourceOpenedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "VirtualSurfaceImageSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "WriteableBitmap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
+        static constexpr const char* type_name = "XamlRenderingBackgroundTask";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventHandler>

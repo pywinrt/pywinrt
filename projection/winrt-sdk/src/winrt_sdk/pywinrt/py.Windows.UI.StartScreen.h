@@ -125,56 +125,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::JumpList>
+    struct py_type<winrt::Windows::UI::StartScreen::JumpList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "JumpList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::JumpListItem>
+    struct py_type<winrt::Windows::UI::StartScreen::JumpListItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "JumpListItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::SecondaryTile>
+    struct py_type<winrt::Windows::UI::StartScreen::SecondaryTile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "SecondaryTile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>
+    struct py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "SecondaryTileVisualElements";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::StartScreenManager>
+    struct py_type<winrt::Windows::UI::StartScreen::StartScreenManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "StartScreenManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>
+    struct py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "TileMixedRealityModel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>
+    struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "VisualElementsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>
+    struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "VisualElementsRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.startscreen";
+        static constexpr const char* type_name = "VisualElementsRequestedEventArgs";
     };
 }

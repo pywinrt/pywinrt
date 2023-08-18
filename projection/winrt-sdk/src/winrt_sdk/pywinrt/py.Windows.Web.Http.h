@@ -129,122 +129,142 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpBufferContent>
+    struct py_type<winrt::Windows::Web::Http::HttpBufferContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpBufferContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpClient>
+    struct py_type<winrt::Windows::Web::Http::HttpClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpCookie>
+    struct py_type<winrt::Windows::Web::Http::HttpCookie>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpCookie";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpCookieCollection>
+    struct py_type<winrt::Windows::Web::Http::HttpCookieCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpCookieCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpCookieManager>
+    struct py_type<winrt::Windows::Web::Http::HttpCookieManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpCookieManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>
+    struct py_type<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpFormUrlEncodedContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpGetBufferResult>
+    struct py_type<winrt::Windows::Web::Http::HttpGetBufferResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpGetBufferResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>
+    struct py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpGetInputStreamResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpGetStringResult>
+    struct py_type<winrt::Windows::Web::Http::HttpGetStringResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpGetStringResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpMethod>
+    struct py_type<winrt::Windows::Web::Http::HttpMethod>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpMethod";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpMultipartContent>
+    struct py_type<winrt::Windows::Web::Http::HttpMultipartContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpMultipartContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpMultipartFormDataContent>
+    struct py_type<winrt::Windows::Web::Http::HttpMultipartFormDataContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpMultipartFormDataContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpRequestMessage>
+    struct py_type<winrt::Windows::Web::Http::HttpRequestMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpRequestMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpRequestResult>
+    struct py_type<winrt::Windows::Web::Http::HttpRequestResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpRequestResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpResponseMessage>
+    struct py_type<winrt::Windows::Web::Http::HttpResponseMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpResponseMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpStreamContent>
+    struct py_type<winrt::Windows::Web::Http::HttpStreamContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpStreamContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpStringContent>
+    struct py_type<winrt::Windows::Web::Http::HttpStringContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpStringContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpTransportInformation>
+    struct py_type<winrt::Windows::Web::Http::HttpTransportInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpTransportInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::IHttpContent>
+    struct py_type<winrt::Windows::Web::Http::IHttpContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "IHttpContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::HttpProgress>
+    struct py_type<winrt::Windows::Web::Http::HttpProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http";
+        static constexpr const char* type_name = "HttpProgress";
     };
 }

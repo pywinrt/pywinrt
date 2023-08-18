@@ -199,69 +199,80 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "ComponentLoadFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::ComponentRenewal>
+    struct py_type<winrt::Windows::Media::Protection::ComponentRenewal>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "ComponentRenewal";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::HdcpSession>
+    struct py_type<winrt::Windows::Media::Protection::HdcpSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "HdcpSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::MediaProtectionManager>
+    struct py_type<winrt::Windows::Media::Protection::MediaProtectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "MediaProtectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::MediaProtectionPMPServer>
+    struct py_type<winrt::Windows::Media::Protection::MediaProtectionPMPServer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "MediaProtectionPMPServer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>
+    struct py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "MediaProtectionServiceCompletion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::ProtectionCapabilities>
+    struct py_type<winrt::Windows::Media::Protection::ProtectionCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "ProtectionCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>
+    struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "RevocationAndRenewalInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>
+    struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "RevocationAndRenewalItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "ServiceRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection";
+        static constexpr const char* type_name = "IMediaProtectionServiceRequest";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler>

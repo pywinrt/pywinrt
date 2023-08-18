@@ -84,44 +84,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::EyesPose>
+    struct py_type<winrt::Windows::Perception::People::EyesPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "EyesPose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::HandMeshObserver>
+    struct py_type<winrt::Windows::Perception::People::HandMeshObserver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HandMeshObserver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::HandMeshVertexState>
+    struct py_type<winrt::Windows::Perception::People::HandMeshVertexState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HandMeshVertexState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::HandPose>
+    struct py_type<winrt::Windows::Perception::People::HandPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HandPose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::HeadPose>
+    struct py_type<winrt::Windows::Perception::People::HeadPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HeadPose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::HandMeshVertex>
+    struct py_type<winrt::Windows::Perception::People::HandMeshVertex>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "HandMeshVertex";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::People::JointPose>
+    struct py_type<winrt::Windows::Perception::People::JointPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.people";
+        static constexpr const char* type_name = "JointPose";
     };
 }

@@ -165,116 +165,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>
+    struct py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "AudioMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>
+    struct py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "BufferMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>
+    struct py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "DepthMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>
+    struct py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "DepthMediaFrameFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>
+    struct py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "InfraredMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameArrivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceGetPropertyResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MediaFrameSourceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MultiSourceMediaFrameArrivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MultiSourceMediaFrameReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>
+    struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "MultiSourceMediaFrameReference";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>
+    struct py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "VideoMediaFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>
+    struct py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.frames";
+        static constexpr const char* type_name = "VideoMediaFrameFormat";
     };
 }

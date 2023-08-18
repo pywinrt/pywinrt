@@ -128,104 +128,121 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "AsyncCausalityTracer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "ErrorDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "FileLoggingSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LogFileGeneratedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingActivity>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingActivity>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingActivity";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingChannel>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingChannelOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingFields>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingFields>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingFields";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingOptions>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::LoggingSession>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "LoggingSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "RuntimeBrokerErrorSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "TracingStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "IErrorReportingSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "IFileLoggingSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "ILoggingChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "ILoggingSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
+    struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
+        static constexpr const char* type_name = "ILoggingTarget";
     };
 }

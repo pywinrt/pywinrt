@@ -181,134 +181,156 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::AddPackageOptions>
+    struct py_type<winrt::Windows::Management::Deployment::AddPackageOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "AddPackageOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::AppInstallerManager>
+    struct py_type<winrt::Windows::Management::Deployment::AppInstallerManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "AppInstallerManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>
+    struct py_type<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "AutoUpdateSettingsOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>
+    struct py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "CreateSharedPackageContainerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>
+    struct py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "CreateSharedPackageContainerResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>
+    struct py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeleteSharedPackageContainerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>
+    struct py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeleteSharedPackageContainerResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::DeploymentResult>
+    struct py_type<winrt::Windows::Management::Deployment::DeploymentResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeploymentResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>
+    struct py_type<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "FindSharedPackageContainerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>
+    struct py_type<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageAllUserProvisioningOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::PackageManager>
+    struct py_type<winrt::Windows::Management::Deployment::PackageManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>
+    struct py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageManagerDebugSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::PackageUserInformation>
+    struct py_type<winrt::Windows::Management::Deployment::PackageUserInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageUserInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::PackageVolume>
+    struct py_type<winrt::Windows::Management::Deployment::PackageVolume>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "PackageVolume";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::RegisterPackageOptions>
+    struct py_type<winrt::Windows::Management::Deployment::RegisterPackageOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "RegisterPackageOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainer>
+    struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "SharedPackageContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>
+    struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "SharedPackageContainerManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainerMember>
+    struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerMember>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "SharedPackageContainerMember";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::StagePackageOptions>
+    struct py_type<winrt::Windows::Management::Deployment::StagePackageOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "StagePackageOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>
+    struct py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "UpdateSharedPackageContainerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>
+    struct py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "UpdateSharedPackageContainerResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Deployment::DeploymentProgress>
+    struct py_type<winrt::Windows::Management::Deployment::DeploymentProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "DeploymentProgress";
     };
 }

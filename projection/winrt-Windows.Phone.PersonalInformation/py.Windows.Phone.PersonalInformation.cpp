@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::Phone::PersonalInformation
 {
-    struct module_state
-    {
-        PyTypeObject* type_ContactAddress;
-        PyTypeObject* type_ContactChangeRecord;
-        PyTypeObject* type_ContactInformation;
-        PyTypeObject* type_ContactQueryOptions;
-        PyTypeObject* type_ContactQueryResult;
-        PyTypeObject* type_ContactStore;
-        PyTypeObject* type_KnownContactProperties;
-        PyTypeObject* type_StoredContact;
-        PyTypeObject* type_IContactInformation;
-        PyTypeObject* type_IContactInformation2;
-    };
-
     // ----- ContactAddress class --------------------
     static constexpr const char* const type_name_ContactAddress = "ContactAddress";
 
@@ -3949,62 +3935,15 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     PyDoc_STRVAR(module_doc, "Windows::Phone::PersonalInformation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ContactAddress);
-        Py_VISIT(state->type_ContactChangeRecord);
-        Py_VISIT(state->type_ContactInformation);
-        Py_VISIT(state->type_ContactQueryOptions);
-        Py_VISIT(state->type_ContactQueryResult);
-        Py_VISIT(state->type_ContactStore);
-        Py_VISIT(state->type_KnownContactProperties);
-        Py_VISIT(state->type_StoredContact);
-        Py_VISIT(state->type_IContactInformation);
-        Py_VISIT(state->type_IContactInformation2);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ContactAddress);
-        Py_CLEAR(state->type_ContactChangeRecord);
-        Py_CLEAR(state->type_ContactInformation);
-        Py_CLEAR(state->type_ContactQueryOptions);
-        Py_CLEAR(state->type_ContactQueryResult);
-        Py_CLEAR(state->type_ContactStore);
-        Py_CLEAR(state->type_KnownContactProperties);
-        Py_CLEAR(state->type_StoredContact);
-        Py_CLEAR(state->type_IContactInformation);
-        Py_CLEAR(state->type_IContactInformation2);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Phone_PersonalInformation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Phone::PersonalInformation
@@ -4020,7 +3959,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_PersonalInformation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4033,41 +3972,56 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_PersonalInformation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ContactAddress = py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, object_bases.get(), nullptr);
-    if (!state->type_ContactAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactChangeRecord = py::register_python_type(module.get(), type_name_ContactChangeRecord, &type_spec_ContactChangeRecord, object_bases.get(), nullptr);
-    if (!state->type_ContactChangeRecord)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactChangeRecord, &type_spec_ContactChangeRecord, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactChangeRecord, &type_spec_ContactChangeRecord, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactInformation = py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, object_bases.get(), nullptr);
-    if (!state->type_ContactInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactQueryOptions = py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, object_bases.get(), nullptr);
-    if (!state->type_ContactQueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactQueryResult = py::register_python_type(module.get(), type_name_ContactQueryResult, &type_spec_ContactQueryResult, object_bases.get(), nullptr);
-    if (!state->type_ContactQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactQueryResult, &type_spec_ContactQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactQueryResult, &type_spec_ContactQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactStore = py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, object_bases.get(), nullptr);
-    if (!state->type_ContactStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4078,260 +4032,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_PersonalInformation(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownContactProperties = py::register_python_type(module.get(), type_name_KnownContactProperties, &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Meta.get()));
-    if (!state->type_KnownContactProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownContactProperties, &type_spec_KnownContactProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownContactProperties, &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StoredContact = py::register_python_type(module.get(), type_name_StoredContact, &type_spec_StoredContact, object_bases.get(), nullptr);
-    if (!state->type_StoredContact)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StoredContact, &type_spec_StoredContact, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StoredContact, &type_spec_StoredContact, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactInformation = py::register_python_type(module.get(), type_name_IContactInformation, &type_spec_IContactInformation, object_bases.get(), nullptr);
-    if (!state->type_IContactInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactInformation, &type_spec_IContactInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactInformation, &type_spec_IContactInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactInformation2 = py::register_python_type(module.get(), type_name_IContactInformation2, &type_spec_IContactInformation2, object_bases.get(), nullptr);
-    if (!state->type_IContactInformation2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactInformation2, &type_spec_IContactInformation2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactInformation2, &type_spec_IContactInformation2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactChangeRecord;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactChangeRecord is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactQueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactQueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::ContactStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::ContactStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownContactProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::KnownContactProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::StoredContact>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StoredContact;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::StoredContact is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::IContactInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::PersonalInformation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::PersonalInformation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactInformation2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::PersonalInformation::IContactInformation2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

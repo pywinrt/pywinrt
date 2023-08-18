@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::Display::DisplayRequest>
+    struct py_type<winrt::Windows::System::Display::DisplayRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.display";
+        static constexpr const char* type_name = "DisplayRequest";
     };
 }

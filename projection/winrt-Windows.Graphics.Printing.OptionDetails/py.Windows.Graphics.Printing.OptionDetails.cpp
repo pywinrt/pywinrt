@@ -6,34 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 {
-    struct module_state
-    {
-        PyTypeObject* type_PrintBindingOptionDetails;
-        PyTypeObject* type_PrintBorderingOptionDetails;
-        PyTypeObject* type_PrintCollationOptionDetails;
-        PyTypeObject* type_PrintColorModeOptionDetails;
-        PyTypeObject* type_PrintCopiesOptionDetails;
-        PyTypeObject* type_PrintCustomItemDetails;
-        PyTypeObject* type_PrintCustomItemListOptionDetails;
-        PyTypeObject* type_PrintCustomTextOptionDetails;
-        PyTypeObject* type_PrintCustomToggleOptionDetails;
-        PyTypeObject* type_PrintDuplexOptionDetails;
-        PyTypeObject* type_PrintHolePunchOptionDetails;
-        PyTypeObject* type_PrintMediaSizeOptionDetails;
-        PyTypeObject* type_PrintMediaTypeOptionDetails;
-        PyTypeObject* type_PrintOrientationOptionDetails;
-        PyTypeObject* type_PrintPageRangeOptionDetails;
-        PyTypeObject* type_PrintQualityOptionDetails;
-        PyTypeObject* type_PrintStapleOptionDetails;
-        PyTypeObject* type_PrintTaskOptionChangedEventArgs;
-        PyTypeObject* type_PrintTaskOptionDetails;
-        PyTypeObject* type_IPrintCustomOptionDetails;
-        PyTypeObject* type_IPrintItemListOptionDetails;
-        PyTypeObject* type_IPrintNumberOptionDetails;
-        PyTypeObject* type_IPrintOptionDetails;
-        PyTypeObject* type_IPrintTextOptionDetails;
-    };
-
     // ----- PrintBindingOptionDetails class --------------------
     static constexpr const char* const type_name_PrintBindingOptionDetails = "PrintBindingOptionDetails";
 
@@ -8361,90 +8333,15 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::OptionDetails");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PrintBindingOptionDetails);
-        Py_VISIT(state->type_PrintBorderingOptionDetails);
-        Py_VISIT(state->type_PrintCollationOptionDetails);
-        Py_VISIT(state->type_PrintColorModeOptionDetails);
-        Py_VISIT(state->type_PrintCopiesOptionDetails);
-        Py_VISIT(state->type_PrintCustomItemDetails);
-        Py_VISIT(state->type_PrintCustomItemListOptionDetails);
-        Py_VISIT(state->type_PrintCustomTextOptionDetails);
-        Py_VISIT(state->type_PrintCustomToggleOptionDetails);
-        Py_VISIT(state->type_PrintDuplexOptionDetails);
-        Py_VISIT(state->type_PrintHolePunchOptionDetails);
-        Py_VISIT(state->type_PrintMediaSizeOptionDetails);
-        Py_VISIT(state->type_PrintMediaTypeOptionDetails);
-        Py_VISIT(state->type_PrintOrientationOptionDetails);
-        Py_VISIT(state->type_PrintPageRangeOptionDetails);
-        Py_VISIT(state->type_PrintQualityOptionDetails);
-        Py_VISIT(state->type_PrintStapleOptionDetails);
-        Py_VISIT(state->type_PrintTaskOptionChangedEventArgs);
-        Py_VISIT(state->type_PrintTaskOptionDetails);
-        Py_VISIT(state->type_IPrintCustomOptionDetails);
-        Py_VISIT(state->type_IPrintItemListOptionDetails);
-        Py_VISIT(state->type_IPrintNumberOptionDetails);
-        Py_VISIT(state->type_IPrintOptionDetails);
-        Py_VISIT(state->type_IPrintTextOptionDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PrintBindingOptionDetails);
-        Py_CLEAR(state->type_PrintBorderingOptionDetails);
-        Py_CLEAR(state->type_PrintCollationOptionDetails);
-        Py_CLEAR(state->type_PrintColorModeOptionDetails);
-        Py_CLEAR(state->type_PrintCopiesOptionDetails);
-        Py_CLEAR(state->type_PrintCustomItemDetails);
-        Py_CLEAR(state->type_PrintCustomItemListOptionDetails);
-        Py_CLEAR(state->type_PrintCustomTextOptionDetails);
-        Py_CLEAR(state->type_PrintCustomToggleOptionDetails);
-        Py_CLEAR(state->type_PrintDuplexOptionDetails);
-        Py_CLEAR(state->type_PrintHolePunchOptionDetails);
-        Py_CLEAR(state->type_PrintMediaSizeOptionDetails);
-        Py_CLEAR(state->type_PrintMediaTypeOptionDetails);
-        Py_CLEAR(state->type_PrintOrientationOptionDetails);
-        Py_CLEAR(state->type_PrintPageRangeOptionDetails);
-        Py_CLEAR(state->type_PrintQualityOptionDetails);
-        Py_CLEAR(state->type_PrintStapleOptionDetails);
-        Py_CLEAR(state->type_PrintTaskOptionChangedEventArgs);
-        Py_CLEAR(state->type_PrintTaskOptionDetails);
-        Py_CLEAR(state->type_IPrintCustomOptionDetails);
-        Py_CLEAR(state->type_IPrintItemListOptionDetails);
-        Py_CLEAR(state->type_IPrintNumberOptionDetails);
-        Py_CLEAR(state->type_IPrintOptionDetails);
-        Py_CLEAR(state->type_IPrintTextOptionDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Printing_OptionDetails",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Printing::OptionDetails
@@ -8460,7 +8357,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_OptionDetails(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8473,705 +8370,222 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_OptionDetails(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PrintBindingOptionDetails = py::register_python_type(module.get(), type_name_PrintBindingOptionDetails, &type_spec_PrintBindingOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintBindingOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintBindingOptionDetails, &type_spec_PrintBindingOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintBindingOptionDetails, &type_spec_PrintBindingOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintBorderingOptionDetails = py::register_python_type(module.get(), type_name_PrintBorderingOptionDetails, &type_spec_PrintBorderingOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintBorderingOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintBorderingOptionDetails, &type_spec_PrintBorderingOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintBorderingOptionDetails, &type_spec_PrintBorderingOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCollationOptionDetails = py::register_python_type(module.get(), type_name_PrintCollationOptionDetails, &type_spec_PrintCollationOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCollationOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCollationOptionDetails, &type_spec_PrintCollationOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCollationOptionDetails, &type_spec_PrintCollationOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintColorModeOptionDetails = py::register_python_type(module.get(), type_name_PrintColorModeOptionDetails, &type_spec_PrintColorModeOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintColorModeOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintColorModeOptionDetails, &type_spec_PrintColorModeOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintColorModeOptionDetails, &type_spec_PrintColorModeOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCopiesOptionDetails = py::register_python_type(module.get(), type_name_PrintCopiesOptionDetails, &type_spec_PrintCopiesOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCopiesOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCopiesOptionDetails, &type_spec_PrintCopiesOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCopiesOptionDetails, &type_spec_PrintCopiesOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCustomItemDetails = py::register_python_type(module.get(), type_name_PrintCustomItemDetails, &type_spec_PrintCustomItemDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCustomItemDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCustomItemDetails, &type_spec_PrintCustomItemDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCustomItemDetails, &type_spec_PrintCustomItemDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCustomItemListOptionDetails = py::register_python_type(module.get(), type_name_PrintCustomItemListOptionDetails, &type_spec_PrintCustomItemListOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCustomItemListOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCustomItemListOptionDetails, &type_spec_PrintCustomItemListOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCustomItemListOptionDetails, &type_spec_PrintCustomItemListOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCustomTextOptionDetails = py::register_python_type(module.get(), type_name_PrintCustomTextOptionDetails, &type_spec_PrintCustomTextOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCustomTextOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCustomTextOptionDetails, &type_spec_PrintCustomTextOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCustomTextOptionDetails, &type_spec_PrintCustomTextOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintCustomToggleOptionDetails = py::register_python_type(module.get(), type_name_PrintCustomToggleOptionDetails, &type_spec_PrintCustomToggleOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintCustomToggleOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintCustomToggleOptionDetails, &type_spec_PrintCustomToggleOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintCustomToggleOptionDetails, &type_spec_PrintCustomToggleOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintDuplexOptionDetails = py::register_python_type(module.get(), type_name_PrintDuplexOptionDetails, &type_spec_PrintDuplexOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintDuplexOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintDuplexOptionDetails, &type_spec_PrintDuplexOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintDuplexOptionDetails, &type_spec_PrintDuplexOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintHolePunchOptionDetails = py::register_python_type(module.get(), type_name_PrintHolePunchOptionDetails, &type_spec_PrintHolePunchOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintHolePunchOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintHolePunchOptionDetails, &type_spec_PrintHolePunchOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintHolePunchOptionDetails, &type_spec_PrintHolePunchOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintMediaSizeOptionDetails = py::register_python_type(module.get(), type_name_PrintMediaSizeOptionDetails, &type_spec_PrintMediaSizeOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintMediaSizeOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintMediaSizeOptionDetails, &type_spec_PrintMediaSizeOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintMediaSizeOptionDetails, &type_spec_PrintMediaSizeOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintMediaTypeOptionDetails = py::register_python_type(module.get(), type_name_PrintMediaTypeOptionDetails, &type_spec_PrintMediaTypeOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintMediaTypeOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintMediaTypeOptionDetails, &type_spec_PrintMediaTypeOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintMediaTypeOptionDetails, &type_spec_PrintMediaTypeOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintOrientationOptionDetails = py::register_python_type(module.get(), type_name_PrintOrientationOptionDetails, &type_spec_PrintOrientationOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintOrientationOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintOrientationOptionDetails, &type_spec_PrintOrientationOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintOrientationOptionDetails, &type_spec_PrintOrientationOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintPageRangeOptionDetails = py::register_python_type(module.get(), type_name_PrintPageRangeOptionDetails, &type_spec_PrintPageRangeOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintPageRangeOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintPageRangeOptionDetails, &type_spec_PrintPageRangeOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintPageRangeOptionDetails, &type_spec_PrintPageRangeOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintQualityOptionDetails = py::register_python_type(module.get(), type_name_PrintQualityOptionDetails, &type_spec_PrintQualityOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintQualityOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintQualityOptionDetails, &type_spec_PrintQualityOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintQualityOptionDetails, &type_spec_PrintQualityOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintStapleOptionDetails = py::register_python_type(module.get(), type_name_PrintStapleOptionDetails, &type_spec_PrintStapleOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintStapleOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintStapleOptionDetails, &type_spec_PrintStapleOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintStapleOptionDetails, &type_spec_PrintStapleOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskOptionChangedEventArgs = py::register_python_type(module.get(), type_name_PrintTaskOptionChangedEventArgs, &type_spec_PrintTaskOptionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskOptionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskOptionChangedEventArgs, &type_spec_PrintTaskOptionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskOptionChangedEventArgs, &type_spec_PrintTaskOptionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskOptionDetails = py::register_python_type(module.get(), type_name_PrintTaskOptionDetails, &type_spec_PrintTaskOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskOptionDetails, &type_spec_PrintTaskOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskOptionDetails, &type_spec_PrintTaskOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintCustomOptionDetails = py::register_python_type(module.get(), type_name_IPrintCustomOptionDetails, &type_spec_IPrintCustomOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_IPrintCustomOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintCustomOptionDetails, &type_spec_IPrintCustomOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintCustomOptionDetails, &type_spec_IPrintCustomOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintItemListOptionDetails = py::register_python_type(module.get(), type_name_IPrintItemListOptionDetails, &type_spec_IPrintItemListOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_IPrintItemListOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintItemListOptionDetails, &type_spec_IPrintItemListOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintItemListOptionDetails, &type_spec_IPrintItemListOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintNumberOptionDetails = py::register_python_type(module.get(), type_name_IPrintNumberOptionDetails, &type_spec_IPrintNumberOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_IPrintNumberOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintNumberOptionDetails, &type_spec_IPrintNumberOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintNumberOptionDetails, &type_spec_IPrintNumberOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintOptionDetails = py::register_python_type(module.get(), type_name_IPrintOptionDetails, &type_spec_IPrintOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_IPrintOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintOptionDetails, &type_spec_IPrintOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintOptionDetails, &type_spec_IPrintOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintTextOptionDetails = py::register_python_type(module.get(), type_name_IPrintTextOptionDetails, &type_spec_IPrintTextOptionDetails, object_bases.get(), nullptr);
-    if (!state->type_IPrintTextOptionDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintTextOptionDetails, &type_spec_IPrintTextOptionDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintTextOptionDetails, &type_spec_IPrintTextOptionDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintBindingOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintBorderingOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCollationOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintColorModeOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCopiesOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCustomItemDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCustomItemListOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCustomTextOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintCustomToggleOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintDuplexOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintHolePunchOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintMediaSizeOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintMediaTypeOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintOrientationOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintPageRangeOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintQualityOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintStapleOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskOptionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintCustomOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintItemListOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintNumberOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Printing::OptionDetails");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintTextOptionDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -83,44 +83,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingConnection>
+    struct py_type<winrt::Windows::Media::Casting::CastingConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>
+    struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingConnectionErrorOccurredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingDevice>
+    struct py_type<winrt::Windows::Media::Casting::CastingDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingDevicePicker>
+    struct py_type<winrt::Windows::Media::Casting::CastingDevicePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingDevicePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>
+    struct py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingDevicePickerFilter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>
+    struct py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingDeviceSelectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Casting::CastingSource>
+    struct py_type<winrt::Windows::Media::Casting::CastingSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.casting";
+        static constexpr const char* type_name = "CastingSource";
     };
 }

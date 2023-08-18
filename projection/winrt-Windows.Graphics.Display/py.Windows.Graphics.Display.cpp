@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Display
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdvancedColorInfo;
-        PyTypeObject* type_BrightnessOverride;
-        PyTypeObject* type_BrightnessOverrideSettings;
-        PyTypeObject* type_ColorOverrideSettings;
-        PyTypeObject* type_DisplayEnhancementOverride;
-        PyTypeObject* type_DisplayEnhancementOverrideCapabilities;
-        PyTypeObject* type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs;
-        PyTypeObject* type_DisplayInformation;
-        PyTypeObject* type_DisplayProperties;
-        PyTypeObject* type_DisplayServices;
-        PyTypeObject* type_NitRange;
-    };
-
     // ----- AdvancedColorInfo class --------------------
     static constexpr const char* const type_name_AdvancedColorInfo = "AdvancedColorInfo";
 
@@ -3357,64 +3342,15 @@ namespace py::cpp::Windows::Graphics::Display
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Display");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdvancedColorInfo);
-        Py_VISIT(state->type_BrightnessOverride);
-        Py_VISIT(state->type_BrightnessOverrideSettings);
-        Py_VISIT(state->type_ColorOverrideSettings);
-        Py_VISIT(state->type_DisplayEnhancementOverride);
-        Py_VISIT(state->type_DisplayEnhancementOverrideCapabilities);
-        Py_VISIT(state->type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs);
-        Py_VISIT(state->type_DisplayInformation);
-        Py_VISIT(state->type_DisplayProperties);
-        Py_VISIT(state->type_DisplayServices);
-        Py_VISIT(state->type_NitRange);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdvancedColorInfo);
-        Py_CLEAR(state->type_BrightnessOverride);
-        Py_CLEAR(state->type_BrightnessOverrideSettings);
-        Py_CLEAR(state->type_ColorOverrideSettings);
-        Py_CLEAR(state->type_DisplayEnhancementOverride);
-        Py_CLEAR(state->type_DisplayEnhancementOverrideCapabilities);
-        Py_CLEAR(state->type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs);
-        Py_CLEAR(state->type_DisplayInformation);
-        Py_CLEAR(state->type_DisplayProperties);
-        Py_CLEAR(state->type_DisplayServices);
-        Py_CLEAR(state->type_NitRange);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Display",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Display
@@ -3430,7 +3366,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3443,47 +3379,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdvancedColorInfo = py::register_python_type(module.get(), type_name_AdvancedColorInfo, &type_spec_AdvancedColorInfo, object_bases.get(), nullptr);
-    if (!state->type_AdvancedColorInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvancedColorInfo, &type_spec_AdvancedColorInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvancedColorInfo, &type_spec_AdvancedColorInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BrightnessOverride = py::register_python_type(module.get(), type_name_BrightnessOverride, &type_spec_BrightnessOverride, object_bases.get(), nullptr);
-    if (!state->type_BrightnessOverride)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BrightnessOverride, &type_spec_BrightnessOverride, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BrightnessOverride, &type_spec_BrightnessOverride, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BrightnessOverrideSettings = py::register_python_type(module.get(), type_name_BrightnessOverrideSettings, &type_spec_BrightnessOverrideSettings, object_bases.get(), nullptr);
-    if (!state->type_BrightnessOverrideSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BrightnessOverrideSettings, &type_spec_BrightnessOverrideSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BrightnessOverrideSettings, &type_spec_BrightnessOverrideSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorOverrideSettings = py::register_python_type(module.get(), type_name_ColorOverrideSettings, &type_spec_ColorOverrideSettings, object_bases.get(), nullptr);
-    if (!state->type_ColorOverrideSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorOverrideSettings, &type_spec_ColorOverrideSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorOverrideSettings, &type_spec_ColorOverrideSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayEnhancementOverride = py::register_python_type(module.get(), type_name_DisplayEnhancementOverride, &type_spec_DisplayEnhancementOverride, object_bases.get(), nullptr);
-    if (!state->type_DisplayEnhancementOverride)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverride, &type_spec_DisplayEnhancementOverride, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverride, &type_spec_DisplayEnhancementOverride, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayEnhancementOverrideCapabilities = py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilities, &type_spec_DisplayEnhancementOverrideCapabilities, object_bases.get(), nullptr);
-    if (!state->type_DisplayEnhancementOverrideCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilities, &type_spec_DisplayEnhancementOverrideCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilities, &type_spec_DisplayEnhancementOverrideCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs = py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3494,8 +3448,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display(void) noexcept
         return nullptr;
     }
 
-    state->type_DisplayInformation = py::register_python_type(module.get(), type_name_DisplayInformation, &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Meta.get()));
-    if (!state->type_DisplayInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayInformation, &type_spec_DisplayInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayInformation, &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3506,277 +3463,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display(void) noexcept
         return nullptr;
     }
 
-    state->type_DisplayProperties = py::register_python_type(module.get(), type_name_DisplayProperties, &type_spec_DisplayProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Meta.get()));
-    if (!state->type_DisplayProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayProperties, &type_spec_DisplayProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayProperties, &type_spec_DisplayProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DisplayServices = py::register_python_type(module.get(), type_name_DisplayServices, &type_spec_DisplayServices, object_bases.get(), nullptr);
-    if (!state->type_DisplayServices)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DisplayServices, &type_spec_DisplayServices, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DisplayServices, &type_spec_DisplayServices, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NitRange = py::register_python_type(module.get(), type_name_NitRange, &type_spec_NitRange, nullptr, nullptr);
-    if (!state->type_NitRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NitRange, &type_spec_NitRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NitRange, &type_spec_NitRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedColorInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::AdvancedColorInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::BrightnessOverride>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BrightnessOverride;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::BrightnessOverride is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BrightnessOverrideSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::BrightnessOverrideSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorOverrideSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::ColorOverrideSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayEnhancementOverride;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayEnhancementOverride is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayEnhancementOverrideCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayEnhancementOverrideCapabilitiesChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::DisplayServices>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DisplayServices;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::DisplayServices is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Display::NitRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Display;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Display");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NitRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Display::NitRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

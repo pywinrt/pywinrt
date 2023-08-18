@@ -6,62 +6,6 @@
 
 namespace py::cpp::Windows::Media::Protection::PlayReady
 {
-    struct module_state
-    {
-        PyTypeObject* type_NDClient;
-        PyTypeObject* type_NDCustomData;
-        PyTypeObject* type_NDDownloadEngineNotifier;
-        PyTypeObject* type_NDLicenseFetchDescriptor;
-        PyTypeObject* type_NDStorageFileHelper;
-        PyTypeObject* type_NDStreamParserNotifier;
-        PyTypeObject* type_NDTCPMessenger;
-        PyTypeObject* type_PlayReadyContentHeader;
-        PyTypeObject* type_PlayReadyContentResolver;
-        PyTypeObject* type_PlayReadyDomain;
-        PyTypeObject* type_PlayReadyDomainIterable;
-        PyTypeObject* type_PlayReadyDomainIterator;
-        PyTypeObject* type_PlayReadyDomainJoinServiceRequest;
-        PyTypeObject* type_PlayReadyDomainLeaveServiceRequest;
-        PyTypeObject* type_PlayReadyITADataGenerator;
-        PyTypeObject* type_PlayReadyIndividualizationServiceRequest;
-        PyTypeObject* type_PlayReadyLicense;
-        PyTypeObject* type_PlayReadyLicenseAcquisitionServiceRequest;
-        PyTypeObject* type_PlayReadyLicenseIterable;
-        PyTypeObject* type_PlayReadyLicenseIterator;
-        PyTypeObject* type_PlayReadyLicenseManagement;
-        PyTypeObject* type_PlayReadyLicenseSession;
-        PyTypeObject* type_PlayReadyMeteringReportServiceRequest;
-        PyTypeObject* type_PlayReadyRevocationServiceRequest;
-        PyTypeObject* type_PlayReadySecureStopIterable;
-        PyTypeObject* type_PlayReadySecureStopIterator;
-        PyTypeObject* type_PlayReadySecureStopServiceRequest;
-        PyTypeObject* type_PlayReadySoapMessage;
-        PyTypeObject* type_PlayReadyStatics;
-        PyTypeObject* type_INDClosedCaptionDataReceivedEventArgs;
-        PyTypeObject* type_INDCustomData;
-        PyTypeObject* type_INDDownloadEngine;
-        PyTypeObject* type_INDDownloadEngineNotifier;
-        PyTypeObject* type_INDLicenseFetchCompletedEventArgs;
-        PyTypeObject* type_INDLicenseFetchDescriptor;
-        PyTypeObject* type_INDLicenseFetchResult;
-        PyTypeObject* type_INDMessenger;
-        PyTypeObject* type_INDProximityDetectionCompletedEventArgs;
-        PyTypeObject* type_INDRegistrationCompletedEventArgs;
-        PyTypeObject* type_INDSendResult;
-        PyTypeObject* type_INDStartResult;
-        PyTypeObject* type_INDStorageFileHelper;
-        PyTypeObject* type_INDStreamParser;
-        PyTypeObject* type_INDStreamParserNotifier;
-        PyTypeObject* type_INDTransmitterProperties;
-        PyTypeObject* type_IPlayReadyDomain;
-        PyTypeObject* type_IPlayReadyLicense;
-        PyTypeObject* type_IPlayReadyLicenseAcquisitionServiceRequest;
-        PyTypeObject* type_IPlayReadyLicenseSession;
-        PyTypeObject* type_IPlayReadyLicenseSession2;
-        PyTypeObject* type_IPlayReadySecureStopServiceRequest;
-        PyTypeObject* type_IPlayReadyServiceRequest;
-    };
-
     // ----- NDClient class --------------------
     static constexpr const char* const type_name_NDClient = "NDClient";
 
@@ -12558,146 +12502,15 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     PyDoc_STRVAR(module_doc, "Windows::Media::Protection::PlayReady");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_NDClient);
-        Py_VISIT(state->type_NDCustomData);
-        Py_VISIT(state->type_NDDownloadEngineNotifier);
-        Py_VISIT(state->type_NDLicenseFetchDescriptor);
-        Py_VISIT(state->type_NDStorageFileHelper);
-        Py_VISIT(state->type_NDStreamParserNotifier);
-        Py_VISIT(state->type_NDTCPMessenger);
-        Py_VISIT(state->type_PlayReadyContentHeader);
-        Py_VISIT(state->type_PlayReadyContentResolver);
-        Py_VISIT(state->type_PlayReadyDomain);
-        Py_VISIT(state->type_PlayReadyDomainIterable);
-        Py_VISIT(state->type_PlayReadyDomainIterator);
-        Py_VISIT(state->type_PlayReadyDomainJoinServiceRequest);
-        Py_VISIT(state->type_PlayReadyDomainLeaveServiceRequest);
-        Py_VISIT(state->type_PlayReadyITADataGenerator);
-        Py_VISIT(state->type_PlayReadyIndividualizationServiceRequest);
-        Py_VISIT(state->type_PlayReadyLicense);
-        Py_VISIT(state->type_PlayReadyLicenseAcquisitionServiceRequest);
-        Py_VISIT(state->type_PlayReadyLicenseIterable);
-        Py_VISIT(state->type_PlayReadyLicenseIterator);
-        Py_VISIT(state->type_PlayReadyLicenseManagement);
-        Py_VISIT(state->type_PlayReadyLicenseSession);
-        Py_VISIT(state->type_PlayReadyMeteringReportServiceRequest);
-        Py_VISIT(state->type_PlayReadyRevocationServiceRequest);
-        Py_VISIT(state->type_PlayReadySecureStopIterable);
-        Py_VISIT(state->type_PlayReadySecureStopIterator);
-        Py_VISIT(state->type_PlayReadySecureStopServiceRequest);
-        Py_VISIT(state->type_PlayReadySoapMessage);
-        Py_VISIT(state->type_PlayReadyStatics);
-        Py_VISIT(state->type_INDClosedCaptionDataReceivedEventArgs);
-        Py_VISIT(state->type_INDCustomData);
-        Py_VISIT(state->type_INDDownloadEngine);
-        Py_VISIT(state->type_INDDownloadEngineNotifier);
-        Py_VISIT(state->type_INDLicenseFetchCompletedEventArgs);
-        Py_VISIT(state->type_INDLicenseFetchDescriptor);
-        Py_VISIT(state->type_INDLicenseFetchResult);
-        Py_VISIT(state->type_INDMessenger);
-        Py_VISIT(state->type_INDProximityDetectionCompletedEventArgs);
-        Py_VISIT(state->type_INDRegistrationCompletedEventArgs);
-        Py_VISIT(state->type_INDSendResult);
-        Py_VISIT(state->type_INDStartResult);
-        Py_VISIT(state->type_INDStorageFileHelper);
-        Py_VISIT(state->type_INDStreamParser);
-        Py_VISIT(state->type_INDStreamParserNotifier);
-        Py_VISIT(state->type_INDTransmitterProperties);
-        Py_VISIT(state->type_IPlayReadyDomain);
-        Py_VISIT(state->type_IPlayReadyLicense);
-        Py_VISIT(state->type_IPlayReadyLicenseAcquisitionServiceRequest);
-        Py_VISIT(state->type_IPlayReadyLicenseSession);
-        Py_VISIT(state->type_IPlayReadyLicenseSession2);
-        Py_VISIT(state->type_IPlayReadySecureStopServiceRequest);
-        Py_VISIT(state->type_IPlayReadyServiceRequest);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_NDClient);
-        Py_CLEAR(state->type_NDCustomData);
-        Py_CLEAR(state->type_NDDownloadEngineNotifier);
-        Py_CLEAR(state->type_NDLicenseFetchDescriptor);
-        Py_CLEAR(state->type_NDStorageFileHelper);
-        Py_CLEAR(state->type_NDStreamParserNotifier);
-        Py_CLEAR(state->type_NDTCPMessenger);
-        Py_CLEAR(state->type_PlayReadyContentHeader);
-        Py_CLEAR(state->type_PlayReadyContentResolver);
-        Py_CLEAR(state->type_PlayReadyDomain);
-        Py_CLEAR(state->type_PlayReadyDomainIterable);
-        Py_CLEAR(state->type_PlayReadyDomainIterator);
-        Py_CLEAR(state->type_PlayReadyDomainJoinServiceRequest);
-        Py_CLEAR(state->type_PlayReadyDomainLeaveServiceRequest);
-        Py_CLEAR(state->type_PlayReadyITADataGenerator);
-        Py_CLEAR(state->type_PlayReadyIndividualizationServiceRequest);
-        Py_CLEAR(state->type_PlayReadyLicense);
-        Py_CLEAR(state->type_PlayReadyLicenseAcquisitionServiceRequest);
-        Py_CLEAR(state->type_PlayReadyLicenseIterable);
-        Py_CLEAR(state->type_PlayReadyLicenseIterator);
-        Py_CLEAR(state->type_PlayReadyLicenseManagement);
-        Py_CLEAR(state->type_PlayReadyLicenseSession);
-        Py_CLEAR(state->type_PlayReadyMeteringReportServiceRequest);
-        Py_CLEAR(state->type_PlayReadyRevocationServiceRequest);
-        Py_CLEAR(state->type_PlayReadySecureStopIterable);
-        Py_CLEAR(state->type_PlayReadySecureStopIterator);
-        Py_CLEAR(state->type_PlayReadySecureStopServiceRequest);
-        Py_CLEAR(state->type_PlayReadySoapMessage);
-        Py_CLEAR(state->type_PlayReadyStatics);
-        Py_CLEAR(state->type_INDClosedCaptionDataReceivedEventArgs);
-        Py_CLEAR(state->type_INDCustomData);
-        Py_CLEAR(state->type_INDDownloadEngine);
-        Py_CLEAR(state->type_INDDownloadEngineNotifier);
-        Py_CLEAR(state->type_INDLicenseFetchCompletedEventArgs);
-        Py_CLEAR(state->type_INDLicenseFetchDescriptor);
-        Py_CLEAR(state->type_INDLicenseFetchResult);
-        Py_CLEAR(state->type_INDMessenger);
-        Py_CLEAR(state->type_INDProximityDetectionCompletedEventArgs);
-        Py_CLEAR(state->type_INDRegistrationCompletedEventArgs);
-        Py_CLEAR(state->type_INDSendResult);
-        Py_CLEAR(state->type_INDStartResult);
-        Py_CLEAR(state->type_INDStorageFileHelper);
-        Py_CLEAR(state->type_INDStreamParser);
-        Py_CLEAR(state->type_INDStreamParserNotifier);
-        Py_CLEAR(state->type_INDTransmitterProperties);
-        Py_CLEAR(state->type_IPlayReadyDomain);
-        Py_CLEAR(state->type_IPlayReadyLicense);
-        Py_CLEAR(state->type_IPlayReadyLicenseAcquisitionServiceRequest);
-        Py_CLEAR(state->type_IPlayReadyLicenseSession);
-        Py_CLEAR(state->type_IPlayReadyLicenseSession2);
-        Py_CLEAR(state->type_IPlayReadySecureStopServiceRequest);
-        Py_CLEAR(state->type_IPlayReadyServiceRequest);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Protection_PlayReady",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Protection::PlayReady
@@ -12713,7 +12526,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection_PlayReady(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -12726,173 +12539,254 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection_PlayReady(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_NDClient = py::register_python_type(module.get(), type_name_NDClient, &type_spec_NDClient, object_bases.get(), nullptr);
-    if (!state->type_NDClient)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDClient, &type_spec_NDClient, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDClient, &type_spec_NDClient, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDCustomData = py::register_python_type(module.get(), type_name_NDCustomData, &type_spec_NDCustomData, object_bases.get(), nullptr);
-    if (!state->type_NDCustomData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDCustomData, &type_spec_NDCustomData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDCustomData, &type_spec_NDCustomData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDDownloadEngineNotifier = py::register_python_type(module.get(), type_name_NDDownloadEngineNotifier, &type_spec_NDDownloadEngineNotifier, object_bases.get(), nullptr);
-    if (!state->type_NDDownloadEngineNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDDownloadEngineNotifier, &type_spec_NDDownloadEngineNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDDownloadEngineNotifier, &type_spec_NDDownloadEngineNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDLicenseFetchDescriptor = py::register_python_type(module.get(), type_name_NDLicenseFetchDescriptor, &type_spec_NDLicenseFetchDescriptor, object_bases.get(), nullptr);
-    if (!state->type_NDLicenseFetchDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDLicenseFetchDescriptor, &type_spec_NDLicenseFetchDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDLicenseFetchDescriptor, &type_spec_NDLicenseFetchDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDStorageFileHelper = py::register_python_type(module.get(), type_name_NDStorageFileHelper, &type_spec_NDStorageFileHelper, object_bases.get(), nullptr);
-    if (!state->type_NDStorageFileHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDStorageFileHelper, &type_spec_NDStorageFileHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDStorageFileHelper, &type_spec_NDStorageFileHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDStreamParserNotifier = py::register_python_type(module.get(), type_name_NDStreamParserNotifier, &type_spec_NDStreamParserNotifier, object_bases.get(), nullptr);
-    if (!state->type_NDStreamParserNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDStreamParserNotifier, &type_spec_NDStreamParserNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDStreamParserNotifier, &type_spec_NDStreamParserNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NDTCPMessenger = py::register_python_type(module.get(), type_name_NDTCPMessenger, &type_spec_NDTCPMessenger, object_bases.get(), nullptr);
-    if (!state->type_NDTCPMessenger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NDTCPMessenger, &type_spec_NDTCPMessenger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NDTCPMessenger, &type_spec_NDTCPMessenger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyContentHeader = py::register_python_type(module.get(), type_name_PlayReadyContentHeader, &type_spec_PlayReadyContentHeader, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyContentHeader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyContentHeader, &type_spec_PlayReadyContentHeader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyContentHeader, &type_spec_PlayReadyContentHeader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyContentResolver = py::register_python_type(module.get(), type_name_PlayReadyContentResolver, &type_spec_PlayReadyContentResolver, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyContentResolver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyContentResolver, &type_spec_PlayReadyContentResolver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyContentResolver, &type_spec_PlayReadyContentResolver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyDomain = py::register_python_type(module.get(), type_name_PlayReadyDomain, &type_spec_PlayReadyDomain, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyDomain)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomain, &type_spec_PlayReadyDomain, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomain, &type_spec_PlayReadyDomain, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyDomainIterable = py::register_python_type(module.get(), type_name_PlayReadyDomainIterable, &type_spec_PlayReadyDomainIterable, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyDomainIterable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainIterable, &type_spec_PlayReadyDomainIterable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainIterable, &type_spec_PlayReadyDomainIterable, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyDomainIterator = py::register_python_type(module.get(), type_name_PlayReadyDomainIterator, &type_spec_PlayReadyDomainIterator, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyDomainIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainIterator, &type_spec_PlayReadyDomainIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainIterator, &type_spec_PlayReadyDomainIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyDomainJoinServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyDomainJoinServiceRequest, &type_spec_PlayReadyDomainJoinServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyDomainJoinServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainJoinServiceRequest, &type_spec_PlayReadyDomainJoinServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainJoinServiceRequest, &type_spec_PlayReadyDomainJoinServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyDomainLeaveServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyDomainLeaveServiceRequest, &type_spec_PlayReadyDomainLeaveServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyDomainLeaveServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainLeaveServiceRequest, &type_spec_PlayReadyDomainLeaveServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyDomainLeaveServiceRequest, &type_spec_PlayReadyDomainLeaveServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyITADataGenerator = py::register_python_type(module.get(), type_name_PlayReadyITADataGenerator, &type_spec_PlayReadyITADataGenerator, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyITADataGenerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyITADataGenerator, &type_spec_PlayReadyITADataGenerator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyITADataGenerator, &type_spec_PlayReadyITADataGenerator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyIndividualizationServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyIndividualizationServiceRequest, &type_spec_PlayReadyIndividualizationServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyIndividualizationServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyIndividualizationServiceRequest, &type_spec_PlayReadyIndividualizationServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyIndividualizationServiceRequest, &type_spec_PlayReadyIndividualizationServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicense = py::register_python_type(module.get(), type_name_PlayReadyLicense, &type_spec_PlayReadyLicense, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicense)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicense, &type_spec_PlayReadyLicense, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicense, &type_spec_PlayReadyLicense, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicenseAcquisitionServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyLicenseAcquisitionServiceRequest, &type_spec_PlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicenseAcquisitionServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseAcquisitionServiceRequest, &type_spec_PlayReadyLicenseAcquisitionServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseAcquisitionServiceRequest, &type_spec_PlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicenseIterable = py::register_python_type(module.get(), type_name_PlayReadyLicenseIterable, &type_spec_PlayReadyLicenseIterable, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicenseIterable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseIterable, &type_spec_PlayReadyLicenseIterable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseIterable, &type_spec_PlayReadyLicenseIterable, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicenseIterator = py::register_python_type(module.get(), type_name_PlayReadyLicenseIterator, &type_spec_PlayReadyLicenseIterator, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicenseIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseIterator, &type_spec_PlayReadyLicenseIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseIterator, &type_spec_PlayReadyLicenseIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicenseManagement = py::register_python_type(module.get(), type_name_PlayReadyLicenseManagement, &type_spec_PlayReadyLicenseManagement, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicenseManagement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseManagement, &type_spec_PlayReadyLicenseManagement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseManagement, &type_spec_PlayReadyLicenseManagement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyLicenseSession = py::register_python_type(module.get(), type_name_PlayReadyLicenseSession, &type_spec_PlayReadyLicenseSession, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyLicenseSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseSession, &type_spec_PlayReadyLicenseSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyLicenseSession, &type_spec_PlayReadyLicenseSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyMeteringReportServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyMeteringReportServiceRequest, &type_spec_PlayReadyMeteringReportServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyMeteringReportServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyMeteringReportServiceRequest, &type_spec_PlayReadyMeteringReportServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyMeteringReportServiceRequest, &type_spec_PlayReadyMeteringReportServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadyRevocationServiceRequest = py::register_python_type(module.get(), type_name_PlayReadyRevocationServiceRequest, &type_spec_PlayReadyRevocationServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadyRevocationServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyRevocationServiceRequest, &type_spec_PlayReadyRevocationServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyRevocationServiceRequest, &type_spec_PlayReadyRevocationServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadySecureStopIterable = py::register_python_type(module.get(), type_name_PlayReadySecureStopIterable, &type_spec_PlayReadySecureStopIterable, object_bases.get(), nullptr);
-    if (!state->type_PlayReadySecureStopIterable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopIterable, &type_spec_PlayReadySecureStopIterable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopIterable, &type_spec_PlayReadySecureStopIterable, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadySecureStopIterator = py::register_python_type(module.get(), type_name_PlayReadySecureStopIterator, &type_spec_PlayReadySecureStopIterator, object_bases.get(), nullptr);
-    if (!state->type_PlayReadySecureStopIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopIterator, &type_spec_PlayReadySecureStopIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopIterator, &type_spec_PlayReadySecureStopIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadySecureStopServiceRequest = py::register_python_type(module.get(), type_name_PlayReadySecureStopServiceRequest, &type_spec_PlayReadySecureStopServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_PlayReadySecureStopServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopServiceRequest, &type_spec_PlayReadySecureStopServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadySecureStopServiceRequest, &type_spec_PlayReadySecureStopServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlayReadySoapMessage = py::register_python_type(module.get(), type_name_PlayReadySoapMessage, &type_spec_PlayReadySoapMessage, object_bases.get(), nullptr);
-    if (!state->type_PlayReadySoapMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadySoapMessage, &type_spec_PlayReadySoapMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadySoapMessage, &type_spec_PlayReadySoapMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -12903,1346 +12797,222 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection_PlayReady(void) noexcept
         return nullptr;
     }
 
-    state->type_PlayReadyStatics = py::register_python_type(module.get(), type_name_PlayReadyStatics, &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Meta.get()));
-    if (!state->type_PlayReadyStatics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlayReadyStatics, &type_spec_PlayReadyStatics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlayReadyStatics, &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDClosedCaptionDataReceivedEventArgs = py::register_python_type(module.get(), type_name_INDClosedCaptionDataReceivedEventArgs, &type_spec_INDClosedCaptionDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_INDClosedCaptionDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDClosedCaptionDataReceivedEventArgs, &type_spec_INDClosedCaptionDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDClosedCaptionDataReceivedEventArgs, &type_spec_INDClosedCaptionDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDCustomData = py::register_python_type(module.get(), type_name_INDCustomData, &type_spec_INDCustomData, object_bases.get(), nullptr);
-    if (!state->type_INDCustomData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDCustomData, &type_spec_INDCustomData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDCustomData, &type_spec_INDCustomData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDDownloadEngine = py::register_python_type(module.get(), type_name_INDDownloadEngine, &type_spec_INDDownloadEngine, object_bases.get(), nullptr);
-    if (!state->type_INDDownloadEngine)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDDownloadEngine, &type_spec_INDDownloadEngine, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDDownloadEngine, &type_spec_INDDownloadEngine, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDDownloadEngineNotifier = py::register_python_type(module.get(), type_name_INDDownloadEngineNotifier, &type_spec_INDDownloadEngineNotifier, object_bases.get(), nullptr);
-    if (!state->type_INDDownloadEngineNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDDownloadEngineNotifier, &type_spec_INDDownloadEngineNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDDownloadEngineNotifier, &type_spec_INDDownloadEngineNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDLicenseFetchCompletedEventArgs = py::register_python_type(module.get(), type_name_INDLicenseFetchCompletedEventArgs, &type_spec_INDLicenseFetchCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_INDLicenseFetchCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchCompletedEventArgs, &type_spec_INDLicenseFetchCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchCompletedEventArgs, &type_spec_INDLicenseFetchCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDLicenseFetchDescriptor = py::register_python_type(module.get(), type_name_INDLicenseFetchDescriptor, &type_spec_INDLicenseFetchDescriptor, object_bases.get(), nullptr);
-    if (!state->type_INDLicenseFetchDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchDescriptor, &type_spec_INDLicenseFetchDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchDescriptor, &type_spec_INDLicenseFetchDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDLicenseFetchResult = py::register_python_type(module.get(), type_name_INDLicenseFetchResult, &type_spec_INDLicenseFetchResult, object_bases.get(), nullptr);
-    if (!state->type_INDLicenseFetchResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchResult, &type_spec_INDLicenseFetchResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDLicenseFetchResult, &type_spec_INDLicenseFetchResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDMessenger = py::register_python_type(module.get(), type_name_INDMessenger, &type_spec_INDMessenger, object_bases.get(), nullptr);
-    if (!state->type_INDMessenger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDMessenger, &type_spec_INDMessenger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDMessenger, &type_spec_INDMessenger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDProximityDetectionCompletedEventArgs = py::register_python_type(module.get(), type_name_INDProximityDetectionCompletedEventArgs, &type_spec_INDProximityDetectionCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_INDProximityDetectionCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDProximityDetectionCompletedEventArgs, &type_spec_INDProximityDetectionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDProximityDetectionCompletedEventArgs, &type_spec_INDProximityDetectionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDRegistrationCompletedEventArgs = py::register_python_type(module.get(), type_name_INDRegistrationCompletedEventArgs, &type_spec_INDRegistrationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_INDRegistrationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDRegistrationCompletedEventArgs, &type_spec_INDRegistrationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDRegistrationCompletedEventArgs, &type_spec_INDRegistrationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDSendResult = py::register_python_type(module.get(), type_name_INDSendResult, &type_spec_INDSendResult, object_bases.get(), nullptr);
-    if (!state->type_INDSendResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDSendResult, &type_spec_INDSendResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDSendResult, &type_spec_INDSendResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDStartResult = py::register_python_type(module.get(), type_name_INDStartResult, &type_spec_INDStartResult, object_bases.get(), nullptr);
-    if (!state->type_INDStartResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDStartResult, &type_spec_INDStartResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDStartResult, &type_spec_INDStartResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDStorageFileHelper = py::register_python_type(module.get(), type_name_INDStorageFileHelper, &type_spec_INDStorageFileHelper, object_bases.get(), nullptr);
-    if (!state->type_INDStorageFileHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDStorageFileHelper, &type_spec_INDStorageFileHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDStorageFileHelper, &type_spec_INDStorageFileHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDStreamParser = py::register_python_type(module.get(), type_name_INDStreamParser, &type_spec_INDStreamParser, object_bases.get(), nullptr);
-    if (!state->type_INDStreamParser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDStreamParser, &type_spec_INDStreamParser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDStreamParser, &type_spec_INDStreamParser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDStreamParserNotifier = py::register_python_type(module.get(), type_name_INDStreamParserNotifier, &type_spec_INDStreamParserNotifier, object_bases.get(), nullptr);
-    if (!state->type_INDStreamParserNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDStreamParserNotifier, &type_spec_INDStreamParserNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDStreamParserNotifier, &type_spec_INDStreamParserNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INDTransmitterProperties = py::register_python_type(module.get(), type_name_INDTransmitterProperties, &type_spec_INDTransmitterProperties, object_bases.get(), nullptr);
-    if (!state->type_INDTransmitterProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INDTransmitterProperties, &type_spec_INDTransmitterProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INDTransmitterProperties, &type_spec_INDTransmitterProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyDomain = py::register_python_type(module.get(), type_name_IPlayReadyDomain, &type_spec_IPlayReadyDomain, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyDomain)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyDomain, &type_spec_IPlayReadyDomain, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyDomain, &type_spec_IPlayReadyDomain, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyLicense = py::register_python_type(module.get(), type_name_IPlayReadyLicense, &type_spec_IPlayReadyLicense, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyLicense)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicense, &type_spec_IPlayReadyLicense, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicense, &type_spec_IPlayReadyLicense, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyLicenseAcquisitionServiceRequest = py::register_python_type(module.get(), type_name_IPlayReadyLicenseAcquisitionServiceRequest, &type_spec_IPlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyLicenseAcquisitionServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseAcquisitionServiceRequest, &type_spec_IPlayReadyLicenseAcquisitionServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseAcquisitionServiceRequest, &type_spec_IPlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyLicenseSession = py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession, &type_spec_IPlayReadyLicenseSession, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyLicenseSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession, &type_spec_IPlayReadyLicenseSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession, &type_spec_IPlayReadyLicenseSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyLicenseSession2 = py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession2, &type_spec_IPlayReadyLicenseSession2, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyLicenseSession2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession2, &type_spec_IPlayReadyLicenseSession2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyLicenseSession2, &type_spec_IPlayReadyLicenseSession2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadySecureStopServiceRequest = py::register_python_type(module.get(), type_name_IPlayReadySecureStopServiceRequest, &type_spec_IPlayReadySecureStopServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadySecureStopServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadySecureStopServiceRequest, &type_spec_IPlayReadySecureStopServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadySecureStopServiceRequest, &type_spec_IPlayReadySecureStopServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPlayReadyServiceRequest = py::register_python_type(module.get(), type_name_IPlayReadyServiceRequest, &type_spec_IPlayReadyServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_IPlayReadyServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPlayReadyServiceRequest, &type_spec_IPlayReadyServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPlayReadyServiceRequest, &type_spec_IPlayReadyServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDClient>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDClient;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDClient is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDCustomData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDCustomData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDCustomData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDDownloadEngineNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDLicenseFetchDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDStorageFileHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDStreamParserNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NDTCPMessenger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyContentHeader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyContentResolver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyDomain;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyDomainIterable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyDomainIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyDomainJoinServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyDomainLeaveServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyITADataGenerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyIndividualizationServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicense;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicenseAcquisitionServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicenseIterable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicenseIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicenseManagement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyLicenseSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyMeteringReportServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyRevocationServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadySecureStopIterable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadySecureStopIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadySecureStopServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadySoapMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlayReadyStatics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDClosedCaptionDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDCustomData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDCustomData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDDownloadEngine;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDDownloadEngineNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDLicenseFetchCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDLicenseFetchDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDLicenseFetchResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDMessenger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDMessenger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDProximityDetectionCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDRegistrationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDSendResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDSendResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDStartResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDStartResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDStorageFileHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDStreamParser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDStreamParser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDStreamParserNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INDTransmitterProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyDomain;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyLicense;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyLicenseAcquisitionServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyLicenseSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyLicenseSession2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadySecureStopServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection::PlayReady;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection::PlayReady");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPlayReadyServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

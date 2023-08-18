@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Storage::Pickers::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_FileOpenPickerUI;
-        PyTypeObject* type_FileRemovedEventArgs;
-        PyTypeObject* type_FileSavePickerUI;
-        PyTypeObject* type_PickerClosingDeferral;
-        PyTypeObject* type_PickerClosingEventArgs;
-        PyTypeObject* type_PickerClosingOperation;
-        PyTypeObject* type_TargetFileRequest;
-        PyTypeObject* type_TargetFileRequestDeferral;
-        PyTypeObject* type_TargetFileRequestedEventArgs;
-    };
-
     // ----- FileOpenPickerUI class --------------------
     static constexpr const char* const type_name_FileOpenPickerUI = "FileOpenPickerUI";
 
@@ -1526,60 +1513,15 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     PyDoc_STRVAR(module_doc, "Windows::Storage::Pickers::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_FileOpenPickerUI);
-        Py_VISIT(state->type_FileRemovedEventArgs);
-        Py_VISIT(state->type_FileSavePickerUI);
-        Py_VISIT(state->type_PickerClosingDeferral);
-        Py_VISIT(state->type_PickerClosingEventArgs);
-        Py_VISIT(state->type_PickerClosingOperation);
-        Py_VISIT(state->type_TargetFileRequest);
-        Py_VISIT(state->type_TargetFileRequestDeferral);
-        Py_VISIT(state->type_TargetFileRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_FileOpenPickerUI);
-        Py_CLEAR(state->type_FileRemovedEventArgs);
-        Py_CLEAR(state->type_FileSavePickerUI);
-        Py_CLEAR(state->type_PickerClosingDeferral);
-        Py_CLEAR(state->type_PickerClosingEventArgs);
-        Py_CLEAR(state->type_PickerClosingOperation);
-        Py_CLEAR(state->type_TargetFileRequest);
-        Py_CLEAR(state->type_TargetFileRequestDeferral);
-        Py_CLEAR(state->type_TargetFileRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_Pickers_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::Pickers::Provider
@@ -1595,7 +1537,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Pickers_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1608,270 +1550,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Pickers_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_FileOpenPickerUI = py::register_python_type(module.get(), type_name_FileOpenPickerUI, &type_spec_FileOpenPickerUI, object_bases.get(), nullptr);
-    if (!state->type_FileOpenPickerUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerUI, &type_spec_FileOpenPickerUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerUI, &type_spec_FileOpenPickerUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileRemovedEventArgs = py::register_python_type(module.get(), type_name_FileRemovedEventArgs, &type_spec_FileRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileRemovedEventArgs, &type_spec_FileRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileRemovedEventArgs, &type_spec_FileRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileSavePickerUI = py::register_python_type(module.get(), type_name_FileSavePickerUI, &type_spec_FileSavePickerUI, object_bases.get(), nullptr);
-    if (!state->type_FileSavePickerUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileSavePickerUI, &type_spec_FileSavePickerUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileSavePickerUI, &type_spec_FileSavePickerUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PickerClosingDeferral = py::register_python_type(module.get(), type_name_PickerClosingDeferral, &type_spec_PickerClosingDeferral, object_bases.get(), nullptr);
-    if (!state->type_PickerClosingDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerClosingDeferral, &type_spec_PickerClosingDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerClosingDeferral, &type_spec_PickerClosingDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PickerClosingEventArgs = py::register_python_type(module.get(), type_name_PickerClosingEventArgs, &type_spec_PickerClosingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PickerClosingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerClosingEventArgs, &type_spec_PickerClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerClosingEventArgs, &type_spec_PickerClosingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PickerClosingOperation = py::register_python_type(module.get(), type_name_PickerClosingOperation, &type_spec_PickerClosingOperation, object_bases.get(), nullptr);
-    if (!state->type_PickerClosingOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerClosingOperation, &type_spec_PickerClosingOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerClosingOperation, &type_spec_PickerClosingOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetFileRequest = py::register_python_type(module.get(), type_name_TargetFileRequest, &type_spec_TargetFileRequest, object_bases.get(), nullptr);
-    if (!state->type_TargetFileRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetFileRequest, &type_spec_TargetFileRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetFileRequest, &type_spec_TargetFileRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetFileRequestDeferral = py::register_python_type(module.get(), type_name_TargetFileRequestDeferral, &type_spec_TargetFileRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_TargetFileRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetFileRequestDeferral, &type_spec_TargetFileRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetFileRequestDeferral, &type_spec_TargetFileRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TargetFileRequestedEventArgs = py::register_python_type(module.get(), type_name_TargetFileRequestedEventArgs, &type_spec_TargetFileRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TargetFileRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TargetFileRequestedEventArgs, &type_spec_TargetFileRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TargetFileRequestedEventArgs, &type_spec_TargetFileRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileOpenPickerUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileSavePickerUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerClosingDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerClosingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerClosingOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetFileRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::TargetFileRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetFileRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Pickers::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Pickers::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TargetFileRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

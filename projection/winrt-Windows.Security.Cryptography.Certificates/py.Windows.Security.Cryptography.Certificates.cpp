@@ -6,33 +6,6 @@
 
 namespace py::cpp::Windows::Security::Cryptography::Certificates
 {
-    struct module_state
-    {
-        PyTypeObject* type_Certificate;
-        PyTypeObject* type_CertificateChain;
-        PyTypeObject* type_CertificateEnrollmentManager;
-        PyTypeObject* type_CertificateExtension;
-        PyTypeObject* type_CertificateKeyUsages;
-        PyTypeObject* type_CertificateQuery;
-        PyTypeObject* type_CertificateRequestProperties;
-        PyTypeObject* type_CertificateStore;
-        PyTypeObject* type_CertificateStores;
-        PyTypeObject* type_ChainBuildingParameters;
-        PyTypeObject* type_ChainValidationParameters;
-        PyTypeObject* type_CmsAttachedSignature;
-        PyTypeObject* type_CmsDetachedSignature;
-        PyTypeObject* type_CmsSignerInfo;
-        PyTypeObject* type_CmsTimestampInfo;
-        PyTypeObject* type_KeyAlgorithmNames;
-        PyTypeObject* type_KeyAttestationHelper;
-        PyTypeObject* type_KeyStorageProviderNames;
-        PyTypeObject* type_PfxImportParameters;
-        PyTypeObject* type_StandardCertificateStoreNames;
-        PyTypeObject* type_SubjectAlternativeNameInfo;
-        PyTypeObject* type_UserCertificateEnrollmentManager;
-        PyTypeObject* type_UserCertificateStore;
-    };
-
     // ----- Certificate class --------------------
     static constexpr const char* const type_name_Certificate = "Certificate";
 
@@ -6741,88 +6714,15 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Certificates");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Certificate);
-        Py_VISIT(state->type_CertificateChain);
-        Py_VISIT(state->type_CertificateEnrollmentManager);
-        Py_VISIT(state->type_CertificateExtension);
-        Py_VISIT(state->type_CertificateKeyUsages);
-        Py_VISIT(state->type_CertificateQuery);
-        Py_VISIT(state->type_CertificateRequestProperties);
-        Py_VISIT(state->type_CertificateStore);
-        Py_VISIT(state->type_CertificateStores);
-        Py_VISIT(state->type_ChainBuildingParameters);
-        Py_VISIT(state->type_ChainValidationParameters);
-        Py_VISIT(state->type_CmsAttachedSignature);
-        Py_VISIT(state->type_CmsDetachedSignature);
-        Py_VISIT(state->type_CmsSignerInfo);
-        Py_VISIT(state->type_CmsTimestampInfo);
-        Py_VISIT(state->type_KeyAlgorithmNames);
-        Py_VISIT(state->type_KeyAttestationHelper);
-        Py_VISIT(state->type_KeyStorageProviderNames);
-        Py_VISIT(state->type_PfxImportParameters);
-        Py_VISIT(state->type_StandardCertificateStoreNames);
-        Py_VISIT(state->type_SubjectAlternativeNameInfo);
-        Py_VISIT(state->type_UserCertificateEnrollmentManager);
-        Py_VISIT(state->type_UserCertificateStore);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Certificate);
-        Py_CLEAR(state->type_CertificateChain);
-        Py_CLEAR(state->type_CertificateEnrollmentManager);
-        Py_CLEAR(state->type_CertificateExtension);
-        Py_CLEAR(state->type_CertificateKeyUsages);
-        Py_CLEAR(state->type_CertificateQuery);
-        Py_CLEAR(state->type_CertificateRequestProperties);
-        Py_CLEAR(state->type_CertificateStore);
-        Py_CLEAR(state->type_CertificateStores);
-        Py_CLEAR(state->type_ChainBuildingParameters);
-        Py_CLEAR(state->type_ChainValidationParameters);
-        Py_CLEAR(state->type_CmsAttachedSignature);
-        Py_CLEAR(state->type_CmsDetachedSignature);
-        Py_CLEAR(state->type_CmsSignerInfo);
-        Py_CLEAR(state->type_CmsTimestampInfo);
-        Py_CLEAR(state->type_KeyAlgorithmNames);
-        Py_CLEAR(state->type_KeyAttestationHelper);
-        Py_CLEAR(state->type_KeyStorageProviderNames);
-        Py_CLEAR(state->type_PfxImportParameters);
-        Py_CLEAR(state->type_StandardCertificateStoreNames);
-        Py_CLEAR(state->type_SubjectAlternativeNameInfo);
-        Py_CLEAR(state->type_UserCertificateEnrollmentManager);
-        Py_CLEAR(state->type_UserCertificateStore);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Cryptography_Certificates",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Cryptography::Certificates
@@ -6838,7 +6738,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6851,17 +6751,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Certificate = py::register_python_type(module.get(), type_name_Certificate, &type_spec_Certificate, object_bases.get(), nullptr);
-    if (!state->type_Certificate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Certificate, &type_spec_Certificate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Certificate, &type_spec_Certificate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateChain = py::register_python_type(module.get(), type_name_CertificateChain, &type_spec_CertificateChain, object_bases.get(), nullptr);
-    if (!state->type_CertificateChain)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateChain, &type_spec_CertificateChain, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateChain, &type_spec_CertificateChain, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6872,38 +6775,56 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    state->type_CertificateEnrollmentManager = py::register_python_type(module.get(), type_name_CertificateEnrollmentManager, &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get()));
-    if (!state->type_CertificateEnrollmentManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateEnrollmentManager, &type_spec_CertificateEnrollmentManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateEnrollmentManager, &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateExtension = py::register_python_type(module.get(), type_name_CertificateExtension, &type_spec_CertificateExtension, object_bases.get(), nullptr);
-    if (!state->type_CertificateExtension)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateExtension, &type_spec_CertificateExtension, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateExtension, &type_spec_CertificateExtension, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateKeyUsages = py::register_python_type(module.get(), type_name_CertificateKeyUsages, &type_spec_CertificateKeyUsages, object_bases.get(), nullptr);
-    if (!state->type_CertificateKeyUsages)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateKeyUsages, &type_spec_CertificateKeyUsages, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateKeyUsages, &type_spec_CertificateKeyUsages, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateQuery = py::register_python_type(module.get(), type_name_CertificateQuery, &type_spec_CertificateQuery, object_bases.get(), nullptr);
-    if (!state->type_CertificateQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateQuery, &type_spec_CertificateQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateQuery, &type_spec_CertificateQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateRequestProperties = py::register_python_type(module.get(), type_name_CertificateRequestProperties, &type_spec_CertificateRequestProperties, object_bases.get(), nullptr);
-    if (!state->type_CertificateRequestProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateRequestProperties, &type_spec_CertificateRequestProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateRequestProperties, &type_spec_CertificateRequestProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CertificateStore = py::register_python_type(module.get(), type_name_CertificateStore, &type_spec_CertificateStore, object_bases.get(), nullptr);
-    if (!state->type_CertificateStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateStore, &type_spec_CertificateStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateStore, &type_spec_CertificateStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6914,44 +6835,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    state->type_CertificateStores = py::register_python_type(module.get(), type_name_CertificateStores, &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get()));
-    if (!state->type_CertificateStores)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CertificateStores, &type_spec_CertificateStores, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CertificateStores, &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChainBuildingParameters = py::register_python_type(module.get(), type_name_ChainBuildingParameters, &type_spec_ChainBuildingParameters, object_bases.get(), nullptr);
-    if (!state->type_ChainBuildingParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChainBuildingParameters, &type_spec_ChainBuildingParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChainBuildingParameters, &type_spec_ChainBuildingParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChainValidationParameters = py::register_python_type(module.get(), type_name_ChainValidationParameters, &type_spec_ChainValidationParameters, object_bases.get(), nullptr);
-    if (!state->type_ChainValidationParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChainValidationParameters, &type_spec_ChainValidationParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChainValidationParameters, &type_spec_ChainValidationParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CmsAttachedSignature = py::register_python_type(module.get(), type_name_CmsAttachedSignature, &type_spec_CmsAttachedSignature, object_bases.get(), nullptr);
-    if (!state->type_CmsAttachedSignature)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CmsAttachedSignature, &type_spec_CmsAttachedSignature, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CmsAttachedSignature, &type_spec_CmsAttachedSignature, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CmsDetachedSignature = py::register_python_type(module.get(), type_name_CmsDetachedSignature, &type_spec_CmsDetachedSignature, object_bases.get(), nullptr);
-    if (!state->type_CmsDetachedSignature)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CmsDetachedSignature, &type_spec_CmsDetachedSignature, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CmsDetachedSignature, &type_spec_CmsDetachedSignature, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CmsSignerInfo = py::register_python_type(module.get(), type_name_CmsSignerInfo, &type_spec_CmsSignerInfo, object_bases.get(), nullptr);
-    if (!state->type_CmsSignerInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CmsSignerInfo, &type_spec_CmsSignerInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CmsSignerInfo, &type_spec_CmsSignerInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CmsTimestampInfo = py::register_python_type(module.get(), type_name_CmsTimestampInfo, &type_spec_CmsTimestampInfo, object_bases.get(), nullptr);
-    if (!state->type_CmsTimestampInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CmsTimestampInfo, &type_spec_CmsTimestampInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CmsTimestampInfo, &type_spec_CmsTimestampInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6962,14 +6904,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    state->type_KeyAlgorithmNames = py::register_python_type(module.get(), type_name_KeyAlgorithmNames, &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get()));
-    if (!state->type_KeyAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyAlgorithmNames, &type_spec_KeyAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyAlgorithmNames, &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyAttestationHelper = py::register_python_type(module.get(), type_name_KeyAttestationHelper, &type_spec_KeyAttestationHelper, object_bases.get(), nullptr);
-    if (!state->type_KeyAttestationHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyAttestationHelper, &type_spec_KeyAttestationHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyAttestationHelper, &type_spec_KeyAttestationHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6980,14 +6928,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    state->type_KeyStorageProviderNames = py::register_python_type(module.get(), type_name_KeyStorageProviderNames, &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get()));
-    if (!state->type_KeyStorageProviderNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyStorageProviderNames, &type_spec_KeyStorageProviderNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyStorageProviderNames, &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PfxImportParameters = py::register_python_type(module.get(), type_name_PfxImportParameters, &type_spec_PfxImportParameters, object_bases.get(), nullptr);
-    if (!state->type_PfxImportParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PfxImportParameters, &type_spec_PfxImportParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PfxImportParameters, &type_spec_PfxImportParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6998,559 +6952,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) no
         return nullptr;
     }
 
-    state->type_StandardCertificateStoreNames = py::register_python_type(module.get(), type_name_StandardCertificateStoreNames, &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get()));
-    if (!state->type_StandardCertificateStoreNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StandardCertificateStoreNames, &type_spec_StandardCertificateStoreNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StandardCertificateStoreNames, &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SubjectAlternativeNameInfo = py::register_python_type(module.get(), type_name_SubjectAlternativeNameInfo, &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr);
-    if (!state->type_SubjectAlternativeNameInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SubjectAlternativeNameInfo, &type_spec_SubjectAlternativeNameInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SubjectAlternativeNameInfo, &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserCertificateEnrollmentManager = py::register_python_type(module.get(), type_name_UserCertificateEnrollmentManager, &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr);
-    if (!state->type_UserCertificateEnrollmentManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserCertificateEnrollmentManager, &type_spec_UserCertificateEnrollmentManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserCertificateEnrollmentManager, &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserCertificateStore = py::register_python_type(module.get(), type_name_UserCertificateStore, &type_spec_UserCertificateStore, object_bases.get(), nullptr);
-    if (!state->type_UserCertificateStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserCertificateStore, &type_spec_UserCertificateStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserCertificateStore, &type_spec_UserCertificateStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::Certificate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Certificate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::Certificate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateChain;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateChain is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateEnrollmentManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateExtension>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateExtension;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateExtension is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateKeyUsages;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateRequestProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CertificateStores;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CertificateStores is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChainBuildingParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChainValidationParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CmsAttachedSignature;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CmsDetachedSignature;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CmsSignerInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CmsTimestampInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyAttestationHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyStorageProviderNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PfxImportParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StandardCertificateStoreNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SubjectAlternativeNameInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserCertificateEnrollmentManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Certificates;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Certificates");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserCertificateStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

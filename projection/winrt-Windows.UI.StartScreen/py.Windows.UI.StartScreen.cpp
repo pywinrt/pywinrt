@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::UI::StartScreen
 {
-    struct module_state
-    {
-        PyTypeObject* type_JumpList;
-        PyTypeObject* type_JumpListItem;
-        PyTypeObject* type_SecondaryTile;
-        PyTypeObject* type_SecondaryTileVisualElements;
-        PyTypeObject* type_StartScreenManager;
-        PyTypeObject* type_TileMixedRealityModel;
-        PyTypeObject* type_VisualElementsRequest;
-        PyTypeObject* type_VisualElementsRequestDeferral;
-        PyTypeObject* type_VisualElementsRequestedEventArgs;
-    };
-
     // ----- JumpList class --------------------
     static constexpr const char* const type_name_JumpList = "JumpList";
 
@@ -3477,60 +3464,15 @@ namespace py::cpp::Windows::UI::StartScreen
     PyDoc_STRVAR(module_doc, "Windows::UI::StartScreen");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_JumpList);
-        Py_VISIT(state->type_JumpListItem);
-        Py_VISIT(state->type_SecondaryTile);
-        Py_VISIT(state->type_SecondaryTileVisualElements);
-        Py_VISIT(state->type_StartScreenManager);
-        Py_VISIT(state->type_TileMixedRealityModel);
-        Py_VISIT(state->type_VisualElementsRequest);
-        Py_VISIT(state->type_VisualElementsRequestDeferral);
-        Py_VISIT(state->type_VisualElementsRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_JumpList);
-        Py_CLEAR(state->type_JumpListItem);
-        Py_CLEAR(state->type_SecondaryTile);
-        Py_CLEAR(state->type_SecondaryTileVisualElements);
-        Py_CLEAR(state->type_StartScreenManager);
-        Py_CLEAR(state->type_TileMixedRealityModel);
-        Py_CLEAR(state->type_VisualElementsRequest);
-        Py_CLEAR(state->type_VisualElementsRequestDeferral);
-        Py_CLEAR(state->type_VisualElementsRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_StartScreen",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::StartScreen
@@ -3546,7 +3488,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_StartScreen(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3559,270 +3501,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_StartScreen(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_JumpList = py::register_python_type(module.get(), type_name_JumpList, &type_spec_JumpList, object_bases.get(), nullptr);
-    if (!state->type_JumpList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JumpList, &type_spec_JumpList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JumpList, &type_spec_JumpList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JumpListItem = py::register_python_type(module.get(), type_name_JumpListItem, &type_spec_JumpListItem, object_bases.get(), nullptr);
-    if (!state->type_JumpListItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JumpListItem, &type_spec_JumpListItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JumpListItem, &type_spec_JumpListItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryTile = py::register_python_type(module.get(), type_name_SecondaryTile, &type_spec_SecondaryTile, object_bases.get(), nullptr);
-    if (!state->type_SecondaryTile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryTile, &type_spec_SecondaryTile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryTile, &type_spec_SecondaryTile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryTileVisualElements = py::register_python_type(module.get(), type_name_SecondaryTileVisualElements, &type_spec_SecondaryTileVisualElements, object_bases.get(), nullptr);
-    if (!state->type_SecondaryTileVisualElements)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryTileVisualElements, &type_spec_SecondaryTileVisualElements, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryTileVisualElements, &type_spec_SecondaryTileVisualElements, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StartScreenManager = py::register_python_type(module.get(), type_name_StartScreenManager, &type_spec_StartScreenManager, object_bases.get(), nullptr);
-    if (!state->type_StartScreenManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StartScreenManager, &type_spec_StartScreenManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StartScreenManager, &type_spec_StartScreenManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileMixedRealityModel = py::register_python_type(module.get(), type_name_TileMixedRealityModel, &type_spec_TileMixedRealityModel, object_bases.get(), nullptr);
-    if (!state->type_TileMixedRealityModel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileMixedRealityModel, &type_spec_TileMixedRealityModel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileMixedRealityModel, &type_spec_TileMixedRealityModel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualElementsRequest = py::register_python_type(module.get(), type_name_VisualElementsRequest, &type_spec_VisualElementsRequest, object_bases.get(), nullptr);
-    if (!state->type_VisualElementsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequest, &type_spec_VisualElementsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequest, &type_spec_VisualElementsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualElementsRequestDeferral = py::register_python_type(module.get(), type_name_VisualElementsRequestDeferral, &type_spec_VisualElementsRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_VisualElementsRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequestDeferral, &type_spec_VisualElementsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequestDeferral, &type_spec_VisualElementsRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualElementsRequestedEventArgs = py::register_python_type(module.get(), type_name_VisualElementsRequestedEventArgs, &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VisualElementsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequestedEventArgs, &type_spec_VisualElementsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualElementsRequestedEventArgs, &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::JumpList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::JumpList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::JumpListItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JumpListItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::JumpListItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::SecondaryTile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryTile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::SecondaryTile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryTileVisualElements;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::SecondaryTileVisualElements is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::StartScreenManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StartScreenManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::StartScreenManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileMixedRealityModel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::TileMixedRealityModel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualElementsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::VisualElementsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualElementsRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::StartScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::StartScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualElementsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

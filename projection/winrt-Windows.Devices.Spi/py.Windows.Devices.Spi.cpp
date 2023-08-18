@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Spi
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpiBusInfo;
-        PyTypeObject* type_SpiConnectionSettings;
-        PyTypeObject* type_SpiController;
-        PyTypeObject* type_SpiDevice;
-        PyTypeObject* type_ISpiDeviceStatics;
-    };
-
     // ----- SpiBusInfo class --------------------
     static constexpr const char* const type_name_SpiBusInfo = "SpiBusInfo";
 
@@ -1290,52 +1281,15 @@ namespace py::cpp::Windows::Devices::Spi
     PyDoc_STRVAR(module_doc, "Windows::Devices::Spi");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpiBusInfo);
-        Py_VISIT(state->type_SpiConnectionSettings);
-        Py_VISIT(state->type_SpiController);
-        Py_VISIT(state->type_SpiDevice);
-        Py_VISIT(state->type_ISpiDeviceStatics);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpiBusInfo);
-        Py_CLEAR(state->type_SpiConnectionSettings);
-        Py_CLEAR(state->type_SpiController);
-        Py_CLEAR(state->type_SpiDevice);
-        Py_CLEAR(state->type_ISpiDeviceStatics);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Spi",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Spi
@@ -1351,7 +1305,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1364,154 +1318,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpiBusInfo = py::register_python_type(module.get(), type_name_SpiBusInfo, &type_spec_SpiBusInfo, object_bases.get(), nullptr);
-    if (!state->type_SpiBusInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpiBusInfo, &type_spec_SpiBusInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpiBusInfo, &type_spec_SpiBusInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpiConnectionSettings = py::register_python_type(module.get(), type_name_SpiConnectionSettings, &type_spec_SpiConnectionSettings, object_bases.get(), nullptr);
-    if (!state->type_SpiConnectionSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpiConnectionSettings, &type_spec_SpiConnectionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpiConnectionSettings, &type_spec_SpiConnectionSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpiController = py::register_python_type(module.get(), type_name_SpiController, &type_spec_SpiController, object_bases.get(), nullptr);
-    if (!state->type_SpiController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpiController, &type_spec_SpiController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpiController, &type_spec_SpiController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpiDevice = py::register_python_type(module.get(), type_name_SpiDevice, &type_spec_SpiDevice, object_bases.get(), nullptr);
-    if (!state->type_SpiDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpiDevice, &type_spec_SpiDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpiDevice, &type_spec_SpiDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpiDeviceStatics = py::register_python_type(module.get(), type_name_ISpiDeviceStatics, &type_spec_ISpiDeviceStatics, object_bases.get(), nullptr);
-    if (!state->type_ISpiDeviceStatics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpiDeviceStatics, &type_spec_ISpiDeviceStatics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpiDeviceStatics, &type_spec_ISpiDeviceStatics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::SpiBusInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpiBusInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::SpiBusInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::SpiConnectionSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpiConnectionSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::SpiConnectionSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::SpiController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpiController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::SpiController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::SpiDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpiDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::SpiDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpiDeviceStatics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::ISpiDeviceStatics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

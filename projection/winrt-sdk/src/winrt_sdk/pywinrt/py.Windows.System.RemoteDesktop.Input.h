@@ -54,9 +54,10 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>
+    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
+        static constexpr const char* type_name = "RemoteTextConnection";
     };
     template <>
     struct delegate_python_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>

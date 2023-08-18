@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::UI::ApplicationSettings
 {
-    struct module_state
-    {
-        PyTypeObject* type_AccountsSettingsPane;
-        PyTypeObject* type_AccountsSettingsPaneCommandsRequestedEventArgs;
-        PyTypeObject* type_AccountsSettingsPaneEventDeferral;
-        PyTypeObject* type_CredentialCommand;
-        PyTypeObject* type_SettingsCommand;
-        PyTypeObject* type_SettingsPane;
-        PyTypeObject* type_SettingsPaneCommandsRequest;
-        PyTypeObject* type_SettingsPaneCommandsRequestedEventArgs;
-        PyTypeObject* type_WebAccountCommand;
-        PyTypeObject* type_WebAccountInvokedArgs;
-        PyTypeObject* type_WebAccountProviderCommand;
-    };
-
     // ----- AccountsSettingsPane class --------------------
     static constexpr const char* const type_name_AccountsSettingsPane = "AccountsSettingsPane";
 
@@ -1940,64 +1925,15 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     PyDoc_STRVAR(module_doc, "Windows::UI::ApplicationSettings");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AccountsSettingsPane);
-        Py_VISIT(state->type_AccountsSettingsPaneCommandsRequestedEventArgs);
-        Py_VISIT(state->type_AccountsSettingsPaneEventDeferral);
-        Py_VISIT(state->type_CredentialCommand);
-        Py_VISIT(state->type_SettingsCommand);
-        Py_VISIT(state->type_SettingsPane);
-        Py_VISIT(state->type_SettingsPaneCommandsRequest);
-        Py_VISIT(state->type_SettingsPaneCommandsRequestedEventArgs);
-        Py_VISIT(state->type_WebAccountCommand);
-        Py_VISIT(state->type_WebAccountInvokedArgs);
-        Py_VISIT(state->type_WebAccountProviderCommand);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AccountsSettingsPane);
-        Py_CLEAR(state->type_AccountsSettingsPaneCommandsRequestedEventArgs);
-        Py_CLEAR(state->type_AccountsSettingsPaneEventDeferral);
-        Py_CLEAR(state->type_CredentialCommand);
-        Py_CLEAR(state->type_SettingsCommand);
-        Py_CLEAR(state->type_SettingsPane);
-        Py_CLEAR(state->type_SettingsPaneCommandsRequest);
-        Py_CLEAR(state->type_SettingsPaneCommandsRequestedEventArgs);
-        Py_CLEAR(state->type_WebAccountCommand);
-        Py_CLEAR(state->type_WebAccountInvokedArgs);
-        Py_CLEAR(state->type_WebAccountProviderCommand);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_ApplicationSettings",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::ApplicationSettings
@@ -2013,7 +1949,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ApplicationSettings(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2026,29 +1962,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ApplicationSettings(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AccountsSettingsPane = py::register_python_type(module.get(), type_name_AccountsSettingsPane, &type_spec_AccountsSettingsPane, object_bases.get(), nullptr);
-    if (!state->type_AccountsSettingsPane)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPane, &type_spec_AccountsSettingsPane, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPane, &type_spec_AccountsSettingsPane, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccountsSettingsPaneCommandsRequestedEventArgs = py::register_python_type(module.get(), type_name_AccountsSettingsPaneCommandsRequestedEventArgs, &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AccountsSettingsPaneCommandsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneCommandsRequestedEventArgs, &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneCommandsRequestedEventArgs, &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AccountsSettingsPaneEventDeferral = py::register_python_type(module.get(), type_name_AccountsSettingsPaneEventDeferral, &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr);
-    if (!state->type_AccountsSettingsPaneEventDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneEventDeferral, &type_spec_AccountsSettingsPaneEventDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneEventDeferral, &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CredentialCommand = py::register_python_type(module.get(), type_name_CredentialCommand, &type_spec_CredentialCommand, object_bases.get(), nullptr);
-    if (!state->type_CredentialCommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CredentialCommand, &type_spec_CredentialCommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CredentialCommand, &type_spec_CredentialCommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2059,8 +2004,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ApplicationSettings(void) noexcept
         return nullptr;
     }
 
-    state->type_SettingsCommand = py::register_python_type(module.get(), type_name_SettingsCommand, &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get()));
-    if (!state->type_SettingsCommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsCommand, &type_spec_SettingsCommand, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsCommand, &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2071,295 +2019,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ApplicationSettings(void) noexcept
         return nullptr;
     }
 
-    state->type_SettingsPane = py::register_python_type(module.get(), type_name_SettingsPane, &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get()));
-    if (!state->type_SettingsPane)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsPane, &type_spec_SettingsPane, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsPane, &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SettingsPaneCommandsRequest = py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequest, &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr);
-    if (!state->type_SettingsPaneCommandsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequest, &type_spec_SettingsPaneCommandsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequest, &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SettingsPaneCommandsRequestedEventArgs = py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequestedEventArgs, &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SettingsPaneCommandsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequestedEventArgs, &type_spec_SettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequestedEventArgs, &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountCommand = py::register_python_type(module.get(), type_name_WebAccountCommand, &type_spec_WebAccountCommand, object_bases.get(), nullptr);
-    if (!state->type_WebAccountCommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountCommand, &type_spec_WebAccountCommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountCommand, &type_spec_WebAccountCommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountInvokedArgs = py::register_python_type(module.get(), type_name_WebAccountInvokedArgs, &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr);
-    if (!state->type_WebAccountInvokedArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountInvokedArgs, &type_spec_WebAccountInvokedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountInvokedArgs, &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderCommand = py::register_python_type(module.get(), type_name_WebAccountProviderCommand, &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderCommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderCommand, &type_spec_WebAccountProviderCommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderCommand, &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccountsSettingsPane;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccountsSettingsPaneCommandsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccountsSettingsPaneEventDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::CredentialCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CredentialCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::CredentialCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SettingsCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsPane;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SettingsPane is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsPaneCommandsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsPaneCommandsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::WebAccountCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountInvokedArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ApplicationSettings;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ApplicationSettings");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

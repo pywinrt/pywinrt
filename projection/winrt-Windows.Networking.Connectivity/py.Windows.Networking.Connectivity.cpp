@@ -6,36 +6,6 @@
 
 namespace py::cpp::Windows::Networking::Connectivity
 {
-    struct module_state
-    {
-        PyTypeObject* type_AttributedNetworkUsage;
-        PyTypeObject* type_CellularApnContext;
-        PyTypeObject* type_ConnectionCost;
-        PyTypeObject* type_ConnectionProfile;
-        PyTypeObject* type_ConnectionProfileFilter;
-        PyTypeObject* type_ConnectionSession;
-        PyTypeObject* type_ConnectivityInterval;
-        PyTypeObject* type_ConnectivityManager;
-        PyTypeObject* type_DataPlanStatus;
-        PyTypeObject* type_DataPlanUsage;
-        PyTypeObject* type_DataUsage;
-        PyTypeObject* type_IPInformation;
-        PyTypeObject* type_LanIdentifier;
-        PyTypeObject* type_LanIdentifierData;
-        PyTypeObject* type_NetworkAdapter;
-        PyTypeObject* type_NetworkInformation;
-        PyTypeObject* type_NetworkItem;
-        PyTypeObject* type_NetworkSecuritySettings;
-        PyTypeObject* type_NetworkStateChangeEventDetails;
-        PyTypeObject* type_NetworkUsage;
-        PyTypeObject* type_ProviderNetworkUsage;
-        PyTypeObject* type_ProxyConfiguration;
-        PyTypeObject* type_RoutePolicy;
-        PyTypeObject* type_WlanConnectionProfileDetails;
-        PyTypeObject* type_WwanConnectionProfileDetails;
-        PyTypeObject* type_NetworkUsageStates;
-    };
-
     // ----- AttributedNetworkUsage class --------------------
     static constexpr const char* const type_name_AttributedNetworkUsage = "AttributedNetworkUsage";
 
@@ -5226,94 +5196,15 @@ namespace py::cpp::Windows::Networking::Connectivity
     PyDoc_STRVAR(module_doc, "Windows::Networking::Connectivity");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AttributedNetworkUsage);
-        Py_VISIT(state->type_CellularApnContext);
-        Py_VISIT(state->type_ConnectionCost);
-        Py_VISIT(state->type_ConnectionProfile);
-        Py_VISIT(state->type_ConnectionProfileFilter);
-        Py_VISIT(state->type_ConnectionSession);
-        Py_VISIT(state->type_ConnectivityInterval);
-        Py_VISIT(state->type_ConnectivityManager);
-        Py_VISIT(state->type_DataPlanStatus);
-        Py_VISIT(state->type_DataPlanUsage);
-        Py_VISIT(state->type_DataUsage);
-        Py_VISIT(state->type_IPInformation);
-        Py_VISIT(state->type_LanIdentifier);
-        Py_VISIT(state->type_LanIdentifierData);
-        Py_VISIT(state->type_NetworkAdapter);
-        Py_VISIT(state->type_NetworkInformation);
-        Py_VISIT(state->type_NetworkItem);
-        Py_VISIT(state->type_NetworkSecuritySettings);
-        Py_VISIT(state->type_NetworkStateChangeEventDetails);
-        Py_VISIT(state->type_NetworkUsage);
-        Py_VISIT(state->type_ProviderNetworkUsage);
-        Py_VISIT(state->type_ProxyConfiguration);
-        Py_VISIT(state->type_RoutePolicy);
-        Py_VISIT(state->type_WlanConnectionProfileDetails);
-        Py_VISIT(state->type_WwanConnectionProfileDetails);
-        Py_VISIT(state->type_NetworkUsageStates);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AttributedNetworkUsage);
-        Py_CLEAR(state->type_CellularApnContext);
-        Py_CLEAR(state->type_ConnectionCost);
-        Py_CLEAR(state->type_ConnectionProfile);
-        Py_CLEAR(state->type_ConnectionProfileFilter);
-        Py_CLEAR(state->type_ConnectionSession);
-        Py_CLEAR(state->type_ConnectivityInterval);
-        Py_CLEAR(state->type_ConnectivityManager);
-        Py_CLEAR(state->type_DataPlanStatus);
-        Py_CLEAR(state->type_DataPlanUsage);
-        Py_CLEAR(state->type_DataUsage);
-        Py_CLEAR(state->type_IPInformation);
-        Py_CLEAR(state->type_LanIdentifier);
-        Py_CLEAR(state->type_LanIdentifierData);
-        Py_CLEAR(state->type_NetworkAdapter);
-        Py_CLEAR(state->type_NetworkInformation);
-        Py_CLEAR(state->type_NetworkItem);
-        Py_CLEAR(state->type_NetworkSecuritySettings);
-        Py_CLEAR(state->type_NetworkStateChangeEventDetails);
-        Py_CLEAR(state->type_NetworkUsage);
-        Py_CLEAR(state->type_ProviderNetworkUsage);
-        Py_CLEAR(state->type_ProxyConfiguration);
-        Py_CLEAR(state->type_RoutePolicy);
-        Py_CLEAR(state->type_WlanConnectionProfileDetails);
-        Py_CLEAR(state->type_WwanConnectionProfileDetails);
-        Py_CLEAR(state->type_NetworkUsageStates);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_Connectivity",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::Connectivity
@@ -5329,7 +5220,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Connectivity(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5342,763 +5233,240 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Connectivity(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AttributedNetworkUsage = py::register_python_type(module.get(), type_name_AttributedNetworkUsage, &type_spec_AttributedNetworkUsage, object_bases.get(), nullptr);
-    if (!state->type_AttributedNetworkUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AttributedNetworkUsage, &type_spec_AttributedNetworkUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AttributedNetworkUsage, &type_spec_AttributedNetworkUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CellularApnContext = py::register_python_type(module.get(), type_name_CellularApnContext, &type_spec_CellularApnContext, object_bases.get(), nullptr);
-    if (!state->type_CellularApnContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CellularApnContext, &type_spec_CellularApnContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CellularApnContext, &type_spec_CellularApnContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectionCost = py::register_python_type(module.get(), type_name_ConnectionCost, &type_spec_ConnectionCost, object_bases.get(), nullptr);
-    if (!state->type_ConnectionCost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectionCost, &type_spec_ConnectionCost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectionCost, &type_spec_ConnectionCost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectionProfile = py::register_python_type(module.get(), type_name_ConnectionProfile, &type_spec_ConnectionProfile, object_bases.get(), nullptr);
-    if (!state->type_ConnectionProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectionProfile, &type_spec_ConnectionProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectionProfile, &type_spec_ConnectionProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectionProfileFilter = py::register_python_type(module.get(), type_name_ConnectionProfileFilter, &type_spec_ConnectionProfileFilter, object_bases.get(), nullptr);
-    if (!state->type_ConnectionProfileFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectionProfileFilter, &type_spec_ConnectionProfileFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectionProfileFilter, &type_spec_ConnectionProfileFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectionSession = py::register_python_type(module.get(), type_name_ConnectionSession, &type_spec_ConnectionSession, object_bases.get(), nullptr);
-    if (!state->type_ConnectionSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectionSession, &type_spec_ConnectionSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectionSession, &type_spec_ConnectionSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectivityInterval = py::register_python_type(module.get(), type_name_ConnectivityInterval, &type_spec_ConnectivityInterval, object_bases.get(), nullptr);
-    if (!state->type_ConnectivityInterval)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectivityInterval, &type_spec_ConnectivityInterval, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectivityInterval, &type_spec_ConnectivityInterval, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConnectivityManager = py::register_python_type(module.get(), type_name_ConnectivityManager, &type_spec_ConnectivityManager, object_bases.get(), nullptr);
-    if (!state->type_ConnectivityManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectivityManager, &type_spec_ConnectivityManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectivityManager, &type_spec_ConnectivityManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPlanStatus = py::register_python_type(module.get(), type_name_DataPlanStatus, &type_spec_DataPlanStatus, object_bases.get(), nullptr);
-    if (!state->type_DataPlanStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPlanStatus, &type_spec_DataPlanStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPlanStatus, &type_spec_DataPlanStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataPlanUsage = py::register_python_type(module.get(), type_name_DataPlanUsage, &type_spec_DataPlanUsage, object_bases.get(), nullptr);
-    if (!state->type_DataPlanUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataPlanUsage, &type_spec_DataPlanUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataPlanUsage, &type_spec_DataPlanUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataUsage = py::register_python_type(module.get(), type_name_DataUsage, &type_spec_DataUsage, object_bases.get(), nullptr);
-    if (!state->type_DataUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataUsage, &type_spec_DataUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataUsage, &type_spec_DataUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPInformation = py::register_python_type(module.get(), type_name_IPInformation, &type_spec_IPInformation, object_bases.get(), nullptr);
-    if (!state->type_IPInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPInformation, &type_spec_IPInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPInformation, &type_spec_IPInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LanIdentifier = py::register_python_type(module.get(), type_name_LanIdentifier, &type_spec_LanIdentifier, object_bases.get(), nullptr);
-    if (!state->type_LanIdentifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LanIdentifier, &type_spec_LanIdentifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LanIdentifier, &type_spec_LanIdentifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LanIdentifierData = py::register_python_type(module.get(), type_name_LanIdentifierData, &type_spec_LanIdentifierData, object_bases.get(), nullptr);
-    if (!state->type_LanIdentifierData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LanIdentifierData, &type_spec_LanIdentifierData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LanIdentifierData, &type_spec_LanIdentifierData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkAdapter = py::register_python_type(module.get(), type_name_NetworkAdapter, &type_spec_NetworkAdapter, object_bases.get(), nullptr);
-    if (!state->type_NetworkAdapter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkAdapter, &type_spec_NetworkAdapter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkAdapter, &type_spec_NetworkAdapter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkInformation = py::register_python_type(module.get(), type_name_NetworkInformation, &type_spec_NetworkInformation, object_bases.get(), nullptr);
-    if (!state->type_NetworkInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkInformation, &type_spec_NetworkInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkInformation, &type_spec_NetworkInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkItem = py::register_python_type(module.get(), type_name_NetworkItem, &type_spec_NetworkItem, object_bases.get(), nullptr);
-    if (!state->type_NetworkItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkItem, &type_spec_NetworkItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkItem, &type_spec_NetworkItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkSecuritySettings = py::register_python_type(module.get(), type_name_NetworkSecuritySettings, &type_spec_NetworkSecuritySettings, object_bases.get(), nullptr);
-    if (!state->type_NetworkSecuritySettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkSecuritySettings, &type_spec_NetworkSecuritySettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkSecuritySettings, &type_spec_NetworkSecuritySettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkStateChangeEventDetails = py::register_python_type(module.get(), type_name_NetworkStateChangeEventDetails, &type_spec_NetworkStateChangeEventDetails, object_bases.get(), nullptr);
-    if (!state->type_NetworkStateChangeEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkStateChangeEventDetails, &type_spec_NetworkStateChangeEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkStateChangeEventDetails, &type_spec_NetworkStateChangeEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkUsage = py::register_python_type(module.get(), type_name_NetworkUsage, &type_spec_NetworkUsage, object_bases.get(), nullptr);
-    if (!state->type_NetworkUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkUsage, &type_spec_NetworkUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkUsage, &type_spec_NetworkUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProviderNetworkUsage = py::register_python_type(module.get(), type_name_ProviderNetworkUsage, &type_spec_ProviderNetworkUsage, object_bases.get(), nullptr);
-    if (!state->type_ProviderNetworkUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProviderNetworkUsage, &type_spec_ProviderNetworkUsage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProviderNetworkUsage, &type_spec_ProviderNetworkUsage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProxyConfiguration = py::register_python_type(module.get(), type_name_ProxyConfiguration, &type_spec_ProxyConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ProxyConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProxyConfiguration, &type_spec_ProxyConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProxyConfiguration, &type_spec_ProxyConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RoutePolicy = py::register_python_type(module.get(), type_name_RoutePolicy, &type_spec_RoutePolicy, object_bases.get(), nullptr);
-    if (!state->type_RoutePolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RoutePolicy, &type_spec_RoutePolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RoutePolicy, &type_spec_RoutePolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WlanConnectionProfileDetails = py::register_python_type(module.get(), type_name_WlanConnectionProfileDetails, &type_spec_WlanConnectionProfileDetails, object_bases.get(), nullptr);
-    if (!state->type_WlanConnectionProfileDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WlanConnectionProfileDetails, &type_spec_WlanConnectionProfileDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WlanConnectionProfileDetails, &type_spec_WlanConnectionProfileDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WwanConnectionProfileDetails = py::register_python_type(module.get(), type_name_WwanConnectionProfileDetails, &type_spec_WwanConnectionProfileDetails, object_bases.get(), nullptr);
-    if (!state->type_WwanConnectionProfileDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WwanConnectionProfileDetails, &type_spec_WwanConnectionProfileDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WwanConnectionProfileDetails, &type_spec_WwanConnectionProfileDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkUsageStates = py::register_python_type(module.get(), type_name_NetworkUsageStates, &type_spec_NetworkUsageStates, nullptr, nullptr);
-    if (!state->type_NetworkUsageStates)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkUsageStates, &type_spec_NetworkUsageStates, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkUsageStates, &type_spec_NetworkUsageStates, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AttributedNetworkUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::AttributedNetworkUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::CellularApnContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CellularApnContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::CellularApnContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectionCost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectionCost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectionCost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectionProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectionProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectionProfileFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectionProfileFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectionSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectionSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectionSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectivityInterval;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectivityInterval is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectivityManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ConnectivityManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPlanStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::DataPlanStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataPlanUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::DataPlanUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::DataUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::DataUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::IPInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::IPInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::LanIdentifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LanIdentifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::LanIdentifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LanIdentifierData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::LanIdentifierData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkAdapter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkAdapter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkSecuritySettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkSecuritySettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkStateChangeEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderNetworkUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ProviderNetworkUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProxyConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::ProxyConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::RoutePolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RoutePolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::RoutePolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WlanConnectionProfileDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WwanConnectionProfileDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Connectivity::NetworkUsageStates>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Connectivity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Connectivity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkUsageStates;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Connectivity::NetworkUsageStates is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

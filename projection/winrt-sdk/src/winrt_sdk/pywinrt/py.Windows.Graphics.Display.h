@@ -165,69 +165,80 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>
+    struct py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "AdvancedColorInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::BrightnessOverride>
+    struct py_type<winrt::Windows::Graphics::Display::BrightnessOverride>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "BrightnessOverride";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>
+    struct py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "BrightnessOverrideSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>
+    struct py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "ColorOverrideSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayEnhancementOverride";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayEnhancementOverrideCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayEnhancementOverrideCapabilitiesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayInformation>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayProperties>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::DisplayServices>
+    struct py_type<winrt::Windows::Graphics::Display::DisplayServices>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "DisplayServices";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Display::NitRange>
+    struct py_type<winrt::Windows::Graphics::Display::NitRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.display";
+        static constexpr const char* type_name = "NitRange";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>

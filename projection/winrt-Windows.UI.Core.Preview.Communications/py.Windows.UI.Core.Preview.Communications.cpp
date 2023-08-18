@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::UI::Core::Preview::Communications
 {
-    struct module_state
-    {
-        PyTypeObject* type_PreviewTeamCleanupRequestedEventArgs;
-        PyTypeObject* type_PreviewTeamCommandInvokedEventArgs;
-        PyTypeObject* type_PreviewTeamDeviceCredentials;
-        PyTypeObject* type_PreviewTeamEndMeetingRequestedEventArgs;
-        PyTypeObject* type_PreviewTeamJoinMeetingRequestedEventArgs;
-        PyTypeObject* type_PreviewTeamView;
-    };
-
     // ----- PreviewTeamCleanupRequestedEventArgs class --------------------
     static constexpr const char* const type_name_PreviewTeamCleanupRequestedEventArgs = "PreviewTeamCleanupRequestedEventArgs";
 
@@ -1480,54 +1470,15 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     PyDoc_STRVAR(module_doc, "Windows::UI::Core::Preview::Communications");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PreviewTeamCleanupRequestedEventArgs);
-        Py_VISIT(state->type_PreviewTeamCommandInvokedEventArgs);
-        Py_VISIT(state->type_PreviewTeamDeviceCredentials);
-        Py_VISIT(state->type_PreviewTeamEndMeetingRequestedEventArgs);
-        Py_VISIT(state->type_PreviewTeamJoinMeetingRequestedEventArgs);
-        Py_VISIT(state->type_PreviewTeamView);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PreviewTeamCleanupRequestedEventArgs);
-        Py_CLEAR(state->type_PreviewTeamCommandInvokedEventArgs);
-        Py_CLEAR(state->type_PreviewTeamDeviceCredentials);
-        Py_CLEAR(state->type_PreviewTeamEndMeetingRequestedEventArgs);
-        Py_CLEAR(state->type_PreviewTeamJoinMeetingRequestedEventArgs);
-        Py_CLEAR(state->type_PreviewTeamView);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Core_Preview_Communications",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Core::Preview::Communications
@@ -1543,7 +1494,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview_Communications(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1556,183 +1507,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview_Communications(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PreviewTeamCleanupRequestedEventArgs = py::register_python_type(module.get(), type_name_PreviewTeamCleanupRequestedEventArgs, &type_spec_PreviewTeamCleanupRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamCleanupRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamCleanupRequestedEventArgs, &type_spec_PreviewTeamCleanupRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamCleanupRequestedEventArgs, &type_spec_PreviewTeamCleanupRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewTeamCommandInvokedEventArgs = py::register_python_type(module.get(), type_name_PreviewTeamCommandInvokedEventArgs, &type_spec_PreviewTeamCommandInvokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamCommandInvokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamCommandInvokedEventArgs, &type_spec_PreviewTeamCommandInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamCommandInvokedEventArgs, &type_spec_PreviewTeamCommandInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewTeamDeviceCredentials = py::register_python_type(module.get(), type_name_PreviewTeamDeviceCredentials, &type_spec_PreviewTeamDeviceCredentials, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamDeviceCredentials)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamDeviceCredentials, &type_spec_PreviewTeamDeviceCredentials, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamDeviceCredentials, &type_spec_PreviewTeamDeviceCredentials, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewTeamEndMeetingRequestedEventArgs = py::register_python_type(module.get(), type_name_PreviewTeamEndMeetingRequestedEventArgs, &type_spec_PreviewTeamEndMeetingRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamEndMeetingRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamEndMeetingRequestedEventArgs, &type_spec_PreviewTeamEndMeetingRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamEndMeetingRequestedEventArgs, &type_spec_PreviewTeamEndMeetingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewTeamJoinMeetingRequestedEventArgs = py::register_python_type(module.get(), type_name_PreviewTeamJoinMeetingRequestedEventArgs, &type_spec_PreviewTeamJoinMeetingRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamJoinMeetingRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamJoinMeetingRequestedEventArgs, &type_spec_PreviewTeamJoinMeetingRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamJoinMeetingRequestedEventArgs, &type_spec_PreviewTeamJoinMeetingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PreviewTeamView = py::register_python_type(module.get(), type_name_PreviewTeamView, &type_spec_PreviewTeamView, object_bases.get(), nullptr);
-    if (!state->type_PreviewTeamView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreviewTeamView, &type_spec_PreviewTeamView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreviewTeamView, &type_spec_PreviewTeamView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamCleanupRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamCommandInvokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamDeviceCredentials;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamEndMeetingRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamJoinMeetingRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::Preview::Communications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::Preview::Communications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreviewTeamView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

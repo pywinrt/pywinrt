@@ -103,104 +103,121 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneBoundingBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneComponent>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneComponent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneComponent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneComponentCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMaterial>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMaterialInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMesh>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMesh>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMesh";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMeshMaterialAttributeMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMeshRendererComponent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneMetallicRoughnessMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneModelTransform>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneModelTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneModelTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneNode>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneNodeCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneObject>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "ScenePbrMaterial";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneRendererComponent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneSurfaceMaterialInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Scenes::SceneVisual>
+    struct py_type<winrt::Windows::UI::Composition::Scenes::SceneVisual>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.scenes";
+        static constexpr const char* type_name = "SceneVisual";
     };
 }

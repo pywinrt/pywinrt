@@ -6,32 +6,6 @@
 
 namespace py::cpp::Windows::Management::Deployment
 {
-    struct module_state
-    {
-        PyTypeObject* type_AddPackageOptions;
-        PyTypeObject* type_AppInstallerManager;
-        PyTypeObject* type_AutoUpdateSettingsOptions;
-        PyTypeObject* type_CreateSharedPackageContainerOptions;
-        PyTypeObject* type_CreateSharedPackageContainerResult;
-        PyTypeObject* type_DeleteSharedPackageContainerOptions;
-        PyTypeObject* type_DeleteSharedPackageContainerResult;
-        PyTypeObject* type_DeploymentResult;
-        PyTypeObject* type_FindSharedPackageContainerOptions;
-        PyTypeObject* type_PackageAllUserProvisioningOptions;
-        PyTypeObject* type_PackageManager;
-        PyTypeObject* type_PackageManagerDebugSettings;
-        PyTypeObject* type_PackageUserInformation;
-        PyTypeObject* type_PackageVolume;
-        PyTypeObject* type_RegisterPackageOptions;
-        PyTypeObject* type_SharedPackageContainer;
-        PyTypeObject* type_SharedPackageContainerManager;
-        PyTypeObject* type_SharedPackageContainerMember;
-        PyTypeObject* type_StagePackageOptions;
-        PyTypeObject* type_UpdateSharedPackageContainerOptions;
-        PyTypeObject* type_UpdateSharedPackageContainerResult;
-        PyTypeObject* type_DeploymentProgress;
-    };
-
     // ----- AddPackageOptions class --------------------
     static constexpr const char* const type_name_AddPackageOptions = "AddPackageOptions";
 
@@ -8074,86 +8048,15 @@ namespace py::cpp::Windows::Management::Deployment
     PyDoc_STRVAR(module_doc, "Windows::Management::Deployment");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AddPackageOptions);
-        Py_VISIT(state->type_AppInstallerManager);
-        Py_VISIT(state->type_AutoUpdateSettingsOptions);
-        Py_VISIT(state->type_CreateSharedPackageContainerOptions);
-        Py_VISIT(state->type_CreateSharedPackageContainerResult);
-        Py_VISIT(state->type_DeleteSharedPackageContainerOptions);
-        Py_VISIT(state->type_DeleteSharedPackageContainerResult);
-        Py_VISIT(state->type_DeploymentResult);
-        Py_VISIT(state->type_FindSharedPackageContainerOptions);
-        Py_VISIT(state->type_PackageAllUserProvisioningOptions);
-        Py_VISIT(state->type_PackageManager);
-        Py_VISIT(state->type_PackageManagerDebugSettings);
-        Py_VISIT(state->type_PackageUserInformation);
-        Py_VISIT(state->type_PackageVolume);
-        Py_VISIT(state->type_RegisterPackageOptions);
-        Py_VISIT(state->type_SharedPackageContainer);
-        Py_VISIT(state->type_SharedPackageContainerManager);
-        Py_VISIT(state->type_SharedPackageContainerMember);
-        Py_VISIT(state->type_StagePackageOptions);
-        Py_VISIT(state->type_UpdateSharedPackageContainerOptions);
-        Py_VISIT(state->type_UpdateSharedPackageContainerResult);
-        Py_VISIT(state->type_DeploymentProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AddPackageOptions);
-        Py_CLEAR(state->type_AppInstallerManager);
-        Py_CLEAR(state->type_AutoUpdateSettingsOptions);
-        Py_CLEAR(state->type_CreateSharedPackageContainerOptions);
-        Py_CLEAR(state->type_CreateSharedPackageContainerResult);
-        Py_CLEAR(state->type_DeleteSharedPackageContainerOptions);
-        Py_CLEAR(state->type_DeleteSharedPackageContainerResult);
-        Py_CLEAR(state->type_DeploymentResult);
-        Py_CLEAR(state->type_FindSharedPackageContainerOptions);
-        Py_CLEAR(state->type_PackageAllUserProvisioningOptions);
-        Py_CLEAR(state->type_PackageManager);
-        Py_CLEAR(state->type_PackageManagerDebugSettings);
-        Py_CLEAR(state->type_PackageUserInformation);
-        Py_CLEAR(state->type_PackageVolume);
-        Py_CLEAR(state->type_RegisterPackageOptions);
-        Py_CLEAR(state->type_SharedPackageContainer);
-        Py_CLEAR(state->type_SharedPackageContainerManager);
-        Py_CLEAR(state->type_SharedPackageContainerMember);
-        Py_CLEAR(state->type_StagePackageOptions);
-        Py_CLEAR(state->type_UpdateSharedPackageContainerOptions);
-        Py_CLEAR(state->type_UpdateSharedPackageContainerResult);
-        Py_CLEAR(state->type_DeploymentProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Management_Deployment",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Management::Deployment
@@ -8169,7 +8072,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Deployment(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8182,647 +8085,204 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Deployment(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AddPackageOptions = py::register_python_type(module.get(), type_name_AddPackageOptions, &type_spec_AddPackageOptions, object_bases.get(), nullptr);
-    if (!state->type_AddPackageOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AddPackageOptions, &type_spec_AddPackageOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AddPackageOptions, &type_spec_AddPackageOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppInstallerManager = py::register_python_type(module.get(), type_name_AppInstallerManager, &type_spec_AppInstallerManager, object_bases.get(), nullptr);
-    if (!state->type_AppInstallerManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallerManager, &type_spec_AppInstallerManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallerManager, &type_spec_AppInstallerManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutoUpdateSettingsOptions = py::register_python_type(module.get(), type_name_AutoUpdateSettingsOptions, &type_spec_AutoUpdateSettingsOptions, object_bases.get(), nullptr);
-    if (!state->type_AutoUpdateSettingsOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutoUpdateSettingsOptions, &type_spec_AutoUpdateSettingsOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutoUpdateSettingsOptions, &type_spec_AutoUpdateSettingsOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateSharedPackageContainerOptions = py::register_python_type(module.get(), type_name_CreateSharedPackageContainerOptions, &type_spec_CreateSharedPackageContainerOptions, object_bases.get(), nullptr);
-    if (!state->type_CreateSharedPackageContainerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateSharedPackageContainerOptions, &type_spec_CreateSharedPackageContainerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateSharedPackageContainerOptions, &type_spec_CreateSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateSharedPackageContainerResult = py::register_python_type(module.get(), type_name_CreateSharedPackageContainerResult, &type_spec_CreateSharedPackageContainerResult, object_bases.get(), nullptr);
-    if (!state->type_CreateSharedPackageContainerResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateSharedPackageContainerResult, &type_spec_CreateSharedPackageContainerResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateSharedPackageContainerResult, &type_spec_CreateSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeleteSharedPackageContainerOptions = py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerOptions, &type_spec_DeleteSharedPackageContainerOptions, object_bases.get(), nullptr);
-    if (!state->type_DeleteSharedPackageContainerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerOptions, &type_spec_DeleteSharedPackageContainerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerOptions, &type_spec_DeleteSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeleteSharedPackageContainerResult = py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerResult, &type_spec_DeleteSharedPackageContainerResult, object_bases.get(), nullptr);
-    if (!state->type_DeleteSharedPackageContainerResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerResult, &type_spec_DeleteSharedPackageContainerResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeleteSharedPackageContainerResult, &type_spec_DeleteSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeploymentResult = py::register_python_type(module.get(), type_name_DeploymentResult, &type_spec_DeploymentResult, object_bases.get(), nullptr);
-    if (!state->type_DeploymentResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeploymentResult, &type_spec_DeploymentResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeploymentResult, &type_spec_DeploymentResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FindSharedPackageContainerOptions = py::register_python_type(module.get(), type_name_FindSharedPackageContainerOptions, &type_spec_FindSharedPackageContainerOptions, object_bases.get(), nullptr);
-    if (!state->type_FindSharedPackageContainerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FindSharedPackageContainerOptions, &type_spec_FindSharedPackageContainerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FindSharedPackageContainerOptions, &type_spec_FindSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PackageAllUserProvisioningOptions = py::register_python_type(module.get(), type_name_PackageAllUserProvisioningOptions, &type_spec_PackageAllUserProvisioningOptions, object_bases.get(), nullptr);
-    if (!state->type_PackageAllUserProvisioningOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PackageAllUserProvisioningOptions, &type_spec_PackageAllUserProvisioningOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PackageAllUserProvisioningOptions, &type_spec_PackageAllUserProvisioningOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PackageManager = py::register_python_type(module.get(), type_name_PackageManager, &type_spec_PackageManager, object_bases.get(), nullptr);
-    if (!state->type_PackageManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PackageManager, &type_spec_PackageManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PackageManager, &type_spec_PackageManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PackageManagerDebugSettings = py::register_python_type(module.get(), type_name_PackageManagerDebugSettings, &type_spec_PackageManagerDebugSettings, object_bases.get(), nullptr);
-    if (!state->type_PackageManagerDebugSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PackageManagerDebugSettings, &type_spec_PackageManagerDebugSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PackageManagerDebugSettings, &type_spec_PackageManagerDebugSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PackageUserInformation = py::register_python_type(module.get(), type_name_PackageUserInformation, &type_spec_PackageUserInformation, object_bases.get(), nullptr);
-    if (!state->type_PackageUserInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PackageUserInformation, &type_spec_PackageUserInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PackageUserInformation, &type_spec_PackageUserInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PackageVolume = py::register_python_type(module.get(), type_name_PackageVolume, &type_spec_PackageVolume, object_bases.get(), nullptr);
-    if (!state->type_PackageVolume)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PackageVolume, &type_spec_PackageVolume, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PackageVolume, &type_spec_PackageVolume, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RegisterPackageOptions = py::register_python_type(module.get(), type_name_RegisterPackageOptions, &type_spec_RegisterPackageOptions, object_bases.get(), nullptr);
-    if (!state->type_RegisterPackageOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RegisterPackageOptions, &type_spec_RegisterPackageOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RegisterPackageOptions, &type_spec_RegisterPackageOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SharedPackageContainer = py::register_python_type(module.get(), type_name_SharedPackageContainer, &type_spec_SharedPackageContainer, object_bases.get(), nullptr);
-    if (!state->type_SharedPackageContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainer, &type_spec_SharedPackageContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainer, &type_spec_SharedPackageContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SharedPackageContainerManager = py::register_python_type(module.get(), type_name_SharedPackageContainerManager, &type_spec_SharedPackageContainerManager, object_bases.get(), nullptr);
-    if (!state->type_SharedPackageContainerManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainerManager, &type_spec_SharedPackageContainerManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainerManager, &type_spec_SharedPackageContainerManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SharedPackageContainerMember = py::register_python_type(module.get(), type_name_SharedPackageContainerMember, &type_spec_SharedPackageContainerMember, object_bases.get(), nullptr);
-    if (!state->type_SharedPackageContainerMember)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainerMember, &type_spec_SharedPackageContainerMember, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SharedPackageContainerMember, &type_spec_SharedPackageContainerMember, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StagePackageOptions = py::register_python_type(module.get(), type_name_StagePackageOptions, &type_spec_StagePackageOptions, object_bases.get(), nullptr);
-    if (!state->type_StagePackageOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StagePackageOptions, &type_spec_StagePackageOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StagePackageOptions, &type_spec_StagePackageOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UpdateSharedPackageContainerOptions = py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerOptions, &type_spec_UpdateSharedPackageContainerOptions, object_bases.get(), nullptr);
-    if (!state->type_UpdateSharedPackageContainerOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerOptions, &type_spec_UpdateSharedPackageContainerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerOptions, &type_spec_UpdateSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UpdateSharedPackageContainerResult = py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerResult, &type_spec_UpdateSharedPackageContainerResult, object_bases.get(), nullptr);
-    if (!state->type_UpdateSharedPackageContainerResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerResult, &type_spec_UpdateSharedPackageContainerResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UpdateSharedPackageContainerResult, &type_spec_UpdateSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeploymentProgress = py::register_python_type(module.get(), type_name_DeploymentProgress, &type_spec_DeploymentProgress, nullptr, nullptr);
-    if (!state->type_DeploymentProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeploymentProgress, &type_spec_DeploymentProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeploymentProgress, &type_spec_DeploymentProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::AddPackageOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AddPackageOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::AddPackageOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::AppInstallerManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallerManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::AppInstallerManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutoUpdateSettingsOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateSharedPackageContainerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateSharedPackageContainerResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeleteSharedPackageContainerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeleteSharedPackageContainerResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::DeploymentResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeploymentResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::DeploymentResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FindSharedPackageContainerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PackageAllUserProvisioningOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::PackageManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PackageManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::PackageManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PackageManagerDebugSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::PackageManagerDebugSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::PackageUserInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PackageUserInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::PackageUserInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::PackageVolume>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PackageVolume;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::PackageVolume is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::RegisterPackageOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RegisterPackageOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::RegisterPackageOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SharedPackageContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::SharedPackageContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SharedPackageContainerManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::SharedPackageContainerManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::SharedPackageContainerMember>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SharedPackageContainerMember;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::SharedPackageContainerMember is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::StagePackageOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StagePackageOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::StagePackageOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UpdateSharedPackageContainerOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UpdateSharedPackageContainerResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Deployment::DeploymentProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Deployment;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Deployment");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeploymentProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Deployment::DeploymentProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

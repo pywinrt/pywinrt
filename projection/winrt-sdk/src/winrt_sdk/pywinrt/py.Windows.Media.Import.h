@@ -178,86 +178,100 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportDeleteImportedItemsFromSourceResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportFindItemsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportImportItemsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportItem>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportItemImportedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportManager>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportOperation>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportSelectionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportSession>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportSidecar>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportSidecar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportSidecar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportSource>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportStorageMedium";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportVideoSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Import::PhotoImportProgress>
+    struct py_type<winrt::Windows::Media::Import::PhotoImportProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.import";
+        static constexpr const char* type_name = "PhotoImportProgress";
     };
 }

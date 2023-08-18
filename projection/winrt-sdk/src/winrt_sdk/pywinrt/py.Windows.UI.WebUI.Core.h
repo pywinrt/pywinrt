@@ -129,57 +129,66 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarBitmapIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarConfirmationButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarIconButton";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarItemInvokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarSizeChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarSymbolIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
+    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "IWebUICommandBarElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
+    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "IWebUICommandBarIcon";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::WebUI::Core::MenuClosedEventHandler>

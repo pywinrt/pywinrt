@@ -270,548 +270,639 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AppBarAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AppBarButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AppBarToggleButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutoSuggestBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "AutomationPeerAnnotation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ButtonBaseAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "CalendarDatePickerAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "CaptureElementAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "CheckBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ColorPickerSliderAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ColorSpectrumAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ComboBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ComboBoxItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ComboBoxItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "DatePickerAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "DatePickerFlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "FlipViewAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "FlipViewItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "FlipViewItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "FlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "FrameworkElementAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "GridViewAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "GridViewHeaderItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "GridViewItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "GridViewItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "GroupItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "HubAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "HubSectionAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "HyperlinkButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ImageAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "InkToolbarAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ItemsControlAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListBoxItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListBoxItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListPickerFlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewBaseAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewBaseHeaderItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewHeaderItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ListViewItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "LoopingSelectorAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "LoopingSelectorItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "LoopingSelectorItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MapControlAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MediaElementAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MediaPlayerElementAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MediaTransportControlsAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MenuBarAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MenuBarItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MenuFlyoutItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "MenuFlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "NavigationViewItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PasswordBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PersonPictureAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PickerFlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PivotAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PivotItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PivotItemDataAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ProgressBarAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ProgressRingAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RadioButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RangeBaseAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RatingControlAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RepeatButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RichEditBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RichTextBlockAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RichTextBlockOverflowAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ScrollBarAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ScrollViewerAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SearchBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SelectorAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SelectorItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SemanticZoomAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SettingsFlyoutAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "SliderAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TextBlockAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TextBoxAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ThumbAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TimePickerAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TimePickerFlyoutPresenterAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ToggleButtonAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ToggleMenuFlyoutItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ToggleSwitchAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TreeViewItemAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "TreeViewListAutomationPeer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "RawElementProviderRuntimeId";
     };
 }

@@ -70,146 +70,170 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiActiveSensingMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiChannelPressureMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiContinueMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiContinueMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiContinueMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiControlChangeMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiControlChangeMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiControlChangeMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiInPort>
+    struct py_type<winrt::Windows::Devices::Midi::MidiInPort>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiInPort";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiMessageReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiNoteOffMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiNoteOffMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiNoteOffMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiNoteOnMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiNoteOnMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiNoteOnMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiOutPort>
+    struct py_type<winrt::Windows::Devices::Midi::MidiOutPort>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiOutPort";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiPitchBendChangeMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiPolyphonicKeyPressureMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiProgramChangeMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiSongPositionPointerMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiSongSelectMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiSongSelectMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiSongSelectMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiStartMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiStartMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiStartMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiStopMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiStopMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiStopMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiSynthesizer>
+    struct py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiSynthesizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiSystemExclusiveMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiSystemResetMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiSystemResetMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiSystemResetMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiTimeCodeMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiTimingClockMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiTimingClockMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiTimingClockMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>
+    struct py_type<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "MidiTuneRequestMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::IMidiMessage>
+    struct py_type<winrt::Windows::Devices::Midi::IMidiMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "IMidiMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Midi::IMidiOutPort>
+    struct py_type<winrt::Windows::Devices::Midi::IMidiOutPort>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.midi";
+        static constexpr const char* type_name = "IMidiOutPort";
     };
 }

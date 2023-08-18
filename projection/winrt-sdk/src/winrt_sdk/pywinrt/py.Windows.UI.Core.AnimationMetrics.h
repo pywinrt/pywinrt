@@ -67,38 +67,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "AnimationDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "OpacityAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "PropertyAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "ScaleAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "TranslationAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
+    struct py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
+        static constexpr const char* type_name = "IPropertyAnimation";
     };
 }

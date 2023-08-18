@@ -6,101 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppBarAutomationPeer;
-        PyTypeObject* type_AppBarButtonAutomationPeer;
-        PyTypeObject* type_AppBarToggleButtonAutomationPeer;
-        PyTypeObject* type_AutoSuggestBoxAutomationPeer;
-        PyTypeObject* type_AutomationPeer;
-        PyTypeObject* type_AutomationPeerAnnotation;
-        PyTypeObject* type_ButtonAutomationPeer;
-        PyTypeObject* type_ButtonBaseAutomationPeer;
-        PyTypeObject* type_CalendarDatePickerAutomationPeer;
-        PyTypeObject* type_CaptureElementAutomationPeer;
-        PyTypeObject* type_CheckBoxAutomationPeer;
-        PyTypeObject* type_ColorPickerSliderAutomationPeer;
-        PyTypeObject* type_ColorSpectrumAutomationPeer;
-        PyTypeObject* type_ComboBoxAutomationPeer;
-        PyTypeObject* type_ComboBoxItemAutomationPeer;
-        PyTypeObject* type_ComboBoxItemDataAutomationPeer;
-        PyTypeObject* type_DatePickerAutomationPeer;
-        PyTypeObject* type_DatePickerFlyoutPresenterAutomationPeer;
-        PyTypeObject* type_FlipViewAutomationPeer;
-        PyTypeObject* type_FlipViewItemAutomationPeer;
-        PyTypeObject* type_FlipViewItemDataAutomationPeer;
-        PyTypeObject* type_FlyoutPresenterAutomationPeer;
-        PyTypeObject* type_FrameworkElementAutomationPeer;
-        PyTypeObject* type_GridViewAutomationPeer;
-        PyTypeObject* type_GridViewHeaderItemAutomationPeer;
-        PyTypeObject* type_GridViewItemAutomationPeer;
-        PyTypeObject* type_GridViewItemDataAutomationPeer;
-        PyTypeObject* type_GroupItemAutomationPeer;
-        PyTypeObject* type_HubAutomationPeer;
-        PyTypeObject* type_HubSectionAutomationPeer;
-        PyTypeObject* type_HyperlinkButtonAutomationPeer;
-        PyTypeObject* type_ImageAutomationPeer;
-        PyTypeObject* type_InkToolbarAutomationPeer;
-        PyTypeObject* type_ItemAutomationPeer;
-        PyTypeObject* type_ItemsControlAutomationPeer;
-        PyTypeObject* type_ListBoxAutomationPeer;
-        PyTypeObject* type_ListBoxItemAutomationPeer;
-        PyTypeObject* type_ListBoxItemDataAutomationPeer;
-        PyTypeObject* type_ListPickerFlyoutPresenterAutomationPeer;
-        PyTypeObject* type_ListViewAutomationPeer;
-        PyTypeObject* type_ListViewBaseAutomationPeer;
-        PyTypeObject* type_ListViewBaseHeaderItemAutomationPeer;
-        PyTypeObject* type_ListViewHeaderItemAutomationPeer;
-        PyTypeObject* type_ListViewItemAutomationPeer;
-        PyTypeObject* type_ListViewItemDataAutomationPeer;
-        PyTypeObject* type_LoopingSelectorAutomationPeer;
-        PyTypeObject* type_LoopingSelectorItemAutomationPeer;
-        PyTypeObject* type_LoopingSelectorItemDataAutomationPeer;
-        PyTypeObject* type_MapControlAutomationPeer;
-        PyTypeObject* type_MediaElementAutomationPeer;
-        PyTypeObject* type_MediaPlayerElementAutomationPeer;
-        PyTypeObject* type_MediaTransportControlsAutomationPeer;
-        PyTypeObject* type_MenuBarAutomationPeer;
-        PyTypeObject* type_MenuBarItemAutomationPeer;
-        PyTypeObject* type_MenuFlyoutItemAutomationPeer;
-        PyTypeObject* type_MenuFlyoutPresenterAutomationPeer;
-        PyTypeObject* type_NavigationViewItemAutomationPeer;
-        PyTypeObject* type_PasswordBoxAutomationPeer;
-        PyTypeObject* type_PersonPictureAutomationPeer;
-        PyTypeObject* type_PickerFlyoutPresenterAutomationPeer;
-        PyTypeObject* type_PivotAutomationPeer;
-        PyTypeObject* type_PivotItemAutomationPeer;
-        PyTypeObject* type_PivotItemDataAutomationPeer;
-        PyTypeObject* type_ProgressBarAutomationPeer;
-        PyTypeObject* type_ProgressRingAutomationPeer;
-        PyTypeObject* type_RadioButtonAutomationPeer;
-        PyTypeObject* type_RangeBaseAutomationPeer;
-        PyTypeObject* type_RatingControlAutomationPeer;
-        PyTypeObject* type_RepeatButtonAutomationPeer;
-        PyTypeObject* type_RichEditBoxAutomationPeer;
-        PyTypeObject* type_RichTextBlockAutomationPeer;
-        PyTypeObject* type_RichTextBlockOverflowAutomationPeer;
-        PyTypeObject* type_ScrollBarAutomationPeer;
-        PyTypeObject* type_ScrollViewerAutomationPeer;
-        PyTypeObject* type_SearchBoxAutomationPeer;
-        PyTypeObject* type_SelectorAutomationPeer;
-        PyTypeObject* type_SelectorItemAutomationPeer;
-        PyTypeObject* type_SemanticZoomAutomationPeer;
-        PyTypeObject* type_SettingsFlyoutAutomationPeer;
-        PyTypeObject* type_SliderAutomationPeer;
-        PyTypeObject* type_TextBlockAutomationPeer;
-        PyTypeObject* type_TextBoxAutomationPeer;
-        PyTypeObject* type_ThumbAutomationPeer;
-        PyTypeObject* type_TimePickerAutomationPeer;
-        PyTypeObject* type_TimePickerFlyoutPresenterAutomationPeer;
-        PyTypeObject* type_ToggleButtonAutomationPeer;
-        PyTypeObject* type_ToggleMenuFlyoutItemAutomationPeer;
-        PyTypeObject* type_ToggleSwitchAutomationPeer;
-        PyTypeObject* type_TreeViewItemAutomationPeer;
-        PyTypeObject* type_TreeViewListAutomationPeer;
-        PyTypeObject* type_RawElementProviderRuntimeId;
-    };
-
     // ----- AppBarAutomationPeer class --------------------
     static constexpr const char* const type_name_AppBarAutomationPeer = "AppBarAutomationPeer";
 
@@ -16456,224 +16361,15 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Automation::Peers");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppBarAutomationPeer);
-        Py_VISIT(state->type_AppBarButtonAutomationPeer);
-        Py_VISIT(state->type_AppBarToggleButtonAutomationPeer);
-        Py_VISIT(state->type_AutoSuggestBoxAutomationPeer);
-        Py_VISIT(state->type_AutomationPeer);
-        Py_VISIT(state->type_AutomationPeerAnnotation);
-        Py_VISIT(state->type_ButtonAutomationPeer);
-        Py_VISIT(state->type_ButtonBaseAutomationPeer);
-        Py_VISIT(state->type_CalendarDatePickerAutomationPeer);
-        Py_VISIT(state->type_CaptureElementAutomationPeer);
-        Py_VISIT(state->type_CheckBoxAutomationPeer);
-        Py_VISIT(state->type_ColorPickerSliderAutomationPeer);
-        Py_VISIT(state->type_ColorSpectrumAutomationPeer);
-        Py_VISIT(state->type_ComboBoxAutomationPeer);
-        Py_VISIT(state->type_ComboBoxItemAutomationPeer);
-        Py_VISIT(state->type_ComboBoxItemDataAutomationPeer);
-        Py_VISIT(state->type_DatePickerAutomationPeer);
-        Py_VISIT(state->type_DatePickerFlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_FlipViewAutomationPeer);
-        Py_VISIT(state->type_FlipViewItemAutomationPeer);
-        Py_VISIT(state->type_FlipViewItemDataAutomationPeer);
-        Py_VISIT(state->type_FlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_FrameworkElementAutomationPeer);
-        Py_VISIT(state->type_GridViewAutomationPeer);
-        Py_VISIT(state->type_GridViewHeaderItemAutomationPeer);
-        Py_VISIT(state->type_GridViewItemAutomationPeer);
-        Py_VISIT(state->type_GridViewItemDataAutomationPeer);
-        Py_VISIT(state->type_GroupItemAutomationPeer);
-        Py_VISIT(state->type_HubAutomationPeer);
-        Py_VISIT(state->type_HubSectionAutomationPeer);
-        Py_VISIT(state->type_HyperlinkButtonAutomationPeer);
-        Py_VISIT(state->type_ImageAutomationPeer);
-        Py_VISIT(state->type_InkToolbarAutomationPeer);
-        Py_VISIT(state->type_ItemAutomationPeer);
-        Py_VISIT(state->type_ItemsControlAutomationPeer);
-        Py_VISIT(state->type_ListBoxAutomationPeer);
-        Py_VISIT(state->type_ListBoxItemAutomationPeer);
-        Py_VISIT(state->type_ListBoxItemDataAutomationPeer);
-        Py_VISIT(state->type_ListPickerFlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_ListViewAutomationPeer);
-        Py_VISIT(state->type_ListViewBaseAutomationPeer);
-        Py_VISIT(state->type_ListViewBaseHeaderItemAutomationPeer);
-        Py_VISIT(state->type_ListViewHeaderItemAutomationPeer);
-        Py_VISIT(state->type_ListViewItemAutomationPeer);
-        Py_VISIT(state->type_ListViewItemDataAutomationPeer);
-        Py_VISIT(state->type_LoopingSelectorAutomationPeer);
-        Py_VISIT(state->type_LoopingSelectorItemAutomationPeer);
-        Py_VISIT(state->type_LoopingSelectorItemDataAutomationPeer);
-        Py_VISIT(state->type_MapControlAutomationPeer);
-        Py_VISIT(state->type_MediaElementAutomationPeer);
-        Py_VISIT(state->type_MediaPlayerElementAutomationPeer);
-        Py_VISIT(state->type_MediaTransportControlsAutomationPeer);
-        Py_VISIT(state->type_MenuBarAutomationPeer);
-        Py_VISIT(state->type_MenuBarItemAutomationPeer);
-        Py_VISIT(state->type_MenuFlyoutItemAutomationPeer);
-        Py_VISIT(state->type_MenuFlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_NavigationViewItemAutomationPeer);
-        Py_VISIT(state->type_PasswordBoxAutomationPeer);
-        Py_VISIT(state->type_PersonPictureAutomationPeer);
-        Py_VISIT(state->type_PickerFlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_PivotAutomationPeer);
-        Py_VISIT(state->type_PivotItemAutomationPeer);
-        Py_VISIT(state->type_PivotItemDataAutomationPeer);
-        Py_VISIT(state->type_ProgressBarAutomationPeer);
-        Py_VISIT(state->type_ProgressRingAutomationPeer);
-        Py_VISIT(state->type_RadioButtonAutomationPeer);
-        Py_VISIT(state->type_RangeBaseAutomationPeer);
-        Py_VISIT(state->type_RatingControlAutomationPeer);
-        Py_VISIT(state->type_RepeatButtonAutomationPeer);
-        Py_VISIT(state->type_RichEditBoxAutomationPeer);
-        Py_VISIT(state->type_RichTextBlockAutomationPeer);
-        Py_VISIT(state->type_RichTextBlockOverflowAutomationPeer);
-        Py_VISIT(state->type_ScrollBarAutomationPeer);
-        Py_VISIT(state->type_ScrollViewerAutomationPeer);
-        Py_VISIT(state->type_SearchBoxAutomationPeer);
-        Py_VISIT(state->type_SelectorAutomationPeer);
-        Py_VISIT(state->type_SelectorItemAutomationPeer);
-        Py_VISIT(state->type_SemanticZoomAutomationPeer);
-        Py_VISIT(state->type_SettingsFlyoutAutomationPeer);
-        Py_VISIT(state->type_SliderAutomationPeer);
-        Py_VISIT(state->type_TextBlockAutomationPeer);
-        Py_VISIT(state->type_TextBoxAutomationPeer);
-        Py_VISIT(state->type_ThumbAutomationPeer);
-        Py_VISIT(state->type_TimePickerAutomationPeer);
-        Py_VISIT(state->type_TimePickerFlyoutPresenterAutomationPeer);
-        Py_VISIT(state->type_ToggleButtonAutomationPeer);
-        Py_VISIT(state->type_ToggleMenuFlyoutItemAutomationPeer);
-        Py_VISIT(state->type_ToggleSwitchAutomationPeer);
-        Py_VISIT(state->type_TreeViewItemAutomationPeer);
-        Py_VISIT(state->type_TreeViewListAutomationPeer);
-        Py_VISIT(state->type_RawElementProviderRuntimeId);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppBarAutomationPeer);
-        Py_CLEAR(state->type_AppBarButtonAutomationPeer);
-        Py_CLEAR(state->type_AppBarToggleButtonAutomationPeer);
-        Py_CLEAR(state->type_AutoSuggestBoxAutomationPeer);
-        Py_CLEAR(state->type_AutomationPeer);
-        Py_CLEAR(state->type_AutomationPeerAnnotation);
-        Py_CLEAR(state->type_ButtonAutomationPeer);
-        Py_CLEAR(state->type_ButtonBaseAutomationPeer);
-        Py_CLEAR(state->type_CalendarDatePickerAutomationPeer);
-        Py_CLEAR(state->type_CaptureElementAutomationPeer);
-        Py_CLEAR(state->type_CheckBoxAutomationPeer);
-        Py_CLEAR(state->type_ColorPickerSliderAutomationPeer);
-        Py_CLEAR(state->type_ColorSpectrumAutomationPeer);
-        Py_CLEAR(state->type_ComboBoxAutomationPeer);
-        Py_CLEAR(state->type_ComboBoxItemAutomationPeer);
-        Py_CLEAR(state->type_ComboBoxItemDataAutomationPeer);
-        Py_CLEAR(state->type_DatePickerAutomationPeer);
-        Py_CLEAR(state->type_DatePickerFlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_FlipViewAutomationPeer);
-        Py_CLEAR(state->type_FlipViewItemAutomationPeer);
-        Py_CLEAR(state->type_FlipViewItemDataAutomationPeer);
-        Py_CLEAR(state->type_FlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_FrameworkElementAutomationPeer);
-        Py_CLEAR(state->type_GridViewAutomationPeer);
-        Py_CLEAR(state->type_GridViewHeaderItemAutomationPeer);
-        Py_CLEAR(state->type_GridViewItemAutomationPeer);
-        Py_CLEAR(state->type_GridViewItemDataAutomationPeer);
-        Py_CLEAR(state->type_GroupItemAutomationPeer);
-        Py_CLEAR(state->type_HubAutomationPeer);
-        Py_CLEAR(state->type_HubSectionAutomationPeer);
-        Py_CLEAR(state->type_HyperlinkButtonAutomationPeer);
-        Py_CLEAR(state->type_ImageAutomationPeer);
-        Py_CLEAR(state->type_InkToolbarAutomationPeer);
-        Py_CLEAR(state->type_ItemAutomationPeer);
-        Py_CLEAR(state->type_ItemsControlAutomationPeer);
-        Py_CLEAR(state->type_ListBoxAutomationPeer);
-        Py_CLEAR(state->type_ListBoxItemAutomationPeer);
-        Py_CLEAR(state->type_ListBoxItemDataAutomationPeer);
-        Py_CLEAR(state->type_ListPickerFlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_ListViewAutomationPeer);
-        Py_CLEAR(state->type_ListViewBaseAutomationPeer);
-        Py_CLEAR(state->type_ListViewBaseHeaderItemAutomationPeer);
-        Py_CLEAR(state->type_ListViewHeaderItemAutomationPeer);
-        Py_CLEAR(state->type_ListViewItemAutomationPeer);
-        Py_CLEAR(state->type_ListViewItemDataAutomationPeer);
-        Py_CLEAR(state->type_LoopingSelectorAutomationPeer);
-        Py_CLEAR(state->type_LoopingSelectorItemAutomationPeer);
-        Py_CLEAR(state->type_LoopingSelectorItemDataAutomationPeer);
-        Py_CLEAR(state->type_MapControlAutomationPeer);
-        Py_CLEAR(state->type_MediaElementAutomationPeer);
-        Py_CLEAR(state->type_MediaPlayerElementAutomationPeer);
-        Py_CLEAR(state->type_MediaTransportControlsAutomationPeer);
-        Py_CLEAR(state->type_MenuBarAutomationPeer);
-        Py_CLEAR(state->type_MenuBarItemAutomationPeer);
-        Py_CLEAR(state->type_MenuFlyoutItemAutomationPeer);
-        Py_CLEAR(state->type_MenuFlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_NavigationViewItemAutomationPeer);
-        Py_CLEAR(state->type_PasswordBoxAutomationPeer);
-        Py_CLEAR(state->type_PersonPictureAutomationPeer);
-        Py_CLEAR(state->type_PickerFlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_PivotAutomationPeer);
-        Py_CLEAR(state->type_PivotItemAutomationPeer);
-        Py_CLEAR(state->type_PivotItemDataAutomationPeer);
-        Py_CLEAR(state->type_ProgressBarAutomationPeer);
-        Py_CLEAR(state->type_ProgressRingAutomationPeer);
-        Py_CLEAR(state->type_RadioButtonAutomationPeer);
-        Py_CLEAR(state->type_RangeBaseAutomationPeer);
-        Py_CLEAR(state->type_RatingControlAutomationPeer);
-        Py_CLEAR(state->type_RepeatButtonAutomationPeer);
-        Py_CLEAR(state->type_RichEditBoxAutomationPeer);
-        Py_CLEAR(state->type_RichTextBlockAutomationPeer);
-        Py_CLEAR(state->type_RichTextBlockOverflowAutomationPeer);
-        Py_CLEAR(state->type_ScrollBarAutomationPeer);
-        Py_CLEAR(state->type_ScrollViewerAutomationPeer);
-        Py_CLEAR(state->type_SearchBoxAutomationPeer);
-        Py_CLEAR(state->type_SelectorAutomationPeer);
-        Py_CLEAR(state->type_SelectorItemAutomationPeer);
-        Py_CLEAR(state->type_SemanticZoomAutomationPeer);
-        Py_CLEAR(state->type_SettingsFlyoutAutomationPeer);
-        Py_CLEAR(state->type_SliderAutomationPeer);
-        Py_CLEAR(state->type_TextBlockAutomationPeer);
-        Py_CLEAR(state->type_TextBoxAutomationPeer);
-        Py_CLEAR(state->type_ThumbAutomationPeer);
-        Py_CLEAR(state->type_TimePickerAutomationPeer);
-        Py_CLEAR(state->type_TimePickerFlyoutPresenterAutomationPeer);
-        Py_CLEAR(state->type_ToggleButtonAutomationPeer);
-        Py_CLEAR(state->type_ToggleMenuFlyoutItemAutomationPeer);
-        Py_CLEAR(state->type_ToggleSwitchAutomationPeer);
-        Py_CLEAR(state->type_TreeViewItemAutomationPeer);
-        Py_CLEAR(state->type_TreeViewListAutomationPeer);
-        Py_CLEAR(state->type_RawElementProviderRuntimeId);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Automation_Peers",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Automation::Peers
@@ -16689,7 +16385,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Peers(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -16702,35 +16398,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Peers(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppBarAutomationPeer = py::register_python_type(module.get(), type_name_AppBarAutomationPeer, &type_spec_AppBarAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_AppBarAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarAutomationPeer, &type_spec_AppBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarAutomationPeer, &type_spec_AppBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBarButtonAutomationPeer = py::register_python_type(module.get(), type_name_AppBarButtonAutomationPeer, &type_spec_AppBarButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_AppBarButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarButtonAutomationPeer, &type_spec_AppBarButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarButtonAutomationPeer, &type_spec_AppBarButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBarToggleButtonAutomationPeer = py::register_python_type(module.get(), type_name_AppBarToggleButtonAutomationPeer, &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_AppBarToggleButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonAutomationPeer, &type_spec_AppBarToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonAutomationPeer, &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutoSuggestBoxAutomationPeer = py::register_python_type(module.get(), type_name_AutoSuggestBoxAutomationPeer, &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_AutoSuggestBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutoSuggestBoxAutomationPeer, &type_spec_AutoSuggestBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutoSuggestBoxAutomationPeer, &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationPeer = py::register_python_type(module.get(), type_name_AutomationPeer, &type_spec_AutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_AutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationPeer, &type_spec_AutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationPeer, &type_spec_AutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16741,2615 +16449,780 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Peers(void) noexcept
         return nullptr;
     }
 
-    state->type_AutomationPeerAnnotation = py::register_python_type(module.get(), type_name_AutomationPeerAnnotation, &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get()));
-    if (!state->type_AutomationPeerAnnotation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationPeerAnnotation, &type_spec_AutomationPeerAnnotation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationPeerAnnotation, &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ButtonAutomationPeer = py::register_python_type(module.get(), type_name_ButtonAutomationPeer, &type_spec_ButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ButtonAutomationPeer, &type_spec_ButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ButtonAutomationPeer, &type_spec_ButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ButtonBaseAutomationPeer = py::register_python_type(module.get(), type_name_ButtonBaseAutomationPeer, &type_spec_ButtonBaseAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ButtonBaseAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ButtonBaseAutomationPeer, &type_spec_ButtonBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ButtonBaseAutomationPeer, &type_spec_ButtonBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CalendarDatePickerAutomationPeer = py::register_python_type(module.get(), type_name_CalendarDatePickerAutomationPeer, &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_CalendarDatePickerAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CalendarDatePickerAutomationPeer, &type_spec_CalendarDatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CalendarDatePickerAutomationPeer, &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CaptureElementAutomationPeer = py::register_python_type(module.get(), type_name_CaptureElementAutomationPeer, &type_spec_CaptureElementAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_CaptureElementAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CaptureElementAutomationPeer, &type_spec_CaptureElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CaptureElementAutomationPeer, &type_spec_CaptureElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CheckBoxAutomationPeer = py::register_python_type(module.get(), type_name_CheckBoxAutomationPeer, &type_spec_CheckBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_CheckBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CheckBoxAutomationPeer, &type_spec_CheckBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CheckBoxAutomationPeer, &type_spec_CheckBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorPickerSliderAutomationPeer = py::register_python_type(module.get(), type_name_ColorPickerSliderAutomationPeer, &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ColorPickerSliderAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorPickerSliderAutomationPeer, &type_spec_ColorPickerSliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorPickerSliderAutomationPeer, &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorSpectrumAutomationPeer = py::register_python_type(module.get(), type_name_ColorSpectrumAutomationPeer, &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ColorSpectrumAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorSpectrumAutomationPeer, &type_spec_ColorSpectrumAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorSpectrumAutomationPeer, &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ComboBoxAutomationPeer = py::register_python_type(module.get(), type_name_ComboBoxAutomationPeer, &type_spec_ComboBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ComboBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComboBoxAutomationPeer, &type_spec_ComboBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComboBoxAutomationPeer, &type_spec_ComboBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ComboBoxItemAutomationPeer = py::register_python_type(module.get(), type_name_ComboBoxItemAutomationPeer, &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ComboBoxItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComboBoxItemAutomationPeer, &type_spec_ComboBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComboBoxItemAutomationPeer, &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ComboBoxItemDataAutomationPeer = py::register_python_type(module.get(), type_name_ComboBoxItemDataAutomationPeer, &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ComboBoxItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComboBoxItemDataAutomationPeer, &type_spec_ComboBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComboBoxItemDataAutomationPeer, &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatePickerAutomationPeer = py::register_python_type(module.get(), type_name_DatePickerAutomationPeer, &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_DatePickerAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatePickerAutomationPeer, &type_spec_DatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatePickerAutomationPeer, &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DatePickerFlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_DatePickerFlyoutPresenterAutomationPeer, &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_DatePickerFlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DatePickerFlyoutPresenterAutomationPeer, &type_spec_DatePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DatePickerFlyoutPresenterAutomationPeer, &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlipViewAutomationPeer = py::register_python_type(module.get(), type_name_FlipViewAutomationPeer, &type_spec_FlipViewAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_FlipViewAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlipViewAutomationPeer, &type_spec_FlipViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlipViewAutomationPeer, &type_spec_FlipViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlipViewItemAutomationPeer = py::register_python_type(module.get(), type_name_FlipViewItemAutomationPeer, &type_spec_FlipViewItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_FlipViewItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlipViewItemAutomationPeer, &type_spec_FlipViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlipViewItemAutomationPeer, &type_spec_FlipViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlipViewItemDataAutomationPeer = py::register_python_type(module.get(), type_name_FlipViewItemDataAutomationPeer, &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_FlipViewItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlipViewItemDataAutomationPeer, &type_spec_FlipViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlipViewItemDataAutomationPeer, &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_FlyoutPresenterAutomationPeer, &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_FlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlyoutPresenterAutomationPeer, &type_spec_FlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlyoutPresenterAutomationPeer, &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameworkElementAutomationPeer = py::register_python_type(module.get(), type_name_FrameworkElementAutomationPeer, &type_spec_FrameworkElementAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_FrameworkElementAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameworkElementAutomationPeer, &type_spec_FrameworkElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameworkElementAutomationPeer, &type_spec_FrameworkElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridViewAutomationPeer = py::register_python_type(module.get(), type_name_GridViewAutomationPeer, &type_spec_GridViewAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_GridViewAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewAutomationPeer, &type_spec_GridViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewAutomationPeer, &type_spec_GridViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridViewHeaderItemAutomationPeer = py::register_python_type(module.get(), type_name_GridViewHeaderItemAutomationPeer, &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_GridViewHeaderItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewHeaderItemAutomationPeer, &type_spec_GridViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewHeaderItemAutomationPeer, &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridViewItemAutomationPeer = py::register_python_type(module.get(), type_name_GridViewItemAutomationPeer, &type_spec_GridViewItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_GridViewItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewItemAutomationPeer, &type_spec_GridViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewItemAutomationPeer, &type_spec_GridViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GridViewItemDataAutomationPeer = py::register_python_type(module.get(), type_name_GridViewItemDataAutomationPeer, &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_GridViewItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GridViewItemDataAutomationPeer, &type_spec_GridViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GridViewItemDataAutomationPeer, &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GroupItemAutomationPeer = py::register_python_type(module.get(), type_name_GroupItemAutomationPeer, &type_spec_GroupItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_GroupItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GroupItemAutomationPeer, &type_spec_GroupItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GroupItemAutomationPeer, &type_spec_GroupItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HubAutomationPeer = py::register_python_type(module.get(), type_name_HubAutomationPeer, &type_spec_HubAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_HubAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HubAutomationPeer, &type_spec_HubAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HubAutomationPeer, &type_spec_HubAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HubSectionAutomationPeer = py::register_python_type(module.get(), type_name_HubSectionAutomationPeer, &type_spec_HubSectionAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_HubSectionAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HubSectionAutomationPeer, &type_spec_HubSectionAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HubSectionAutomationPeer, &type_spec_HubSectionAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HyperlinkButtonAutomationPeer = py::register_python_type(module.get(), type_name_HyperlinkButtonAutomationPeer, &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_HyperlinkButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HyperlinkButtonAutomationPeer, &type_spec_HyperlinkButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HyperlinkButtonAutomationPeer, &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageAutomationPeer = py::register_python_type(module.get(), type_name_ImageAutomationPeer, &type_spec_ImageAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ImageAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageAutomationPeer, &type_spec_ImageAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageAutomationPeer, &type_spec_ImageAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkToolbarAutomationPeer = py::register_python_type(module.get(), type_name_InkToolbarAutomationPeer, &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_InkToolbarAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkToolbarAutomationPeer, &type_spec_InkToolbarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkToolbarAutomationPeer, &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ItemAutomationPeer = py::register_python_type(module.get(), type_name_ItemAutomationPeer, &type_spec_ItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ItemAutomationPeer, &type_spec_ItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ItemAutomationPeer, &type_spec_ItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ItemsControlAutomationPeer = py::register_python_type(module.get(), type_name_ItemsControlAutomationPeer, &type_spec_ItemsControlAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ItemsControlAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ItemsControlAutomationPeer, &type_spec_ItemsControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ItemsControlAutomationPeer, &type_spec_ItemsControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListBoxAutomationPeer = py::register_python_type(module.get(), type_name_ListBoxAutomationPeer, &type_spec_ListBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListBoxAutomationPeer, &type_spec_ListBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListBoxAutomationPeer, &type_spec_ListBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListBoxItemAutomationPeer = py::register_python_type(module.get(), type_name_ListBoxItemAutomationPeer, &type_spec_ListBoxItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListBoxItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListBoxItemAutomationPeer, &type_spec_ListBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListBoxItemAutomationPeer, &type_spec_ListBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListBoxItemDataAutomationPeer = py::register_python_type(module.get(), type_name_ListBoxItemDataAutomationPeer, &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListBoxItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListBoxItemDataAutomationPeer, &type_spec_ListBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListBoxItemDataAutomationPeer, &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListPickerFlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_ListPickerFlyoutPresenterAutomationPeer, &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListPickerFlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListPickerFlyoutPresenterAutomationPeer, &type_spec_ListPickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListPickerFlyoutPresenterAutomationPeer, &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewAutomationPeer = py::register_python_type(module.get(), type_name_ListViewAutomationPeer, &type_spec_ListViewAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewAutomationPeer, &type_spec_ListViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewAutomationPeer, &type_spec_ListViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewBaseAutomationPeer = py::register_python_type(module.get(), type_name_ListViewBaseAutomationPeer, &type_spec_ListViewBaseAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewBaseAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewBaseAutomationPeer, &type_spec_ListViewBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewBaseAutomationPeer, &type_spec_ListViewBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewBaseHeaderItemAutomationPeer = py::register_python_type(module.get(), type_name_ListViewBaseHeaderItemAutomationPeer, &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewBaseHeaderItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewBaseHeaderItemAutomationPeer, &type_spec_ListViewBaseHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewBaseHeaderItemAutomationPeer, &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewHeaderItemAutomationPeer = py::register_python_type(module.get(), type_name_ListViewHeaderItemAutomationPeer, &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewHeaderItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewHeaderItemAutomationPeer, &type_spec_ListViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewHeaderItemAutomationPeer, &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewItemAutomationPeer = py::register_python_type(module.get(), type_name_ListViewItemAutomationPeer, &type_spec_ListViewItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewItemAutomationPeer, &type_spec_ListViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewItemAutomationPeer, &type_spec_ListViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ListViewItemDataAutomationPeer = py::register_python_type(module.get(), type_name_ListViewItemDataAutomationPeer, &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ListViewItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ListViewItemDataAutomationPeer, &type_spec_ListViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ListViewItemDataAutomationPeer, &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoopingSelectorAutomationPeer = py::register_python_type(module.get(), type_name_LoopingSelectorAutomationPeer, &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_LoopingSelectorAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorAutomationPeer, &type_spec_LoopingSelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorAutomationPeer, &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoopingSelectorItemAutomationPeer = py::register_python_type(module.get(), type_name_LoopingSelectorItemAutomationPeer, &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_LoopingSelectorItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemAutomationPeer, &type_spec_LoopingSelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemAutomationPeer, &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoopingSelectorItemDataAutomationPeer = py::register_python_type(module.get(), type_name_LoopingSelectorItemDataAutomationPeer, &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_LoopingSelectorItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemDataAutomationPeer, &type_spec_LoopingSelectorItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemDataAutomationPeer, &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapControlAutomationPeer = py::register_python_type(module.get(), type_name_MapControlAutomationPeer, &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MapControlAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapControlAutomationPeer, &type_spec_MapControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapControlAutomationPeer, &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaElementAutomationPeer = py::register_python_type(module.get(), type_name_MediaElementAutomationPeer, &type_spec_MediaElementAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MediaElementAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaElementAutomationPeer, &type_spec_MediaElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaElementAutomationPeer, &type_spec_MediaElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaPlayerElementAutomationPeer = py::register_python_type(module.get(), type_name_MediaPlayerElementAutomationPeer, &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MediaPlayerElementAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaPlayerElementAutomationPeer, &type_spec_MediaPlayerElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaPlayerElementAutomationPeer, &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaTransportControlsAutomationPeer = py::register_python_type(module.get(), type_name_MediaTransportControlsAutomationPeer, &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MediaTransportControlsAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaTransportControlsAutomationPeer, &type_spec_MediaTransportControlsAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaTransportControlsAutomationPeer, &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuBarAutomationPeer = py::register_python_type(module.get(), type_name_MenuBarAutomationPeer, &type_spec_MenuBarAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MenuBarAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuBarAutomationPeer, &type_spec_MenuBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuBarAutomationPeer, &type_spec_MenuBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuBarItemAutomationPeer = py::register_python_type(module.get(), type_name_MenuBarItemAutomationPeer, &type_spec_MenuBarItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MenuBarItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuBarItemAutomationPeer, &type_spec_MenuBarItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuBarItemAutomationPeer, &type_spec_MenuBarItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuFlyoutItemAutomationPeer = py::register_python_type(module.get(), type_name_MenuFlyoutItemAutomationPeer, &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MenuFlyoutItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemAutomationPeer, &type_spec_MenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemAutomationPeer, &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MenuFlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_MenuFlyoutPresenterAutomationPeer, &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_MenuFlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterAutomationPeer, &type_spec_MenuFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterAutomationPeer, &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NavigationViewItemAutomationPeer = py::register_python_type(module.get(), type_name_NavigationViewItemAutomationPeer, &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_NavigationViewItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationViewItemAutomationPeer, &type_spec_NavigationViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationViewItemAutomationPeer, &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PasswordBoxAutomationPeer = py::register_python_type(module.get(), type_name_PasswordBoxAutomationPeer, &type_spec_PasswordBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PasswordBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PasswordBoxAutomationPeer, &type_spec_PasswordBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PasswordBoxAutomationPeer, &type_spec_PasswordBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PersonPictureAutomationPeer = py::register_python_type(module.get(), type_name_PersonPictureAutomationPeer, &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PersonPictureAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PersonPictureAutomationPeer, &type_spec_PersonPictureAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PersonPictureAutomationPeer, &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PickerFlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_PickerFlyoutPresenterAutomationPeer, &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PickerFlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerFlyoutPresenterAutomationPeer, &type_spec_PickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerFlyoutPresenterAutomationPeer, &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotAutomationPeer = py::register_python_type(module.get(), type_name_PivotAutomationPeer, &type_spec_PivotAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PivotAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotAutomationPeer, &type_spec_PivotAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotAutomationPeer, &type_spec_PivotAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotItemAutomationPeer = py::register_python_type(module.get(), type_name_PivotItemAutomationPeer, &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PivotItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotItemAutomationPeer, &type_spec_PivotItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotItemAutomationPeer, &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PivotItemDataAutomationPeer = py::register_python_type(module.get(), type_name_PivotItemDataAutomationPeer, &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_PivotItemDataAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PivotItemDataAutomationPeer, &type_spec_PivotItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PivotItemDataAutomationPeer, &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProgressBarAutomationPeer = py::register_python_type(module.get(), type_name_ProgressBarAutomationPeer, &type_spec_ProgressBarAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ProgressBarAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProgressBarAutomationPeer, &type_spec_ProgressBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProgressBarAutomationPeer, &type_spec_ProgressBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProgressRingAutomationPeer = py::register_python_type(module.get(), type_name_ProgressRingAutomationPeer, &type_spec_ProgressRingAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ProgressRingAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProgressRingAutomationPeer, &type_spec_ProgressRingAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProgressRingAutomationPeer, &type_spec_ProgressRingAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RadioButtonAutomationPeer = py::register_python_type(module.get(), type_name_RadioButtonAutomationPeer, &type_spec_RadioButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RadioButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RadioButtonAutomationPeer, &type_spec_RadioButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RadioButtonAutomationPeer, &type_spec_RadioButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RangeBaseAutomationPeer = py::register_python_type(module.get(), type_name_RangeBaseAutomationPeer, &type_spec_RangeBaseAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RangeBaseAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RangeBaseAutomationPeer, &type_spec_RangeBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RangeBaseAutomationPeer, &type_spec_RangeBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RatingControlAutomationPeer = py::register_python_type(module.get(), type_name_RatingControlAutomationPeer, &type_spec_RatingControlAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RatingControlAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RatingControlAutomationPeer, &type_spec_RatingControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RatingControlAutomationPeer, &type_spec_RatingControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RepeatButtonAutomationPeer = py::register_python_type(module.get(), type_name_RepeatButtonAutomationPeer, &type_spec_RepeatButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RepeatButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RepeatButtonAutomationPeer, &type_spec_RepeatButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RepeatButtonAutomationPeer, &type_spec_RepeatButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RichEditBoxAutomationPeer = py::register_python_type(module.get(), type_name_RichEditBoxAutomationPeer, &type_spec_RichEditBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RichEditBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RichEditBoxAutomationPeer, &type_spec_RichEditBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RichEditBoxAutomationPeer, &type_spec_RichEditBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RichTextBlockAutomationPeer = py::register_python_type(module.get(), type_name_RichTextBlockAutomationPeer, &type_spec_RichTextBlockAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RichTextBlockAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RichTextBlockAutomationPeer, &type_spec_RichTextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RichTextBlockAutomationPeer, &type_spec_RichTextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RichTextBlockOverflowAutomationPeer = py::register_python_type(module.get(), type_name_RichTextBlockOverflowAutomationPeer, &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_RichTextBlockOverflowAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RichTextBlockOverflowAutomationPeer, &type_spec_RichTextBlockOverflowAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RichTextBlockOverflowAutomationPeer, &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScrollBarAutomationPeer = py::register_python_type(module.get(), type_name_ScrollBarAutomationPeer, &type_spec_ScrollBarAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ScrollBarAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScrollBarAutomationPeer, &type_spec_ScrollBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScrollBarAutomationPeer, &type_spec_ScrollBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScrollViewerAutomationPeer = py::register_python_type(module.get(), type_name_ScrollViewerAutomationPeer, &type_spec_ScrollViewerAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ScrollViewerAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScrollViewerAutomationPeer, &type_spec_ScrollViewerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScrollViewerAutomationPeer, &type_spec_ScrollViewerAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchBoxAutomationPeer = py::register_python_type(module.get(), type_name_SearchBoxAutomationPeer, &type_spec_SearchBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SearchBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchBoxAutomationPeer, &type_spec_SearchBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchBoxAutomationPeer, &type_spec_SearchBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SelectorAutomationPeer = py::register_python_type(module.get(), type_name_SelectorAutomationPeer, &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SelectorAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectorAutomationPeer, &type_spec_SelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectorAutomationPeer, &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SelectorItemAutomationPeer = py::register_python_type(module.get(), type_name_SelectorItemAutomationPeer, &type_spec_SelectorItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SelectorItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectorItemAutomationPeer, &type_spec_SelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectorItemAutomationPeer, &type_spec_SelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SemanticZoomAutomationPeer = py::register_python_type(module.get(), type_name_SemanticZoomAutomationPeer, &type_spec_SemanticZoomAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SemanticZoomAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SemanticZoomAutomationPeer, &type_spec_SemanticZoomAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SemanticZoomAutomationPeer, &type_spec_SemanticZoomAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SettingsFlyoutAutomationPeer = py::register_python_type(module.get(), type_name_SettingsFlyoutAutomationPeer, &type_spec_SettingsFlyoutAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SettingsFlyoutAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SettingsFlyoutAutomationPeer, &type_spec_SettingsFlyoutAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SettingsFlyoutAutomationPeer, &type_spec_SettingsFlyoutAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SliderAutomationPeer = py::register_python_type(module.get(), type_name_SliderAutomationPeer, &type_spec_SliderAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_SliderAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SliderAutomationPeer, &type_spec_SliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SliderAutomationPeer, &type_spec_SliderAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextBlockAutomationPeer = py::register_python_type(module.get(), type_name_TextBlockAutomationPeer, &type_spec_TextBlockAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TextBlockAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextBlockAutomationPeer, &type_spec_TextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextBlockAutomationPeer, &type_spec_TextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextBoxAutomationPeer = py::register_python_type(module.get(), type_name_TextBoxAutomationPeer, &type_spec_TextBoxAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TextBoxAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextBoxAutomationPeer, &type_spec_TextBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextBoxAutomationPeer, &type_spec_TextBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ThumbAutomationPeer = py::register_python_type(module.get(), type_name_ThumbAutomationPeer, &type_spec_ThumbAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ThumbAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ThumbAutomationPeer, &type_spec_ThumbAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ThumbAutomationPeer, &type_spec_ThumbAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimePickerAutomationPeer = py::register_python_type(module.get(), type_name_TimePickerAutomationPeer, &type_spec_TimePickerAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TimePickerAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimePickerAutomationPeer, &type_spec_TimePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimePickerAutomationPeer, &type_spec_TimePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimePickerFlyoutPresenterAutomationPeer = py::register_python_type(module.get(), type_name_TimePickerFlyoutPresenterAutomationPeer, &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TimePickerFlyoutPresenterAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimePickerFlyoutPresenterAutomationPeer, &type_spec_TimePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimePickerFlyoutPresenterAutomationPeer, &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToggleButtonAutomationPeer = py::register_python_type(module.get(), type_name_ToggleButtonAutomationPeer, &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ToggleButtonAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToggleButtonAutomationPeer, &type_spec_ToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToggleButtonAutomationPeer, &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToggleMenuFlyoutItemAutomationPeer = py::register_python_type(module.get(), type_name_ToggleMenuFlyoutItemAutomationPeer, &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ToggleMenuFlyoutItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToggleMenuFlyoutItemAutomationPeer, &type_spec_ToggleMenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToggleMenuFlyoutItemAutomationPeer, &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToggleSwitchAutomationPeer = py::register_python_type(module.get(), type_name_ToggleSwitchAutomationPeer, &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_ToggleSwitchAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToggleSwitchAutomationPeer, &type_spec_ToggleSwitchAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToggleSwitchAutomationPeer, &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TreeViewItemAutomationPeer = py::register_python_type(module.get(), type_name_TreeViewItemAutomationPeer, &type_spec_TreeViewItemAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TreeViewItemAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TreeViewItemAutomationPeer, &type_spec_TreeViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TreeViewItemAutomationPeer, &type_spec_TreeViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TreeViewListAutomationPeer = py::register_python_type(module.get(), type_name_TreeViewListAutomationPeer, &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr);
-    if (!state->type_TreeViewListAutomationPeer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TreeViewListAutomationPeer, &type_spec_TreeViewListAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TreeViewListAutomationPeer, &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RawElementProviderRuntimeId = py::register_python_type(module.get(), type_name_RawElementProviderRuntimeId, &type_spec_RawElementProviderRuntimeId, nullptr, nullptr);
-    if (!state->type_RawElementProviderRuntimeId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RawElementProviderRuntimeId, &type_spec_RawElementProviderRuntimeId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RawElementProviderRuntimeId, &type_spec_RawElementProviderRuntimeId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBarToggleButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutoSuggestBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationPeerAnnotation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ButtonBaseAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CalendarDatePickerAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CaptureElementAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CheckBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorPickerSliderAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorSpectrumAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComboBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComboBoxItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComboBoxItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatePickerAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DatePickerFlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlipViewAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlipViewItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlipViewItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameworkElementAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewHeaderItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GridViewItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GroupItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HubAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HubSectionAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HyperlinkButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkToolbarAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ItemsControlAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListBoxItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListBoxItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListPickerFlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewBaseAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewBaseHeaderItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewHeaderItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ListViewItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelectorAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelectorItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoopingSelectorItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapControlAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaElementAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaPlayerElementAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaTransportControlsAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuBarAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuBarItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuFlyoutItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MenuFlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationViewItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PasswordBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PersonPictureAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerFlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PivotItemDataAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProgressBarAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProgressRingAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RadioButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RangeBaseAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RatingControlAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RepeatButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RichEditBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RichTextBlockAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RichTextBlockOverflowAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScrollBarAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScrollViewerAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectorAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectorItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SemanticZoomAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SettingsFlyoutAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SliderAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextBlockAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextBoxAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThumbAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimePickerAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimePickerFlyoutPresenterAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToggleButtonAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToggleMenuFlyoutItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToggleSwitchAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TreeViewItemAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TreeViewListAutomationPeer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Automation::Peers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Automation::Peers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RawElementProviderRuntimeId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -65,86 +65,100 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>
+    struct py_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "DiagnosticActionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>
+    struct py_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "DiagnosticInvoker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessCpuUsage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessCpuUsageReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessDiagnosticInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessDiskUsage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessDiskUsageReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessMemoryUsage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>
+    struct py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "ProcessMemoryUsageReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>
+    struct py_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "SystemCpuUsage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>
+    struct py_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "SystemCpuUsageReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>
+    struct py_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "SystemDiagnosticInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>
+    struct py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "SystemMemoryUsage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>
+    struct py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics";
+        static constexpr const char* type_name = "SystemMemoryUsageReport";
     };
 }

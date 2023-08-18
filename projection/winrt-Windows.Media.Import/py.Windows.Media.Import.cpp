@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::Media::Import
 {
-    struct module_state
-    {
-        PyTypeObject* type_PhotoImportDeleteImportedItemsFromSourceResult;
-        PyTypeObject* type_PhotoImportFindItemsResult;
-        PyTypeObject* type_PhotoImportImportItemsResult;
-        PyTypeObject* type_PhotoImportItem;
-        PyTypeObject* type_PhotoImportItemImportedEventArgs;
-        PyTypeObject* type_PhotoImportManager;
-        PyTypeObject* type_PhotoImportOperation;
-        PyTypeObject* type_PhotoImportSelectionChangedEventArgs;
-        PyTypeObject* type_PhotoImportSession;
-        PyTypeObject* type_PhotoImportSidecar;
-        PyTypeObject* type_PhotoImportSource;
-        PyTypeObject* type_PhotoImportStorageMedium;
-        PyTypeObject* type_PhotoImportVideoSegment;
-        PyTypeObject* type_PhotoImportProgress;
-    };
-
     // ----- PhotoImportDeleteImportedItemsFromSourceResult class --------------------
     static constexpr const char* const type_name_PhotoImportDeleteImportedItemsFromSourceResult = "PhotoImportDeleteImportedItemsFromSourceResult";
 
@@ -4188,70 +4170,15 @@ namespace py::cpp::Windows::Media::Import
     PyDoc_STRVAR(module_doc, "Windows::Media::Import");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PhotoImportDeleteImportedItemsFromSourceResult);
-        Py_VISIT(state->type_PhotoImportFindItemsResult);
-        Py_VISIT(state->type_PhotoImportImportItemsResult);
-        Py_VISIT(state->type_PhotoImportItem);
-        Py_VISIT(state->type_PhotoImportItemImportedEventArgs);
-        Py_VISIT(state->type_PhotoImportManager);
-        Py_VISIT(state->type_PhotoImportOperation);
-        Py_VISIT(state->type_PhotoImportSelectionChangedEventArgs);
-        Py_VISIT(state->type_PhotoImportSession);
-        Py_VISIT(state->type_PhotoImportSidecar);
-        Py_VISIT(state->type_PhotoImportSource);
-        Py_VISIT(state->type_PhotoImportStorageMedium);
-        Py_VISIT(state->type_PhotoImportVideoSegment);
-        Py_VISIT(state->type_PhotoImportProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PhotoImportDeleteImportedItemsFromSourceResult);
-        Py_CLEAR(state->type_PhotoImportFindItemsResult);
-        Py_CLEAR(state->type_PhotoImportImportItemsResult);
-        Py_CLEAR(state->type_PhotoImportItem);
-        Py_CLEAR(state->type_PhotoImportItemImportedEventArgs);
-        Py_CLEAR(state->type_PhotoImportManager);
-        Py_CLEAR(state->type_PhotoImportOperation);
-        Py_CLEAR(state->type_PhotoImportSelectionChangedEventArgs);
-        Py_CLEAR(state->type_PhotoImportSession);
-        Py_CLEAR(state->type_PhotoImportSidecar);
-        Py_CLEAR(state->type_PhotoImportSource);
-        Py_CLEAR(state->type_PhotoImportStorageMedium);
-        Py_CLEAR(state->type_PhotoImportVideoSegment);
-        Py_CLEAR(state->type_PhotoImportProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Import",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Import
@@ -4267,7 +4194,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Import(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4280,415 +4207,132 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Import(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PhotoImportDeleteImportedItemsFromSourceResult = py::register_python_type(module.get(), type_name_PhotoImportDeleteImportedItemsFromSourceResult, &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportDeleteImportedItemsFromSourceResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportDeleteImportedItemsFromSourceResult, &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportDeleteImportedItemsFromSourceResult, &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportFindItemsResult = py::register_python_type(module.get(), type_name_PhotoImportFindItemsResult, &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportFindItemsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportFindItemsResult, &type_spec_PhotoImportFindItemsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportFindItemsResult, &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportImportItemsResult = py::register_python_type(module.get(), type_name_PhotoImportImportItemsResult, &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportImportItemsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportImportItemsResult, &type_spec_PhotoImportImportItemsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportImportItemsResult, &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportItem = py::register_python_type(module.get(), type_name_PhotoImportItem, &type_spec_PhotoImportItem, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportItem, &type_spec_PhotoImportItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportItem, &type_spec_PhotoImportItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportItemImportedEventArgs = py::register_python_type(module.get(), type_name_PhotoImportItemImportedEventArgs, &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportItemImportedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportItemImportedEventArgs, &type_spec_PhotoImportItemImportedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportItemImportedEventArgs, &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportManager = py::register_python_type(module.get(), type_name_PhotoImportManager, &type_spec_PhotoImportManager, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportManager, &type_spec_PhotoImportManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportManager, &type_spec_PhotoImportManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportOperation = py::register_python_type(module.get(), type_name_PhotoImportOperation, &type_spec_PhotoImportOperation, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportOperation, &type_spec_PhotoImportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportOperation, &type_spec_PhotoImportOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportSelectionChangedEventArgs = py::register_python_type(module.get(), type_name_PhotoImportSelectionChangedEventArgs, &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportSelectionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportSelectionChangedEventArgs, &type_spec_PhotoImportSelectionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportSelectionChangedEventArgs, &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportSession = py::register_python_type(module.get(), type_name_PhotoImportSession, &type_spec_PhotoImportSession, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportSession, &type_spec_PhotoImportSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportSession, &type_spec_PhotoImportSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportSidecar = py::register_python_type(module.get(), type_name_PhotoImportSidecar, &type_spec_PhotoImportSidecar, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportSidecar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportSidecar, &type_spec_PhotoImportSidecar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportSidecar, &type_spec_PhotoImportSidecar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportSource = py::register_python_type(module.get(), type_name_PhotoImportSource, &type_spec_PhotoImportSource, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportSource, &type_spec_PhotoImportSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportSource, &type_spec_PhotoImportSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportStorageMedium = py::register_python_type(module.get(), type_name_PhotoImportStorageMedium, &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportStorageMedium)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportStorageMedium, &type_spec_PhotoImportStorageMedium, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportStorageMedium, &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportVideoSegment = py::register_python_type(module.get(), type_name_PhotoImportVideoSegment, &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr);
-    if (!state->type_PhotoImportVideoSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportVideoSegment, &type_spec_PhotoImportVideoSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportVideoSegment, &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoImportProgress = py::register_python_type(module.get(), type_name_PhotoImportProgress, &type_spec_PhotoImportProgress, nullptr, nullptr);
-    if (!state->type_PhotoImportProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoImportProgress, &type_spec_PhotoImportProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoImportProgress, &type_spec_PhotoImportProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportDeleteImportedItemsFromSourceResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportFindItemsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportFindItemsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportImportItemsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportImportItemsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportItemImportedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportSelectionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportSidecar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportSidecar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportSidecar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportStorageMedium;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportStorageMedium is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportVideoSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportVideoSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Import::PhotoImportProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Import;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Import");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoImportProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Import::PhotoImportProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

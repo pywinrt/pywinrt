@@ -79,50 +79,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "GattCharacteristicNotificationTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "GattServiceProviderConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "GattServiceProviderTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "RfcommConnectionTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "RfcommInboundConnectionInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
+        static constexpr const char* type_name = "RfcommOutboundConnectionInformation";
     };
 }

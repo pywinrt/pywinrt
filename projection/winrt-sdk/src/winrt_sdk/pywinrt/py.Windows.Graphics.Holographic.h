@@ -151,128 +151,149 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicCamera>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicCamera";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicCameraPose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicCameraRenderingParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicCameraViewportParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicDisplay";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrame>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFramePrediction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFramePresentationMonitor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFramePresentationReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFrameRenderingReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFrameScanoutMonitor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFrameScanoutReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicQuadLayer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicQuadLayerUpdateParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpace>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicSpace";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicSpaceCameraAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicSpaceCameraRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicViewConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicAdapterId>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicAdapterId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicAdapterId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicFrameId>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicFrameId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>
+    struct py_type<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.holographic";
+        static constexpr const char* type_name = "HolographicStereoTransform";
     };
 }

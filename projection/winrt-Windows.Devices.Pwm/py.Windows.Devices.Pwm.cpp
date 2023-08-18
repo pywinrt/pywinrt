@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Pwm
 {
-    struct module_state
-    {
-        PyTypeObject* type_PwmController;
-        PyTypeObject* type_PwmPin;
-    };
-
     // ----- PwmController class --------------------
     static constexpr const char* const type_name_PwmController = "PwmController";
 
@@ -720,46 +714,15 @@ namespace py::cpp::Windows::Devices::Pwm
     PyDoc_STRVAR(module_doc, "Windows::Devices::Pwm");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PwmController);
-        Py_VISIT(state->type_PwmPin);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PwmController);
-        Py_CLEAR(state->type_PwmPin);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Pwm",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Pwm
@@ -775,7 +738,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -788,67 +751,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PwmController = py::register_python_type(module.get(), type_name_PwmController, &type_spec_PwmController, object_bases.get(), nullptr);
-    if (!state->type_PwmController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PwmController, &type_spec_PwmController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PwmController, &type_spec_PwmController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PwmPin = py::register_python_type(module.get(), type_name_PwmPin, &type_spec_PwmPin, object_bases.get(), nullptr);
-    if (!state->type_PwmPin)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PwmPin, &type_spec_PwmPin, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PwmPin, &type_spec_PwmPin, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Pwm::PwmController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Pwm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Pwm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PwmController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Pwm::PwmController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Pwm::PwmPin>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Pwm;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Pwm");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PwmPin;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Pwm::PwmPin is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

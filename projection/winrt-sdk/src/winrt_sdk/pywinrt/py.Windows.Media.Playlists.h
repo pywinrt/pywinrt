@@ -47,8 +47,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playlists::Playlist>
+    struct py_type<winrt::Windows::Media::Playlists::Playlist>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playlists";
+        static constexpr const char* type_name = "Playlist";
     };
 }

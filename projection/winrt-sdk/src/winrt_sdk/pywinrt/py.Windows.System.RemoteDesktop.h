@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>
+    struct py_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop";
+        static constexpr const char* type_name = "InteractiveSession";
     };
 }

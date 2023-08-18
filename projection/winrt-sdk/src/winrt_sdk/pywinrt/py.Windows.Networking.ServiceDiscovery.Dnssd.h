@@ -70,26 +70,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>
+    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdRegistrationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>
+    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdServiceInstance";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>
+    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdServiceInstanceCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>
+    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
+        static constexpr const char* type_name = "DnssdServiceWatcher";
     };
 }

@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Management::Workplace
 {
-    struct module_state
-    {
-        PyTypeObject* type_MdmPolicy;
-        PyTypeObject* type_WorkplaceSettings;
-    };
-
     // ----- MdmPolicy class --------------------
     static constexpr const char* const type_name_MdmPolicy = "MdmPolicy";
 
@@ -274,46 +268,15 @@ namespace py::cpp::Windows::Management::Workplace
     PyDoc_STRVAR(module_doc, "Windows::Management::Workplace");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_MdmPolicy);
-        Py_VISIT(state->type_WorkplaceSettings);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_MdmPolicy);
-        Py_CLEAR(state->type_WorkplaceSettings);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Management_Workplace",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Management::Workplace
@@ -329,7 +292,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Workplace(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -342,11 +305,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Workplace(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_MdmPolicy = py::register_python_type(module.get(), type_name_MdmPolicy, &type_spec_MdmPolicy, object_bases.get(), nullptr);
-    if (!state->type_MdmPolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MdmPolicy, &type_spec_MdmPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MdmPolicy, &type_spec_MdmPolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -357,58 +320,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Workplace(void) noexcept
         return nullptr;
     }
 
-    state->type_WorkplaceSettings = py::register_python_type(module.get(), type_name_WorkplaceSettings, &type_spec_WorkplaceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WorkplaceSettings_Meta.get()));
-    if (!state->type_WorkplaceSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WorkplaceSettings, &type_spec_WorkplaceSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WorkplaceSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WorkplaceSettings, &type_spec_WorkplaceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WorkplaceSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Workplace::MdmPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Workplace;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Workplace");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MdmPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Workplace::MdmPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Workplace::WorkplaceSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Workplace;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Workplace");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WorkplaceSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Workplace::WorkplaceSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

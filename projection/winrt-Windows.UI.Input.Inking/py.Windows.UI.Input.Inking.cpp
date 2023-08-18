@@ -6,38 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input::Inking
 {
-    struct module_state
-    {
-        PyTypeObject* type_InkDrawingAttributes;
-        PyTypeObject* type_InkDrawingAttributesPencilProperties;
-        PyTypeObject* type_InkInputConfiguration;
-        PyTypeObject* type_InkInputProcessingConfiguration;
-        PyTypeObject* type_InkManager;
-        PyTypeObject* type_InkModelerAttributes;
-        PyTypeObject* type_InkPoint;
-        PyTypeObject* type_InkPresenter;
-        PyTypeObject* type_InkPresenterProtractor;
-        PyTypeObject* type_InkPresenterRuler;
-        PyTypeObject* type_InkRecognitionResult;
-        PyTypeObject* type_InkRecognizer;
-        PyTypeObject* type_InkRecognizerContainer;
-        PyTypeObject* type_InkStroke;
-        PyTypeObject* type_InkStrokeBuilder;
-        PyTypeObject* type_InkStrokeContainer;
-        PyTypeObject* type_InkStrokeInput;
-        PyTypeObject* type_InkStrokeRenderingSegment;
-        PyTypeObject* type_InkStrokesCollectedEventArgs;
-        PyTypeObject* type_InkStrokesErasedEventArgs;
-        PyTypeObject* type_InkSynchronizer;
-        PyTypeObject* type_InkUnprocessedInput;
-        PyTypeObject* type_PenAndInkSettings;
-        PyTypeObject* type_IInkPointFactory;
-        PyTypeObject* type_IInkPresenterRulerFactory;
-        PyTypeObject* type_IInkPresenterStencil;
-        PyTypeObject* type_IInkRecognizerContainer;
-        PyTypeObject* type_IInkStrokeContainer;
-    };
-
     // ----- InkDrawingAttributes class --------------------
     static constexpr const char* const type_name_InkDrawingAttributes = "InkDrawingAttributes";
 
@@ -8655,98 +8623,15 @@ namespace py::cpp::Windows::UI::Input::Inking
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Inking");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_InkDrawingAttributes);
-        Py_VISIT(state->type_InkDrawingAttributesPencilProperties);
-        Py_VISIT(state->type_InkInputConfiguration);
-        Py_VISIT(state->type_InkInputProcessingConfiguration);
-        Py_VISIT(state->type_InkManager);
-        Py_VISIT(state->type_InkModelerAttributes);
-        Py_VISIT(state->type_InkPoint);
-        Py_VISIT(state->type_InkPresenter);
-        Py_VISIT(state->type_InkPresenterProtractor);
-        Py_VISIT(state->type_InkPresenterRuler);
-        Py_VISIT(state->type_InkRecognitionResult);
-        Py_VISIT(state->type_InkRecognizer);
-        Py_VISIT(state->type_InkRecognizerContainer);
-        Py_VISIT(state->type_InkStroke);
-        Py_VISIT(state->type_InkStrokeBuilder);
-        Py_VISIT(state->type_InkStrokeContainer);
-        Py_VISIT(state->type_InkStrokeInput);
-        Py_VISIT(state->type_InkStrokeRenderingSegment);
-        Py_VISIT(state->type_InkStrokesCollectedEventArgs);
-        Py_VISIT(state->type_InkStrokesErasedEventArgs);
-        Py_VISIT(state->type_InkSynchronizer);
-        Py_VISIT(state->type_InkUnprocessedInput);
-        Py_VISIT(state->type_PenAndInkSettings);
-        Py_VISIT(state->type_IInkPointFactory);
-        Py_VISIT(state->type_IInkPresenterRulerFactory);
-        Py_VISIT(state->type_IInkPresenterStencil);
-        Py_VISIT(state->type_IInkRecognizerContainer);
-        Py_VISIT(state->type_IInkStrokeContainer);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_InkDrawingAttributes);
-        Py_CLEAR(state->type_InkDrawingAttributesPencilProperties);
-        Py_CLEAR(state->type_InkInputConfiguration);
-        Py_CLEAR(state->type_InkInputProcessingConfiguration);
-        Py_CLEAR(state->type_InkManager);
-        Py_CLEAR(state->type_InkModelerAttributes);
-        Py_CLEAR(state->type_InkPoint);
-        Py_CLEAR(state->type_InkPresenter);
-        Py_CLEAR(state->type_InkPresenterProtractor);
-        Py_CLEAR(state->type_InkPresenterRuler);
-        Py_CLEAR(state->type_InkRecognitionResult);
-        Py_CLEAR(state->type_InkRecognizer);
-        Py_CLEAR(state->type_InkRecognizerContainer);
-        Py_CLEAR(state->type_InkStroke);
-        Py_CLEAR(state->type_InkStrokeBuilder);
-        Py_CLEAR(state->type_InkStrokeContainer);
-        Py_CLEAR(state->type_InkStrokeInput);
-        Py_CLEAR(state->type_InkStrokeRenderingSegment);
-        Py_CLEAR(state->type_InkStrokesCollectedEventArgs);
-        Py_CLEAR(state->type_InkStrokesErasedEventArgs);
-        Py_CLEAR(state->type_InkSynchronizer);
-        Py_CLEAR(state->type_InkUnprocessedInput);
-        Py_CLEAR(state->type_PenAndInkSettings);
-        Py_CLEAR(state->type_IInkPointFactory);
-        Py_CLEAR(state->type_IInkPresenterRulerFactory);
-        Py_CLEAR(state->type_IInkPresenterStencil);
-        Py_CLEAR(state->type_IInkRecognizerContainer);
-        Py_CLEAR(state->type_IInkStrokeContainer);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input_Inking",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input::Inking
@@ -8762,7 +8647,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8775,821 +8660,258 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_InkDrawingAttributes = py::register_python_type(module.get(), type_name_InkDrawingAttributes, &type_spec_InkDrawingAttributes, object_bases.get(), nullptr);
-    if (!state->type_InkDrawingAttributes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkDrawingAttributes, &type_spec_InkDrawingAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkDrawingAttributes, &type_spec_InkDrawingAttributes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkDrawingAttributesPencilProperties = py::register_python_type(module.get(), type_name_InkDrawingAttributesPencilProperties, &type_spec_InkDrawingAttributesPencilProperties, object_bases.get(), nullptr);
-    if (!state->type_InkDrawingAttributesPencilProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkDrawingAttributesPencilProperties, &type_spec_InkDrawingAttributesPencilProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkDrawingAttributesPencilProperties, &type_spec_InkDrawingAttributesPencilProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkInputConfiguration = py::register_python_type(module.get(), type_name_InkInputConfiguration, &type_spec_InkInputConfiguration, object_bases.get(), nullptr);
-    if (!state->type_InkInputConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkInputConfiguration, &type_spec_InkInputConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkInputConfiguration, &type_spec_InkInputConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkInputProcessingConfiguration = py::register_python_type(module.get(), type_name_InkInputProcessingConfiguration, &type_spec_InkInputProcessingConfiguration, object_bases.get(), nullptr);
-    if (!state->type_InkInputProcessingConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkInputProcessingConfiguration, &type_spec_InkInputProcessingConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkInputProcessingConfiguration, &type_spec_InkInputProcessingConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkManager = py::register_python_type(module.get(), type_name_InkManager, &type_spec_InkManager, object_bases.get(), nullptr);
-    if (!state->type_InkManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkManager, &type_spec_InkManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkManager, &type_spec_InkManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkModelerAttributes = py::register_python_type(module.get(), type_name_InkModelerAttributes, &type_spec_InkModelerAttributes, object_bases.get(), nullptr);
-    if (!state->type_InkModelerAttributes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkModelerAttributes, &type_spec_InkModelerAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkModelerAttributes, &type_spec_InkModelerAttributes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkPoint = py::register_python_type(module.get(), type_name_InkPoint, &type_spec_InkPoint, object_bases.get(), nullptr);
-    if (!state->type_InkPoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkPoint, &type_spec_InkPoint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkPoint, &type_spec_InkPoint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkPresenter = py::register_python_type(module.get(), type_name_InkPresenter, &type_spec_InkPresenter, object_bases.get(), nullptr);
-    if (!state->type_InkPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkPresenter, &type_spec_InkPresenter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkPresenter, &type_spec_InkPresenter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkPresenterProtractor = py::register_python_type(module.get(), type_name_InkPresenterProtractor, &type_spec_InkPresenterProtractor, object_bases.get(), nullptr);
-    if (!state->type_InkPresenterProtractor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkPresenterProtractor, &type_spec_InkPresenterProtractor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkPresenterProtractor, &type_spec_InkPresenterProtractor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkPresenterRuler = py::register_python_type(module.get(), type_name_InkPresenterRuler, &type_spec_InkPresenterRuler, object_bases.get(), nullptr);
-    if (!state->type_InkPresenterRuler)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkPresenterRuler, &type_spec_InkPresenterRuler, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkPresenterRuler, &type_spec_InkPresenterRuler, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkRecognitionResult = py::register_python_type(module.get(), type_name_InkRecognitionResult, &type_spec_InkRecognitionResult, object_bases.get(), nullptr);
-    if (!state->type_InkRecognitionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkRecognitionResult, &type_spec_InkRecognitionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkRecognitionResult, &type_spec_InkRecognitionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkRecognizer = py::register_python_type(module.get(), type_name_InkRecognizer, &type_spec_InkRecognizer, object_bases.get(), nullptr);
-    if (!state->type_InkRecognizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkRecognizer, &type_spec_InkRecognizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkRecognizer, &type_spec_InkRecognizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkRecognizerContainer = py::register_python_type(module.get(), type_name_InkRecognizerContainer, &type_spec_InkRecognizerContainer, object_bases.get(), nullptr);
-    if (!state->type_InkRecognizerContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkRecognizerContainer, &type_spec_InkRecognizerContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkRecognizerContainer, &type_spec_InkRecognizerContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStroke = py::register_python_type(module.get(), type_name_InkStroke, &type_spec_InkStroke, object_bases.get(), nullptr);
-    if (!state->type_InkStroke)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStroke, &type_spec_InkStroke, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStroke, &type_spec_InkStroke, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokeBuilder = py::register_python_type(module.get(), type_name_InkStrokeBuilder, &type_spec_InkStrokeBuilder, object_bases.get(), nullptr);
-    if (!state->type_InkStrokeBuilder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokeBuilder, &type_spec_InkStrokeBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokeBuilder, &type_spec_InkStrokeBuilder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokeContainer = py::register_python_type(module.get(), type_name_InkStrokeContainer, &type_spec_InkStrokeContainer, object_bases.get(), nullptr);
-    if (!state->type_InkStrokeContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokeContainer, &type_spec_InkStrokeContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokeContainer, &type_spec_InkStrokeContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokeInput = py::register_python_type(module.get(), type_name_InkStrokeInput, &type_spec_InkStrokeInput, object_bases.get(), nullptr);
-    if (!state->type_InkStrokeInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokeInput, &type_spec_InkStrokeInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokeInput, &type_spec_InkStrokeInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokeRenderingSegment = py::register_python_type(module.get(), type_name_InkStrokeRenderingSegment, &type_spec_InkStrokeRenderingSegment, object_bases.get(), nullptr);
-    if (!state->type_InkStrokeRenderingSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokeRenderingSegment, &type_spec_InkStrokeRenderingSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokeRenderingSegment, &type_spec_InkStrokeRenderingSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokesCollectedEventArgs = py::register_python_type(module.get(), type_name_InkStrokesCollectedEventArgs, &type_spec_InkStrokesCollectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InkStrokesCollectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokesCollectedEventArgs, &type_spec_InkStrokesCollectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokesCollectedEventArgs, &type_spec_InkStrokesCollectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkStrokesErasedEventArgs = py::register_python_type(module.get(), type_name_InkStrokesErasedEventArgs, &type_spec_InkStrokesErasedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InkStrokesErasedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkStrokesErasedEventArgs, &type_spec_InkStrokesErasedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkStrokesErasedEventArgs, &type_spec_InkStrokesErasedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkSynchronizer = py::register_python_type(module.get(), type_name_InkSynchronizer, &type_spec_InkSynchronizer, object_bases.get(), nullptr);
-    if (!state->type_InkSynchronizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkSynchronizer, &type_spec_InkSynchronizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkSynchronizer, &type_spec_InkSynchronizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkUnprocessedInput = py::register_python_type(module.get(), type_name_InkUnprocessedInput, &type_spec_InkUnprocessedInput, object_bases.get(), nullptr);
-    if (!state->type_InkUnprocessedInput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkUnprocessedInput, &type_spec_InkUnprocessedInput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkUnprocessedInput, &type_spec_InkUnprocessedInput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PenAndInkSettings = py::register_python_type(module.get(), type_name_PenAndInkSettings, &type_spec_PenAndInkSettings, object_bases.get(), nullptr);
-    if (!state->type_PenAndInkSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PenAndInkSettings, &type_spec_PenAndInkSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PenAndInkSettings, &type_spec_PenAndInkSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkPointFactory = py::register_python_type(module.get(), type_name_IInkPointFactory, &type_spec_IInkPointFactory, object_bases.get(), nullptr);
-    if (!state->type_IInkPointFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkPointFactory, &type_spec_IInkPointFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkPointFactory, &type_spec_IInkPointFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkPresenterRulerFactory = py::register_python_type(module.get(), type_name_IInkPresenterRulerFactory, &type_spec_IInkPresenterRulerFactory, object_bases.get(), nullptr);
-    if (!state->type_IInkPresenterRulerFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkPresenterRulerFactory, &type_spec_IInkPresenterRulerFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkPresenterRulerFactory, &type_spec_IInkPresenterRulerFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkPresenterStencil = py::register_python_type(module.get(), type_name_IInkPresenterStencil, &type_spec_IInkPresenterStencil, object_bases.get(), nullptr);
-    if (!state->type_IInkPresenterStencil)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkPresenterStencil, &type_spec_IInkPresenterStencil, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkPresenterStencil, &type_spec_IInkPresenterStencil, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkRecognizerContainer = py::register_python_type(module.get(), type_name_IInkRecognizerContainer, &type_spec_IInkRecognizerContainer, object_bases.get(), nullptr);
-    if (!state->type_IInkRecognizerContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkRecognizerContainer, &type_spec_IInkRecognizerContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkRecognizerContainer, &type_spec_IInkRecognizerContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkStrokeContainer = py::register_python_type(module.get(), type_name_IInkStrokeContainer, &type_spec_IInkStrokeContainer, object_bases.get(), nullptr);
-    if (!state->type_IInkStrokeContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkStrokeContainer, &type_spec_IInkStrokeContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkStrokeContainer, &type_spec_IInkStrokeContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkDrawingAttributes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkDrawingAttributes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkDrawingAttributesPencilProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkInputConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkInputConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkInputConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkInputProcessingConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkModelerAttributes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkModelerAttributes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkModelerAttributes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkPoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkPoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkPoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkPresenterProtractor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkPresenterProtractor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkPresenterProtractor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkPresenterRuler>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkPresenterRuler;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkPresenterRuler is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkRecognitionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkRecognitionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkRecognitionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkRecognizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkRecognizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkRecognizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkRecognizerContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkRecognizerContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkRecognizerContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStroke>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStroke;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStroke is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeBuilder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokeBuilder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokeBuilder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokeContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokeContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokeInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokeInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokeRenderingSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokesCollectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkStrokesErasedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkSynchronizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkSynchronizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkSynchronizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkUnprocessedInput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::InkUnprocessedInput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::PenAndInkSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PenAndInkSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::PenAndInkSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkPointFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::IInkPointFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkPresenterRulerFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkPresenterStencil;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::IInkPresenterStencil is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkRecognizerContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::IInkRecognizerContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkStrokeContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::IInkStrokeContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

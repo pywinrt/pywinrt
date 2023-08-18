@@ -45,26 +45,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Ocr::OcrEngine>
+    struct py_type<winrt::Windows::Media::Ocr::OcrEngine>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.ocr";
+        static constexpr const char* type_name = "OcrEngine";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Ocr::OcrLine>
+    struct py_type<winrt::Windows::Media::Ocr::OcrLine>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.ocr";
+        static constexpr const char* type_name = "OcrLine";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Ocr::OcrResult>
+    struct py_type<winrt::Windows::Media::Ocr::OcrResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.ocr";
+        static constexpr const char* type_name = "OcrResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Ocr::OcrWord>
+    struct py_type<winrt::Windows::Media::Ocr::OcrWord>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.ocr";
+        static constexpr const char* type_name = "OcrWord";
     };
 }

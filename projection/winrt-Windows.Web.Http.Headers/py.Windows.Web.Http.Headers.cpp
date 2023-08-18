@@ -6,43 +6,6 @@
 
 namespace py::cpp::Windows::Web::Http::Headers
 {
-    struct module_state
-    {
-        PyTypeObject* type_HttpCacheDirectiveHeaderValueCollection;
-        PyTypeObject* type_HttpChallengeHeaderValue;
-        PyTypeObject* type_HttpChallengeHeaderValueCollection;
-        PyTypeObject* type_HttpConnectionOptionHeaderValue;
-        PyTypeObject* type_HttpConnectionOptionHeaderValueCollection;
-        PyTypeObject* type_HttpContentCodingHeaderValue;
-        PyTypeObject* type_HttpContentCodingHeaderValueCollection;
-        PyTypeObject* type_HttpContentCodingWithQualityHeaderValue;
-        PyTypeObject* type_HttpContentCodingWithQualityHeaderValueCollection;
-        PyTypeObject* type_HttpContentDispositionHeaderValue;
-        PyTypeObject* type_HttpContentHeaderCollection;
-        PyTypeObject* type_HttpContentRangeHeaderValue;
-        PyTypeObject* type_HttpCookiePairHeaderValue;
-        PyTypeObject* type_HttpCookiePairHeaderValueCollection;
-        PyTypeObject* type_HttpCredentialsHeaderValue;
-        PyTypeObject* type_HttpDateOrDeltaHeaderValue;
-        PyTypeObject* type_HttpExpectationHeaderValue;
-        PyTypeObject* type_HttpExpectationHeaderValueCollection;
-        PyTypeObject* type_HttpLanguageHeaderValueCollection;
-        PyTypeObject* type_HttpLanguageRangeWithQualityHeaderValue;
-        PyTypeObject* type_HttpLanguageRangeWithQualityHeaderValueCollection;
-        PyTypeObject* type_HttpMediaTypeHeaderValue;
-        PyTypeObject* type_HttpMediaTypeWithQualityHeaderValue;
-        PyTypeObject* type_HttpMediaTypeWithQualityHeaderValueCollection;
-        PyTypeObject* type_HttpMethodHeaderValueCollection;
-        PyTypeObject* type_HttpNameValueHeaderValue;
-        PyTypeObject* type_HttpProductHeaderValue;
-        PyTypeObject* type_HttpProductInfoHeaderValue;
-        PyTypeObject* type_HttpProductInfoHeaderValueCollection;
-        PyTypeObject* type_HttpRequestHeaderCollection;
-        PyTypeObject* type_HttpResponseHeaderCollection;
-        PyTypeObject* type_HttpTransferCodingHeaderValue;
-        PyTypeObject* type_HttpTransferCodingHeaderValueCollection;
-    };
-
     // ----- HttpCacheDirectiveHeaderValueCollection class --------------------
     static constexpr const char* const type_name_HttpCacheDirectiveHeaderValueCollection = "HttpCacheDirectiveHeaderValueCollection";
 
@@ -17877,108 +17840,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     PyDoc_STRVAR(module_doc, "Windows::Web::Http::Headers");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HttpCacheDirectiveHeaderValueCollection);
-        Py_VISIT(state->type_HttpChallengeHeaderValue);
-        Py_VISIT(state->type_HttpChallengeHeaderValueCollection);
-        Py_VISIT(state->type_HttpConnectionOptionHeaderValue);
-        Py_VISIT(state->type_HttpConnectionOptionHeaderValueCollection);
-        Py_VISIT(state->type_HttpContentCodingHeaderValue);
-        Py_VISIT(state->type_HttpContentCodingHeaderValueCollection);
-        Py_VISIT(state->type_HttpContentCodingWithQualityHeaderValue);
-        Py_VISIT(state->type_HttpContentCodingWithQualityHeaderValueCollection);
-        Py_VISIT(state->type_HttpContentDispositionHeaderValue);
-        Py_VISIT(state->type_HttpContentHeaderCollection);
-        Py_VISIT(state->type_HttpContentRangeHeaderValue);
-        Py_VISIT(state->type_HttpCookiePairHeaderValue);
-        Py_VISIT(state->type_HttpCookiePairHeaderValueCollection);
-        Py_VISIT(state->type_HttpCredentialsHeaderValue);
-        Py_VISIT(state->type_HttpDateOrDeltaHeaderValue);
-        Py_VISIT(state->type_HttpExpectationHeaderValue);
-        Py_VISIT(state->type_HttpExpectationHeaderValueCollection);
-        Py_VISIT(state->type_HttpLanguageHeaderValueCollection);
-        Py_VISIT(state->type_HttpLanguageRangeWithQualityHeaderValue);
-        Py_VISIT(state->type_HttpLanguageRangeWithQualityHeaderValueCollection);
-        Py_VISIT(state->type_HttpMediaTypeHeaderValue);
-        Py_VISIT(state->type_HttpMediaTypeWithQualityHeaderValue);
-        Py_VISIT(state->type_HttpMediaTypeWithQualityHeaderValueCollection);
-        Py_VISIT(state->type_HttpMethodHeaderValueCollection);
-        Py_VISIT(state->type_HttpNameValueHeaderValue);
-        Py_VISIT(state->type_HttpProductHeaderValue);
-        Py_VISIT(state->type_HttpProductInfoHeaderValue);
-        Py_VISIT(state->type_HttpProductInfoHeaderValueCollection);
-        Py_VISIT(state->type_HttpRequestHeaderCollection);
-        Py_VISIT(state->type_HttpResponseHeaderCollection);
-        Py_VISIT(state->type_HttpTransferCodingHeaderValue);
-        Py_VISIT(state->type_HttpTransferCodingHeaderValueCollection);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HttpCacheDirectiveHeaderValueCollection);
-        Py_CLEAR(state->type_HttpChallengeHeaderValue);
-        Py_CLEAR(state->type_HttpChallengeHeaderValueCollection);
-        Py_CLEAR(state->type_HttpConnectionOptionHeaderValue);
-        Py_CLEAR(state->type_HttpConnectionOptionHeaderValueCollection);
-        Py_CLEAR(state->type_HttpContentCodingHeaderValue);
-        Py_CLEAR(state->type_HttpContentCodingHeaderValueCollection);
-        Py_CLEAR(state->type_HttpContentCodingWithQualityHeaderValue);
-        Py_CLEAR(state->type_HttpContentCodingWithQualityHeaderValueCollection);
-        Py_CLEAR(state->type_HttpContentDispositionHeaderValue);
-        Py_CLEAR(state->type_HttpContentHeaderCollection);
-        Py_CLEAR(state->type_HttpContentRangeHeaderValue);
-        Py_CLEAR(state->type_HttpCookiePairHeaderValue);
-        Py_CLEAR(state->type_HttpCookiePairHeaderValueCollection);
-        Py_CLEAR(state->type_HttpCredentialsHeaderValue);
-        Py_CLEAR(state->type_HttpDateOrDeltaHeaderValue);
-        Py_CLEAR(state->type_HttpExpectationHeaderValue);
-        Py_CLEAR(state->type_HttpExpectationHeaderValueCollection);
-        Py_CLEAR(state->type_HttpLanguageHeaderValueCollection);
-        Py_CLEAR(state->type_HttpLanguageRangeWithQualityHeaderValue);
-        Py_CLEAR(state->type_HttpLanguageRangeWithQualityHeaderValueCollection);
-        Py_CLEAR(state->type_HttpMediaTypeHeaderValue);
-        Py_CLEAR(state->type_HttpMediaTypeWithQualityHeaderValue);
-        Py_CLEAR(state->type_HttpMediaTypeWithQualityHeaderValueCollection);
-        Py_CLEAR(state->type_HttpMethodHeaderValueCollection);
-        Py_CLEAR(state->type_HttpNameValueHeaderValue);
-        Py_CLEAR(state->type_HttpProductHeaderValue);
-        Py_CLEAR(state->type_HttpProductInfoHeaderValue);
-        Py_CLEAR(state->type_HttpProductInfoHeaderValueCollection);
-        Py_CLEAR(state->type_HttpRequestHeaderCollection);
-        Py_CLEAR(state->type_HttpResponseHeaderCollection);
-        Py_CLEAR(state->type_HttpTransferCodingHeaderValue);
-        Py_CLEAR(state->type_HttpTransferCodingHeaderValueCollection);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Web_Http_Headers",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Web::Http::Headers
@@ -17994,7 +17864,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Headers(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -18007,966 +17877,303 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Headers(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HttpCacheDirectiveHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpCacheDirectiveHeaderValueCollection, &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpCacheDirectiveHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCacheDirectiveHeaderValueCollection, &type_spec_HttpCacheDirectiveHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCacheDirectiveHeaderValueCollection, &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpChallengeHeaderValue = py::register_python_type(module.get(), type_name_HttpChallengeHeaderValue, &type_spec_HttpChallengeHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpChallengeHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValue, &type_spec_HttpChallengeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValue, &type_spec_HttpChallengeHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpChallengeHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpChallengeHeaderValueCollection, &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpChallengeHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValueCollection, &type_spec_HttpChallengeHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValueCollection, &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpConnectionOptionHeaderValue = py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValue, &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpConnectionOptionHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValue, &type_spec_HttpConnectionOptionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValue, &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpConnectionOptionHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValueCollection, &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpConnectionOptionHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValueCollection, &type_spec_HttpConnectionOptionHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValueCollection, &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentCodingHeaderValue = py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValue, &type_spec_HttpContentCodingHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpContentCodingHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValue, &type_spec_HttpContentCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValue, &type_spec_HttpContentCodingHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentCodingHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValueCollection, &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpContentCodingHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValueCollection, &type_spec_HttpContentCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValueCollection, &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentCodingWithQualityHeaderValue = py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValue, &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpContentCodingWithQualityHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValue, &type_spec_HttpContentCodingWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValue, &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentCodingWithQualityHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValueCollection, &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpContentCodingWithQualityHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValueCollection, &type_spec_HttpContentCodingWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValueCollection, &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentDispositionHeaderValue = py::register_python_type(module.get(), type_name_HttpContentDispositionHeaderValue, &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpContentDispositionHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentDispositionHeaderValue, &type_spec_HttpContentDispositionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentDispositionHeaderValue, &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentHeaderCollection = py::register_python_type(module.get(), type_name_HttpContentHeaderCollection, &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpContentHeaderCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentHeaderCollection, &type_spec_HttpContentHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentHeaderCollection, &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpContentRangeHeaderValue = py::register_python_type(module.get(), type_name_HttpContentRangeHeaderValue, &type_spec_HttpContentRangeHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpContentRangeHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpContentRangeHeaderValue, &type_spec_HttpContentRangeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpContentRangeHeaderValue, &type_spec_HttpContentRangeHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCookiePairHeaderValue = py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValue, &type_spec_HttpCookiePairHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpCookiePairHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValue, &type_spec_HttpCookiePairHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValue, &type_spec_HttpCookiePairHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCookiePairHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValueCollection, &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpCookiePairHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValueCollection, &type_spec_HttpCookiePairHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValueCollection, &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpCredentialsHeaderValue = py::register_python_type(module.get(), type_name_HttpCredentialsHeaderValue, &type_spec_HttpCredentialsHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpCredentialsHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpCredentialsHeaderValue, &type_spec_HttpCredentialsHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpCredentialsHeaderValue, &type_spec_HttpCredentialsHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDateOrDeltaHeaderValue = py::register_python_type(module.get(), type_name_HttpDateOrDeltaHeaderValue, &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpDateOrDeltaHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDateOrDeltaHeaderValue, &type_spec_HttpDateOrDeltaHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDateOrDeltaHeaderValue, &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpExpectationHeaderValue = py::register_python_type(module.get(), type_name_HttpExpectationHeaderValue, &type_spec_HttpExpectationHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpExpectationHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValue, &type_spec_HttpExpectationHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValue, &type_spec_HttpExpectationHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpExpectationHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpExpectationHeaderValueCollection, &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpExpectationHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValueCollection, &type_spec_HttpExpectationHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValueCollection, &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpLanguageHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpLanguageHeaderValueCollection, &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpLanguageHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpLanguageHeaderValueCollection, &type_spec_HttpLanguageHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpLanguageHeaderValueCollection, &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpLanguageRangeWithQualityHeaderValue = py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValue, &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpLanguageRangeWithQualityHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValue, &type_spec_HttpLanguageRangeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValue, &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpLanguageRangeWithQualityHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValueCollection, &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpLanguageRangeWithQualityHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValueCollection, &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValueCollection, &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMediaTypeHeaderValue = py::register_python_type(module.get(), type_name_HttpMediaTypeHeaderValue, &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpMediaTypeHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeHeaderValue, &type_spec_HttpMediaTypeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeHeaderValue, &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMediaTypeWithQualityHeaderValue = py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValue, &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpMediaTypeWithQualityHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValue, &type_spec_HttpMediaTypeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValue, &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMediaTypeWithQualityHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValueCollection, &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpMediaTypeWithQualityHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValueCollection, &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValueCollection, &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpMethodHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpMethodHeaderValueCollection, &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpMethodHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpMethodHeaderValueCollection, &type_spec_HttpMethodHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpMethodHeaderValueCollection, &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpNameValueHeaderValue = py::register_python_type(module.get(), type_name_HttpNameValueHeaderValue, &type_spec_HttpNameValueHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpNameValueHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpNameValueHeaderValue, &type_spec_HttpNameValueHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpNameValueHeaderValue, &type_spec_HttpNameValueHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpProductHeaderValue = py::register_python_type(module.get(), type_name_HttpProductHeaderValue, &type_spec_HttpProductHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpProductHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpProductHeaderValue, &type_spec_HttpProductHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpProductHeaderValue, &type_spec_HttpProductHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpProductInfoHeaderValue = py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValue, &type_spec_HttpProductInfoHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpProductInfoHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValue, &type_spec_HttpProductInfoHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValue, &type_spec_HttpProductInfoHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpProductInfoHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValueCollection, &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpProductInfoHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValueCollection, &type_spec_HttpProductInfoHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValueCollection, &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpRequestHeaderCollection = py::register_python_type(module.get(), type_name_HttpRequestHeaderCollection, &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpRequestHeaderCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpRequestHeaderCollection, &type_spec_HttpRequestHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpRequestHeaderCollection, &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpResponseHeaderCollection = py::register_python_type(module.get(), type_name_HttpResponseHeaderCollection, &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpResponseHeaderCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpResponseHeaderCollection, &type_spec_HttpResponseHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpResponseHeaderCollection, &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpTransferCodingHeaderValue = py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValue, &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), nullptr);
-    if (!state->type_HttpTransferCodingHeaderValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValue, &type_spec_HttpTransferCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValue, &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpTransferCodingHeaderValueCollection = py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValueCollection, &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr);
-    if (!state->type_HttpTransferCodingHeaderValueCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValueCollection, &type_spec_HttpTransferCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValueCollection, &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCacheDirectiveHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpChallengeHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpChallengeHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpConnectionOptionHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpConnectionOptionHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentCodingHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentCodingHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentCodingWithQualityHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentCodingWithQualityHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentDispositionHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentHeaderCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpContentRangeHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookiePairHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCookiePairHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpCredentialsHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDateOrDeltaHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpExpectationHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpExpectationHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpLanguageHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpLanguageRangeWithQualityHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpLanguageRangeWithQualityHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMediaTypeHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMediaTypeWithQualityHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMediaTypeWithQualityHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpMethodHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpNameValueHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpProductHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpProductHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpProductInfoHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpProductInfoHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpRequestHeaderCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpResponseHeaderCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpTransferCodingHeaderValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Headers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Headers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpTransferCodingHeaderValueCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

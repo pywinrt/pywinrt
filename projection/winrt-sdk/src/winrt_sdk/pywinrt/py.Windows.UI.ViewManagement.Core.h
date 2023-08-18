@@ -77,68 +77,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreFrameworkInputView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreFrameworkInputViewAnimationStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreFrameworkInputViewOcclusionsChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewAnimationStartingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewHidingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewOcclusion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewOcclusionsChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewShowingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "CoreInputViewTransferringXYFocusEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>
+    struct py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
+        static constexpr const char* type_name = "UISettingsController";
     };
 }

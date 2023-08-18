@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::Security::Authentication::Web::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_FindAllAccountsResult;
-        PyTypeObject* type_WebAccountEventArgs;
-        PyTypeObject* type_WebAccountMonitor;
-        PyTypeObject* type_WebAuthenticationCoreManager;
-        PyTypeObject* type_WebProviderError;
-        PyTypeObject* type_WebTokenRequest;
-        PyTypeObject* type_WebTokenRequestResult;
-        PyTypeObject* type_WebTokenResponse;
-    };
-
     // ----- FindAllAccountsResult class --------------------
     static constexpr const char* const type_name_FindAllAccountsResult = "FindAllAccountsResult";
 
@@ -1786,58 +1774,15 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_FindAllAccountsResult);
-        Py_VISIT(state->type_WebAccountEventArgs);
-        Py_VISIT(state->type_WebAccountMonitor);
-        Py_VISIT(state->type_WebAuthenticationCoreManager);
-        Py_VISIT(state->type_WebProviderError);
-        Py_VISIT(state->type_WebTokenRequest);
-        Py_VISIT(state->type_WebTokenRequestResult);
-        Py_VISIT(state->type_WebTokenResponse);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_FindAllAccountsResult);
-        Py_CLEAR(state->type_WebAccountEventArgs);
-        Py_CLEAR(state->type_WebAccountMonitor);
-        Py_CLEAR(state->type_WebAuthenticationCoreManager);
-        Py_CLEAR(state->type_WebProviderError);
-        Py_CLEAR(state->type_WebTokenRequest);
-        Py_CLEAR(state->type_WebTokenRequestResult);
-        Py_CLEAR(state->type_WebTokenResponse);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Authentication_Web_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Authentication::Web::Core
@@ -1853,7 +1798,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Core(void) noex
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1866,241 +1811,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Core(void) noex
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_FindAllAccountsResult = py::register_python_type(module.get(), type_name_FindAllAccountsResult, &type_spec_FindAllAccountsResult, object_bases.get(), nullptr);
-    if (!state->type_FindAllAccountsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FindAllAccountsResult, &type_spec_FindAllAccountsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FindAllAccountsResult, &type_spec_FindAllAccountsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountEventArgs = py::register_python_type(module.get(), type_name_WebAccountEventArgs, &type_spec_WebAccountEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebAccountEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountEventArgs, &type_spec_WebAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountEventArgs, &type_spec_WebAccountEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountMonitor = py::register_python_type(module.get(), type_name_WebAccountMonitor, &type_spec_WebAccountMonitor, object_bases.get(), nullptr);
-    if (!state->type_WebAccountMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountMonitor, &type_spec_WebAccountMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountMonitor, &type_spec_WebAccountMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAuthenticationCoreManager = py::register_python_type(module.get(), type_name_WebAuthenticationCoreManager, &type_spec_WebAuthenticationCoreManager, object_bases.get(), nullptr);
-    if (!state->type_WebAuthenticationCoreManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManager, &type_spec_WebAuthenticationCoreManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManager, &type_spec_WebAuthenticationCoreManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebProviderError = py::register_python_type(module.get(), type_name_WebProviderError, &type_spec_WebProviderError, object_bases.get(), nullptr);
-    if (!state->type_WebProviderError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebProviderError, &type_spec_WebProviderError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebProviderError, &type_spec_WebProviderError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebTokenRequest = py::register_python_type(module.get(), type_name_WebTokenRequest, &type_spec_WebTokenRequest, object_bases.get(), nullptr);
-    if (!state->type_WebTokenRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebTokenRequest, &type_spec_WebTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebTokenRequest, &type_spec_WebTokenRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebTokenRequestResult = py::register_python_type(module.get(), type_name_WebTokenRequestResult, &type_spec_WebTokenRequestResult, object_bases.get(), nullptr);
-    if (!state->type_WebTokenRequestResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebTokenRequestResult, &type_spec_WebTokenRequestResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebTokenRequestResult, &type_spec_WebTokenRequestResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebTokenResponse = py::register_python_type(module.get(), type_name_WebTokenResponse, &type_spec_WebTokenResponse, object_bases.get(), nullptr);
-    if (!state->type_WebTokenResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebTokenResponse, &type_spec_WebTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebTokenResponse, &type_spec_WebTokenResponse, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FindAllAccountsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAuthenticationCoreManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebProviderError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebProviderError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebTokenRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebTokenRequestResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebTokenResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

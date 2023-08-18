@@ -6,38 +6,6 @@
 
 namespace py::cpp::Windows::AI::MachineLearning
 {
-    struct module_state
-    {
-        PyTypeObject* type_ImageFeatureDescriptor;
-        PyTypeObject* type_ImageFeatureValue;
-        PyTypeObject* type_LearningModel;
-        PyTypeObject* type_LearningModelBinding;
-        PyTypeObject* type_LearningModelDevice;
-        PyTypeObject* type_LearningModelEvaluationResult;
-        PyTypeObject* type_LearningModelSession;
-        PyTypeObject* type_LearningModelSessionOptions;
-        PyTypeObject* type_MapFeatureDescriptor;
-        PyTypeObject* type_SequenceFeatureDescriptor;
-        PyTypeObject* type_TensorBoolean;
-        PyTypeObject* type_TensorDouble;
-        PyTypeObject* type_TensorFeatureDescriptor;
-        PyTypeObject* type_TensorFloat;
-        PyTypeObject* type_TensorFloat16Bit;
-        PyTypeObject* type_TensorInt16Bit;
-        PyTypeObject* type_TensorInt32Bit;
-        PyTypeObject* type_TensorInt64Bit;
-        PyTypeObject* type_TensorInt8Bit;
-        PyTypeObject* type_TensorString;
-        PyTypeObject* type_TensorUInt16Bit;
-        PyTypeObject* type_TensorUInt32Bit;
-        PyTypeObject* type_TensorUInt64Bit;
-        PyTypeObject* type_TensorUInt8Bit;
-        PyTypeObject* type_ILearningModelFeatureDescriptor;
-        PyTypeObject* type_ILearningModelFeatureValue;
-        PyTypeObject* type_ILearningModelOperatorProvider;
-        PyTypeObject* type_ITensor;
-    };
-
     // ----- ImageFeatureDescriptor class --------------------
     static constexpr const char* const type_name_ImageFeatureDescriptor = "ImageFeatureDescriptor";
 
@@ -8870,98 +8838,15 @@ namespace py::cpp::Windows::AI::MachineLearning
     PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ImageFeatureDescriptor);
-        Py_VISIT(state->type_ImageFeatureValue);
-        Py_VISIT(state->type_LearningModel);
-        Py_VISIT(state->type_LearningModelBinding);
-        Py_VISIT(state->type_LearningModelDevice);
-        Py_VISIT(state->type_LearningModelEvaluationResult);
-        Py_VISIT(state->type_LearningModelSession);
-        Py_VISIT(state->type_LearningModelSessionOptions);
-        Py_VISIT(state->type_MapFeatureDescriptor);
-        Py_VISIT(state->type_SequenceFeatureDescriptor);
-        Py_VISIT(state->type_TensorBoolean);
-        Py_VISIT(state->type_TensorDouble);
-        Py_VISIT(state->type_TensorFeatureDescriptor);
-        Py_VISIT(state->type_TensorFloat);
-        Py_VISIT(state->type_TensorFloat16Bit);
-        Py_VISIT(state->type_TensorInt16Bit);
-        Py_VISIT(state->type_TensorInt32Bit);
-        Py_VISIT(state->type_TensorInt64Bit);
-        Py_VISIT(state->type_TensorInt8Bit);
-        Py_VISIT(state->type_TensorString);
-        Py_VISIT(state->type_TensorUInt16Bit);
-        Py_VISIT(state->type_TensorUInt32Bit);
-        Py_VISIT(state->type_TensorUInt64Bit);
-        Py_VISIT(state->type_TensorUInt8Bit);
-        Py_VISIT(state->type_ILearningModelFeatureDescriptor);
-        Py_VISIT(state->type_ILearningModelFeatureValue);
-        Py_VISIT(state->type_ILearningModelOperatorProvider);
-        Py_VISIT(state->type_ITensor);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ImageFeatureDescriptor);
-        Py_CLEAR(state->type_ImageFeatureValue);
-        Py_CLEAR(state->type_LearningModel);
-        Py_CLEAR(state->type_LearningModelBinding);
-        Py_CLEAR(state->type_LearningModelDevice);
-        Py_CLEAR(state->type_LearningModelEvaluationResult);
-        Py_CLEAR(state->type_LearningModelSession);
-        Py_CLEAR(state->type_LearningModelSessionOptions);
-        Py_CLEAR(state->type_MapFeatureDescriptor);
-        Py_CLEAR(state->type_SequenceFeatureDescriptor);
-        Py_CLEAR(state->type_TensorBoolean);
-        Py_CLEAR(state->type_TensorDouble);
-        Py_CLEAR(state->type_TensorFeatureDescriptor);
-        Py_CLEAR(state->type_TensorFloat);
-        Py_CLEAR(state->type_TensorFloat16Bit);
-        Py_CLEAR(state->type_TensorInt16Bit);
-        Py_CLEAR(state->type_TensorInt32Bit);
-        Py_CLEAR(state->type_TensorInt64Bit);
-        Py_CLEAR(state->type_TensorInt8Bit);
-        Py_CLEAR(state->type_TensorString);
-        Py_CLEAR(state->type_TensorUInt16Bit);
-        Py_CLEAR(state->type_TensorUInt32Bit);
-        Py_CLEAR(state->type_TensorUInt64Bit);
-        Py_CLEAR(state->type_TensorUInt8Bit);
-        Py_CLEAR(state->type_ILearningModelFeatureDescriptor);
-        Py_CLEAR(state->type_ILearningModelFeatureValue);
-        Py_CLEAR(state->type_ILearningModelOperatorProvider);
-        Py_CLEAR(state->type_ITensor);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_AI_MachineLearning",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::AI::MachineLearning
@@ -8977,7 +8862,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8990,821 +8875,258 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ImageFeatureDescriptor = py::register_python_type(module.get(), type_name_ImageFeatureDescriptor, &type_spec_ImageFeatureDescriptor, object_bases.get(), nullptr);
-    if (!state->type_ImageFeatureDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageFeatureDescriptor, &type_spec_ImageFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageFeatureDescriptor, &type_spec_ImageFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageFeatureValue = py::register_python_type(module.get(), type_name_ImageFeatureValue, &type_spec_ImageFeatureValue, object_bases.get(), nullptr);
-    if (!state->type_ImageFeatureValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageFeatureValue, &type_spec_ImageFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageFeatureValue, &type_spec_ImageFeatureValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModel = py::register_python_type(module.get(), type_name_LearningModel, &type_spec_LearningModel, object_bases.get(), nullptr);
-    if (!state->type_LearningModel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModel, &type_spec_LearningModel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModel, &type_spec_LearningModel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelBinding = py::register_python_type(module.get(), type_name_LearningModelBinding, &type_spec_LearningModelBinding, object_bases.get(), nullptr);
-    if (!state->type_LearningModelBinding)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelBinding, &type_spec_LearningModelBinding, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelBinding, &type_spec_LearningModelBinding, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelDevice = py::register_python_type(module.get(), type_name_LearningModelDevice, &type_spec_LearningModelDevice, object_bases.get(), nullptr);
-    if (!state->type_LearningModelDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelDevice, &type_spec_LearningModelDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelDevice, &type_spec_LearningModelDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelEvaluationResult = py::register_python_type(module.get(), type_name_LearningModelEvaluationResult, &type_spec_LearningModelEvaluationResult, object_bases.get(), nullptr);
-    if (!state->type_LearningModelEvaluationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResult, &type_spec_LearningModelEvaluationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResult, &type_spec_LearningModelEvaluationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelSession = py::register_python_type(module.get(), type_name_LearningModelSession, &type_spec_LearningModelSession, object_bases.get(), nullptr);
-    if (!state->type_LearningModelSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelSession, &type_spec_LearningModelSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelSession, &type_spec_LearningModelSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelSessionOptions = py::register_python_type(module.get(), type_name_LearningModelSessionOptions, &type_spec_LearningModelSessionOptions, object_bases.get(), nullptr);
-    if (!state->type_LearningModelSessionOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelSessionOptions, &type_spec_LearningModelSessionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelSessionOptions, &type_spec_LearningModelSessionOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapFeatureDescriptor = py::register_python_type(module.get(), type_name_MapFeatureDescriptor, &type_spec_MapFeatureDescriptor, object_bases.get(), nullptr);
-    if (!state->type_MapFeatureDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapFeatureDescriptor, &type_spec_MapFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapFeatureDescriptor, &type_spec_MapFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SequenceFeatureDescriptor = py::register_python_type(module.get(), type_name_SequenceFeatureDescriptor, &type_spec_SequenceFeatureDescriptor, object_bases.get(), nullptr);
-    if (!state->type_SequenceFeatureDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SequenceFeatureDescriptor, &type_spec_SequenceFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SequenceFeatureDescriptor, &type_spec_SequenceFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorBoolean = py::register_python_type(module.get(), type_name_TensorBoolean, &type_spec_TensorBoolean, object_bases.get(), nullptr);
-    if (!state->type_TensorBoolean)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorBoolean, &type_spec_TensorBoolean, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorBoolean, &type_spec_TensorBoolean, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorDouble = py::register_python_type(module.get(), type_name_TensorDouble, &type_spec_TensorDouble, object_bases.get(), nullptr);
-    if (!state->type_TensorDouble)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorDouble, &type_spec_TensorDouble, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorDouble, &type_spec_TensorDouble, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorFeatureDescriptor = py::register_python_type(module.get(), type_name_TensorFeatureDescriptor, &type_spec_TensorFeatureDescriptor, object_bases.get(), nullptr);
-    if (!state->type_TensorFeatureDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorFeatureDescriptor, &type_spec_TensorFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorFeatureDescriptor, &type_spec_TensorFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorFloat = py::register_python_type(module.get(), type_name_TensorFloat, &type_spec_TensorFloat, object_bases.get(), nullptr);
-    if (!state->type_TensorFloat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorFloat, &type_spec_TensorFloat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorFloat, &type_spec_TensorFloat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorFloat16Bit = py::register_python_type(module.get(), type_name_TensorFloat16Bit, &type_spec_TensorFloat16Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorFloat16Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorFloat16Bit, &type_spec_TensorFloat16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorFloat16Bit, &type_spec_TensorFloat16Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorInt16Bit = py::register_python_type(module.get(), type_name_TensorInt16Bit, &type_spec_TensorInt16Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorInt16Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorInt16Bit, &type_spec_TensorInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorInt16Bit, &type_spec_TensorInt16Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorInt32Bit = py::register_python_type(module.get(), type_name_TensorInt32Bit, &type_spec_TensorInt32Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorInt32Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorInt32Bit, &type_spec_TensorInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorInt32Bit, &type_spec_TensorInt32Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorInt64Bit = py::register_python_type(module.get(), type_name_TensorInt64Bit, &type_spec_TensorInt64Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorInt64Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorInt64Bit, &type_spec_TensorInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorInt64Bit, &type_spec_TensorInt64Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorInt8Bit = py::register_python_type(module.get(), type_name_TensorInt8Bit, &type_spec_TensorInt8Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorInt8Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorInt8Bit, &type_spec_TensorInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorInt8Bit, &type_spec_TensorInt8Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorString = py::register_python_type(module.get(), type_name_TensorString, &type_spec_TensorString, object_bases.get(), nullptr);
-    if (!state->type_TensorString)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorString, &type_spec_TensorString, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorString, &type_spec_TensorString, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorUInt16Bit = py::register_python_type(module.get(), type_name_TensorUInt16Bit, &type_spec_TensorUInt16Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorUInt16Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorUInt16Bit, &type_spec_TensorUInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorUInt16Bit, &type_spec_TensorUInt16Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorUInt32Bit = py::register_python_type(module.get(), type_name_TensorUInt32Bit, &type_spec_TensorUInt32Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorUInt32Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorUInt32Bit, &type_spec_TensorUInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorUInt32Bit, &type_spec_TensorUInt32Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorUInt64Bit = py::register_python_type(module.get(), type_name_TensorUInt64Bit, &type_spec_TensorUInt64Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorUInt64Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorUInt64Bit, &type_spec_TensorUInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorUInt64Bit, &type_spec_TensorUInt64Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorUInt8Bit = py::register_python_type(module.get(), type_name_TensorUInt8Bit, &type_spec_TensorUInt8Bit, object_bases.get(), nullptr);
-    if (!state->type_TensorUInt8Bit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorUInt8Bit, &type_spec_TensorUInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorUInt8Bit, &type_spec_TensorUInt8Bit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILearningModelFeatureDescriptor = py::register_python_type(module.get(), type_name_ILearningModelFeatureDescriptor, &type_spec_ILearningModelFeatureDescriptor, object_bases.get(), nullptr);
-    if (!state->type_ILearningModelFeatureDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureDescriptor, &type_spec_ILearningModelFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureDescriptor, &type_spec_ILearningModelFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILearningModelFeatureValue = py::register_python_type(module.get(), type_name_ILearningModelFeatureValue, &type_spec_ILearningModelFeatureValue, object_bases.get(), nullptr);
-    if (!state->type_ILearningModelFeatureValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureValue, &type_spec_ILearningModelFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureValue, &type_spec_ILearningModelFeatureValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILearningModelOperatorProvider = py::register_python_type(module.get(), type_name_ILearningModelOperatorProvider, &type_spec_ILearningModelOperatorProvider, object_bases.get(), nullptr);
-    if (!state->type_ILearningModelOperatorProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILearningModelOperatorProvider, &type_spec_ILearningModelOperatorProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILearningModelOperatorProvider, &type_spec_ILearningModelOperatorProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITensor = py::register_python_type(module.get(), type_name_ITensor, &type_spec_ITensor, object_bases.get(), nullptr);
-    if (!state->type_ITensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITensor, &type_spec_ITensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITensor, &type_spec_ITensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageFeatureDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageFeatureValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ImageFeatureValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModelBinding>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelBinding;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelBinding is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModelDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelEvaluationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModelSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelSessionOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::LearningModelSessionOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapFeatureDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::MapFeatureDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SequenceFeatureDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorBoolean>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorBoolean;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorBoolean is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorDouble>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorDouble;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorDouble is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorFeatureDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorFloat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorFloat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorFloat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorFloat16Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorFloat16Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorInt16Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorInt16Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorInt32Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorInt32Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorInt64Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorInt64Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorInt8Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorInt8Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorString>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorString;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorString is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorUInt16Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorUInt16Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorUInt32Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorUInt32Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorUInt64Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorUInt64Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorUInt8Bit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::TensorUInt8Bit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILearningModelFeatureDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILearningModelFeatureValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILearningModelOperatorProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::ITensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::ITensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

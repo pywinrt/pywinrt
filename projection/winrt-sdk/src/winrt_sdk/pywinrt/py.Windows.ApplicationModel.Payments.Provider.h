@@ -40,26 +40,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
+        static constexpr const char* type_name = "PaymentAppCanMakePaymentTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
+        static constexpr const char* type_name = "PaymentAppManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
+        static constexpr const char* type_name = "PaymentTransaction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
+        static constexpr const char* type_name = "PaymentTransactionAcceptResult";
     };
 }

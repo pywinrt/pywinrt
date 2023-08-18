@@ -48,14 +48,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>
+    struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
+        static constexpr const char* type_name = "AppCapability";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>
+    struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
+        static constexpr const char* type_name = "AppCapabilityAccessChangedEventArgs";
     };
 }

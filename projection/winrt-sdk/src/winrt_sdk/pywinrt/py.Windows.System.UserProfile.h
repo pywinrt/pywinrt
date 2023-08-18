@@ -91,62 +91,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::AdvertisingManager>
+    struct py_type<winrt::Windows::System::UserProfile::AdvertisingManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "AdvertisingManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>
+    struct py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "AdvertisingManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>
+    struct py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "AssignedAccessSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>
+    struct py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "DiagnosticsSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::FirstSignInSettings>
+    struct py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "FirstSignInSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>
+    struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "GlobalizationPreferences";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>
+    struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "GlobalizationPreferencesForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::LockScreen>
+    struct py_type<winrt::Windows::System::UserProfile::LockScreen>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "LockScreen";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::UserInformation>
+    struct py_type<winrt::Windows::System::UserProfile::UserInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "UserInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>
+    struct py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.userprofile";
+        static constexpr const char* type_name = "UserProfilePersonalizationSettings";
     };
 }

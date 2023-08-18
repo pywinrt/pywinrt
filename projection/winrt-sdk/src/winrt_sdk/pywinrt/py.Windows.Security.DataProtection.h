@@ -75,26 +75,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>
+    struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataAvailabilityStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>
+    struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataBufferUnprotectResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>
+    struct py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataProtectionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>
+    struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
+        static constexpr const char* type_name = "UserDataStorageItemProtectionInfo";
     };
 }

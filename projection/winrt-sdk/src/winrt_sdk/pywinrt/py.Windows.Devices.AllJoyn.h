@@ -120,146 +120,170 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynAboutData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynAboutDataView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynAcceptSessionJoinerEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynAuthenticationCompleteEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynBusAttachment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynBusAttachmentStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObject>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynBusObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynBusObjectStoppedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynCredentials";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynCredentialsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynCredentialsVerificationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynMessageInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynProducerStoppedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynServiceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynServiceInfoRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSessionJoinedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSessionLostEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSessionMemberAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynSessionMemberRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
+    struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "AllJoynWatcherStoppedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
+    struct py_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "IAllJoynAcceptSessionJoiner";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>
+    struct py_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
+        static constexpr const char* type_name = "IAllJoynProducer";
     };
 }

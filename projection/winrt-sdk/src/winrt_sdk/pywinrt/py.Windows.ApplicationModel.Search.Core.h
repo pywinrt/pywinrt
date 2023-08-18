@@ -55,26 +55,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
+        static constexpr const char* type_name = "RequestingFocusOnKeyboardInputEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>
+    struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
+        static constexpr const char* type_name = "SearchSuggestion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>
+    struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
+        static constexpr const char* type_name = "SearchSuggestionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
+        static constexpr const char* type_name = "SearchSuggestionsRequestedEventArgs";
     };
 }

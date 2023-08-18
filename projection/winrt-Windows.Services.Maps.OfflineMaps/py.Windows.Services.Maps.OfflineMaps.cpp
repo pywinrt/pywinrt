@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::Services::Maps::OfflineMaps
 {
-    struct module_state
-    {
-        PyTypeObject* type_OfflineMapPackage;
-        PyTypeObject* type_OfflineMapPackageQueryResult;
-        PyTypeObject* type_OfflineMapPackageStartDownloadResult;
-    };
-
     // ----- OfflineMapPackage class --------------------
     static constexpr const char* const type_name_OfflineMapPackage = "OfflineMapPackage";
 
@@ -553,48 +546,15 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     PyDoc_STRVAR(module_doc, "Windows::Services::Maps::OfflineMaps");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_OfflineMapPackage);
-        Py_VISIT(state->type_OfflineMapPackageQueryResult);
-        Py_VISIT(state->type_OfflineMapPackageStartDownloadResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_OfflineMapPackage);
-        Py_CLEAR(state->type_OfflineMapPackageQueryResult);
-        Py_CLEAR(state->type_OfflineMapPackageStartDownloadResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_Maps_OfflineMaps",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::Maps::OfflineMaps
@@ -610,7 +570,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_OfflineMaps(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -623,96 +583,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_OfflineMaps(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_OfflineMapPackage = py::register_python_type(module.get(), type_name_OfflineMapPackage, &type_spec_OfflineMapPackage, object_bases.get(), nullptr);
-    if (!state->type_OfflineMapPackage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackage, &type_spec_OfflineMapPackage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackage, &type_spec_OfflineMapPackage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OfflineMapPackageQueryResult = py::register_python_type(module.get(), type_name_OfflineMapPackageQueryResult, &type_spec_OfflineMapPackageQueryResult, object_bases.get(), nullptr);
-    if (!state->type_OfflineMapPackageQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackageQueryResult, &type_spec_OfflineMapPackageQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackageQueryResult, &type_spec_OfflineMapPackageQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OfflineMapPackageStartDownloadResult = py::register_python_type(module.get(), type_name_OfflineMapPackageStartDownloadResult, &type_spec_OfflineMapPackageStartDownloadResult, object_bases.get(), nullptr);
-    if (!state->type_OfflineMapPackageStartDownloadResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackageStartDownloadResult, &type_spec_OfflineMapPackageStartDownloadResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OfflineMapPackageStartDownloadResult, &type_spec_OfflineMapPackageStartDownloadResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::OfflineMaps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::OfflineMaps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OfflineMapPackage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::OfflineMaps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::OfflineMaps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OfflineMapPackageQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::OfflineMaps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::OfflineMaps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OfflineMapPackageStartDownloadResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

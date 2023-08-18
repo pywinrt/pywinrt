@@ -38,14 +38,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Portable::ServiceDevice>
+    struct py_type<winrt::Windows::Devices::Portable::ServiceDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.portable";
+        static constexpr const char* type_name = "ServiceDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Portable::StorageDevice>
+    struct py_type<winrt::Windows::Devices::Portable::StorageDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.portable";
+        static constexpr const char* type_name = "StorageDevice";
     };
 }

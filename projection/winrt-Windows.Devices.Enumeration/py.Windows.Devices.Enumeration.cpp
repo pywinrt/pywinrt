@@ -6,32 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Enumeration
 {
-    struct module_state
-    {
-        PyTypeObject* type_DeviceAccessChangedEventArgs;
-        PyTypeObject* type_DeviceAccessInformation;
-        PyTypeObject* type_DeviceConnectionChangeTriggerDetails;
-        PyTypeObject* type_DeviceDisconnectButtonClickedEventArgs;
-        PyTypeObject* type_DeviceInformation;
-        PyTypeObject* type_DeviceInformationCollection;
-        PyTypeObject* type_DeviceInformationCustomPairing;
-        PyTypeObject* type_DeviceInformationPairing;
-        PyTypeObject* type_DeviceInformationUpdate;
-        PyTypeObject* type_DevicePairingRequestedEventArgs;
-        PyTypeObject* type_DevicePairingResult;
-        PyTypeObject* type_DevicePicker;
-        PyTypeObject* type_DevicePickerAppearance;
-        PyTypeObject* type_DevicePickerFilter;
-        PyTypeObject* type_DeviceSelectedEventArgs;
-        PyTypeObject* type_DeviceThumbnail;
-        PyTypeObject* type_DeviceUnpairingResult;
-        PyTypeObject* type_DeviceWatcher;
-        PyTypeObject* type_DeviceWatcherEvent;
-        PyTypeObject* type_DeviceWatcherTriggerDetails;
-        PyTypeObject* type_EnclosureLocation;
-        PyTypeObject* type_IDevicePairingSettings;
-    };
-
     // ----- DeviceAccessChangedEventArgs class --------------------
     static constexpr const char* const type_name_DeviceAccessChangedEventArgs = "DeviceAccessChangedEventArgs";
 
@@ -5098,86 +5072,15 @@ namespace py::cpp::Windows::Devices::Enumeration
     PyDoc_STRVAR(module_doc, "Windows::Devices::Enumeration");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DeviceAccessChangedEventArgs);
-        Py_VISIT(state->type_DeviceAccessInformation);
-        Py_VISIT(state->type_DeviceConnectionChangeTriggerDetails);
-        Py_VISIT(state->type_DeviceDisconnectButtonClickedEventArgs);
-        Py_VISIT(state->type_DeviceInformation);
-        Py_VISIT(state->type_DeviceInformationCollection);
-        Py_VISIT(state->type_DeviceInformationCustomPairing);
-        Py_VISIT(state->type_DeviceInformationPairing);
-        Py_VISIT(state->type_DeviceInformationUpdate);
-        Py_VISIT(state->type_DevicePairingRequestedEventArgs);
-        Py_VISIT(state->type_DevicePairingResult);
-        Py_VISIT(state->type_DevicePicker);
-        Py_VISIT(state->type_DevicePickerAppearance);
-        Py_VISIT(state->type_DevicePickerFilter);
-        Py_VISIT(state->type_DeviceSelectedEventArgs);
-        Py_VISIT(state->type_DeviceThumbnail);
-        Py_VISIT(state->type_DeviceUnpairingResult);
-        Py_VISIT(state->type_DeviceWatcher);
-        Py_VISIT(state->type_DeviceWatcherEvent);
-        Py_VISIT(state->type_DeviceWatcherTriggerDetails);
-        Py_VISIT(state->type_EnclosureLocation);
-        Py_VISIT(state->type_IDevicePairingSettings);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DeviceAccessChangedEventArgs);
-        Py_CLEAR(state->type_DeviceAccessInformation);
-        Py_CLEAR(state->type_DeviceConnectionChangeTriggerDetails);
-        Py_CLEAR(state->type_DeviceDisconnectButtonClickedEventArgs);
-        Py_CLEAR(state->type_DeviceInformation);
-        Py_CLEAR(state->type_DeviceInformationCollection);
-        Py_CLEAR(state->type_DeviceInformationCustomPairing);
-        Py_CLEAR(state->type_DeviceInformationPairing);
-        Py_CLEAR(state->type_DeviceInformationUpdate);
-        Py_CLEAR(state->type_DevicePairingRequestedEventArgs);
-        Py_CLEAR(state->type_DevicePairingResult);
-        Py_CLEAR(state->type_DevicePicker);
-        Py_CLEAR(state->type_DevicePickerAppearance);
-        Py_CLEAR(state->type_DevicePickerFilter);
-        Py_CLEAR(state->type_DeviceSelectedEventArgs);
-        Py_CLEAR(state->type_DeviceThumbnail);
-        Py_CLEAR(state->type_DeviceUnpairingResult);
-        Py_CLEAR(state->type_DeviceWatcher);
-        Py_CLEAR(state->type_DeviceWatcherEvent);
-        Py_CLEAR(state->type_DeviceWatcherTriggerDetails);
-        Py_CLEAR(state->type_EnclosureLocation);
-        Py_CLEAR(state->type_IDevicePairingSettings);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Enumeration",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Enumeration
@@ -5193,7 +5096,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Enumeration(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5206,647 +5109,204 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Enumeration(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DeviceAccessChangedEventArgs = py::register_python_type(module.get(), type_name_DeviceAccessChangedEventArgs, &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DeviceAccessChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceAccessChangedEventArgs, &type_spec_DeviceAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceAccessChangedEventArgs, &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceAccessInformation = py::register_python_type(module.get(), type_name_DeviceAccessInformation, &type_spec_DeviceAccessInformation, object_bases.get(), nullptr);
-    if (!state->type_DeviceAccessInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceAccessInformation, &type_spec_DeviceAccessInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceAccessInformation, &type_spec_DeviceAccessInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceConnectionChangeTriggerDetails = py::register_python_type(module.get(), type_name_DeviceConnectionChangeTriggerDetails, &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_DeviceConnectionChangeTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTriggerDetails, &type_spec_DeviceConnectionChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTriggerDetails, &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceDisconnectButtonClickedEventArgs = py::register_python_type(module.get(), type_name_DeviceDisconnectButtonClickedEventArgs, &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DeviceDisconnectButtonClickedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceDisconnectButtonClickedEventArgs, &type_spec_DeviceDisconnectButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceDisconnectButtonClickedEventArgs, &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceInformation = py::register_python_type(module.get(), type_name_DeviceInformation, &type_spec_DeviceInformation, object_bases.get(), nullptr);
-    if (!state->type_DeviceInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceInformation, &type_spec_DeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceInformation, &type_spec_DeviceInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceInformationCollection = py::register_python_type(module.get(), type_name_DeviceInformationCollection, &type_spec_DeviceInformationCollection, object_bases.get(), nullptr);
-    if (!state->type_DeviceInformationCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceInformationCollection, &type_spec_DeviceInformationCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceInformationCollection, &type_spec_DeviceInformationCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceInformationCustomPairing = py::register_python_type(module.get(), type_name_DeviceInformationCustomPairing, &type_spec_DeviceInformationCustomPairing, object_bases.get(), nullptr);
-    if (!state->type_DeviceInformationCustomPairing)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceInformationCustomPairing, &type_spec_DeviceInformationCustomPairing, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceInformationCustomPairing, &type_spec_DeviceInformationCustomPairing, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceInformationPairing = py::register_python_type(module.get(), type_name_DeviceInformationPairing, &type_spec_DeviceInformationPairing, object_bases.get(), nullptr);
-    if (!state->type_DeviceInformationPairing)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceInformationPairing, &type_spec_DeviceInformationPairing, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceInformationPairing, &type_spec_DeviceInformationPairing, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceInformationUpdate = py::register_python_type(module.get(), type_name_DeviceInformationUpdate, &type_spec_DeviceInformationUpdate, object_bases.get(), nullptr);
-    if (!state->type_DeviceInformationUpdate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceInformationUpdate, &type_spec_DeviceInformationUpdate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceInformationUpdate, &type_spec_DeviceInformationUpdate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePairingRequestedEventArgs = py::register_python_type(module.get(), type_name_DevicePairingRequestedEventArgs, &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DevicePairingRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePairingRequestedEventArgs, &type_spec_DevicePairingRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePairingRequestedEventArgs, &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePairingResult = py::register_python_type(module.get(), type_name_DevicePairingResult, &type_spec_DevicePairingResult, object_bases.get(), nullptr);
-    if (!state->type_DevicePairingResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePairingResult, &type_spec_DevicePairingResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePairingResult, &type_spec_DevicePairingResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePicker = py::register_python_type(module.get(), type_name_DevicePicker, &type_spec_DevicePicker, object_bases.get(), nullptr);
-    if (!state->type_DevicePicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePicker, &type_spec_DevicePicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePicker, &type_spec_DevicePicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePickerAppearance = py::register_python_type(module.get(), type_name_DevicePickerAppearance, &type_spec_DevicePickerAppearance, object_bases.get(), nullptr);
-    if (!state->type_DevicePickerAppearance)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePickerAppearance, &type_spec_DevicePickerAppearance, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePickerAppearance, &type_spec_DevicePickerAppearance, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePickerFilter = py::register_python_type(module.get(), type_name_DevicePickerFilter, &type_spec_DevicePickerFilter, object_bases.get(), nullptr);
-    if (!state->type_DevicePickerFilter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePickerFilter, &type_spec_DevicePickerFilter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePickerFilter, &type_spec_DevicePickerFilter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceSelectedEventArgs = py::register_python_type(module.get(), type_name_DeviceSelectedEventArgs, &type_spec_DeviceSelectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DeviceSelectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceSelectedEventArgs, &type_spec_DeviceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceSelectedEventArgs, &type_spec_DeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceThumbnail = py::register_python_type(module.get(), type_name_DeviceThumbnail, &type_spec_DeviceThumbnail, object_bases.get(), nullptr);
-    if (!state->type_DeviceThumbnail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceThumbnail, &type_spec_DeviceThumbnail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceThumbnail, &type_spec_DeviceThumbnail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceUnpairingResult = py::register_python_type(module.get(), type_name_DeviceUnpairingResult, &type_spec_DeviceUnpairingResult, object_bases.get(), nullptr);
-    if (!state->type_DeviceUnpairingResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceUnpairingResult, &type_spec_DeviceUnpairingResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceUnpairingResult, &type_spec_DeviceUnpairingResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceWatcher = py::register_python_type(module.get(), type_name_DeviceWatcher, &type_spec_DeviceWatcher, object_bases.get(), nullptr);
-    if (!state->type_DeviceWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceWatcher, &type_spec_DeviceWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceWatcher, &type_spec_DeviceWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceWatcherEvent = py::register_python_type(module.get(), type_name_DeviceWatcherEvent, &type_spec_DeviceWatcherEvent, object_bases.get(), nullptr);
-    if (!state->type_DeviceWatcherEvent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherEvent, &type_spec_DeviceWatcherEvent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherEvent, &type_spec_DeviceWatcherEvent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceWatcherTriggerDetails = py::register_python_type(module.get(), type_name_DeviceWatcherTriggerDetails, &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_DeviceWatcherTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherTriggerDetails, &type_spec_DeviceWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherTriggerDetails, &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EnclosureLocation = py::register_python_type(module.get(), type_name_EnclosureLocation, &type_spec_EnclosureLocation, object_bases.get(), nullptr);
-    if (!state->type_EnclosureLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EnclosureLocation, &type_spec_EnclosureLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EnclosureLocation, &type_spec_EnclosureLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDevicePairingSettings = py::register_python_type(module.get(), type_name_IDevicePairingSettings, &type_spec_IDevicePairingSettings, object_bases.get(), nullptr);
-    if (!state->type_IDevicePairingSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDevicePairingSettings, &type_spec_IDevicePairingSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDevicePairingSettings, &type_spec_IDevicePairingSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccessChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceAccessInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceAccessInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceAccessInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceConnectionChangeTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceDisconnectButtonClickedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceInformationCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceInformationCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceInformationCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceInformationCustomPairing;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceInformationPairing>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceInformationPairing;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceInformationPairing is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceInformationUpdate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceInformationUpdate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePairingRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DevicePairingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePairingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DevicePairingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DevicePicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DevicePicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DevicePickerAppearance>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePickerAppearance;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DevicePickerAppearance is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DevicePickerFilter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePickerFilter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DevicePickerFilter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceSelectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceThumbnail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceThumbnail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceThumbnail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceUnpairingResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceUnpairingResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEvent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceWatcherEvent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceWatcherEvent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceWatcherTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::EnclosureLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnclosureLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::EnclosureLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Enumeration;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Enumeration");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDevicePairingSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Enumeration::IDevicePairingSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

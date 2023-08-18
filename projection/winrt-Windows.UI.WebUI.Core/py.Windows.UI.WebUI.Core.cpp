@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::UI::WebUI::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_WebUICommandBar;
-        PyTypeObject* type_WebUICommandBarBitmapIcon;
-        PyTypeObject* type_WebUICommandBarConfirmationButton;
-        PyTypeObject* type_WebUICommandBarIconButton;
-        PyTypeObject* type_WebUICommandBarItemInvokedEventArgs;
-        PyTypeObject* type_WebUICommandBarSizeChangedEventArgs;
-        PyTypeObject* type_WebUICommandBarSymbolIcon;
-        PyTypeObject* type_IWebUICommandBarElement;
-        PyTypeObject* type_IWebUICommandBarIcon;
-    };
-
     // ----- WebUICommandBar class --------------------
     static constexpr const char* const type_name_WebUICommandBar = "WebUICommandBar";
 
@@ -1847,60 +1834,15 @@ namespace py::cpp::Windows::UI::WebUI::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::WebUI::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WebUICommandBar);
-        Py_VISIT(state->type_WebUICommandBarBitmapIcon);
-        Py_VISIT(state->type_WebUICommandBarConfirmationButton);
-        Py_VISIT(state->type_WebUICommandBarIconButton);
-        Py_VISIT(state->type_WebUICommandBarItemInvokedEventArgs);
-        Py_VISIT(state->type_WebUICommandBarSizeChangedEventArgs);
-        Py_VISIT(state->type_WebUICommandBarSymbolIcon);
-        Py_VISIT(state->type_IWebUICommandBarElement);
-        Py_VISIT(state->type_IWebUICommandBarIcon);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WebUICommandBar);
-        Py_CLEAR(state->type_WebUICommandBarBitmapIcon);
-        Py_CLEAR(state->type_WebUICommandBarConfirmationButton);
-        Py_CLEAR(state->type_WebUICommandBarIconButton);
-        Py_CLEAR(state->type_WebUICommandBarItemInvokedEventArgs);
-        Py_CLEAR(state->type_WebUICommandBarSizeChangedEventArgs);
-        Py_CLEAR(state->type_WebUICommandBarSymbolIcon);
-        Py_CLEAR(state->type_IWebUICommandBarElement);
-        Py_CLEAR(state->type_IWebUICommandBarIcon);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_WebUI_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::WebUI::Core
@@ -1916,7 +1858,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1929,270 +1871,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WebUICommandBar = py::register_python_type(module.get(), type_name_WebUICommandBar, &type_spec_WebUICommandBar, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBar, &type_spec_WebUICommandBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBar, &type_spec_WebUICommandBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarBitmapIcon = py::register_python_type(module.get(), type_name_WebUICommandBarBitmapIcon, &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarBitmapIcon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarBitmapIcon, &type_spec_WebUICommandBarBitmapIcon, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarBitmapIcon, &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarConfirmationButton = py::register_python_type(module.get(), type_name_WebUICommandBarConfirmationButton, &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarConfirmationButton)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarConfirmationButton, &type_spec_WebUICommandBarConfirmationButton, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarConfirmationButton, &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarIconButton = py::register_python_type(module.get(), type_name_WebUICommandBarIconButton, &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarIconButton)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarIconButton, &type_spec_WebUICommandBarIconButton, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarIconButton, &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarItemInvokedEventArgs = py::register_python_type(module.get(), type_name_WebUICommandBarItemInvokedEventArgs, &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarItemInvokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarItemInvokedEventArgs, &type_spec_WebUICommandBarItemInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarItemInvokedEventArgs, &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarSizeChangedEventArgs = py::register_python_type(module.get(), type_name_WebUICommandBarSizeChangedEventArgs, &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarSizeChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarSizeChangedEventArgs, &type_spec_WebUICommandBarSizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarSizeChangedEventArgs, &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandBarSymbolIcon = py::register_python_type(module.get(), type_name_WebUICommandBarSymbolIcon, &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandBarSymbolIcon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarSymbolIcon, &type_spec_WebUICommandBarSymbolIcon, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandBarSymbolIcon, &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebUICommandBarElement = py::register_python_type(module.get(), type_name_IWebUICommandBarElement, &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr);
-    if (!state->type_IWebUICommandBarElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebUICommandBarElement, &type_spec_IWebUICommandBarElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebUICommandBarElement, &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebUICommandBarIcon = py::register_python_type(module.get(), type_name_IWebUICommandBarIcon, &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr);
-    if (!state->type_IWebUICommandBarIcon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebUICommandBarIcon, &type_spec_IWebUICommandBarIcon, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebUICommandBarIcon, &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarBitmapIcon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarConfirmationButton;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarIconButton;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarItemInvokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarSizeChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandBarSymbolIcon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebUICommandBarElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebUICommandBarIcon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_SecondaryAuthenticationFactorAuthentication;
-        PyTypeObject* type_SecondaryAuthenticationFactorAuthenticationResult;
-        PyTypeObject* type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;
-        PyTypeObject* type_SecondaryAuthenticationFactorAuthenticationStageInfo;
-        PyTypeObject* type_SecondaryAuthenticationFactorInfo;
-        PyTypeObject* type_SecondaryAuthenticationFactorRegistration;
-        PyTypeObject* type_SecondaryAuthenticationFactorRegistrationResult;
-    };
-
     // ----- SecondaryAuthenticationFactorAuthentication class --------------------
     static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthentication = "SecondaryAuthenticationFactorAuthentication";
 
@@ -1463,56 +1452,15 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Identity::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SecondaryAuthenticationFactorAuthentication);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorAuthenticationResult);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorAuthenticationStageInfo);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorInfo);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorRegistration);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorRegistrationResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorAuthentication);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorAuthenticationResult);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorAuthenticationStageInfo);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorInfo);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorRegistration);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorRegistrationResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Authentication_Identity_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Authentication::Identity::Provider
@@ -1528,7 +1476,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Identity_Provider(v
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1541,212 +1489,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Identity_Provider(v
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SecondaryAuthenticationFactorAuthentication = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthentication, &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorAuthentication)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthentication, &type_spec_SecondaryAuthenticationFactorAuthentication, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthentication, &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorAuthenticationResult = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationResult, &type_spec_SecondaryAuthenticationFactorAuthenticationResult, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorAuthenticationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationResult, &type_spec_SecondaryAuthenticationFactorAuthenticationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationResult, &type_spec_SecondaryAuthenticationFactorAuthenticationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, &type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, &type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, &type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorAuthenticationStageInfo = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageInfo, &type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorAuthenticationStageInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageInfo, &type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationStageInfo, &type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorInfo = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorInfo, &type_spec_SecondaryAuthenticationFactorInfo, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorInfo, &type_spec_SecondaryAuthenticationFactorInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorInfo, &type_spec_SecondaryAuthenticationFactorInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorRegistration = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistration, &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistration, &type_spec_SecondaryAuthenticationFactorRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistration, &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorRegistrationResult = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistrationResult, &type_spec_SecondaryAuthenticationFactorRegistrationResult, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorRegistrationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistrationResult, &type_spec_SecondaryAuthenticationFactorRegistrationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorRegistrationResult, &type_spec_SecondaryAuthenticationFactorRegistrationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorAuthentication;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorAuthenticationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorAuthenticationStageInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Identity::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Identity::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorRegistrationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

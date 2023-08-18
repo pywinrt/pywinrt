@@ -6,94 +6,6 @@
 
 namespace py::cpp::Windows::Networking::NetworkOperators
 {
-    struct module_state
-    {
-        PyTypeObject* type_ESim;
-        PyTypeObject* type_ESimAddedEventArgs;
-        PyTypeObject* type_ESimDiscoverEvent;
-        PyTypeObject* type_ESimDiscoverResult;
-        PyTypeObject* type_ESimDownloadProfileMetadataResult;
-        PyTypeObject* type_ESimManager;
-        PyTypeObject* type_ESimOperationResult;
-        PyTypeObject* type_ESimPolicy;
-        PyTypeObject* type_ESimProfile;
-        PyTypeObject* type_ESimProfileMetadata;
-        PyTypeObject* type_ESimProfilePolicy;
-        PyTypeObject* type_ESimRemovedEventArgs;
-        PyTypeObject* type_ESimServiceInfo;
-        PyTypeObject* type_ESimUpdatedEventArgs;
-        PyTypeObject* type_ESimWatcher;
-        PyTypeObject* type_FdnAccessManager;
-        PyTypeObject* type_HotspotAuthenticationContext;
-        PyTypeObject* type_HotspotAuthenticationEventDetails;
-        PyTypeObject* type_HotspotCredentialsAuthenticationResult;
-        PyTypeObject* type_KnownCSimFilePaths;
-        PyTypeObject* type_KnownRuimFilePaths;
-        PyTypeObject* type_KnownSimFilePaths;
-        PyTypeObject* type_KnownUSimFilePaths;
-        PyTypeObject* type_MobileBroadbandAccount;
-        PyTypeObject* type_MobileBroadbandAccountEventArgs;
-        PyTypeObject* type_MobileBroadbandAccountUpdatedEventArgs;
-        PyTypeObject* type_MobileBroadbandAccountWatcher;
-        PyTypeObject* type_MobileBroadbandAntennaSar;
-        PyTypeObject* type_MobileBroadbandCellCdma;
-        PyTypeObject* type_MobileBroadbandCellGsm;
-        PyTypeObject* type_MobileBroadbandCellLte;
-        PyTypeObject* type_MobileBroadbandCellNR;
-        PyTypeObject* type_MobileBroadbandCellTdscdma;
-        PyTypeObject* type_MobileBroadbandCellUmts;
-        PyTypeObject* type_MobileBroadbandCellsInfo;
-        PyTypeObject* type_MobileBroadbandCurrentSlotIndexChangedEventArgs;
-        PyTypeObject* type_MobileBroadbandDeviceInformation;
-        PyTypeObject* type_MobileBroadbandDeviceService;
-        PyTypeObject* type_MobileBroadbandDeviceServiceCommandResult;
-        PyTypeObject* type_MobileBroadbandDeviceServiceCommandSession;
-        PyTypeObject* type_MobileBroadbandDeviceServiceDataReceivedEventArgs;
-        PyTypeObject* type_MobileBroadbandDeviceServiceDataSession;
-        PyTypeObject* type_MobileBroadbandDeviceServiceInformation;
-        PyTypeObject* type_MobileBroadbandDeviceServiceTriggerDetails;
-        PyTypeObject* type_MobileBroadbandModem;
-        PyTypeObject* type_MobileBroadbandModemConfiguration;
-        PyTypeObject* type_MobileBroadbandModemIsolation;
-        PyTypeObject* type_MobileBroadbandNetwork;
-        PyTypeObject* type_MobileBroadbandNetworkRegistrationStateChange;
-        PyTypeObject* type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails;
-        PyTypeObject* type_MobileBroadbandPco;
-        PyTypeObject* type_MobileBroadbandPcoDataChangeTriggerDetails;
-        PyTypeObject* type_MobileBroadbandPin;
-        PyTypeObject* type_MobileBroadbandPinLockStateChange;
-        PyTypeObject* type_MobileBroadbandPinLockStateChangeTriggerDetails;
-        PyTypeObject* type_MobileBroadbandPinManager;
-        PyTypeObject* type_MobileBroadbandPinOperationResult;
-        PyTypeObject* type_MobileBroadbandRadioStateChange;
-        PyTypeObject* type_MobileBroadbandRadioStateChangeTriggerDetails;
-        PyTypeObject* type_MobileBroadbandSarManager;
-        PyTypeObject* type_MobileBroadbandSlotInfo;
-        PyTypeObject* type_MobileBroadbandSlotInfoChangedEventArgs;
-        PyTypeObject* type_MobileBroadbandSlotManager;
-        PyTypeObject* type_MobileBroadbandTransmissionStateChangedEventArgs;
-        PyTypeObject* type_MobileBroadbandUicc;
-        PyTypeObject* type_MobileBroadbandUiccApp;
-        PyTypeObject* type_MobileBroadbandUiccAppReadRecordResult;
-        PyTypeObject* type_MobileBroadbandUiccAppRecordDetailsResult;
-        PyTypeObject* type_MobileBroadbandUiccAppsResult;
-        PyTypeObject* type_NetworkOperatorDataUsageTriggerDetails;
-        PyTypeObject* type_NetworkOperatorNotificationEventDetails;
-        PyTypeObject* type_NetworkOperatorTetheringAccessPointConfiguration;
-        PyTypeObject* type_NetworkOperatorTetheringClient;
-        PyTypeObject* type_NetworkOperatorTetheringManager;
-        PyTypeObject* type_NetworkOperatorTetheringOperationResult;
-        PyTypeObject* type_ProvisionFromXmlDocumentResults;
-        PyTypeObject* type_ProvisionedProfile;
-        PyTypeObject* type_ProvisioningAgent;
-        PyTypeObject* type_TetheringEntitlementCheckTriggerDetails;
-        PyTypeObject* type_UssdMessage;
-        PyTypeObject* type_UssdReply;
-        PyTypeObject* type_UssdSession;
-        PyTypeObject* type_ESimProfileInstallProgress;
-        PyTypeObject* type_ProfileUsage;
-    };
-
     // ----- ESim class --------------------
     static constexpr const char* const type_name_ESim = "ESim";
 
@@ -16165,210 +16077,15 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     PyDoc_STRVAR(module_doc, "Windows::Networking::NetworkOperators");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ESim);
-        Py_VISIT(state->type_ESimAddedEventArgs);
-        Py_VISIT(state->type_ESimDiscoverEvent);
-        Py_VISIT(state->type_ESimDiscoverResult);
-        Py_VISIT(state->type_ESimDownloadProfileMetadataResult);
-        Py_VISIT(state->type_ESimManager);
-        Py_VISIT(state->type_ESimOperationResult);
-        Py_VISIT(state->type_ESimPolicy);
-        Py_VISIT(state->type_ESimProfile);
-        Py_VISIT(state->type_ESimProfileMetadata);
-        Py_VISIT(state->type_ESimProfilePolicy);
-        Py_VISIT(state->type_ESimRemovedEventArgs);
-        Py_VISIT(state->type_ESimServiceInfo);
-        Py_VISIT(state->type_ESimUpdatedEventArgs);
-        Py_VISIT(state->type_ESimWatcher);
-        Py_VISIT(state->type_FdnAccessManager);
-        Py_VISIT(state->type_HotspotAuthenticationContext);
-        Py_VISIT(state->type_HotspotAuthenticationEventDetails);
-        Py_VISIT(state->type_HotspotCredentialsAuthenticationResult);
-        Py_VISIT(state->type_KnownCSimFilePaths);
-        Py_VISIT(state->type_KnownRuimFilePaths);
-        Py_VISIT(state->type_KnownSimFilePaths);
-        Py_VISIT(state->type_KnownUSimFilePaths);
-        Py_VISIT(state->type_MobileBroadbandAccount);
-        Py_VISIT(state->type_MobileBroadbandAccountEventArgs);
-        Py_VISIT(state->type_MobileBroadbandAccountUpdatedEventArgs);
-        Py_VISIT(state->type_MobileBroadbandAccountWatcher);
-        Py_VISIT(state->type_MobileBroadbandAntennaSar);
-        Py_VISIT(state->type_MobileBroadbandCellCdma);
-        Py_VISIT(state->type_MobileBroadbandCellGsm);
-        Py_VISIT(state->type_MobileBroadbandCellLte);
-        Py_VISIT(state->type_MobileBroadbandCellNR);
-        Py_VISIT(state->type_MobileBroadbandCellTdscdma);
-        Py_VISIT(state->type_MobileBroadbandCellUmts);
-        Py_VISIT(state->type_MobileBroadbandCellsInfo);
-        Py_VISIT(state->type_MobileBroadbandCurrentSlotIndexChangedEventArgs);
-        Py_VISIT(state->type_MobileBroadbandDeviceInformation);
-        Py_VISIT(state->type_MobileBroadbandDeviceService);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceCommandResult);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceCommandSession);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceDataReceivedEventArgs);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceDataSession);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceInformation);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceTriggerDetails);
-        Py_VISIT(state->type_MobileBroadbandModem);
-        Py_VISIT(state->type_MobileBroadbandModemConfiguration);
-        Py_VISIT(state->type_MobileBroadbandModemIsolation);
-        Py_VISIT(state->type_MobileBroadbandNetwork);
-        Py_VISIT(state->type_MobileBroadbandNetworkRegistrationStateChange);
-        Py_VISIT(state->type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails);
-        Py_VISIT(state->type_MobileBroadbandPco);
-        Py_VISIT(state->type_MobileBroadbandPcoDataChangeTriggerDetails);
-        Py_VISIT(state->type_MobileBroadbandPin);
-        Py_VISIT(state->type_MobileBroadbandPinLockStateChange);
-        Py_VISIT(state->type_MobileBroadbandPinLockStateChangeTriggerDetails);
-        Py_VISIT(state->type_MobileBroadbandPinManager);
-        Py_VISIT(state->type_MobileBroadbandPinOperationResult);
-        Py_VISIT(state->type_MobileBroadbandRadioStateChange);
-        Py_VISIT(state->type_MobileBroadbandRadioStateChangeTriggerDetails);
-        Py_VISIT(state->type_MobileBroadbandSarManager);
-        Py_VISIT(state->type_MobileBroadbandSlotInfo);
-        Py_VISIT(state->type_MobileBroadbandSlotInfoChangedEventArgs);
-        Py_VISIT(state->type_MobileBroadbandSlotManager);
-        Py_VISIT(state->type_MobileBroadbandTransmissionStateChangedEventArgs);
-        Py_VISIT(state->type_MobileBroadbandUicc);
-        Py_VISIT(state->type_MobileBroadbandUiccApp);
-        Py_VISIT(state->type_MobileBroadbandUiccAppReadRecordResult);
-        Py_VISIT(state->type_MobileBroadbandUiccAppRecordDetailsResult);
-        Py_VISIT(state->type_MobileBroadbandUiccAppsResult);
-        Py_VISIT(state->type_NetworkOperatorDataUsageTriggerDetails);
-        Py_VISIT(state->type_NetworkOperatorNotificationEventDetails);
-        Py_VISIT(state->type_NetworkOperatorTetheringAccessPointConfiguration);
-        Py_VISIT(state->type_NetworkOperatorTetheringClient);
-        Py_VISIT(state->type_NetworkOperatorTetheringManager);
-        Py_VISIT(state->type_NetworkOperatorTetheringOperationResult);
-        Py_VISIT(state->type_ProvisionFromXmlDocumentResults);
-        Py_VISIT(state->type_ProvisionedProfile);
-        Py_VISIT(state->type_ProvisioningAgent);
-        Py_VISIT(state->type_TetheringEntitlementCheckTriggerDetails);
-        Py_VISIT(state->type_UssdMessage);
-        Py_VISIT(state->type_UssdReply);
-        Py_VISIT(state->type_UssdSession);
-        Py_VISIT(state->type_ESimProfileInstallProgress);
-        Py_VISIT(state->type_ProfileUsage);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ESim);
-        Py_CLEAR(state->type_ESimAddedEventArgs);
-        Py_CLEAR(state->type_ESimDiscoverEvent);
-        Py_CLEAR(state->type_ESimDiscoverResult);
-        Py_CLEAR(state->type_ESimDownloadProfileMetadataResult);
-        Py_CLEAR(state->type_ESimManager);
-        Py_CLEAR(state->type_ESimOperationResult);
-        Py_CLEAR(state->type_ESimPolicy);
-        Py_CLEAR(state->type_ESimProfile);
-        Py_CLEAR(state->type_ESimProfileMetadata);
-        Py_CLEAR(state->type_ESimProfilePolicy);
-        Py_CLEAR(state->type_ESimRemovedEventArgs);
-        Py_CLEAR(state->type_ESimServiceInfo);
-        Py_CLEAR(state->type_ESimUpdatedEventArgs);
-        Py_CLEAR(state->type_ESimWatcher);
-        Py_CLEAR(state->type_FdnAccessManager);
-        Py_CLEAR(state->type_HotspotAuthenticationContext);
-        Py_CLEAR(state->type_HotspotAuthenticationEventDetails);
-        Py_CLEAR(state->type_HotspotCredentialsAuthenticationResult);
-        Py_CLEAR(state->type_KnownCSimFilePaths);
-        Py_CLEAR(state->type_KnownRuimFilePaths);
-        Py_CLEAR(state->type_KnownSimFilePaths);
-        Py_CLEAR(state->type_KnownUSimFilePaths);
-        Py_CLEAR(state->type_MobileBroadbandAccount);
-        Py_CLEAR(state->type_MobileBroadbandAccountEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandAccountUpdatedEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandAccountWatcher);
-        Py_CLEAR(state->type_MobileBroadbandAntennaSar);
-        Py_CLEAR(state->type_MobileBroadbandCellCdma);
-        Py_CLEAR(state->type_MobileBroadbandCellGsm);
-        Py_CLEAR(state->type_MobileBroadbandCellLte);
-        Py_CLEAR(state->type_MobileBroadbandCellNR);
-        Py_CLEAR(state->type_MobileBroadbandCellTdscdma);
-        Py_CLEAR(state->type_MobileBroadbandCellUmts);
-        Py_CLEAR(state->type_MobileBroadbandCellsInfo);
-        Py_CLEAR(state->type_MobileBroadbandCurrentSlotIndexChangedEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandDeviceInformation);
-        Py_CLEAR(state->type_MobileBroadbandDeviceService);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceCommandResult);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceCommandSession);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceDataReceivedEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceDataSession);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceInformation);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceTriggerDetails);
-        Py_CLEAR(state->type_MobileBroadbandModem);
-        Py_CLEAR(state->type_MobileBroadbandModemConfiguration);
-        Py_CLEAR(state->type_MobileBroadbandModemIsolation);
-        Py_CLEAR(state->type_MobileBroadbandNetwork);
-        Py_CLEAR(state->type_MobileBroadbandNetworkRegistrationStateChange);
-        Py_CLEAR(state->type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails);
-        Py_CLEAR(state->type_MobileBroadbandPco);
-        Py_CLEAR(state->type_MobileBroadbandPcoDataChangeTriggerDetails);
-        Py_CLEAR(state->type_MobileBroadbandPin);
-        Py_CLEAR(state->type_MobileBroadbandPinLockStateChange);
-        Py_CLEAR(state->type_MobileBroadbandPinLockStateChangeTriggerDetails);
-        Py_CLEAR(state->type_MobileBroadbandPinManager);
-        Py_CLEAR(state->type_MobileBroadbandPinOperationResult);
-        Py_CLEAR(state->type_MobileBroadbandRadioStateChange);
-        Py_CLEAR(state->type_MobileBroadbandRadioStateChangeTriggerDetails);
-        Py_CLEAR(state->type_MobileBroadbandSarManager);
-        Py_CLEAR(state->type_MobileBroadbandSlotInfo);
-        Py_CLEAR(state->type_MobileBroadbandSlotInfoChangedEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandSlotManager);
-        Py_CLEAR(state->type_MobileBroadbandTransmissionStateChangedEventArgs);
-        Py_CLEAR(state->type_MobileBroadbandUicc);
-        Py_CLEAR(state->type_MobileBroadbandUiccApp);
-        Py_CLEAR(state->type_MobileBroadbandUiccAppReadRecordResult);
-        Py_CLEAR(state->type_MobileBroadbandUiccAppRecordDetailsResult);
-        Py_CLEAR(state->type_MobileBroadbandUiccAppsResult);
-        Py_CLEAR(state->type_NetworkOperatorDataUsageTriggerDetails);
-        Py_CLEAR(state->type_NetworkOperatorNotificationEventDetails);
-        Py_CLEAR(state->type_NetworkOperatorTetheringAccessPointConfiguration);
-        Py_CLEAR(state->type_NetworkOperatorTetheringClient);
-        Py_CLEAR(state->type_NetworkOperatorTetheringManager);
-        Py_CLEAR(state->type_NetworkOperatorTetheringOperationResult);
-        Py_CLEAR(state->type_ProvisionFromXmlDocumentResults);
-        Py_CLEAR(state->type_ProvisionedProfile);
-        Py_CLEAR(state->type_ProvisioningAgent);
-        Py_CLEAR(state->type_TetheringEntitlementCheckTriggerDetails);
-        Py_CLEAR(state->type_UssdMessage);
-        Py_CLEAR(state->type_UssdReply);
-        Py_CLEAR(state->type_UssdSession);
-        Py_CLEAR(state->type_ESimProfileInstallProgress);
-        Py_CLEAR(state->type_ProfileUsage);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_NetworkOperators",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::NetworkOperators
@@ -16384,7 +16101,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -16397,35 +16114,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ESim = py::register_python_type(module.get(), type_name_ESim, &type_spec_ESim, object_bases.get(), nullptr);
-    if (!state->type_ESim)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESim, &type_spec_ESim, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESim, &type_spec_ESim, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimAddedEventArgs = py::register_python_type(module.get(), type_name_ESimAddedEventArgs, &type_spec_ESimAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ESimAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimAddedEventArgs, &type_spec_ESimAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimAddedEventArgs, &type_spec_ESimAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimDiscoverEvent = py::register_python_type(module.get(), type_name_ESimDiscoverEvent, &type_spec_ESimDiscoverEvent, object_bases.get(), nullptr);
-    if (!state->type_ESimDiscoverEvent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimDiscoverEvent, &type_spec_ESimDiscoverEvent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimDiscoverEvent, &type_spec_ESimDiscoverEvent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimDiscoverResult = py::register_python_type(module.get(), type_name_ESimDiscoverResult, &type_spec_ESimDiscoverResult, object_bases.get(), nullptr);
-    if (!state->type_ESimDiscoverResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimDiscoverResult, &type_spec_ESimDiscoverResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimDiscoverResult, &type_spec_ESimDiscoverResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimDownloadProfileMetadataResult = py::register_python_type(module.get(), type_name_ESimDownloadProfileMetadataResult, &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), nullptr);
-    if (!state->type_ESimDownloadProfileMetadataResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimDownloadProfileMetadataResult, &type_spec_ESimDownloadProfileMetadataResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimDownloadProfileMetadataResult, &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16436,86 +16165,128 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_ESimManager = py::register_python_type(module.get(), type_name_ESimManager, &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get()));
-    if (!state->type_ESimManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimManager, &type_spec_ESimManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimManager, &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimOperationResult = py::register_python_type(module.get(), type_name_ESimOperationResult, &type_spec_ESimOperationResult, object_bases.get(), nullptr);
-    if (!state->type_ESimOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimOperationResult, &type_spec_ESimOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimOperationResult, &type_spec_ESimOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimPolicy = py::register_python_type(module.get(), type_name_ESimPolicy, &type_spec_ESimPolicy, object_bases.get(), nullptr);
-    if (!state->type_ESimPolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimPolicy, &type_spec_ESimPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimPolicy, &type_spec_ESimPolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimProfile = py::register_python_type(module.get(), type_name_ESimProfile, &type_spec_ESimProfile, object_bases.get(), nullptr);
-    if (!state->type_ESimProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimProfile, &type_spec_ESimProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimProfile, &type_spec_ESimProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimProfileMetadata = py::register_python_type(module.get(), type_name_ESimProfileMetadata, &type_spec_ESimProfileMetadata, object_bases.get(), nullptr);
-    if (!state->type_ESimProfileMetadata)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimProfileMetadata, &type_spec_ESimProfileMetadata, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimProfileMetadata, &type_spec_ESimProfileMetadata, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimProfilePolicy = py::register_python_type(module.get(), type_name_ESimProfilePolicy, &type_spec_ESimProfilePolicy, object_bases.get(), nullptr);
-    if (!state->type_ESimProfilePolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimProfilePolicy, &type_spec_ESimProfilePolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimProfilePolicy, &type_spec_ESimProfilePolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimRemovedEventArgs = py::register_python_type(module.get(), type_name_ESimRemovedEventArgs, &type_spec_ESimRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ESimRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimRemovedEventArgs, &type_spec_ESimRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimRemovedEventArgs, &type_spec_ESimRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimServiceInfo = py::register_python_type(module.get(), type_name_ESimServiceInfo, &type_spec_ESimServiceInfo, object_bases.get(), nullptr);
-    if (!state->type_ESimServiceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimServiceInfo, &type_spec_ESimServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimServiceInfo, &type_spec_ESimServiceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimUpdatedEventArgs = py::register_python_type(module.get(), type_name_ESimUpdatedEventArgs, &type_spec_ESimUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ESimUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimUpdatedEventArgs, &type_spec_ESimUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimUpdatedEventArgs, &type_spec_ESimUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimWatcher = py::register_python_type(module.get(), type_name_ESimWatcher, &type_spec_ESimWatcher, object_bases.get(), nullptr);
-    if (!state->type_ESimWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimWatcher, &type_spec_ESimWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimWatcher, &type_spec_ESimWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FdnAccessManager = py::register_python_type(module.get(), type_name_FdnAccessManager, &type_spec_FdnAccessManager, object_bases.get(), nullptr);
-    if (!state->type_FdnAccessManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FdnAccessManager, &type_spec_FdnAccessManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FdnAccessManager, &type_spec_FdnAccessManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HotspotAuthenticationContext = py::register_python_type(module.get(), type_name_HotspotAuthenticationContext, &type_spec_HotspotAuthenticationContext, object_bases.get(), nullptr);
-    if (!state->type_HotspotAuthenticationContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationContext, &type_spec_HotspotAuthenticationContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationContext, &type_spec_HotspotAuthenticationContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HotspotAuthenticationEventDetails = py::register_python_type(module.get(), type_name_HotspotAuthenticationEventDetails, &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), nullptr);
-    if (!state->type_HotspotAuthenticationEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationEventDetails, &type_spec_HotspotAuthenticationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationEventDetails, &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HotspotCredentialsAuthenticationResult = py::register_python_type(module.get(), type_name_HotspotCredentialsAuthenticationResult, &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), nullptr);
-    if (!state->type_HotspotCredentialsAuthenticationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HotspotCredentialsAuthenticationResult, &type_spec_HotspotCredentialsAuthenticationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HotspotCredentialsAuthenticationResult, &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16526,8 +16297,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownCSimFilePaths = py::register_python_type(module.get(), type_name_KnownCSimFilePaths, &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get()));
-    if (!state->type_KnownCSimFilePaths)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownCSimFilePaths, &type_spec_KnownCSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownCSimFilePaths, &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16538,8 +16312,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownRuimFilePaths = py::register_python_type(module.get(), type_name_KnownRuimFilePaths, &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get()));
-    if (!state->type_KnownRuimFilePaths)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownRuimFilePaths, &type_spec_KnownRuimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownRuimFilePaths, &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16550,8 +16327,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownSimFilePaths = py::register_python_type(module.get(), type_name_KnownSimFilePaths, &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get()));
-    if (!state->type_KnownSimFilePaths)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownSimFilePaths, &type_spec_KnownSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownSimFilePaths, &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16562,8 +16342,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownUSimFilePaths = py::register_python_type(module.get(), type_name_KnownUSimFilePaths, &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get()));
-    if (!state->type_KnownUSimFilePaths)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownUSimFilePaths, &type_spec_KnownUSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownUSimFilePaths, &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -16574,2304 +16357,555 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_NetworkOperators(void) noexcept
         return nullptr;
     }
 
-    state->type_MobileBroadbandAccount = py::register_python_type(module.get(), type_name_MobileBroadbandAccount, &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get()));
-    if (!state->type_MobileBroadbandAccount)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccount, &type_spec_MobileBroadbandAccount, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccount, &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandAccountEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandAccountEventArgs, &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandAccountEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountEventArgs, &type_spec_MobileBroadbandAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountEventArgs, &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandAccountUpdatedEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandAccountUpdatedEventArgs, &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandAccountUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountUpdatedEventArgs, &type_spec_MobileBroadbandAccountUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountUpdatedEventArgs, &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandAccountWatcher = py::register_python_type(module.get(), type_name_MobileBroadbandAccountWatcher, &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandAccountWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountWatcher, &type_spec_MobileBroadbandAccountWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountWatcher, &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandAntennaSar = py::register_python_type(module.get(), type_name_MobileBroadbandAntennaSar, &type_spec_MobileBroadbandAntennaSar, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandAntennaSar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAntennaSar, &type_spec_MobileBroadbandAntennaSar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandAntennaSar, &type_spec_MobileBroadbandAntennaSar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellCdma = py::register_python_type(module.get(), type_name_MobileBroadbandCellCdma, &type_spec_MobileBroadbandCellCdma, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellCdma)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellCdma, &type_spec_MobileBroadbandCellCdma, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellCdma, &type_spec_MobileBroadbandCellCdma, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellGsm = py::register_python_type(module.get(), type_name_MobileBroadbandCellGsm, &type_spec_MobileBroadbandCellGsm, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellGsm)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellGsm, &type_spec_MobileBroadbandCellGsm, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellGsm, &type_spec_MobileBroadbandCellGsm, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellLte = py::register_python_type(module.get(), type_name_MobileBroadbandCellLte, &type_spec_MobileBroadbandCellLte, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellLte)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellLte, &type_spec_MobileBroadbandCellLte, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellLte, &type_spec_MobileBroadbandCellLte, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellNR = py::register_python_type(module.get(), type_name_MobileBroadbandCellNR, &type_spec_MobileBroadbandCellNR, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellNR)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellNR, &type_spec_MobileBroadbandCellNR, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellNR, &type_spec_MobileBroadbandCellNR, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellTdscdma = py::register_python_type(module.get(), type_name_MobileBroadbandCellTdscdma, &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellTdscdma)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellTdscdma, &type_spec_MobileBroadbandCellTdscdma, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellTdscdma, &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellUmts = py::register_python_type(module.get(), type_name_MobileBroadbandCellUmts, &type_spec_MobileBroadbandCellUmts, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellUmts)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellUmts, &type_spec_MobileBroadbandCellUmts, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellUmts, &type_spec_MobileBroadbandCellUmts, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCellsInfo = py::register_python_type(module.get(), type_name_MobileBroadbandCellsInfo, &type_spec_MobileBroadbandCellsInfo, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCellsInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellsInfo, &type_spec_MobileBroadbandCellsInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellsInfo, &type_spec_MobileBroadbandCellsInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandCurrentSlotIndexChangedEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandCurrentSlotIndexChangedEventArgs, &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandCurrentSlotIndexChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCurrentSlotIndexChangedEventArgs, &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandCurrentSlotIndexChangedEventArgs, &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceInformation = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceInformation, &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceInformation, &type_spec_MobileBroadbandDeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceInformation, &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceService = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceService, &type_spec_MobileBroadbandDeviceService, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceService, &type_spec_MobileBroadbandDeviceService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceService, &type_spec_MobileBroadbandDeviceService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceCommandResult = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandResult, &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceCommandResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandResult, &type_spec_MobileBroadbandDeviceServiceCommandResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandResult, &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceCommandSession = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandSession, &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceCommandSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandSession, &type_spec_MobileBroadbandDeviceServiceCommandSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandSession, &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceDataReceivedEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataReceivedEventArgs, &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceDataReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataReceivedEventArgs, &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataReceivedEventArgs, &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceDataSession = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataSession, &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceDataSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataSession, &type_spec_MobileBroadbandDeviceServiceDataSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataSession, &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceInformation = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceInformation, &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceInformation, &type_spec_MobileBroadbandDeviceServiceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceInformation, &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceTriggerDetails = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceTriggerDetails, &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceTriggerDetails, &type_spec_MobileBroadbandDeviceServiceTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceTriggerDetails, &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandModem = py::register_python_type(module.get(), type_name_MobileBroadbandModem, &type_spec_MobileBroadbandModem, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandModem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModem, &type_spec_MobileBroadbandModem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModem, &type_spec_MobileBroadbandModem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandModemConfiguration = py::register_python_type(module.get(), type_name_MobileBroadbandModemConfiguration, &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandModemConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemConfiguration, &type_spec_MobileBroadbandModemConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemConfiguration, &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandModemIsolation = py::register_python_type(module.get(), type_name_MobileBroadbandModemIsolation, &type_spec_MobileBroadbandModemIsolation, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandModemIsolation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemIsolation, &type_spec_MobileBroadbandModemIsolation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemIsolation, &type_spec_MobileBroadbandModemIsolation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandNetwork = py::register_python_type(module.get(), type_name_MobileBroadbandNetwork, &type_spec_MobileBroadbandNetwork, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandNetwork)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetwork, &type_spec_MobileBroadbandNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetwork, &type_spec_MobileBroadbandNetwork, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandNetworkRegistrationStateChange = py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChange, &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandNetworkRegistrationStateChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChange, &type_spec_MobileBroadbandNetworkRegistrationStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChange, &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails = py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPco = py::register_python_type(module.get(), type_name_MobileBroadbandPco, &type_spec_MobileBroadbandPco, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPco)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPco, &type_spec_MobileBroadbandPco, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPco, &type_spec_MobileBroadbandPco, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPcoDataChangeTriggerDetails = py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTriggerDetails, &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPcoDataChangeTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTriggerDetails, &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTriggerDetails, &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPin = py::register_python_type(module.get(), type_name_MobileBroadbandPin, &type_spec_MobileBroadbandPin, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPin)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPin, &type_spec_MobileBroadbandPin, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPin, &type_spec_MobileBroadbandPin, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPinLockStateChange = py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChange, &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPinLockStateChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChange, &type_spec_MobileBroadbandPinLockStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChange, &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPinLockStateChangeTriggerDetails = py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTriggerDetails, &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPinLockStateChangeTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTriggerDetails, &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTriggerDetails, &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPinManager = py::register_python_type(module.get(), type_name_MobileBroadbandPinManager, &type_spec_MobileBroadbandPinManager, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPinManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinManager, &type_spec_MobileBroadbandPinManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinManager, &type_spec_MobileBroadbandPinManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPinOperationResult = py::register_python_type(module.get(), type_name_MobileBroadbandPinOperationResult, &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPinOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinOperationResult, &type_spec_MobileBroadbandPinOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinOperationResult, &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandRadioStateChange = py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChange, &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandRadioStateChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChange, &type_spec_MobileBroadbandRadioStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChange, &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandRadioStateChangeTriggerDetails = py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTriggerDetails, &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandRadioStateChangeTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTriggerDetails, &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTriggerDetails, &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandSarManager = py::register_python_type(module.get(), type_name_MobileBroadbandSarManager, &type_spec_MobileBroadbandSarManager, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandSarManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSarManager, &type_spec_MobileBroadbandSarManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSarManager, &type_spec_MobileBroadbandSarManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandSlotInfo = py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfo, &type_spec_MobileBroadbandSlotInfo, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandSlotInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfo, &type_spec_MobileBroadbandSlotInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfo, &type_spec_MobileBroadbandSlotInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandSlotInfoChangedEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfoChangedEventArgs, &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandSlotInfoChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfoChangedEventArgs, &type_spec_MobileBroadbandSlotInfoChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfoChangedEventArgs, &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandSlotManager = py::register_python_type(module.get(), type_name_MobileBroadbandSlotManager, &type_spec_MobileBroadbandSlotManager, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandSlotManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotManager, &type_spec_MobileBroadbandSlotManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotManager, &type_spec_MobileBroadbandSlotManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandTransmissionStateChangedEventArgs = py::register_python_type(module.get(), type_name_MobileBroadbandTransmissionStateChangedEventArgs, &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandTransmissionStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandTransmissionStateChangedEventArgs, &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandTransmissionStateChangedEventArgs, &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandUicc = py::register_python_type(module.get(), type_name_MobileBroadbandUicc, &type_spec_MobileBroadbandUicc, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandUicc)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUicc, &type_spec_MobileBroadbandUicc, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUicc, &type_spec_MobileBroadbandUicc, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandUiccApp = py::register_python_type(module.get(), type_name_MobileBroadbandUiccApp, &type_spec_MobileBroadbandUiccApp, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandUiccApp)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccApp, &type_spec_MobileBroadbandUiccApp, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccApp, &type_spec_MobileBroadbandUiccApp, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandUiccAppReadRecordResult = py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppReadRecordResult, &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandUiccAppReadRecordResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppReadRecordResult, &type_spec_MobileBroadbandUiccAppReadRecordResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppReadRecordResult, &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandUiccAppRecordDetailsResult = py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppRecordDetailsResult, &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandUiccAppRecordDetailsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppRecordDetailsResult, &type_spec_MobileBroadbandUiccAppRecordDetailsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppRecordDetailsResult, &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandUiccAppsResult = py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppsResult, &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandUiccAppsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppsResult, &type_spec_MobileBroadbandUiccAppsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppsResult, &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorDataUsageTriggerDetails = py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTriggerDetails, &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorDataUsageTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTriggerDetails, &type_spec_NetworkOperatorDataUsageTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTriggerDetails, &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorNotificationEventDetails = py::register_python_type(module.get(), type_name_NetworkOperatorNotificationEventDetails, &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorNotificationEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationEventDetails, &type_spec_NetworkOperatorNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationEventDetails, &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorTetheringAccessPointConfiguration = py::register_python_type(module.get(), type_name_NetworkOperatorTetheringAccessPointConfiguration, &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorTetheringAccessPointConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringAccessPointConfiguration, &type_spec_NetworkOperatorTetheringAccessPointConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringAccessPointConfiguration, &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorTetheringClient = py::register_python_type(module.get(), type_name_NetworkOperatorTetheringClient, &type_spec_NetworkOperatorTetheringClient, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorTetheringClient)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringClient, &type_spec_NetworkOperatorTetheringClient, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringClient, &type_spec_NetworkOperatorTetheringClient, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorTetheringManager = py::register_python_type(module.get(), type_name_NetworkOperatorTetheringManager, &type_spec_NetworkOperatorTetheringManager, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorTetheringManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringManager, &type_spec_NetworkOperatorTetheringManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringManager, &type_spec_NetworkOperatorTetheringManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorTetheringOperationResult = py::register_python_type(module.get(), type_name_NetworkOperatorTetheringOperationResult, &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorTetheringOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringOperationResult, &type_spec_NetworkOperatorTetheringOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringOperationResult, &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProvisionFromXmlDocumentResults = py::register_python_type(module.get(), type_name_ProvisionFromXmlDocumentResults, &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), nullptr);
-    if (!state->type_ProvisionFromXmlDocumentResults)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProvisionFromXmlDocumentResults, &type_spec_ProvisionFromXmlDocumentResults, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProvisionFromXmlDocumentResults, &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProvisionedProfile = py::register_python_type(module.get(), type_name_ProvisionedProfile, &type_spec_ProvisionedProfile, object_bases.get(), nullptr);
-    if (!state->type_ProvisionedProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProvisionedProfile, &type_spec_ProvisionedProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProvisionedProfile, &type_spec_ProvisionedProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProvisioningAgent = py::register_python_type(module.get(), type_name_ProvisioningAgent, &type_spec_ProvisioningAgent, object_bases.get(), nullptr);
-    if (!state->type_ProvisioningAgent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProvisioningAgent, &type_spec_ProvisioningAgent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProvisioningAgent, &type_spec_ProvisioningAgent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TetheringEntitlementCheckTriggerDetails = py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTriggerDetails, &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_TetheringEntitlementCheckTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTriggerDetails, &type_spec_TetheringEntitlementCheckTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTriggerDetails, &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UssdMessage = py::register_python_type(module.get(), type_name_UssdMessage, &type_spec_UssdMessage, object_bases.get(), nullptr);
-    if (!state->type_UssdMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UssdMessage, &type_spec_UssdMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UssdMessage, &type_spec_UssdMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UssdReply = py::register_python_type(module.get(), type_name_UssdReply, &type_spec_UssdReply, object_bases.get(), nullptr);
-    if (!state->type_UssdReply)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UssdReply, &type_spec_UssdReply, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UssdReply, &type_spec_UssdReply, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UssdSession = py::register_python_type(module.get(), type_name_UssdSession, &type_spec_UssdSession, object_bases.get(), nullptr);
-    if (!state->type_UssdSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UssdSession, &type_spec_UssdSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UssdSession, &type_spec_UssdSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ESimProfileInstallProgress = py::register_python_type(module.get(), type_name_ESimProfileInstallProgress, &type_spec_ESimProfileInstallProgress, nullptr, nullptr);
-    if (!state->type_ESimProfileInstallProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ESimProfileInstallProgress, &type_spec_ESimProfileInstallProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ESimProfileInstallProgress, &type_spec_ESimProfileInstallProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProfileUsage = py::register_python_type(module.get(), type_name_ProfileUsage, &type_spec_ProfileUsage, nullptr, nullptr);
-    if (!state->type_ProfileUsage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProfileUsage, &type_spec_ProfileUsage, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProfileUsage, &type_spec_ProfileUsage, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESim>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESim;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESim is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimDiscoverEvent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimDiscoverResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimDownloadProfileMetadataResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimProfileMetadata;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimProfilePolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimServiceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimServiceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FdnAccessManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::FdnAccessManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HotspotAuthenticationContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HotspotAuthenticationEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HotspotCredentialsAuthenticationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownCSimFilePaths;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownRuimFilePaths;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownSimFilePaths;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownUSimFilePaths;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandAccount;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandAccountEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandAccountUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandAccountWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandAntennaSar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellCdma;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellGsm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellLte;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellNR;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellTdscdma;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellUmts;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCellsInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandCurrentSlotIndexChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceCommandResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceCommandSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceDataReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceDataSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandModem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandModemConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandModemIsolation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandNetwork;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandNetworkRegistrationStateChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPco;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPcoDataChangeTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPin;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPinLockStateChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPinLockStateChangeTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPinManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPinOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandRadioStateChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandRadioStateChangeTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandSarManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandSlotInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandSlotInfoChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandSlotManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandTransmissionStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandUicc;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandUiccApp;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandUiccAppReadRecordResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandUiccAppRecordDetailsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandUiccAppsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorDataUsageTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorNotificationEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorTetheringAccessPointConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorTetheringClient;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorTetheringManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorTetheringOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProvisionFromXmlDocumentResults;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProvisionedProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ProvisionedProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProvisioningAgent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ProvisioningAgent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TetheringEntitlementCheckTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::UssdMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UssdMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::UssdMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::UssdReply>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UssdReply;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::UssdReply is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::UssdSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UssdSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::UssdSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ESimProfileInstallProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::NetworkOperators;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::NetworkOperators");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProfileUsage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::NetworkOperators::ProfileUsage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

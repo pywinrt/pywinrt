@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Pwm::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_IPwmControllerProvider;
-        PyTypeObject* type_IPwmProvider;
-    };
-
     // ----- IPwmControllerProvider interface --------------------
     static constexpr const char* const type_name_IPwmControllerProvider = "IPwmControllerProvider";
 
@@ -475,46 +469,15 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     PyDoc_STRVAR(module_doc, "Windows::Devices::Pwm::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_IPwmControllerProvider);
-        Py_VISIT(state->type_IPwmProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_IPwmControllerProvider);
-        Py_CLEAR(state->type_IPwmProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Pwm_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Pwm::Provider
@@ -530,7 +493,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -543,67 +506,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_IPwmControllerProvider = py::register_python_type(module.get(), type_name_IPwmControllerProvider, &type_spec_IPwmControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_IPwmControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPwmControllerProvider, &type_spec_IPwmControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPwmControllerProvider, &type_spec_IPwmControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPwmProvider = py::register_python_type(module.get(), type_name_IPwmProvider, &type_spec_IPwmProvider, object_bases.get(), nullptr);
-    if (!state->type_IPwmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPwmProvider, &type_spec_IPwmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPwmProvider, &type_spec_IPwmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Pwm::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Pwm::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPwmControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Pwm::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Pwm::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPwmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Pwm::Provider::IPwmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

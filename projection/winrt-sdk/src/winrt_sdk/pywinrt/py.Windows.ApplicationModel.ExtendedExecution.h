@@ -58,14 +58,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
+        static constexpr const char* type_name = "ExtendedExecutionRevokedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession>
+    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
+        static constexpr const char* type_name = "ExtendedExecutionSession";
     };
 }

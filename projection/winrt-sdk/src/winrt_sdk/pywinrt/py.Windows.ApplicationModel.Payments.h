@@ -139,105 +139,122 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentAddress>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentAddress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentAddress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentCanMakePaymentResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentCurrencyAmount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentDetailsModifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentItem>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentMediator>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMediator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentMediator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentMerchantInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentMethodData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestChangedArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestChangedResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentRequestSubmitResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentResponse";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentShippingOption";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Payments::PaymentToken>
+    struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentToken>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
+        static constexpr const char* type_name = "PaymentToken";
     };
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler>

@@ -102,8 +102,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter>
+    struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
+        static constexpr const char* type_name = "DateTimeFormatter";
     };
 }

@@ -119,51 +119,59 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "NotifyCollectionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "IBindableIterable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "IBindableIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "IBindableObservableVector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "IBindableVector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "IBindableVectorView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "INotifyCollectionChanged";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Interop::TypeName>
+    struct py_type<winrt::Windows::UI::Xaml::Interop::TypeName>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
+        static constexpr const char* type_name = "TypeName";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler>

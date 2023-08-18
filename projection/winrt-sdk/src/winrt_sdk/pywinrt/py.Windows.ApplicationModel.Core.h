@@ -71,62 +71,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::AppListEntry>
+    struct py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "AppListEntry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplication>
+    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "CoreApplication";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>
+    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "CoreApplicationView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>
+    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "CoreApplicationViewTitleBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "HostedViewClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::UnhandledError>
+    struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "UnhandledError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "UnhandledErrorDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
+    struct py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "ICoreApplicationUnhandledError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>
+    struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "IFrameworkView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
+    struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
+        static constexpr const char* type_name = "IFrameworkViewSource";
     };
 }

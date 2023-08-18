@@ -98,44 +98,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallManagerItemEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppInstallStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "AppUpdateOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
+        static constexpr const char* type_name = "GetEntitlementResult";
     };
 }

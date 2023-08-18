@@ -264,332 +264,387 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "CustomMapTileDataSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "HttpMapTileDataSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "LocalMapTileDataSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapActualCameraChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapActualCameraChangingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapBillboard";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapCamera";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapContextRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlBusinessLandmarkClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlBusinessLandmarkPointerEnteredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlBusinessLandmarkPointerExitedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlBusinessLandmarkRightTappedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlDataHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlTransitFeatureClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlTransitFeaturePointerEnteredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlTransitFeaturePointerExitedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapControlTransitFeatureRightTappedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapCustomExperience";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapCustomExperienceChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElement3D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementPointerEnteredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementPointerExitedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementsLayer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementsLayerClickEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementsLayerContextRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementsLayerPointerEnteredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapElementsLayerPointerExitedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapIcon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapInputEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapItemsControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapLayer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapModel3D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapPolygon";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapPolyline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapRightTappedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapRouteView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapScene";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapStyleSheet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapStyleSheetEntries";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapStyleSheetEntryStates";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTargetCameraChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileBitmapRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileBitmapRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileBitmapRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileDataSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileUriRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileUriRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapTileUriRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "StreetsideExperience";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "StreetsidePanorama";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>
+    struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
+        static constexpr const char* type_name = "MapZoomLevelRange";
     };
 }

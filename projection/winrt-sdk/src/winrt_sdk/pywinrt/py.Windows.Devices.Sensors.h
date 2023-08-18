@@ -212,398 +212,464 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Accelerometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Accelerometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Accelerometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AccelerometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AccelerometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::AccelerometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AccelerometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AccelerometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AccelerometerShakenEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ActivitySensor>
+    struct py_type<winrt::Windows::Devices::Sensors::ActivitySensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ActivitySensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ActivitySensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>
+    struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ActivitySensorReadingChangeReport";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ActivitySensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ActivitySensorTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>
+    struct py_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AdaptiveDimmingOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Altimeter>
+    struct py_type<winrt::Windows::Devices::Sensors::Altimeter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Altimeter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AltimeterReading>
+    struct py_type<winrt::Windows::Devices::Sensors::AltimeterReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AltimeterReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "AltimeterReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Barometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Barometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Barometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "BarometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::BarometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::BarometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "BarometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "BarometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Compass>
+    struct py_type<winrt::Windows::Devices::Sensors::Compass>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Compass";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "CompassDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::CompassReading>
+    struct py_type<winrt::Windows::Devices::Sensors::CompassReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "CompassReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "CompassReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Gyrometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Gyrometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Gyrometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "GyrometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::GyrometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::GyrometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "GyrometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "GyrometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HingeAngleReading>
+    struct py_type<winrt::Windows::Devices::Sensors::HingeAngleReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HingeAngleReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HingeAngleSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HingeAngleSensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceFeatures";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceSensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceSensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Inclinometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Inclinometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Inclinometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "InclinometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::InclinometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::InclinometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "InclinometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "InclinometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::LightSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::LightSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LightSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LightSensorDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::LightSensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::LightSensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LightSensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LightSensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>
+    struct py_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LockOnLeaveOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Magnetometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Magnetometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Magnetometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "MagnetometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::MagnetometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::MagnetometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "MagnetometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "MagnetometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::OrientationSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::OrientationSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OrientationSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OrientationSensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OrientationSensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::Pedometer>
+    struct py_type<winrt::Windows::Devices::Sensors::Pedometer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "Pedometer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::PedometerDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::PedometerDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "PedometerDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::PedometerReading>
+    struct py_type<winrt::Windows::Devices::Sensors::PedometerReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "PedometerReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "PedometerReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ProximitySensor>
+    struct py_type<winrt::Windows::Devices::Sensors::ProximitySensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ProximitySensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ProximitySensorDataThreshold";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>
+    struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ProximitySensorDisplayOnOffController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>
+    struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ProximitySensorReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ProximitySensorReadingChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "SensorDataThresholdTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::SensorQuaternion>
+    struct py_type<winrt::Windows::Devices::Sensors::SensorQuaternion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "SensorQuaternion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>
+    struct py_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "SensorRotationMatrix";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>
+    struct py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "SimpleOrientationSensor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "SimpleOrientationSensorOrientationChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>
+    struct py_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "WakeOnApproachOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>
+    struct py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "ISensorDataThreshold";
     };
 }

@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::AppService
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppServiceCatalog;
-        PyTypeObject* type_AppServiceClosedEventArgs;
-        PyTypeObject* type_AppServiceConnection;
-        PyTypeObject* type_AppServiceDeferral;
-        PyTypeObject* type_AppServiceRequest;
-        PyTypeObject* type_AppServiceRequestReceivedEventArgs;
-        PyTypeObject* type_AppServiceResponse;
-        PyTypeObject* type_AppServiceTriggerDetails;
-        PyTypeObject* type_StatelessAppServiceResponse;
-    };
-
     // ----- AppServiceCatalog class --------------------
     static constexpr const char* const type_name_AppServiceCatalog = "AppServiceCatalog";
 
@@ -1492,60 +1479,15 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::AppService");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppServiceCatalog);
-        Py_VISIT(state->type_AppServiceClosedEventArgs);
-        Py_VISIT(state->type_AppServiceConnection);
-        Py_VISIT(state->type_AppServiceDeferral);
-        Py_VISIT(state->type_AppServiceRequest);
-        Py_VISIT(state->type_AppServiceRequestReceivedEventArgs);
-        Py_VISIT(state->type_AppServiceResponse);
-        Py_VISIT(state->type_AppServiceTriggerDetails);
-        Py_VISIT(state->type_StatelessAppServiceResponse);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppServiceCatalog);
-        Py_CLEAR(state->type_AppServiceClosedEventArgs);
-        Py_CLEAR(state->type_AppServiceConnection);
-        Py_CLEAR(state->type_AppServiceDeferral);
-        Py_CLEAR(state->type_AppServiceRequest);
-        Py_CLEAR(state->type_AppServiceRequestReceivedEventArgs);
-        Py_CLEAR(state->type_AppServiceResponse);
-        Py_CLEAR(state->type_AppServiceTriggerDetails);
-        Py_CLEAR(state->type_StatelessAppServiceResponse);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_AppService",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::AppService
@@ -1561,7 +1503,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppService(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1574,270 +1516,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppService(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppServiceCatalog = py::register_python_type(module.get(), type_name_AppServiceCatalog, &type_spec_AppServiceCatalog, object_bases.get(), nullptr);
-    if (!state->type_AppServiceCatalog)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceCatalog, &type_spec_AppServiceCatalog, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceCatalog, &type_spec_AppServiceCatalog, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceClosedEventArgs = py::register_python_type(module.get(), type_name_AppServiceClosedEventArgs, &type_spec_AppServiceClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppServiceClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceClosedEventArgs, &type_spec_AppServiceClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceClosedEventArgs, &type_spec_AppServiceClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceConnection = py::register_python_type(module.get(), type_name_AppServiceConnection, &type_spec_AppServiceConnection, object_bases.get(), nullptr);
-    if (!state->type_AppServiceConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceConnection, &type_spec_AppServiceConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceConnection, &type_spec_AppServiceConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceDeferral = py::register_python_type(module.get(), type_name_AppServiceDeferral, &type_spec_AppServiceDeferral, object_bases.get(), nullptr);
-    if (!state->type_AppServiceDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceDeferral, &type_spec_AppServiceDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceDeferral, &type_spec_AppServiceDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceRequest = py::register_python_type(module.get(), type_name_AppServiceRequest, &type_spec_AppServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_AppServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceRequest, &type_spec_AppServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceRequest, &type_spec_AppServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceRequestReceivedEventArgs = py::register_python_type(module.get(), type_name_AppServiceRequestReceivedEventArgs, &type_spec_AppServiceRequestReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppServiceRequestReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceRequestReceivedEventArgs, &type_spec_AppServiceRequestReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceRequestReceivedEventArgs, &type_spec_AppServiceRequestReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceResponse = py::register_python_type(module.get(), type_name_AppServiceResponse, &type_spec_AppServiceResponse, object_bases.get(), nullptr);
-    if (!state->type_AppServiceResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceResponse, &type_spec_AppServiceResponse, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceResponse, &type_spec_AppServiceResponse, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppServiceTriggerDetails = py::register_python_type(module.get(), type_name_AppServiceTriggerDetails, &type_spec_AppServiceTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_AppServiceTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppServiceTriggerDetails, &type_spec_AppServiceTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppServiceTriggerDetails, &type_spec_AppServiceTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StatelessAppServiceResponse = py::register_python_type(module.get(), type_name_StatelessAppServiceResponse, &type_spec_StatelessAppServiceResponse, object_bases.get(), nullptr);
-    if (!state->type_StatelessAppServiceResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StatelessAppServiceResponse, &type_spec_StatelessAppServiceResponse, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StatelessAppServiceResponse, &type_spec_StatelessAppServiceResponse, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceCatalog;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceCatalog is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceRequestReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppServiceTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppService;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppService");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StatelessAppServiceResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

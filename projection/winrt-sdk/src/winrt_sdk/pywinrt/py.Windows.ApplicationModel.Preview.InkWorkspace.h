@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.inkworkspace";
+        static constexpr const char* type_name = "InkWorkspaceHostedAppManager";
     };
 }

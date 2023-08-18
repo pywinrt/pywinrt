@@ -59,20 +59,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>
+    struct py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
+        static constexpr const char* type_name = "ContentRestrictionsBrowsePolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>
+    struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
+        static constexpr const char* type_name = "RatedContentDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>
+    struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
+        static constexpr const char* type_name = "RatedContentRestrictions";
     };
 }

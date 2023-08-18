@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Search::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_RequestingFocusOnKeyboardInputEventArgs;
-        PyTypeObject* type_SearchSuggestion;
-        PyTypeObject* type_SearchSuggestionManager;
-        PyTypeObject* type_SearchSuggestionsRequestedEventArgs;
-    };
-
     // ----- RequestingFocusOnKeyboardInputEventArgs class --------------------
     static constexpr const char* const type_name_RequestingFocusOnKeyboardInputEventArgs = "RequestingFocusOnKeyboardInputEventArgs";
 
@@ -944,50 +936,15 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Search::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_RequestingFocusOnKeyboardInputEventArgs);
-        Py_VISIT(state->type_SearchSuggestion);
-        Py_VISIT(state->type_SearchSuggestionManager);
-        Py_VISIT(state->type_SearchSuggestionsRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_RequestingFocusOnKeyboardInputEventArgs);
-        Py_CLEAR(state->type_SearchSuggestion);
-        Py_CLEAR(state->type_SearchSuggestionManager);
-        Py_CLEAR(state->type_SearchSuggestionsRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Search_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Search::Core
@@ -1003,7 +960,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Search_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1016,125 +973,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Search_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_RequestingFocusOnKeyboardInputEventArgs = py::register_python_type(module.get(), type_name_RequestingFocusOnKeyboardInputEventArgs, &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RequestingFocusOnKeyboardInputEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RequestingFocusOnKeyboardInputEventArgs, &type_spec_RequestingFocusOnKeyboardInputEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RequestingFocusOnKeyboardInputEventArgs, &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestion = py::register_python_type(module.get(), type_name_SearchSuggestion, &type_spec_SearchSuggestion, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestion, &type_spec_SearchSuggestion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestion, &type_spec_SearchSuggestion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestionManager = py::register_python_type(module.get(), type_name_SearchSuggestionManager, &type_spec_SearchSuggestionManager, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionManager, &type_spec_SearchSuggestionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionManager, &type_spec_SearchSuggestionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchSuggestionsRequestedEventArgs = py::register_python_type(module.get(), type_name_SearchSuggestionsRequestedEventArgs, &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchSuggestionsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestedEventArgs, &type_spec_SearchSuggestionsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestedEventArgs, &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RequestingFocusOnKeyboardInputEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Search::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Search::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchSuggestionsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Spi::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_ProviderSpiConnectionSettings;
-        PyTypeObject* type_ISpiControllerProvider;
-        PyTypeObject* type_ISpiDeviceProvider;
-        PyTypeObject* type_ISpiProvider;
-    };
-
     // ----- ProviderSpiConnectionSettings class --------------------
     static constexpr const char* const type_name_ProviderSpiConnectionSettings = "ProviderSpiConnectionSettings";
 
@@ -872,50 +864,15 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     PyDoc_STRVAR(module_doc, "Windows::Devices::Spi::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ProviderSpiConnectionSettings);
-        Py_VISIT(state->type_ISpiControllerProvider);
-        Py_VISIT(state->type_ISpiDeviceProvider);
-        Py_VISIT(state->type_ISpiProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ProviderSpiConnectionSettings);
-        Py_CLEAR(state->type_ISpiControllerProvider);
-        Py_CLEAR(state->type_ISpiDeviceProvider);
-        Py_CLEAR(state->type_ISpiProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Spi_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Spi::Provider
@@ -931,7 +888,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -944,125 +901,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ProviderSpiConnectionSettings = py::register_python_type(module.get(), type_name_ProviderSpiConnectionSettings, &type_spec_ProviderSpiConnectionSettings, object_bases.get(), nullptr);
-    if (!state->type_ProviderSpiConnectionSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProviderSpiConnectionSettings, &type_spec_ProviderSpiConnectionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProviderSpiConnectionSettings, &type_spec_ProviderSpiConnectionSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpiControllerProvider = py::register_python_type(module.get(), type_name_ISpiControllerProvider, &type_spec_ISpiControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_ISpiControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpiControllerProvider, &type_spec_ISpiControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpiControllerProvider, &type_spec_ISpiControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpiDeviceProvider = py::register_python_type(module.get(), type_name_ISpiDeviceProvider, &type_spec_ISpiDeviceProvider, object_bases.get(), nullptr);
-    if (!state->type_ISpiDeviceProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpiDeviceProvider, &type_spec_ISpiDeviceProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpiDeviceProvider, &type_spec_ISpiDeviceProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpiProvider = py::register_python_type(module.get(), type_name_ISpiProvider, &type_spec_ISpiProvider, object_bases.get(), nullptr);
-    if (!state->type_ISpiProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpiProvider, &type_spec_ISpiProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpiProvider, &type_spec_ISpiProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProviderSpiConnectionSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpiControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpiDeviceProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Spi::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Spi::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpiProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Spi::Provider::ISpiProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

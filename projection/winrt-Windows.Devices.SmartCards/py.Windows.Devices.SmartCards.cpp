@@ -6,39 +6,6 @@
 
 namespace py::cpp::Windows::Devices::SmartCards
 {
-    struct module_state
-    {
-        PyTypeObject* type_CardAddedEventArgs;
-        PyTypeObject* type_CardRemovedEventArgs;
-        PyTypeObject* type_KnownSmartCardAppletIds;
-        PyTypeObject* type_SmartCard;
-        PyTypeObject* type_SmartCardAppletIdGroup;
-        PyTypeObject* type_SmartCardAppletIdGroupRegistration;
-        PyTypeObject* type_SmartCardAutomaticResponseApdu;
-        PyTypeObject* type_SmartCardChallengeContext;
-        PyTypeObject* type_SmartCardConnection;
-        PyTypeObject* type_SmartCardCryptogramGenerator;
-        PyTypeObject* type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
-        PyTypeObject* type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
-        PyTypeObject* type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
-        PyTypeObject* type_SmartCardCryptogramMaterialCharacteristics;
-        PyTypeObject* type_SmartCardCryptogramMaterialPackageCharacteristics;
-        PyTypeObject* type_SmartCardCryptogramMaterialPossessionProof;
-        PyTypeObject* type_SmartCardCryptogramPlacementStep;
-        PyTypeObject* type_SmartCardCryptogramStorageKeyCharacteristics;
-        PyTypeObject* type_SmartCardCryptogramStorageKeyInfo;
-        PyTypeObject* type_SmartCardEmulator;
-        PyTypeObject* type_SmartCardEmulatorApduReceivedEventArgs;
-        PyTypeObject* type_SmartCardEmulatorConnectionDeactivatedEventArgs;
-        PyTypeObject* type_SmartCardEmulatorConnectionProperties;
-        PyTypeObject* type_SmartCardPinPolicy;
-        PyTypeObject* type_SmartCardPinResetDeferral;
-        PyTypeObject* type_SmartCardPinResetRequest;
-        PyTypeObject* type_SmartCardProvisioning;
-        PyTypeObject* type_SmartCardReader;
-        PyTypeObject* type_SmartCardTriggerDetails;
-    };
-
     // ----- CardAddedEventArgs class --------------------
     static constexpr const char* const type_name_CardAddedEventArgs = "CardAddedEventArgs";
 
@@ -7387,100 +7354,15 @@ namespace py::cpp::Windows::Devices::SmartCards
     PyDoc_STRVAR(module_doc, "Windows::Devices::SmartCards");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CardAddedEventArgs);
-        Py_VISIT(state->type_CardRemovedEventArgs);
-        Py_VISIT(state->type_KnownSmartCardAppletIds);
-        Py_VISIT(state->type_SmartCard);
-        Py_VISIT(state->type_SmartCardAppletIdGroup);
-        Py_VISIT(state->type_SmartCardAppletIdGroupRegistration);
-        Py_VISIT(state->type_SmartCardAutomaticResponseApdu);
-        Py_VISIT(state->type_SmartCardChallengeContext);
-        Py_VISIT(state->type_SmartCardConnection);
-        Py_VISIT(state->type_SmartCardCryptogramGenerator);
-        Py_VISIT(state->type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult);
-        Py_VISIT(state->type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult);
-        Py_VISIT(state->type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult);
-        Py_VISIT(state->type_SmartCardCryptogramMaterialCharacteristics);
-        Py_VISIT(state->type_SmartCardCryptogramMaterialPackageCharacteristics);
-        Py_VISIT(state->type_SmartCardCryptogramMaterialPossessionProof);
-        Py_VISIT(state->type_SmartCardCryptogramPlacementStep);
-        Py_VISIT(state->type_SmartCardCryptogramStorageKeyCharacteristics);
-        Py_VISIT(state->type_SmartCardCryptogramStorageKeyInfo);
-        Py_VISIT(state->type_SmartCardEmulator);
-        Py_VISIT(state->type_SmartCardEmulatorApduReceivedEventArgs);
-        Py_VISIT(state->type_SmartCardEmulatorConnectionDeactivatedEventArgs);
-        Py_VISIT(state->type_SmartCardEmulatorConnectionProperties);
-        Py_VISIT(state->type_SmartCardPinPolicy);
-        Py_VISIT(state->type_SmartCardPinResetDeferral);
-        Py_VISIT(state->type_SmartCardPinResetRequest);
-        Py_VISIT(state->type_SmartCardProvisioning);
-        Py_VISIT(state->type_SmartCardReader);
-        Py_VISIT(state->type_SmartCardTriggerDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CardAddedEventArgs);
-        Py_CLEAR(state->type_CardRemovedEventArgs);
-        Py_CLEAR(state->type_KnownSmartCardAppletIds);
-        Py_CLEAR(state->type_SmartCard);
-        Py_CLEAR(state->type_SmartCardAppletIdGroup);
-        Py_CLEAR(state->type_SmartCardAppletIdGroupRegistration);
-        Py_CLEAR(state->type_SmartCardAutomaticResponseApdu);
-        Py_CLEAR(state->type_SmartCardChallengeContext);
-        Py_CLEAR(state->type_SmartCardConnection);
-        Py_CLEAR(state->type_SmartCardCryptogramGenerator);
-        Py_CLEAR(state->type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult);
-        Py_CLEAR(state->type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult);
-        Py_CLEAR(state->type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult);
-        Py_CLEAR(state->type_SmartCardCryptogramMaterialCharacteristics);
-        Py_CLEAR(state->type_SmartCardCryptogramMaterialPackageCharacteristics);
-        Py_CLEAR(state->type_SmartCardCryptogramMaterialPossessionProof);
-        Py_CLEAR(state->type_SmartCardCryptogramPlacementStep);
-        Py_CLEAR(state->type_SmartCardCryptogramStorageKeyCharacteristics);
-        Py_CLEAR(state->type_SmartCardCryptogramStorageKeyInfo);
-        Py_CLEAR(state->type_SmartCardEmulator);
-        Py_CLEAR(state->type_SmartCardEmulatorApduReceivedEventArgs);
-        Py_CLEAR(state->type_SmartCardEmulatorConnectionDeactivatedEventArgs);
-        Py_CLEAR(state->type_SmartCardEmulatorConnectionProperties);
-        Py_CLEAR(state->type_SmartCardPinPolicy);
-        Py_CLEAR(state->type_SmartCardPinResetDeferral);
-        Py_CLEAR(state->type_SmartCardPinResetRequest);
-        Py_CLEAR(state->type_SmartCardProvisioning);
-        Py_CLEAR(state->type_SmartCardReader);
-        Py_CLEAR(state->type_SmartCardTriggerDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_SmartCards",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::SmartCards
@@ -7496,7 +7378,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SmartCards(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7509,17 +7391,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SmartCards(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CardAddedEventArgs = py::register_python_type(module.get(), type_name_CardAddedEventArgs, &type_spec_CardAddedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CardAddedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CardAddedEventArgs, &type_spec_CardAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CardAddedEventArgs, &type_spec_CardAddedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CardRemovedEventArgs = py::register_python_type(module.get(), type_name_CardRemovedEventArgs, &type_spec_CardRemovedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CardRemovedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CardRemovedEventArgs, &type_spec_CardRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CardRemovedEventArgs, &type_spec_CardRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7530,14 +7415,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SmartCards(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownSmartCardAppletIds = py::register_python_type(module.get(), type_name_KnownSmartCardAppletIds, &type_spec_KnownSmartCardAppletIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSmartCardAppletIds_Meta.get()));
-    if (!state->type_KnownSmartCardAppletIds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownSmartCardAppletIds, &type_spec_KnownSmartCardAppletIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSmartCardAppletIds_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownSmartCardAppletIds, &type_spec_KnownSmartCardAppletIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSmartCardAppletIds_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCard = py::register_python_type(module.get(), type_name_SmartCard, &type_spec_SmartCard, object_bases.get(), nullptr);
-    if (!state->type_SmartCard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCard, &type_spec_SmartCard, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCard, &type_spec_SmartCard, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7548,92 +7439,137 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SmartCards(void) noexcept
         return nullptr;
     }
 
-    state->type_SmartCardAppletIdGroup = py::register_python_type(module.get(), type_name_SmartCardAppletIdGroup, &type_spec_SmartCardAppletIdGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardAppletIdGroup_Meta.get()));
-    if (!state->type_SmartCardAppletIdGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardAppletIdGroup, &type_spec_SmartCardAppletIdGroup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardAppletIdGroup_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardAppletIdGroup, &type_spec_SmartCardAppletIdGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardAppletIdGroup_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardAppletIdGroupRegistration = py::register_python_type(module.get(), type_name_SmartCardAppletIdGroupRegistration, &type_spec_SmartCardAppletIdGroupRegistration, object_bases.get(), nullptr);
-    if (!state->type_SmartCardAppletIdGroupRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardAppletIdGroupRegistration, &type_spec_SmartCardAppletIdGroupRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardAppletIdGroupRegistration, &type_spec_SmartCardAppletIdGroupRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardAutomaticResponseApdu = py::register_python_type(module.get(), type_name_SmartCardAutomaticResponseApdu, &type_spec_SmartCardAutomaticResponseApdu, object_bases.get(), nullptr);
-    if (!state->type_SmartCardAutomaticResponseApdu)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardAutomaticResponseApdu, &type_spec_SmartCardAutomaticResponseApdu, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardAutomaticResponseApdu, &type_spec_SmartCardAutomaticResponseApdu, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardChallengeContext = py::register_python_type(module.get(), type_name_SmartCardChallengeContext, &type_spec_SmartCardChallengeContext, object_bases.get(), nullptr);
-    if (!state->type_SmartCardChallengeContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardChallengeContext, &type_spec_SmartCardChallengeContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardChallengeContext, &type_spec_SmartCardChallengeContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardConnection = py::register_python_type(module.get(), type_name_SmartCardConnection, &type_spec_SmartCardConnection, object_bases.get(), nullptr);
-    if (!state->type_SmartCardConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardConnection, &type_spec_SmartCardConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardConnection, &type_spec_SmartCardConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramGenerator = py::register_python_type(module.get(), type_name_SmartCardCryptogramGenerator, &type_spec_SmartCardCryptogramGenerator, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramGenerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGenerator, &type_spec_SmartCardCryptogramGenerator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGenerator, &type_spec_SmartCardCryptogramGenerator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult = py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult = py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult = py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, &type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramMaterialCharacteristics = py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialCharacteristics, &type_spec_SmartCardCryptogramMaterialCharacteristics, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramMaterialCharacteristics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialCharacteristics, &type_spec_SmartCardCryptogramMaterialCharacteristics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialCharacteristics, &type_spec_SmartCardCryptogramMaterialCharacteristics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramMaterialPackageCharacteristics = py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPackageCharacteristics, &type_spec_SmartCardCryptogramMaterialPackageCharacteristics, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramMaterialPackageCharacteristics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPackageCharacteristics, &type_spec_SmartCardCryptogramMaterialPackageCharacteristics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPackageCharacteristics, &type_spec_SmartCardCryptogramMaterialPackageCharacteristics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramMaterialPossessionProof = py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPossessionProof, &type_spec_SmartCardCryptogramMaterialPossessionProof, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramMaterialPossessionProof)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPossessionProof, &type_spec_SmartCardCryptogramMaterialPossessionProof, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramMaterialPossessionProof, &type_spec_SmartCardCryptogramMaterialPossessionProof, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramPlacementStep = py::register_python_type(module.get(), type_name_SmartCardCryptogramPlacementStep, &type_spec_SmartCardCryptogramPlacementStep, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramPlacementStep)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramPlacementStep, &type_spec_SmartCardCryptogramPlacementStep, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramPlacementStep, &type_spec_SmartCardCryptogramPlacementStep, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramStorageKeyCharacteristics = py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyCharacteristics, &type_spec_SmartCardCryptogramStorageKeyCharacteristics, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramStorageKeyCharacteristics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyCharacteristics, &type_spec_SmartCardCryptogramStorageKeyCharacteristics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyCharacteristics, &type_spec_SmartCardCryptogramStorageKeyCharacteristics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardCryptogramStorageKeyInfo = py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyInfo, &type_spec_SmartCardCryptogramStorageKeyInfo, object_bases.get(), nullptr);
-    if (!state->type_SmartCardCryptogramStorageKeyInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyInfo, &type_spec_SmartCardCryptogramStorageKeyInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardCryptogramStorageKeyInfo, &type_spec_SmartCardCryptogramStorageKeyInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7644,733 +7580,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SmartCards(void) noexcept
         return nullptr;
     }
 
-    state->type_SmartCardEmulator = py::register_python_type(module.get(), type_name_SmartCardEmulator, &type_spec_SmartCardEmulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardEmulator_Meta.get()));
-    if (!state->type_SmartCardEmulator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulator, &type_spec_SmartCardEmulator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardEmulator_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulator, &type_spec_SmartCardEmulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartCardEmulator_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardEmulatorApduReceivedEventArgs = py::register_python_type(module.get(), type_name_SmartCardEmulatorApduReceivedEventArgs, &type_spec_SmartCardEmulatorApduReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SmartCardEmulatorApduReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorApduReceivedEventArgs, &type_spec_SmartCardEmulatorApduReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorApduReceivedEventArgs, &type_spec_SmartCardEmulatorApduReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardEmulatorConnectionDeactivatedEventArgs = py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionDeactivatedEventArgs, &type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SmartCardEmulatorConnectionDeactivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionDeactivatedEventArgs, &type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionDeactivatedEventArgs, &type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardEmulatorConnectionProperties = py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionProperties, &type_spec_SmartCardEmulatorConnectionProperties, object_bases.get(), nullptr);
-    if (!state->type_SmartCardEmulatorConnectionProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionProperties, &type_spec_SmartCardEmulatorConnectionProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardEmulatorConnectionProperties, &type_spec_SmartCardEmulatorConnectionProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardPinPolicy = py::register_python_type(module.get(), type_name_SmartCardPinPolicy, &type_spec_SmartCardPinPolicy, object_bases.get(), nullptr);
-    if (!state->type_SmartCardPinPolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardPinPolicy, &type_spec_SmartCardPinPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardPinPolicy, &type_spec_SmartCardPinPolicy, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardPinResetDeferral = py::register_python_type(module.get(), type_name_SmartCardPinResetDeferral, &type_spec_SmartCardPinResetDeferral, object_bases.get(), nullptr);
-    if (!state->type_SmartCardPinResetDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardPinResetDeferral, &type_spec_SmartCardPinResetDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardPinResetDeferral, &type_spec_SmartCardPinResetDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardPinResetRequest = py::register_python_type(module.get(), type_name_SmartCardPinResetRequest, &type_spec_SmartCardPinResetRequest, object_bases.get(), nullptr);
-    if (!state->type_SmartCardPinResetRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardPinResetRequest, &type_spec_SmartCardPinResetRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardPinResetRequest, &type_spec_SmartCardPinResetRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardProvisioning = py::register_python_type(module.get(), type_name_SmartCardProvisioning, &type_spec_SmartCardProvisioning, object_bases.get(), nullptr);
-    if (!state->type_SmartCardProvisioning)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardProvisioning, &type_spec_SmartCardProvisioning, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardProvisioning, &type_spec_SmartCardProvisioning, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardReader = py::register_python_type(module.get(), type_name_SmartCardReader, &type_spec_SmartCardReader, object_bases.get(), nullptr);
-    if (!state->type_SmartCardReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardReader, &type_spec_SmartCardReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardReader, &type_spec_SmartCardReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardTriggerDetails = py::register_python_type(module.get(), type_name_SmartCardTriggerDetails, &type_spec_SmartCardTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_SmartCardTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardTriggerDetails, &type_spec_SmartCardTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardTriggerDetails, &type_spec_SmartCardTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CardAddedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::CardAddedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CardRemovedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::CardRemovedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownSmartCardAppletIds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardAppletIdGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardAppletIdGroupRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardAutomaticResponseApdu;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardChallengeContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardChallengeContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramGenerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramMaterialCharacteristics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramMaterialPackageCharacteristics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramMaterialPossessionProof;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramPlacementStep;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramStorageKeyCharacteristics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardCryptogramStorageKeyInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardEmulator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardEmulator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardEmulatorApduReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardEmulatorConnectionDeactivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardEmulatorConnectionProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardPinPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardPinPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardPinResetDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardPinResetRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardProvisioning;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardProvisioning is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::SmartCards;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::SmartCards");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

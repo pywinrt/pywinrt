@@ -6,27 +6,6 @@
 
 namespace py::cpp::Windows::Security::Cryptography::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_AsymmetricAlgorithmNames;
-        PyTypeObject* type_AsymmetricKeyAlgorithmProvider;
-        PyTypeObject* type_CryptographicEngine;
-        PyTypeObject* type_CryptographicHash;
-        PyTypeObject* type_CryptographicKey;
-        PyTypeObject* type_EccCurveNames;
-        PyTypeObject* type_EncryptedAndAuthenticatedData;
-        PyTypeObject* type_HashAlgorithmNames;
-        PyTypeObject* type_HashAlgorithmProvider;
-        PyTypeObject* type_KeyDerivationAlgorithmNames;
-        PyTypeObject* type_KeyDerivationAlgorithmProvider;
-        PyTypeObject* type_KeyDerivationParameters;
-        PyTypeObject* type_MacAlgorithmNames;
-        PyTypeObject* type_MacAlgorithmProvider;
-        PyTypeObject* type_PersistedKeyProvider;
-        PyTypeObject* type_SymmetricAlgorithmNames;
-        PyTypeObject* type_SymmetricKeyAlgorithmProvider;
-    };
-
     // ----- AsymmetricAlgorithmNames class --------------------
     static constexpr const char* const type_name_AsymmetricAlgorithmNames = "AsymmetricAlgorithmNames";
 
@@ -5098,76 +5077,15 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AsymmetricAlgorithmNames);
-        Py_VISIT(state->type_AsymmetricKeyAlgorithmProvider);
-        Py_VISIT(state->type_CryptographicEngine);
-        Py_VISIT(state->type_CryptographicHash);
-        Py_VISIT(state->type_CryptographicKey);
-        Py_VISIT(state->type_EccCurveNames);
-        Py_VISIT(state->type_EncryptedAndAuthenticatedData);
-        Py_VISIT(state->type_HashAlgorithmNames);
-        Py_VISIT(state->type_HashAlgorithmProvider);
-        Py_VISIT(state->type_KeyDerivationAlgorithmNames);
-        Py_VISIT(state->type_KeyDerivationAlgorithmProvider);
-        Py_VISIT(state->type_KeyDerivationParameters);
-        Py_VISIT(state->type_MacAlgorithmNames);
-        Py_VISIT(state->type_MacAlgorithmProvider);
-        Py_VISIT(state->type_PersistedKeyProvider);
-        Py_VISIT(state->type_SymmetricAlgorithmNames);
-        Py_VISIT(state->type_SymmetricKeyAlgorithmProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AsymmetricAlgorithmNames);
-        Py_CLEAR(state->type_AsymmetricKeyAlgorithmProvider);
-        Py_CLEAR(state->type_CryptographicEngine);
-        Py_CLEAR(state->type_CryptographicHash);
-        Py_CLEAR(state->type_CryptographicKey);
-        Py_CLEAR(state->type_EccCurveNames);
-        Py_CLEAR(state->type_EncryptedAndAuthenticatedData);
-        Py_CLEAR(state->type_HashAlgorithmNames);
-        Py_CLEAR(state->type_HashAlgorithmProvider);
-        Py_CLEAR(state->type_KeyDerivationAlgorithmNames);
-        Py_CLEAR(state->type_KeyDerivationAlgorithmProvider);
-        Py_CLEAR(state->type_KeyDerivationParameters);
-        Py_CLEAR(state->type_MacAlgorithmNames);
-        Py_CLEAR(state->type_MacAlgorithmProvider);
-        Py_CLEAR(state->type_PersistedKeyProvider);
-        Py_CLEAR(state->type_SymmetricAlgorithmNames);
-        Py_CLEAR(state->type_SymmetricKeyAlgorithmProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Cryptography_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Cryptography::Core
@@ -5183,7 +5101,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5196,41 +5114,53 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AsymmetricAlgorithmNames_Meta{PyType_FromSpec(&type_spec_AsymmetricAlgorithmNames_Meta)};
     if (!type_AsymmetricAlgorithmNames_Meta)
     {
         return nullptr;
     }
 
-    state->type_AsymmetricAlgorithmNames = py::register_python_type(module.get(), type_name_AsymmetricAlgorithmNames, &type_spec_AsymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get()));
-    if (!state->type_AsymmetricAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AsymmetricAlgorithmNames, &type_spec_AsymmetricAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AsymmetricAlgorithmNames, &type_spec_AsymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AsymmetricKeyAlgorithmProvider = py::register_python_type(module.get(), type_name_AsymmetricKeyAlgorithmProvider, &type_spec_AsymmetricKeyAlgorithmProvider, object_bases.get(), nullptr);
-    if (!state->type_AsymmetricKeyAlgorithmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AsymmetricKeyAlgorithmProvider, &type_spec_AsymmetricKeyAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AsymmetricKeyAlgorithmProvider, &type_spec_AsymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CryptographicEngine = py::register_python_type(module.get(), type_name_CryptographicEngine, &type_spec_CryptographicEngine, object_bases.get(), nullptr);
-    if (!state->type_CryptographicEngine)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CryptographicEngine, &type_spec_CryptographicEngine, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CryptographicEngine, &type_spec_CryptographicEngine, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CryptographicHash = py::register_python_type(module.get(), type_name_CryptographicHash, &type_spec_CryptographicHash, object_bases.get(), nullptr);
-    if (!state->type_CryptographicHash)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CryptographicHash, &type_spec_CryptographicHash, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CryptographicHash, &type_spec_CryptographicHash, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CryptographicKey = py::register_python_type(module.get(), type_name_CryptographicKey, &type_spec_CryptographicKey, object_bases.get(), nullptr);
-    if (!state->type_CryptographicKey)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CryptographicKey, &type_spec_CryptographicKey, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CryptographicKey, &type_spec_CryptographicKey, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5241,14 +5171,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_EccCurveNames = py::register_python_type(module.get(), type_name_EccCurveNames, &type_spec_EccCurveNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get()));
-    if (!state->type_EccCurveNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EccCurveNames, &type_spec_EccCurveNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EccCurveNames, &type_spec_EccCurveNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EncryptedAndAuthenticatedData = py::register_python_type(module.get(), type_name_EncryptedAndAuthenticatedData, &type_spec_EncryptedAndAuthenticatedData, object_bases.get(), nullptr);
-    if (!state->type_EncryptedAndAuthenticatedData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EncryptedAndAuthenticatedData, &type_spec_EncryptedAndAuthenticatedData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EncryptedAndAuthenticatedData, &type_spec_EncryptedAndAuthenticatedData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5259,14 +5195,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_HashAlgorithmNames = py::register_python_type(module.get(), type_name_HashAlgorithmNames, &type_spec_HashAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get()));
-    if (!state->type_HashAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HashAlgorithmNames, &type_spec_HashAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HashAlgorithmNames, &type_spec_HashAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HashAlgorithmProvider = py::register_python_type(module.get(), type_name_HashAlgorithmProvider, &type_spec_HashAlgorithmProvider, object_bases.get(), nullptr);
-    if (!state->type_HashAlgorithmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HashAlgorithmProvider, &type_spec_HashAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HashAlgorithmProvider, &type_spec_HashAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5277,20 +5219,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_KeyDerivationAlgorithmNames = py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmNames, &type_spec_KeyDerivationAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get()));
-    if (!state->type_KeyDerivationAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmNames, &type_spec_KeyDerivationAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmNames, &type_spec_KeyDerivationAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyDerivationAlgorithmProvider = py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmProvider, &type_spec_KeyDerivationAlgorithmProvider, object_bases.get(), nullptr);
-    if (!state->type_KeyDerivationAlgorithmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmProvider, &type_spec_KeyDerivationAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyDerivationAlgorithmProvider, &type_spec_KeyDerivationAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyDerivationParameters = py::register_python_type(module.get(), type_name_KeyDerivationParameters, &type_spec_KeyDerivationParameters, object_bases.get(), nullptr);
-    if (!state->type_KeyDerivationParameters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyDerivationParameters, &type_spec_KeyDerivationParameters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyDerivationParameters, &type_spec_KeyDerivationParameters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5301,20 +5252,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_MacAlgorithmNames = py::register_python_type(module.get(), type_name_MacAlgorithmNames, &type_spec_MacAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get()));
-    if (!state->type_MacAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MacAlgorithmNames, &type_spec_MacAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MacAlgorithmNames, &type_spec_MacAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MacAlgorithmProvider = py::register_python_type(module.get(), type_name_MacAlgorithmProvider, &type_spec_MacAlgorithmProvider, object_bases.get(), nullptr);
-    if (!state->type_MacAlgorithmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MacAlgorithmProvider, &type_spec_MacAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MacAlgorithmProvider, &type_spec_MacAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PersistedKeyProvider = py::register_python_type(module.get(), type_name_PersistedKeyProvider, &type_spec_PersistedKeyProvider, object_bases.get(), nullptr);
-    if (!state->type_PersistedKeyProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PersistedKeyProvider, &type_spec_PersistedKeyProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PersistedKeyProvider, &type_spec_PersistedKeyProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -5325,409 +5285,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_SymmetricAlgorithmNames = py::register_python_type(module.get(), type_name_SymmetricAlgorithmNames, &type_spec_SymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get()));
-    if (!state->type_SymmetricAlgorithmNames)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SymmetricAlgorithmNames, &type_spec_SymmetricAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SymmetricAlgorithmNames, &type_spec_SymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SymmetricKeyAlgorithmProvider = py::register_python_type(module.get(), type_name_SymmetricKeyAlgorithmProvider, &type_spec_SymmetricKeyAlgorithmProvider, object_bases.get(), nullptr);
-    if (!state->type_SymmetricKeyAlgorithmProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SymmetricKeyAlgorithmProvider, &type_spec_SymmetricKeyAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SymmetricKeyAlgorithmProvider, &type_spec_SymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AsymmetricAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AsymmetricKeyAlgorithmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicEngine;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicEngine is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicHash;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicHash is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CryptographicKey;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::CryptographicKey is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EccCurveNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::EccCurveNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EncryptedAndAuthenticatedData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HashAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HashAlgorithmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyDerivationAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyDerivationAlgorithmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyDerivationParameters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MacAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MacAlgorithmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PersistedKeyProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SymmetricAlgorithmNames;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Cryptography::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Cryptography::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SymmetricKeyAlgorithmProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

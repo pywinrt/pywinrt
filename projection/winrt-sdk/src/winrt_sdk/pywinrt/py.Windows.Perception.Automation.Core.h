@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>
+    struct py_type<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.automation.core";
+        static constexpr const char* type_name = "CorePerceptionAutomation";
     };
 }

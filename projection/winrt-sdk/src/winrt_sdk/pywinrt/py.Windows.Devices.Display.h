@@ -72,8 +72,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Display::DisplayMonitor>
+    struct py_type<winrt::Windows::Devices::Display::DisplayMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.display";
+        static constexpr const char* type_name = "DisplayMonitor";
     };
 }

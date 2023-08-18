@@ -56,32 +56,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
+        static constexpr const char* type_name = "UserDataAccountPartnerAccountInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
+        static constexpr const char* type_name = "UserDataAccountProviderAddAccountOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
+        static constexpr const char* type_name = "UserDataAccountProviderResolveErrorsOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
+        static constexpr const char* type_name = "UserDataAccountProviderSettingsOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
+        static constexpr const char* type_name = "IUserDataAccountProviderOperation";
     };
 }

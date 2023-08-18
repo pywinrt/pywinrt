@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Resources::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_NamedResource;
-        PyTypeObject* type_ResourceCandidate;
-        PyTypeObject* type_ResourceCandidateVectorView;
-        PyTypeObject* type_ResourceContext;
-        PyTypeObject* type_ResourceContextLanguagesVectorView;
-        PyTypeObject* type_ResourceManager;
-        PyTypeObject* type_ResourceMap;
-        PyTypeObject* type_ResourceMapIterator;
-        PyTypeObject* type_ResourceMapMapView;
-        PyTypeObject* type_ResourceMapMapViewIterator;
-        PyTypeObject* type_ResourceQualifier;
-        PyTypeObject* type_ResourceQualifierMapView;
-        PyTypeObject* type_ResourceQualifierObservableMap;
-        PyTypeObject* type_ResourceQualifierVectorView;
-        PyTypeObject* type_ResourceLayoutInfo;
-    };
-
     // ----- NamedResource class --------------------
     static constexpr const char* const type_name_NamedResource = "NamedResource";
 
@@ -4704,72 +4685,15 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Resources::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_NamedResource);
-        Py_VISIT(state->type_ResourceCandidate);
-        Py_VISIT(state->type_ResourceCandidateVectorView);
-        Py_VISIT(state->type_ResourceContext);
-        Py_VISIT(state->type_ResourceContextLanguagesVectorView);
-        Py_VISIT(state->type_ResourceManager);
-        Py_VISIT(state->type_ResourceMap);
-        Py_VISIT(state->type_ResourceMapIterator);
-        Py_VISIT(state->type_ResourceMapMapView);
-        Py_VISIT(state->type_ResourceMapMapViewIterator);
-        Py_VISIT(state->type_ResourceQualifier);
-        Py_VISIT(state->type_ResourceQualifierMapView);
-        Py_VISIT(state->type_ResourceQualifierObservableMap);
-        Py_VISIT(state->type_ResourceQualifierVectorView);
-        Py_VISIT(state->type_ResourceLayoutInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_NamedResource);
-        Py_CLEAR(state->type_ResourceCandidate);
-        Py_CLEAR(state->type_ResourceCandidateVectorView);
-        Py_CLEAR(state->type_ResourceContext);
-        Py_CLEAR(state->type_ResourceContextLanguagesVectorView);
-        Py_CLEAR(state->type_ResourceManager);
-        Py_CLEAR(state->type_ResourceMap);
-        Py_CLEAR(state->type_ResourceMapIterator);
-        Py_CLEAR(state->type_ResourceMapMapView);
-        Py_CLEAR(state->type_ResourceMapMapViewIterator);
-        Py_CLEAR(state->type_ResourceQualifier);
-        Py_CLEAR(state->type_ResourceQualifierMapView);
-        Py_CLEAR(state->type_ResourceQualifierObservableMap);
-        Py_CLEAR(state->type_ResourceQualifierVectorView);
-        Py_CLEAR(state->type_ResourceLayoutInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Resources_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Resources::Core
@@ -4785,7 +4709,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources_Core(void) noexc
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4798,35 +4722,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources_Core(void) noexc
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_NamedResource = py::register_python_type(module.get(), type_name_NamedResource, &type_spec_NamedResource, object_bases.get(), nullptr);
-    if (!state->type_NamedResource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NamedResource, &type_spec_NamedResource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NamedResource, &type_spec_NamedResource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceCandidate = py::register_python_type(module.get(), type_name_ResourceCandidate, &type_spec_ResourceCandidate, object_bases.get(), nullptr);
-    if (!state->type_ResourceCandidate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceCandidate, &type_spec_ResourceCandidate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceCandidate, &type_spec_ResourceCandidate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceCandidateVectorView = py::register_python_type(module.get(), type_name_ResourceCandidateVectorView, &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr);
-    if (!state->type_ResourceCandidateVectorView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceCandidateVectorView, &type_spec_ResourceCandidateVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceCandidateVectorView, &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceContext = py::register_python_type(module.get(), type_name_ResourceContext, &type_spec_ResourceContext, object_bases.get(), nullptr);
-    if (!state->type_ResourceContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceContext, &type_spec_ResourceContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceContext, &type_spec_ResourceContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceContextLanguagesVectorView = py::register_python_type(module.get(), type_name_ResourceContextLanguagesVectorView, &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr);
-    if (!state->type_ResourceContextLanguagesVectorView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceContextLanguagesVectorView, &type_spec_ResourceContextLanguagesVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceContextLanguagesVectorView, &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4837,411 +4773,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources_Core(void) noexc
         return nullptr;
     }
 
-    state->type_ResourceManager = py::register_python_type(module.get(), type_name_ResourceManager, &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get()));
-    if (!state->type_ResourceManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceManager, &type_spec_ResourceManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceManager, &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceMap = py::register_python_type(module.get(), type_name_ResourceMap, &type_spec_ResourceMap, object_bases.get(), nullptr);
-    if (!state->type_ResourceMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceMap, &type_spec_ResourceMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceMap, &type_spec_ResourceMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceMapIterator = py::register_python_type(module.get(), type_name_ResourceMapIterator, &type_spec_ResourceMapIterator, object_bases.get(), nullptr);
-    if (!state->type_ResourceMapIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceMapIterator, &type_spec_ResourceMapIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceMapIterator, &type_spec_ResourceMapIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceMapMapView = py::register_python_type(module.get(), type_name_ResourceMapMapView, &type_spec_ResourceMapMapView, object_bases.get(), nullptr);
-    if (!state->type_ResourceMapMapView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceMapMapView, &type_spec_ResourceMapMapView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceMapMapView, &type_spec_ResourceMapMapView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceMapMapViewIterator = py::register_python_type(module.get(), type_name_ResourceMapMapViewIterator, &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr);
-    if (!state->type_ResourceMapMapViewIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceMapMapViewIterator, &type_spec_ResourceMapMapViewIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceMapMapViewIterator, &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceQualifier = py::register_python_type(module.get(), type_name_ResourceQualifier, &type_spec_ResourceQualifier, object_bases.get(), nullptr);
-    if (!state->type_ResourceQualifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceQualifier, &type_spec_ResourceQualifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceQualifier, &type_spec_ResourceQualifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceQualifierMapView = py::register_python_type(module.get(), type_name_ResourceQualifierMapView, &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr);
-    if (!state->type_ResourceQualifierMapView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierMapView, &type_spec_ResourceQualifierMapView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierMapView, &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceQualifierObservableMap = py::register_python_type(module.get(), type_name_ResourceQualifierObservableMap, &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr);
-    if (!state->type_ResourceQualifierObservableMap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierObservableMap, &type_spec_ResourceQualifierObservableMap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierObservableMap, &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceQualifierVectorView = py::register_python_type(module.get(), type_name_ResourceQualifierVectorView, &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr);
-    if (!state->type_ResourceQualifierVectorView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierVectorView, &type_spec_ResourceQualifierVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceQualifierVectorView, &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ResourceLayoutInfo = py::register_python_type(module.get(), type_name_ResourceLayoutInfo, &type_spec_ResourceLayoutInfo, nullptr, nullptr);
-    if (!state->type_ResourceLayoutInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ResourceLayoutInfo, &type_spec_ResourceLayoutInfo, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ResourceLayoutInfo, &type_spec_ResourceLayoutInfo, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NamedResource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::NamedResource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceCandidate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceCandidateVectorView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceContextLanguagesVectorView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceMapIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceMapMapView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceMapMapViewIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceQualifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceQualifierMapView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceQualifierObservableMap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceQualifierVectorView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Resources::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Resources::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ResourceLayoutInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

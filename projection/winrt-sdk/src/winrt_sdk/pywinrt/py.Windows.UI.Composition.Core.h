@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Core::CompositorController>
+    struct py_type<winrt::Windows::UI::Composition::Core::CompositorController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.core";
+        static constexpr const char* type_name = "CompositorController";
     };
 }

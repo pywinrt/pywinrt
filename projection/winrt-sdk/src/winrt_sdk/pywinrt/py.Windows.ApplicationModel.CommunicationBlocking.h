@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>
+    struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
+        static constexpr const char* type_name = "CommunicationBlockingAccessManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>
+    struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
+        static constexpr const char* type_name = "CommunicationBlockingAppManager";
     };
 }

@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::Security::Authentication::Web::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_WebAccountClientView;
-        PyTypeObject* type_WebAccountManager;
-        PyTypeObject* type_WebAccountProviderAddAccountOperation;
-        PyTypeObject* type_WebAccountProviderDeleteAccountOperation;
-        PyTypeObject* type_WebAccountProviderGetTokenSilentOperation;
-        PyTypeObject* type_WebAccountProviderManageAccountOperation;
-        PyTypeObject* type_WebAccountProviderRequestTokenOperation;
-        PyTypeObject* type_WebAccountProviderRetrieveCookiesOperation;
-        PyTypeObject* type_WebAccountProviderSignOutAccountOperation;
-        PyTypeObject* type_WebAccountProviderTriggerDetails;
-        PyTypeObject* type_WebProviderTokenRequest;
-        PyTypeObject* type_WebProviderTokenResponse;
-        PyTypeObject* type_IWebAccountProviderBaseReportOperation;
-        PyTypeObject* type_IWebAccountProviderOperation;
-        PyTypeObject* type_IWebAccountProviderSilentReportOperation;
-        PyTypeObject* type_IWebAccountProviderTokenObjects;
-        PyTypeObject* type_IWebAccountProviderTokenObjects2;
-        PyTypeObject* type_IWebAccountProviderTokenOperation;
-        PyTypeObject* type_IWebAccountProviderUIReportOperation;
-    };
-
     // ----- WebAccountClientView class --------------------
     static constexpr const char* const type_name_WebAccountClientView = "WebAccountClientView";
 
@@ -4021,80 +3998,15 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WebAccountClientView);
-        Py_VISIT(state->type_WebAccountManager);
-        Py_VISIT(state->type_WebAccountProviderAddAccountOperation);
-        Py_VISIT(state->type_WebAccountProviderDeleteAccountOperation);
-        Py_VISIT(state->type_WebAccountProviderGetTokenSilentOperation);
-        Py_VISIT(state->type_WebAccountProviderManageAccountOperation);
-        Py_VISIT(state->type_WebAccountProviderRequestTokenOperation);
-        Py_VISIT(state->type_WebAccountProviderRetrieveCookiesOperation);
-        Py_VISIT(state->type_WebAccountProviderSignOutAccountOperation);
-        Py_VISIT(state->type_WebAccountProviderTriggerDetails);
-        Py_VISIT(state->type_WebProviderTokenRequest);
-        Py_VISIT(state->type_WebProviderTokenResponse);
-        Py_VISIT(state->type_IWebAccountProviderBaseReportOperation);
-        Py_VISIT(state->type_IWebAccountProviderOperation);
-        Py_VISIT(state->type_IWebAccountProviderSilentReportOperation);
-        Py_VISIT(state->type_IWebAccountProviderTokenObjects);
-        Py_VISIT(state->type_IWebAccountProviderTokenObjects2);
-        Py_VISIT(state->type_IWebAccountProviderTokenOperation);
-        Py_VISIT(state->type_IWebAccountProviderUIReportOperation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WebAccountClientView);
-        Py_CLEAR(state->type_WebAccountManager);
-        Py_CLEAR(state->type_WebAccountProviderAddAccountOperation);
-        Py_CLEAR(state->type_WebAccountProviderDeleteAccountOperation);
-        Py_CLEAR(state->type_WebAccountProviderGetTokenSilentOperation);
-        Py_CLEAR(state->type_WebAccountProviderManageAccountOperation);
-        Py_CLEAR(state->type_WebAccountProviderRequestTokenOperation);
-        Py_CLEAR(state->type_WebAccountProviderRetrieveCookiesOperation);
-        Py_CLEAR(state->type_WebAccountProviderSignOutAccountOperation);
-        Py_CLEAR(state->type_WebAccountProviderTriggerDetails);
-        Py_CLEAR(state->type_WebProviderTokenRequest);
-        Py_CLEAR(state->type_WebProviderTokenResponse);
-        Py_CLEAR(state->type_IWebAccountProviderBaseReportOperation);
-        Py_CLEAR(state->type_IWebAccountProviderOperation);
-        Py_CLEAR(state->type_IWebAccountProviderSilentReportOperation);
-        Py_CLEAR(state->type_IWebAccountProviderTokenObjects);
-        Py_CLEAR(state->type_IWebAccountProviderTokenObjects2);
-        Py_CLEAR(state->type_IWebAccountProviderTokenOperation);
-        Py_CLEAR(state->type_IWebAccountProviderUIReportOperation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_Authentication_Web_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::Authentication::Web::Provider
@@ -4110,7 +4022,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Provider(void) 
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4123,560 +4035,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Provider(void) 
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WebAccountClientView = py::register_python_type(module.get(), type_name_WebAccountClientView, &type_spec_WebAccountClientView, object_bases.get(), nullptr);
-    if (!state->type_WebAccountClientView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountClientView, &type_spec_WebAccountClientView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountClientView, &type_spec_WebAccountClientView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountManager = py::register_python_type(module.get(), type_name_WebAccountManager, &type_spec_WebAccountManager, object_bases.get(), nullptr);
-    if (!state->type_WebAccountManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountManager, &type_spec_WebAccountManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountManager, &type_spec_WebAccountManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderAddAccountOperation = py::register_python_type(module.get(), type_name_WebAccountProviderAddAccountOperation, &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderAddAccountOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderAddAccountOperation, &type_spec_WebAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderAddAccountOperation, &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderDeleteAccountOperation = py::register_python_type(module.get(), type_name_WebAccountProviderDeleteAccountOperation, &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderDeleteAccountOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderDeleteAccountOperation, &type_spec_WebAccountProviderDeleteAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderDeleteAccountOperation, &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderGetTokenSilentOperation = py::register_python_type(module.get(), type_name_WebAccountProviderGetTokenSilentOperation, &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderGetTokenSilentOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderGetTokenSilentOperation, &type_spec_WebAccountProviderGetTokenSilentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderGetTokenSilentOperation, &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderManageAccountOperation = py::register_python_type(module.get(), type_name_WebAccountProviderManageAccountOperation, &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderManageAccountOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderManageAccountOperation, &type_spec_WebAccountProviderManageAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderManageAccountOperation, &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderRequestTokenOperation = py::register_python_type(module.get(), type_name_WebAccountProviderRequestTokenOperation, &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderRequestTokenOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderRequestTokenOperation, &type_spec_WebAccountProviderRequestTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderRequestTokenOperation, &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderRetrieveCookiesOperation = py::register_python_type(module.get(), type_name_WebAccountProviderRetrieveCookiesOperation, &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderRetrieveCookiesOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderRetrieveCookiesOperation, &type_spec_WebAccountProviderRetrieveCookiesOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderRetrieveCookiesOperation, &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderSignOutAccountOperation = py::register_python_type(module.get(), type_name_WebAccountProviderSignOutAccountOperation, &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderSignOutAccountOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderSignOutAccountOperation, &type_spec_WebAccountProviderSignOutAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderSignOutAccountOperation, &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderTriggerDetails = py::register_python_type(module.get(), type_name_WebAccountProviderTriggerDetails, &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderTriggerDetails, &type_spec_WebAccountProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderTriggerDetails, &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebProviderTokenRequest = py::register_python_type(module.get(), type_name_WebProviderTokenRequest, &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr);
-    if (!state->type_WebProviderTokenRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebProviderTokenRequest, &type_spec_WebProviderTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebProviderTokenRequest, &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebProviderTokenResponse = py::register_python_type(module.get(), type_name_WebProviderTokenResponse, &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr);
-    if (!state->type_WebProviderTokenResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebProviderTokenResponse, &type_spec_WebProviderTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebProviderTokenResponse, &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderBaseReportOperation = py::register_python_type(module.get(), type_name_IWebAccountProviderBaseReportOperation, &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderBaseReportOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderBaseReportOperation, &type_spec_IWebAccountProviderBaseReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderBaseReportOperation, &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderOperation = py::register_python_type(module.get(), type_name_IWebAccountProviderOperation, &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderOperation, &type_spec_IWebAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderOperation, &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderSilentReportOperation = py::register_python_type(module.get(), type_name_IWebAccountProviderSilentReportOperation, &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderSilentReportOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderSilentReportOperation, &type_spec_IWebAccountProviderSilentReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderSilentReportOperation, &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderTokenObjects = py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects, &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderTokenObjects)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects, &type_spec_IWebAccountProviderTokenObjects, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects, &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderTokenObjects2 = py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects2, &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderTokenObjects2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects2, &type_spec_IWebAccountProviderTokenObjects2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects2, &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderTokenOperation = py::register_python_type(module.get(), type_name_IWebAccountProviderTokenOperation, &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderTokenOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenOperation, &type_spec_IWebAccountProviderTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenOperation, &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderUIReportOperation = py::register_python_type(module.get(), type_name_IWebAccountProviderUIReportOperation, &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderUIReportOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderUIReportOperation, &type_spec_IWebAccountProviderUIReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderUIReportOperation, &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountClientView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderAddAccountOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderDeleteAccountOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderGetTokenSilentOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderManageAccountOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderRequestTokenOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderRetrieveCookiesOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderSignOutAccountOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebProviderTokenRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebProviderTokenResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderBaseReportOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderSilentReportOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderTokenObjects;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderTokenObjects2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderTokenOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::Authentication::Web::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::Authentication::Web::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderUIReportOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

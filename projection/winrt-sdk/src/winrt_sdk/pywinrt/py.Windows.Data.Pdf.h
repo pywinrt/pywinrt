@@ -55,26 +55,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Pdf::PdfDocument>
+    struct py_type<winrt::Windows::Data::Pdf::PdfDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.pdf";
+        static constexpr const char* type_name = "PdfDocument";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Pdf::PdfPage>
+    struct py_type<winrt::Windows::Data::Pdf::PdfPage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.pdf";
+        static constexpr const char* type_name = "PdfPage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Pdf::PdfPageDimensions>
+    struct py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.pdf";
+        static constexpr const char* type_name = "PdfPageDimensions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Pdf::PdfPageRenderOptions>
+    struct py_type<winrt::Windows::Data::Pdf::PdfPageRenderOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.pdf";
+        static constexpr const char* type_name = "PdfPageRenderOptions";
     };
 }

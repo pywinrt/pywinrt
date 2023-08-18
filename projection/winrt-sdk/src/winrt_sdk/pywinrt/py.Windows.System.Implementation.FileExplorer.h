@@ -35,26 +35,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>
+    struct py_type<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
+        static constexpr const char* type_name = "SysStorageProviderEventReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
+    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
+        static constexpr const char* type_name = "ISysStorageProviderEventSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
+    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
+        static constexpr const char* type_name = "ISysStorageProviderHandlerFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
+    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
+        static constexpr const char* type_name = "ISysStorageProviderHttpRequestProvider";
     };
 }

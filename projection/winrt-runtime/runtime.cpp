@@ -177,12 +177,16 @@ static PyObject* PyType_FromMetaclass(
  * @param base_type The base type, a tuple of base types or nullptr to use the base
  * slot.
  * @param metaclass Optional metaclass for the type.
- * @returns A new reference to the type object or nullptr on error.
+ * @returns 0 on success or -1 on error.
  */
-PyTypeObject* py::register_python_type(
+
+int py::register_python_type(
     PyObject* module,
     const char* const type_name,
     PyType_Spec* type_spec,
+#if PY_VERSION_HEX < 0x03090000
+    PyBufferProcs* buffer_procs,
+#endif
     PyObject* base_type,
     PyTypeObject* metaclass) noexcept
 {
@@ -191,13 +195,18 @@ PyTypeObject* py::register_python_type(
 
     if (!type_object)
     {
-        return nullptr;
+        return -1;
     }
+
+#if PY_VERSION_HEX < 0x03090000
+    // workaround for https://bugs.python.org/issue40724
+    type_object->tp_as_buffer = buffer_procs;
+#endif
 
 #if PY_VERSION_HEX >= 0x030A0000
     if (PyModule_AddObjectRef(module, type_name, type_object.get()) == -1)
     {
-        return nullptr;
+        return -1;
     }
 #else
     // steals ref to type_object on success!
@@ -205,11 +214,11 @@ PyTypeObject* py::register_python_type(
     if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
     {
         Py_DECREF(type_object.get());
-        return nullptr;
+        return -1;
     }
 #endif
 
-    return reinterpret_cast<PyTypeObject*>(type_object.detach());
+    return 0;
 }
 
 /**
@@ -220,7 +229,15 @@ PyTypeObject* py::register_python_type(
  */
 PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
 {
-    auto mapping_iter_type = py::get_python_type<py::MappingIter>();
+    py::pyobj_handle winrt_module{PyImport_ImportModule("winrt._winrt")};
+
+    if (!winrt_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle mapping_iter_type{
+        PyObject_GetAttrString(winrt_module.get(), "MappingIter")};
 
     if (!mapping_iter_type)
     {
@@ -228,11 +245,10 @@ PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
     }
 
 #if PY_VERSION_HEX >= 0x03090000
-    py::pyobj_handle wrapper{
-        PyObject_CallOneArg(reinterpret_cast<PyObject*>(mapping_iter_type), iter)};
+    py::pyobj_handle wrapper{PyObject_CallOneArg(mapping_iter_type.get(), iter)};
 #else
-    py::pyobj_handle wrapper{PyObject_CallFunctionObjArgs(
-        reinterpret_cast<PyObject*>(mapping_iter_type), iter, nullptr)};
+    py::pyobj_handle wrapper{
+        PyObject_CallFunctionObjArgs(mapping_iter_type.get(), iter, nullptr)};
 #endif
 
     if (!wrapper)

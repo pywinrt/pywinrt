@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::UI::ViewManagement::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_CoreFrameworkInputView;
-        PyTypeObject* type_CoreFrameworkInputViewAnimationStartingEventArgs;
-        PyTypeObject* type_CoreFrameworkInputViewOcclusionsChangedEventArgs;
-        PyTypeObject* type_CoreInputView;
-        PyTypeObject* type_CoreInputViewAnimationStartingEventArgs;
-        PyTypeObject* type_CoreInputViewHidingEventArgs;
-        PyTypeObject* type_CoreInputViewOcclusion;
-        PyTypeObject* type_CoreInputViewOcclusionsChangedEventArgs;
-        PyTypeObject* type_CoreInputViewShowingEventArgs;
-        PyTypeObject* type_CoreInputViewTransferringXYFocusEventArgs;
-        PyTypeObject* type_UISettingsController;
-    };
-
     // ----- CoreFrameworkInputView class --------------------
     static constexpr const char* const type_name_CoreFrameworkInputView = "CoreFrameworkInputView";
 
@@ -2301,64 +2286,15 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::ViewManagement::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CoreFrameworkInputView);
-        Py_VISIT(state->type_CoreFrameworkInputViewAnimationStartingEventArgs);
-        Py_VISIT(state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs);
-        Py_VISIT(state->type_CoreInputView);
-        Py_VISIT(state->type_CoreInputViewAnimationStartingEventArgs);
-        Py_VISIT(state->type_CoreInputViewHidingEventArgs);
-        Py_VISIT(state->type_CoreInputViewOcclusion);
-        Py_VISIT(state->type_CoreInputViewOcclusionsChangedEventArgs);
-        Py_VISIT(state->type_CoreInputViewShowingEventArgs);
-        Py_VISIT(state->type_CoreInputViewTransferringXYFocusEventArgs);
-        Py_VISIT(state->type_UISettingsController);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CoreFrameworkInputView);
-        Py_CLEAR(state->type_CoreFrameworkInputViewAnimationStartingEventArgs);
-        Py_CLEAR(state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs);
-        Py_CLEAR(state->type_CoreInputView);
-        Py_CLEAR(state->type_CoreInputViewAnimationStartingEventArgs);
-        Py_CLEAR(state->type_CoreInputViewHidingEventArgs);
-        Py_CLEAR(state->type_CoreInputViewOcclusion);
-        Py_CLEAR(state->type_CoreInputViewOcclusionsChangedEventArgs);
-        Py_CLEAR(state->type_CoreInputViewShowingEventArgs);
-        Py_CLEAR(state->type_CoreInputViewTransferringXYFocusEventArgs);
-        Py_CLEAR(state->type_UISettingsController);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_ViewManagement_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::ViewManagement::Core
@@ -2374,7 +2310,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2387,328 +2323,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CoreFrameworkInputView = py::register_python_type(module.get(), type_name_CoreFrameworkInputView, &type_spec_CoreFrameworkInputView, object_bases.get(), nullptr);
-    if (!state->type_CoreFrameworkInputView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputView, &type_spec_CoreFrameworkInputView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputView, &type_spec_CoreFrameworkInputView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreFrameworkInputViewAnimationStartingEventArgs = py::register_python_type(module.get(), type_name_CoreFrameworkInputViewAnimationStartingEventArgs, &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreFrameworkInputViewAnimationStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewAnimationStartingEventArgs, &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewAnimationStartingEventArgs, &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs = py::register_python_type(module.get(), type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs, &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs, &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs, &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputView = py::register_python_type(module.get(), type_name_CoreInputView, &type_spec_CoreInputView, object_bases.get(), nullptr);
-    if (!state->type_CoreInputView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputView, &type_spec_CoreInputView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputView, &type_spec_CoreInputView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewAnimationStartingEventArgs = py::register_python_type(module.get(), type_name_CoreInputViewAnimationStartingEventArgs, &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewAnimationStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewAnimationStartingEventArgs, &type_spec_CoreInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewAnimationStartingEventArgs, &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewHidingEventArgs = py::register_python_type(module.get(), type_name_CoreInputViewHidingEventArgs, &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewHidingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewHidingEventArgs, &type_spec_CoreInputViewHidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewHidingEventArgs, &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewOcclusion = py::register_python_type(module.get(), type_name_CoreInputViewOcclusion, &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewOcclusion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusion, &type_spec_CoreInputViewOcclusion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusion, &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewOcclusionsChangedEventArgs = py::register_python_type(module.get(), type_name_CoreInputViewOcclusionsChangedEventArgs, &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewOcclusionsChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusionsChangedEventArgs, &type_spec_CoreInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusionsChangedEventArgs, &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewShowingEventArgs = py::register_python_type(module.get(), type_name_CoreInputViewShowingEventArgs, &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewShowingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewShowingEventArgs, &type_spec_CoreInputViewShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewShowingEventArgs, &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreInputViewTransferringXYFocusEventArgs = py::register_python_type(module.get(), type_name_CoreInputViewTransferringXYFocusEventArgs, &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreInputViewTransferringXYFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreInputViewTransferringXYFocusEventArgs, &type_spec_CoreInputViewTransferringXYFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreInputViewTransferringXYFocusEventArgs, &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UISettingsController = py::register_python_type(module.get(), type_name_UISettingsController, &type_spec_UISettingsController, object_bases.get(), nullptr);
-    if (!state->type_UISettingsController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UISettingsController, &type_spec_UISettingsController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UISettingsController, &type_spec_UISettingsController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreFrameworkInputView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreFrameworkInputViewAnimationStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreFrameworkInputViewOcclusionsChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewAnimationStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewHidingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewOcclusion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewOcclusionsChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewShowingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreInputViewTransferringXYFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UISettingsController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::Core::UISettingsController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -117,68 +117,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceAudioNotificationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceLaneInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceManeuver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceMapMatchedCoordinate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceNavigator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceReroutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceRoadSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceRoadSignpost";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceRoute";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceTelemetryCollector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
+    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
+        static constexpr const char* type_name = "GuidanceUpdatedEventArgs";
     };
 }

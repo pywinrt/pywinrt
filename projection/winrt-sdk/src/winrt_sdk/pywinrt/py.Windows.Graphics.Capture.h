@@ -77,38 +77,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>
+    struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "Direct3D11CaptureFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>
+    struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "Direct3D11CaptureFramePool";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>
+    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "GraphicsCaptureAccess";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>
+    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "GraphicsCaptureItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::GraphicsCapturePicker>
+    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCapturePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "GraphicsCapturePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>
+    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "GraphicsCaptureSession";
     };
 }

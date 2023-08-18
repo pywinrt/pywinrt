@@ -240,266 +240,310 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnAppId>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnAppId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnAppId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnChannel>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnChannel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannelActivityEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannelActivityStateChangedArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnChannelConfiguration>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnChannelConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnChannelConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCredential>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCredential>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCredential";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomCheckBox>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomCheckBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomCheckBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomComboBox>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomComboBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomComboBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomEditBox>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomEditBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomEditBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomErrorBox>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomErrorBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomErrorBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomPromptBooleanInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomPromptOptionSelector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptText>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomPromptText>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomPromptText";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomPromptTextInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnCustomTextBox>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnCustomTextBox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnCustomTextBox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnDomainNameAssignment>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnDomainNameAssignment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnDomainNameAssignment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnDomainNameInfo>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnDomainNameInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnDomainNameInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnForegroundActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnForegroundActivationOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnInterfaceId>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnInterfaceId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnInterfaceId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnManagementAgent>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnManagementAgent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnManagementAgent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnNamespaceAssignment>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnNamespaceAssignment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnNamespaceAssignment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnNamespaceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnNativeProfile>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnNativeProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnNativeProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnPacketBuffer>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnPacketBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnPacketBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnPacketBufferList>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnPacketBufferList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnPacketBufferList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnPickedCredential>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnPickedCredential>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnPickedCredential";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnPlugInProfile>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnPlugInProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnPlugInProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnRoute>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnRoute>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnRoute";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnRouteAssignment>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnRouteAssignment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnRouteAssignment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnSystemHealth>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnSystemHealth>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnSystemHealth";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnTrafficFilter>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnTrafficFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnTrafficFilter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment>
+    struct py_type<winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "VpnTrafficFilterAssignment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnChannelStatics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnCredential>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnCredential>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnCredential";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnCustomPrompt";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnCustomPromptElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnDomainNameInfoFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnInterfaceIdFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnNamespaceInfoFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnPacketBufferFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnPlugIn";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnProfile>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnRouteFactory";
     };
 }

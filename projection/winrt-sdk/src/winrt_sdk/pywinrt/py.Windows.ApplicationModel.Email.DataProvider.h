@@ -73,194 +73,226 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailDataProviderConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailDataProviderTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxCreateFolderRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxCreateFolderRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDeleteFolderRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDeleteFolderRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDownloadAttachmentRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDownloadAttachmentRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDownloadMessageRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxDownloadMessageRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxEmptyFolderRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxEmptyFolderRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxForwardMeetingRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxForwardMeetingRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxGetAutoReplySettingsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxGetAutoReplySettingsRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxMoveFolderRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxMoveFolderRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxProposeNewTimeForMeetingRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxProposeNewTimeForMeetingRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxResolveRecipientsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxResolveRecipientsRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxServerSearchReadBatchRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxServerSearchReadBatchRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxSetAutoReplySettingsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxSetAutoReplySettingsRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxSyncManagerSyncRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxSyncManagerSyncRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxUpdateMeetingResponseRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxUpdateMeetingResponseRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxValidateCertificatesRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
+        static constexpr const char* type_name = "EmailMailboxValidateCertificatesRequestEventArgs";
     };
 }

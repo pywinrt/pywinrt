@@ -6,93 +6,6 @@
 
 namespace py::cpp::Windows::Media::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_AudioStreamDescriptor;
-        PyTypeObject* type_AudioTrack;
-        PyTypeObject* type_AudioTrackOpenFailedEventArgs;
-        PyTypeObject* type_AudioTrackSupportInfo;
-        PyTypeObject* type_ChapterCue;
-        PyTypeObject* type_CodecInfo;
-        PyTypeObject* type_CodecQuery;
-        PyTypeObject* type_CodecSubtypes;
-        PyTypeObject* type_DataCue;
-        PyTypeObject* type_FaceDetectedEventArgs;
-        PyTypeObject* type_FaceDetectionEffect;
-        PyTypeObject* type_FaceDetectionEffectDefinition;
-        PyTypeObject* type_FaceDetectionEffectFrame;
-        PyTypeObject* type_HighDynamicRangeControl;
-        PyTypeObject* type_HighDynamicRangeOutput;
-        PyTypeObject* type_ImageCue;
-        PyTypeObject* type_InitializeMediaStreamSourceRequestedEventArgs;
-        PyTypeObject* type_LowLightFusion;
-        PyTypeObject* type_LowLightFusionResult;
-        PyTypeObject* type_MediaBinder;
-        PyTypeObject* type_MediaBindingEventArgs;
-        PyTypeObject* type_MediaCueEventArgs;
-        PyTypeObject* type_MediaSource;
-        PyTypeObject* type_MediaSourceAppServiceConnection;
-        PyTypeObject* type_MediaSourceError;
-        PyTypeObject* type_MediaSourceOpenOperationCompletedEventArgs;
-        PyTypeObject* type_MediaSourceStateChangedEventArgs;
-        PyTypeObject* type_MediaStreamSample;
-        PyTypeObject* type_MediaStreamSamplePropertySet;
-        PyTypeObject* type_MediaStreamSampleProtectionProperties;
-        PyTypeObject* type_MediaStreamSource;
-        PyTypeObject* type_MediaStreamSourceClosedEventArgs;
-        PyTypeObject* type_MediaStreamSourceClosedRequest;
-        PyTypeObject* type_MediaStreamSourceSampleRenderedEventArgs;
-        PyTypeObject* type_MediaStreamSourceSampleRequest;
-        PyTypeObject* type_MediaStreamSourceSampleRequestDeferral;
-        PyTypeObject* type_MediaStreamSourceSampleRequestedEventArgs;
-        PyTypeObject* type_MediaStreamSourceStartingEventArgs;
-        PyTypeObject* type_MediaStreamSourceStartingRequest;
-        PyTypeObject* type_MediaStreamSourceStartingRequestDeferral;
-        PyTypeObject* type_MediaStreamSourceSwitchStreamsRequest;
-        PyTypeObject* type_MediaStreamSourceSwitchStreamsRequestDeferral;
-        PyTypeObject* type_MediaStreamSourceSwitchStreamsRequestedEventArgs;
-        PyTypeObject* type_MseSourceBuffer;
-        PyTypeObject* type_MseSourceBufferList;
-        PyTypeObject* type_MseStreamSource;
-        PyTypeObject* type_SceneAnalysisEffect;
-        PyTypeObject* type_SceneAnalysisEffectDefinition;
-        PyTypeObject* type_SceneAnalysisEffectFrame;
-        PyTypeObject* type_SceneAnalyzedEventArgs;
-        PyTypeObject* type_SpeechCue;
-        PyTypeObject* type_TimedMetadataStreamDescriptor;
-        PyTypeObject* type_TimedMetadataTrack;
-        PyTypeObject* type_TimedMetadataTrackError;
-        PyTypeObject* type_TimedMetadataTrackFailedEventArgs;
-        PyTypeObject* type_TimedTextBouten;
-        PyTypeObject* type_TimedTextCue;
-        PyTypeObject* type_TimedTextLine;
-        PyTypeObject* type_TimedTextRegion;
-        PyTypeObject* type_TimedTextRuby;
-        PyTypeObject* type_TimedTextSource;
-        PyTypeObject* type_TimedTextSourceResolveResultEventArgs;
-        PyTypeObject* type_TimedTextStyle;
-        PyTypeObject* type_TimedTextSubformat;
-        PyTypeObject* type_VideoStabilizationEffect;
-        PyTypeObject* type_VideoStabilizationEffectDefinition;
-        PyTypeObject* type_VideoStabilizationEffectEnabledChangedEventArgs;
-        PyTypeObject* type_VideoStreamDescriptor;
-        PyTypeObject* type_VideoTrack;
-        PyTypeObject* type_VideoTrackOpenFailedEventArgs;
-        PyTypeObject* type_VideoTrackSupportInfo;
-        PyTypeObject* type_IMediaCue;
-        PyTypeObject* type_IMediaSource;
-        PyTypeObject* type_IMediaStreamDescriptor;
-        PyTypeObject* type_IMediaStreamDescriptor2;
-        PyTypeObject* type_IMediaTrack;
-        PyTypeObject* type_ISingleSelectMediaTrackList;
-        PyTypeObject* type_ITimedMetadataTrackProvider;
-        PyTypeObject* type_MseTimeRange;
-        PyTypeObject* type_TimedTextDouble;
-        PyTypeObject* type_TimedTextPadding;
-        PyTypeObject* type_TimedTextPoint;
-        PyTypeObject* type_TimedTextSize;
-    };
-
     // ----- AudioStreamDescriptor class --------------------
     static constexpr const char* const type_name_AudioStreamDescriptor = "AudioStreamDescriptor";
 
@@ -21023,208 +20936,15 @@ namespace py::cpp::Windows::Media::Core
     PyDoc_STRVAR(module_doc, "Windows::Media::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AudioStreamDescriptor);
-        Py_VISIT(state->type_AudioTrack);
-        Py_VISIT(state->type_AudioTrackOpenFailedEventArgs);
-        Py_VISIT(state->type_AudioTrackSupportInfo);
-        Py_VISIT(state->type_ChapterCue);
-        Py_VISIT(state->type_CodecInfo);
-        Py_VISIT(state->type_CodecQuery);
-        Py_VISIT(state->type_CodecSubtypes);
-        Py_VISIT(state->type_DataCue);
-        Py_VISIT(state->type_FaceDetectedEventArgs);
-        Py_VISIT(state->type_FaceDetectionEffect);
-        Py_VISIT(state->type_FaceDetectionEffectDefinition);
-        Py_VISIT(state->type_FaceDetectionEffectFrame);
-        Py_VISIT(state->type_HighDynamicRangeControl);
-        Py_VISIT(state->type_HighDynamicRangeOutput);
-        Py_VISIT(state->type_ImageCue);
-        Py_VISIT(state->type_InitializeMediaStreamSourceRequestedEventArgs);
-        Py_VISIT(state->type_LowLightFusion);
-        Py_VISIT(state->type_LowLightFusionResult);
-        Py_VISIT(state->type_MediaBinder);
-        Py_VISIT(state->type_MediaBindingEventArgs);
-        Py_VISIT(state->type_MediaCueEventArgs);
-        Py_VISIT(state->type_MediaSource);
-        Py_VISIT(state->type_MediaSourceAppServiceConnection);
-        Py_VISIT(state->type_MediaSourceError);
-        Py_VISIT(state->type_MediaSourceOpenOperationCompletedEventArgs);
-        Py_VISIT(state->type_MediaSourceStateChangedEventArgs);
-        Py_VISIT(state->type_MediaStreamSample);
-        Py_VISIT(state->type_MediaStreamSamplePropertySet);
-        Py_VISIT(state->type_MediaStreamSampleProtectionProperties);
-        Py_VISIT(state->type_MediaStreamSource);
-        Py_VISIT(state->type_MediaStreamSourceClosedEventArgs);
-        Py_VISIT(state->type_MediaStreamSourceClosedRequest);
-        Py_VISIT(state->type_MediaStreamSourceSampleRenderedEventArgs);
-        Py_VISIT(state->type_MediaStreamSourceSampleRequest);
-        Py_VISIT(state->type_MediaStreamSourceSampleRequestDeferral);
-        Py_VISIT(state->type_MediaStreamSourceSampleRequestedEventArgs);
-        Py_VISIT(state->type_MediaStreamSourceStartingEventArgs);
-        Py_VISIT(state->type_MediaStreamSourceStartingRequest);
-        Py_VISIT(state->type_MediaStreamSourceStartingRequestDeferral);
-        Py_VISIT(state->type_MediaStreamSourceSwitchStreamsRequest);
-        Py_VISIT(state->type_MediaStreamSourceSwitchStreamsRequestDeferral);
-        Py_VISIT(state->type_MediaStreamSourceSwitchStreamsRequestedEventArgs);
-        Py_VISIT(state->type_MseSourceBuffer);
-        Py_VISIT(state->type_MseSourceBufferList);
-        Py_VISIT(state->type_MseStreamSource);
-        Py_VISIT(state->type_SceneAnalysisEffect);
-        Py_VISIT(state->type_SceneAnalysisEffectDefinition);
-        Py_VISIT(state->type_SceneAnalysisEffectFrame);
-        Py_VISIT(state->type_SceneAnalyzedEventArgs);
-        Py_VISIT(state->type_SpeechCue);
-        Py_VISIT(state->type_TimedMetadataStreamDescriptor);
-        Py_VISIT(state->type_TimedMetadataTrack);
-        Py_VISIT(state->type_TimedMetadataTrackError);
-        Py_VISIT(state->type_TimedMetadataTrackFailedEventArgs);
-        Py_VISIT(state->type_TimedTextBouten);
-        Py_VISIT(state->type_TimedTextCue);
-        Py_VISIT(state->type_TimedTextLine);
-        Py_VISIT(state->type_TimedTextRegion);
-        Py_VISIT(state->type_TimedTextRuby);
-        Py_VISIT(state->type_TimedTextSource);
-        Py_VISIT(state->type_TimedTextSourceResolveResultEventArgs);
-        Py_VISIT(state->type_TimedTextStyle);
-        Py_VISIT(state->type_TimedTextSubformat);
-        Py_VISIT(state->type_VideoStabilizationEffect);
-        Py_VISIT(state->type_VideoStabilizationEffectDefinition);
-        Py_VISIT(state->type_VideoStabilizationEffectEnabledChangedEventArgs);
-        Py_VISIT(state->type_VideoStreamDescriptor);
-        Py_VISIT(state->type_VideoTrack);
-        Py_VISIT(state->type_VideoTrackOpenFailedEventArgs);
-        Py_VISIT(state->type_VideoTrackSupportInfo);
-        Py_VISIT(state->type_IMediaCue);
-        Py_VISIT(state->type_IMediaSource);
-        Py_VISIT(state->type_IMediaStreamDescriptor);
-        Py_VISIT(state->type_IMediaStreamDescriptor2);
-        Py_VISIT(state->type_IMediaTrack);
-        Py_VISIT(state->type_ISingleSelectMediaTrackList);
-        Py_VISIT(state->type_ITimedMetadataTrackProvider);
-        Py_VISIT(state->type_MseTimeRange);
-        Py_VISIT(state->type_TimedTextDouble);
-        Py_VISIT(state->type_TimedTextPadding);
-        Py_VISIT(state->type_TimedTextPoint);
-        Py_VISIT(state->type_TimedTextSize);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AudioStreamDescriptor);
-        Py_CLEAR(state->type_AudioTrack);
-        Py_CLEAR(state->type_AudioTrackOpenFailedEventArgs);
-        Py_CLEAR(state->type_AudioTrackSupportInfo);
-        Py_CLEAR(state->type_ChapterCue);
-        Py_CLEAR(state->type_CodecInfo);
-        Py_CLEAR(state->type_CodecQuery);
-        Py_CLEAR(state->type_CodecSubtypes);
-        Py_CLEAR(state->type_DataCue);
-        Py_CLEAR(state->type_FaceDetectedEventArgs);
-        Py_CLEAR(state->type_FaceDetectionEffect);
-        Py_CLEAR(state->type_FaceDetectionEffectDefinition);
-        Py_CLEAR(state->type_FaceDetectionEffectFrame);
-        Py_CLEAR(state->type_HighDynamicRangeControl);
-        Py_CLEAR(state->type_HighDynamicRangeOutput);
-        Py_CLEAR(state->type_ImageCue);
-        Py_CLEAR(state->type_InitializeMediaStreamSourceRequestedEventArgs);
-        Py_CLEAR(state->type_LowLightFusion);
-        Py_CLEAR(state->type_LowLightFusionResult);
-        Py_CLEAR(state->type_MediaBinder);
-        Py_CLEAR(state->type_MediaBindingEventArgs);
-        Py_CLEAR(state->type_MediaCueEventArgs);
-        Py_CLEAR(state->type_MediaSource);
-        Py_CLEAR(state->type_MediaSourceAppServiceConnection);
-        Py_CLEAR(state->type_MediaSourceError);
-        Py_CLEAR(state->type_MediaSourceOpenOperationCompletedEventArgs);
-        Py_CLEAR(state->type_MediaSourceStateChangedEventArgs);
-        Py_CLEAR(state->type_MediaStreamSample);
-        Py_CLEAR(state->type_MediaStreamSamplePropertySet);
-        Py_CLEAR(state->type_MediaStreamSampleProtectionProperties);
-        Py_CLEAR(state->type_MediaStreamSource);
-        Py_CLEAR(state->type_MediaStreamSourceClosedEventArgs);
-        Py_CLEAR(state->type_MediaStreamSourceClosedRequest);
-        Py_CLEAR(state->type_MediaStreamSourceSampleRenderedEventArgs);
-        Py_CLEAR(state->type_MediaStreamSourceSampleRequest);
-        Py_CLEAR(state->type_MediaStreamSourceSampleRequestDeferral);
-        Py_CLEAR(state->type_MediaStreamSourceSampleRequestedEventArgs);
-        Py_CLEAR(state->type_MediaStreamSourceStartingEventArgs);
-        Py_CLEAR(state->type_MediaStreamSourceStartingRequest);
-        Py_CLEAR(state->type_MediaStreamSourceStartingRequestDeferral);
-        Py_CLEAR(state->type_MediaStreamSourceSwitchStreamsRequest);
-        Py_CLEAR(state->type_MediaStreamSourceSwitchStreamsRequestDeferral);
-        Py_CLEAR(state->type_MediaStreamSourceSwitchStreamsRequestedEventArgs);
-        Py_CLEAR(state->type_MseSourceBuffer);
-        Py_CLEAR(state->type_MseSourceBufferList);
-        Py_CLEAR(state->type_MseStreamSource);
-        Py_CLEAR(state->type_SceneAnalysisEffect);
-        Py_CLEAR(state->type_SceneAnalysisEffectDefinition);
-        Py_CLEAR(state->type_SceneAnalysisEffectFrame);
-        Py_CLEAR(state->type_SceneAnalyzedEventArgs);
-        Py_CLEAR(state->type_SpeechCue);
-        Py_CLEAR(state->type_TimedMetadataStreamDescriptor);
-        Py_CLEAR(state->type_TimedMetadataTrack);
-        Py_CLEAR(state->type_TimedMetadataTrackError);
-        Py_CLEAR(state->type_TimedMetadataTrackFailedEventArgs);
-        Py_CLEAR(state->type_TimedTextBouten);
-        Py_CLEAR(state->type_TimedTextCue);
-        Py_CLEAR(state->type_TimedTextLine);
-        Py_CLEAR(state->type_TimedTextRegion);
-        Py_CLEAR(state->type_TimedTextRuby);
-        Py_CLEAR(state->type_TimedTextSource);
-        Py_CLEAR(state->type_TimedTextSourceResolveResultEventArgs);
-        Py_CLEAR(state->type_TimedTextStyle);
-        Py_CLEAR(state->type_TimedTextSubformat);
-        Py_CLEAR(state->type_VideoStabilizationEffect);
-        Py_CLEAR(state->type_VideoStabilizationEffectDefinition);
-        Py_CLEAR(state->type_VideoStabilizationEffectEnabledChangedEventArgs);
-        Py_CLEAR(state->type_VideoStreamDescriptor);
-        Py_CLEAR(state->type_VideoTrack);
-        Py_CLEAR(state->type_VideoTrackOpenFailedEventArgs);
-        Py_CLEAR(state->type_VideoTrackSupportInfo);
-        Py_CLEAR(state->type_IMediaCue);
-        Py_CLEAR(state->type_IMediaSource);
-        Py_CLEAR(state->type_IMediaStreamDescriptor);
-        Py_CLEAR(state->type_IMediaStreamDescriptor2);
-        Py_CLEAR(state->type_IMediaTrack);
-        Py_CLEAR(state->type_ISingleSelectMediaTrackList);
-        Py_CLEAR(state->type_ITimedMetadataTrackProvider);
-        Py_CLEAR(state->type_MseTimeRange);
-        Py_CLEAR(state->type_TimedTextDouble);
-        Py_CLEAR(state->type_TimedTextPadding);
-        Py_CLEAR(state->type_TimedTextPoint);
-        Py_CLEAR(state->type_TimedTextSize);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Core
@@ -21240,7 +20960,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -21253,47 +20973,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AudioStreamDescriptor = py::register_python_type(module.get(), type_name_AudioStreamDescriptor, &type_spec_AudioStreamDescriptor, object_bases.get(), nullptr);
-    if (!state->type_AudioStreamDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioStreamDescriptor, &type_spec_AudioStreamDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioStreamDescriptor, &type_spec_AudioStreamDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioTrack = py::register_python_type(module.get(), type_name_AudioTrack, &type_spec_AudioTrack, object_bases.get(), nullptr);
-    if (!state->type_AudioTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioTrack, &type_spec_AudioTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioTrack, &type_spec_AudioTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioTrackOpenFailedEventArgs = py::register_python_type(module.get(), type_name_AudioTrackOpenFailedEventArgs, &type_spec_AudioTrackOpenFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AudioTrackOpenFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioTrackOpenFailedEventArgs, &type_spec_AudioTrackOpenFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioTrackOpenFailedEventArgs, &type_spec_AudioTrackOpenFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioTrackSupportInfo = py::register_python_type(module.get(), type_name_AudioTrackSupportInfo, &type_spec_AudioTrackSupportInfo, object_bases.get(), nullptr);
-    if (!state->type_AudioTrackSupportInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioTrackSupportInfo, &type_spec_AudioTrackSupportInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioTrackSupportInfo, &type_spec_AudioTrackSupportInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChapterCue = py::register_python_type(module.get(), type_name_ChapterCue, &type_spec_ChapterCue, object_bases.get(), nullptr);
-    if (!state->type_ChapterCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChapterCue, &type_spec_ChapterCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChapterCue, &type_spec_ChapterCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CodecInfo = py::register_python_type(module.get(), type_name_CodecInfo, &type_spec_CodecInfo, object_bases.get(), nullptr);
-    if (!state->type_CodecInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CodecInfo, &type_spec_CodecInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CodecInfo, &type_spec_CodecInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CodecQuery = py::register_python_type(module.get(), type_name_CodecQuery, &type_spec_CodecQuery, object_bases.get(), nullptr);
-    if (!state->type_CodecQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CodecQuery, &type_spec_CodecQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CodecQuery, &type_spec_CodecQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21304,62 +21042,92 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_CodecSubtypes = py::register_python_type(module.get(), type_name_CodecSubtypes, &type_spec_CodecSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CodecSubtypes_Meta.get()));
-    if (!state->type_CodecSubtypes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CodecSubtypes, &type_spec_CodecSubtypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CodecSubtypes_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CodecSubtypes, &type_spec_CodecSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CodecSubtypes_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataCue = py::register_python_type(module.get(), type_name_DataCue, &type_spec_DataCue, object_bases.get(), nullptr);
-    if (!state->type_DataCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataCue, &type_spec_DataCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataCue, &type_spec_DataCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FaceDetectedEventArgs = py::register_python_type(module.get(), type_name_FaceDetectedEventArgs, &type_spec_FaceDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FaceDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FaceDetectedEventArgs, &type_spec_FaceDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FaceDetectedEventArgs, &type_spec_FaceDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FaceDetectionEffect = py::register_python_type(module.get(), type_name_FaceDetectionEffect, &type_spec_FaceDetectionEffect, object_bases.get(), nullptr);
-    if (!state->type_FaceDetectionEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffect, &type_spec_FaceDetectionEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffect, &type_spec_FaceDetectionEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FaceDetectionEffectDefinition = py::register_python_type(module.get(), type_name_FaceDetectionEffectDefinition, &type_spec_FaceDetectionEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_FaceDetectionEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffectDefinition, &type_spec_FaceDetectionEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffectDefinition, &type_spec_FaceDetectionEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FaceDetectionEffectFrame = py::register_python_type(module.get(), type_name_FaceDetectionEffectFrame, &type_spec_FaceDetectionEffectFrame, object_bases.get(), nullptr);
-    if (!state->type_FaceDetectionEffectFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffectFrame, &type_spec_FaceDetectionEffectFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FaceDetectionEffectFrame, &type_spec_FaceDetectionEffectFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HighDynamicRangeControl = py::register_python_type(module.get(), type_name_HighDynamicRangeControl, &type_spec_HighDynamicRangeControl, object_bases.get(), nullptr);
-    if (!state->type_HighDynamicRangeControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HighDynamicRangeControl, &type_spec_HighDynamicRangeControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HighDynamicRangeControl, &type_spec_HighDynamicRangeControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HighDynamicRangeOutput = py::register_python_type(module.get(), type_name_HighDynamicRangeOutput, &type_spec_HighDynamicRangeOutput, object_bases.get(), nullptr);
-    if (!state->type_HighDynamicRangeOutput)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HighDynamicRangeOutput, &type_spec_HighDynamicRangeOutput, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HighDynamicRangeOutput, &type_spec_HighDynamicRangeOutput, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageCue = py::register_python_type(module.get(), type_name_ImageCue, &type_spec_ImageCue, object_bases.get(), nullptr);
-    if (!state->type_ImageCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageCue, &type_spec_ImageCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageCue, &type_spec_ImageCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InitializeMediaStreamSourceRequestedEventArgs = py::register_python_type(module.get(), type_name_InitializeMediaStreamSourceRequestedEventArgs, &type_spec_InitializeMediaStreamSourceRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InitializeMediaStreamSourceRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InitializeMediaStreamSourceRequestedEventArgs, &type_spec_InitializeMediaStreamSourceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InitializeMediaStreamSourceRequestedEventArgs, &type_spec_InitializeMediaStreamSourceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21370,2311 +21138,600 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_LowLightFusion = py::register_python_type(module.get(), type_name_LowLightFusion, &type_spec_LowLightFusion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLightFusion_Meta.get()));
-    if (!state->type_LowLightFusion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLightFusion, &type_spec_LowLightFusion, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLightFusion_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLightFusion, &type_spec_LowLightFusion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLightFusion_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLightFusionResult = py::register_python_type(module.get(), type_name_LowLightFusionResult, &type_spec_LowLightFusionResult, object_bases.get(), nullptr);
-    if (!state->type_LowLightFusionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLightFusionResult, &type_spec_LowLightFusionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLightFusionResult, &type_spec_LowLightFusionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaBinder = py::register_python_type(module.get(), type_name_MediaBinder, &type_spec_MediaBinder, object_bases.get(), nullptr);
-    if (!state->type_MediaBinder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaBinder, &type_spec_MediaBinder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaBinder, &type_spec_MediaBinder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaBindingEventArgs = py::register_python_type(module.get(), type_name_MediaBindingEventArgs, &type_spec_MediaBindingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaBindingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaBindingEventArgs, &type_spec_MediaBindingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaBindingEventArgs, &type_spec_MediaBindingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCueEventArgs = py::register_python_type(module.get(), type_name_MediaCueEventArgs, &type_spec_MediaCueEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaCueEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCueEventArgs, &type_spec_MediaCueEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCueEventArgs, &type_spec_MediaCueEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSource = py::register_python_type(module.get(), type_name_MediaSource, &type_spec_MediaSource, object_bases.get(), nullptr);
-    if (!state->type_MediaSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSource, &type_spec_MediaSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSource, &type_spec_MediaSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSourceAppServiceConnection = py::register_python_type(module.get(), type_name_MediaSourceAppServiceConnection, &type_spec_MediaSourceAppServiceConnection, object_bases.get(), nullptr);
-    if (!state->type_MediaSourceAppServiceConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSourceAppServiceConnection, &type_spec_MediaSourceAppServiceConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSourceAppServiceConnection, &type_spec_MediaSourceAppServiceConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSourceError = py::register_python_type(module.get(), type_name_MediaSourceError, &type_spec_MediaSourceError, object_bases.get(), nullptr);
-    if (!state->type_MediaSourceError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSourceError, &type_spec_MediaSourceError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSourceError, &type_spec_MediaSourceError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSourceOpenOperationCompletedEventArgs = py::register_python_type(module.get(), type_name_MediaSourceOpenOperationCompletedEventArgs, &type_spec_MediaSourceOpenOperationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaSourceOpenOperationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSourceOpenOperationCompletedEventArgs, &type_spec_MediaSourceOpenOperationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSourceOpenOperationCompletedEventArgs, &type_spec_MediaSourceOpenOperationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSourceStateChangedEventArgs = py::register_python_type(module.get(), type_name_MediaSourceStateChangedEventArgs, &type_spec_MediaSourceStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaSourceStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSourceStateChangedEventArgs, &type_spec_MediaSourceStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSourceStateChangedEventArgs, &type_spec_MediaSourceStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSample = py::register_python_type(module.get(), type_name_MediaStreamSample, &type_spec_MediaStreamSample, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSample)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSample, &type_spec_MediaStreamSample, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSample, &type_spec_MediaStreamSample, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSamplePropertySet = py::register_python_type(module.get(), type_name_MediaStreamSamplePropertySet, &type_spec_MediaStreamSamplePropertySet, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSamplePropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSamplePropertySet, &type_spec_MediaStreamSamplePropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSamplePropertySet, &type_spec_MediaStreamSamplePropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSampleProtectionProperties = py::register_python_type(module.get(), type_name_MediaStreamSampleProtectionProperties, &type_spec_MediaStreamSampleProtectionProperties, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSampleProtectionProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSampleProtectionProperties, &type_spec_MediaStreamSampleProtectionProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSampleProtectionProperties, &type_spec_MediaStreamSampleProtectionProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSource = py::register_python_type(module.get(), type_name_MediaStreamSource, &type_spec_MediaStreamSource, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSource, &type_spec_MediaStreamSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSource, &type_spec_MediaStreamSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceClosedEventArgs = py::register_python_type(module.get(), type_name_MediaStreamSourceClosedEventArgs, &type_spec_MediaStreamSourceClosedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceClosedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceClosedEventArgs, &type_spec_MediaStreamSourceClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceClosedEventArgs, &type_spec_MediaStreamSourceClosedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceClosedRequest = py::register_python_type(module.get(), type_name_MediaStreamSourceClosedRequest, &type_spec_MediaStreamSourceClosedRequest, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceClosedRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceClosedRequest, &type_spec_MediaStreamSourceClosedRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceClosedRequest, &type_spec_MediaStreamSourceClosedRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSampleRenderedEventArgs = py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRenderedEventArgs, &type_spec_MediaStreamSourceSampleRenderedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSampleRenderedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRenderedEventArgs, &type_spec_MediaStreamSourceSampleRenderedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRenderedEventArgs, &type_spec_MediaStreamSourceSampleRenderedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSampleRequest = py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequest, &type_spec_MediaStreamSourceSampleRequest, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSampleRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequest, &type_spec_MediaStreamSourceSampleRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequest, &type_spec_MediaStreamSourceSampleRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSampleRequestDeferral = py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestDeferral, &type_spec_MediaStreamSourceSampleRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSampleRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestDeferral, &type_spec_MediaStreamSourceSampleRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestDeferral, &type_spec_MediaStreamSourceSampleRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSampleRequestedEventArgs = py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestedEventArgs, &type_spec_MediaStreamSourceSampleRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSampleRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestedEventArgs, &type_spec_MediaStreamSourceSampleRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSampleRequestedEventArgs, &type_spec_MediaStreamSourceSampleRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceStartingEventArgs = py::register_python_type(module.get(), type_name_MediaStreamSourceStartingEventArgs, &type_spec_MediaStreamSourceStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingEventArgs, &type_spec_MediaStreamSourceStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingEventArgs, &type_spec_MediaStreamSourceStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceStartingRequest = py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequest, &type_spec_MediaStreamSourceStartingRequest, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceStartingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequest, &type_spec_MediaStreamSourceStartingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequest, &type_spec_MediaStreamSourceStartingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceStartingRequestDeferral = py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequestDeferral, &type_spec_MediaStreamSourceStartingRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceStartingRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequestDeferral, &type_spec_MediaStreamSourceStartingRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceStartingRequestDeferral, &type_spec_MediaStreamSourceStartingRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSwitchStreamsRequest = py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequest, &type_spec_MediaStreamSourceSwitchStreamsRequest, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSwitchStreamsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequest, &type_spec_MediaStreamSourceSwitchStreamsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequest, &type_spec_MediaStreamSourceSwitchStreamsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSwitchStreamsRequestDeferral = py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestDeferral, &type_spec_MediaStreamSourceSwitchStreamsRequestDeferral, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSwitchStreamsRequestDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestDeferral, &type_spec_MediaStreamSourceSwitchStreamsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestDeferral, &type_spec_MediaStreamSourceSwitchStreamsRequestDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaStreamSourceSwitchStreamsRequestedEventArgs = py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestedEventArgs, &type_spec_MediaStreamSourceSwitchStreamsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaStreamSourceSwitchStreamsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestedEventArgs, &type_spec_MediaStreamSourceSwitchStreamsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaStreamSourceSwitchStreamsRequestedEventArgs, &type_spec_MediaStreamSourceSwitchStreamsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MseSourceBuffer = py::register_python_type(module.get(), type_name_MseSourceBuffer, &type_spec_MseSourceBuffer, object_bases.get(), nullptr);
-    if (!state->type_MseSourceBuffer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MseSourceBuffer, &type_spec_MseSourceBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MseSourceBuffer, &type_spec_MseSourceBuffer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MseSourceBufferList = py::register_python_type(module.get(), type_name_MseSourceBufferList, &type_spec_MseSourceBufferList, object_bases.get(), nullptr);
-    if (!state->type_MseSourceBufferList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MseSourceBufferList, &type_spec_MseSourceBufferList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MseSourceBufferList, &type_spec_MseSourceBufferList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MseStreamSource = py::register_python_type(module.get(), type_name_MseStreamSource, &type_spec_MseStreamSource, object_bases.get(), nullptr);
-    if (!state->type_MseStreamSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MseStreamSource, &type_spec_MseStreamSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MseStreamSource, &type_spec_MseStreamSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneAnalysisEffect = py::register_python_type(module.get(), type_name_SceneAnalysisEffect, &type_spec_SceneAnalysisEffect, object_bases.get(), nullptr);
-    if (!state->type_SceneAnalysisEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffect, &type_spec_SceneAnalysisEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffect, &type_spec_SceneAnalysisEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneAnalysisEffectDefinition = py::register_python_type(module.get(), type_name_SceneAnalysisEffectDefinition, &type_spec_SceneAnalysisEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_SceneAnalysisEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffectDefinition, &type_spec_SceneAnalysisEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffectDefinition, &type_spec_SceneAnalysisEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneAnalysisEffectFrame = py::register_python_type(module.get(), type_name_SceneAnalysisEffectFrame, &type_spec_SceneAnalysisEffectFrame, object_bases.get(), nullptr);
-    if (!state->type_SceneAnalysisEffectFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffectFrame, &type_spec_SceneAnalysisEffectFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneAnalysisEffectFrame, &type_spec_SceneAnalysisEffectFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneAnalyzedEventArgs = py::register_python_type(module.get(), type_name_SceneAnalyzedEventArgs, &type_spec_SceneAnalyzedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SceneAnalyzedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneAnalyzedEventArgs, &type_spec_SceneAnalyzedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneAnalyzedEventArgs, &type_spec_SceneAnalyzedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechCue = py::register_python_type(module.get(), type_name_SpeechCue, &type_spec_SpeechCue, object_bases.get(), nullptr);
-    if (!state->type_SpeechCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechCue, &type_spec_SpeechCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechCue, &type_spec_SpeechCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedMetadataStreamDescriptor = py::register_python_type(module.get(), type_name_TimedMetadataStreamDescriptor, &type_spec_TimedMetadataStreamDescriptor, object_bases.get(), nullptr);
-    if (!state->type_TimedMetadataStreamDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedMetadataStreamDescriptor, &type_spec_TimedMetadataStreamDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedMetadataStreamDescriptor, &type_spec_TimedMetadataStreamDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedMetadataTrack = py::register_python_type(module.get(), type_name_TimedMetadataTrack, &type_spec_TimedMetadataTrack, object_bases.get(), nullptr);
-    if (!state->type_TimedMetadataTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrack, &type_spec_TimedMetadataTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrack, &type_spec_TimedMetadataTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedMetadataTrackError = py::register_python_type(module.get(), type_name_TimedMetadataTrackError, &type_spec_TimedMetadataTrackError, object_bases.get(), nullptr);
-    if (!state->type_TimedMetadataTrackError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrackError, &type_spec_TimedMetadataTrackError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrackError, &type_spec_TimedMetadataTrackError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedMetadataTrackFailedEventArgs = py::register_python_type(module.get(), type_name_TimedMetadataTrackFailedEventArgs, &type_spec_TimedMetadataTrackFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TimedMetadataTrackFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrackFailedEventArgs, &type_spec_TimedMetadataTrackFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedMetadataTrackFailedEventArgs, &type_spec_TimedMetadataTrackFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextBouten = py::register_python_type(module.get(), type_name_TimedTextBouten, &type_spec_TimedTextBouten, object_bases.get(), nullptr);
-    if (!state->type_TimedTextBouten)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextBouten, &type_spec_TimedTextBouten, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextBouten, &type_spec_TimedTextBouten, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextCue = py::register_python_type(module.get(), type_name_TimedTextCue, &type_spec_TimedTextCue, object_bases.get(), nullptr);
-    if (!state->type_TimedTextCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextCue, &type_spec_TimedTextCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextCue, &type_spec_TimedTextCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextLine = py::register_python_type(module.get(), type_name_TimedTextLine, &type_spec_TimedTextLine, object_bases.get(), nullptr);
-    if (!state->type_TimedTextLine)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextLine, &type_spec_TimedTextLine, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextLine, &type_spec_TimedTextLine, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextRegion = py::register_python_type(module.get(), type_name_TimedTextRegion, &type_spec_TimedTextRegion, object_bases.get(), nullptr);
-    if (!state->type_TimedTextRegion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextRegion, &type_spec_TimedTextRegion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextRegion, &type_spec_TimedTextRegion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextRuby = py::register_python_type(module.get(), type_name_TimedTextRuby, &type_spec_TimedTextRuby, object_bases.get(), nullptr);
-    if (!state->type_TimedTextRuby)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextRuby, &type_spec_TimedTextRuby, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextRuby, &type_spec_TimedTextRuby, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextSource = py::register_python_type(module.get(), type_name_TimedTextSource, &type_spec_TimedTextSource, object_bases.get(), nullptr);
-    if (!state->type_TimedTextSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextSource, &type_spec_TimedTextSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextSource, &type_spec_TimedTextSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextSourceResolveResultEventArgs = py::register_python_type(module.get(), type_name_TimedTextSourceResolveResultEventArgs, &type_spec_TimedTextSourceResolveResultEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TimedTextSourceResolveResultEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextSourceResolveResultEventArgs, &type_spec_TimedTextSourceResolveResultEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextSourceResolveResultEventArgs, &type_spec_TimedTextSourceResolveResultEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextStyle = py::register_python_type(module.get(), type_name_TimedTextStyle, &type_spec_TimedTextStyle, object_bases.get(), nullptr);
-    if (!state->type_TimedTextStyle)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextStyle, &type_spec_TimedTextStyle, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextStyle, &type_spec_TimedTextStyle, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextSubformat = py::register_python_type(module.get(), type_name_TimedTextSubformat, &type_spec_TimedTextSubformat, object_bases.get(), nullptr);
-    if (!state->type_TimedTextSubformat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextSubformat, &type_spec_TimedTextSubformat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextSubformat, &type_spec_TimedTextSubformat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoStabilizationEffect = py::register_python_type(module.get(), type_name_VideoStabilizationEffect, &type_spec_VideoStabilizationEffect, object_bases.get(), nullptr);
-    if (!state->type_VideoStabilizationEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffect, &type_spec_VideoStabilizationEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffect, &type_spec_VideoStabilizationEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoStabilizationEffectDefinition = py::register_python_type(module.get(), type_name_VideoStabilizationEffectDefinition, &type_spec_VideoStabilizationEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_VideoStabilizationEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffectDefinition, &type_spec_VideoStabilizationEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffectDefinition, &type_spec_VideoStabilizationEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoStabilizationEffectEnabledChangedEventArgs = py::register_python_type(module.get(), type_name_VideoStabilizationEffectEnabledChangedEventArgs, &type_spec_VideoStabilizationEffectEnabledChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VideoStabilizationEffectEnabledChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffectEnabledChangedEventArgs, &type_spec_VideoStabilizationEffectEnabledChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoStabilizationEffectEnabledChangedEventArgs, &type_spec_VideoStabilizationEffectEnabledChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoStreamDescriptor = py::register_python_type(module.get(), type_name_VideoStreamDescriptor, &type_spec_VideoStreamDescriptor, object_bases.get(), nullptr);
-    if (!state->type_VideoStreamDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoStreamDescriptor, &type_spec_VideoStreamDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoStreamDescriptor, &type_spec_VideoStreamDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTrack = py::register_python_type(module.get(), type_name_VideoTrack, &type_spec_VideoTrack, object_bases.get(), nullptr);
-    if (!state->type_VideoTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTrack, &type_spec_VideoTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTrack, &type_spec_VideoTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTrackOpenFailedEventArgs = py::register_python_type(module.get(), type_name_VideoTrackOpenFailedEventArgs, &type_spec_VideoTrackOpenFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VideoTrackOpenFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTrackOpenFailedEventArgs, &type_spec_VideoTrackOpenFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTrackOpenFailedEventArgs, &type_spec_VideoTrackOpenFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTrackSupportInfo = py::register_python_type(module.get(), type_name_VideoTrackSupportInfo, &type_spec_VideoTrackSupportInfo, object_bases.get(), nullptr);
-    if (!state->type_VideoTrackSupportInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTrackSupportInfo, &type_spec_VideoTrackSupportInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTrackSupportInfo, &type_spec_VideoTrackSupportInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaCue = py::register_python_type(module.get(), type_name_IMediaCue, &type_spec_IMediaCue, object_bases.get(), nullptr);
-    if (!state->type_IMediaCue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaCue, &type_spec_IMediaCue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaCue, &type_spec_IMediaCue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaSource = py::register_python_type(module.get(), type_name_IMediaSource, &type_spec_IMediaSource, object_bases.get(), nullptr);
-    if (!state->type_IMediaSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaSource, &type_spec_IMediaSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaSource, &type_spec_IMediaSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaStreamDescriptor = py::register_python_type(module.get(), type_name_IMediaStreamDescriptor, &type_spec_IMediaStreamDescriptor, object_bases.get(), nullptr);
-    if (!state->type_IMediaStreamDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaStreamDescriptor, &type_spec_IMediaStreamDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaStreamDescriptor, &type_spec_IMediaStreamDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaStreamDescriptor2 = py::register_python_type(module.get(), type_name_IMediaStreamDescriptor2, &type_spec_IMediaStreamDescriptor2, object_bases.get(), nullptr);
-    if (!state->type_IMediaStreamDescriptor2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaStreamDescriptor2, &type_spec_IMediaStreamDescriptor2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaStreamDescriptor2, &type_spec_IMediaStreamDescriptor2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaTrack = py::register_python_type(module.get(), type_name_IMediaTrack, &type_spec_IMediaTrack, object_bases.get(), nullptr);
-    if (!state->type_IMediaTrack)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaTrack, &type_spec_IMediaTrack, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaTrack, &type_spec_IMediaTrack, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISingleSelectMediaTrackList = py::register_python_type(module.get(), type_name_ISingleSelectMediaTrackList, &type_spec_ISingleSelectMediaTrackList, object_bases.get(), nullptr);
-    if (!state->type_ISingleSelectMediaTrackList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISingleSelectMediaTrackList, &type_spec_ISingleSelectMediaTrackList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISingleSelectMediaTrackList, &type_spec_ISingleSelectMediaTrackList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITimedMetadataTrackProvider = py::register_python_type(module.get(), type_name_ITimedMetadataTrackProvider, &type_spec_ITimedMetadataTrackProvider, object_bases.get(), nullptr);
-    if (!state->type_ITimedMetadataTrackProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITimedMetadataTrackProvider, &type_spec_ITimedMetadataTrackProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITimedMetadataTrackProvider, &type_spec_ITimedMetadataTrackProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MseTimeRange = py::register_python_type(module.get(), type_name_MseTimeRange, &type_spec_MseTimeRange, nullptr, nullptr);
-    if (!state->type_MseTimeRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MseTimeRange, &type_spec_MseTimeRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MseTimeRange, &type_spec_MseTimeRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextDouble = py::register_python_type(module.get(), type_name_TimedTextDouble, &type_spec_TimedTextDouble, nullptr, nullptr);
-    if (!state->type_TimedTextDouble)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextDouble, &type_spec_TimedTextDouble, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextDouble, &type_spec_TimedTextDouble, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextPadding = py::register_python_type(module.get(), type_name_TimedTextPadding, &type_spec_TimedTextPadding, nullptr, nullptr);
-    if (!state->type_TimedTextPadding)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextPadding, &type_spec_TimedTextPadding, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextPadding, &type_spec_TimedTextPadding, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextPoint = py::register_python_type(module.get(), type_name_TimedTextPoint, &type_spec_TimedTextPoint, nullptr, nullptr);
-    if (!state->type_TimedTextPoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextPoint, &type_spec_TimedTextPoint, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextPoint, &type_spec_TimedTextPoint, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimedTextSize = py::register_python_type(module.get(), type_name_TimedTextSize, &type_spec_TimedTextSize, nullptr, nullptr);
-    if (!state->type_TimedTextSize)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimedTextSize, &type_spec_TimedTextSize, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimedTextSize, &type_spec_TimedTextSize, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::AudioStreamDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioStreamDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::AudioStreamDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::AudioTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::AudioTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioTrackOpenFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioTrackSupportInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::AudioTrackSupportInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::ChapterCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChapterCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::ChapterCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::CodecInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CodecInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::CodecInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::CodecQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CodecQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::CodecQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::CodecSubtypes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CodecSubtypes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::CodecSubtypes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::DataCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::DataCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FaceDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::FaceDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::FaceDetectionEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FaceDetectionEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::FaceDetectionEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::FaceDetectionEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FaceDetectionEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::FaceDetectionEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FaceDetectionEffectFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::FaceDetectionEffectFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::HighDynamicRangeControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HighDynamicRangeControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::HighDynamicRangeControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HighDynamicRangeOutput;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::HighDynamicRangeOutput is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::ImageCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::ImageCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InitializeMediaStreamSourceRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::LowLightFusion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLightFusion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::LowLightFusion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::LowLightFusionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLightFusionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::LowLightFusionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaBinder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaBinder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaBinder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaBindingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaBindingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaBindingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaCueEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCueEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaCueEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaSourceAppServiceConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSourceAppServiceConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaSourceAppServiceConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaSourceError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSourceError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaSourceError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSourceOpenOperationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSourceStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSample>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSample;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSample is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSamplePropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSamplePropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSampleProtectionProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceClosedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceClosedRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceClosedRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSampleRenderedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSampleRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSampleRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSampleRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSampleRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceStartingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceStartingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceStartingRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSwitchStreamsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSwitchStreamsRequestDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaStreamSourceSwitchStreamsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MseSourceBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MseSourceBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MseSourceBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MseSourceBufferList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MseSourceBufferList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MseSourceBufferList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MseStreamSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MseStreamSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MseStreamSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::SceneAnalysisEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAnalysisEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::SceneAnalysisEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::SceneAnalysisEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAnalysisEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::SceneAnalysisEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAnalysisEffectFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::SceneAnalysisEffectFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneAnalyzedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::SceneAnalyzedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::SpeechCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::SpeechCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedMetadataStreamDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedMetadataStreamDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedMetadataTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedMetadataTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedMetadataTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedMetadataTrackError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedMetadataTrackError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedMetadataTrackError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedMetadataTrackFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextBouten>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextBouten;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextBouten is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextLine>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextLine;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextLine is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextRegion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextRegion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextRegion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextRuby>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextRuby;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextRuby is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextSourceResolveResultEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextStyle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextStyle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextStyle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextSubformat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextSubformat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextSubformat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoStabilizationEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoStabilizationEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoStabilizationEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoStabilizationEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoStabilizationEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoStabilizationEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoStabilizationEffectEnabledChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoStreamDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoStreamDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoStreamDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTrackOpenFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTrackSupportInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::VideoTrackSupportInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::IMediaCue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaCue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::IMediaCue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::IMediaSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::IMediaSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaStreamDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::IMediaStreamDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaStreamDescriptor2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::IMediaStreamDescriptor2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::IMediaTrack>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaTrack;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::IMediaTrack is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISingleSelectMediaTrackList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::ISingleSelectMediaTrackList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITimedMetadataTrackProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::ITimedMetadataTrackProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::MseTimeRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MseTimeRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::MseTimeRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextDouble>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextDouble;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextDouble is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextPadding>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextPadding;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextPadding is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextPoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextPoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextPoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Core::TimedTextSize>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimedTextSize;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Core::TimedTextSize is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

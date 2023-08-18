@@ -95,80 +95,93 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GameControllerFactoryManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GipFirmwareUpdateResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GipGameControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "HidGameControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "XusbGameControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "ICustomGameControllerFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "IGameControllerInputSink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "IGameControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "IGipGameControllerInputSink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "IHidGameControllerInputSink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "IXusbGameControllerInputSink";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GameControllerVersionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
+    struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
+        static constexpr const char* type_name = "GipFirmwareUpdateProgress";
     };
 }

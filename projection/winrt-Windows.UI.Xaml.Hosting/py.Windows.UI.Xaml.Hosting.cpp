@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Hosting
 {
-    struct module_state
-    {
-        PyTypeObject* type_DesignerAppExitedEventArgs;
-        PyTypeObject* type_DesignerAppManager;
-        PyTypeObject* type_DesignerAppView;
-        PyTypeObject* type_DesktopWindowXamlSource;
-        PyTypeObject* type_DesktopWindowXamlSourceGotFocusEventArgs;
-        PyTypeObject* type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs;
-        PyTypeObject* type_ElementCompositionPreview;
-        PyTypeObject* type_WindowsXamlManager;
-        PyTypeObject* type_XamlSourceFocusNavigationRequest;
-        PyTypeObject* type_XamlSourceFocusNavigationResult;
-        PyTypeObject* type_XamlUIPresenter;
-        PyTypeObject* type_IXamlUIPresenterHost;
-        PyTypeObject* type_IXamlUIPresenterHost2;
-        PyTypeObject* type_IXamlUIPresenterHost3;
-    };
-
     // ----- DesignerAppExitedEventArgs class --------------------
     static constexpr const char* const type_name_DesignerAppExitedEventArgs = "DesignerAppExitedEventArgs";
 
@@ -2920,70 +2902,15 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Hosting");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_DesignerAppExitedEventArgs);
-        Py_VISIT(state->type_DesignerAppManager);
-        Py_VISIT(state->type_DesignerAppView);
-        Py_VISIT(state->type_DesktopWindowXamlSource);
-        Py_VISIT(state->type_DesktopWindowXamlSourceGotFocusEventArgs);
-        Py_VISIT(state->type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs);
-        Py_VISIT(state->type_ElementCompositionPreview);
-        Py_VISIT(state->type_WindowsXamlManager);
-        Py_VISIT(state->type_XamlSourceFocusNavigationRequest);
-        Py_VISIT(state->type_XamlSourceFocusNavigationResult);
-        Py_VISIT(state->type_XamlUIPresenter);
-        Py_VISIT(state->type_IXamlUIPresenterHost);
-        Py_VISIT(state->type_IXamlUIPresenterHost2);
-        Py_VISIT(state->type_IXamlUIPresenterHost3);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_DesignerAppExitedEventArgs);
-        Py_CLEAR(state->type_DesignerAppManager);
-        Py_CLEAR(state->type_DesignerAppView);
-        Py_CLEAR(state->type_DesktopWindowXamlSource);
-        Py_CLEAR(state->type_DesktopWindowXamlSourceGotFocusEventArgs);
-        Py_CLEAR(state->type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs);
-        Py_CLEAR(state->type_ElementCompositionPreview);
-        Py_CLEAR(state->type_WindowsXamlManager);
-        Py_CLEAR(state->type_XamlSourceFocusNavigationRequest);
-        Py_CLEAR(state->type_XamlSourceFocusNavigationResult);
-        Py_CLEAR(state->type_XamlUIPresenter);
-        Py_CLEAR(state->type_IXamlUIPresenterHost);
-        Py_CLEAR(state->type_IXamlUIPresenterHost2);
-        Py_CLEAR(state->type_IXamlUIPresenterHost3);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Hosting",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Hosting
@@ -2999,7 +2926,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Hosting(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3012,65 +2939,92 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Hosting(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_DesignerAppExitedEventArgs = py::register_python_type(module.get(), type_name_DesignerAppExitedEventArgs, &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DesignerAppExitedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesignerAppExitedEventArgs, &type_spec_DesignerAppExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesignerAppExitedEventArgs, &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DesignerAppManager = py::register_python_type(module.get(), type_name_DesignerAppManager, &type_spec_DesignerAppManager, object_bases.get(), nullptr);
-    if (!state->type_DesignerAppManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesignerAppManager, &type_spec_DesignerAppManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesignerAppManager, &type_spec_DesignerAppManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DesignerAppView = py::register_python_type(module.get(), type_name_DesignerAppView, &type_spec_DesignerAppView, object_bases.get(), nullptr);
-    if (!state->type_DesignerAppView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesignerAppView, &type_spec_DesignerAppView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesignerAppView, &type_spec_DesignerAppView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DesktopWindowXamlSource = py::register_python_type(module.get(), type_name_DesktopWindowXamlSource, &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr);
-    if (!state->type_DesktopWindowXamlSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSource, &type_spec_DesktopWindowXamlSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSource, &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DesktopWindowXamlSourceGotFocusEventArgs = py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceGotFocusEventArgs, &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DesktopWindowXamlSourceGotFocusEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceGotFocusEventArgs, &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceGotFocusEventArgs, &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ElementCompositionPreview = py::register_python_type(module.get(), type_name_ElementCompositionPreview, &type_spec_ElementCompositionPreview, object_bases.get(), nullptr);
-    if (!state->type_ElementCompositionPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElementCompositionPreview, &type_spec_ElementCompositionPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElementCompositionPreview, &type_spec_ElementCompositionPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowsXamlManager = py::register_python_type(module.get(), type_name_WindowsXamlManager, &type_spec_WindowsXamlManager, object_bases.get(), nullptr);
-    if (!state->type_WindowsXamlManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsXamlManager, &type_spec_WindowsXamlManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsXamlManager, &type_spec_WindowsXamlManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlSourceFocusNavigationRequest = py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationRequest, &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr);
-    if (!state->type_XamlSourceFocusNavigationRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationRequest, &type_spec_XamlSourceFocusNavigationRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationRequest, &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlSourceFocusNavigationResult = py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationResult, &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr);
-    if (!state->type_XamlSourceFocusNavigationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationResult, &type_spec_XamlSourceFocusNavigationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationResult, &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3081,352 +3035,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Hosting(void) noexcept
         return nullptr;
     }
 
-    state->type_XamlUIPresenter = py::register_python_type(module.get(), type_name_XamlUIPresenter, &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get()));
-    if (!state->type_XamlUIPresenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlUIPresenter, &type_spec_XamlUIPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlUIPresenter, &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlUIPresenterHost = py::register_python_type(module.get(), type_name_IXamlUIPresenterHost, &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr);
-    if (!state->type_IXamlUIPresenterHost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost, &type_spec_IXamlUIPresenterHost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost, &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlUIPresenterHost2 = py::register_python_type(module.get(), type_name_IXamlUIPresenterHost2, &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr);
-    if (!state->type_IXamlUIPresenterHost2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost2, &type_spec_IXamlUIPresenterHost2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost2, &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlUIPresenterHost3 = py::register_python_type(module.get(), type_name_IXamlUIPresenterHost3, &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr);
-    if (!state->type_IXamlUIPresenterHost3)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost3, &type_spec_IXamlUIPresenterHost3, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost3, &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesignerAppExitedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesignerAppManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesignerAppManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesignerAppView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesignerAppView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesktopWindowXamlSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesktopWindowXamlSourceGotFocusEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DesktopWindowXamlSourceTakeFocusRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElementCompositionPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsXamlManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlSourceFocusNavigationRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlSourceFocusNavigationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlUIPresenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlUIPresenterHost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlUIPresenterHost2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Hosting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Hosting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlUIPresenterHost3;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

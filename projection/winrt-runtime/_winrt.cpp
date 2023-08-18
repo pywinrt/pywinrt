@@ -6,13 +6,6 @@
 
 namespace py::cpp::_winrt
 {
-    struct module_state
-    {
-        PyTypeObject* Object_type;
-        PyTypeObject* Array_type;
-        PyTypeObject* MappingIter_type;
-    };
-
     // BEGIN: class _winrt.Object:
 
     static constexpr const char* const type_name_Object = "Object";
@@ -248,39 +241,15 @@ namespace py::cpp::_winrt
          "interop function to invoke IInitializeWithWindow::Initialize on an object"},
         {}};
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        Py_VISIT(state->Object_type);
-        Py_VISIT(state->Array_type);
-        Py_VISIT(state->MappingIter_type);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        WINRT_ASSERT(state);
-
-        Py_CLEAR(state->Object_type);
-        Py_CLEAR(state->Array_type);
-        Py_CLEAR(state->MappingIter_type);
-
-        return 0;
-    }
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt",
            module_doc,
-           sizeof(module_state),
+           0,
            module_methods,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
     static PyObject* module_init() noexcept
@@ -297,33 +266,44 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-        WINRT_ASSERT(state);
-
-        state->Object_type = py::register_python_type(
-            module.get(), type_name_Object, &Object_type_spec, nullptr, nullptr);
-
-        if (!state->Object_type)
-        {
-            return nullptr;
-        }
-
-        state->Array_type = py::register_python_type(
-            module.get(), "Array", &Array_type_spec, nullptr, nullptr);
-
-        if (!state->Array_type)
-        {
-            return nullptr;
-        }
-
+        if (py::register_python_type(
+                module.get(),
+                type_name_Object,
+                &Object_type_spec,
 #if PY_VERSION_HEX < 0x03090000
-        state->Array_type->tp_as_buffer = &Array_buffer_procs;
+                nullptr,
 #endif
+                nullptr,
+                nullptr)
+            == -1)
+        {
+            return nullptr;
+        }
 
-        state->MappingIter_type = py::register_python_type(
-            module.get(), "MappingIter", &MappingIter_type_spec, nullptr, nullptr);
+        if (py::register_python_type(
+                module.get(),
+                "Array",
+                &Array_type_spec,
+#if PY_VERSION_HEX < 0x03090000
+                &Array_buffer_procs,
+#endif
+                nullptr,
+                nullptr)
+            == -1)
+        {
+            return nullptr;
+        }
 
-        if (!state->MappingIter_type)
+        if (py::register_python_type(
+                module.get(),
+                "MappingIter",
+                &MappingIter_type_spec,
+#if PY_VERSION_HEX < 0x03090000
+                nullptr,
+#endif
+                nullptr,
+                nullptr)
+            == -1)
         {
             return nullptr;
         }
@@ -347,56 +327,35 @@ PyMODINIT_FUNC PyInit__winrt(void) noexcept
     return py::cpp::_winrt::module_init();
 }
 
-PyTypeObject* py::winrt_type<py::Object>::get_python_type() noexcept
+py::get_object_type_t py::get_object_type = []() noexcept -> PyTypeObject*
 {
-    // borrowed ref
-    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
+    py::pyobj_handle system_module{PyImport_ImportModule("winrt.system")};
 
-    if (!module)
+    if (!system_module)
     {
-        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
         return nullptr;
     }
 
-    auto state
-        = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    WINRT_ASSERT(state);
+    py::pyobj_handle object_type{PyObject_GetAttrString(system_module.get(), "Object")};
 
-    return state->Object_type;
-}
-
-PyTypeObject* py::winrt_type<py::Array>::get_python_type() noexcept
-{
-    // borrowed ref
-    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
-
-    if (!module)
+    if (!object_type)
     {
-        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
         return nullptr;
     }
 
-    auto state
-        = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    WINRT_ASSERT(state);
-
-    return state->Array_type;
-}
-
-PyTypeObject* py::winrt_type<py::MappingIter>::get_python_type() noexcept
-{
-    // borrowed ref
-    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
-
-    if (!module)
+    if (PyType_Check(object_type.get()))
     {
-        PyErr_SetString(PyExc_RuntimeError, "could not find _winrt module");
+        PyErr_SetString(PyExc_TypeError, "winrt.system.Object is not a type object!");
         return nullptr;
     }
 
-    auto state
-        = reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
-    WINRT_ASSERT(state);
+    if (reinterpret_cast<PyTypeObject*>(object_type.get())->tp_new
+        != py::cpp::_winrt::Object_new)
+    {
+        PyErr_SetString(
+            PyExc_TypeError, "winrt.system.Object is not the expected type!");
+        return nullptr;
+    }
 
-    return state->MappingIter_type;
-}
+    return reinterpret_cast<PyTypeObject*>(object_type.get());
+};

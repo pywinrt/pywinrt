@@ -47,8 +47,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Media::Devices::AudioRoutingManager>
+    struct py_type<winrt::Windows::Phone::Media::Devices::AudioRoutingManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.media.devices";
+        static constexpr const char* type_name = "AudioRoutingManager";
     };
 }

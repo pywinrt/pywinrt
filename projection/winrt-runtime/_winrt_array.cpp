@@ -15,6 +15,8 @@ namespace py::cpp::_winrt
 
     PyDoc_STRVAR(Array_doc, "class for wrapped COM array instances");
 
+    static PyTypeObject* get_array_type() noexcept;
+
     /**
      * Allocates memory for a new System.Array object.
      * @param [in]  subtype The type to use for allocation.
@@ -41,7 +43,7 @@ namespace py::cpp::_winrt
      */
     PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
     {
-        auto type = get_python_type<py::Array>();
+        auto type = get_array_type();
 
         if (!type)
         {
@@ -69,7 +71,7 @@ namespace py::cpp::_winrt
      */
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept
     {
-        if (Py_TYPE(obj) != get_python_type<py::Array>())
+        if (Py_TYPE(obj) != get_array_type())
         {
             {
                 PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
@@ -212,7 +214,7 @@ namespace py::cpp::_winrt
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
             }
-            else if (type == py::winrt_type<Object>::get_python_type())
+            else if (type == py::get_object_type())
             {
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::IInspectable>>();
@@ -527,4 +529,39 @@ namespace py::cpp::_winrt
 
     PyType_Spec Array_type_spec
         = {"_winrt.Array", sizeof(Array), 0, Py_TPFLAGS_DEFAULT, Array_type_slots};
+
+    static PyTypeObject* get_array_type() noexcept
+    {
+        py::pyobj_handle system_module{PyImport_ImportModule("winrt.system")};
+
+        if (!system_module)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle array_type{
+            PyObject_GetAttrString(system_module.get(), "Array")};
+
+        if (!array_type)
+        {
+            return nullptr;
+        }
+
+        if (PyType_Check(array_type.get()))
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "winrt.system.Array is not a type object!");
+            return nullptr;
+        }
+
+        if (reinterpret_cast<PyTypeObject*>(array_type.get())->tp_new != Array_tp_new)
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "winrt.system.Array is not the expected type!");
+            return nullptr;
+        }
+
+        return reinterpret_cast<PyTypeObject*>(array_type.get());
+    }
+
 } // namespace py::cpp::_winrt

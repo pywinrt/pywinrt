@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Gpio::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_GpioPinProviderValueChangedEventArgs;
-        PyTypeObject* type_IGpioControllerProvider;
-        PyTypeObject* type_IGpioPinProvider;
-        PyTypeObject* type_IGpioProvider;
-    };
-
     // ----- GpioPinProviderValueChangedEventArgs class --------------------
     static constexpr const char* const type_name_GpioPinProviderValueChangedEventArgs = "GpioPinProviderValueChangedEventArgs";
 
@@ -737,50 +729,15 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     PyDoc_STRVAR(module_doc, "Windows::Devices::Gpio::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GpioPinProviderValueChangedEventArgs);
-        Py_VISIT(state->type_IGpioControllerProvider);
-        Py_VISIT(state->type_IGpioPinProvider);
-        Py_VISIT(state->type_IGpioProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GpioPinProviderValueChangedEventArgs);
-        Py_CLEAR(state->type_IGpioControllerProvider);
-        Py_CLEAR(state->type_IGpioPinProvider);
-        Py_CLEAR(state->type_IGpioProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Gpio_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Gpio::Provider
@@ -796,7 +753,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -809,125 +766,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GpioPinProviderValueChangedEventArgs = py::register_python_type(module.get(), type_name_GpioPinProviderValueChangedEventArgs, &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GpioPinProviderValueChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GpioPinProviderValueChangedEventArgs, &type_spec_GpioPinProviderValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GpioPinProviderValueChangedEventArgs, &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGpioControllerProvider = py::register_python_type(module.get(), type_name_IGpioControllerProvider, &type_spec_IGpioControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_IGpioControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGpioControllerProvider, &type_spec_IGpioControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGpioControllerProvider, &type_spec_IGpioControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGpioPinProvider = py::register_python_type(module.get(), type_name_IGpioPinProvider, &type_spec_IGpioPinProvider, object_bases.get(), nullptr);
-    if (!state->type_IGpioPinProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGpioPinProvider, &type_spec_IGpioPinProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGpioPinProvider, &type_spec_IGpioPinProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGpioProvider = py::register_python_type(module.get(), type_name_IGpioProvider, &type_spec_IGpioProvider, object_bases.get(), nullptr);
-    if (!state->type_IGpioProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGpioProvider, &type_spec_IGpioProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGpioProvider, &type_spec_IGpioProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GpioPinProviderValueChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGpioControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGpioPinProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Gpio::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Gpio::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGpioProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Gpio::Provider::IGpioProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

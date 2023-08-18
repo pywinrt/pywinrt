@@ -6,30 +6,6 @@
 
 namespace py::cpp::Windows::Media::SpeechRecognition
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpeechContinuousRecognitionCompletedEventArgs;
-        PyTypeObject* type_SpeechContinuousRecognitionResultGeneratedEventArgs;
-        PyTypeObject* type_SpeechContinuousRecognitionSession;
-        PyTypeObject* type_SpeechRecognitionCompilationResult;
-        PyTypeObject* type_SpeechRecognitionGrammarFileConstraint;
-        PyTypeObject* type_SpeechRecognitionHypothesis;
-        PyTypeObject* type_SpeechRecognitionHypothesisGeneratedEventArgs;
-        PyTypeObject* type_SpeechRecognitionListConstraint;
-        PyTypeObject* type_SpeechRecognitionQualityDegradingEventArgs;
-        PyTypeObject* type_SpeechRecognitionResult;
-        PyTypeObject* type_SpeechRecognitionSemanticInterpretation;
-        PyTypeObject* type_SpeechRecognitionTopicConstraint;
-        PyTypeObject* type_SpeechRecognitionVoiceCommandDefinitionConstraint;
-        PyTypeObject* type_SpeechRecognizer;
-        PyTypeObject* type_SpeechRecognizerStateChangedEventArgs;
-        PyTypeObject* type_SpeechRecognizerTimeouts;
-        PyTypeObject* type_SpeechRecognizerUIOptions;
-        PyTypeObject* type_VoiceCommandManager;
-        PyTypeObject* type_VoiceCommandSet;
-        PyTypeObject* type_ISpeechRecognitionConstraint;
-    };
-
     // ----- SpeechContinuousRecognitionCompletedEventArgs class --------------------
     static constexpr const char* const type_name_SpeechContinuousRecognitionCompletedEventArgs = "SpeechContinuousRecognitionCompletedEventArgs";
 
@@ -4258,82 +4234,15 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     PyDoc_STRVAR(module_doc, "Windows::Media::SpeechRecognition");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpeechContinuousRecognitionCompletedEventArgs);
-        Py_VISIT(state->type_SpeechContinuousRecognitionResultGeneratedEventArgs);
-        Py_VISIT(state->type_SpeechContinuousRecognitionSession);
-        Py_VISIT(state->type_SpeechRecognitionCompilationResult);
-        Py_VISIT(state->type_SpeechRecognitionGrammarFileConstraint);
-        Py_VISIT(state->type_SpeechRecognitionHypothesis);
-        Py_VISIT(state->type_SpeechRecognitionHypothesisGeneratedEventArgs);
-        Py_VISIT(state->type_SpeechRecognitionListConstraint);
-        Py_VISIT(state->type_SpeechRecognitionQualityDegradingEventArgs);
-        Py_VISIT(state->type_SpeechRecognitionResult);
-        Py_VISIT(state->type_SpeechRecognitionSemanticInterpretation);
-        Py_VISIT(state->type_SpeechRecognitionTopicConstraint);
-        Py_VISIT(state->type_SpeechRecognitionVoiceCommandDefinitionConstraint);
-        Py_VISIT(state->type_SpeechRecognizer);
-        Py_VISIT(state->type_SpeechRecognizerStateChangedEventArgs);
-        Py_VISIT(state->type_SpeechRecognizerTimeouts);
-        Py_VISIT(state->type_SpeechRecognizerUIOptions);
-        Py_VISIT(state->type_VoiceCommandManager);
-        Py_VISIT(state->type_VoiceCommandSet);
-        Py_VISIT(state->type_ISpeechRecognitionConstraint);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpeechContinuousRecognitionCompletedEventArgs);
-        Py_CLEAR(state->type_SpeechContinuousRecognitionResultGeneratedEventArgs);
-        Py_CLEAR(state->type_SpeechContinuousRecognitionSession);
-        Py_CLEAR(state->type_SpeechRecognitionCompilationResult);
-        Py_CLEAR(state->type_SpeechRecognitionGrammarFileConstraint);
-        Py_CLEAR(state->type_SpeechRecognitionHypothesis);
-        Py_CLEAR(state->type_SpeechRecognitionHypothesisGeneratedEventArgs);
-        Py_CLEAR(state->type_SpeechRecognitionListConstraint);
-        Py_CLEAR(state->type_SpeechRecognitionQualityDegradingEventArgs);
-        Py_CLEAR(state->type_SpeechRecognitionResult);
-        Py_CLEAR(state->type_SpeechRecognitionSemanticInterpretation);
-        Py_CLEAR(state->type_SpeechRecognitionTopicConstraint);
-        Py_CLEAR(state->type_SpeechRecognitionVoiceCommandDefinitionConstraint);
-        Py_CLEAR(state->type_SpeechRecognizer);
-        Py_CLEAR(state->type_SpeechRecognizerStateChangedEventArgs);
-        Py_CLEAR(state->type_SpeechRecognizerTimeouts);
-        Py_CLEAR(state->type_SpeechRecognizerUIOptions);
-        Py_CLEAR(state->type_VoiceCommandManager);
-        Py_CLEAR(state->type_VoiceCommandSet);
-        Py_CLEAR(state->type_ISpeechRecognitionConstraint);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_SpeechRecognition",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::SpeechRecognition
@@ -4349,7 +4258,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechRecognition(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4362,83 +4271,119 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechRecognition(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpeechContinuousRecognitionCompletedEventArgs = py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionCompletedEventArgs, &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpeechContinuousRecognitionCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionCompletedEventArgs, &type_spec_SpeechContinuousRecognitionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionCompletedEventArgs, &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechContinuousRecognitionResultGeneratedEventArgs = py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionResultGeneratedEventArgs, &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpeechContinuousRecognitionResultGeneratedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionResultGeneratedEventArgs, &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionResultGeneratedEventArgs, &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechContinuousRecognitionSession = py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionSession, &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr);
-    if (!state->type_SpeechContinuousRecognitionSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionSession, &type_spec_SpeechContinuousRecognitionSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionSession, &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionCompilationResult = py::register_python_type(module.get(), type_name_SpeechRecognitionCompilationResult, &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionCompilationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionCompilationResult, &type_spec_SpeechRecognitionCompilationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionCompilationResult, &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionGrammarFileConstraint = py::register_python_type(module.get(), type_name_SpeechRecognitionGrammarFileConstraint, &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionGrammarFileConstraint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionGrammarFileConstraint, &type_spec_SpeechRecognitionGrammarFileConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionGrammarFileConstraint, &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionHypothesis = py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesis, &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionHypothesis)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesis, &type_spec_SpeechRecognitionHypothesis, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesis, &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionHypothesisGeneratedEventArgs = py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesisGeneratedEventArgs, &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionHypothesisGeneratedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesisGeneratedEventArgs, &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesisGeneratedEventArgs, &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionListConstraint = py::register_python_type(module.get(), type_name_SpeechRecognitionListConstraint, &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionListConstraint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionListConstraint, &type_spec_SpeechRecognitionListConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionListConstraint, &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionQualityDegradingEventArgs = py::register_python_type(module.get(), type_name_SpeechRecognitionQualityDegradingEventArgs, &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionQualityDegradingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionQualityDegradingEventArgs, &type_spec_SpeechRecognitionQualityDegradingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionQualityDegradingEventArgs, &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionResult = py::register_python_type(module.get(), type_name_SpeechRecognitionResult, &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionResult, &type_spec_SpeechRecognitionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionResult, &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionSemanticInterpretation = py::register_python_type(module.get(), type_name_SpeechRecognitionSemanticInterpretation, &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionSemanticInterpretation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionSemanticInterpretation, &type_spec_SpeechRecognitionSemanticInterpretation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionSemanticInterpretation, &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionTopicConstraint = py::register_python_type(module.get(), type_name_SpeechRecognitionTopicConstraint, &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionTopicConstraint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionTopicConstraint, &type_spec_SpeechRecognitionTopicConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionTopicConstraint, &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognitionVoiceCommandDefinitionConstraint = py::register_python_type(module.get(), type_name_SpeechRecognitionVoiceCommandDefinitionConstraint, &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognitionVoiceCommandDefinitionConstraint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionVoiceCommandDefinitionConstraint, &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognitionVoiceCommandDefinitionConstraint, &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4449,26 +4394,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechRecognition(void) noexcept
         return nullptr;
     }
 
-    state->type_SpeechRecognizer = py::register_python_type(module.get(), type_name_SpeechRecognizer, &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get()));
-    if (!state->type_SpeechRecognizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizer, &type_spec_SpeechRecognizer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizer, &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognizerStateChangedEventArgs = py::register_python_type(module.get(), type_name_SpeechRecognizerStateChangedEventArgs, &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognizerStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerStateChangedEventArgs, &type_spec_SpeechRecognizerStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerStateChangedEventArgs, &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognizerTimeouts = py::register_python_type(module.get(), type_name_SpeechRecognizerTimeouts, &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognizerTimeouts)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerTimeouts, &type_spec_SpeechRecognizerTimeouts, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerTimeouts, &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeechRecognizerUIOptions = py::register_python_type(module.get(), type_name_SpeechRecognizerUIOptions, &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr);
-    if (!state->type_SpeechRecognizerUIOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerUIOptions, &type_spec_SpeechRecognizerUIOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeechRecognizerUIOptions, &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4479,484 +4436,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechRecognition(void) noexcept
         return nullptr;
     }
 
-    state->type_VoiceCommandManager = py::register_python_type(module.get(), type_name_VoiceCommandManager, &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get()));
-    if (!state->type_VoiceCommandManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandManager, &type_spec_VoiceCommandManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandManager, &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandSet = py::register_python_type(module.get(), type_name_VoiceCommandSet, &type_spec_VoiceCommandSet, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandSet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandSet, &type_spec_VoiceCommandSet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandSet, &type_spec_VoiceCommandSet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISpeechRecognitionConstraint = py::register_python_type(module.get(), type_name_ISpeechRecognitionConstraint, &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr);
-    if (!state->type_ISpeechRecognitionConstraint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISpeechRecognitionConstraint, &type_spec_ISpeechRecognitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISpeechRecognitionConstraint, &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechContinuousRecognitionCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechContinuousRecognitionResultGeneratedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechContinuousRecognitionSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionCompilationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionGrammarFileConstraint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionHypothesis;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionHypothesisGeneratedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionListConstraint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionQualityDegradingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionSemanticInterpretation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionTopicConstraint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognitionVoiceCommandDefinitionConstraint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognizerStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognizerTimeouts;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeechRecognizerUIOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::VoiceCommandManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandSet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::VoiceCommandSet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::SpeechRecognition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::SpeechRecognition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISpeechRecognitionConstraint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

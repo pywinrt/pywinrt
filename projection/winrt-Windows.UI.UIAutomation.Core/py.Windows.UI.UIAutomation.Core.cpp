@@ -6,23 +6,6 @@
 
 namespace py::cpp::Windows::UI::UIAutomation::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_AutomationRemoteOperationResult;
-        PyTypeObject* type_CoreAutomationRegistrar;
-        PyTypeObject* type_CoreAutomationRemoteOperation;
-        PyTypeObject* type_CoreAutomationRemoteOperationContext;
-        PyTypeObject* type_RemoteAutomationClientSession;
-        PyTypeObject* type_RemoteAutomationConnectionRequestedEventArgs;
-        PyTypeObject* type_RemoteAutomationDisconnectedEventArgs;
-        PyTypeObject* type_RemoteAutomationServer;
-        PyTypeObject* type_RemoteAutomationWindow;
-        PyTypeObject* type_ICoreAutomationConnectionBoundObjectProvider;
-        PyTypeObject* type_ICoreAutomationRemoteOperationExtensionProvider;
-        PyTypeObject* type_AutomationAnnotationTypeRegistration;
-        PyTypeObject* type_AutomationRemoteOperationOperandId;
-    };
-
     // ----- AutomationRemoteOperationResult class --------------------
     static constexpr const char* const type_name_AutomationRemoteOperationResult = "AutomationRemoteOperationResult";
 
@@ -1947,68 +1930,15 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::UIAutomation::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AutomationRemoteOperationResult);
-        Py_VISIT(state->type_CoreAutomationRegistrar);
-        Py_VISIT(state->type_CoreAutomationRemoteOperation);
-        Py_VISIT(state->type_CoreAutomationRemoteOperationContext);
-        Py_VISIT(state->type_RemoteAutomationClientSession);
-        Py_VISIT(state->type_RemoteAutomationConnectionRequestedEventArgs);
-        Py_VISIT(state->type_RemoteAutomationDisconnectedEventArgs);
-        Py_VISIT(state->type_RemoteAutomationServer);
-        Py_VISIT(state->type_RemoteAutomationWindow);
-        Py_VISIT(state->type_ICoreAutomationConnectionBoundObjectProvider);
-        Py_VISIT(state->type_ICoreAutomationRemoteOperationExtensionProvider);
-        Py_VISIT(state->type_AutomationAnnotationTypeRegistration);
-        Py_VISIT(state->type_AutomationRemoteOperationOperandId);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AutomationRemoteOperationResult);
-        Py_CLEAR(state->type_CoreAutomationRegistrar);
-        Py_CLEAR(state->type_CoreAutomationRemoteOperation);
-        Py_CLEAR(state->type_CoreAutomationRemoteOperationContext);
-        Py_CLEAR(state->type_RemoteAutomationClientSession);
-        Py_CLEAR(state->type_RemoteAutomationConnectionRequestedEventArgs);
-        Py_CLEAR(state->type_RemoteAutomationDisconnectedEventArgs);
-        Py_CLEAR(state->type_RemoteAutomationServer);
-        Py_CLEAR(state->type_RemoteAutomationWindow);
-        Py_CLEAR(state->type_ICoreAutomationConnectionBoundObjectProvider);
-        Py_CLEAR(state->type_ICoreAutomationRemoteOperationExtensionProvider);
-        Py_CLEAR(state->type_AutomationAnnotationTypeRegistration);
-        Py_CLEAR(state->type_AutomationRemoteOperationOperandId);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_UIAutomation_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::UIAutomation::Core
@@ -2024,7 +1954,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2037,386 +1967,123 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AutomationRemoteOperationResult = py::register_python_type(module.get(), type_name_AutomationRemoteOperationResult, &type_spec_AutomationRemoteOperationResult, object_bases.get(), nullptr);
-    if (!state->type_AutomationRemoteOperationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationRemoteOperationResult, &type_spec_AutomationRemoteOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationRemoteOperationResult, &type_spec_AutomationRemoteOperationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreAutomationRegistrar = py::register_python_type(module.get(), type_name_CoreAutomationRegistrar, &type_spec_CoreAutomationRegistrar, object_bases.get(), nullptr);
-    if (!state->type_CoreAutomationRegistrar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRegistrar, &type_spec_CoreAutomationRegistrar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRegistrar, &type_spec_CoreAutomationRegistrar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreAutomationRemoteOperation = py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperation, &type_spec_CoreAutomationRemoteOperation, object_bases.get(), nullptr);
-    if (!state->type_CoreAutomationRemoteOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperation, &type_spec_CoreAutomationRemoteOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperation, &type_spec_CoreAutomationRemoteOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreAutomationRemoteOperationContext = py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperationContext, &type_spec_CoreAutomationRemoteOperationContext, object_bases.get(), nullptr);
-    if (!state->type_CoreAutomationRemoteOperationContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperationContext, &type_spec_CoreAutomationRemoteOperationContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreAutomationRemoteOperationContext, &type_spec_CoreAutomationRemoteOperationContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteAutomationClientSession = py::register_python_type(module.get(), type_name_RemoteAutomationClientSession, &type_spec_RemoteAutomationClientSession, object_bases.get(), nullptr);
-    if (!state->type_RemoteAutomationClientSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationClientSession, &type_spec_RemoteAutomationClientSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationClientSession, &type_spec_RemoteAutomationClientSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteAutomationConnectionRequestedEventArgs = py::register_python_type(module.get(), type_name_RemoteAutomationConnectionRequestedEventArgs, &type_spec_RemoteAutomationConnectionRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteAutomationConnectionRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationConnectionRequestedEventArgs, &type_spec_RemoteAutomationConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationConnectionRequestedEventArgs, &type_spec_RemoteAutomationConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteAutomationDisconnectedEventArgs = py::register_python_type(module.get(), type_name_RemoteAutomationDisconnectedEventArgs, &type_spec_RemoteAutomationDisconnectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteAutomationDisconnectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationDisconnectedEventArgs, &type_spec_RemoteAutomationDisconnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationDisconnectedEventArgs, &type_spec_RemoteAutomationDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteAutomationServer = py::register_python_type(module.get(), type_name_RemoteAutomationServer, &type_spec_RemoteAutomationServer, object_bases.get(), nullptr);
-    if (!state->type_RemoteAutomationServer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationServer, &type_spec_RemoteAutomationServer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationServer, &type_spec_RemoteAutomationServer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteAutomationWindow = py::register_python_type(module.get(), type_name_RemoteAutomationWindow, &type_spec_RemoteAutomationWindow, object_bases.get(), nullptr);
-    if (!state->type_RemoteAutomationWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationWindow, &type_spec_RemoteAutomationWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteAutomationWindow, &type_spec_RemoteAutomationWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreAutomationConnectionBoundObjectProvider = py::register_python_type(module.get(), type_name_ICoreAutomationConnectionBoundObjectProvider, &type_spec_ICoreAutomationConnectionBoundObjectProvider, object_bases.get(), nullptr);
-    if (!state->type_ICoreAutomationConnectionBoundObjectProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreAutomationConnectionBoundObjectProvider, &type_spec_ICoreAutomationConnectionBoundObjectProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreAutomationConnectionBoundObjectProvider, &type_spec_ICoreAutomationConnectionBoundObjectProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreAutomationRemoteOperationExtensionProvider = py::register_python_type(module.get(), type_name_ICoreAutomationRemoteOperationExtensionProvider, &type_spec_ICoreAutomationRemoteOperationExtensionProvider, object_bases.get(), nullptr);
-    if (!state->type_ICoreAutomationRemoteOperationExtensionProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreAutomationRemoteOperationExtensionProvider, &type_spec_ICoreAutomationRemoteOperationExtensionProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreAutomationRemoteOperationExtensionProvider, &type_spec_ICoreAutomationRemoteOperationExtensionProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationAnnotationTypeRegistration = py::register_python_type(module.get(), type_name_AutomationAnnotationTypeRegistration, &type_spec_AutomationAnnotationTypeRegistration, nullptr, nullptr);
-    if (!state->type_AutomationAnnotationTypeRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationAnnotationTypeRegistration, &type_spec_AutomationAnnotationTypeRegistration, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationAnnotationTypeRegistration, &type_spec_AutomationAnnotationTypeRegistration, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationRemoteOperationOperandId = py::register_python_type(module.get(), type_name_AutomationRemoteOperationOperandId, &type_spec_AutomationRemoteOperationOperandId, nullptr, nullptr);
-    if (!state->type_AutomationRemoteOperationOperandId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationRemoteOperationOperandId, &type_spec_AutomationRemoteOperationOperandId, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationRemoteOperationOperandId, &type_spec_AutomationRemoteOperationOperandId, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationRemoteOperationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreAutomationRegistrar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreAutomationRemoteOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreAutomationRemoteOperationContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteAutomationClientSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteAutomationConnectionRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteAutomationDisconnectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteAutomationServer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteAutomationWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreAutomationConnectionBoundObjectProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreAutomationRemoteOperationExtensionProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationAnnotationTypeRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::UIAutomation::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::UIAutomation::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationRemoteOperationOperandId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

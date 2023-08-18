@@ -84,200 +84,233 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpCacheDirectiveHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpChallengeHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpChallengeHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpConnectionOptionHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpConnectionOptionHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentCodingHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentCodingHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentCodingWithQualityHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentCodingWithQualityHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentDispositionHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentHeaderCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpContentRangeHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpCookiePairHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpCookiePairHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpCredentialsHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpDateOrDeltaHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpExpectationHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpExpectationHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpLanguageHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpLanguageRangeWithQualityHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpLanguageRangeWithQualityHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpMediaTypeHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpMediaTypeWithQualityHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpMediaTypeWithQualityHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpMethodHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpNameValueHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpProductHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpProductInfoHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpProductInfoHeaderValueCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpRequestHeaderCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpResponseHeaderCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpTransferCodingHeaderValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>
+    struct py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.headers";
+        static constexpr const char* type_name = "HttpTransferCodingHeaderValueCollection";
     };
 }

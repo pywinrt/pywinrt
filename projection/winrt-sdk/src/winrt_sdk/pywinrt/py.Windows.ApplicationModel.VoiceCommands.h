@@ -81,62 +81,72 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandConfirmationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandContentTile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandDefinitionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandDisambiguationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandResponse";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandServiceConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>
+    struct py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
+        static constexpr const char* type_name = "VoiceCommandUserMessage";
     };
 }

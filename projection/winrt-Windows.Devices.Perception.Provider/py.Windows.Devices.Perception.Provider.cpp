@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Perception::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_KnownPerceptionFrameKind;
-        PyTypeObject* type_PerceptionControlGroup;
-        PyTypeObject* type_PerceptionCorrelation;
-        PyTypeObject* type_PerceptionCorrelationGroup;
-        PyTypeObject* type_PerceptionFaceAuthenticationGroup;
-        PyTypeObject* type_PerceptionFrame;
-        PyTypeObject* type_PerceptionFrameProviderInfo;
-        PyTypeObject* type_PerceptionFrameProviderManagerService;
-        PyTypeObject* type_PerceptionPropertyChangeRequest;
-        PyTypeObject* type_PerceptionVideoFrameAllocator;
-        PyTypeObject* type_IPerceptionFrameProvider;
-        PyTypeObject* type_IPerceptionFrameProviderManager;
-    };
-
     // ----- KnownPerceptionFrameKind class --------------------
     static constexpr const char* const type_name_KnownPerceptionFrameKind = "KnownPerceptionFrameKind";
 
@@ -2393,66 +2377,15 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     PyDoc_STRVAR(module_doc, "Windows::Devices::Perception::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_KnownPerceptionFrameKind);
-        Py_VISIT(state->type_PerceptionControlGroup);
-        Py_VISIT(state->type_PerceptionCorrelation);
-        Py_VISIT(state->type_PerceptionCorrelationGroup);
-        Py_VISIT(state->type_PerceptionFaceAuthenticationGroup);
-        Py_VISIT(state->type_PerceptionFrame);
-        Py_VISIT(state->type_PerceptionFrameProviderInfo);
-        Py_VISIT(state->type_PerceptionFrameProviderManagerService);
-        Py_VISIT(state->type_PerceptionPropertyChangeRequest);
-        Py_VISIT(state->type_PerceptionVideoFrameAllocator);
-        Py_VISIT(state->type_IPerceptionFrameProvider);
-        Py_VISIT(state->type_IPerceptionFrameProviderManager);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_KnownPerceptionFrameKind);
-        Py_CLEAR(state->type_PerceptionControlGroup);
-        Py_CLEAR(state->type_PerceptionCorrelation);
-        Py_CLEAR(state->type_PerceptionCorrelationGroup);
-        Py_CLEAR(state->type_PerceptionFaceAuthenticationGroup);
-        Py_CLEAR(state->type_PerceptionFrame);
-        Py_CLEAR(state->type_PerceptionFrameProviderInfo);
-        Py_CLEAR(state->type_PerceptionFrameProviderManagerService);
-        Py_CLEAR(state->type_PerceptionPropertyChangeRequest);
-        Py_CLEAR(state->type_PerceptionVideoFrameAllocator);
-        Py_CLEAR(state->type_IPerceptionFrameProvider);
-        Py_CLEAR(state->type_IPerceptionFrameProviderManager);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Perception_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Perception::Provider
@@ -2468,7 +2401,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception_Provider(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2481,363 +2414,120 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception_Provider(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_KnownPerceptionFrameKind_Meta{PyType_FromSpec(&type_spec_KnownPerceptionFrameKind_Meta)};
     if (!type_KnownPerceptionFrameKind_Meta)
     {
         return nullptr;
     }
 
-    state->type_KnownPerceptionFrameKind = py::register_python_type(module.get(), type_name_KnownPerceptionFrameKind, &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get()));
-    if (!state->type_KnownPerceptionFrameKind)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameKind, &type_spec_KnownPerceptionFrameKind, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameKind, &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionControlGroup = py::register_python_type(module.get(), type_name_PerceptionControlGroup, &type_spec_PerceptionControlGroup, object_bases.get(), nullptr);
-    if (!state->type_PerceptionControlGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionControlGroup, &type_spec_PerceptionControlGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionControlGroup, &type_spec_PerceptionControlGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionCorrelation = py::register_python_type(module.get(), type_name_PerceptionCorrelation, &type_spec_PerceptionCorrelation, object_bases.get(), nullptr);
-    if (!state->type_PerceptionCorrelation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionCorrelation, &type_spec_PerceptionCorrelation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionCorrelation, &type_spec_PerceptionCorrelation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionCorrelationGroup = py::register_python_type(module.get(), type_name_PerceptionCorrelationGroup, &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr);
-    if (!state->type_PerceptionCorrelationGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionCorrelationGroup, &type_spec_PerceptionCorrelationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionCorrelationGroup, &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFaceAuthenticationGroup = py::register_python_type(module.get(), type_name_PerceptionFaceAuthenticationGroup, &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFaceAuthenticationGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFaceAuthenticationGroup, &type_spec_PerceptionFaceAuthenticationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFaceAuthenticationGroup, &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFrame = py::register_python_type(module.get(), type_name_PerceptionFrame, &type_spec_PerceptionFrame, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFrame, &type_spec_PerceptionFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFrame, &type_spec_PerceptionFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFrameProviderInfo = py::register_python_type(module.get(), type_name_PerceptionFrameProviderInfo, &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFrameProviderInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderInfo, &type_spec_PerceptionFrameProviderInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderInfo, &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionFrameProviderManagerService = py::register_python_type(module.get(), type_name_PerceptionFrameProviderManagerService, &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), nullptr);
-    if (!state->type_PerceptionFrameProviderManagerService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderManagerService, &type_spec_PerceptionFrameProviderManagerService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderManagerService, &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionPropertyChangeRequest = py::register_python_type(module.get(), type_name_PerceptionPropertyChangeRequest, &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr);
-    if (!state->type_PerceptionPropertyChangeRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionPropertyChangeRequest, &type_spec_PerceptionPropertyChangeRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionPropertyChangeRequest, &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PerceptionVideoFrameAllocator = py::register_python_type(module.get(), type_name_PerceptionVideoFrameAllocator, &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr);
-    if (!state->type_PerceptionVideoFrameAllocator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerceptionVideoFrameAllocator, &type_spec_PerceptionVideoFrameAllocator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerceptionVideoFrameAllocator, &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPerceptionFrameProvider = py::register_python_type(module.get(), type_name_IPerceptionFrameProvider, &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr);
-    if (!state->type_IPerceptionFrameProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProvider, &type_spec_IPerceptionFrameProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProvider, &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPerceptionFrameProviderManager = py::register_python_type(module.get(), type_name_IPerceptionFrameProviderManager, &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr);
-    if (!state->type_IPerceptionFrameProviderManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProviderManager, &type_spec_IPerceptionFrameProviderManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProviderManager, &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownPerceptionFrameKind;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionControlGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionCorrelation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionCorrelationGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFaceAuthenticationGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFrameProviderInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionFrameProviderManagerService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionPropertyChangeRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerceptionVideoFrameAllocator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPerceptionFrameProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Perception::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Perception::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPerceptionFrameProviderManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

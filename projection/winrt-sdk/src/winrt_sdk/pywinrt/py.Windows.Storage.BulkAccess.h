@@ -55,26 +55,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::BulkAccess::FileInformation>
+    struct py_type<winrt::Windows::Storage::BulkAccess::FileInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
+        static constexpr const char* type_name = "FileInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::BulkAccess::FileInformationFactory>
+    struct py_type<winrt::Windows::Storage::BulkAccess::FileInformationFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
+        static constexpr const char* type_name = "FileInformationFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::BulkAccess::FolderInformation>
+    struct py_type<winrt::Windows::Storage::BulkAccess::FolderInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
+        static constexpr const char* type_name = "FolderInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
+    struct py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
+        static constexpr const char* type_name = "IStorageItemInformation";
     };
 }

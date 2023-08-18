@@ -59,20 +59,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>
+    struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
+        static constexpr const char* type_name = "DevicePortalConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>
+    struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
+        static constexpr const char* type_name = "DevicePortalConnectionClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>
+    struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
+        static constexpr const char* type_name = "DevicePortalConnectionRequestReceivedEventArgs";
     };
 }

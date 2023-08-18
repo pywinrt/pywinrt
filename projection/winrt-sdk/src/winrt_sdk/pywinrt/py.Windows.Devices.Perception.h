@@ -110,206 +110,240 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownCameraIntrinsicsProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionColorFrameSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionDepthFrameSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionFrameSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionInfraredFrameSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionVideoFrameSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>
+    struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "KnownPerceptionVideoProfileProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameArrivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameSourceAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameSourceRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionColorFrameSourceWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionControlSession>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionControlSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthCorrelatedCameraIntrinsics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthCorrelatedCoordinateMapper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameArrivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameSourceAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameSourceRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionDepthFrameSourceWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionFrameSourcePropertiesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionFrameSourcePropertyChangeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameArrivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameSourceAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameSourceRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionInfraredFrameSourceWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>
+    struct py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.perception";
+        static constexpr const char* type_name = "PerceptionVideoProfile";
     };
 }

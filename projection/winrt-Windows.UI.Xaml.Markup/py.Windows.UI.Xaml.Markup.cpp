@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Markup
 {
-    struct module_state
-    {
-        PyTypeObject* type_MarkupExtension;
-        PyTypeObject* type_XamlBinaryWriter;
-        PyTypeObject* type_XamlBindingHelper;
-        PyTypeObject* type_XamlMarkupHelper;
-        PyTypeObject* type_XamlReader;
-        PyTypeObject* type_IComponentConnector;
-        PyTypeObject* type_IComponentConnector2;
-        PyTypeObject* type_IDataTemplateComponent;
-        PyTypeObject* type_IXamlBindScopeDiagnostics;
-        PyTypeObject* type_IXamlMember;
-        PyTypeObject* type_IXamlMetadataProvider;
-        PyTypeObject* type_IXamlType;
-        PyTypeObject* type_IXamlType2;
-        PyTypeObject* type_XamlBinaryWriterErrorInformation;
-        PyTypeObject* type_XmlnsDefinition;
-    };
-
     // ----- MarkupExtension class --------------------
     static constexpr const char* const type_name_MarkupExtension = "MarkupExtension";
 
@@ -3603,72 +3584,15 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Markup");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_MarkupExtension);
-        Py_VISIT(state->type_XamlBinaryWriter);
-        Py_VISIT(state->type_XamlBindingHelper);
-        Py_VISIT(state->type_XamlMarkupHelper);
-        Py_VISIT(state->type_XamlReader);
-        Py_VISIT(state->type_IComponentConnector);
-        Py_VISIT(state->type_IComponentConnector2);
-        Py_VISIT(state->type_IDataTemplateComponent);
-        Py_VISIT(state->type_IXamlBindScopeDiagnostics);
-        Py_VISIT(state->type_IXamlMember);
-        Py_VISIT(state->type_IXamlMetadataProvider);
-        Py_VISIT(state->type_IXamlType);
-        Py_VISIT(state->type_IXamlType2);
-        Py_VISIT(state->type_XamlBinaryWriterErrorInformation);
-        Py_VISIT(state->type_XmlnsDefinition);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_MarkupExtension);
-        Py_CLEAR(state->type_XamlBinaryWriter);
-        Py_CLEAR(state->type_XamlBindingHelper);
-        Py_CLEAR(state->type_XamlMarkupHelper);
-        Py_CLEAR(state->type_XamlReader);
-        Py_CLEAR(state->type_IComponentConnector);
-        Py_CLEAR(state->type_IComponentConnector2);
-        Py_CLEAR(state->type_IDataTemplateComponent);
-        Py_CLEAR(state->type_IXamlBindScopeDiagnostics);
-        Py_CLEAR(state->type_IXamlMember);
-        Py_CLEAR(state->type_IXamlMetadataProvider);
-        Py_CLEAR(state->type_IXamlType);
-        Py_CLEAR(state->type_IXamlType2);
-        Py_CLEAR(state->type_XamlBinaryWriterErrorInformation);
-        Py_CLEAR(state->type_XmlnsDefinition);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Markup",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Markup
@@ -3684,7 +3608,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Markup(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3697,17 +3621,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Markup(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_MarkupExtension = py::register_python_type(module.get(), type_name_MarkupExtension, &type_spec_MarkupExtension, object_bases.get(), nullptr);
-    if (!state->type_MarkupExtension)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MarkupExtension, &type_spec_MarkupExtension, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MarkupExtension, &type_spec_MarkupExtension, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlBinaryWriter = py::register_python_type(module.get(), type_name_XamlBinaryWriter, &type_spec_XamlBinaryWriter, object_bases.get(), nullptr);
-    if (!state->type_XamlBinaryWriter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlBinaryWriter, &type_spec_XamlBinaryWriter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlBinaryWriter, &type_spec_XamlBinaryWriter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3718,429 +3645,123 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Markup(void) noexcept
         return nullptr;
     }
 
-    state->type_XamlBindingHelper = py::register_python_type(module.get(), type_name_XamlBindingHelper, &type_spec_XamlBindingHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBindingHelper_Meta.get()));
-    if (!state->type_XamlBindingHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlBindingHelper, &type_spec_XamlBindingHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBindingHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlBindingHelper, &type_spec_XamlBindingHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBindingHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlMarkupHelper = py::register_python_type(module.get(), type_name_XamlMarkupHelper, &type_spec_XamlMarkupHelper, object_bases.get(), nullptr);
-    if (!state->type_XamlMarkupHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlMarkupHelper, &type_spec_XamlMarkupHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlMarkupHelper, &type_spec_XamlMarkupHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlReader = py::register_python_type(module.get(), type_name_XamlReader, &type_spec_XamlReader, object_bases.get(), nullptr);
-    if (!state->type_XamlReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlReader, &type_spec_XamlReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlReader, &type_spec_XamlReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IComponentConnector = py::register_python_type(module.get(), type_name_IComponentConnector, &type_spec_IComponentConnector, object_bases.get(), nullptr);
-    if (!state->type_IComponentConnector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IComponentConnector, &type_spec_IComponentConnector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IComponentConnector, &type_spec_IComponentConnector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IComponentConnector2 = py::register_python_type(module.get(), type_name_IComponentConnector2, &type_spec_IComponentConnector2, object_bases.get(), nullptr);
-    if (!state->type_IComponentConnector2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IComponentConnector2, &type_spec_IComponentConnector2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IComponentConnector2, &type_spec_IComponentConnector2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDataTemplateComponent = py::register_python_type(module.get(), type_name_IDataTemplateComponent, &type_spec_IDataTemplateComponent, object_bases.get(), nullptr);
-    if (!state->type_IDataTemplateComponent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDataTemplateComponent, &type_spec_IDataTemplateComponent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDataTemplateComponent, &type_spec_IDataTemplateComponent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlBindScopeDiagnostics = py::register_python_type(module.get(), type_name_IXamlBindScopeDiagnostics, &type_spec_IXamlBindScopeDiagnostics, object_bases.get(), nullptr);
-    if (!state->type_IXamlBindScopeDiagnostics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlBindScopeDiagnostics, &type_spec_IXamlBindScopeDiagnostics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlBindScopeDiagnostics, &type_spec_IXamlBindScopeDiagnostics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlMember = py::register_python_type(module.get(), type_name_IXamlMember, &type_spec_IXamlMember, object_bases.get(), nullptr);
-    if (!state->type_IXamlMember)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlMember, &type_spec_IXamlMember, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlMember, &type_spec_IXamlMember, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlMetadataProvider = py::register_python_type(module.get(), type_name_IXamlMetadataProvider, &type_spec_IXamlMetadataProvider, object_bases.get(), nullptr);
-    if (!state->type_IXamlMetadataProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlMetadataProvider, &type_spec_IXamlMetadataProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlMetadataProvider, &type_spec_IXamlMetadataProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlType = py::register_python_type(module.get(), type_name_IXamlType, &type_spec_IXamlType, object_bases.get(), nullptr);
-    if (!state->type_IXamlType)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlType, &type_spec_IXamlType, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlType, &type_spec_IXamlType, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXamlType2 = py::register_python_type(module.get(), type_name_IXamlType2, &type_spec_IXamlType2, object_bases.get(), nullptr);
-    if (!state->type_IXamlType2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXamlType2, &type_spec_IXamlType2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXamlType2, &type_spec_IXamlType2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlBinaryWriterErrorInformation = py::register_python_type(module.get(), type_name_XamlBinaryWriterErrorInformation, &type_spec_XamlBinaryWriterErrorInformation, nullptr, nullptr);
-    if (!state->type_XamlBinaryWriterErrorInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlBinaryWriterErrorInformation, &type_spec_XamlBinaryWriterErrorInformation, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlBinaryWriterErrorInformation, &type_spec_XamlBinaryWriterErrorInformation, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XmlnsDefinition = py::register_python_type(module.get(), type_name_XmlnsDefinition, &type_spec_XmlnsDefinition, nullptr, nullptr);
-    if (!state->type_XmlnsDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XmlnsDefinition, &type_spec_XmlnsDefinition, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XmlnsDefinition, &type_spec_XmlnsDefinition, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::MarkupExtension>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MarkupExtension;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::MarkupExtension is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlBinaryWriter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlBindingHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XamlBindingHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlMarkupHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XamlReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XamlReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IComponentConnector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IComponentConnector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IComponentConnector2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IComponentConnector2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDataTemplateComponent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlBindScopeDiagnostics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlMember;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IXamlMember is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlMetadataProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IXamlType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXamlType2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::IXamlType2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlBinaryWriterErrorInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Markup;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Markup");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XmlnsDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Markup::XmlnsDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

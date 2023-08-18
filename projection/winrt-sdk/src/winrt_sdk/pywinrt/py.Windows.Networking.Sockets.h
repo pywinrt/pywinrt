@@ -233,248 +233,289 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ControlChannelTrigger>
+    struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTrigger>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ControlChannelTrigger";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::DatagramSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::DatagramSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "DatagramSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "DatagramSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "DatagramSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>
+    struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "DatagramSocketMessageReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "MessageWebSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "MessageWebSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "MessageWebSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>
+    struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "MessageWebSocketMessageReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ServerMessageWebSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ServerMessageWebSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ServerMessageWebSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ServerStreamWebSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "ServerStreamWebSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::SocketActivityContext>
+    struct py_type<winrt::Windows::Networking::Sockets::SocketActivityContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>
+    struct py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketActivityTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::SocketError>
+    struct py_type<winrt::Windows::Networking::Sockets::SocketError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "SocketError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListener>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketListener";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketListenerConnectionReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketListenerControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamSocketListenerInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamWebSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamWebSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "StreamWebSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>
+    struct py_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "WebSocketClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::WebSocketError>
+    struct py_type<winrt::Windows::Networking::Sockets::WebSocketError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "WebSocketError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>
+    struct py_type<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "WebSocketKeepAlive";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>
+    struct py_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "WebSocketServerCustomValidationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>
+    struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IControlChannelTriggerEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>
+    struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IControlChannelTriggerResetEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IWebSocket>
+    struct py_type<winrt::Windows::Networking::Sockets::IWebSocket>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IWebSocket";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IWebSocketControl>
+    struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IWebSocketControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>
+    struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IWebSocketControl2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>
+    struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IWebSocketInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>
+    struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "IWebSocketInformation2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>
+    struct py_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "BandwidthStatistics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>
+    struct py_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.sockets";
+        static constexpr const char* type_name = "RoundTripTimeStatistics";
     };
 }

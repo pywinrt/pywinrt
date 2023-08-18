@@ -6,37 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Documents
 {
-    struct module_state
-    {
-        PyTypeObject* type_Block;
-        PyTypeObject* type_BlockCollection;
-        PyTypeObject* type_Bold;
-        PyTypeObject* type_ContactContentLinkProvider;
-        PyTypeObject* type_ContentLink;
-        PyTypeObject* type_ContentLinkInvokedEventArgs;
-        PyTypeObject* type_ContentLinkProvider;
-        PyTypeObject* type_ContentLinkProviderCollection;
-        PyTypeObject* type_Glyphs;
-        PyTypeObject* type_Hyperlink;
-        PyTypeObject* type_HyperlinkClickEventArgs;
-        PyTypeObject* type_Inline;
-        PyTypeObject* type_InlineCollection;
-        PyTypeObject* type_InlineUIContainer;
-        PyTypeObject* type_Italic;
-        PyTypeObject* type_LineBreak;
-        PyTypeObject* type_Paragraph;
-        PyTypeObject* type_PlaceContentLinkProvider;
-        PyTypeObject* type_Run;
-        PyTypeObject* type_Span;
-        PyTypeObject* type_TextElement;
-        PyTypeObject* type_TextHighlighter;
-        PyTypeObject* type_TextHighlighterBase;
-        PyTypeObject* type_TextPointer;
-        PyTypeObject* type_Typography;
-        PyTypeObject* type_Underline;
-        PyTypeObject* type_TextRange;
-    };
-
     // ----- Block class --------------------
     static constexpr const char* const type_name_Block = "Block";
 
@@ -13482,96 +13451,15 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Documents");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Block);
-        Py_VISIT(state->type_BlockCollection);
-        Py_VISIT(state->type_Bold);
-        Py_VISIT(state->type_ContactContentLinkProvider);
-        Py_VISIT(state->type_ContentLink);
-        Py_VISIT(state->type_ContentLinkInvokedEventArgs);
-        Py_VISIT(state->type_ContentLinkProvider);
-        Py_VISIT(state->type_ContentLinkProviderCollection);
-        Py_VISIT(state->type_Glyphs);
-        Py_VISIT(state->type_Hyperlink);
-        Py_VISIT(state->type_HyperlinkClickEventArgs);
-        Py_VISIT(state->type_Inline);
-        Py_VISIT(state->type_InlineCollection);
-        Py_VISIT(state->type_InlineUIContainer);
-        Py_VISIT(state->type_Italic);
-        Py_VISIT(state->type_LineBreak);
-        Py_VISIT(state->type_Paragraph);
-        Py_VISIT(state->type_PlaceContentLinkProvider);
-        Py_VISIT(state->type_Run);
-        Py_VISIT(state->type_Span);
-        Py_VISIT(state->type_TextElement);
-        Py_VISIT(state->type_TextHighlighter);
-        Py_VISIT(state->type_TextHighlighterBase);
-        Py_VISIT(state->type_TextPointer);
-        Py_VISIT(state->type_Typography);
-        Py_VISIT(state->type_Underline);
-        Py_VISIT(state->type_TextRange);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Block);
-        Py_CLEAR(state->type_BlockCollection);
-        Py_CLEAR(state->type_Bold);
-        Py_CLEAR(state->type_ContactContentLinkProvider);
-        Py_CLEAR(state->type_ContentLink);
-        Py_CLEAR(state->type_ContentLinkInvokedEventArgs);
-        Py_CLEAR(state->type_ContentLinkProvider);
-        Py_CLEAR(state->type_ContentLinkProviderCollection);
-        Py_CLEAR(state->type_Glyphs);
-        Py_CLEAR(state->type_Hyperlink);
-        Py_CLEAR(state->type_HyperlinkClickEventArgs);
-        Py_CLEAR(state->type_Inline);
-        Py_CLEAR(state->type_InlineCollection);
-        Py_CLEAR(state->type_InlineUIContainer);
-        Py_CLEAR(state->type_Italic);
-        Py_CLEAR(state->type_LineBreak);
-        Py_CLEAR(state->type_Paragraph);
-        Py_CLEAR(state->type_PlaceContentLinkProvider);
-        Py_CLEAR(state->type_Run);
-        Py_CLEAR(state->type_Span);
-        Py_CLEAR(state->type_TextElement);
-        Py_CLEAR(state->type_TextHighlighter);
-        Py_CLEAR(state->type_TextHighlighterBase);
-        Py_CLEAR(state->type_TextPointer);
-        Py_CLEAR(state->type_Typography);
-        Py_CLEAR(state->type_Underline);
-        Py_CLEAR(state->type_TextRange);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Documents",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Documents
@@ -13587,7 +13475,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -13600,35 +13488,44 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_Block_Meta{PyType_FromSpec(&type_spec_Block_Meta)};
     if (!type_Block_Meta)
     {
         return nullptr;
     }
 
-    state->type_Block = py::register_python_type(module.get(), type_name_Block, &type_spec_Block, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get()));
-    if (!state->type_Block)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Block, &type_spec_Block, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Block, &type_spec_Block, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BlockCollection = py::register_python_type(module.get(), type_name_BlockCollection, &type_spec_BlockCollection, object_bases.get(), nullptr);
-    if (!state->type_BlockCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BlockCollection, &type_spec_BlockCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BlockCollection, &type_spec_BlockCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Bold = py::register_python_type(module.get(), type_name_Bold, &type_spec_Bold, object_bases.get(), nullptr);
-    if (!state->type_Bold)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Bold, &type_spec_Bold, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Bold, &type_spec_Bold, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactContentLinkProvider = py::register_python_type(module.get(), type_name_ContactContentLinkProvider, &type_spec_ContactContentLinkProvider, object_bases.get(), nullptr);
-    if (!state->type_ContactContentLinkProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactContentLinkProvider, &type_spec_ContactContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactContentLinkProvider, &type_spec_ContactContentLinkProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13639,26 +13536,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_ContentLink = py::register_python_type(module.get(), type_name_ContentLink, &type_spec_ContentLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get()));
-    if (!state->type_ContentLink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentLink, &type_spec_ContentLink, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentLink, &type_spec_ContentLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContentLinkInvokedEventArgs = py::register_python_type(module.get(), type_name_ContentLinkInvokedEventArgs, &type_spec_ContentLinkInvokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContentLinkInvokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentLinkInvokedEventArgs, &type_spec_ContentLinkInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentLinkInvokedEventArgs, &type_spec_ContentLinkInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContentLinkProvider = py::register_python_type(module.get(), type_name_ContentLinkProvider, &type_spec_ContentLinkProvider, object_bases.get(), nullptr);
-    if (!state->type_ContentLinkProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentLinkProvider, &type_spec_ContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentLinkProvider, &type_spec_ContentLinkProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContentLinkProviderCollection = py::register_python_type(module.get(), type_name_ContentLinkProviderCollection, &type_spec_ContentLinkProviderCollection, object_bases.get(), nullptr);
-    if (!state->type_ContentLinkProviderCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentLinkProviderCollection, &type_spec_ContentLinkProviderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentLinkProviderCollection, &type_spec_ContentLinkProviderCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13669,8 +13578,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_Glyphs = py::register_python_type(module.get(), type_name_Glyphs, &type_spec_Glyphs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get()));
-    if (!state->type_Glyphs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Glyphs, &type_spec_Glyphs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Glyphs, &type_spec_Glyphs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13681,44 +13593,65 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_Hyperlink = py::register_python_type(module.get(), type_name_Hyperlink, &type_spec_Hyperlink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get()));
-    if (!state->type_Hyperlink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Hyperlink, &type_spec_Hyperlink, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Hyperlink, &type_spec_Hyperlink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HyperlinkClickEventArgs = py::register_python_type(module.get(), type_name_HyperlinkClickEventArgs, &type_spec_HyperlinkClickEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HyperlinkClickEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HyperlinkClickEventArgs, &type_spec_HyperlinkClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HyperlinkClickEventArgs, &type_spec_HyperlinkClickEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Inline = py::register_python_type(module.get(), type_name_Inline, &type_spec_Inline, object_bases.get(), nullptr);
-    if (!state->type_Inline)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Inline, &type_spec_Inline, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Inline, &type_spec_Inline, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InlineCollection = py::register_python_type(module.get(), type_name_InlineCollection, &type_spec_InlineCollection, object_bases.get(), nullptr);
-    if (!state->type_InlineCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InlineCollection, &type_spec_InlineCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InlineCollection, &type_spec_InlineCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InlineUIContainer = py::register_python_type(module.get(), type_name_InlineUIContainer, &type_spec_InlineUIContainer, object_bases.get(), nullptr);
-    if (!state->type_InlineUIContainer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InlineUIContainer, &type_spec_InlineUIContainer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InlineUIContainer, &type_spec_InlineUIContainer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Italic = py::register_python_type(module.get(), type_name_Italic, &type_spec_Italic, object_bases.get(), nullptr);
-    if (!state->type_Italic)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Italic, &type_spec_Italic, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Italic, &type_spec_Italic, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LineBreak = py::register_python_type(module.get(), type_name_LineBreak, &type_spec_LineBreak, object_bases.get(), nullptr);
-    if (!state->type_LineBreak)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineBreak, &type_spec_LineBreak, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineBreak, &type_spec_LineBreak, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13729,14 +13662,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_Paragraph = py::register_python_type(module.get(), type_name_Paragraph, &type_spec_Paragraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get()));
-    if (!state->type_Paragraph)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Paragraph, &type_spec_Paragraph, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Paragraph, &type_spec_Paragraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlaceContentLinkProvider = py::register_python_type(module.get(), type_name_PlaceContentLinkProvider, &type_spec_PlaceContentLinkProvider, object_bases.get(), nullptr);
-    if (!state->type_PlaceContentLinkProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaceContentLinkProvider, &type_spec_PlaceContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaceContentLinkProvider, &type_spec_PlaceContentLinkProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13747,14 +13686,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_Run = py::register_python_type(module.get(), type_name_Run, &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get()));
-    if (!state->type_Run)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Run, &type_spec_Run, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Run, &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Span = py::register_python_type(module.get(), type_name_Span, &type_spec_Span, object_bases.get(), nullptr);
-    if (!state->type_Span)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Span, &type_spec_Span, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Span, &type_spec_Span, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13765,8 +13710,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_TextElement = py::register_python_type(module.get(), type_name_TextElement, &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get()));
-    if (!state->type_TextElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextElement, &type_spec_TextElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextElement, &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13777,20 +13725,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_TextHighlighter = py::register_python_type(module.get(), type_name_TextHighlighter, &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get()));
-    if (!state->type_TextHighlighter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextHighlighter, &type_spec_TextHighlighter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextHighlighter, &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextHighlighterBase = py::register_python_type(module.get(), type_name_TextHighlighterBase, &type_spec_TextHighlighterBase, object_bases.get(), nullptr);
-    if (!state->type_TextHighlighterBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextHighlighterBase, &type_spec_TextHighlighterBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextHighlighterBase, &type_spec_TextHighlighterBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextPointer = py::register_python_type(module.get(), type_name_TextPointer, &type_spec_TextPointer, object_bases.get(), nullptr);
-    if (!state->type_TextPointer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextPointer, &type_spec_TextPointer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextPointer, &type_spec_TextPointer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -13801,645 +13758,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
         return nullptr;
     }
 
-    state->type_Typography = py::register_python_type(module.get(), type_name_Typography, &type_spec_Typography, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get()));
-    if (!state->type_Typography)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Typography, &type_spec_Typography, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Typography, &type_spec_Typography, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Underline = py::register_python_type(module.get(), type_name_Underline, &type_spec_Underline, object_bases.get(), nullptr);
-    if (!state->type_Underline)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Underline, &type_spec_Underline, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Underline, &type_spec_Underline, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextRange = py::register_python_type(module.get(), type_name_TextRange, &type_spec_TextRange, nullptr, nullptr);
-    if (!state->type_TextRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextRange, &type_spec_TextRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextRange, &type_spec_TextRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Block>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Block;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Block is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BlockCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::BlockCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Bold>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Bold;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Bold is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactContentLinkProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentLink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::ContentLink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentLinkInvokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentLinkProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::ContentLinkProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentLinkProviderCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Glyphs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Glyphs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Glyphs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Hyperlink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Hyperlink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Hyperlink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HyperlinkClickEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Inline>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Inline;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Inline is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InlineCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::InlineCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InlineUIContainer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::InlineUIContainer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Italic>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Italic;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Italic is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::LineBreak>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineBreak;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::LineBreak is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Paragraph>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Paragraph;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Paragraph is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaceContentLinkProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Run>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Run;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Run is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Span>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Span;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Span is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::TextElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::TextElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::TextHighlighter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextHighlighter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::TextHighlighter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextHighlighterBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::TextHighlighterBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::TextPointer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextPointer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::TextPointer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Typography>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Typography;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Typography is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::Underline>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Underline;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::Underline is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Documents::TextRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Documents;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Documents");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Documents::TextRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

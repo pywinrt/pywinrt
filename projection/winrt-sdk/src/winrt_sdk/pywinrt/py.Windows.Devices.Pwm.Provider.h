@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>
+    struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
+        static constexpr const char* type_name = "IPwmControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>
+    struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
+        static constexpr const char* type_name = "IPwmProvider";
     };
 }

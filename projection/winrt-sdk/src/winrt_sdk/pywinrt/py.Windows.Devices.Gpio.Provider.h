@@ -75,26 +75,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "GpioPinProviderValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>
+    struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "IGpioControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>
+    struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "IGpioPinProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>
+    struct py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.gpio.provider";
+        static constexpr const char* type_name = "IGpioProvider";
     };
 }

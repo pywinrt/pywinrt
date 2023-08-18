@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Data::Xml::Xsl::XsltProcessor>
+    struct py_type<winrt::Windows::Data::Xml::Xsl::XsltProcessor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.data.xml.xsl";
+        static constexpr const char* type_name = "XsltProcessor";
     };
 }

@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 {
-    struct module_state
-    {
-        PyTypeObject* type_UserDataTask;
-        PyTypeObject* type_UserDataTaskBatch;
-        PyTypeObject* type_UserDataTaskList;
-        PyTypeObject* type_UserDataTaskListLimitedWriteOperations;
-        PyTypeObject* type_UserDataTaskListSyncManager;
-        PyTypeObject* type_UserDataTaskManager;
-        PyTypeObject* type_UserDataTaskQueryOptions;
-        PyTypeObject* type_UserDataTaskReader;
-        PyTypeObject* type_UserDataTaskRecurrenceProperties;
-        PyTypeObject* type_UserDataTaskRegenerationProperties;
-        PyTypeObject* type_UserDataTaskStore;
-    };
-
     // ----- UserDataTask class --------------------
     static constexpr const char* const type_name_UserDataTask = "UserDataTask";
 
@@ -3356,64 +3341,15 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataTasks");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UserDataTask);
-        Py_VISIT(state->type_UserDataTaskBatch);
-        Py_VISIT(state->type_UserDataTaskList);
-        Py_VISIT(state->type_UserDataTaskListLimitedWriteOperations);
-        Py_VISIT(state->type_UserDataTaskListSyncManager);
-        Py_VISIT(state->type_UserDataTaskManager);
-        Py_VISIT(state->type_UserDataTaskQueryOptions);
-        Py_VISIT(state->type_UserDataTaskReader);
-        Py_VISIT(state->type_UserDataTaskRecurrenceProperties);
-        Py_VISIT(state->type_UserDataTaskRegenerationProperties);
-        Py_VISIT(state->type_UserDataTaskStore);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UserDataTask);
-        Py_CLEAR(state->type_UserDataTaskBatch);
-        Py_CLEAR(state->type_UserDataTaskList);
-        Py_CLEAR(state->type_UserDataTaskListLimitedWriteOperations);
-        Py_CLEAR(state->type_UserDataTaskListSyncManager);
-        Py_CLEAR(state->type_UserDataTaskManager);
-        Py_CLEAR(state->type_UserDataTaskQueryOptions);
-        Py_CLEAR(state->type_UserDataTaskReader);
-        Py_CLEAR(state->type_UserDataTaskRecurrenceProperties);
-        Py_CLEAR(state->type_UserDataTaskRegenerationProperties);
-        Py_CLEAR(state->type_UserDataTaskStore);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_UserDataTasks",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::UserDataTasks
@@ -3429,7 +3365,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3442,328 +3378,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UserDataTask = py::register_python_type(module.get(), type_name_UserDataTask, &type_spec_UserDataTask, object_bases.get(), nullptr);
-    if (!state->type_UserDataTask)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTask, &type_spec_UserDataTask, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTask, &type_spec_UserDataTask, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskBatch = py::register_python_type(module.get(), type_name_UserDataTaskBatch, &type_spec_UserDataTaskBatch, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskBatch)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskBatch, &type_spec_UserDataTaskBatch, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskBatch, &type_spec_UserDataTaskBatch, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskList = py::register_python_type(module.get(), type_name_UserDataTaskList, &type_spec_UserDataTaskList, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskList)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskList, &type_spec_UserDataTaskList, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskList, &type_spec_UserDataTaskList, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListLimitedWriteOperations = py::register_python_type(module.get(), type_name_UserDataTaskListLimitedWriteOperations, &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListLimitedWriteOperations)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListLimitedWriteOperations, &type_spec_UserDataTaskListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListLimitedWriteOperations, &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskListSyncManager = py::register_python_type(module.get(), type_name_UserDataTaskListSyncManager, &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskListSyncManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManager, &type_spec_UserDataTaskListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManager, &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskManager = py::register_python_type(module.get(), type_name_UserDataTaskManager, &type_spec_UserDataTaskManager, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskManager, &type_spec_UserDataTaskManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskManager, &type_spec_UserDataTaskManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskQueryOptions = py::register_python_type(module.get(), type_name_UserDataTaskQueryOptions, &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskQueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskQueryOptions, &type_spec_UserDataTaskQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskQueryOptions, &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskReader = py::register_python_type(module.get(), type_name_UserDataTaskReader, &type_spec_UserDataTaskReader, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskReader, &type_spec_UserDataTaskReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskReader, &type_spec_UserDataTaskReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskRecurrenceProperties = py::register_python_type(module.get(), type_name_UserDataTaskRecurrenceProperties, &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskRecurrenceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskRecurrenceProperties, &type_spec_UserDataTaskRecurrenceProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskRecurrenceProperties, &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskRegenerationProperties = py::register_python_type(module.get(), type_name_UserDataTaskRegenerationProperties, &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskRegenerationProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskRegenerationProperties, &type_spec_UserDataTaskRegenerationProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskRegenerationProperties, &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataTaskStore = py::register_python_type(module.get(), type_name_UserDataTaskStore, &type_spec_UserDataTaskStore, object_bases.get(), nullptr);
-    if (!state->type_UserDataTaskStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataTaskStore, &type_spec_UserDataTaskStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataTaskStore, &type_spec_UserDataTaskStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTask;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskBatch;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskList;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListLimitedWriteOperations;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskListSyncManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskQueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskRecurrenceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskRegenerationProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataTasks");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataTaskStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

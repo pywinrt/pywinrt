@@ -138,15 +138,17 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Threading::ThreadPool>
+    struct py_type<winrt::Windows::System::Threading::ThreadPool>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "ThreadPool";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Threading::ThreadPoolTimer>
+    struct py_type<winrt::Windows::System::Threading::ThreadPoolTimer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "ThreadPoolTimer";
     };
     template <>
     struct delegate_python_type<winrt::Windows::System::Threading::TimerDestroyedHandler>

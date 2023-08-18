@@ -218,314 +218,366 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDClient>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDCustomData>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDCustomData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDCustomData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDDownloadEngineNotifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDLicenseFetchDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDStorageFileHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDStreamParserNotifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "NDTCPMessenger";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyContentHeader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyContentResolver";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDomain";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDomainIterable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDomainIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDomainJoinServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyDomainLeaveServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyITADataGenerator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyIndividualizationServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicense";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicenseAcquisitionServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicenseIterable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicenseIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicenseManagement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyLicenseSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyMeteringReportServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyRevocationServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadySecureStopIterable";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadySecureStopIterator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadySecureStopServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadySoapMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "PlayReadyStatics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDClosedCaptionDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDCustomData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDDownloadEngine";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDDownloadEngineNotifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDLicenseFetchCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDLicenseFetchDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDLicenseFetchResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDMessenger";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDProximityDetectionCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDRegistrationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDSendResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDStartResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDStorageFileHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDStreamParser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDStreamParserNotifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "INDTransmitterProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyDomain";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyLicense";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyLicenseAcquisitionServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyLicenseSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyLicenseSession2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadySecureStopServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>
+    struct py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.protection.playready";
+        static constexpr const char* type_name = "IPlayReadyServiceRequest";
     };
 }

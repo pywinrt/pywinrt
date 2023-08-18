@@ -120,56 +120,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveDeviceAddress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPair";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairCreationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveEndpointPairTemplate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveInboundEndpointPairCreatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveQualityOfServiceMeasurement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveQualityOfServiceMetricResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>
+    struct py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
+        static constexpr const char* type_name = "XboxLiveQualityOfServicePrivatePayloadResult";
     };
 }

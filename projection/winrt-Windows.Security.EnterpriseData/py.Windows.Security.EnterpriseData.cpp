@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Security::EnterpriseData
 {
-    struct module_state
-    {
-        PyTypeObject* type_BufferProtectUnprotectResult;
-        PyTypeObject* type_DataProtectionInfo;
-        PyTypeObject* type_DataProtectionManager;
-        PyTypeObject* type_FileProtectionInfo;
-        PyTypeObject* type_FileProtectionManager;
-        PyTypeObject* type_FileRevocationManager;
-        PyTypeObject* type_FileUnprotectOptions;
-        PyTypeObject* type_ProtectedAccessResumedEventArgs;
-        PyTypeObject* type_ProtectedAccessSuspendingEventArgs;
-        PyTypeObject* type_ProtectedContainerExportResult;
-        PyTypeObject* type_ProtectedContainerImportResult;
-        PyTypeObject* type_ProtectedContentRevokedEventArgs;
-        PyTypeObject* type_ProtectedFileCreateResult;
-        PyTypeObject* type_ProtectionPolicyAuditInfo;
-        PyTypeObject* type_ProtectionPolicyManager;
-        PyTypeObject* type_ThreadNetworkContext;
-    };
-
     // ----- BufferProtectUnprotectResult class --------------------
     static constexpr const char* const type_name_BufferProtectUnprotectResult = "BufferProtectUnprotectResult";
 
@@ -3791,74 +3771,15 @@ namespace py::cpp::Windows::Security::EnterpriseData
     PyDoc_STRVAR(module_doc, "Windows::Security::EnterpriseData");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BufferProtectUnprotectResult);
-        Py_VISIT(state->type_DataProtectionInfo);
-        Py_VISIT(state->type_DataProtectionManager);
-        Py_VISIT(state->type_FileProtectionInfo);
-        Py_VISIT(state->type_FileProtectionManager);
-        Py_VISIT(state->type_FileRevocationManager);
-        Py_VISIT(state->type_FileUnprotectOptions);
-        Py_VISIT(state->type_ProtectedAccessResumedEventArgs);
-        Py_VISIT(state->type_ProtectedAccessSuspendingEventArgs);
-        Py_VISIT(state->type_ProtectedContainerExportResult);
-        Py_VISIT(state->type_ProtectedContainerImportResult);
-        Py_VISIT(state->type_ProtectedContentRevokedEventArgs);
-        Py_VISIT(state->type_ProtectedFileCreateResult);
-        Py_VISIT(state->type_ProtectionPolicyAuditInfo);
-        Py_VISIT(state->type_ProtectionPolicyManager);
-        Py_VISIT(state->type_ThreadNetworkContext);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BufferProtectUnprotectResult);
-        Py_CLEAR(state->type_DataProtectionInfo);
-        Py_CLEAR(state->type_DataProtectionManager);
-        Py_CLEAR(state->type_FileProtectionInfo);
-        Py_CLEAR(state->type_FileProtectionManager);
-        Py_CLEAR(state->type_FileRevocationManager);
-        Py_CLEAR(state->type_FileUnprotectOptions);
-        Py_CLEAR(state->type_ProtectedAccessResumedEventArgs);
-        Py_CLEAR(state->type_ProtectedAccessSuspendingEventArgs);
-        Py_CLEAR(state->type_ProtectedContainerExportResult);
-        Py_CLEAR(state->type_ProtectedContainerImportResult);
-        Py_CLEAR(state->type_ProtectedContentRevokedEventArgs);
-        Py_CLEAR(state->type_ProtectedFileCreateResult);
-        Py_CLEAR(state->type_ProtectionPolicyAuditInfo);
-        Py_CLEAR(state->type_ProtectionPolicyManager);
-        Py_CLEAR(state->type_ThreadNetworkContext);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Security_EnterpriseData",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Security::EnterpriseData
@@ -3874,7 +3795,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_EnterpriseData(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3887,89 +3808,128 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_EnterpriseData(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BufferProtectUnprotectResult = py::register_python_type(module.get(), type_name_BufferProtectUnprotectResult, &type_spec_BufferProtectUnprotectResult, object_bases.get(), nullptr);
-    if (!state->type_BufferProtectUnprotectResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BufferProtectUnprotectResult, &type_spec_BufferProtectUnprotectResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BufferProtectUnprotectResult, &type_spec_BufferProtectUnprotectResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataProtectionInfo = py::register_python_type(module.get(), type_name_DataProtectionInfo, &type_spec_DataProtectionInfo, object_bases.get(), nullptr);
-    if (!state->type_DataProtectionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataProtectionInfo, &type_spec_DataProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataProtectionInfo, &type_spec_DataProtectionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DataProtectionManager = py::register_python_type(module.get(), type_name_DataProtectionManager, &type_spec_DataProtectionManager, object_bases.get(), nullptr);
-    if (!state->type_DataProtectionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DataProtectionManager, &type_spec_DataProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DataProtectionManager, &type_spec_DataProtectionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileProtectionInfo = py::register_python_type(module.get(), type_name_FileProtectionInfo, &type_spec_FileProtectionInfo, object_bases.get(), nullptr);
-    if (!state->type_FileProtectionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileProtectionInfo, &type_spec_FileProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileProtectionInfo, &type_spec_FileProtectionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileProtectionManager = py::register_python_type(module.get(), type_name_FileProtectionManager, &type_spec_FileProtectionManager, object_bases.get(), nullptr);
-    if (!state->type_FileProtectionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileProtectionManager, &type_spec_FileProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileProtectionManager, &type_spec_FileProtectionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileRevocationManager = py::register_python_type(module.get(), type_name_FileRevocationManager, &type_spec_FileRevocationManager, object_bases.get(), nullptr);
-    if (!state->type_FileRevocationManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileRevocationManager, &type_spec_FileRevocationManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileRevocationManager, &type_spec_FileRevocationManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileUnprotectOptions = py::register_python_type(module.get(), type_name_FileUnprotectOptions, &type_spec_FileUnprotectOptions, object_bases.get(), nullptr);
-    if (!state->type_FileUnprotectOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileUnprotectOptions, &type_spec_FileUnprotectOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileUnprotectOptions, &type_spec_FileUnprotectOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedAccessResumedEventArgs = py::register_python_type(module.get(), type_name_ProtectedAccessResumedEventArgs, &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProtectedAccessResumedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedAccessResumedEventArgs, &type_spec_ProtectedAccessResumedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedAccessResumedEventArgs, &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedAccessSuspendingEventArgs = py::register_python_type(module.get(), type_name_ProtectedAccessSuspendingEventArgs, &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProtectedAccessSuspendingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedAccessSuspendingEventArgs, &type_spec_ProtectedAccessSuspendingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedAccessSuspendingEventArgs, &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedContainerExportResult = py::register_python_type(module.get(), type_name_ProtectedContainerExportResult, &type_spec_ProtectedContainerExportResult, object_bases.get(), nullptr);
-    if (!state->type_ProtectedContainerExportResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedContainerExportResult, &type_spec_ProtectedContainerExportResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedContainerExportResult, &type_spec_ProtectedContainerExportResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedContainerImportResult = py::register_python_type(module.get(), type_name_ProtectedContainerImportResult, &type_spec_ProtectedContainerImportResult, object_bases.get(), nullptr);
-    if (!state->type_ProtectedContainerImportResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedContainerImportResult, &type_spec_ProtectedContainerImportResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedContainerImportResult, &type_spec_ProtectedContainerImportResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedContentRevokedEventArgs = py::register_python_type(module.get(), type_name_ProtectedContentRevokedEventArgs, &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProtectedContentRevokedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedContentRevokedEventArgs, &type_spec_ProtectedContentRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedContentRevokedEventArgs, &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectedFileCreateResult = py::register_python_type(module.get(), type_name_ProtectedFileCreateResult, &type_spec_ProtectedFileCreateResult, object_bases.get(), nullptr);
-    if (!state->type_ProtectedFileCreateResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectedFileCreateResult, &type_spec_ProtectedFileCreateResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectedFileCreateResult, &type_spec_ProtectedFileCreateResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectionPolicyAuditInfo = py::register_python_type(module.get(), type_name_ProtectionPolicyAuditInfo, &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), nullptr);
-    if (!state->type_ProtectionPolicyAuditInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectionPolicyAuditInfo, &type_spec_ProtectionPolicyAuditInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectionPolicyAuditInfo, &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3980,386 +3940,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Security_EnterpriseData(void) noexcept
         return nullptr;
     }
 
-    state->type_ProtectionPolicyManager = py::register_python_type(module.get(), type_name_ProtectionPolicyManager, &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get()));
-    if (!state->type_ProtectionPolicyManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectionPolicyManager, &type_spec_ProtectionPolicyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectionPolicyManager, &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ThreadNetworkContext = py::register_python_type(module.get(), type_name_ThreadNetworkContext, &type_spec_ThreadNetworkContext, object_bases.get(), nullptr);
-    if (!state->type_ThreadNetworkContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ThreadNetworkContext, &type_spec_ThreadNetworkContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ThreadNetworkContext, &type_spec_ThreadNetworkContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BufferProtectUnprotectResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataProtectionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::DataProtectionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DataProtectionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::DataProtectionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileProtectionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::FileProtectionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileProtectionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::FileProtectionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileRevocationManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::FileRevocationManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileUnprotectOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::FileUnprotectOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedAccessResumedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedAccessSuspendingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedContainerExportResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedContainerImportResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedContentRevokedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectedFileCreateResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionPolicyAuditInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionPolicyManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Security::EnterpriseData;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Security::EnterpriseData");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThreadNetworkContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Security::EnterpriseData::ThreadNetworkContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

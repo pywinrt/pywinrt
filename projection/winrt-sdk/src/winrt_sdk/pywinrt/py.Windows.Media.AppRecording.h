@@ -52,38 +52,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingManager>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingResult>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingSaveScreenshotResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingSavedScreenshotInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>
+    struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.apprecording";
+        static constexpr const char* type_name = "AppRecordingStatusDetails";
     };
 }

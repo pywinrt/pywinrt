@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoader>
+    struct py_type<winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.resources";
+        static constexpr const char* type_name = "CustomXamlResourceLoader";
     };
 }

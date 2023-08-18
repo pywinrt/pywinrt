@@ -203,248 +203,289 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppDisplayInfo>
+    struct py_type<winrt::Windows::ApplicationModel::AppDisplayInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppDisplayInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppInfo>
+    struct py_type<winrt::Windows::ApplicationModel::AppInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppInstallerInfo>
+    struct py_type<winrt::Windows::ApplicationModel::AppInstallerInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppInstallerInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppInstance>
+    struct py_type<winrt::Windows::ApplicationModel::AppInstance>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "AppInstance";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::CameraApplicationManager>
+    struct py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "CameraApplicationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::DesignMode>
+    struct py_type<winrt::Windows::ApplicationModel::DesignMode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "DesignMode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "EnteredBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>
+    struct py_type<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "FindRelatedPackagesOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>
+    struct py_type<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "FullTrustProcessLaunchResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>
+    struct py_type<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "FullTrustProcessLauncher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "LeavingBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>
+    struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "LimitedAccessFeatureRequestResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::LimitedAccessFeatures>
+    struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatures>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "LimitedAccessFeatures";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Package>
+    struct py_type<winrt::Windows::ApplicationModel::Package>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "Package";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageCatalog>
+    struct py_type<winrt::Windows::ApplicationModel::PackageCatalog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageCatalog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>
+    struct py_type<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageCatalogAddOptionalPackageResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>
+    struct py_type<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageCatalogAddResourcePackageResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>
+    struct py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageCatalogRemoveOptionalPackagesResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>
+    struct py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageCatalogRemoveResourcePackagesResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageContentGroup>
+    struct py_type<winrt::Windows::ApplicationModel::PackageContentGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageContentGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageContentGroupStagingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageId>
+    struct py_type<winrt::Windows::ApplicationModel::PackageId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageInstallingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageStagingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageStagingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageStagingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageStatus>
+    struct py_type<winrt::Windows::ApplicationModel::PackageStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageUninstallingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>
+    struct py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageUpdateAvailabilityResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageUpdatingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::StartupTask>
+    struct py_type<winrt::Windows::ApplicationModel::StartupTask>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "StartupTask";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SuspendingDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::SuspendingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "SuspendingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SuspendingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::SuspendingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "SuspendingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::SuspendingOperation>
+    struct py_type<winrt::Windows::ApplicationModel::SuspendingOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "SuspendingOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "IEnteredBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "ILeavingBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
+    struct py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "IPackageCatalogStatics2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "ISuspendingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "ISuspendingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::ISuspendingOperation>
+    struct py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "ISuspendingOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageInstallProgress>
+    struct py_type<winrt::Windows::ApplicationModel::PackageInstallProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageInstallProgress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::PackageVersion>
+    struct py_type<winrt::Windows::ApplicationModel::PackageVersion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel";
+        static constexpr const char* type_name = "PackageVersion";
     };
 }

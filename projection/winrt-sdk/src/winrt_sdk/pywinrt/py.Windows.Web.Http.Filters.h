@@ -90,26 +90,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>
+    struct py_type<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpBaseProtocolFilter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>
+    struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpCacheControl";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>
+    struct py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "HttpServerCustomValidationRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Filters::IHttpFilter>
+    struct py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.filters";
+        static constexpr const char* type_name = "IHttpFilter";
     };
 }

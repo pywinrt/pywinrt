@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::AppExtensions
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppExtension;
-        PyTypeObject* type_AppExtensionCatalog;
-        PyTypeObject* type_AppExtensionPackageInstalledEventArgs;
-        PyTypeObject* type_AppExtensionPackageStatusChangedEventArgs;
-        PyTypeObject* type_AppExtensionPackageUninstallingEventArgs;
-        PyTypeObject* type_AppExtensionPackageUpdatedEventArgs;
-        PyTypeObject* type_AppExtensionPackageUpdatingEventArgs;
-    };
-
     // ----- AppExtension class --------------------
     static constexpr const char* const type_name_AppExtension = "AppExtension";
 
@@ -1285,56 +1274,15 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::AppExtensions");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppExtension);
-        Py_VISIT(state->type_AppExtensionCatalog);
-        Py_VISIT(state->type_AppExtensionPackageInstalledEventArgs);
-        Py_VISIT(state->type_AppExtensionPackageStatusChangedEventArgs);
-        Py_VISIT(state->type_AppExtensionPackageUninstallingEventArgs);
-        Py_VISIT(state->type_AppExtensionPackageUpdatedEventArgs);
-        Py_VISIT(state->type_AppExtensionPackageUpdatingEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppExtension);
-        Py_CLEAR(state->type_AppExtensionCatalog);
-        Py_CLEAR(state->type_AppExtensionPackageInstalledEventArgs);
-        Py_CLEAR(state->type_AppExtensionPackageStatusChangedEventArgs);
-        Py_CLEAR(state->type_AppExtensionPackageUninstallingEventArgs);
-        Py_CLEAR(state->type_AppExtensionPackageUpdatedEventArgs);
-        Py_CLEAR(state->type_AppExtensionPackageUpdatingEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_AppExtensions",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::AppExtensions
@@ -1350,7 +1298,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppExtensions(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1363,212 +1311,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppExtensions(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppExtension = py::register_python_type(module.get(), type_name_AppExtension, &type_spec_AppExtension, object_bases.get(), nullptr);
-    if (!state->type_AppExtension)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtension, &type_spec_AppExtension, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtension, &type_spec_AppExtension, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionCatalog = py::register_python_type(module.get(), type_name_AppExtensionCatalog, &type_spec_AppExtensionCatalog, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionCatalog)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionCatalog, &type_spec_AppExtensionCatalog, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionCatalog, &type_spec_AppExtensionCatalog, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionPackageInstalledEventArgs = py::register_python_type(module.get(), type_name_AppExtensionPackageInstalledEventArgs, &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionPackageInstalledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageInstalledEventArgs, &type_spec_AppExtensionPackageInstalledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageInstalledEventArgs, &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionPackageStatusChangedEventArgs = py::register_python_type(module.get(), type_name_AppExtensionPackageStatusChangedEventArgs, &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionPackageStatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageStatusChangedEventArgs, &type_spec_AppExtensionPackageStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageStatusChangedEventArgs, &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionPackageUninstallingEventArgs = py::register_python_type(module.get(), type_name_AppExtensionPackageUninstallingEventArgs, &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionPackageUninstallingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUninstallingEventArgs, &type_spec_AppExtensionPackageUninstallingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUninstallingEventArgs, &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionPackageUpdatedEventArgs = py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatedEventArgs, &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionPackageUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatedEventArgs, &type_spec_AppExtensionPackageUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatedEventArgs, &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppExtensionPackageUpdatingEventArgs = py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatingEventArgs, &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppExtensionPackageUpdatingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatingEventArgs, &type_spec_AppExtensionPackageUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatingEventArgs, &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtension;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtension is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionCatalog;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionPackageInstalledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionPackageStatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionPackageUninstallingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionPackageUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::AppExtensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppExtensionPackageUpdatingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -419,411 +419,479 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::AcrylicBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::AcrylicBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "AcrylicBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::ArcSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::ArcSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ArcSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::BezierSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::BezierSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "BezierSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::BitmapCache>
+    struct py_type<winrt::Windows::UI::Xaml::Media::BitmapCache>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "BitmapCache";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Brush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Brush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Brush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::BrushCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::BrushCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "BrushCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::CacheMode>
+    struct py_type<winrt::Windows::UI::Xaml::Media::CacheMode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "CacheMode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::CompositeTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::CompositeTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "CompositeTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>
+    struct py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "CompositionTarget";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::DoubleCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::DoubleCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "DoubleCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::EllipseGeometry>
+    struct py_type<winrt::Windows::UI::Xaml::Media::EllipseGeometry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "EllipseGeometry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::FontFamily>
+    struct py_type<winrt::Windows::UI::Xaml::Media::FontFamily>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "FontFamily";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GeneralTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Geometry>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Geometry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Geometry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GeometryCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GeometryCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GeometryCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GeometryGroup>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GeometryGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GeometryGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GradientBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GradientBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GradientStop>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GradientStop>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GradientStop";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::GradientStopCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::GradientStopCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "GradientStopCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::ImageBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::ImageBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ImageBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::ImageSource>
+    struct py_type<winrt::Windows::UI::Xaml::Media::ImageSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ImageSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::LineGeometry>
+    struct py_type<winrt::Windows::UI::Xaml::Media::LineGeometry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LineGeometry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::LineSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::LineSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LineSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LinearGradientBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LoadedImageSourceLoadCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>
+    struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "LoadedImageSurface";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Matrix3DProjection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "MatrixHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::MatrixTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::MatrixTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "MatrixTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "MediaTransportControlsThumbnailRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PartialMediaFailureDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PathFigure>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PathFigure>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PathFigure";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PathFigureCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PathFigureCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PathFigureCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PathGeometry>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PathGeometry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PathGeometry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PathSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PathSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PathSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PathSegmentCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PlaneProjection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PlaneProjection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PlaneProjection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PointCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PointCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PointCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PolyBezierSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PolyLineSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PolyLineSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PolyLineSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "PolyQuadraticBezierSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Projection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Projection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Projection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>
+    struct py_type<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "QuadraticBezierSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RateChangedRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RectangleGeometry>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RectangleGeometry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RectangleGeometry";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RenderedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RenderingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBackgroundBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBorderBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RevealBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::RotateTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::RotateTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "RotateTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::ScaleTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::ScaleTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ScaleTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Shadow>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Shadow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Shadow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::SkewTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::SkewTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "SkewTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::SolidColorBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::SolidColorBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "SolidColorBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::ThemeShadow>
+    struct py_type<winrt::Windows::UI::Xaml::Media::ThemeShadow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "ThemeShadow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TileBrush>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TileBrush>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TileBrush";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarker>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TimelineMarker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TimelineMarkerCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TimelineMarkerRoutedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Transform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Transform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Transform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TransformCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TransformCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TransformCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TransformGroup>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TransformGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TransformGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::TranslateTransform>
+    struct py_type<winrt::Windows::UI::Xaml::Media::TranslateTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "TranslateTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "VisualTreeHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "XamlCompositionBrushBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::XamlLight>
+    struct py_type<winrt::Windows::UI::Xaml::Media::XamlLight>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "XamlLight";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Matrix>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Matrix>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
+        static constexpr const char* type_name = "Matrix";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventHandler>

@@ -62,68 +62,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "CurrentSessionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionMediaProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackControls";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>
+    struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionTimelineProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "MediaPropertiesChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "PlaybackInfoChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "SessionsChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.control";
+        static constexpr const char* type_name = "TimelinePropertiesChangedEventArgs";
     };
 }

@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::Inventory::InstalledDesktopApp>
+    struct py_type<winrt::Windows::System::Inventory::InstalledDesktopApp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.inventory";
+        static constexpr const char* type_name = "InstalledDesktopApp";
     };
 }

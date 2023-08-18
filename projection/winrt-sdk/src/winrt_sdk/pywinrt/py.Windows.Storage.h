@@ -300,267 +300,311 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::AppDataPaths>
+    struct py_type<winrt::Windows::Storage::AppDataPaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "AppDataPaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::ApplicationData>
+    struct py_type<winrt::Windows::Storage::ApplicationData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::ApplicationDataCompositeValue>
+    struct py_type<winrt::Windows::Storage::ApplicationDataCompositeValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationDataCompositeValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::ApplicationDataContainer>
+    struct py_type<winrt::Windows::Storage::ApplicationDataContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationDataContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::ApplicationDataContainerSettings>
+    struct py_type<winrt::Windows::Storage::ApplicationDataContainerSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "ApplicationDataContainerSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::CachedFileManager>
+    struct py_type<winrt::Windows::Storage::CachedFileManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "CachedFileManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::DownloadsFolder>
+    struct py_type<winrt::Windows::Storage::DownloadsFolder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "DownloadsFolder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::FileIO>
+    struct py_type<winrt::Windows::Storage::FileIO>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "FileIO";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::KnownFolders>
+    struct py_type<winrt::Windows::Storage::KnownFolders>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "KnownFolders";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::PathIO>
+    struct py_type<winrt::Windows::Storage::PathIO>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "PathIO";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SetVersionDeferral>
+    struct py_type<winrt::Windows::Storage::SetVersionDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SetVersionDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SetVersionRequest>
+    struct py_type<winrt::Windows::Storage::SetVersionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SetVersionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageFile>
+    struct py_type<winrt::Windows::Storage::StorageFile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageFile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageFolder>
+    struct py_type<winrt::Windows::Storage::StorageFolder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageFolder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibrary>
+    struct py_type<winrt::Windows::Storage::StorageLibrary>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibrary";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibraryChange>
+    struct py_type<winrt::Windows::Storage::StorageLibraryChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibraryChangeReader>
+    struct py_type<winrt::Windows::Storage::StorageLibraryChangeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryChangeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibraryChangeTracker>
+    struct py_type<winrt::Windows::Storage::StorageLibraryChangeTracker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryChangeTracker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibraryChangeTrackerOptions>
+    struct py_type<winrt::Windows::Storage::StorageLibraryChangeTrackerOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryChangeTrackerOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageLibraryLastChangeId>
+    struct py_type<winrt::Windows::Storage::StorageLibraryLastChangeId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageLibraryLastChangeId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageProvider>
+    struct py_type<winrt::Windows::Storage::StorageProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StorageStreamTransaction>
+    struct py_type<winrt::Windows::Storage::StorageStreamTransaction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StorageStreamTransaction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::StreamedFileDataRequest>
+    struct py_type<winrt::Windows::Storage::StreamedFileDataRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "StreamedFileDataRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemAudioProperties>
+    struct py_type<winrt::Windows::Storage::SystemAudioProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemAudioProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemDataPaths>
+    struct py_type<winrt::Windows::Storage::SystemDataPaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemDataPaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemGPSProperties>
+    struct py_type<winrt::Windows::Storage::SystemGPSProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemGPSProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemImageProperties>
+    struct py_type<winrt::Windows::Storage::SystemImageProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemImageProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemMediaProperties>
+    struct py_type<winrt::Windows::Storage::SystemMediaProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemMediaProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemMusicProperties>
+    struct py_type<winrt::Windows::Storage::SystemMusicProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemMusicProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemPhotoProperties>
+    struct py_type<winrt::Windows::Storage::SystemPhotoProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemPhotoProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemProperties>
+    struct py_type<winrt::Windows::Storage::SystemProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::SystemVideoProperties>
+    struct py_type<winrt::Windows::Storage::SystemVideoProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "SystemVideoProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::UserDataPaths>
+    struct py_type<winrt::Windows::Storage::UserDataPaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "UserDataPaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageFile>
+    struct py_type<winrt::Windows::Storage::IStorageFile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageFile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageFile2>
+    struct py_type<winrt::Windows::Storage::IStorageFile2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageFile2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>
+    struct py_type<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageFilePropertiesWithAvailability";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageFolder>
+    struct py_type<winrt::Windows::Storage::IStorageFolder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageFolder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageFolder2>
+    struct py_type<winrt::Windows::Storage::IStorageFolder2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageFolder2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageItem>
+    struct py_type<winrt::Windows::Storage::IStorageItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageItem2>
+    struct py_type<winrt::Windows::Storage::IStorageItem2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageItem2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageItemProperties>
+    struct py_type<winrt::Windows::Storage::IStorageItemProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageItemProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageItemProperties2>
+    struct py_type<winrt::Windows::Storage::IStorageItemProperties2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageItemProperties2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>
+    struct py_type<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStorageItemPropertiesWithProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::IStreamedFileDataRequest>
+    struct py_type<winrt::Windows::Storage::IStreamedFileDataRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage";
+        static constexpr const char* type_name = "IStreamedFileDataRequest";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Storage::ApplicationDataSetVersionHandler>

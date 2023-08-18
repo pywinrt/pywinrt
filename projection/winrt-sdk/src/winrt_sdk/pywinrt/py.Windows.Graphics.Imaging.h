@@ -179,116 +179,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapBuffer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapCodecInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapDecoder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapEncoder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapFrame>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapProperties>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapPropertiesView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapPropertySet>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapPropertySet>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapPropertySet";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapTransform>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapTransform>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapTransform";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapTypedValue>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapTypedValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapTypedValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::ImageStream>
+    struct py_type<winrt::Windows::Graphics::Imaging::ImageStream>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "ImageStream";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>
+    struct py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "PixelDataProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::SoftwareBitmap>
+    struct py_type<winrt::Windows::Graphics::Imaging::SoftwareBitmap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "SoftwareBitmap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>
+    struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "IBitmapFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
+    struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "IBitmapFrameWithSoftwareBitmap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
+    struct py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "IBitmapPropertiesView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapBounds>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapBounds>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapBounds";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapPlaneDescription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Graphics::Imaging::BitmapSize>
+    struct py_type<winrt::Windows::Graphics::Imaging::BitmapSize>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.graphics.imaging";
+        static constexpr const char* type_name = "BitmapSize";
     };
 }

@@ -6,43 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Calls
 {
-    struct module_state
-    {
-        PyTypeObject* type_CallAnswerEventArgs;
-        PyTypeObject* type_CallRejectEventArgs;
-        PyTypeObject* type_CallStateChangeEventArgs;
-        PyTypeObject* type_LockScreenCallEndCallDeferral;
-        PyTypeObject* type_LockScreenCallEndRequestedEventArgs;
-        PyTypeObject* type_LockScreenCallUI;
-        PyTypeObject* type_MuteChangeEventArgs;
-        PyTypeObject* type_PhoneCall;
-        PyTypeObject* type_PhoneCallBlocking;
-        PyTypeObject* type_PhoneCallHistoryEntry;
-        PyTypeObject* type_PhoneCallHistoryEntryAddress;
-        PyTypeObject* type_PhoneCallHistoryEntryQueryOptions;
-        PyTypeObject* type_PhoneCallHistoryEntryReader;
-        PyTypeObject* type_PhoneCallHistoryManager;
-        PyTypeObject* type_PhoneCallHistoryManagerForUser;
-        PyTypeObject* type_PhoneCallHistoryStore;
-        PyTypeObject* type_PhoneCallInfo;
-        PyTypeObject* type_PhoneCallManager;
-        PyTypeObject* type_PhoneCallStore;
-        PyTypeObject* type_PhoneCallVideoCapabilities;
-        PyTypeObject* type_PhoneCallVideoCapabilitiesManager;
-        PyTypeObject* type_PhoneCallsResult;
-        PyTypeObject* type_PhoneDialOptions;
-        PyTypeObject* type_PhoneLine;
-        PyTypeObject* type_PhoneLineCellularDetails;
-        PyTypeObject* type_PhoneLineConfiguration;
-        PyTypeObject* type_PhoneLineDialResult;
-        PyTypeObject* type_PhoneLineTransportDevice;
-        PyTypeObject* type_PhoneLineWatcher;
-        PyTypeObject* type_PhoneLineWatcherEventArgs;
-        PyTypeObject* type_PhoneVoicemail;
-        PyTypeObject* type_VoipCallCoordinator;
-        PyTypeObject* type_VoipPhoneCall;
-    };
-
     // ----- CallAnswerEventArgs class --------------------
     static constexpr const char* const type_name_CallAnswerEventArgs = "CallAnswerEventArgs";
 
@@ -8928,108 +8891,15 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Calls");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CallAnswerEventArgs);
-        Py_VISIT(state->type_CallRejectEventArgs);
-        Py_VISIT(state->type_CallStateChangeEventArgs);
-        Py_VISIT(state->type_LockScreenCallEndCallDeferral);
-        Py_VISIT(state->type_LockScreenCallEndRequestedEventArgs);
-        Py_VISIT(state->type_LockScreenCallUI);
-        Py_VISIT(state->type_MuteChangeEventArgs);
-        Py_VISIT(state->type_PhoneCall);
-        Py_VISIT(state->type_PhoneCallBlocking);
-        Py_VISIT(state->type_PhoneCallHistoryEntry);
-        Py_VISIT(state->type_PhoneCallHistoryEntryAddress);
-        Py_VISIT(state->type_PhoneCallHistoryEntryQueryOptions);
-        Py_VISIT(state->type_PhoneCallHistoryEntryReader);
-        Py_VISIT(state->type_PhoneCallHistoryManager);
-        Py_VISIT(state->type_PhoneCallHistoryManagerForUser);
-        Py_VISIT(state->type_PhoneCallHistoryStore);
-        Py_VISIT(state->type_PhoneCallInfo);
-        Py_VISIT(state->type_PhoneCallManager);
-        Py_VISIT(state->type_PhoneCallStore);
-        Py_VISIT(state->type_PhoneCallVideoCapabilities);
-        Py_VISIT(state->type_PhoneCallVideoCapabilitiesManager);
-        Py_VISIT(state->type_PhoneCallsResult);
-        Py_VISIT(state->type_PhoneDialOptions);
-        Py_VISIT(state->type_PhoneLine);
-        Py_VISIT(state->type_PhoneLineCellularDetails);
-        Py_VISIT(state->type_PhoneLineConfiguration);
-        Py_VISIT(state->type_PhoneLineDialResult);
-        Py_VISIT(state->type_PhoneLineTransportDevice);
-        Py_VISIT(state->type_PhoneLineWatcher);
-        Py_VISIT(state->type_PhoneLineWatcherEventArgs);
-        Py_VISIT(state->type_PhoneVoicemail);
-        Py_VISIT(state->type_VoipCallCoordinator);
-        Py_VISIT(state->type_VoipPhoneCall);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CallAnswerEventArgs);
-        Py_CLEAR(state->type_CallRejectEventArgs);
-        Py_CLEAR(state->type_CallStateChangeEventArgs);
-        Py_CLEAR(state->type_LockScreenCallEndCallDeferral);
-        Py_CLEAR(state->type_LockScreenCallEndRequestedEventArgs);
-        Py_CLEAR(state->type_LockScreenCallUI);
-        Py_CLEAR(state->type_MuteChangeEventArgs);
-        Py_CLEAR(state->type_PhoneCall);
-        Py_CLEAR(state->type_PhoneCallBlocking);
-        Py_CLEAR(state->type_PhoneCallHistoryEntry);
-        Py_CLEAR(state->type_PhoneCallHistoryEntryAddress);
-        Py_CLEAR(state->type_PhoneCallHistoryEntryQueryOptions);
-        Py_CLEAR(state->type_PhoneCallHistoryEntryReader);
-        Py_CLEAR(state->type_PhoneCallHistoryManager);
-        Py_CLEAR(state->type_PhoneCallHistoryManagerForUser);
-        Py_CLEAR(state->type_PhoneCallHistoryStore);
-        Py_CLEAR(state->type_PhoneCallInfo);
-        Py_CLEAR(state->type_PhoneCallManager);
-        Py_CLEAR(state->type_PhoneCallStore);
-        Py_CLEAR(state->type_PhoneCallVideoCapabilities);
-        Py_CLEAR(state->type_PhoneCallVideoCapabilitiesManager);
-        Py_CLEAR(state->type_PhoneCallsResult);
-        Py_CLEAR(state->type_PhoneDialOptions);
-        Py_CLEAR(state->type_PhoneLine);
-        Py_CLEAR(state->type_PhoneLineCellularDetails);
-        Py_CLEAR(state->type_PhoneLineConfiguration);
-        Py_CLEAR(state->type_PhoneLineDialResult);
-        Py_CLEAR(state->type_PhoneLineTransportDevice);
-        Py_CLEAR(state->type_PhoneLineWatcher);
-        Py_CLEAR(state->type_PhoneLineWatcherEventArgs);
-        Py_CLEAR(state->type_PhoneVoicemail);
-        Py_CLEAR(state->type_VoipCallCoordinator);
-        Py_CLEAR(state->type_VoipPhoneCall);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Calls",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Calls
@@ -9045,7 +8915,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -9058,53 +8928,74 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CallAnswerEventArgs = py::register_python_type(module.get(), type_name_CallAnswerEventArgs, &type_spec_CallAnswerEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CallAnswerEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CallAnswerEventArgs, &type_spec_CallAnswerEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CallAnswerEventArgs, &type_spec_CallAnswerEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CallRejectEventArgs = py::register_python_type(module.get(), type_name_CallRejectEventArgs, &type_spec_CallRejectEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CallRejectEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CallRejectEventArgs, &type_spec_CallRejectEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CallRejectEventArgs, &type_spec_CallRejectEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CallStateChangeEventArgs = py::register_python_type(module.get(), type_name_CallStateChangeEventArgs, &type_spec_CallStateChangeEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CallStateChangeEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CallStateChangeEventArgs, &type_spec_CallStateChangeEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CallStateChangeEventArgs, &type_spec_CallStateChangeEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenCallEndCallDeferral = py::register_python_type(module.get(), type_name_LockScreenCallEndCallDeferral, &type_spec_LockScreenCallEndCallDeferral, object_bases.get(), nullptr);
-    if (!state->type_LockScreenCallEndCallDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenCallEndCallDeferral, &type_spec_LockScreenCallEndCallDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenCallEndCallDeferral, &type_spec_LockScreenCallEndCallDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenCallEndRequestedEventArgs = py::register_python_type(module.get(), type_name_LockScreenCallEndRequestedEventArgs, &type_spec_LockScreenCallEndRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LockScreenCallEndRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenCallEndRequestedEventArgs, &type_spec_LockScreenCallEndRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenCallEndRequestedEventArgs, &type_spec_LockScreenCallEndRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenCallUI = py::register_python_type(module.get(), type_name_LockScreenCallUI, &type_spec_LockScreenCallUI, object_bases.get(), nullptr);
-    if (!state->type_LockScreenCallUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenCallUI, &type_spec_LockScreenCallUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenCallUI, &type_spec_LockScreenCallUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MuteChangeEventArgs = py::register_python_type(module.get(), type_name_MuteChangeEventArgs, &type_spec_MuteChangeEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MuteChangeEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MuteChangeEventArgs, &type_spec_MuteChangeEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MuteChangeEventArgs, &type_spec_MuteChangeEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCall = py::register_python_type(module.get(), type_name_PhoneCall, &type_spec_PhoneCall, object_bases.get(), nullptr);
-    if (!state->type_PhoneCall)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCall, &type_spec_PhoneCall, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCall, &type_spec_PhoneCall, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9115,56 +9006,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls(void) noexcept
         return nullptr;
     }
 
-    state->type_PhoneCallBlocking = py::register_python_type(module.get(), type_name_PhoneCallBlocking, &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Meta.get()));
-    if (!state->type_PhoneCallBlocking)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallBlocking, &type_spec_PhoneCallBlocking, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallBlocking, &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryEntry = py::register_python_type(module.get(), type_name_PhoneCallHistoryEntry, &type_spec_PhoneCallHistoryEntry, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntry, &type_spec_PhoneCallHistoryEntry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntry, &type_spec_PhoneCallHistoryEntry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryEntryAddress = py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryAddress, &type_spec_PhoneCallHistoryEntryAddress, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryEntryAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryAddress, &type_spec_PhoneCallHistoryEntryAddress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryAddress, &type_spec_PhoneCallHistoryEntryAddress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryEntryQueryOptions = py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryQueryOptions, &type_spec_PhoneCallHistoryEntryQueryOptions, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryEntryQueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryQueryOptions, &type_spec_PhoneCallHistoryEntryQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryQueryOptions, &type_spec_PhoneCallHistoryEntryQueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryEntryReader = py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryReader, &type_spec_PhoneCallHistoryEntryReader, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryEntryReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryReader, &type_spec_PhoneCallHistoryEntryReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryEntryReader, &type_spec_PhoneCallHistoryEntryReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryManager = py::register_python_type(module.get(), type_name_PhoneCallHistoryManager, &type_spec_PhoneCallHistoryManager, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryManager, &type_spec_PhoneCallHistoryManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryManager, &type_spec_PhoneCallHistoryManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryManagerForUser = py::register_python_type(module.get(), type_name_PhoneCallHistoryManagerForUser, &type_spec_PhoneCallHistoryManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryManagerForUser, &type_spec_PhoneCallHistoryManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryManagerForUser, &type_spec_PhoneCallHistoryManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallHistoryStore = py::register_python_type(module.get(), type_name_PhoneCallHistoryStore, &type_spec_PhoneCallHistoryStore, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallHistoryStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryStore, &type_spec_PhoneCallHistoryStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallHistoryStore, &type_spec_PhoneCallHistoryStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallInfo = py::register_python_type(module.get(), type_name_PhoneCallInfo, &type_spec_PhoneCallInfo, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallInfo, &type_spec_PhoneCallInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallInfo, &type_spec_PhoneCallInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9175,861 +9093,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls(void) noexcept
         return nullptr;
     }
 
-    state->type_PhoneCallManager = py::register_python_type(module.get(), type_name_PhoneCallManager, &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Meta.get()));
-    if (!state->type_PhoneCallManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallManager, &type_spec_PhoneCallManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallManager, &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallStore = py::register_python_type(module.get(), type_name_PhoneCallStore, &type_spec_PhoneCallStore, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallStore, &type_spec_PhoneCallStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallStore, &type_spec_PhoneCallStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallVideoCapabilities = py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilities, &type_spec_PhoneCallVideoCapabilities, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallVideoCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilities, &type_spec_PhoneCallVideoCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilities, &type_spec_PhoneCallVideoCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallVideoCapabilitiesManager = py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilitiesManager, &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallVideoCapabilitiesManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilitiesManager, &type_spec_PhoneCallVideoCapabilitiesManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallVideoCapabilitiesManager, &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallsResult = py::register_python_type(module.get(), type_name_PhoneCallsResult, &type_spec_PhoneCallsResult, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallsResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallsResult, &type_spec_PhoneCallsResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallsResult, &type_spec_PhoneCallsResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneDialOptions = py::register_python_type(module.get(), type_name_PhoneDialOptions, &type_spec_PhoneDialOptions, object_bases.get(), nullptr);
-    if (!state->type_PhoneDialOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneDialOptions, &type_spec_PhoneDialOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneDialOptions, &type_spec_PhoneDialOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLine = py::register_python_type(module.get(), type_name_PhoneLine, &type_spec_PhoneLine, object_bases.get(), nullptr);
-    if (!state->type_PhoneLine)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLine, &type_spec_PhoneLine, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLine, &type_spec_PhoneLine, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineCellularDetails = py::register_python_type(module.get(), type_name_PhoneLineCellularDetails, &type_spec_PhoneLineCellularDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineCellularDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineCellularDetails, &type_spec_PhoneLineCellularDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineCellularDetails, &type_spec_PhoneLineCellularDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineConfiguration = py::register_python_type(module.get(), type_name_PhoneLineConfiguration, &type_spec_PhoneLineConfiguration, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineConfiguration, &type_spec_PhoneLineConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineConfiguration, &type_spec_PhoneLineConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineDialResult = py::register_python_type(module.get(), type_name_PhoneLineDialResult, &type_spec_PhoneLineDialResult, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineDialResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineDialResult, &type_spec_PhoneLineDialResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineDialResult, &type_spec_PhoneLineDialResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineTransportDevice = py::register_python_type(module.get(), type_name_PhoneLineTransportDevice, &type_spec_PhoneLineTransportDevice, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineTransportDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineTransportDevice, &type_spec_PhoneLineTransportDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineTransportDevice, &type_spec_PhoneLineTransportDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineWatcher = py::register_python_type(module.get(), type_name_PhoneLineWatcher, &type_spec_PhoneLineWatcher, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineWatcher, &type_spec_PhoneLineWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineWatcher, &type_spec_PhoneLineWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineWatcherEventArgs = py::register_python_type(module.get(), type_name_PhoneLineWatcherEventArgs, &type_spec_PhoneLineWatcherEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineWatcherEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineWatcherEventArgs, &type_spec_PhoneLineWatcherEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineWatcherEventArgs, &type_spec_PhoneLineWatcherEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneVoicemail = py::register_python_type(module.get(), type_name_PhoneVoicemail, &type_spec_PhoneVoicemail, object_bases.get(), nullptr);
-    if (!state->type_PhoneVoicemail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneVoicemail, &type_spec_PhoneVoicemail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneVoicemail, &type_spec_PhoneVoicemail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoipCallCoordinator = py::register_python_type(module.get(), type_name_VoipCallCoordinator, &type_spec_VoipCallCoordinator, object_bases.get(), nullptr);
-    if (!state->type_VoipCallCoordinator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoipCallCoordinator, &type_spec_VoipCallCoordinator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoipCallCoordinator, &type_spec_VoipCallCoordinator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoipPhoneCall = py::register_python_type(module.get(), type_name_VoipPhoneCall, &type_spec_VoipPhoneCall, object_bases.get(), nullptr);
-    if (!state->type_VoipPhoneCall)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoipPhoneCall, &type_spec_VoipPhoneCall, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoipPhoneCall, &type_spec_VoipPhoneCall, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CallAnswerEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CallRejectEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CallStateChangeEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenCallEndCallDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenCallEndRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenCallUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::LockScreenCallUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MuteChangeEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCall;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCall is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallBlocking;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryEntryAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryEntryQueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryEntryReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallHistoryStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallVideoCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallVideoCapabilitiesManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallsResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneCallsResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneDialOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneDialOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLine;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLine is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineCellularDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineDialResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineTransportDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineWatcherEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneVoicemail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::PhoneVoicemail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoipCallCoordinator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Calls;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Calls");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoipPhoneCall;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Calls::VoipPhoneCall is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

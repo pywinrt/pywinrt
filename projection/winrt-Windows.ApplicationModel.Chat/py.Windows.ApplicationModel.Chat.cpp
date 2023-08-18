@@ -6,47 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Chat
 {
-    struct module_state
-    {
-        PyTypeObject* type_ChatCapabilities;
-        PyTypeObject* type_ChatCapabilitiesManager;
-        PyTypeObject* type_ChatConversation;
-        PyTypeObject* type_ChatConversationReader;
-        PyTypeObject* type_ChatConversationThreadingInfo;
-        PyTypeObject* type_ChatMessage;
-        PyTypeObject* type_ChatMessageAttachment;
-        PyTypeObject* type_ChatMessageBlocking;
-        PyTypeObject* type_ChatMessageChange;
-        PyTypeObject* type_ChatMessageChangeReader;
-        PyTypeObject* type_ChatMessageChangeTracker;
-        PyTypeObject* type_ChatMessageChangedDeferral;
-        PyTypeObject* type_ChatMessageChangedEventArgs;
-        PyTypeObject* type_ChatMessageManager;
-        PyTypeObject* type_ChatMessageNotificationTriggerDetails;
-        PyTypeObject* type_ChatMessageReader;
-        PyTypeObject* type_ChatMessageStore;
-        PyTypeObject* type_ChatMessageStoreChangedEventArgs;
-        PyTypeObject* type_ChatMessageTransport;
-        PyTypeObject* type_ChatMessageTransportConfiguration;
-        PyTypeObject* type_ChatMessageValidationResult;
-        PyTypeObject* type_ChatQueryOptions;
-        PyTypeObject* type_ChatRecipientDeliveryInfo;
-        PyTypeObject* type_ChatSearchReader;
-        PyTypeObject* type_ChatSyncConfiguration;
-        PyTypeObject* type_ChatSyncManager;
-        PyTypeObject* type_RcsEndUserMessage;
-        PyTypeObject* type_RcsEndUserMessageAction;
-        PyTypeObject* type_RcsEndUserMessageAvailableEventArgs;
-        PyTypeObject* type_RcsEndUserMessageAvailableTriggerDetails;
-        PyTypeObject* type_RcsEndUserMessageManager;
-        PyTypeObject* type_RcsManager;
-        PyTypeObject* type_RcsServiceKindSupportedChangedEventArgs;
-        PyTypeObject* type_RcsTransport;
-        PyTypeObject* type_RcsTransportConfiguration;
-        PyTypeObject* type_RemoteParticipantComposingChangedEventArgs;
-        PyTypeObject* type_IChatItem;
-    };
-
     // ----- ChatCapabilities class --------------------
     static constexpr const char* const type_name_ChatCapabilities = "ChatCapabilities";
 
@@ -8666,116 +8625,15 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Chat");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ChatCapabilities);
-        Py_VISIT(state->type_ChatCapabilitiesManager);
-        Py_VISIT(state->type_ChatConversation);
-        Py_VISIT(state->type_ChatConversationReader);
-        Py_VISIT(state->type_ChatConversationThreadingInfo);
-        Py_VISIT(state->type_ChatMessage);
-        Py_VISIT(state->type_ChatMessageAttachment);
-        Py_VISIT(state->type_ChatMessageBlocking);
-        Py_VISIT(state->type_ChatMessageChange);
-        Py_VISIT(state->type_ChatMessageChangeReader);
-        Py_VISIT(state->type_ChatMessageChangeTracker);
-        Py_VISIT(state->type_ChatMessageChangedDeferral);
-        Py_VISIT(state->type_ChatMessageChangedEventArgs);
-        Py_VISIT(state->type_ChatMessageManager);
-        Py_VISIT(state->type_ChatMessageNotificationTriggerDetails);
-        Py_VISIT(state->type_ChatMessageReader);
-        Py_VISIT(state->type_ChatMessageStore);
-        Py_VISIT(state->type_ChatMessageStoreChangedEventArgs);
-        Py_VISIT(state->type_ChatMessageTransport);
-        Py_VISIT(state->type_ChatMessageTransportConfiguration);
-        Py_VISIT(state->type_ChatMessageValidationResult);
-        Py_VISIT(state->type_ChatQueryOptions);
-        Py_VISIT(state->type_ChatRecipientDeliveryInfo);
-        Py_VISIT(state->type_ChatSearchReader);
-        Py_VISIT(state->type_ChatSyncConfiguration);
-        Py_VISIT(state->type_ChatSyncManager);
-        Py_VISIT(state->type_RcsEndUserMessage);
-        Py_VISIT(state->type_RcsEndUserMessageAction);
-        Py_VISIT(state->type_RcsEndUserMessageAvailableEventArgs);
-        Py_VISIT(state->type_RcsEndUserMessageAvailableTriggerDetails);
-        Py_VISIT(state->type_RcsEndUserMessageManager);
-        Py_VISIT(state->type_RcsManager);
-        Py_VISIT(state->type_RcsServiceKindSupportedChangedEventArgs);
-        Py_VISIT(state->type_RcsTransport);
-        Py_VISIT(state->type_RcsTransportConfiguration);
-        Py_VISIT(state->type_RemoteParticipantComposingChangedEventArgs);
-        Py_VISIT(state->type_IChatItem);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ChatCapabilities);
-        Py_CLEAR(state->type_ChatCapabilitiesManager);
-        Py_CLEAR(state->type_ChatConversation);
-        Py_CLEAR(state->type_ChatConversationReader);
-        Py_CLEAR(state->type_ChatConversationThreadingInfo);
-        Py_CLEAR(state->type_ChatMessage);
-        Py_CLEAR(state->type_ChatMessageAttachment);
-        Py_CLEAR(state->type_ChatMessageBlocking);
-        Py_CLEAR(state->type_ChatMessageChange);
-        Py_CLEAR(state->type_ChatMessageChangeReader);
-        Py_CLEAR(state->type_ChatMessageChangeTracker);
-        Py_CLEAR(state->type_ChatMessageChangedDeferral);
-        Py_CLEAR(state->type_ChatMessageChangedEventArgs);
-        Py_CLEAR(state->type_ChatMessageManager);
-        Py_CLEAR(state->type_ChatMessageNotificationTriggerDetails);
-        Py_CLEAR(state->type_ChatMessageReader);
-        Py_CLEAR(state->type_ChatMessageStore);
-        Py_CLEAR(state->type_ChatMessageStoreChangedEventArgs);
-        Py_CLEAR(state->type_ChatMessageTransport);
-        Py_CLEAR(state->type_ChatMessageTransportConfiguration);
-        Py_CLEAR(state->type_ChatMessageValidationResult);
-        Py_CLEAR(state->type_ChatQueryOptions);
-        Py_CLEAR(state->type_ChatRecipientDeliveryInfo);
-        Py_CLEAR(state->type_ChatSearchReader);
-        Py_CLEAR(state->type_ChatSyncConfiguration);
-        Py_CLEAR(state->type_ChatSyncManager);
-        Py_CLEAR(state->type_RcsEndUserMessage);
-        Py_CLEAR(state->type_RcsEndUserMessageAction);
-        Py_CLEAR(state->type_RcsEndUserMessageAvailableEventArgs);
-        Py_CLEAR(state->type_RcsEndUserMessageAvailableTriggerDetails);
-        Py_CLEAR(state->type_RcsEndUserMessageManager);
-        Py_CLEAR(state->type_RcsManager);
-        Py_CLEAR(state->type_RcsServiceKindSupportedChangedEventArgs);
-        Py_CLEAR(state->type_RcsTransport);
-        Py_CLEAR(state->type_RcsTransportConfiguration);
-        Py_CLEAR(state->type_RemoteParticipantComposingChangedEventArgs);
-        Py_CLEAR(state->type_IChatItem);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Chat",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Chat
@@ -8791,7 +8649,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Chat(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8804,1082 +8662,339 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Chat(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ChatCapabilities = py::register_python_type(module.get(), type_name_ChatCapabilities, &type_spec_ChatCapabilities, object_bases.get(), nullptr);
-    if (!state->type_ChatCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatCapabilities, &type_spec_ChatCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatCapabilities, &type_spec_ChatCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatCapabilitiesManager = py::register_python_type(module.get(), type_name_ChatCapabilitiesManager, &type_spec_ChatCapabilitiesManager, object_bases.get(), nullptr);
-    if (!state->type_ChatCapabilitiesManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatCapabilitiesManager, &type_spec_ChatCapabilitiesManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatCapabilitiesManager, &type_spec_ChatCapabilitiesManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatConversation = py::register_python_type(module.get(), type_name_ChatConversation, &type_spec_ChatConversation, object_bases.get(), nullptr);
-    if (!state->type_ChatConversation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatConversation, &type_spec_ChatConversation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatConversation, &type_spec_ChatConversation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatConversationReader = py::register_python_type(module.get(), type_name_ChatConversationReader, &type_spec_ChatConversationReader, object_bases.get(), nullptr);
-    if (!state->type_ChatConversationReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatConversationReader, &type_spec_ChatConversationReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatConversationReader, &type_spec_ChatConversationReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatConversationThreadingInfo = py::register_python_type(module.get(), type_name_ChatConversationThreadingInfo, &type_spec_ChatConversationThreadingInfo, object_bases.get(), nullptr);
-    if (!state->type_ChatConversationThreadingInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatConversationThreadingInfo, &type_spec_ChatConversationThreadingInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatConversationThreadingInfo, &type_spec_ChatConversationThreadingInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessage = py::register_python_type(module.get(), type_name_ChatMessage, &type_spec_ChatMessage, object_bases.get(), nullptr);
-    if (!state->type_ChatMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessage, &type_spec_ChatMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessage, &type_spec_ChatMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageAttachment = py::register_python_type(module.get(), type_name_ChatMessageAttachment, &type_spec_ChatMessageAttachment, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageAttachment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageAttachment, &type_spec_ChatMessageAttachment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageAttachment, &type_spec_ChatMessageAttachment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageBlocking = py::register_python_type(module.get(), type_name_ChatMessageBlocking, &type_spec_ChatMessageBlocking, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageBlocking)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageBlocking, &type_spec_ChatMessageBlocking, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageBlocking, &type_spec_ChatMessageBlocking, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageChange = py::register_python_type(module.get(), type_name_ChatMessageChange, &type_spec_ChatMessageChange, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageChange, &type_spec_ChatMessageChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageChange, &type_spec_ChatMessageChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageChangeReader = py::register_python_type(module.get(), type_name_ChatMessageChangeReader, &type_spec_ChatMessageChangeReader, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageChangeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangeReader, &type_spec_ChatMessageChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangeReader, &type_spec_ChatMessageChangeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageChangeTracker = py::register_python_type(module.get(), type_name_ChatMessageChangeTracker, &type_spec_ChatMessageChangeTracker, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageChangeTracker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangeTracker, &type_spec_ChatMessageChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangeTracker, &type_spec_ChatMessageChangeTracker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageChangedDeferral = py::register_python_type(module.get(), type_name_ChatMessageChangedDeferral, &type_spec_ChatMessageChangedDeferral, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageChangedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangedDeferral, &type_spec_ChatMessageChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangedDeferral, &type_spec_ChatMessageChangedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageChangedEventArgs = py::register_python_type(module.get(), type_name_ChatMessageChangedEventArgs, &type_spec_ChatMessageChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangedEventArgs, &type_spec_ChatMessageChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageChangedEventArgs, &type_spec_ChatMessageChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageManager = py::register_python_type(module.get(), type_name_ChatMessageManager, &type_spec_ChatMessageManager, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageManager, &type_spec_ChatMessageManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageManager, &type_spec_ChatMessageManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageNotificationTriggerDetails = py::register_python_type(module.get(), type_name_ChatMessageNotificationTriggerDetails, &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTriggerDetails, &type_spec_ChatMessageNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTriggerDetails, &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageReader = py::register_python_type(module.get(), type_name_ChatMessageReader, &type_spec_ChatMessageReader, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageReader, &type_spec_ChatMessageReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageReader, &type_spec_ChatMessageReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageStore = py::register_python_type(module.get(), type_name_ChatMessageStore, &type_spec_ChatMessageStore, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageStore, &type_spec_ChatMessageStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageStore, &type_spec_ChatMessageStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageStoreChangedEventArgs = py::register_python_type(module.get(), type_name_ChatMessageStoreChangedEventArgs, &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageStoreChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageStoreChangedEventArgs, &type_spec_ChatMessageStoreChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageStoreChangedEventArgs, &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageTransport = py::register_python_type(module.get(), type_name_ChatMessageTransport, &type_spec_ChatMessageTransport, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageTransport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageTransport, &type_spec_ChatMessageTransport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageTransport, &type_spec_ChatMessageTransport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageTransportConfiguration = py::register_python_type(module.get(), type_name_ChatMessageTransportConfiguration, &type_spec_ChatMessageTransportConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageTransportConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageTransportConfiguration, &type_spec_ChatMessageTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageTransportConfiguration, &type_spec_ChatMessageTransportConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageValidationResult = py::register_python_type(module.get(), type_name_ChatMessageValidationResult, &type_spec_ChatMessageValidationResult, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageValidationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageValidationResult, &type_spec_ChatMessageValidationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageValidationResult, &type_spec_ChatMessageValidationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatQueryOptions = py::register_python_type(module.get(), type_name_ChatQueryOptions, &type_spec_ChatQueryOptions, object_bases.get(), nullptr);
-    if (!state->type_ChatQueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatQueryOptions, &type_spec_ChatQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatQueryOptions, &type_spec_ChatQueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatRecipientDeliveryInfo = py::register_python_type(module.get(), type_name_ChatRecipientDeliveryInfo, &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), nullptr);
-    if (!state->type_ChatRecipientDeliveryInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatRecipientDeliveryInfo, &type_spec_ChatRecipientDeliveryInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatRecipientDeliveryInfo, &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatSearchReader = py::register_python_type(module.get(), type_name_ChatSearchReader, &type_spec_ChatSearchReader, object_bases.get(), nullptr);
-    if (!state->type_ChatSearchReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatSearchReader, &type_spec_ChatSearchReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatSearchReader, &type_spec_ChatSearchReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatSyncConfiguration = py::register_python_type(module.get(), type_name_ChatSyncConfiguration, &type_spec_ChatSyncConfiguration, object_bases.get(), nullptr);
-    if (!state->type_ChatSyncConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatSyncConfiguration, &type_spec_ChatSyncConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatSyncConfiguration, &type_spec_ChatSyncConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatSyncManager = py::register_python_type(module.get(), type_name_ChatSyncManager, &type_spec_ChatSyncManager, object_bases.get(), nullptr);
-    if (!state->type_ChatSyncManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatSyncManager, &type_spec_ChatSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatSyncManager, &type_spec_ChatSyncManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessage = py::register_python_type(module.get(), type_name_RcsEndUserMessage, &type_spec_RcsEndUserMessage, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessage, &type_spec_RcsEndUserMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessage, &type_spec_RcsEndUserMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessageAction = py::register_python_type(module.get(), type_name_RcsEndUserMessageAction, &type_spec_RcsEndUserMessageAction, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessageAction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAction, &type_spec_RcsEndUserMessageAction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAction, &type_spec_RcsEndUserMessageAction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessageAvailableEventArgs = py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableEventArgs, &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessageAvailableEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableEventArgs, &type_spec_RcsEndUserMessageAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableEventArgs, &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessageAvailableTriggerDetails = py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTriggerDetails, &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessageAvailableTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTriggerDetails, &type_spec_RcsEndUserMessageAvailableTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTriggerDetails, &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessageManager = py::register_python_type(module.get(), type_name_RcsEndUserMessageManager, &type_spec_RcsEndUserMessageManager, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessageManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageManager, &type_spec_RcsEndUserMessageManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageManager, &type_spec_RcsEndUserMessageManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsManager = py::register_python_type(module.get(), type_name_RcsManager, &type_spec_RcsManager, object_bases.get(), nullptr);
-    if (!state->type_RcsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsManager, &type_spec_RcsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsManager, &type_spec_RcsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsServiceKindSupportedChangedEventArgs = py::register_python_type(module.get(), type_name_RcsServiceKindSupportedChangedEventArgs, &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RcsServiceKindSupportedChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsServiceKindSupportedChangedEventArgs, &type_spec_RcsServiceKindSupportedChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsServiceKindSupportedChangedEventArgs, &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsTransport = py::register_python_type(module.get(), type_name_RcsTransport, &type_spec_RcsTransport, object_bases.get(), nullptr);
-    if (!state->type_RcsTransport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsTransport, &type_spec_RcsTransport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsTransport, &type_spec_RcsTransport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsTransportConfiguration = py::register_python_type(module.get(), type_name_RcsTransportConfiguration, &type_spec_RcsTransportConfiguration, object_bases.get(), nullptr);
-    if (!state->type_RcsTransportConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsTransportConfiguration, &type_spec_RcsTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsTransportConfiguration, &type_spec_RcsTransportConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoteParticipantComposingChangedEventArgs = py::register_python_type(module.get(), type_name_RemoteParticipantComposingChangedEventArgs, &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RemoteParticipantComposingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoteParticipantComposingChangedEventArgs, &type_spec_RemoteParticipantComposingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoteParticipantComposingChangedEventArgs, &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IChatItem = py::register_python_type(module.get(), type_name_IChatItem, &type_spec_IChatItem, object_bases.get(), nullptr);
-    if (!state->type_IChatItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IChatItem, &type_spec_IChatItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IChatItem, &type_spec_IChatItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatCapabilitiesManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatConversation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatConversation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatConversation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatConversationReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatConversationReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatConversationThreadingInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageAttachment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageBlocking;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageChangeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageChangeTracker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageChangedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageStoreChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageTransport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageTransport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageTransportConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageValidationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatQueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatQueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatRecipientDeliveryInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatSearchReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatSearchReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatSyncConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatSyncManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::ChatSyncManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessageAction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessageAvailableEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessageAvailableTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessageManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsServiceKindSupportedChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsTransport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsTransport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsTransport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsTransportConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoteParticipantComposingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Chat::IChatItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Chat;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Chat");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IChatItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Chat::IChatItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

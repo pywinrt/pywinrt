@@ -6,28 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Geolocation
 {
-    struct module_state
-    {
-        PyTypeObject* type_CivicAddress;
-        PyTypeObject* type_GeoboundingBox;
-        PyTypeObject* type_Geocircle;
-        PyTypeObject* type_Geocoordinate;
-        PyTypeObject* type_GeocoordinateSatelliteData;
-        PyTypeObject* type_Geolocator;
-        PyTypeObject* type_Geopath;
-        PyTypeObject* type_Geopoint;
-        PyTypeObject* type_Geoposition;
-        PyTypeObject* type_Geovisit;
-        PyTypeObject* type_GeovisitMonitor;
-        PyTypeObject* type_GeovisitStateChangedEventArgs;
-        PyTypeObject* type_GeovisitTriggerDetails;
-        PyTypeObject* type_PositionChangedEventArgs;
-        PyTypeObject* type_StatusChangedEventArgs;
-        PyTypeObject* type_VenueData;
-        PyTypeObject* type_IGeoshape;
-        PyTypeObject* type_BasicGeoposition;
-    };
-
     // ----- CivicAddress class --------------------
     static constexpr const char* const type_name_CivicAddress = "CivicAddress";
 
@@ -3734,78 +3712,15 @@ namespace py::cpp::Windows::Devices::Geolocation
     PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CivicAddress);
-        Py_VISIT(state->type_GeoboundingBox);
-        Py_VISIT(state->type_Geocircle);
-        Py_VISIT(state->type_Geocoordinate);
-        Py_VISIT(state->type_GeocoordinateSatelliteData);
-        Py_VISIT(state->type_Geolocator);
-        Py_VISIT(state->type_Geopath);
-        Py_VISIT(state->type_Geopoint);
-        Py_VISIT(state->type_Geoposition);
-        Py_VISIT(state->type_Geovisit);
-        Py_VISIT(state->type_GeovisitMonitor);
-        Py_VISIT(state->type_GeovisitStateChangedEventArgs);
-        Py_VISIT(state->type_GeovisitTriggerDetails);
-        Py_VISIT(state->type_PositionChangedEventArgs);
-        Py_VISIT(state->type_StatusChangedEventArgs);
-        Py_VISIT(state->type_VenueData);
-        Py_VISIT(state->type_IGeoshape);
-        Py_VISIT(state->type_BasicGeoposition);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CivicAddress);
-        Py_CLEAR(state->type_GeoboundingBox);
-        Py_CLEAR(state->type_Geocircle);
-        Py_CLEAR(state->type_Geocoordinate);
-        Py_CLEAR(state->type_GeocoordinateSatelliteData);
-        Py_CLEAR(state->type_Geolocator);
-        Py_CLEAR(state->type_Geopath);
-        Py_CLEAR(state->type_Geopoint);
-        Py_CLEAR(state->type_Geoposition);
-        Py_CLEAR(state->type_Geovisit);
-        Py_CLEAR(state->type_GeovisitMonitor);
-        Py_CLEAR(state->type_GeovisitStateChangedEventArgs);
-        Py_CLEAR(state->type_GeovisitTriggerDetails);
-        Py_CLEAR(state->type_PositionChangedEventArgs);
-        Py_CLEAR(state->type_StatusChangedEventArgs);
-        Py_CLEAR(state->type_VenueData);
-        Py_CLEAR(state->type_IGeoshape);
-        Py_CLEAR(state->type_BasicGeoposition);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Geolocation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Geolocation
@@ -3821,7 +3736,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3834,35 +3749,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CivicAddress = py::register_python_type(module.get(), type_name_CivicAddress, &type_spec_CivicAddress, object_bases.get(), nullptr);
-    if (!state->type_CivicAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CivicAddress, &type_spec_CivicAddress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CivicAddress, &type_spec_CivicAddress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeoboundingBox = py::register_python_type(module.get(), type_name_GeoboundingBox, &type_spec_GeoboundingBox, object_bases.get(), nullptr);
-    if (!state->type_GeoboundingBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeoboundingBox, &type_spec_GeoboundingBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeoboundingBox, &type_spec_GeoboundingBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geocircle = py::register_python_type(module.get(), type_name_Geocircle, &type_spec_Geocircle, object_bases.get(), nullptr);
-    if (!state->type_Geocircle)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geocircle, &type_spec_Geocircle, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geocircle, &type_spec_Geocircle, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geocoordinate = py::register_python_type(module.get(), type_name_Geocoordinate, &type_spec_Geocoordinate, object_bases.get(), nullptr);
-    if (!state->type_Geocoordinate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geocoordinate, &type_spec_Geocoordinate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geocoordinate, &type_spec_Geocoordinate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeocoordinateSatelliteData = py::register_python_type(module.get(), type_name_GeocoordinateSatelliteData, &type_spec_GeocoordinateSatelliteData, object_bases.get(), nullptr);
-    if (!state->type_GeocoordinateSatelliteData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeocoordinateSatelliteData, &type_spec_GeocoordinateSatelliteData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeocoordinateSatelliteData, &type_spec_GeocoordinateSatelliteData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3873,498 +3800,123 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation(void) noexcept
         return nullptr;
     }
 
-    state->type_Geolocator = py::register_python_type(module.get(), type_name_Geolocator, &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Meta.get()));
-    if (!state->type_Geolocator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geolocator, &type_spec_Geolocator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geolocator, &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geopath = py::register_python_type(module.get(), type_name_Geopath, &type_spec_Geopath, object_bases.get(), nullptr);
-    if (!state->type_Geopath)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geopath, &type_spec_Geopath, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geopath, &type_spec_Geopath, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geopoint = py::register_python_type(module.get(), type_name_Geopoint, &type_spec_Geopoint, object_bases.get(), nullptr);
-    if (!state->type_Geopoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geopoint, &type_spec_Geopoint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geopoint, &type_spec_Geopoint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geoposition = py::register_python_type(module.get(), type_name_Geoposition, &type_spec_Geoposition, object_bases.get(), nullptr);
-    if (!state->type_Geoposition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geoposition, &type_spec_Geoposition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geoposition, &type_spec_Geoposition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Geovisit = py::register_python_type(module.get(), type_name_Geovisit, &type_spec_Geovisit, object_bases.get(), nullptr);
-    if (!state->type_Geovisit)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geovisit, &type_spec_Geovisit, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geovisit, &type_spec_Geovisit, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeovisitMonitor = py::register_python_type(module.get(), type_name_GeovisitMonitor, &type_spec_GeovisitMonitor, object_bases.get(), nullptr);
-    if (!state->type_GeovisitMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeovisitMonitor, &type_spec_GeovisitMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeovisitMonitor, &type_spec_GeovisitMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeovisitStateChangedEventArgs = py::register_python_type(module.get(), type_name_GeovisitStateChangedEventArgs, &type_spec_GeovisitStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GeovisitStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeovisitStateChangedEventArgs, &type_spec_GeovisitStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeovisitStateChangedEventArgs, &type_spec_GeovisitStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeovisitTriggerDetails = py::register_python_type(module.get(), type_name_GeovisitTriggerDetails, &type_spec_GeovisitTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_GeovisitTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeovisitTriggerDetails, &type_spec_GeovisitTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeovisitTriggerDetails, &type_spec_GeovisitTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PositionChangedEventArgs = py::register_python_type(module.get(), type_name_PositionChangedEventArgs, &type_spec_PositionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PositionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PositionChangedEventArgs, &type_spec_PositionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PositionChangedEventArgs, &type_spec_PositionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StatusChangedEventArgs = py::register_python_type(module.get(), type_name_StatusChangedEventArgs, &type_spec_StatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_StatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StatusChangedEventArgs, &type_spec_StatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StatusChangedEventArgs, &type_spec_StatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VenueData = py::register_python_type(module.get(), type_name_VenueData, &type_spec_VenueData, object_bases.get(), nullptr);
-    if (!state->type_VenueData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VenueData, &type_spec_VenueData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VenueData, &type_spec_VenueData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGeoshape = py::register_python_type(module.get(), type_name_IGeoshape, &type_spec_IGeoshape, object_bases.get(), nullptr);
-    if (!state->type_IGeoshape)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGeoshape, &type_spec_IGeoshape, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGeoshape, &type_spec_IGeoshape, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BasicGeoposition = py::register_python_type(module.get(), type_name_BasicGeoposition, &type_spec_BasicGeoposition, nullptr, nullptr);
-    if (!state->type_BasicGeoposition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BasicGeoposition, &type_spec_BasicGeoposition, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BasicGeoposition, &type_spec_BasicGeoposition, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::CivicAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CivicAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::CivicAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::GeoboundingBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeoboundingBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeoboundingBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geocircle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geocircle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geocircle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geocoordinate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geocoordinate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geocoordinate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeocoordinateSatelliteData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geolocator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geolocator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geolocator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geopath>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geopath;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geopath is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geopoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geopoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geopoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geoposition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geoposition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geoposition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::Geovisit>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geovisit;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::Geovisit is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::GeovisitMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeovisitMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeovisitMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeovisitStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeovisitTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PositionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::PositionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::StatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::VenueData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VenueData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::VenueData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::IGeoshape>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGeoshape;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::IGeoshape is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Geolocation::BasicGeoposition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Geolocation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Geolocation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BasicGeoposition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Geolocation::BasicGeoposition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

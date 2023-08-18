@@ -6,15 +6,6 @@
 
 namespace py::cpp::TestComponent
 {
-    struct module_state
-    {
-        PyTypeObject* type_TestRunner;
-        PyTypeObject* type_ITests;
-        PyTypeObject* type_Blittable;
-        PyTypeObject* type_Nested;
-        PyTypeObject* type_NonBlittable;
-    };
-
     // ----- TestRunner class --------------------
     static constexpr const char* const type_name_TestRunner = "TestRunner";
 
@@ -4400,52 +4391,15 @@ namespace py::cpp::TestComponent
     PyDoc_STRVAR(module_doc, "TestComponent");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_TestRunner);
-        Py_VISIT(state->type_ITests);
-        Py_VISIT(state->type_Blittable);
-        Py_VISIT(state->type_Nested);
-        Py_VISIT(state->type_NonBlittable);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_TestRunner);
-        Py_CLEAR(state->type_ITests);
-        Py_CLEAR(state->type_Blittable);
-        Py_CLEAR(state->type_Nested);
-        Py_CLEAR(state->type_NonBlittable);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_TestComponent",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::TestComponent
@@ -4461,7 +4415,7 @@ PyMODINIT_FUNC PyInit__winrt_TestComponent(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4474,154 +4428,51 @@ PyMODINIT_FUNC PyInit__winrt_TestComponent(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_TestRunner = py::register_python_type(module.get(), type_name_TestRunner, &type_spec_TestRunner, object_bases.get(), nullptr);
-    if (!state->type_TestRunner)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TestRunner, &type_spec_TestRunner, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TestRunner, &type_spec_TestRunner, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITests = py::register_python_type(module.get(), type_name_ITests, &type_spec_ITests, object_bases.get(), nullptr);
-    if (!state->type_ITests)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITests, &type_spec_ITests, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITests, &type_spec_ITests, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Blittable = py::register_python_type(module.get(), type_name_Blittable, &type_spec_Blittable, nullptr, nullptr);
-    if (!state->type_Blittable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Blittable, &type_spec_Blittable, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Blittable, &type_spec_Blittable, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Nested = py::register_python_type(module.get(), type_name_Nested, &type_spec_Nested, nullptr, nullptr);
-    if (!state->type_Nested)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Nested, &type_spec_Nested, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Nested, &type_spec_Nested, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NonBlittable = py::register_python_type(module.get(), type_name_NonBlittable, &type_spec_NonBlittable, nullptr, nullptr);
-    if (!state->type_NonBlittable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NonBlittable, &type_spec_NonBlittable, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NonBlittable, &type_spec_NonBlittable, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::TestComponent::TestRunner>::get_python_type() noexcept {
-    using namespace py::cpp::TestComponent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for TestComponent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TestRunner;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::TestComponent::TestRunner is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::TestComponent::ITests>::get_python_type() noexcept {
-    using namespace py::cpp::TestComponent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for TestComponent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITests;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::TestComponent::ITests is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::TestComponent::Blittable>::get_python_type() noexcept {
-    using namespace py::cpp::TestComponent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for TestComponent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Blittable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::TestComponent::Blittable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::TestComponent::Nested>::get_python_type() noexcept {
-    using namespace py::cpp::TestComponent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for TestComponent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Nested;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::TestComponent::Nested is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::TestComponent::NonBlittable>::get_python_type() noexcept {
-    using namespace py::cpp::TestComponent;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for TestComponent");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NonBlittable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::TestComponent::NonBlittable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

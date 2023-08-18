@@ -67,68 +67,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::ApplicationLanguages>
+    struct py_type<winrt::Windows::Globalization::ApplicationLanguages>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "ApplicationLanguages";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Calendar>
+    struct py_type<winrt::Windows::Globalization::Calendar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "Calendar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::CalendarIdentifiers>
+    struct py_type<winrt::Windows::Globalization::CalendarIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "CalendarIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::ClockIdentifiers>
+    struct py_type<winrt::Windows::Globalization::ClockIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "ClockIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::CurrencyAmount>
+    struct py_type<winrt::Windows::Globalization::CurrencyAmount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "CurrencyAmount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::CurrencyIdentifiers>
+    struct py_type<winrt::Windows::Globalization::CurrencyIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "CurrencyIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::GeographicRegion>
+    struct py_type<winrt::Windows::Globalization::GeographicRegion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "GeographicRegion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::JapanesePhoneme>
+    struct py_type<winrt::Windows::Globalization::JapanesePhoneme>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "JapanesePhoneme";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>
+    struct py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "JapanesePhoneticAnalyzer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Language>
+    struct py_type<winrt::Windows::Globalization::Language>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "Language";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>
+    struct py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization";
+        static constexpr const char* type_name = "NumeralSystemIdentifiers";
     };
 }

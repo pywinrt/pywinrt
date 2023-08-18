@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>
+    struct py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.embedded.devicelockdown";
+        static constexpr const char* type_name = "DeviceLockdownProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>
+    struct py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.embedded.devicelockdown";
+        static constexpr const char* type_name = "DeviceLockdownProfileInformation";
     };
 }

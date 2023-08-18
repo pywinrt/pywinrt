@@ -6,78 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Media
 {
-    struct module_state
-    {
-        PyTypeObject* type_AcrylicBrush;
-        PyTypeObject* type_ArcSegment;
-        PyTypeObject* type_BezierSegment;
-        PyTypeObject* type_BitmapCache;
-        PyTypeObject* type_Brush;
-        PyTypeObject* type_BrushCollection;
-        PyTypeObject* type_CacheMode;
-        PyTypeObject* type_CompositeTransform;
-        PyTypeObject* type_CompositionTarget;
-        PyTypeObject* type_DoubleCollection;
-        PyTypeObject* type_EllipseGeometry;
-        PyTypeObject* type_FontFamily;
-        PyTypeObject* type_GeneralTransform;
-        PyTypeObject* type_Geometry;
-        PyTypeObject* type_GeometryCollection;
-        PyTypeObject* type_GeometryGroup;
-        PyTypeObject* type_GradientBrush;
-        PyTypeObject* type_GradientStop;
-        PyTypeObject* type_GradientStopCollection;
-        PyTypeObject* type_ImageBrush;
-        PyTypeObject* type_ImageSource;
-        PyTypeObject* type_LineGeometry;
-        PyTypeObject* type_LineSegment;
-        PyTypeObject* type_LinearGradientBrush;
-        PyTypeObject* type_LoadedImageSourceLoadCompletedEventArgs;
-        PyTypeObject* type_LoadedImageSurface;
-        PyTypeObject* type_Matrix3DProjection;
-        PyTypeObject* type_MatrixHelper;
-        PyTypeObject* type_MatrixTransform;
-        PyTypeObject* type_MediaTransportControlsThumbnailRequestedEventArgs;
-        PyTypeObject* type_PartialMediaFailureDetectedEventArgs;
-        PyTypeObject* type_PathFigure;
-        PyTypeObject* type_PathFigureCollection;
-        PyTypeObject* type_PathGeometry;
-        PyTypeObject* type_PathSegment;
-        PyTypeObject* type_PathSegmentCollection;
-        PyTypeObject* type_PlaneProjection;
-        PyTypeObject* type_PointCollection;
-        PyTypeObject* type_PolyBezierSegment;
-        PyTypeObject* type_PolyLineSegment;
-        PyTypeObject* type_PolyQuadraticBezierSegment;
-        PyTypeObject* type_Projection;
-        PyTypeObject* type_QuadraticBezierSegment;
-        PyTypeObject* type_RateChangedRoutedEventArgs;
-        PyTypeObject* type_RectangleGeometry;
-        PyTypeObject* type_RenderedEventArgs;
-        PyTypeObject* type_RenderingEventArgs;
-        PyTypeObject* type_RevealBackgroundBrush;
-        PyTypeObject* type_RevealBorderBrush;
-        PyTypeObject* type_RevealBrush;
-        PyTypeObject* type_RotateTransform;
-        PyTypeObject* type_ScaleTransform;
-        PyTypeObject* type_Shadow;
-        PyTypeObject* type_SkewTransform;
-        PyTypeObject* type_SolidColorBrush;
-        PyTypeObject* type_ThemeShadow;
-        PyTypeObject* type_TileBrush;
-        PyTypeObject* type_TimelineMarker;
-        PyTypeObject* type_TimelineMarkerCollection;
-        PyTypeObject* type_TimelineMarkerRoutedEventArgs;
-        PyTypeObject* type_Transform;
-        PyTypeObject* type_TransformCollection;
-        PyTypeObject* type_TransformGroup;
-        PyTypeObject* type_TranslateTransform;
-        PyTypeObject* type_VisualTreeHelper;
-        PyTypeObject* type_XamlCompositionBrushBase;
-        PyTypeObject* type_XamlLight;
-        PyTypeObject* type_Matrix;
-    };
-
     // ----- AcrylicBrush class --------------------
     static constexpr const char* const type_name_AcrylicBrush = "AcrylicBrush";
 
@@ -20606,178 +20534,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AcrylicBrush);
-        Py_VISIT(state->type_ArcSegment);
-        Py_VISIT(state->type_BezierSegment);
-        Py_VISIT(state->type_BitmapCache);
-        Py_VISIT(state->type_Brush);
-        Py_VISIT(state->type_BrushCollection);
-        Py_VISIT(state->type_CacheMode);
-        Py_VISIT(state->type_CompositeTransform);
-        Py_VISIT(state->type_CompositionTarget);
-        Py_VISIT(state->type_DoubleCollection);
-        Py_VISIT(state->type_EllipseGeometry);
-        Py_VISIT(state->type_FontFamily);
-        Py_VISIT(state->type_GeneralTransform);
-        Py_VISIT(state->type_Geometry);
-        Py_VISIT(state->type_GeometryCollection);
-        Py_VISIT(state->type_GeometryGroup);
-        Py_VISIT(state->type_GradientBrush);
-        Py_VISIT(state->type_GradientStop);
-        Py_VISIT(state->type_GradientStopCollection);
-        Py_VISIT(state->type_ImageBrush);
-        Py_VISIT(state->type_ImageSource);
-        Py_VISIT(state->type_LineGeometry);
-        Py_VISIT(state->type_LineSegment);
-        Py_VISIT(state->type_LinearGradientBrush);
-        Py_VISIT(state->type_LoadedImageSourceLoadCompletedEventArgs);
-        Py_VISIT(state->type_LoadedImageSurface);
-        Py_VISIT(state->type_Matrix3DProjection);
-        Py_VISIT(state->type_MatrixHelper);
-        Py_VISIT(state->type_MatrixTransform);
-        Py_VISIT(state->type_MediaTransportControlsThumbnailRequestedEventArgs);
-        Py_VISIT(state->type_PartialMediaFailureDetectedEventArgs);
-        Py_VISIT(state->type_PathFigure);
-        Py_VISIT(state->type_PathFigureCollection);
-        Py_VISIT(state->type_PathGeometry);
-        Py_VISIT(state->type_PathSegment);
-        Py_VISIT(state->type_PathSegmentCollection);
-        Py_VISIT(state->type_PlaneProjection);
-        Py_VISIT(state->type_PointCollection);
-        Py_VISIT(state->type_PolyBezierSegment);
-        Py_VISIT(state->type_PolyLineSegment);
-        Py_VISIT(state->type_PolyQuadraticBezierSegment);
-        Py_VISIT(state->type_Projection);
-        Py_VISIT(state->type_QuadraticBezierSegment);
-        Py_VISIT(state->type_RateChangedRoutedEventArgs);
-        Py_VISIT(state->type_RectangleGeometry);
-        Py_VISIT(state->type_RenderedEventArgs);
-        Py_VISIT(state->type_RenderingEventArgs);
-        Py_VISIT(state->type_RevealBackgroundBrush);
-        Py_VISIT(state->type_RevealBorderBrush);
-        Py_VISIT(state->type_RevealBrush);
-        Py_VISIT(state->type_RotateTransform);
-        Py_VISIT(state->type_ScaleTransform);
-        Py_VISIT(state->type_Shadow);
-        Py_VISIT(state->type_SkewTransform);
-        Py_VISIT(state->type_SolidColorBrush);
-        Py_VISIT(state->type_ThemeShadow);
-        Py_VISIT(state->type_TileBrush);
-        Py_VISIT(state->type_TimelineMarker);
-        Py_VISIT(state->type_TimelineMarkerCollection);
-        Py_VISIT(state->type_TimelineMarkerRoutedEventArgs);
-        Py_VISIT(state->type_Transform);
-        Py_VISIT(state->type_TransformCollection);
-        Py_VISIT(state->type_TransformGroup);
-        Py_VISIT(state->type_TranslateTransform);
-        Py_VISIT(state->type_VisualTreeHelper);
-        Py_VISIT(state->type_XamlCompositionBrushBase);
-        Py_VISIT(state->type_XamlLight);
-        Py_VISIT(state->type_Matrix);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AcrylicBrush);
-        Py_CLEAR(state->type_ArcSegment);
-        Py_CLEAR(state->type_BezierSegment);
-        Py_CLEAR(state->type_BitmapCache);
-        Py_CLEAR(state->type_Brush);
-        Py_CLEAR(state->type_BrushCollection);
-        Py_CLEAR(state->type_CacheMode);
-        Py_CLEAR(state->type_CompositeTransform);
-        Py_CLEAR(state->type_CompositionTarget);
-        Py_CLEAR(state->type_DoubleCollection);
-        Py_CLEAR(state->type_EllipseGeometry);
-        Py_CLEAR(state->type_FontFamily);
-        Py_CLEAR(state->type_GeneralTransform);
-        Py_CLEAR(state->type_Geometry);
-        Py_CLEAR(state->type_GeometryCollection);
-        Py_CLEAR(state->type_GeometryGroup);
-        Py_CLEAR(state->type_GradientBrush);
-        Py_CLEAR(state->type_GradientStop);
-        Py_CLEAR(state->type_GradientStopCollection);
-        Py_CLEAR(state->type_ImageBrush);
-        Py_CLEAR(state->type_ImageSource);
-        Py_CLEAR(state->type_LineGeometry);
-        Py_CLEAR(state->type_LineSegment);
-        Py_CLEAR(state->type_LinearGradientBrush);
-        Py_CLEAR(state->type_LoadedImageSourceLoadCompletedEventArgs);
-        Py_CLEAR(state->type_LoadedImageSurface);
-        Py_CLEAR(state->type_Matrix3DProjection);
-        Py_CLEAR(state->type_MatrixHelper);
-        Py_CLEAR(state->type_MatrixTransform);
-        Py_CLEAR(state->type_MediaTransportControlsThumbnailRequestedEventArgs);
-        Py_CLEAR(state->type_PartialMediaFailureDetectedEventArgs);
-        Py_CLEAR(state->type_PathFigure);
-        Py_CLEAR(state->type_PathFigureCollection);
-        Py_CLEAR(state->type_PathGeometry);
-        Py_CLEAR(state->type_PathSegment);
-        Py_CLEAR(state->type_PathSegmentCollection);
-        Py_CLEAR(state->type_PlaneProjection);
-        Py_CLEAR(state->type_PointCollection);
-        Py_CLEAR(state->type_PolyBezierSegment);
-        Py_CLEAR(state->type_PolyLineSegment);
-        Py_CLEAR(state->type_PolyQuadraticBezierSegment);
-        Py_CLEAR(state->type_Projection);
-        Py_CLEAR(state->type_QuadraticBezierSegment);
-        Py_CLEAR(state->type_RateChangedRoutedEventArgs);
-        Py_CLEAR(state->type_RectangleGeometry);
-        Py_CLEAR(state->type_RenderedEventArgs);
-        Py_CLEAR(state->type_RenderingEventArgs);
-        Py_CLEAR(state->type_RevealBackgroundBrush);
-        Py_CLEAR(state->type_RevealBorderBrush);
-        Py_CLEAR(state->type_RevealBrush);
-        Py_CLEAR(state->type_RotateTransform);
-        Py_CLEAR(state->type_ScaleTransform);
-        Py_CLEAR(state->type_Shadow);
-        Py_CLEAR(state->type_SkewTransform);
-        Py_CLEAR(state->type_SolidColorBrush);
-        Py_CLEAR(state->type_ThemeShadow);
-        Py_CLEAR(state->type_TileBrush);
-        Py_CLEAR(state->type_TimelineMarker);
-        Py_CLEAR(state->type_TimelineMarkerCollection);
-        Py_CLEAR(state->type_TimelineMarkerRoutedEventArgs);
-        Py_CLEAR(state->type_Transform);
-        Py_CLEAR(state->type_TransformCollection);
-        Py_CLEAR(state->type_TransformGroup);
-        Py_CLEAR(state->type_TranslateTransform);
-        Py_CLEAR(state->type_VisualTreeHelper);
-        Py_CLEAR(state->type_XamlCompositionBrushBase);
-        Py_CLEAR(state->type_XamlLight);
-        Py_CLEAR(state->type_Matrix);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Media",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Media
@@ -20793,7 +20558,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -20806,17 +20571,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AcrylicBrush_Meta{PyType_FromSpec(&type_spec_AcrylicBrush_Meta)};
     if (!type_AcrylicBrush_Meta)
     {
         return nullptr;
     }
 
-    state->type_AcrylicBrush = py::register_python_type(module.get(), type_name_AcrylicBrush, &type_spec_AcrylicBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Meta.get()));
-    if (!state->type_AcrylicBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AcrylicBrush, &type_spec_AcrylicBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AcrylicBrush, &type_spec_AcrylicBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20827,8 +20592,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_ArcSegment = py::register_python_type(module.get(), type_name_ArcSegment, &type_spec_ArcSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Meta.get()));
-    if (!state->type_ArcSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ArcSegment, &type_spec_ArcSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ArcSegment, &type_spec_ArcSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20839,14 +20607,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_BezierSegment = py::register_python_type(module.get(), type_name_BezierSegment, &type_spec_BezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Meta.get()));
-    if (!state->type_BezierSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BezierSegment, &type_spec_BezierSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BezierSegment, &type_spec_BezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapCache = py::register_python_type(module.get(), type_name_BitmapCache, &type_spec_BitmapCache, object_bases.get(), nullptr);
-    if (!state->type_BitmapCache)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapCache, &type_spec_BitmapCache, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapCache, &type_spec_BitmapCache, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20857,20 +20631,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_Brush = py::register_python_type(module.get(), type_name_Brush, &type_spec_Brush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Meta.get()));
-    if (!state->type_Brush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Brush, &type_spec_Brush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Brush, &type_spec_Brush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BrushCollection = py::register_python_type(module.get(), type_name_BrushCollection, &type_spec_BrushCollection, object_bases.get(), nullptr);
-    if (!state->type_BrushCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BrushCollection, &type_spec_BrushCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BrushCollection, &type_spec_BrushCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CacheMode = py::register_python_type(module.get(), type_name_CacheMode, &type_spec_CacheMode, object_bases.get(), nullptr);
-    if (!state->type_CacheMode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CacheMode, &type_spec_CacheMode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CacheMode, &type_spec_CacheMode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20881,20 +20664,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_CompositeTransform = py::register_python_type(module.get(), type_name_CompositeTransform, &type_spec_CompositeTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Meta.get()));
-    if (!state->type_CompositeTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositeTransform, &type_spec_CompositeTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositeTransform, &type_spec_CompositeTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionTarget = py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, object_bases.get(), nullptr);
-    if (!state->type_CompositionTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DoubleCollection = py::register_python_type(module.get(), type_name_DoubleCollection, &type_spec_DoubleCollection, object_bases.get(), nullptr);
-    if (!state->type_DoubleCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DoubleCollection, &type_spec_DoubleCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DoubleCollection, &type_spec_DoubleCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20905,8 +20697,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_EllipseGeometry = py::register_python_type(module.get(), type_name_EllipseGeometry, &type_spec_EllipseGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Meta.get()));
-    if (!state->type_EllipseGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EllipseGeometry, &type_spec_EllipseGeometry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EllipseGeometry, &type_spec_EllipseGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20917,14 +20712,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_FontFamily = py::register_python_type(module.get(), type_name_FontFamily, &type_spec_FontFamily, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontFamily_Meta.get()));
-    if (!state->type_FontFamily)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FontFamily, &type_spec_FontFamily, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontFamily_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FontFamily, &type_spec_FontFamily, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontFamily_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeneralTransform = py::register_python_type(module.get(), type_name_GeneralTransform, &type_spec_GeneralTransform, object_bases.get(), nullptr);
-    if (!state->type_GeneralTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeneralTransform, &type_spec_GeneralTransform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeneralTransform, &type_spec_GeneralTransform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20935,14 +20736,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_Geometry = py::register_python_type(module.get(), type_name_Geometry, &type_spec_Geometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Meta.get()));
-    if (!state->type_Geometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Geometry, &type_spec_Geometry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Geometry, &type_spec_Geometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeometryCollection = py::register_python_type(module.get(), type_name_GeometryCollection, &type_spec_GeometryCollection, object_bases.get(), nullptr);
-    if (!state->type_GeometryCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeometryCollection, &type_spec_GeometryCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeometryCollection, &type_spec_GeometryCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20953,8 +20760,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_GeometryGroup = py::register_python_type(module.get(), type_name_GeometryGroup, &type_spec_GeometryGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Meta.get()));
-    if (!state->type_GeometryGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeometryGroup, &type_spec_GeometryGroup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeometryGroup, &type_spec_GeometryGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20965,8 +20775,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_GradientBrush = py::register_python_type(module.get(), type_name_GradientBrush, &type_spec_GradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Meta.get()));
-    if (!state->type_GradientBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GradientBrush, &type_spec_GradientBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GradientBrush, &type_spec_GradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20977,14 +20790,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_GradientStop = py::register_python_type(module.get(), type_name_GradientStop, &type_spec_GradientStop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Meta.get()));
-    if (!state->type_GradientStop)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GradientStop, &type_spec_GradientStop, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GradientStop, &type_spec_GradientStop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GradientStopCollection = py::register_python_type(module.get(), type_name_GradientStopCollection, &type_spec_GradientStopCollection, object_bases.get(), nullptr);
-    if (!state->type_GradientStopCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GradientStopCollection, &type_spec_GradientStopCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GradientStopCollection, &type_spec_GradientStopCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -20995,14 +20814,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_ImageBrush = py::register_python_type(module.get(), type_name_ImageBrush, &type_spec_ImageBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Meta.get()));
-    if (!state->type_ImageBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageBrush, &type_spec_ImageBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageBrush, &type_spec_ImageBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageSource = py::register_python_type(module.get(), type_name_ImageSource, &type_spec_ImageSource, object_bases.get(), nullptr);
-    if (!state->type_ImageSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageSource, &type_spec_ImageSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageSource, &type_spec_ImageSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21013,8 +20838,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_LineGeometry = py::register_python_type(module.get(), type_name_LineGeometry, &type_spec_LineGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Meta.get()));
-    if (!state->type_LineGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineGeometry, &type_spec_LineGeometry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineGeometry, &type_spec_LineGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21025,8 +20853,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_LineSegment = py::register_python_type(module.get(), type_name_LineSegment, &type_spec_LineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Meta.get()));
-    if (!state->type_LineSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LineSegment, &type_spec_LineSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LineSegment, &type_spec_LineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21037,20 +20868,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_LinearGradientBrush = py::register_python_type(module.get(), type_name_LinearGradientBrush, &type_spec_LinearGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Meta.get()));
-    if (!state->type_LinearGradientBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LinearGradientBrush, &type_spec_LinearGradientBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LinearGradientBrush, &type_spec_LinearGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoadedImageSourceLoadCompletedEventArgs = py::register_python_type(module.get(), type_name_LoadedImageSourceLoadCompletedEventArgs, &type_spec_LoadedImageSourceLoadCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LoadedImageSourceLoadCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoadedImageSourceLoadCompletedEventArgs, &type_spec_LoadedImageSourceLoadCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoadedImageSourceLoadCompletedEventArgs, &type_spec_LoadedImageSourceLoadCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LoadedImageSurface = py::register_python_type(module.get(), type_name_LoadedImageSurface, &type_spec_LoadedImageSurface, object_bases.get(), nullptr);
-    if (!state->type_LoadedImageSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LoadedImageSurface, &type_spec_LoadedImageSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LoadedImageSurface, &type_spec_LoadedImageSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21061,8 +20901,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_Matrix3DProjection = py::register_python_type(module.get(), type_name_Matrix3DProjection, &type_spec_Matrix3DProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Meta.get()));
-    if (!state->type_Matrix3DProjection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix3DProjection, &type_spec_Matrix3DProjection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix3DProjection, &type_spec_Matrix3DProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21073,8 +20916,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_MatrixHelper = py::register_python_type(module.get(), type_name_MatrixHelper, &type_spec_MatrixHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixHelper_Meta.get()));
-    if (!state->type_MatrixHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MatrixHelper, &type_spec_MatrixHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MatrixHelper, &type_spec_MatrixHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21085,20 +20931,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_MatrixTransform = py::register_python_type(module.get(), type_name_MatrixTransform, &type_spec_MatrixTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Meta.get()));
-    if (!state->type_MatrixTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MatrixTransform, &type_spec_MatrixTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MatrixTransform, &type_spec_MatrixTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaTransportControlsThumbnailRequestedEventArgs = py::register_python_type(module.get(), type_name_MediaTransportControlsThumbnailRequestedEventArgs, &type_spec_MediaTransportControlsThumbnailRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaTransportControlsThumbnailRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaTransportControlsThumbnailRequestedEventArgs, &type_spec_MediaTransportControlsThumbnailRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaTransportControlsThumbnailRequestedEventArgs, &type_spec_MediaTransportControlsThumbnailRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PartialMediaFailureDetectedEventArgs = py::register_python_type(module.get(), type_name_PartialMediaFailureDetectedEventArgs, &type_spec_PartialMediaFailureDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PartialMediaFailureDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PartialMediaFailureDetectedEventArgs, &type_spec_PartialMediaFailureDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PartialMediaFailureDetectedEventArgs, &type_spec_PartialMediaFailureDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21109,14 +20964,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PathFigure = py::register_python_type(module.get(), type_name_PathFigure, &type_spec_PathFigure, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Meta.get()));
-    if (!state->type_PathFigure)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathFigure, &type_spec_PathFigure, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathFigure, &type_spec_PathFigure, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PathFigureCollection = py::register_python_type(module.get(), type_name_PathFigureCollection, &type_spec_PathFigureCollection, object_bases.get(), nullptr);
-    if (!state->type_PathFigureCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathFigureCollection, &type_spec_PathFigureCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathFigureCollection, &type_spec_PathFigureCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21127,20 +20988,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PathGeometry = py::register_python_type(module.get(), type_name_PathGeometry, &type_spec_PathGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Meta.get()));
-    if (!state->type_PathGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathGeometry, &type_spec_PathGeometry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathGeometry, &type_spec_PathGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PathSegment = py::register_python_type(module.get(), type_name_PathSegment, &type_spec_PathSegment, object_bases.get(), nullptr);
-    if (!state->type_PathSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathSegment, &type_spec_PathSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathSegment, &type_spec_PathSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PathSegmentCollection = py::register_python_type(module.get(), type_name_PathSegmentCollection, &type_spec_PathSegmentCollection, object_bases.get(), nullptr);
-    if (!state->type_PathSegmentCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathSegmentCollection, &type_spec_PathSegmentCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathSegmentCollection, &type_spec_PathSegmentCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21151,14 +21021,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PlaneProjection = py::register_python_type(module.get(), type_name_PlaneProjection, &type_spec_PlaneProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Meta.get()));
-    if (!state->type_PlaneProjection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaneProjection, &type_spec_PlaneProjection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaneProjection, &type_spec_PlaneProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointCollection = py::register_python_type(module.get(), type_name_PointCollection, &type_spec_PointCollection, object_bases.get(), nullptr);
-    if (!state->type_PointCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointCollection, &type_spec_PointCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointCollection, &type_spec_PointCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21169,8 +21045,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PolyBezierSegment = py::register_python_type(module.get(), type_name_PolyBezierSegment, &type_spec_PolyBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Meta.get()));
-    if (!state->type_PolyBezierSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PolyBezierSegment, &type_spec_PolyBezierSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PolyBezierSegment, &type_spec_PolyBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21181,8 +21060,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PolyLineSegment = py::register_python_type(module.get(), type_name_PolyLineSegment, &type_spec_PolyLineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Meta.get()));
-    if (!state->type_PolyLineSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PolyLineSegment, &type_spec_PolyLineSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PolyLineSegment, &type_spec_PolyLineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21193,14 +21075,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_PolyQuadraticBezierSegment = py::register_python_type(module.get(), type_name_PolyQuadraticBezierSegment, &type_spec_PolyQuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Meta.get()));
-    if (!state->type_PolyQuadraticBezierSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PolyQuadraticBezierSegment, &type_spec_PolyQuadraticBezierSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PolyQuadraticBezierSegment, &type_spec_PolyQuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Projection = py::register_python_type(module.get(), type_name_Projection, &type_spec_Projection, object_bases.get(), nullptr);
-    if (!state->type_Projection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Projection, &type_spec_Projection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Projection, &type_spec_Projection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21211,14 +21099,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_QuadraticBezierSegment = py::register_python_type(module.get(), type_name_QuadraticBezierSegment, &type_spec_QuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Meta.get()));
-    if (!state->type_QuadraticBezierSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuadraticBezierSegment, &type_spec_QuadraticBezierSegment, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuadraticBezierSegment, &type_spec_QuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RateChangedRoutedEventArgs = py::register_python_type(module.get(), type_name_RateChangedRoutedEventArgs, &type_spec_RateChangedRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RateChangedRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RateChangedRoutedEventArgs, &type_spec_RateChangedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RateChangedRoutedEventArgs, &type_spec_RateChangedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21229,32 +21123,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_RectangleGeometry = py::register_python_type(module.get(), type_name_RectangleGeometry, &type_spec_RectangleGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Meta.get()));
-    if (!state->type_RectangleGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RectangleGeometry, &type_spec_RectangleGeometry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RectangleGeometry, &type_spec_RectangleGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RenderedEventArgs = py::register_python_type(module.get(), type_name_RenderedEventArgs, &type_spec_RenderedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RenderedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RenderedEventArgs, &type_spec_RenderedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RenderedEventArgs, &type_spec_RenderedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RenderingEventArgs = py::register_python_type(module.get(), type_name_RenderingEventArgs, &type_spec_RenderingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RenderingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RenderingEventArgs, &type_spec_RenderingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RenderingEventArgs, &type_spec_RenderingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RevealBackgroundBrush = py::register_python_type(module.get(), type_name_RevealBackgroundBrush, &type_spec_RevealBackgroundBrush, object_bases.get(), nullptr);
-    if (!state->type_RevealBackgroundBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RevealBackgroundBrush, &type_spec_RevealBackgroundBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RevealBackgroundBrush, &type_spec_RevealBackgroundBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RevealBorderBrush = py::register_python_type(module.get(), type_name_RevealBorderBrush, &type_spec_RevealBorderBrush, object_bases.get(), nullptr);
-    if (!state->type_RevealBorderBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RevealBorderBrush, &type_spec_RevealBorderBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RevealBorderBrush, &type_spec_RevealBorderBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21265,8 +21174,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_RevealBrush = py::register_python_type(module.get(), type_name_RevealBrush, &type_spec_RevealBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Meta.get()));
-    if (!state->type_RevealBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RevealBrush, &type_spec_RevealBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RevealBrush, &type_spec_RevealBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21277,8 +21189,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_RotateTransform = py::register_python_type(module.get(), type_name_RotateTransform, &type_spec_RotateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Meta.get()));
-    if (!state->type_RotateTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RotateTransform, &type_spec_RotateTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RotateTransform, &type_spec_RotateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21289,14 +21204,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_ScaleTransform = py::register_python_type(module.get(), type_name_ScaleTransform, &type_spec_ScaleTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Meta.get()));
-    if (!state->type_ScaleTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScaleTransform, &type_spec_ScaleTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScaleTransform, &type_spec_ScaleTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Shadow = py::register_python_type(module.get(), type_name_Shadow, &type_spec_Shadow, object_bases.get(), nullptr);
-    if (!state->type_Shadow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Shadow, &type_spec_Shadow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Shadow, &type_spec_Shadow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21307,8 +21228,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_SkewTransform = py::register_python_type(module.get(), type_name_SkewTransform, &type_spec_SkewTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Meta.get()));
-    if (!state->type_SkewTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SkewTransform, &type_spec_SkewTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SkewTransform, &type_spec_SkewTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21319,14 +21243,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_SolidColorBrush = py::register_python_type(module.get(), type_name_SolidColorBrush, &type_spec_SolidColorBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Meta.get()));
-    if (!state->type_SolidColorBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SolidColorBrush, &type_spec_SolidColorBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SolidColorBrush, &type_spec_SolidColorBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ThemeShadow = py::register_python_type(module.get(), type_name_ThemeShadow, &type_spec_ThemeShadow, object_bases.get(), nullptr);
-    if (!state->type_ThemeShadow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ThemeShadow, &type_spec_ThemeShadow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ThemeShadow, &type_spec_ThemeShadow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21337,8 +21267,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_TileBrush = py::register_python_type(module.get(), type_name_TileBrush, &type_spec_TileBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Meta.get()));
-    if (!state->type_TileBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileBrush, &type_spec_TileBrush, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileBrush, &type_spec_TileBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21349,32 +21282,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_TimelineMarker = py::register_python_type(module.get(), type_name_TimelineMarker, &type_spec_TimelineMarker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimelineMarker_Meta.get()));
-    if (!state->type_TimelineMarker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimelineMarker, &type_spec_TimelineMarker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimelineMarker_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimelineMarker, &type_spec_TimelineMarker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimelineMarker_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimelineMarkerCollection = py::register_python_type(module.get(), type_name_TimelineMarkerCollection, &type_spec_TimelineMarkerCollection, object_bases.get(), nullptr);
-    if (!state->type_TimelineMarkerCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimelineMarkerCollection, &type_spec_TimelineMarkerCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimelineMarkerCollection, &type_spec_TimelineMarkerCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimelineMarkerRoutedEventArgs = py::register_python_type(module.get(), type_name_TimelineMarkerRoutedEventArgs, &type_spec_TimelineMarkerRoutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TimelineMarkerRoutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimelineMarkerRoutedEventArgs, &type_spec_TimelineMarkerRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimelineMarkerRoutedEventArgs, &type_spec_TimelineMarkerRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Transform = py::register_python_type(module.get(), type_name_Transform, &type_spec_Transform, object_bases.get(), nullptr);
-    if (!state->type_Transform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Transform, &type_spec_Transform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Transform, &type_spec_Transform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TransformCollection = py::register_python_type(module.get(), type_name_TransformCollection, &type_spec_TransformCollection, object_bases.get(), nullptr);
-    if (!state->type_TransformCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TransformCollection, &type_spec_TransformCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TransformCollection, &type_spec_TransformCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21385,8 +21333,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_TransformGroup = py::register_python_type(module.get(), type_name_TransformGroup, &type_spec_TransformGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Meta.get()));
-    if (!state->type_TransformGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TransformGroup, &type_spec_TransformGroup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TransformGroup, &type_spec_TransformGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21397,14 +21348,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_TranslateTransform = py::register_python_type(module.get(), type_name_TranslateTransform, &type_spec_TranslateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Meta.get()));
-    if (!state->type_TranslateTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TranslateTransform, &type_spec_TranslateTransform, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TranslateTransform, &type_spec_TranslateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualTreeHelper = py::register_python_type(module.get(), type_name_VisualTreeHelper, &type_spec_VisualTreeHelper, object_bases.get(), nullptr);
-    if (!state->type_VisualTreeHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualTreeHelper, &type_spec_VisualTreeHelper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualTreeHelper, &type_spec_VisualTreeHelper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -21415,1588 +21372,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media(void) noexcept
         return nullptr;
     }
 
-    state->type_XamlCompositionBrushBase = py::register_python_type(module.get(), type_name_XamlCompositionBrushBase, &type_spec_XamlCompositionBrushBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Meta.get()));
-    if (!state->type_XamlCompositionBrushBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlCompositionBrushBase, &type_spec_XamlCompositionBrushBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlCompositionBrushBase, &type_spec_XamlCompositionBrushBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlLight = py::register_python_type(module.get(), type_name_XamlLight, &type_spec_XamlLight, object_bases.get(), nullptr);
-    if (!state->type_XamlLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlLight, &type_spec_XamlLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlLight, &type_spec_XamlLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Matrix = py::register_python_type(module.get(), type_name_Matrix, &type_spec_Matrix, nullptr, nullptr);
-    if (!state->type_Matrix)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix, &type_spec_Matrix, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix, &type_spec_Matrix, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::AcrylicBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AcrylicBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::AcrylicBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::ArcSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ArcSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::ArcSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::BezierSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BezierSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::BezierSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::BitmapCache>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapCache;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::BitmapCache is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Brush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Brush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Brush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::BrushCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BrushCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::BrushCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::CacheMode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CacheMode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::CacheMode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::CompositeTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositeTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::CompositeTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::CompositionTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::DoubleCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DoubleCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::DoubleCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::EllipseGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EllipseGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::EllipseGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::FontFamily>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FontFamily;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::FontFamily is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeneralTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GeneralTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Geometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Geometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Geometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GeometryCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeometryCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GeometryCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GeometryGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeometryGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GeometryGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GradientBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GradientBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GradientBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GradientStop>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GradientStop;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GradientStop is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::GradientStopCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GradientStopCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::GradientStopCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::ImageBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::ImageBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::ImageSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::ImageSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::LineGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::LineGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::LineSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LineSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::LineSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LinearGradientBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::LinearGradientBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoadedImageSourceLoadCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LoadedImageSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::LoadedImageSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix3DProjection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Matrix3DProjection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MatrixHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::MatrixHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::MatrixTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MatrixTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::MatrixTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaTransportControlsThumbnailRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PartialMediaFailureDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PathFigure>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathFigure;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PathFigure is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PathFigureCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathFigureCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PathFigureCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PathGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PathGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PathSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PathSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathSegmentCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PathSegmentCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PlaneProjection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaneProjection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PlaneProjection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PointCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PointCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PolyBezierSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PolyBezierSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PolyLineSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PolyLineSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PolyLineSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PolyQuadraticBezierSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Projection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Projection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Projection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuadraticBezierSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RateChangedRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RectangleGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RectangleGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RectangleGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RenderedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RenderedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RenderingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RenderingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevealBackgroundBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevealBorderBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RevealBorderBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RevealBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevealBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RevealBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::RotateTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RotateTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::RotateTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::ScaleTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScaleTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::ScaleTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Shadow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Shadow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Shadow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::SkewTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SkewTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::SkewTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::SolidColorBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SolidColorBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::SolidColorBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::ThemeShadow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ThemeShadow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::ThemeShadow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TileBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TileBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimelineMarker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TimelineMarker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimelineMarkerCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimelineMarkerRoutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Transform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Transform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Transform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TransformCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TransformCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TransformCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TransformGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TransformGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TransformGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::TranslateTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TranslateTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::TranslateTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualTreeHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::VisualTreeHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlCompositionBrushBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::XamlLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::XamlLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Matrix>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Matrix is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

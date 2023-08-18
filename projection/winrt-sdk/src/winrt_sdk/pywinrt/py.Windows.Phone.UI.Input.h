@@ -29,20 +29,23 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>
+    struct py_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.ui.input";
+        static constexpr const char* type_name = "BackPressedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>
+    struct py_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.ui.input";
+        static constexpr const char* type_name = "CameraEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::UI::Input::HardwareButtons>
+    struct py_type<winrt::Windows::Phone::UI::Input::HardwareButtons>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.ui.input";
+        static constexpr const char* type_name = "HardwareButtons";
     };
 }

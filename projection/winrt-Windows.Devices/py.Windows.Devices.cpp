@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::Devices
 {
-    struct module_state
-    {
-        PyTypeObject* type_LowLevelDevicesAggregateProvider;
-        PyTypeObject* type_LowLevelDevicesController;
-        PyTypeObject* type_ILowLevelDevicesAggregateProvider;
-    };
-
     // ----- LowLevelDevicesAggregateProvider class --------------------
     static constexpr const char* const type_name_LowLevelDevicesAggregateProvider = "LowLevelDevicesAggregateProvider";
 
@@ -533,48 +526,15 @@ namespace py::cpp::Windows::Devices
     PyDoc_STRVAR(module_doc, "Windows::Devices");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_LowLevelDevicesAggregateProvider);
-        Py_VISIT(state->type_LowLevelDevicesController);
-        Py_VISIT(state->type_ILowLevelDevicesAggregateProvider);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_LowLevelDevicesAggregateProvider);
-        Py_CLEAR(state->type_LowLevelDevicesController);
-        Py_CLEAR(state->type_ILowLevelDevicesAggregateProvider);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices
@@ -590,7 +550,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -603,11 +563,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_LowLevelDevicesAggregateProvider = py::register_python_type(module.get(), type_name_LowLevelDevicesAggregateProvider, &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr);
-    if (!state->type_LowLevelDevicesAggregateProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLevelDevicesAggregateProvider, &type_spec_LowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLevelDevicesAggregateProvider, &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -618,87 +578,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices(void) noexcept
         return nullptr;
     }
 
-    state->type_LowLevelDevicesController = py::register_python_type(module.get(), type_name_LowLevelDevicesController, &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get()));
-    if (!state->type_LowLevelDevicesController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLevelDevicesController, &type_spec_LowLevelDevicesController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLevelDevicesController, &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILowLevelDevicesAggregateProvider = py::register_python_type(module.get(), type_name_ILowLevelDevicesAggregateProvider, &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr);
-    if (!state->type_ILowLevelDevicesAggregateProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILowLevelDevicesAggregateProvider, &type_spec_ILowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILowLevelDevicesAggregateProvider, &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLevelDevicesAggregateProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::LowLevelDevicesAggregateProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::LowLevelDevicesController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLevelDevicesController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::LowLevelDevicesController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILowLevelDevicesAggregateProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::ILowLevelDevicesAggregateProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

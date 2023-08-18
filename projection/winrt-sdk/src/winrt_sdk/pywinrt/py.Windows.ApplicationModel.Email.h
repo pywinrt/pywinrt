@@ -384,200 +384,233 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailAttachment>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailAttachment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailAttachment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailConversation>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailConversation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailConversationBatch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailConversationReader>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversationReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailConversationReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailFolder>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailFolder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailFolder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailIrmInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailIrmTemplate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailItemCounts>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailItemCounts>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailItemCounts";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailbox>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailbox>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailbox";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxAction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxAutoReply";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxAutoReplySettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxChangeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxChangeTracker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxChangedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxCreateFolderResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxPolicies";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMailboxSyncManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailManager>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMeetingInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMessage>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMessageBatch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailMessageReader>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailMessageReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailQueryOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailQueryTextSearch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailRecipient>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailRecipient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailRecipient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailRecipientResolutionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailStore>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
+        static constexpr const char* type_name = "EmailStoreNotificationTriggerDetails";
     };
 }

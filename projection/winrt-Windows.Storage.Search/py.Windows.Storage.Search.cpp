@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::Storage::Search
 {
-    struct module_state
-    {
-        PyTypeObject* type_ContentIndexer;
-        PyTypeObject* type_ContentIndexerQuery;
-        PyTypeObject* type_IndexableContent;
-        PyTypeObject* type_QueryOptions;
-        PyTypeObject* type_SortEntryVector;
-        PyTypeObject* type_StorageFileQueryResult;
-        PyTypeObject* type_StorageFolderQueryResult;
-        PyTypeObject* type_StorageItemQueryResult;
-        PyTypeObject* type_StorageLibraryChangeTrackerTriggerDetails;
-        PyTypeObject* type_StorageLibraryContentChangedTriggerDetails;
-        PyTypeObject* type_ValueAndLanguage;
-        PyTypeObject* type_IIndexableContent;
-        PyTypeObject* type_IStorageFolderQueryOperations;
-        PyTypeObject* type_IStorageQueryResultBase;
-        PyTypeObject* type_SortEntry;
-    };
-
     // ----- ContentIndexer class --------------------
     static constexpr const char* const type_name_ContentIndexer = "ContentIndexer";
 
@@ -4959,72 +4940,15 @@ namespace py::cpp::Windows::Storage::Search
     PyDoc_STRVAR(module_doc, "Windows::Storage::Search");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ContentIndexer);
-        Py_VISIT(state->type_ContentIndexerQuery);
-        Py_VISIT(state->type_IndexableContent);
-        Py_VISIT(state->type_QueryOptions);
-        Py_VISIT(state->type_SortEntryVector);
-        Py_VISIT(state->type_StorageFileQueryResult);
-        Py_VISIT(state->type_StorageFolderQueryResult);
-        Py_VISIT(state->type_StorageItemQueryResult);
-        Py_VISIT(state->type_StorageLibraryChangeTrackerTriggerDetails);
-        Py_VISIT(state->type_StorageLibraryContentChangedTriggerDetails);
-        Py_VISIT(state->type_ValueAndLanguage);
-        Py_VISIT(state->type_IIndexableContent);
-        Py_VISIT(state->type_IStorageFolderQueryOperations);
-        Py_VISIT(state->type_IStorageQueryResultBase);
-        Py_VISIT(state->type_SortEntry);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ContentIndexer);
-        Py_CLEAR(state->type_ContentIndexerQuery);
-        Py_CLEAR(state->type_IndexableContent);
-        Py_CLEAR(state->type_QueryOptions);
-        Py_CLEAR(state->type_SortEntryVector);
-        Py_CLEAR(state->type_StorageFileQueryResult);
-        Py_CLEAR(state->type_StorageFolderQueryResult);
-        Py_CLEAR(state->type_StorageItemQueryResult);
-        Py_CLEAR(state->type_StorageLibraryChangeTrackerTriggerDetails);
-        Py_CLEAR(state->type_StorageLibraryContentChangedTriggerDetails);
-        Py_CLEAR(state->type_ValueAndLanguage);
-        Py_CLEAR(state->type_IIndexableContent);
-        Py_CLEAR(state->type_IStorageFolderQueryOperations);
-        Py_CLEAR(state->type_IStorageQueryResultBase);
-        Py_CLEAR(state->type_SortEntry);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Storage_Search",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Storage::Search
@@ -5040,7 +4964,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Search(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5053,444 +4977,141 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Search(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ContentIndexer = py::register_python_type(module.get(), type_name_ContentIndexer, &type_spec_ContentIndexer, object_bases.get(), nullptr);
-    if (!state->type_ContentIndexer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentIndexer, &type_spec_ContentIndexer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentIndexer, &type_spec_ContentIndexer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContentIndexerQuery = py::register_python_type(module.get(), type_name_ContentIndexerQuery, &type_spec_ContentIndexerQuery, object_bases.get(), nullptr);
-    if (!state->type_ContentIndexerQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentIndexerQuery, &type_spec_ContentIndexerQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentIndexerQuery, &type_spec_ContentIndexerQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IndexableContent = py::register_python_type(module.get(), type_name_IndexableContent, &type_spec_IndexableContent, object_bases.get(), nullptr);
-    if (!state->type_IndexableContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IndexableContent, &type_spec_IndexableContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IndexableContent, &type_spec_IndexableContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_QueryOptions = py::register_python_type(module.get(), type_name_QueryOptions, &type_spec_QueryOptions, object_bases.get(), nullptr);
-    if (!state->type_QueryOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QueryOptions, &type_spec_QueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QueryOptions, &type_spec_QueryOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SortEntryVector = py::register_python_type(module.get(), type_name_SortEntryVector, &type_spec_SortEntryVector, object_bases.get(), nullptr);
-    if (!state->type_SortEntryVector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SortEntryVector, &type_spec_SortEntryVector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SortEntryVector, &type_spec_SortEntryVector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageFileQueryResult = py::register_python_type(module.get(), type_name_StorageFileQueryResult, &type_spec_StorageFileQueryResult, object_bases.get(), nullptr);
-    if (!state->type_StorageFileQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageFileQueryResult, &type_spec_StorageFileQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageFileQueryResult, &type_spec_StorageFileQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageFolderQueryResult = py::register_python_type(module.get(), type_name_StorageFolderQueryResult, &type_spec_StorageFolderQueryResult, object_bases.get(), nullptr);
-    if (!state->type_StorageFolderQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageFolderQueryResult, &type_spec_StorageFolderQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageFolderQueryResult, &type_spec_StorageFolderQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageItemQueryResult = py::register_python_type(module.get(), type_name_StorageItemQueryResult, &type_spec_StorageItemQueryResult, object_bases.get(), nullptr);
-    if (!state->type_StorageItemQueryResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageItemQueryResult, &type_spec_StorageItemQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageItemQueryResult, &type_spec_StorageItemQueryResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageLibraryChangeTrackerTriggerDetails = py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTriggerDetails, &type_spec_StorageLibraryChangeTrackerTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_StorageLibraryChangeTrackerTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTriggerDetails, &type_spec_StorageLibraryChangeTrackerTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTriggerDetails, &type_spec_StorageLibraryChangeTrackerTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageLibraryContentChangedTriggerDetails = py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTriggerDetails, &type_spec_StorageLibraryContentChangedTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_StorageLibraryContentChangedTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTriggerDetails, &type_spec_StorageLibraryContentChangedTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTriggerDetails, &type_spec_StorageLibraryContentChangedTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ValueAndLanguage = py::register_python_type(module.get(), type_name_ValueAndLanguage, &type_spec_ValueAndLanguage, object_bases.get(), nullptr);
-    if (!state->type_ValueAndLanguage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ValueAndLanguage, &type_spec_ValueAndLanguage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ValueAndLanguage, &type_spec_ValueAndLanguage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IIndexableContent = py::register_python_type(module.get(), type_name_IIndexableContent, &type_spec_IIndexableContent, object_bases.get(), nullptr);
-    if (!state->type_IIndexableContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IIndexableContent, &type_spec_IIndexableContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IIndexableContent, &type_spec_IIndexableContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageFolderQueryOperations = py::register_python_type(module.get(), type_name_IStorageFolderQueryOperations, &type_spec_IStorageFolderQueryOperations, object_bases.get(), nullptr);
-    if (!state->type_IStorageFolderQueryOperations)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageFolderQueryOperations, &type_spec_IStorageFolderQueryOperations, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageFolderQueryOperations, &type_spec_IStorageFolderQueryOperations, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStorageQueryResultBase = py::register_python_type(module.get(), type_name_IStorageQueryResultBase, &type_spec_IStorageQueryResultBase, object_bases.get(), nullptr);
-    if (!state->type_IStorageQueryResultBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStorageQueryResultBase, &type_spec_IStorageQueryResultBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStorageQueryResultBase, &type_spec_IStorageQueryResultBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SortEntry = py::register_python_type(module.get(), type_name_SortEntry, &type_spec_SortEntry, nullptr, nullptr);
-    if (!state->type_SortEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SortEntry, &type_spec_SortEntry, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SortEntry, &type_spec_SortEntry, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::ContentIndexer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentIndexer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::ContentIndexer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::ContentIndexerQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentIndexerQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::ContentIndexerQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::IndexableContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IndexableContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IndexableContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::QueryOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QueryOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::QueryOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::SortEntryVector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SortEntryVector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::SortEntryVector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::StorageFileQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageFileQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::StorageFileQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageFolderQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::StorageFolderQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::StorageItemQueryResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageItemQueryResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::StorageItemQueryResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageLibraryChangeTrackerTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageLibraryContentChangedTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::ValueAndLanguage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ValueAndLanguage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::ValueAndLanguage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::IIndexableContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IIndexableContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IIndexableContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageFolderQueryOperations;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IStorageFolderQueryOperations is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStorageQueryResultBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::IStorageQueryResultBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Storage::Search::SortEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Storage::Search;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Storage::Search");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SortEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Storage::Search::SortEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

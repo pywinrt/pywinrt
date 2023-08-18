@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Services::Maps::Guidance
 {
-    struct module_state
-    {
-        PyTypeObject* type_GuidanceAudioNotificationRequestedEventArgs;
-        PyTypeObject* type_GuidanceLaneInfo;
-        PyTypeObject* type_GuidanceManeuver;
-        PyTypeObject* type_GuidanceMapMatchedCoordinate;
-        PyTypeObject* type_GuidanceNavigator;
-        PyTypeObject* type_GuidanceReroutedEventArgs;
-        PyTypeObject* type_GuidanceRoadSegment;
-        PyTypeObject* type_GuidanceRoadSignpost;
-        PyTypeObject* type_GuidanceRoute;
-        PyTypeObject* type_GuidanceTelemetryCollector;
-        PyTypeObject* type_GuidanceUpdatedEventArgs;
-    };
-
     // ----- GuidanceAudioNotificationRequestedEventArgs class --------------------
     static constexpr const char* const type_name_GuidanceAudioNotificationRequestedEventArgs = "GuidanceAudioNotificationRequestedEventArgs";
 
@@ -3194,64 +3179,15 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     PyDoc_STRVAR(module_doc, "Windows::Services::Maps::Guidance");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GuidanceAudioNotificationRequestedEventArgs);
-        Py_VISIT(state->type_GuidanceLaneInfo);
-        Py_VISIT(state->type_GuidanceManeuver);
-        Py_VISIT(state->type_GuidanceMapMatchedCoordinate);
-        Py_VISIT(state->type_GuidanceNavigator);
-        Py_VISIT(state->type_GuidanceReroutedEventArgs);
-        Py_VISIT(state->type_GuidanceRoadSegment);
-        Py_VISIT(state->type_GuidanceRoadSignpost);
-        Py_VISIT(state->type_GuidanceRoute);
-        Py_VISIT(state->type_GuidanceTelemetryCollector);
-        Py_VISIT(state->type_GuidanceUpdatedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GuidanceAudioNotificationRequestedEventArgs);
-        Py_CLEAR(state->type_GuidanceLaneInfo);
-        Py_CLEAR(state->type_GuidanceManeuver);
-        Py_CLEAR(state->type_GuidanceMapMatchedCoordinate);
-        Py_CLEAR(state->type_GuidanceNavigator);
-        Py_CLEAR(state->type_GuidanceReroutedEventArgs);
-        Py_CLEAR(state->type_GuidanceRoadSegment);
-        Py_CLEAR(state->type_GuidanceRoadSignpost);
-        Py_CLEAR(state->type_GuidanceRoute);
-        Py_CLEAR(state->type_GuidanceTelemetryCollector);
-        Py_CLEAR(state->type_GuidanceUpdatedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_Maps_Guidance",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::Maps::Guidance
@@ -3267,7 +3203,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_Guidance(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3280,29 +3216,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_Guidance(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GuidanceAudioNotificationRequestedEventArgs = py::register_python_type(module.get(), type_name_GuidanceAudioNotificationRequestedEventArgs, &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GuidanceAudioNotificationRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceAudioNotificationRequestedEventArgs, &type_spec_GuidanceAudioNotificationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceAudioNotificationRequestedEventArgs, &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceLaneInfo = py::register_python_type(module.get(), type_name_GuidanceLaneInfo, &type_spec_GuidanceLaneInfo, object_bases.get(), nullptr);
-    if (!state->type_GuidanceLaneInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceLaneInfo, &type_spec_GuidanceLaneInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceLaneInfo, &type_spec_GuidanceLaneInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceManeuver = py::register_python_type(module.get(), type_name_GuidanceManeuver, &type_spec_GuidanceManeuver, object_bases.get(), nullptr);
-    if (!state->type_GuidanceManeuver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceManeuver, &type_spec_GuidanceManeuver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceManeuver, &type_spec_GuidanceManeuver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceMapMatchedCoordinate = py::register_python_type(module.get(), type_name_GuidanceMapMatchedCoordinate, &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), nullptr);
-    if (!state->type_GuidanceMapMatchedCoordinate)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceMapMatchedCoordinate, &type_spec_GuidanceMapMatchedCoordinate, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceMapMatchedCoordinate, &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3313,301 +3258,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_Guidance(void) noexcept
         return nullptr;
     }
 
-    state->type_GuidanceNavigator = py::register_python_type(module.get(), type_name_GuidanceNavigator, &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Meta.get()));
-    if (!state->type_GuidanceNavigator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceNavigator, &type_spec_GuidanceNavigator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceNavigator, &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceReroutedEventArgs = py::register_python_type(module.get(), type_name_GuidanceReroutedEventArgs, &type_spec_GuidanceReroutedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GuidanceReroutedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceReroutedEventArgs, &type_spec_GuidanceReroutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceReroutedEventArgs, &type_spec_GuidanceReroutedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceRoadSegment = py::register_python_type(module.get(), type_name_GuidanceRoadSegment, &type_spec_GuidanceRoadSegment, object_bases.get(), nullptr);
-    if (!state->type_GuidanceRoadSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceRoadSegment, &type_spec_GuidanceRoadSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceRoadSegment, &type_spec_GuidanceRoadSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceRoadSignpost = py::register_python_type(module.get(), type_name_GuidanceRoadSignpost, &type_spec_GuidanceRoadSignpost, object_bases.get(), nullptr);
-    if (!state->type_GuidanceRoadSignpost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceRoadSignpost, &type_spec_GuidanceRoadSignpost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceRoadSignpost, &type_spec_GuidanceRoadSignpost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceRoute = py::register_python_type(module.get(), type_name_GuidanceRoute, &type_spec_GuidanceRoute, object_bases.get(), nullptr);
-    if (!state->type_GuidanceRoute)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceRoute, &type_spec_GuidanceRoute, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceRoute, &type_spec_GuidanceRoute, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceTelemetryCollector = py::register_python_type(module.get(), type_name_GuidanceTelemetryCollector, &type_spec_GuidanceTelemetryCollector, object_bases.get(), nullptr);
-    if (!state->type_GuidanceTelemetryCollector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceTelemetryCollector, &type_spec_GuidanceTelemetryCollector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceTelemetryCollector, &type_spec_GuidanceTelemetryCollector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GuidanceUpdatedEventArgs = py::register_python_type(module.get(), type_name_GuidanceUpdatedEventArgs, &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GuidanceUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GuidanceUpdatedEventArgs, &type_spec_GuidanceUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GuidanceUpdatedEventArgs, &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceAudioNotificationRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceLaneInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceManeuver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceManeuver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceMapMatchedCoordinate;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceNavigator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceNavigator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceReroutedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceRoadSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceRoadSignpost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceRoute;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceRoute is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceTelemetryCollector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps::Guidance;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps::Guidance");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GuidanceUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

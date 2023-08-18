@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::Phone::UI::Input
 {
-    struct module_state
-    {
-        PyTypeObject* type_BackPressedEventArgs;
-        PyTypeObject* type_CameraEventArgs;
-        PyTypeObject* type_HardwareButtons;
-    };
-
     // ----- BackPressedEventArgs class --------------------
     static constexpr const char* const type_name_BackPressedEventArgs = "BackPressedEventArgs";
 
@@ -429,48 +422,15 @@ namespace py::cpp::Windows::Phone::UI::Input
     PyDoc_STRVAR(module_doc, "Windows::Phone::UI::Input");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BackPressedEventArgs);
-        Py_VISIT(state->type_CameraEventArgs);
-        Py_VISIT(state->type_HardwareButtons);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BackPressedEventArgs);
-        Py_CLEAR(state->type_CameraEventArgs);
-        Py_CLEAR(state->type_HardwareButtons);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Phone_UI_Input",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Phone::UI::Input
@@ -486,7 +446,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_UI_Input(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -499,96 +459,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_UI_Input(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BackPressedEventArgs = py::register_python_type(module.get(), type_name_BackPressedEventArgs, &type_spec_BackPressedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackPressedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackPressedEventArgs, &type_spec_BackPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackPressedEventArgs, &type_spec_BackPressedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraEventArgs = py::register_python_type(module.get(), type_name_CameraEventArgs, &type_spec_CameraEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CameraEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraEventArgs, &type_spec_CameraEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraEventArgs, &type_spec_CameraEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HardwareButtons = py::register_python_type(module.get(), type_name_HardwareButtons, &type_spec_HardwareButtons, object_bases.get(), nullptr);
-    if (!state->type_HardwareButtons)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HardwareButtons, &type_spec_HardwareButtons, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HardwareButtons, &type_spec_HardwareButtons, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackPressedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::UI::Input::BackPressedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::UI::Input::CameraEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::UI::Input::HardwareButtons>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::UI::Input;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::UI::Input");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HardwareButtons;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::UI::Input::HardwareButtons is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

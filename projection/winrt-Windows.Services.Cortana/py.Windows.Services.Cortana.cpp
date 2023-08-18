@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Services::Cortana
 {
-    struct module_state
-    {
-        PyTypeObject* type_CortanaActionableInsights;
-        PyTypeObject* type_CortanaActionableInsightsOptions;
-        PyTypeObject* type_CortanaPermissionsManager;
-        PyTypeObject* type_CortanaSettings;
-    };
-
     // ----- CortanaActionableInsights class --------------------
     static constexpr const char* const type_name_CortanaActionableInsights = "CortanaActionableInsights";
 
@@ -992,50 +984,15 @@ namespace py::cpp::Windows::Services::Cortana
     PyDoc_STRVAR(module_doc, "Windows::Services::Cortana");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CortanaActionableInsights);
-        Py_VISIT(state->type_CortanaActionableInsightsOptions);
-        Py_VISIT(state->type_CortanaPermissionsManager);
-        Py_VISIT(state->type_CortanaSettings);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CortanaActionableInsights);
-        Py_CLEAR(state->type_CortanaActionableInsightsOptions);
-        Py_CLEAR(state->type_CortanaPermissionsManager);
-        Py_CLEAR(state->type_CortanaSettings);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_Cortana",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::Cortana
@@ -1051,7 +1008,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Cortana(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1064,125 +1021,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Cortana(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CortanaActionableInsights = py::register_python_type(module.get(), type_name_CortanaActionableInsights, &type_spec_CortanaActionableInsights, object_bases.get(), nullptr);
-    if (!state->type_CortanaActionableInsights)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CortanaActionableInsights, &type_spec_CortanaActionableInsights, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CortanaActionableInsights, &type_spec_CortanaActionableInsights, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CortanaActionableInsightsOptions = py::register_python_type(module.get(), type_name_CortanaActionableInsightsOptions, &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr);
-    if (!state->type_CortanaActionableInsightsOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CortanaActionableInsightsOptions, &type_spec_CortanaActionableInsightsOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CortanaActionableInsightsOptions, &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CortanaPermissionsManager = py::register_python_type(module.get(), type_name_CortanaPermissionsManager, &type_spec_CortanaPermissionsManager, object_bases.get(), nullptr);
-    if (!state->type_CortanaPermissionsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CortanaPermissionsManager, &type_spec_CortanaPermissionsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CortanaPermissionsManager, &type_spec_CortanaPermissionsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CortanaSettings = py::register_python_type(module.get(), type_name_CortanaSettings, &type_spec_CortanaSettings, object_bases.get(), nullptr);
-    if (!state->type_CortanaSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CortanaSettings, &type_spec_CortanaSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CortanaSettings, &type_spec_CortanaSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Cortana;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Cortana");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CortanaActionableInsights;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Cortana::CortanaActionableInsights is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Cortana;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Cortana");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CortanaActionableInsightsOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Cortana;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Cortana");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CortanaPermissionsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Cortana::CortanaPermissionsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Cortana::CortanaSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Cortana;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Cortana");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CortanaSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Cortana::CortanaSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

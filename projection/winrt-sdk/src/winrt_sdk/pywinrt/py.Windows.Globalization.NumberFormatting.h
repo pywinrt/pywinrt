@@ -66,92 +66,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "CurrencyFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "DecimalFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "IncrementNumberRounder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "NumeralSystemTranslator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "PercentFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "PermilleFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "SignificantDigitsNumberRounder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberFormatter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberFormatter2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberFormatterOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberParser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberRounder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "INumberRounderOption";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "ISignedZeroOption";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
+    struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
+        static constexpr const char* type_name = "ISignificantDigitsOption";
     };
 }

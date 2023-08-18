@@ -100,86 +100,100 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentAction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentAvailabilityChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentFile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentImage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentItemState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentSubscription";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentSubscriptionOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>
+    struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
+        static constexpr const char* type_name = "TargetedContentValue";
     };
 }

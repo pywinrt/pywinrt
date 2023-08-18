@@ -215,45 +215,52 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>
+    struct py_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "ConnectionRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::PeerFinder>
+    struct py_type<winrt::Windows::Networking::Proximity::PeerFinder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerFinder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::PeerInformation>
+    struct py_type<winrt::Windows::Networking::Proximity::PeerInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::PeerWatcher>
+    struct py_type<winrt::Windows::Networking::Proximity::PeerWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "PeerWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::ProximityDevice>
+    struct py_type<winrt::Windows::Networking::Proximity::ProximityDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "ProximityDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::ProximityMessage>
+    struct py_type<winrt::Windows::Networking::Proximity::ProximityMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "ProximityMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>
+    struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.proximity";
+        static constexpr const char* type_name = "TriggeredConnectionStateChangedEventArgs";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Networking::Proximity::DeviceArrivedEventHandler>

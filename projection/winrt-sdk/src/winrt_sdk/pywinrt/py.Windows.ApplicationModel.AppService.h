@@ -95,56 +95,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceCatalog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceRequestReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceResponse";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "AppServiceTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>
+    struct py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
+        static constexpr const char* type_name = "StatelessAppServiceResponse";
     };
 }

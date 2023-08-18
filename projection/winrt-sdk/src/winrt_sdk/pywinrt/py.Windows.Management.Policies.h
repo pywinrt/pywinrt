@@ -48,14 +48,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Policies::NamedPolicy>
+    struct py_type<winrt::Windows::Management::Policies::NamedPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.policies";
+        static constexpr const char* type_name = "NamedPolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Policies::NamedPolicyData>
+    struct py_type<winrt::Windows::Management::Policies::NamedPolicyData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.policies";
+        static constexpr const char* type_name = "NamedPolicyData";
     };
 }

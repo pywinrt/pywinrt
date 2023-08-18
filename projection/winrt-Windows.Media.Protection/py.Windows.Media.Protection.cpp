@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::Media::Protection
 {
-    struct module_state
-    {
-        PyTypeObject* type_ComponentLoadFailedEventArgs;
-        PyTypeObject* type_ComponentRenewal;
-        PyTypeObject* type_HdcpSession;
-        PyTypeObject* type_MediaProtectionManager;
-        PyTypeObject* type_MediaProtectionPMPServer;
-        PyTypeObject* type_MediaProtectionServiceCompletion;
-        PyTypeObject* type_ProtectionCapabilities;
-        PyTypeObject* type_RevocationAndRenewalInformation;
-        PyTypeObject* type_RevocationAndRenewalItem;
-        PyTypeObject* type_ServiceRequestedEventArgs;
-        PyTypeObject* type_IMediaProtectionServiceRequest;
-    };
-
     // ----- ComponentLoadFailedEventArgs class --------------------
     static constexpr const char* const type_name_ComponentLoadFailedEventArgs = "ComponentLoadFailedEventArgs";
 
@@ -1628,64 +1613,15 @@ namespace py::cpp::Windows::Media::Protection
     PyDoc_STRVAR(module_doc, "Windows::Media::Protection");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ComponentLoadFailedEventArgs);
-        Py_VISIT(state->type_ComponentRenewal);
-        Py_VISIT(state->type_HdcpSession);
-        Py_VISIT(state->type_MediaProtectionManager);
-        Py_VISIT(state->type_MediaProtectionPMPServer);
-        Py_VISIT(state->type_MediaProtectionServiceCompletion);
-        Py_VISIT(state->type_ProtectionCapabilities);
-        Py_VISIT(state->type_RevocationAndRenewalInformation);
-        Py_VISIT(state->type_RevocationAndRenewalItem);
-        Py_VISIT(state->type_ServiceRequestedEventArgs);
-        Py_VISIT(state->type_IMediaProtectionServiceRequest);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ComponentLoadFailedEventArgs);
-        Py_CLEAR(state->type_ComponentRenewal);
-        Py_CLEAR(state->type_HdcpSession);
-        Py_CLEAR(state->type_MediaProtectionManager);
-        Py_CLEAR(state->type_MediaProtectionPMPServer);
-        Py_CLEAR(state->type_MediaProtectionServiceCompletion);
-        Py_CLEAR(state->type_ProtectionCapabilities);
-        Py_CLEAR(state->type_RevocationAndRenewalInformation);
-        Py_CLEAR(state->type_RevocationAndRenewalItem);
-        Py_CLEAR(state->type_ServiceRequestedEventArgs);
-        Py_CLEAR(state->type_IMediaProtectionServiceRequest);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Protection",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Protection
@@ -1701,7 +1637,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1714,328 +1650,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ComponentLoadFailedEventArgs = py::register_python_type(module.get(), type_name_ComponentLoadFailedEventArgs, &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ComponentLoadFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComponentLoadFailedEventArgs, &type_spec_ComponentLoadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComponentLoadFailedEventArgs, &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ComponentRenewal = py::register_python_type(module.get(), type_name_ComponentRenewal, &type_spec_ComponentRenewal, object_bases.get(), nullptr);
-    if (!state->type_ComponentRenewal)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ComponentRenewal, &type_spec_ComponentRenewal, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ComponentRenewal, &type_spec_ComponentRenewal, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HdcpSession = py::register_python_type(module.get(), type_name_HdcpSession, &type_spec_HdcpSession, object_bases.get(), nullptr);
-    if (!state->type_HdcpSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HdcpSession, &type_spec_HdcpSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HdcpSession, &type_spec_HdcpSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaProtectionManager = py::register_python_type(module.get(), type_name_MediaProtectionManager, &type_spec_MediaProtectionManager, object_bases.get(), nullptr);
-    if (!state->type_MediaProtectionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaProtectionManager, &type_spec_MediaProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaProtectionManager, &type_spec_MediaProtectionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaProtectionPMPServer = py::register_python_type(module.get(), type_name_MediaProtectionPMPServer, &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr);
-    if (!state->type_MediaProtectionPMPServer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaProtectionPMPServer, &type_spec_MediaProtectionPMPServer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaProtectionPMPServer, &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaProtectionServiceCompletion = py::register_python_type(module.get(), type_name_MediaProtectionServiceCompletion, &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr);
-    if (!state->type_MediaProtectionServiceCompletion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaProtectionServiceCompletion, &type_spec_MediaProtectionServiceCompletion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaProtectionServiceCompletion, &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtectionCapabilities = py::register_python_type(module.get(), type_name_ProtectionCapabilities, &type_spec_ProtectionCapabilities, object_bases.get(), nullptr);
-    if (!state->type_ProtectionCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtectionCapabilities, &type_spec_ProtectionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtectionCapabilities, &type_spec_ProtectionCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RevocationAndRenewalInformation = py::register_python_type(module.get(), type_name_RevocationAndRenewalInformation, &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr);
-    if (!state->type_RevocationAndRenewalInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalInformation, &type_spec_RevocationAndRenewalInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalInformation, &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RevocationAndRenewalItem = py::register_python_type(module.get(), type_name_RevocationAndRenewalItem, &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr);
-    if (!state->type_RevocationAndRenewalItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalItem, &type_spec_RevocationAndRenewalItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalItem, &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ServiceRequestedEventArgs = py::register_python_type(module.get(), type_name_ServiceRequestedEventArgs, &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ServiceRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ServiceRequestedEventArgs, &type_spec_ServiceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ServiceRequestedEventArgs, &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaProtectionServiceRequest = py::register_python_type(module.get(), type_name_IMediaProtectionServiceRequest, &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr);
-    if (!state->type_IMediaProtectionServiceRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaProtectionServiceRequest, &type_spec_IMediaProtectionServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaProtectionServiceRequest, &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComponentLoadFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::ComponentRenewal>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ComponentRenewal;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::ComponentRenewal is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::HdcpSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdcpSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::HdcpSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::MediaProtectionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaProtectionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::MediaProtectionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::MediaProtectionPMPServer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaProtectionPMPServer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::MediaProtectionPMPServer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaProtectionServiceCompletion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::MediaProtectionServiceCompletion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::ProtectionCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtectionCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::ProtectionCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevocationAndRenewalInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::RevocationAndRenewalInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RevocationAndRenewalItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::RevocationAndRenewalItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ServiceRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::ServiceRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Protection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Protection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaProtectionServiceRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Protection::IMediaProtectionServiceRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

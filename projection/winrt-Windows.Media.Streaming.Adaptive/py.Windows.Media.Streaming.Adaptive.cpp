@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::Media::Streaming::Adaptive
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdaptiveMediaSource;
-        PyTypeObject* type_AdaptiveMediaSourceAdvancedSettings;
-        PyTypeObject* type_AdaptiveMediaSourceCorrelatedTimes;
-        PyTypeObject* type_AdaptiveMediaSourceCreationResult;
-        PyTypeObject* type_AdaptiveMediaSourceDiagnosticAvailableEventArgs;
-        PyTypeObject* type_AdaptiveMediaSourceDiagnostics;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadCompletedEventArgs;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadFailedEventArgs;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadRequestedDeferral;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadRequestedEventArgs;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadResult;
-        PyTypeObject* type_AdaptiveMediaSourceDownloadStatistics;
-        PyTypeObject* type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
-    };
-
     // ----- AdaptiveMediaSource class --------------------
     static constexpr const char* const type_name_AdaptiveMediaSource = "AdaptiveMediaSource";
 
@@ -3782,70 +3764,15 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     PyDoc_STRVAR(module_doc, "Windows::Media::Streaming::Adaptive");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdaptiveMediaSource);
-        Py_VISIT(state->type_AdaptiveMediaSourceAdvancedSettings);
-        Py_VISIT(state->type_AdaptiveMediaSourceCorrelatedTimes);
-        Py_VISIT(state->type_AdaptiveMediaSourceCreationResult);
-        Py_VISIT(state->type_AdaptiveMediaSourceDiagnosticAvailableEventArgs);
-        Py_VISIT(state->type_AdaptiveMediaSourceDiagnostics);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadCompletedEventArgs);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadFailedEventArgs);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadRequestedDeferral);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadRequestedEventArgs);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadResult);
-        Py_VISIT(state->type_AdaptiveMediaSourceDownloadStatistics);
-        Py_VISIT(state->type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdaptiveMediaSource);
-        Py_CLEAR(state->type_AdaptiveMediaSourceAdvancedSettings);
-        Py_CLEAR(state->type_AdaptiveMediaSourceCorrelatedTimes);
-        Py_CLEAR(state->type_AdaptiveMediaSourceCreationResult);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDiagnosticAvailableEventArgs);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDiagnostics);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadCompletedEventArgs);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadFailedEventArgs);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadRequestedDeferral);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadRequestedEventArgs);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadResult);
-        Py_CLEAR(state->type_AdaptiveMediaSourceDownloadStatistics);
-        Py_CLEAR(state->type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Streaming_Adaptive",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Streaming::Adaptive
@@ -3861,7 +3788,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Streaming_Adaptive(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3874,415 +3801,132 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Streaming_Adaptive(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdaptiveMediaSource = py::register_python_type(module.get(), type_name_AdaptiveMediaSource, &type_spec_AdaptiveMediaSource, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSource, &type_spec_AdaptiveMediaSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSource, &type_spec_AdaptiveMediaSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceAdvancedSettings = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceAdvancedSettings, &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceAdvancedSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceAdvancedSettings, &type_spec_AdaptiveMediaSourceAdvancedSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceAdvancedSettings, &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceCorrelatedTimes = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCorrelatedTimes, &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceCorrelatedTimes)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCorrelatedTimes, &type_spec_AdaptiveMediaSourceCorrelatedTimes, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCorrelatedTimes, &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceCreationResult = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCreationResult, &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceCreationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCreationResult, &type_spec_AdaptiveMediaSourceCreationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCreationResult, &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDiagnosticAvailableEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs, &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDiagnosticAvailableEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs, &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs, &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDiagnostics = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnostics, &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDiagnostics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnostics, &type_spec_AdaptiveMediaSourceDiagnostics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnostics, &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadCompletedEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadCompletedEventArgs, &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadCompletedEventArgs, &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadCompletedEventArgs, &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadFailedEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadFailedEventArgs, &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadFailedEventArgs, &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadFailedEventArgs, &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadRequestedDeferral = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedDeferral, &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadRequestedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedDeferral, &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedDeferral, &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadRequestedEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedEventArgs, &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedEventArgs, &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedEventArgs, &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadResult = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadResult, &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadResult, &type_spec_AdaptiveMediaSourceDownloadResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadResult, &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourceDownloadStatistics = py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadStatistics, &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourceDownloadStatistics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadStatistics, &type_spec_AdaptiveMediaSourceDownloadStatistics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadStatistics, &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = py::register_python_type(module.get(), type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceAdvancedSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceCorrelatedTimes;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceCreationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDiagnosticAvailableEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDiagnostics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadBitrateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadRequestedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourceDownloadStatistics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Streaming::Adaptive;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Streaming::Adaptive");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

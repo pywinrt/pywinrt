@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>
+    struct py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.preview";
+        static constexpr const char* type_name = "SpatialGraphInteropFrameOfReferencePreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>
+    struct py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.perception.spatial.preview";
+        static constexpr const char* type_name = "SpatialGraphInteropPreview";
     };
 }

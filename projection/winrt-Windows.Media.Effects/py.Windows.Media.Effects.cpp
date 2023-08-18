@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::Media::Effects
 {
-    struct module_state
-    {
-        PyTypeObject* type_AudioCaptureEffectsManager;
-        PyTypeObject* type_AudioEffect;
-        PyTypeObject* type_AudioEffectDefinition;
-        PyTypeObject* type_AudioEffectsManager;
-        PyTypeObject* type_AudioRenderEffectsManager;
-        PyTypeObject* type_CompositeVideoFrameContext;
-        PyTypeObject* type_ProcessAudioFrameContext;
-        PyTypeObject* type_ProcessVideoFrameContext;
-        PyTypeObject* type_SlowMotionEffectDefinition;
-        PyTypeObject* type_VideoCompositorDefinition;
-        PyTypeObject* type_VideoEffectDefinition;
-        PyTypeObject* type_VideoTransformEffectDefinition;
-        PyTypeObject* type_VideoTransformSphericalProjection;
-        PyTypeObject* type_IAudioEffectDefinition;
-        PyTypeObject* type_IBasicAudioEffect;
-        PyTypeObject* type_IBasicVideoEffect;
-        PyTypeObject* type_IVideoCompositor;
-        PyTypeObject* type_IVideoCompositorDefinition;
-        PyTypeObject* type_IVideoEffectDefinition;
-    };
-
     // ----- AudioCaptureEffectsManager class --------------------
     static constexpr const char* const type_name_AudioCaptureEffectsManager = "AudioCaptureEffectsManager";
 
@@ -3656,80 +3633,15 @@ namespace py::cpp::Windows::Media::Effects
     PyDoc_STRVAR(module_doc, "Windows::Media::Effects");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AudioCaptureEffectsManager);
-        Py_VISIT(state->type_AudioEffect);
-        Py_VISIT(state->type_AudioEffectDefinition);
-        Py_VISIT(state->type_AudioEffectsManager);
-        Py_VISIT(state->type_AudioRenderEffectsManager);
-        Py_VISIT(state->type_CompositeVideoFrameContext);
-        Py_VISIT(state->type_ProcessAudioFrameContext);
-        Py_VISIT(state->type_ProcessVideoFrameContext);
-        Py_VISIT(state->type_SlowMotionEffectDefinition);
-        Py_VISIT(state->type_VideoCompositorDefinition);
-        Py_VISIT(state->type_VideoEffectDefinition);
-        Py_VISIT(state->type_VideoTransformEffectDefinition);
-        Py_VISIT(state->type_VideoTransformSphericalProjection);
-        Py_VISIT(state->type_IAudioEffectDefinition);
-        Py_VISIT(state->type_IBasicAudioEffect);
-        Py_VISIT(state->type_IBasicVideoEffect);
-        Py_VISIT(state->type_IVideoCompositor);
-        Py_VISIT(state->type_IVideoCompositorDefinition);
-        Py_VISIT(state->type_IVideoEffectDefinition);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AudioCaptureEffectsManager);
-        Py_CLEAR(state->type_AudioEffect);
-        Py_CLEAR(state->type_AudioEffectDefinition);
-        Py_CLEAR(state->type_AudioEffectsManager);
-        Py_CLEAR(state->type_AudioRenderEffectsManager);
-        Py_CLEAR(state->type_CompositeVideoFrameContext);
-        Py_CLEAR(state->type_ProcessAudioFrameContext);
-        Py_CLEAR(state->type_ProcessVideoFrameContext);
-        Py_CLEAR(state->type_SlowMotionEffectDefinition);
-        Py_CLEAR(state->type_VideoCompositorDefinition);
-        Py_CLEAR(state->type_VideoEffectDefinition);
-        Py_CLEAR(state->type_VideoTransformEffectDefinition);
-        Py_CLEAR(state->type_VideoTransformSphericalProjection);
-        Py_CLEAR(state->type_IAudioEffectDefinition);
-        Py_CLEAR(state->type_IBasicAudioEffect);
-        Py_CLEAR(state->type_IBasicVideoEffect);
-        Py_CLEAR(state->type_IVideoCompositor);
-        Py_CLEAR(state->type_IVideoCompositorDefinition);
-        Py_CLEAR(state->type_IVideoEffectDefinition);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Effects",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Effects
@@ -3745,7 +3657,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Effects(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3758,560 +3670,177 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Effects(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AudioCaptureEffectsManager = py::register_python_type(module.get(), type_name_AudioCaptureEffectsManager, &type_spec_AudioCaptureEffectsManager, object_bases.get(), nullptr);
-    if (!state->type_AudioCaptureEffectsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioCaptureEffectsManager, &type_spec_AudioCaptureEffectsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioCaptureEffectsManager, &type_spec_AudioCaptureEffectsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioEffect = py::register_python_type(module.get(), type_name_AudioEffect, &type_spec_AudioEffect, object_bases.get(), nullptr);
-    if (!state->type_AudioEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioEffect, &type_spec_AudioEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioEffect, &type_spec_AudioEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioEffectDefinition = py::register_python_type(module.get(), type_name_AudioEffectDefinition, &type_spec_AudioEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_AudioEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioEffectDefinition, &type_spec_AudioEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioEffectDefinition, &type_spec_AudioEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioEffectsManager = py::register_python_type(module.get(), type_name_AudioEffectsManager, &type_spec_AudioEffectsManager, object_bases.get(), nullptr);
-    if (!state->type_AudioEffectsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioEffectsManager, &type_spec_AudioEffectsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioEffectsManager, &type_spec_AudioEffectsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioRenderEffectsManager = py::register_python_type(module.get(), type_name_AudioRenderEffectsManager, &type_spec_AudioRenderEffectsManager, object_bases.get(), nullptr);
-    if (!state->type_AudioRenderEffectsManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioRenderEffectsManager, &type_spec_AudioRenderEffectsManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioRenderEffectsManager, &type_spec_AudioRenderEffectsManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositeVideoFrameContext = py::register_python_type(module.get(), type_name_CompositeVideoFrameContext, &type_spec_CompositeVideoFrameContext, object_bases.get(), nullptr);
-    if (!state->type_CompositeVideoFrameContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositeVideoFrameContext, &type_spec_CompositeVideoFrameContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositeVideoFrameContext, &type_spec_CompositeVideoFrameContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessAudioFrameContext = py::register_python_type(module.get(), type_name_ProcessAudioFrameContext, &type_spec_ProcessAudioFrameContext, object_bases.get(), nullptr);
-    if (!state->type_ProcessAudioFrameContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessAudioFrameContext, &type_spec_ProcessAudioFrameContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessAudioFrameContext, &type_spec_ProcessAudioFrameContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProcessVideoFrameContext = py::register_python_type(module.get(), type_name_ProcessVideoFrameContext, &type_spec_ProcessVideoFrameContext, object_bases.get(), nullptr);
-    if (!state->type_ProcessVideoFrameContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProcessVideoFrameContext, &type_spec_ProcessVideoFrameContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProcessVideoFrameContext, &type_spec_ProcessVideoFrameContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SlowMotionEffectDefinition = py::register_python_type(module.get(), type_name_SlowMotionEffectDefinition, &type_spec_SlowMotionEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_SlowMotionEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SlowMotionEffectDefinition, &type_spec_SlowMotionEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SlowMotionEffectDefinition, &type_spec_SlowMotionEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoCompositorDefinition = py::register_python_type(module.get(), type_name_VideoCompositorDefinition, &type_spec_VideoCompositorDefinition, object_bases.get(), nullptr);
-    if (!state->type_VideoCompositorDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoCompositorDefinition, &type_spec_VideoCompositorDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoCompositorDefinition, &type_spec_VideoCompositorDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoEffectDefinition = py::register_python_type(module.get(), type_name_VideoEffectDefinition, &type_spec_VideoEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_VideoEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoEffectDefinition, &type_spec_VideoEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoEffectDefinition, &type_spec_VideoEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTransformEffectDefinition = py::register_python_type(module.get(), type_name_VideoTransformEffectDefinition, &type_spec_VideoTransformEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_VideoTransformEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTransformEffectDefinition, &type_spec_VideoTransformEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTransformEffectDefinition, &type_spec_VideoTransformEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTransformSphericalProjection = py::register_python_type(module.get(), type_name_VideoTransformSphericalProjection, &type_spec_VideoTransformSphericalProjection, object_bases.get(), nullptr);
-    if (!state->type_VideoTransformSphericalProjection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTransformSphericalProjection, &type_spec_VideoTransformSphericalProjection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTransformSphericalProjection, &type_spec_VideoTransformSphericalProjection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAudioEffectDefinition = py::register_python_type(module.get(), type_name_IAudioEffectDefinition, &type_spec_IAudioEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_IAudioEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAudioEffectDefinition, &type_spec_IAudioEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAudioEffectDefinition, &type_spec_IAudioEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBasicAudioEffect = py::register_python_type(module.get(), type_name_IBasicAudioEffect, &type_spec_IBasicAudioEffect, object_bases.get(), nullptr);
-    if (!state->type_IBasicAudioEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBasicAudioEffect, &type_spec_IBasicAudioEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBasicAudioEffect, &type_spec_IBasicAudioEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBasicVideoEffect = py::register_python_type(module.get(), type_name_IBasicVideoEffect, &type_spec_IBasicVideoEffect, object_bases.get(), nullptr);
-    if (!state->type_IBasicVideoEffect)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBasicVideoEffect, &type_spec_IBasicVideoEffect, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBasicVideoEffect, &type_spec_IBasicVideoEffect, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVideoCompositor = py::register_python_type(module.get(), type_name_IVideoCompositor, &type_spec_IVideoCompositor, object_bases.get(), nullptr);
-    if (!state->type_IVideoCompositor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVideoCompositor, &type_spec_IVideoCompositor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVideoCompositor, &type_spec_IVideoCompositor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVideoCompositorDefinition = py::register_python_type(module.get(), type_name_IVideoCompositorDefinition, &type_spec_IVideoCompositorDefinition, object_bases.get(), nullptr);
-    if (!state->type_IVideoCompositorDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVideoCompositorDefinition, &type_spec_IVideoCompositorDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVideoCompositorDefinition, &type_spec_IVideoCompositorDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVideoEffectDefinition = py::register_python_type(module.get(), type_name_IVideoEffectDefinition, &type_spec_IVideoEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_IVideoEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVideoEffectDefinition, &type_spec_IVideoEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVideoEffectDefinition, &type_spec_IVideoEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioCaptureEffectsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioCaptureEffectsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioEffectsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioEffectsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioEffectsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioRenderEffectsManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::AudioRenderEffectsManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositeVideoFrameContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::CompositeVideoFrameContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessAudioFrameContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::ProcessAudioFrameContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProcessVideoFrameContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::ProcessVideoFrameContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SlowMotionEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::SlowMotionEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoCompositorDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::VideoCompositorDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::VideoEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::VideoEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTransformEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::VideoTransformEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTransformSphericalProjection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::VideoTransformSphericalProjection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAudioEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IAudioEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBasicAudioEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IBasicAudioEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBasicVideoEffect;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IBasicVideoEffect is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IVideoCompositor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVideoCompositor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IVideoCompositor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVideoCompositorDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IVideoCompositorDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Effects;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Effects");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVideoEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Effects::IVideoEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

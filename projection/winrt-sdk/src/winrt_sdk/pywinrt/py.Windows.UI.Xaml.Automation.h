@@ -271,152 +271,177 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "AnnotationPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "AutomationAnnotation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "AutomationElementIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationProperties>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "AutomationProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::AutomationProperty>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperty>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "AutomationProperty";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "DockPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "DragPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "DropTargetPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "ExpandCollapsePatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "GridItemPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "GridPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "MultipleViewPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "RangeValuePatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "ScrollPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "SelectionItemPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "SelectionPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "SpreadsheetItemPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "StylesPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "TableItemPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "TablePatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "TogglePatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "TransformPattern2Identifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "TransformPatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "ValuePatternIdentifiers";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
+        static constexpr const char* type_name = "WindowPatternIdentifiers";
     };
 }

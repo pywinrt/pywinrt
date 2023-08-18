@@ -114,50 +114,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "DeliveryOptimizationSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StoreConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StoreHardwareManufacturerInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StorePreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StorePreviewProductInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StorePreviewPurchaseResults";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "StorePreviewSkuInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>
+    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
+        static constexpr const char* type_name = "WebAuthenticationCoreManagerHelper";
     };
 }

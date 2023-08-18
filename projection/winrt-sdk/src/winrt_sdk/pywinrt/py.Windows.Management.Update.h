@@ -77,98 +77,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::PreviewBuildsManager>
+    struct py_type<winrt::Windows::Management::Update::PreviewBuildsManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "PreviewBuildsManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::PreviewBuildsState>
+    struct py_type<winrt::Windows::Management::Update::PreviewBuildsState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "PreviewBuildsState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdate>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateActionCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateActionProgress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateActionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAdministrator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateApprovalData>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateApprovalData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateApprovalData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAttentionRequiredInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateAttentionRequiredReasonChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateGetAdministratorResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateItem>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateManager>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateProgressChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateRestartRequestOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>
+    struct py_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management.update";
+        static constexpr const char* type_name = "WindowsUpdateScanCompletedEventArgs";
     };
 }

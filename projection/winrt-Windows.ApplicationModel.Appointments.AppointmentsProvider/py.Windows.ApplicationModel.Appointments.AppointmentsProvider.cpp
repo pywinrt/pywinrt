@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 {
-    struct module_state
-    {
-        PyTypeObject* type_AddAppointmentOperation;
-        PyTypeObject* type_AppointmentsProviderLaunchActionVerbs;
-        PyTypeObject* type_RemoveAppointmentOperation;
-        PyTypeObject* type_ReplaceAppointmentOperation;
-    };
-
     // ----- AddAppointmentOperation class --------------------
     static constexpr const char* const type_name_AddAppointmentOperation = "AddAppointmentOperation";
 
@@ -959,50 +951,15 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Appointments::AppointmentsProvider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AddAppointmentOperation);
-        Py_VISIT(state->type_AppointmentsProviderLaunchActionVerbs);
-        Py_VISIT(state->type_RemoveAppointmentOperation);
-        Py_VISIT(state->type_ReplaceAppointmentOperation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AddAppointmentOperation);
-        Py_CLEAR(state->type_AppointmentsProviderLaunchActionVerbs);
-        Py_CLEAR(state->type_RemoveAppointmentOperation);
-        Py_CLEAR(state->type_ReplaceAppointmentOperation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
@@ -1018,7 +975,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_AppointmentsP
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1031,11 +988,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_AppointmentsP
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AddAppointmentOperation = py::register_python_type(module.get(), type_name_AddAppointmentOperation, &type_spec_AddAppointmentOperation, object_bases.get(), nullptr);
-    if (!state->type_AddAppointmentOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AddAppointmentOperation, &type_spec_AddAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AddAppointmentOperation, &type_spec_AddAppointmentOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1046,116 +1003,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_AppointmentsP
         return nullptr;
     }
 
-    state->type_AppointmentsProviderLaunchActionVerbs = py::register_python_type(module.get(), type_name_AppointmentsProviderLaunchActionVerbs, &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get()));
-    if (!state->type_AppointmentsProviderLaunchActionVerbs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderLaunchActionVerbs, &type_spec_AppointmentsProviderLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderLaunchActionVerbs, &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RemoveAppointmentOperation = py::register_python_type(module.get(), type_name_RemoveAppointmentOperation, &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr);
-    if (!state->type_RemoveAppointmentOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RemoveAppointmentOperation, &type_spec_RemoveAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RemoveAppointmentOperation, &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReplaceAppointmentOperation = py::register_python_type(module.get(), type_name_ReplaceAppointmentOperation, &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr);
-    if (!state->type_ReplaceAppointmentOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReplaceAppointmentOperation, &type_spec_ReplaceAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReplaceAppointmentOperation, &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::AppointmentsProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AddAppointmentOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::AppointmentsProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderLaunchActionVerbs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::AppointmentsProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RemoveAppointmentOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::AppointmentsProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReplaceAppointmentOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -94,50 +94,58 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialApp>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialApp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialApp";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialAppStateDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialDevice>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialDevicePicker>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDevicePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDevicePickerFilter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDeviceSelectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialDisconnectButtonClickedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>
+    struct py_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
+        static constexpr const char* type_name = "DialReceiverApp";
     };
 }

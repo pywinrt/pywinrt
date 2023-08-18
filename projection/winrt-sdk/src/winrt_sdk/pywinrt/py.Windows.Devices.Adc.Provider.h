@@ -38,14 +38,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
+    struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
+        static constexpr const char* type_name = "IAdcControllerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>
+    struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
+        static constexpr const char* type_name = "IAdcProvider";
     };
 }

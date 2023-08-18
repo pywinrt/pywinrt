@@ -218,134 +218,156 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::CachedFileUpdater>
+    struct py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "CachedFileUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>
+    struct py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "CachedFileUpdaterUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequest>
+    struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "FileUpdateRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>
+    struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "FileUpdateRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>
+    struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "FileUpdateRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderFileTypeInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderGetContentInfoForPathResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderGetPathForContentUriResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderItemProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemProperty>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperty>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderItemProperty";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderItemPropertyDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderMoreInfoUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderQuotaUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderStatusUI>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderStatusUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderStatusUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSyncRootInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSyncRootManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderItemPropertySource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderPropertyCapabilities";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderStatusUISource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderStatusUISourceFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderUICommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "IStorageProviderUriSource";
     };
 }

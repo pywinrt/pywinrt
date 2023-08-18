@@ -55,26 +55,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Web::AtomPub::AtomPubClient>
+    struct py_type<winrt::Windows::Web::AtomPub::AtomPubClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.atompub";
+        static constexpr const char* type_name = "AtomPubClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::AtomPub::ResourceCollection>
+    struct py_type<winrt::Windows::Web::AtomPub::ResourceCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.atompub";
+        static constexpr const char* type_name = "ResourceCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::AtomPub::ServiceDocument>
+    struct py_type<winrt::Windows::Web::AtomPub::ServiceDocument>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.atompub";
+        static constexpr const char* type_name = "ServiceDocument";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::AtomPub::Workspace>
+    struct py_type<winrt::Windows::Web::AtomPub::Workspace>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.atompub";
+        static constexpr const char* type_name = "Workspace";
     };
 }

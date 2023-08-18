@@ -6,27 +6,6 @@
 
 namespace py::cpp::Windows::UI::Text::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_CoreTextCompositionCompletedEventArgs;
-        PyTypeObject* type_CoreTextCompositionSegment;
-        PyTypeObject* type_CoreTextCompositionStartedEventArgs;
-        PyTypeObject* type_CoreTextEditContext;
-        PyTypeObject* type_CoreTextFormatUpdatingEventArgs;
-        PyTypeObject* type_CoreTextLayoutBounds;
-        PyTypeObject* type_CoreTextLayoutRequest;
-        PyTypeObject* type_CoreTextLayoutRequestedEventArgs;
-        PyTypeObject* type_CoreTextSelectionRequest;
-        PyTypeObject* type_CoreTextSelectionRequestedEventArgs;
-        PyTypeObject* type_CoreTextSelectionUpdatingEventArgs;
-        PyTypeObject* type_CoreTextServicesConstants;
-        PyTypeObject* type_CoreTextServicesManager;
-        PyTypeObject* type_CoreTextTextRequest;
-        PyTypeObject* type_CoreTextTextRequestedEventArgs;
-        PyTypeObject* type_CoreTextTextUpdatingEventArgs;
-        PyTypeObject* type_CoreTextRange;
-    };
-
     // ----- CoreTextCompositionCompletedEventArgs class --------------------
     static constexpr const char* const type_name_CoreTextCompositionCompletedEventArgs = "CoreTextCompositionCompletedEventArgs";
 
@@ -3449,76 +3428,15 @@ namespace py::cpp::Windows::UI::Text::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::Text::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CoreTextCompositionCompletedEventArgs);
-        Py_VISIT(state->type_CoreTextCompositionSegment);
-        Py_VISIT(state->type_CoreTextCompositionStartedEventArgs);
-        Py_VISIT(state->type_CoreTextEditContext);
-        Py_VISIT(state->type_CoreTextFormatUpdatingEventArgs);
-        Py_VISIT(state->type_CoreTextLayoutBounds);
-        Py_VISIT(state->type_CoreTextLayoutRequest);
-        Py_VISIT(state->type_CoreTextLayoutRequestedEventArgs);
-        Py_VISIT(state->type_CoreTextSelectionRequest);
-        Py_VISIT(state->type_CoreTextSelectionRequestedEventArgs);
-        Py_VISIT(state->type_CoreTextSelectionUpdatingEventArgs);
-        Py_VISIT(state->type_CoreTextServicesConstants);
-        Py_VISIT(state->type_CoreTextServicesManager);
-        Py_VISIT(state->type_CoreTextTextRequest);
-        Py_VISIT(state->type_CoreTextTextRequestedEventArgs);
-        Py_VISIT(state->type_CoreTextTextUpdatingEventArgs);
-        Py_VISIT(state->type_CoreTextRange);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CoreTextCompositionCompletedEventArgs);
-        Py_CLEAR(state->type_CoreTextCompositionSegment);
-        Py_CLEAR(state->type_CoreTextCompositionStartedEventArgs);
-        Py_CLEAR(state->type_CoreTextEditContext);
-        Py_CLEAR(state->type_CoreTextFormatUpdatingEventArgs);
-        Py_CLEAR(state->type_CoreTextLayoutBounds);
-        Py_CLEAR(state->type_CoreTextLayoutRequest);
-        Py_CLEAR(state->type_CoreTextLayoutRequestedEventArgs);
-        Py_CLEAR(state->type_CoreTextSelectionRequest);
-        Py_CLEAR(state->type_CoreTextSelectionRequestedEventArgs);
-        Py_CLEAR(state->type_CoreTextSelectionUpdatingEventArgs);
-        Py_CLEAR(state->type_CoreTextServicesConstants);
-        Py_CLEAR(state->type_CoreTextServicesManager);
-        Py_CLEAR(state->type_CoreTextTextRequest);
-        Py_CLEAR(state->type_CoreTextTextRequestedEventArgs);
-        Py_CLEAR(state->type_CoreTextTextUpdatingEventArgs);
-        Py_CLEAR(state->type_CoreTextRange);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Text_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Text::Core
@@ -3534,7 +3452,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3547,71 +3465,101 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CoreTextCompositionCompletedEventArgs = py::register_python_type(module.get(), type_name_CoreTextCompositionCompletedEventArgs, &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextCompositionCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionCompletedEventArgs, &type_spec_CoreTextCompositionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionCompletedEventArgs, &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextCompositionSegment = py::register_python_type(module.get(), type_name_CoreTextCompositionSegment, &type_spec_CoreTextCompositionSegment, object_bases.get(), nullptr);
-    if (!state->type_CoreTextCompositionSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionSegment, &type_spec_CoreTextCompositionSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionSegment, &type_spec_CoreTextCompositionSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextCompositionStartedEventArgs = py::register_python_type(module.get(), type_name_CoreTextCompositionStartedEventArgs, &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextCompositionStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionStartedEventArgs, &type_spec_CoreTextCompositionStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextCompositionStartedEventArgs, &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextEditContext = py::register_python_type(module.get(), type_name_CoreTextEditContext, &type_spec_CoreTextEditContext, object_bases.get(), nullptr);
-    if (!state->type_CoreTextEditContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextEditContext, &type_spec_CoreTextEditContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextEditContext, &type_spec_CoreTextEditContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextFormatUpdatingEventArgs = py::register_python_type(module.get(), type_name_CoreTextFormatUpdatingEventArgs, &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextFormatUpdatingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextFormatUpdatingEventArgs, &type_spec_CoreTextFormatUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextFormatUpdatingEventArgs, &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextLayoutBounds = py::register_python_type(module.get(), type_name_CoreTextLayoutBounds, &type_spec_CoreTextLayoutBounds, object_bases.get(), nullptr);
-    if (!state->type_CoreTextLayoutBounds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutBounds, &type_spec_CoreTextLayoutBounds, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutBounds, &type_spec_CoreTextLayoutBounds, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextLayoutRequest = py::register_python_type(module.get(), type_name_CoreTextLayoutRequest, &type_spec_CoreTextLayoutRequest, object_bases.get(), nullptr);
-    if (!state->type_CoreTextLayoutRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequest, &type_spec_CoreTextLayoutRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequest, &type_spec_CoreTextLayoutRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextLayoutRequestedEventArgs = py::register_python_type(module.get(), type_name_CoreTextLayoutRequestedEventArgs, &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextLayoutRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequestedEventArgs, &type_spec_CoreTextLayoutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequestedEventArgs, &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextSelectionRequest = py::register_python_type(module.get(), type_name_CoreTextSelectionRequest, &type_spec_CoreTextSelectionRequest, object_bases.get(), nullptr);
-    if (!state->type_CoreTextSelectionRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequest, &type_spec_CoreTextSelectionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequest, &type_spec_CoreTextSelectionRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextSelectionRequestedEventArgs = py::register_python_type(module.get(), type_name_CoreTextSelectionRequestedEventArgs, &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextSelectionRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequestedEventArgs, &type_spec_CoreTextSelectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequestedEventArgs, &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextSelectionUpdatingEventArgs = py::register_python_type(module.get(), type_name_CoreTextSelectionUpdatingEventArgs, &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextSelectionUpdatingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionUpdatingEventArgs, &type_spec_CoreTextSelectionUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextSelectionUpdatingEventArgs, &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3622,433 +3570,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_CoreTextServicesConstants = py::register_python_type(module.get(), type_name_CoreTextServicesConstants, &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get()));
-    if (!state->type_CoreTextServicesConstants)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextServicesConstants, &type_spec_CoreTextServicesConstants, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextServicesConstants, &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextServicesManager = py::register_python_type(module.get(), type_name_CoreTextServicesManager, &type_spec_CoreTextServicesManager, object_bases.get(), nullptr);
-    if (!state->type_CoreTextServicesManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextServicesManager, &type_spec_CoreTextServicesManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextServicesManager, &type_spec_CoreTextServicesManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextTextRequest = py::register_python_type(module.get(), type_name_CoreTextTextRequest, &type_spec_CoreTextTextRequest, object_bases.get(), nullptr);
-    if (!state->type_CoreTextTextRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextTextRequest, &type_spec_CoreTextTextRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextTextRequest, &type_spec_CoreTextTextRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextTextRequestedEventArgs = py::register_python_type(module.get(), type_name_CoreTextTextRequestedEventArgs, &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextTextRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextTextRequestedEventArgs, &type_spec_CoreTextTextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextTextRequestedEventArgs, &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextTextUpdatingEventArgs = py::register_python_type(module.get(), type_name_CoreTextTextUpdatingEventArgs, &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreTextTextUpdatingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextTextUpdatingEventArgs, &type_spec_CoreTextTextUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextTextUpdatingEventArgs, &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreTextRange = py::register_python_type(module.get(), type_name_CoreTextRange, &type_spec_CoreTextRange, nullptr, nullptr);
-    if (!state->type_CoreTextRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreTextRange, &type_spec_CoreTextRange, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreTextRange, &type_spec_CoreTextRange, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextCompositionCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextCompositionSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextCompositionSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextCompositionStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextEditContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextEditContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextFormatUpdatingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextLayoutBounds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextLayoutBounds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextLayoutRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextLayoutRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextLayoutRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextSelectionRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextSelectionRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextSelectionRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextSelectionUpdatingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextServicesConstants;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextServicesConstants is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextServicesManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextServicesManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextTextRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextTextRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextTextRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextTextUpdatingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::Core::CoreTextRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreTextRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::Core::CoreTextRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

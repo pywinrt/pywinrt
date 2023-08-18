@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::AI::MachineLearning::Preview
 {
-    struct module_state
-    {
-        PyTypeObject* type_ImageVariableDescriptorPreview;
-        PyTypeObject* type_InferencingOptionsPreview;
-        PyTypeObject* type_LearningModelBindingPreview;
-        PyTypeObject* type_LearningModelDescriptionPreview;
-        PyTypeObject* type_LearningModelEvaluationResultPreview;
-        PyTypeObject* type_LearningModelPreview;
-        PyTypeObject* type_LearningModelVariableDescriptorPreview;
-        PyTypeObject* type_MapVariableDescriptorPreview;
-        PyTypeObject* type_SequenceVariableDescriptorPreview;
-        PyTypeObject* type_TensorVariableDescriptorPreview;
-        PyTypeObject* type_ILearningModelVariableDescriptorPreview;
-    };
-
     // ----- ImageVariableDescriptorPreview class --------------------
     static constexpr const char* const type_name_ImageVariableDescriptorPreview = "ImageVariableDescriptorPreview";
 
@@ -2504,64 +2489,15 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning::Preview");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ImageVariableDescriptorPreview);
-        Py_VISIT(state->type_InferencingOptionsPreview);
-        Py_VISIT(state->type_LearningModelBindingPreview);
-        Py_VISIT(state->type_LearningModelDescriptionPreview);
-        Py_VISIT(state->type_LearningModelEvaluationResultPreview);
-        Py_VISIT(state->type_LearningModelPreview);
-        Py_VISIT(state->type_LearningModelVariableDescriptorPreview);
-        Py_VISIT(state->type_MapVariableDescriptorPreview);
-        Py_VISIT(state->type_SequenceVariableDescriptorPreview);
-        Py_VISIT(state->type_TensorVariableDescriptorPreview);
-        Py_VISIT(state->type_ILearningModelVariableDescriptorPreview);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ImageVariableDescriptorPreview);
-        Py_CLEAR(state->type_InferencingOptionsPreview);
-        Py_CLEAR(state->type_LearningModelBindingPreview);
-        Py_CLEAR(state->type_LearningModelDescriptionPreview);
-        Py_CLEAR(state->type_LearningModelEvaluationResultPreview);
-        Py_CLEAR(state->type_LearningModelPreview);
-        Py_CLEAR(state->type_LearningModelVariableDescriptorPreview);
-        Py_CLEAR(state->type_MapVariableDescriptorPreview);
-        Py_CLEAR(state->type_SequenceVariableDescriptorPreview);
-        Py_CLEAR(state->type_TensorVariableDescriptorPreview);
-        Py_CLEAR(state->type_ILearningModelVariableDescriptorPreview);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_AI_MachineLearning_Preview",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::AI::MachineLearning::Preview
@@ -2577,7 +2513,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning_Preview(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2590,328 +2526,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning_Preview(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ImageVariableDescriptorPreview = py::register_python_type(module.get(), type_name_ImageVariableDescriptorPreview, &type_spec_ImageVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_ImageVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageVariableDescriptorPreview, &type_spec_ImageVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageVariableDescriptorPreview, &type_spec_ImageVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InferencingOptionsPreview = py::register_python_type(module.get(), type_name_InferencingOptionsPreview, &type_spec_InferencingOptionsPreview, object_bases.get(), nullptr);
-    if (!state->type_InferencingOptionsPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InferencingOptionsPreview, &type_spec_InferencingOptionsPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InferencingOptionsPreview, &type_spec_InferencingOptionsPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelBindingPreview = py::register_python_type(module.get(), type_name_LearningModelBindingPreview, &type_spec_LearningModelBindingPreview, object_bases.get(), nullptr);
-    if (!state->type_LearningModelBindingPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelBindingPreview, &type_spec_LearningModelBindingPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelBindingPreview, &type_spec_LearningModelBindingPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelDescriptionPreview = py::register_python_type(module.get(), type_name_LearningModelDescriptionPreview, &type_spec_LearningModelDescriptionPreview, object_bases.get(), nullptr);
-    if (!state->type_LearningModelDescriptionPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelDescriptionPreview, &type_spec_LearningModelDescriptionPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelDescriptionPreview, &type_spec_LearningModelDescriptionPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelEvaluationResultPreview = py::register_python_type(module.get(), type_name_LearningModelEvaluationResultPreview, &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), nullptr);
-    if (!state->type_LearningModelEvaluationResultPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResultPreview, &type_spec_LearningModelEvaluationResultPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResultPreview, &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelPreview = py::register_python_type(module.get(), type_name_LearningModelPreview, &type_spec_LearningModelPreview, object_bases.get(), nullptr);
-    if (!state->type_LearningModelPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelPreview, &type_spec_LearningModelPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelPreview, &type_spec_LearningModelPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LearningModelVariableDescriptorPreview = py::register_python_type(module.get(), type_name_LearningModelVariableDescriptorPreview, &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_LearningModelVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LearningModelVariableDescriptorPreview, &type_spec_LearningModelVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LearningModelVariableDescriptorPreview, &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapVariableDescriptorPreview = py::register_python_type(module.get(), type_name_MapVariableDescriptorPreview, &type_spec_MapVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_MapVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapVariableDescriptorPreview, &type_spec_MapVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapVariableDescriptorPreview, &type_spec_MapVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SequenceVariableDescriptorPreview = py::register_python_type(module.get(), type_name_SequenceVariableDescriptorPreview, &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_SequenceVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SequenceVariableDescriptorPreview, &type_spec_SequenceVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SequenceVariableDescriptorPreview, &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TensorVariableDescriptorPreview = py::register_python_type(module.get(), type_name_TensorVariableDescriptorPreview, &type_spec_TensorVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_TensorVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TensorVariableDescriptorPreview, &type_spec_TensorVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TensorVariableDescriptorPreview, &type_spec_TensorVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILearningModelVariableDescriptorPreview = py::register_python_type(module.get(), type_name_ILearningModelVariableDescriptorPreview, &type_spec_ILearningModelVariableDescriptorPreview, object_bases.get(), nullptr);
-    if (!state->type_ILearningModelVariableDescriptorPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILearningModelVariableDescriptorPreview, &type_spec_ILearningModelVariableDescriptorPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILearningModelVariableDescriptorPreview, &type_spec_ILearningModelVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InferencingOptionsPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelBindingPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelDescriptionPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelEvaluationResultPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LearningModelVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SequenceVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TensorVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::AI::MachineLearning::Preview;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::AI::MachineLearning::Preview");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILearningModelVariableDescriptorPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

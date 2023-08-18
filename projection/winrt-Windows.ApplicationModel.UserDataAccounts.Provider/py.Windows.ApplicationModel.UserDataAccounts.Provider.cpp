@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_UserDataAccountPartnerAccountInfo;
-        PyTypeObject* type_UserDataAccountProviderAddAccountOperation;
-        PyTypeObject* type_UserDataAccountProviderResolveErrorsOperation;
-        PyTypeObject* type_UserDataAccountProviderSettingsOperation;
-        PyTypeObject* type_IUserDataAccountProviderOperation;
-    };
-
     // ----- UserDataAccountPartnerAccountInfo class --------------------
     static constexpr const char* const type_name_UserDataAccountPartnerAccountInfo = "UserDataAccountPartnerAccountInfo";
 
@@ -709,52 +700,15 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UserDataAccountPartnerAccountInfo);
-        Py_VISIT(state->type_UserDataAccountProviderAddAccountOperation);
-        Py_VISIT(state->type_UserDataAccountProviderResolveErrorsOperation);
-        Py_VISIT(state->type_UserDataAccountProviderSettingsOperation);
-        Py_VISIT(state->type_IUserDataAccountProviderOperation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UserDataAccountPartnerAccountInfo);
-        Py_CLEAR(state->type_UserDataAccountProviderAddAccountOperation);
-        Py_CLEAR(state->type_UserDataAccountProviderResolveErrorsOperation);
-        Py_CLEAR(state->type_UserDataAccountProviderSettingsOperation);
-        Py_CLEAR(state->type_IUserDataAccountProviderOperation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_UserDataAccounts_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
@@ -770,7 +724,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts_Provider(
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -783,154 +737,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts_Provider(
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UserDataAccountPartnerAccountInfo = py::register_python_type(module.get(), type_name_UserDataAccountPartnerAccountInfo, &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountPartnerAccountInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountPartnerAccountInfo, &type_spec_UserDataAccountPartnerAccountInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountPartnerAccountInfo, &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountProviderAddAccountOperation = py::register_python_type(module.get(), type_name_UserDataAccountProviderAddAccountOperation, &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountProviderAddAccountOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderAddAccountOperation, &type_spec_UserDataAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderAddAccountOperation, &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountProviderResolveErrorsOperation = py::register_python_type(module.get(), type_name_UserDataAccountProviderResolveErrorsOperation, &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountProviderResolveErrorsOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderResolveErrorsOperation, &type_spec_UserDataAccountProviderResolveErrorsOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderResolveErrorsOperation, &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountProviderSettingsOperation = py::register_python_type(module.get(), type_name_UserDataAccountProviderSettingsOperation, &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountProviderSettingsOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderSettingsOperation, &type_spec_UserDataAccountProviderSettingsOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderSettingsOperation, &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IUserDataAccountProviderOperation = py::register_python_type(module.get(), type_name_IUserDataAccountProviderOperation, &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr);
-    if (!state->type_IUserDataAccountProviderOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderOperation, &type_spec_IUserDataAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderOperation, &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountPartnerAccountInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderAddAccountOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderResolveErrorsOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderSettingsOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::UserDataAccounts::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IUserDataAccountProviderOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

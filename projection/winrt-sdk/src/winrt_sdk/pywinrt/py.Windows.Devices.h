@@ -49,20 +49,23 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>
+    struct py_type<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices";
+        static constexpr const char* type_name = "LowLevelDevicesAggregateProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::LowLevelDevicesController>
+    struct py_type<winrt::Windows::Devices::LowLevelDevicesController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices";
+        static constexpr const char* type_name = "LowLevelDevicesController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
+    struct py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices";
+        static constexpr const char* type_name = "ILowLevelDevicesAggregateProvider";
     };
 }

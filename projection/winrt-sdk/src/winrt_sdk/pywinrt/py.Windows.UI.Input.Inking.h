@@ -204,170 +204,198 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkDrawingAttributes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkDrawingAttributesPencilProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkInputConfiguration>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkInputConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkInputConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkInputProcessingConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkManager>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkModelerAttributes>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkModelerAttributes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkModelerAttributes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkPoint>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkPoint>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkPoint";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkPresenter>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkPresenterProtractor>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkPresenterProtractor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkPresenterProtractor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkPresenterRuler>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkPresenterRuler>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkPresenterRuler";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkRecognitionResult>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkRecognitionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkRecognitionResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkRecognizer>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkRecognizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkRecognizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkRecognizerContainer>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkRecognizerContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkRecognizerContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStroke>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStroke>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStroke";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeBuilder>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokeBuilder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokeBuilder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeContainer>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokeContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokeContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeInput>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokeInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokeInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokeRenderingSegment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokesCollectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkStrokesErasedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkSynchronizer>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkSynchronizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkSynchronizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>
+    struct py_type<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "InkUnprocessedInput";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::PenAndInkSettings>
+    struct py_type<winrt::Windows::UI::Input::Inking::PenAndInkSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "PenAndInkSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>
+    struct py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "IInkPointFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>
+    struct py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "IInkPresenterRulerFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>
+    struct py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "IInkPresenterStencil";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>
+    struct py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "IInkRecognizerContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>
+    struct py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking";
+        static constexpr const char* type_name = "IInkStrokeContainer";
     };
 }

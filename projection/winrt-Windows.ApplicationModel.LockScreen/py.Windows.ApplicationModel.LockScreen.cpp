@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::LockScreen
 {
-    struct module_state
-    {
-        PyTypeObject* type_LockApplicationHost;
-        PyTypeObject* type_LockScreenBadge;
-        PyTypeObject* type_LockScreenInfo;
-        PyTypeObject* type_LockScreenUnlockingDeferral;
-        PyTypeObject* type_LockScreenUnlockingEventArgs;
-    };
-
     // ----- LockApplicationHost class --------------------
     static constexpr const char* const type_name_LockApplicationHost = "LockApplicationHost";
 
@@ -952,52 +943,15 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::LockScreen");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_LockApplicationHost);
-        Py_VISIT(state->type_LockScreenBadge);
-        Py_VISIT(state->type_LockScreenInfo);
-        Py_VISIT(state->type_LockScreenUnlockingDeferral);
-        Py_VISIT(state->type_LockScreenUnlockingEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_LockApplicationHost);
-        Py_CLEAR(state->type_LockScreenBadge);
-        Py_CLEAR(state->type_LockScreenInfo);
-        Py_CLEAR(state->type_LockScreenUnlockingDeferral);
-        Py_CLEAR(state->type_LockScreenUnlockingEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_LockScreen",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::LockScreen
@@ -1013,7 +967,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_LockScreen(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1026,154 +980,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_LockScreen(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_LockApplicationHost = py::register_python_type(module.get(), type_name_LockApplicationHost, &type_spec_LockApplicationHost, object_bases.get(), nullptr);
-    if (!state->type_LockApplicationHost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockApplicationHost, &type_spec_LockApplicationHost, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockApplicationHost, &type_spec_LockApplicationHost, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenBadge = py::register_python_type(module.get(), type_name_LockScreenBadge, &type_spec_LockScreenBadge, object_bases.get(), nullptr);
-    if (!state->type_LockScreenBadge)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenBadge, &type_spec_LockScreenBadge, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenBadge, &type_spec_LockScreenBadge, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenInfo = py::register_python_type(module.get(), type_name_LockScreenInfo, &type_spec_LockScreenInfo, object_bases.get(), nullptr);
-    if (!state->type_LockScreenInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenInfo, &type_spec_LockScreenInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenInfo, &type_spec_LockScreenInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenUnlockingDeferral = py::register_python_type(module.get(), type_name_LockScreenUnlockingDeferral, &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr);
-    if (!state->type_LockScreenUnlockingDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenUnlockingDeferral, &type_spec_LockScreenUnlockingDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenUnlockingDeferral, &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenUnlockingEventArgs = py::register_python_type(module.get(), type_name_LockScreenUnlockingEventArgs, &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LockScreenUnlockingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenUnlockingEventArgs, &type_spec_LockScreenUnlockingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenUnlockingEventArgs, &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::LockScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::LockScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockApplicationHost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::LockScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::LockScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenBadge;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::LockScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::LockScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::LockScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::LockScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenUnlockingDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::LockScreen;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::LockScreen");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenUnlockingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::System::UserProfile
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdvertisingManager;
-        PyTypeObject* type_AdvertisingManagerForUser;
-        PyTypeObject* type_AssignedAccessSettings;
-        PyTypeObject* type_DiagnosticsSettings;
-        PyTypeObject* type_FirstSignInSettings;
-        PyTypeObject* type_GlobalizationPreferences;
-        PyTypeObject* type_GlobalizationPreferencesForUser;
-        PyTypeObject* type_LockScreen;
-        PyTypeObject* type_UserInformation;
-        PyTypeObject* type_UserProfilePersonalizationSettings;
-    };
-
     // ----- AdvertisingManager class --------------------
     static constexpr const char* const type_name_AdvertisingManager = "AdvertisingManager";
 
@@ -2354,62 +2340,15 @@ namespace py::cpp::Windows::System::UserProfile
     PyDoc_STRVAR(module_doc, "Windows::System::UserProfile");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdvertisingManager);
-        Py_VISIT(state->type_AdvertisingManagerForUser);
-        Py_VISIT(state->type_AssignedAccessSettings);
-        Py_VISIT(state->type_DiagnosticsSettings);
-        Py_VISIT(state->type_FirstSignInSettings);
-        Py_VISIT(state->type_GlobalizationPreferences);
-        Py_VISIT(state->type_GlobalizationPreferencesForUser);
-        Py_VISIT(state->type_LockScreen);
-        Py_VISIT(state->type_UserInformation);
-        Py_VISIT(state->type_UserProfilePersonalizationSettings);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdvertisingManager);
-        Py_CLEAR(state->type_AdvertisingManagerForUser);
-        Py_CLEAR(state->type_AssignedAccessSettings);
-        Py_CLEAR(state->type_DiagnosticsSettings);
-        Py_CLEAR(state->type_FirstSignInSettings);
-        Py_CLEAR(state->type_GlobalizationPreferences);
-        Py_CLEAR(state->type_GlobalizationPreferencesForUser);
-        Py_CLEAR(state->type_LockScreen);
-        Py_CLEAR(state->type_UserInformation);
-        Py_CLEAR(state->type_UserProfilePersonalizationSettings);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_UserProfile",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::UserProfile
@@ -2425,7 +2364,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2438,41 +2377,53 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AdvertisingManager_Meta{PyType_FromSpec(&type_spec_AdvertisingManager_Meta)};
     if (!type_AdvertisingManager_Meta)
     {
         return nullptr;
     }
 
-    state->type_AdvertisingManager = py::register_python_type(module.get(), type_name_AdvertisingManager, &type_spec_AdvertisingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Meta.get()));
-    if (!state->type_AdvertisingManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvertisingManager, &type_spec_AdvertisingManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvertisingManager, &type_spec_AdvertisingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdvertisingManagerForUser = py::register_python_type(module.get(), type_name_AdvertisingManagerForUser, &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_AdvertisingManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvertisingManagerForUser, &type_spec_AdvertisingManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvertisingManagerForUser, &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AssignedAccessSettings = py::register_python_type(module.get(), type_name_AssignedAccessSettings, &type_spec_AssignedAccessSettings, object_bases.get(), nullptr);
-    if (!state->type_AssignedAccessSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AssignedAccessSettings, &type_spec_AssignedAccessSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AssignedAccessSettings, &type_spec_AssignedAccessSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DiagnosticsSettings = py::register_python_type(module.get(), type_name_DiagnosticsSettings, &type_spec_DiagnosticsSettings, object_bases.get(), nullptr);
-    if (!state->type_DiagnosticsSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DiagnosticsSettings, &type_spec_DiagnosticsSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DiagnosticsSettings, &type_spec_DiagnosticsSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FirstSignInSettings = py::register_python_type(module.get(), type_name_FirstSignInSettings, &type_spec_FirstSignInSettings, object_bases.get(), nullptr);
-    if (!state->type_FirstSignInSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FirstSignInSettings, &type_spec_FirstSignInSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FirstSignInSettings, &type_spec_FirstSignInSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2483,14 +2434,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    state->type_GlobalizationPreferences = py::register_python_type(module.get(), type_name_GlobalizationPreferences, &type_spec_GlobalizationPreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Meta.get()));
-    if (!state->type_GlobalizationPreferences)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalizationPreferences, &type_spec_GlobalizationPreferences, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalizationPreferences, &type_spec_GlobalizationPreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GlobalizationPreferencesForUser = py::register_python_type(module.get(), type_name_GlobalizationPreferencesForUser, &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr);
-    if (!state->type_GlobalizationPreferencesForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GlobalizationPreferencesForUser, &type_spec_GlobalizationPreferencesForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GlobalizationPreferencesForUser, &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2501,8 +2458,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    state->type_LockScreen = py::register_python_type(module.get(), type_name_LockScreen, &type_spec_LockScreen, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Meta.get()));
-    if (!state->type_LockScreen)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreen, &type_spec_LockScreen, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreen, &type_spec_LockScreen, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2513,8 +2473,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    state->type_UserInformation = py::register_python_type(module.get(), type_name_UserInformation, &type_spec_UserInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Meta.get()));
-    if (!state->type_UserInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserInformation, &type_spec_UserInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserInformation, &type_spec_UserInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2525,242 +2488,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
         return nullptr;
     }
 
-    state->type_UserProfilePersonalizationSettings = py::register_python_type(module.get(), type_name_UserProfilePersonalizationSettings, &type_spec_UserProfilePersonalizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Meta.get()));
-    if (!state->type_UserProfilePersonalizationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserProfilePersonalizationSettings, &type_spec_UserProfilePersonalizationSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserProfilePersonalizationSettings, &type_spec_UserProfilePersonalizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::AdvertisingManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvertisingManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::AdvertisingManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvertisingManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::AdvertisingManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AssignedAccessSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::AssignedAccessSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DiagnosticsSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::DiagnosticsSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::FirstSignInSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FirstSignInSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::FirstSignInSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalizationPreferences;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::GlobalizationPreferences is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GlobalizationPreferencesForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::LockScreen>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreen;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::LockScreen is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::UserInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::UserInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::UserProfile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::UserProfile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserProfilePersonalizationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

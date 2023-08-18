@@ -183,224 +183,261 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattCharacteristic";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattCharacteristicUuids";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattCharacteristicsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattClientNotificationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattDescriptorUuids";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattDescriptorsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattDeviceService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattDeviceServicesResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalCharacteristic";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalCharacteristicParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalCharacteristicResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalDescriptor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalDescriptorParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalDescriptorResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattLocalService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattPresentationFormat";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattPresentationFormatTypes";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattProtocolError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattReadClientCharacteristicConfigurationDescriptorResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattReadRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattReadRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattReadResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattReliableWriteTransaction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattRequestStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceProviderAdvertisementStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceProviderAdvertisingParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceProviderResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattServiceUuids";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattSessionStatusChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattSubscribedClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattValueChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattWriteRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattWriteRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>
+    struct py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.genericattributeprofile";
+        static constexpr const char* type_name = "GattWriteResult";
     };
 }

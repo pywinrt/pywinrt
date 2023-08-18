@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Lights
 {
-    struct module_state
-    {
-        PyTypeObject* type_Lamp;
-        PyTypeObject* type_LampArray;
-        PyTypeObject* type_LampAvailabilityChangedEventArgs;
-        PyTypeObject* type_LampInfo;
-    };
-
     // ----- Lamp class --------------------
     static constexpr const char* const type_name_Lamp = "Lamp";
 
@@ -1680,50 +1672,15 @@ namespace py::cpp::Windows::Devices::Lights
     PyDoc_STRVAR(module_doc, "Windows::Devices::Lights");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Lamp);
-        Py_VISIT(state->type_LampArray);
-        Py_VISIT(state->type_LampAvailabilityChangedEventArgs);
-        Py_VISIT(state->type_LampInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Lamp);
-        Py_CLEAR(state->type_LampArray);
-        Py_CLEAR(state->type_LampAvailabilityChangedEventArgs);
-        Py_CLEAR(state->type_LampInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Lights",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Lights
@@ -1739,7 +1696,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1752,125 +1709,42 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Lamp = py::register_python_type(module.get(), type_name_Lamp, &type_spec_Lamp, object_bases.get(), nullptr);
-    if (!state->type_Lamp)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Lamp, &type_spec_Lamp, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Lamp, &type_spec_Lamp, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampArray = py::register_python_type(module.get(), type_name_LampArray, &type_spec_LampArray, object_bases.get(), nullptr);
-    if (!state->type_LampArray)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampArray, &type_spec_LampArray, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampArray, &type_spec_LampArray, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampAvailabilityChangedEventArgs = py::register_python_type(module.get(), type_name_LampAvailabilityChangedEventArgs, &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LampAvailabilityChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampAvailabilityChangedEventArgs, &type_spec_LampAvailabilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampAvailabilityChangedEventArgs, &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LampInfo = py::register_python_type(module.get(), type_name_LampInfo, &type_spec_LampInfo, object_bases.get(), nullptr);
-    if (!state->type_LampInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LampInfo, &type_spec_LampInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LampInfo, &type_spec_LampInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::Lamp>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Lamp;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::Lamp is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::LampArray>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampArray;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::LampArray is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampAvailabilityChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Lights::LampInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Lights;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Lights");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LampInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Lights::LampInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

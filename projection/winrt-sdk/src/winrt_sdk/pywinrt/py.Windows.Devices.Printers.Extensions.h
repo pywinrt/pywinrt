@@ -55,56 +55,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "Print3DWorkflow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "Print3DWorkflowPrintRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "Print3DWorkflowPrinterChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintExtensionContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintNotificationEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintTaskConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintTaskConfigurationSaveRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintTaskConfigurationSaveRequestedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
+        static constexpr const char* type_name = "PrintTaskConfigurationSaveRequestedEventArgs";
     };
 }

@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 {
-    struct module_state
-    {
-        PyTypeObject* type_CompositeTransform3D;
-        PyTypeObject* type_Matrix3DHelper;
-        PyTypeObject* type_PerspectiveTransform3D;
-        PyTypeObject* type_Transform3D;
-        PyTypeObject* type_Matrix3D;
-    };
-
     // ----- CompositeTransform3D class --------------------
     static constexpr const char* const type_name_CompositeTransform3D = "CompositeTransform3D";
 
@@ -2266,52 +2257,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media::Media3D");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CompositeTransform3D);
-        Py_VISIT(state->type_Matrix3DHelper);
-        Py_VISIT(state->type_PerspectiveTransform3D);
-        Py_VISIT(state->type_Transform3D);
-        Py_VISIT(state->type_Matrix3D);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CompositeTransform3D);
-        Py_CLEAR(state->type_Matrix3DHelper);
-        Py_CLEAR(state->type_PerspectiveTransform3D);
-        Py_CLEAR(state->type_Transform3D);
-        Py_CLEAR(state->type_Matrix3D);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Media_Media3D",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Media::Media3D
@@ -2327,7 +2281,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Media3D(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2340,17 +2294,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Media3D(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_CompositeTransform3D_Meta{PyType_FromSpec(&type_spec_CompositeTransform3D_Meta)};
     if (!type_CompositeTransform3D_Meta)
     {
         return nullptr;
     }
 
-    state->type_CompositeTransform3D = py::register_python_type(module.get(), type_name_CompositeTransform3D, &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get()));
-    if (!state->type_CompositeTransform3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositeTransform3D, &type_spec_CompositeTransform3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositeTransform3D, &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2361,8 +2315,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Media3D(void) noexcept
         return nullptr;
     }
 
-    state->type_Matrix3DHelper = py::register_python_type(module.get(), type_name_Matrix3DHelper, &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get()));
-    if (!state->type_Matrix3DHelper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix3DHelper, &type_spec_Matrix3DHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix3DHelper, &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2373,139 +2330,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Media3D(void) noexcept
         return nullptr;
     }
 
-    state->type_PerspectiveTransform3D = py::register_python_type(module.get(), type_name_PerspectiveTransform3D, &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get()));
-    if (!state->type_PerspectiveTransform3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PerspectiveTransform3D, &type_spec_PerspectiveTransform3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PerspectiveTransform3D, &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Transform3D = py::register_python_type(module.get(), type_name_Transform3D, &type_spec_Transform3D, object_bases.get(), nullptr);
-    if (!state->type_Transform3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Transform3D, &type_spec_Transform3D, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Transform3D, &type_spec_Transform3D, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Matrix3D = py::register_python_type(module.get(), type_name_Matrix3D, &type_spec_Matrix3D, nullptr, nullptr);
-    if (!state->type_Matrix3D)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Matrix3D, &type_spec_Matrix3D, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Matrix3D, &type_spec_Matrix3D, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Media3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Media3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositeTransform3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Media3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Media3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix3DHelper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Media3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Media3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PerspectiveTransform3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Media3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Media3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Transform3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Media3D::Transform3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Media3D;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Media3D");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Matrix3D;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

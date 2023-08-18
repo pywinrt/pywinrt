@@ -6,23 +6,6 @@
 
 namespace py::cpp::Windows::Gaming::Input::Custom
 {
-    struct module_state
-    {
-        PyTypeObject* type_GameControllerFactoryManager;
-        PyTypeObject* type_GipFirmwareUpdateResult;
-        PyTypeObject* type_GipGameControllerProvider;
-        PyTypeObject* type_HidGameControllerProvider;
-        PyTypeObject* type_XusbGameControllerProvider;
-        PyTypeObject* type_ICustomGameControllerFactory;
-        PyTypeObject* type_IGameControllerInputSink;
-        PyTypeObject* type_IGameControllerProvider;
-        PyTypeObject* type_IGipGameControllerInputSink;
-        PyTypeObject* type_IHidGameControllerInputSink;
-        PyTypeObject* type_IXusbGameControllerInputSink;
-        PyTypeObject* type_GameControllerVersionInfo;
-        PyTypeObject* type_GipFirmwareUpdateProgress;
-    };
-
     // ----- GameControllerFactoryManager class --------------------
     static constexpr const char* const type_name_GameControllerFactoryManager = "GameControllerFactoryManager";
 
@@ -2531,68 +2514,15 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     PyDoc_STRVAR(module_doc, "Windows::Gaming::Input::Custom");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_GameControllerFactoryManager);
-        Py_VISIT(state->type_GipFirmwareUpdateResult);
-        Py_VISIT(state->type_GipGameControllerProvider);
-        Py_VISIT(state->type_HidGameControllerProvider);
-        Py_VISIT(state->type_XusbGameControllerProvider);
-        Py_VISIT(state->type_ICustomGameControllerFactory);
-        Py_VISIT(state->type_IGameControllerInputSink);
-        Py_VISIT(state->type_IGameControllerProvider);
-        Py_VISIT(state->type_IGipGameControllerInputSink);
-        Py_VISIT(state->type_IHidGameControllerInputSink);
-        Py_VISIT(state->type_IXusbGameControllerInputSink);
-        Py_VISIT(state->type_GameControllerVersionInfo);
-        Py_VISIT(state->type_GipFirmwareUpdateProgress);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_GameControllerFactoryManager);
-        Py_CLEAR(state->type_GipFirmwareUpdateResult);
-        Py_CLEAR(state->type_GipGameControllerProvider);
-        Py_CLEAR(state->type_HidGameControllerProvider);
-        Py_CLEAR(state->type_XusbGameControllerProvider);
-        Py_CLEAR(state->type_ICustomGameControllerFactory);
-        Py_CLEAR(state->type_IGameControllerInputSink);
-        Py_CLEAR(state->type_IGameControllerProvider);
-        Py_CLEAR(state->type_IGipGameControllerInputSink);
-        Py_CLEAR(state->type_IHidGameControllerInputSink);
-        Py_CLEAR(state->type_IXusbGameControllerInputSink);
-        Py_CLEAR(state->type_GameControllerVersionInfo);
-        Py_CLEAR(state->type_GipFirmwareUpdateProgress);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Gaming_Input_Custom",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Gaming::Input::Custom
@@ -2608,7 +2538,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input_Custom(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2621,386 +2551,123 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input_Custom(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_GameControllerFactoryManager = py::register_python_type(module.get(), type_name_GameControllerFactoryManager, &type_spec_GameControllerFactoryManager, object_bases.get(), nullptr);
-    if (!state->type_GameControllerFactoryManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameControllerFactoryManager, &type_spec_GameControllerFactoryManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameControllerFactoryManager, &type_spec_GameControllerFactoryManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GipFirmwareUpdateResult = py::register_python_type(module.get(), type_name_GipFirmwareUpdateResult, &type_spec_GipFirmwareUpdateResult, object_bases.get(), nullptr);
-    if (!state->type_GipFirmwareUpdateResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateResult, &type_spec_GipFirmwareUpdateResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateResult, &type_spec_GipFirmwareUpdateResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GipGameControllerProvider = py::register_python_type(module.get(), type_name_GipGameControllerProvider, &type_spec_GipGameControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_GipGameControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GipGameControllerProvider, &type_spec_GipGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GipGameControllerProvider, &type_spec_GipGameControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidGameControllerProvider = py::register_python_type(module.get(), type_name_HidGameControllerProvider, &type_spec_HidGameControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_HidGameControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidGameControllerProvider, &type_spec_HidGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidGameControllerProvider, &type_spec_HidGameControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XusbGameControllerProvider = py::register_python_type(module.get(), type_name_XusbGameControllerProvider, &type_spec_XusbGameControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_XusbGameControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XusbGameControllerProvider, &type_spec_XusbGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XusbGameControllerProvider, &type_spec_XusbGameControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICustomGameControllerFactory = py::register_python_type(module.get(), type_name_ICustomGameControllerFactory, &type_spec_ICustomGameControllerFactory, object_bases.get(), nullptr);
-    if (!state->type_ICustomGameControllerFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICustomGameControllerFactory, &type_spec_ICustomGameControllerFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICustomGameControllerFactory, &type_spec_ICustomGameControllerFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGameControllerInputSink = py::register_python_type(module.get(), type_name_IGameControllerInputSink, &type_spec_IGameControllerInputSink, object_bases.get(), nullptr);
-    if (!state->type_IGameControllerInputSink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGameControllerInputSink, &type_spec_IGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGameControllerInputSink, &type_spec_IGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGameControllerProvider = py::register_python_type(module.get(), type_name_IGameControllerProvider, &type_spec_IGameControllerProvider, object_bases.get(), nullptr);
-    if (!state->type_IGameControllerProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGameControllerProvider, &type_spec_IGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGameControllerProvider, &type_spec_IGameControllerProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IGipGameControllerInputSink = py::register_python_type(module.get(), type_name_IGipGameControllerInputSink, &type_spec_IGipGameControllerInputSink, object_bases.get(), nullptr);
-    if (!state->type_IGipGameControllerInputSink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IGipGameControllerInputSink, &type_spec_IGipGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IGipGameControllerInputSink, &type_spec_IGipGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IHidGameControllerInputSink = py::register_python_type(module.get(), type_name_IHidGameControllerInputSink, &type_spec_IHidGameControllerInputSink, object_bases.get(), nullptr);
-    if (!state->type_IHidGameControllerInputSink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IHidGameControllerInputSink, &type_spec_IHidGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IHidGameControllerInputSink, &type_spec_IHidGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IXusbGameControllerInputSink = py::register_python_type(module.get(), type_name_IXusbGameControllerInputSink, &type_spec_IXusbGameControllerInputSink, object_bases.get(), nullptr);
-    if (!state->type_IXusbGameControllerInputSink)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IXusbGameControllerInputSink, &type_spec_IXusbGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IXusbGameControllerInputSink, &type_spec_IXusbGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameControllerVersionInfo = py::register_python_type(module.get(), type_name_GameControllerVersionInfo, &type_spec_GameControllerVersionInfo, nullptr, nullptr);
-    if (!state->type_GameControllerVersionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameControllerVersionInfo, &type_spec_GameControllerVersionInfo, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameControllerVersionInfo, &type_spec_GameControllerVersionInfo, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GipFirmwareUpdateProgress = py::register_python_type(module.get(), type_name_GipFirmwareUpdateProgress, &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr);
-    if (!state->type_GipFirmwareUpdateProgress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateProgress, &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateProgress, &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameControllerFactoryManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GipFirmwareUpdateResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GipGameControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidGameControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XusbGameControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICustomGameControllerFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGameControllerInputSink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGameControllerProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::IGameControllerProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IGipGameControllerInputSink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IHidGameControllerInputSink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IXusbGameControllerInputSink;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameControllerVersionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Gaming::Input::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Gaming::Input::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GipFirmwareUpdateProgress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
+        static constexpr const char* type_name = "PhoneCallOrigin";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
+        static constexpr const char* type_name = "PhoneCallOriginManager";
     };
 }

@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 {
-    struct module_state
-    {
-        PyTypeObject* type_HidBooleanControl;
-        PyTypeObject* type_HidBooleanControlDescription;
-        PyTypeObject* type_HidCollection;
-        PyTypeObject* type_HidDevice;
-        PyTypeObject* type_HidFeatureReport;
-        PyTypeObject* type_HidInputReport;
-        PyTypeObject* type_HidInputReportReceivedEventArgs;
-        PyTypeObject* type_HidNumericControl;
-        PyTypeObject* type_HidNumericControlDescription;
-        PyTypeObject* type_HidOutputReport;
-    };
-
     // ----- HidBooleanControl class --------------------
     static constexpr const char* const type_name_HidBooleanControl = "HidBooleanControl";
 
@@ -2883,62 +2869,15 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     PyDoc_STRVAR(module_doc, "Windows::Devices::HumanInterfaceDevice");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HidBooleanControl);
-        Py_VISIT(state->type_HidBooleanControlDescription);
-        Py_VISIT(state->type_HidCollection);
-        Py_VISIT(state->type_HidDevice);
-        Py_VISIT(state->type_HidFeatureReport);
-        Py_VISIT(state->type_HidInputReport);
-        Py_VISIT(state->type_HidInputReportReceivedEventArgs);
-        Py_VISIT(state->type_HidNumericControl);
-        Py_VISIT(state->type_HidNumericControlDescription);
-        Py_VISIT(state->type_HidOutputReport);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HidBooleanControl);
-        Py_CLEAR(state->type_HidBooleanControlDescription);
-        Py_CLEAR(state->type_HidCollection);
-        Py_CLEAR(state->type_HidDevice);
-        Py_CLEAR(state->type_HidFeatureReport);
-        Py_CLEAR(state->type_HidInputReport);
-        Py_CLEAR(state->type_HidInputReportReceivedEventArgs);
-        Py_CLEAR(state->type_HidNumericControl);
-        Py_CLEAR(state->type_HidNumericControlDescription);
-        Py_CLEAR(state->type_HidOutputReport);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_HumanInterfaceDevice",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::HumanInterfaceDevice
@@ -2954,7 +2893,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_HumanInterfaceDevice(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2967,299 +2906,96 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_HumanInterfaceDevice(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HidBooleanControl = py::register_python_type(module.get(), type_name_HidBooleanControl, &type_spec_HidBooleanControl, object_bases.get(), nullptr);
-    if (!state->type_HidBooleanControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidBooleanControl, &type_spec_HidBooleanControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidBooleanControl, &type_spec_HidBooleanControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidBooleanControlDescription = py::register_python_type(module.get(), type_name_HidBooleanControlDescription, &type_spec_HidBooleanControlDescription, object_bases.get(), nullptr);
-    if (!state->type_HidBooleanControlDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidBooleanControlDescription, &type_spec_HidBooleanControlDescription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidBooleanControlDescription, &type_spec_HidBooleanControlDescription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidCollection = py::register_python_type(module.get(), type_name_HidCollection, &type_spec_HidCollection, object_bases.get(), nullptr);
-    if (!state->type_HidCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidCollection, &type_spec_HidCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidCollection, &type_spec_HidCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidDevice = py::register_python_type(module.get(), type_name_HidDevice, &type_spec_HidDevice, object_bases.get(), nullptr);
-    if (!state->type_HidDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidDevice, &type_spec_HidDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidDevice, &type_spec_HidDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidFeatureReport = py::register_python_type(module.get(), type_name_HidFeatureReport, &type_spec_HidFeatureReport, object_bases.get(), nullptr);
-    if (!state->type_HidFeatureReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidFeatureReport, &type_spec_HidFeatureReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidFeatureReport, &type_spec_HidFeatureReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidInputReport = py::register_python_type(module.get(), type_name_HidInputReport, &type_spec_HidInputReport, object_bases.get(), nullptr);
-    if (!state->type_HidInputReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidInputReport, &type_spec_HidInputReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidInputReport, &type_spec_HidInputReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidInputReportReceivedEventArgs = py::register_python_type(module.get(), type_name_HidInputReportReceivedEventArgs, &type_spec_HidInputReportReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HidInputReportReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidInputReportReceivedEventArgs, &type_spec_HidInputReportReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidInputReportReceivedEventArgs, &type_spec_HidInputReportReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidNumericControl = py::register_python_type(module.get(), type_name_HidNumericControl, &type_spec_HidNumericControl, object_bases.get(), nullptr);
-    if (!state->type_HidNumericControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidNumericControl, &type_spec_HidNumericControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidNumericControl, &type_spec_HidNumericControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidNumericControlDescription = py::register_python_type(module.get(), type_name_HidNumericControlDescription, &type_spec_HidNumericControlDescription, object_bases.get(), nullptr);
-    if (!state->type_HidNumericControlDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidNumericControlDescription, &type_spec_HidNumericControlDescription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidNumericControlDescription, &type_spec_HidNumericControlDescription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HidOutputReport = py::register_python_type(module.get(), type_name_HidOutputReport, &type_spec_HidOutputReport, object_bases.get(), nullptr);
-    if (!state->type_HidOutputReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HidOutputReport, &type_spec_HidOutputReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HidOutputReport, &type_spec_HidOutputReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidBooleanControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidBooleanControlDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidFeatureReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidInputReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidInputReportReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidNumericControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidNumericControlDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::HumanInterfaceDevice;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::HumanInterfaceDevice");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HidOutputReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

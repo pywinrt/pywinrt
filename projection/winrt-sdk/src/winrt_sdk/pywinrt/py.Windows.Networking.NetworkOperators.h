@@ -466,506 +466,590 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESim>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESim>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESim";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimDiscoverEvent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimDiscoverResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimDownloadProfileMetadataResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimPolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimProfileMetadata";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimProfilePolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimRemovedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimServiceInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "FdnAccessManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "HotspotAuthenticationContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "HotspotAuthenticationEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "HotspotCredentialsAuthenticationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "KnownCSimFilePaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "KnownRuimFilePaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "KnownSimFilePaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "KnownUSimFilePaths";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandAccount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandAccountEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandAccountUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandAccountWatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandAntennaSar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellCdma";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellGsm";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellLte";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellNR";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellTdscdma";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellUmts";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCellsInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandCurrentSlotIndexChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceCommandResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceCommandSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceDataSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandModem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandModemConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandModemIsolation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandNetwork";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandNetworkRegistrationStateChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandNetworkRegistrationStateChangeTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPco";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPcoDataChangeTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPin";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPinLockStateChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPinLockStateChangeTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPinManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandPinOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandRadioStateChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandRadioStateChangeTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandSarManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandSlotInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandSlotInfoChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandSlotManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandTransmissionStateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandUicc";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandUiccApp";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandUiccAppReadRecordResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandUiccAppRecordDetailsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandUiccAppsResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorDataUsageTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorNotificationEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorTetheringAccessPointConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorTetheringClient";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorTetheringManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorTetheringOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ProvisionFromXmlDocumentResults";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ProvisionedProfile";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ProvisioningAgent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "TetheringEntitlementCheckTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::UssdMessage>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::UssdMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "UssdMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::UssdReply>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::UssdReply>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "UssdReply";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::UssdSession>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::UssdSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "UssdSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ESimProfileInstallProgress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "ProfileUsage";
     };
 }

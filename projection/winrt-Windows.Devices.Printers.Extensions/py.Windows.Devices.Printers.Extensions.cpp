@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Printers::Extensions
 {
-    struct module_state
-    {
-        PyTypeObject* type_Print3DWorkflow;
-        PyTypeObject* type_Print3DWorkflowPrintRequestedEventArgs;
-        PyTypeObject* type_Print3DWorkflowPrinterChangedEventArgs;
-        PyTypeObject* type_PrintExtensionContext;
-        PyTypeObject* type_PrintNotificationEventDetails;
-        PyTypeObject* type_PrintTaskConfiguration;
-        PyTypeObject* type_PrintTaskConfigurationSaveRequest;
-        PyTypeObject* type_PrintTaskConfigurationSaveRequestedDeferral;
-        PyTypeObject* type_PrintTaskConfigurationSaveRequestedEventArgs;
-    };
-
     // ----- Print3DWorkflow class --------------------
     static constexpr const char* const type_name_Print3DWorkflow = "Print3DWorkflow";
 
@@ -1314,60 +1301,15 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     PyDoc_STRVAR(module_doc, "Windows::Devices::Printers::Extensions");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Print3DWorkflow);
-        Py_VISIT(state->type_Print3DWorkflowPrintRequestedEventArgs);
-        Py_VISIT(state->type_Print3DWorkflowPrinterChangedEventArgs);
-        Py_VISIT(state->type_PrintExtensionContext);
-        Py_VISIT(state->type_PrintNotificationEventDetails);
-        Py_VISIT(state->type_PrintTaskConfiguration);
-        Py_VISIT(state->type_PrintTaskConfigurationSaveRequest);
-        Py_VISIT(state->type_PrintTaskConfigurationSaveRequestedDeferral);
-        Py_VISIT(state->type_PrintTaskConfigurationSaveRequestedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Print3DWorkflow);
-        Py_CLEAR(state->type_Print3DWorkflowPrintRequestedEventArgs);
-        Py_CLEAR(state->type_Print3DWorkflowPrinterChangedEventArgs);
-        Py_CLEAR(state->type_PrintExtensionContext);
-        Py_CLEAR(state->type_PrintNotificationEventDetails);
-        Py_CLEAR(state->type_PrintTaskConfiguration);
-        Py_CLEAR(state->type_PrintTaskConfigurationSaveRequest);
-        Py_CLEAR(state->type_PrintTaskConfigurationSaveRequestedDeferral);
-        Py_CLEAR(state->type_PrintTaskConfigurationSaveRequestedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Printers_Extensions",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Printers::Extensions
@@ -1383,7 +1325,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers_Extensions(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1396,270 +1338,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers_Extensions(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Print3DWorkflow = py::register_python_type(module.get(), type_name_Print3DWorkflow, &type_spec_Print3DWorkflow, object_bases.get(), nullptr);
-    if (!state->type_Print3DWorkflow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflow, &type_spec_Print3DWorkflow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflow, &type_spec_Print3DWorkflow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DWorkflowPrintRequestedEventArgs = py::register_python_type(module.get(), type_name_Print3DWorkflowPrintRequestedEventArgs, &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DWorkflowPrintRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrintRequestedEventArgs, &type_spec_Print3DWorkflowPrintRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrintRequestedEventArgs, &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DWorkflowPrinterChangedEventArgs = py::register_python_type(module.get(), type_name_Print3DWorkflowPrinterChangedEventArgs, &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DWorkflowPrinterChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrinterChangedEventArgs, &type_spec_Print3DWorkflowPrinterChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrinterChangedEventArgs, &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintExtensionContext = py::register_python_type(module.get(), type_name_PrintExtensionContext, &type_spec_PrintExtensionContext, object_bases.get(), nullptr);
-    if (!state->type_PrintExtensionContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintExtensionContext, &type_spec_PrintExtensionContext, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintExtensionContext, &type_spec_PrintExtensionContext, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintNotificationEventDetails = py::register_python_type(module.get(), type_name_PrintNotificationEventDetails, &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr);
-    if (!state->type_PrintNotificationEventDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintNotificationEventDetails, &type_spec_PrintNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintNotificationEventDetails, &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskConfiguration = py::register_python_type(module.get(), type_name_PrintTaskConfiguration, &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfiguration, &type_spec_PrintTaskConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfiguration, &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskConfigurationSaveRequest = py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequest, &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskConfigurationSaveRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequest, &type_spec_PrintTaskConfigurationSaveRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequest, &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskConfigurationSaveRequestedDeferral = py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedDeferral, &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskConfigurationSaveRequestedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedDeferral, &type_spec_PrintTaskConfigurationSaveRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedDeferral, &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskConfigurationSaveRequestedEventArgs = py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedEventArgs, &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskConfigurationSaveRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedEventArgs, &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedEventArgs, &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflowPrintRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflowPrinterChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintExtensionContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintNotificationEventDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskConfigurationSaveRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskConfigurationSaveRequestedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Printers::Extensions;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Printers::Extensions");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskConfigurationSaveRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

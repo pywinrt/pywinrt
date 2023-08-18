@@ -156,92 +156,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothAdapter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothClassOfDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothDevice>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothDeviceId";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEAppearance";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEAppearanceCategories";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEAppearanceSubcategories";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEConnectionParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEConnectionPhy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEConnectionPhyInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEPreferredConnectionParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothLEPreferredConnectionParametersRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothSignalStrengthFilter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper>
+    struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
+        static constexpr const char* type_name = "BluetoothUuidHelper";
     };
 }

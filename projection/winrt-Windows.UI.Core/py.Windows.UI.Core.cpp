@@ -6,46 +6,6 @@
 
 namespace py::cpp::Windows::UI::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_AcceleratorKeyEventArgs;
-        PyTypeObject* type_AutomationProviderRequestedEventArgs;
-        PyTypeObject* type_BackRequestedEventArgs;
-        PyTypeObject* type_CharacterReceivedEventArgs;
-        PyTypeObject* type_ClosestInteractiveBoundsRequestedEventArgs;
-        PyTypeObject* type_CoreAcceleratorKeys;
-        PyTypeObject* type_CoreComponentInputSource;
-        PyTypeObject* type_CoreCursor;
-        PyTypeObject* type_CoreDispatcher;
-        PyTypeObject* type_CoreIndependentInputSource;
-        PyTypeObject* type_CoreIndependentInputSourceController;
-        PyTypeObject* type_CoreWindow;
-        PyTypeObject* type_CoreWindowDialog;
-        PyTypeObject* type_CoreWindowEventArgs;
-        PyTypeObject* type_CoreWindowFlyout;
-        PyTypeObject* type_CoreWindowPopupShowingEventArgs;
-        PyTypeObject* type_CoreWindowResizeManager;
-        PyTypeObject* type_IdleDispatchedHandlerArgs;
-        PyTypeObject* type_InputEnabledEventArgs;
-        PyTypeObject* type_KeyEventArgs;
-        PyTypeObject* type_PointerEventArgs;
-        PyTypeObject* type_SystemNavigationManager;
-        PyTypeObject* type_TouchHitTestingEventArgs;
-        PyTypeObject* type_VisibilityChangedEventArgs;
-        PyTypeObject* type_WindowActivatedEventArgs;
-        PyTypeObject* type_WindowSizeChangedEventArgs;
-        PyTypeObject* type_ICoreAcceleratorKeys;
-        PyTypeObject* type_ICoreInputSourceBase;
-        PyTypeObject* type_ICorePointerInputSource;
-        PyTypeObject* type_ICorePointerInputSource2;
-        PyTypeObject* type_ICorePointerRedirector;
-        PyTypeObject* type_ICoreWindow;
-        PyTypeObject* type_ICoreWindowEventArgs;
-        PyTypeObject* type_IInitializeWithCoreWindow;
-        PyTypeObject* type_CorePhysicalKeyStatus;
-        PyTypeObject* type_CoreProximityEvaluation;
-    };
-
     // ----- AcceleratorKeyEventArgs class --------------------
     static constexpr const char* const type_name_AcceleratorKeyEventArgs = "AcceleratorKeyEventArgs";
 
@@ -11899,114 +11859,15 @@ namespace py::cpp::Windows::UI::Core
     PyDoc_STRVAR(module_doc, "Windows::UI::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AcceleratorKeyEventArgs);
-        Py_VISIT(state->type_AutomationProviderRequestedEventArgs);
-        Py_VISIT(state->type_BackRequestedEventArgs);
-        Py_VISIT(state->type_CharacterReceivedEventArgs);
-        Py_VISIT(state->type_ClosestInteractiveBoundsRequestedEventArgs);
-        Py_VISIT(state->type_CoreAcceleratorKeys);
-        Py_VISIT(state->type_CoreComponentInputSource);
-        Py_VISIT(state->type_CoreCursor);
-        Py_VISIT(state->type_CoreDispatcher);
-        Py_VISIT(state->type_CoreIndependentInputSource);
-        Py_VISIT(state->type_CoreIndependentInputSourceController);
-        Py_VISIT(state->type_CoreWindow);
-        Py_VISIT(state->type_CoreWindowDialog);
-        Py_VISIT(state->type_CoreWindowEventArgs);
-        Py_VISIT(state->type_CoreWindowFlyout);
-        Py_VISIT(state->type_CoreWindowPopupShowingEventArgs);
-        Py_VISIT(state->type_CoreWindowResizeManager);
-        Py_VISIT(state->type_IdleDispatchedHandlerArgs);
-        Py_VISIT(state->type_InputEnabledEventArgs);
-        Py_VISIT(state->type_KeyEventArgs);
-        Py_VISIT(state->type_PointerEventArgs);
-        Py_VISIT(state->type_SystemNavigationManager);
-        Py_VISIT(state->type_TouchHitTestingEventArgs);
-        Py_VISIT(state->type_VisibilityChangedEventArgs);
-        Py_VISIT(state->type_WindowActivatedEventArgs);
-        Py_VISIT(state->type_WindowSizeChangedEventArgs);
-        Py_VISIT(state->type_ICoreAcceleratorKeys);
-        Py_VISIT(state->type_ICoreInputSourceBase);
-        Py_VISIT(state->type_ICorePointerInputSource);
-        Py_VISIT(state->type_ICorePointerInputSource2);
-        Py_VISIT(state->type_ICorePointerRedirector);
-        Py_VISIT(state->type_ICoreWindow);
-        Py_VISIT(state->type_ICoreWindowEventArgs);
-        Py_VISIT(state->type_IInitializeWithCoreWindow);
-        Py_VISIT(state->type_CorePhysicalKeyStatus);
-        Py_VISIT(state->type_CoreProximityEvaluation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AcceleratorKeyEventArgs);
-        Py_CLEAR(state->type_AutomationProviderRequestedEventArgs);
-        Py_CLEAR(state->type_BackRequestedEventArgs);
-        Py_CLEAR(state->type_CharacterReceivedEventArgs);
-        Py_CLEAR(state->type_ClosestInteractiveBoundsRequestedEventArgs);
-        Py_CLEAR(state->type_CoreAcceleratorKeys);
-        Py_CLEAR(state->type_CoreComponentInputSource);
-        Py_CLEAR(state->type_CoreCursor);
-        Py_CLEAR(state->type_CoreDispatcher);
-        Py_CLEAR(state->type_CoreIndependentInputSource);
-        Py_CLEAR(state->type_CoreIndependentInputSourceController);
-        Py_CLEAR(state->type_CoreWindow);
-        Py_CLEAR(state->type_CoreWindowDialog);
-        Py_CLEAR(state->type_CoreWindowEventArgs);
-        Py_CLEAR(state->type_CoreWindowFlyout);
-        Py_CLEAR(state->type_CoreWindowPopupShowingEventArgs);
-        Py_CLEAR(state->type_CoreWindowResizeManager);
-        Py_CLEAR(state->type_IdleDispatchedHandlerArgs);
-        Py_CLEAR(state->type_InputEnabledEventArgs);
-        Py_CLEAR(state->type_KeyEventArgs);
-        Py_CLEAR(state->type_PointerEventArgs);
-        Py_CLEAR(state->type_SystemNavigationManager);
-        Py_CLEAR(state->type_TouchHitTestingEventArgs);
-        Py_CLEAR(state->type_VisibilityChangedEventArgs);
-        Py_CLEAR(state->type_WindowActivatedEventArgs);
-        Py_CLEAR(state->type_WindowSizeChangedEventArgs);
-        Py_CLEAR(state->type_ICoreAcceleratorKeys);
-        Py_CLEAR(state->type_ICoreInputSourceBase);
-        Py_CLEAR(state->type_ICorePointerInputSource);
-        Py_CLEAR(state->type_ICorePointerInputSource2);
-        Py_CLEAR(state->type_ICorePointerRedirector);
-        Py_CLEAR(state->type_ICoreWindow);
-        Py_CLEAR(state->type_ICoreWindowEventArgs);
-        Py_CLEAR(state->type_IInitializeWithCoreWindow);
-        Py_CLEAR(state->type_CorePhysicalKeyStatus);
-        Py_CLEAR(state->type_CoreProximityEvaluation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Core
@@ -12022,7 +11883,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -12035,1053 +11896,330 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AcceleratorKeyEventArgs = py::register_python_type(module.get(), type_name_AcceleratorKeyEventArgs, &type_spec_AcceleratorKeyEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AcceleratorKeyEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AcceleratorKeyEventArgs, &type_spec_AcceleratorKeyEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AcceleratorKeyEventArgs, &type_spec_AcceleratorKeyEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AutomationProviderRequestedEventArgs = py::register_python_type(module.get(), type_name_AutomationProviderRequestedEventArgs, &type_spec_AutomationProviderRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AutomationProviderRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AutomationProviderRequestedEventArgs, &type_spec_AutomationProviderRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AutomationProviderRequestedEventArgs, &type_spec_AutomationProviderRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackRequestedEventArgs = py::register_python_type(module.get(), type_name_BackRequestedEventArgs, &type_spec_BackRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackRequestedEventArgs, &type_spec_BackRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackRequestedEventArgs, &type_spec_BackRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CharacterReceivedEventArgs = py::register_python_type(module.get(), type_name_CharacterReceivedEventArgs, &type_spec_CharacterReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CharacterReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CharacterReceivedEventArgs, &type_spec_CharacterReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CharacterReceivedEventArgs, &type_spec_CharacterReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ClosestInteractiveBoundsRequestedEventArgs = py::register_python_type(module.get(), type_name_ClosestInteractiveBoundsRequestedEventArgs, &type_spec_ClosestInteractiveBoundsRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ClosestInteractiveBoundsRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ClosestInteractiveBoundsRequestedEventArgs, &type_spec_ClosestInteractiveBoundsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ClosestInteractiveBoundsRequestedEventArgs, &type_spec_ClosestInteractiveBoundsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreAcceleratorKeys = py::register_python_type(module.get(), type_name_CoreAcceleratorKeys, &type_spec_CoreAcceleratorKeys, object_bases.get(), nullptr);
-    if (!state->type_CoreAcceleratorKeys)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreAcceleratorKeys, &type_spec_CoreAcceleratorKeys, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreAcceleratorKeys, &type_spec_CoreAcceleratorKeys, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreComponentInputSource = py::register_python_type(module.get(), type_name_CoreComponentInputSource, &type_spec_CoreComponentInputSource, object_bases.get(), nullptr);
-    if (!state->type_CoreComponentInputSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreComponentInputSource, &type_spec_CoreComponentInputSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreComponentInputSource, &type_spec_CoreComponentInputSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreCursor = py::register_python_type(module.get(), type_name_CoreCursor, &type_spec_CoreCursor, object_bases.get(), nullptr);
-    if (!state->type_CoreCursor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreCursor, &type_spec_CoreCursor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreCursor, &type_spec_CoreCursor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreDispatcher = py::register_python_type(module.get(), type_name_CoreDispatcher, &type_spec_CoreDispatcher, object_bases.get(), nullptr);
-    if (!state->type_CoreDispatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDispatcher, &type_spec_CoreDispatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDispatcher, &type_spec_CoreDispatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreIndependentInputSource = py::register_python_type(module.get(), type_name_CoreIndependentInputSource, &type_spec_CoreIndependentInputSource, object_bases.get(), nullptr);
-    if (!state->type_CoreIndependentInputSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreIndependentInputSource, &type_spec_CoreIndependentInputSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreIndependentInputSource, &type_spec_CoreIndependentInputSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreIndependentInputSourceController = py::register_python_type(module.get(), type_name_CoreIndependentInputSourceController, &type_spec_CoreIndependentInputSourceController, object_bases.get(), nullptr);
-    if (!state->type_CoreIndependentInputSourceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreIndependentInputSourceController, &type_spec_CoreIndependentInputSourceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreIndependentInputSourceController, &type_spec_CoreIndependentInputSourceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindow = py::register_python_type(module.get(), type_name_CoreWindow, &type_spec_CoreWindow, object_bases.get(), nullptr);
-    if (!state->type_CoreWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindow, &type_spec_CoreWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindow, &type_spec_CoreWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindowDialog = py::register_python_type(module.get(), type_name_CoreWindowDialog, &type_spec_CoreWindowDialog, object_bases.get(), nullptr);
-    if (!state->type_CoreWindowDialog)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindowDialog, &type_spec_CoreWindowDialog, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindowDialog, &type_spec_CoreWindowDialog, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindowEventArgs = py::register_python_type(module.get(), type_name_CoreWindowEventArgs, &type_spec_CoreWindowEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreWindowEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindowEventArgs, &type_spec_CoreWindowEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindowEventArgs, &type_spec_CoreWindowEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindowFlyout = py::register_python_type(module.get(), type_name_CoreWindowFlyout, &type_spec_CoreWindowFlyout, object_bases.get(), nullptr);
-    if (!state->type_CoreWindowFlyout)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindowFlyout, &type_spec_CoreWindowFlyout, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindowFlyout, &type_spec_CoreWindowFlyout, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindowPopupShowingEventArgs = py::register_python_type(module.get(), type_name_CoreWindowPopupShowingEventArgs, &type_spec_CoreWindowPopupShowingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreWindowPopupShowingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindowPopupShowingEventArgs, &type_spec_CoreWindowPopupShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindowPopupShowingEventArgs, &type_spec_CoreWindowPopupShowingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreWindowResizeManager = py::register_python_type(module.get(), type_name_CoreWindowResizeManager, &type_spec_CoreWindowResizeManager, object_bases.get(), nullptr);
-    if (!state->type_CoreWindowResizeManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreWindowResizeManager, &type_spec_CoreWindowResizeManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreWindowResizeManager, &type_spec_CoreWindowResizeManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IdleDispatchedHandlerArgs = py::register_python_type(module.get(), type_name_IdleDispatchedHandlerArgs, &type_spec_IdleDispatchedHandlerArgs, object_bases.get(), nullptr);
-    if (!state->type_IdleDispatchedHandlerArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IdleDispatchedHandlerArgs, &type_spec_IdleDispatchedHandlerArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IdleDispatchedHandlerArgs, &type_spec_IdleDispatchedHandlerArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputEnabledEventArgs = py::register_python_type(module.get(), type_name_InputEnabledEventArgs, &type_spec_InputEnabledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InputEnabledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputEnabledEventArgs, &type_spec_InputEnabledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputEnabledEventArgs, &type_spec_InputEnabledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyEventArgs = py::register_python_type(module.get(), type_name_KeyEventArgs, &type_spec_KeyEventArgs, object_bases.get(), nullptr);
-    if (!state->type_KeyEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyEventArgs, &type_spec_KeyEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyEventArgs, &type_spec_KeyEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointerEventArgs = py::register_python_type(module.get(), type_name_PointerEventArgs, &type_spec_PointerEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PointerEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointerEventArgs, &type_spec_PointerEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointerEventArgs, &type_spec_PointerEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemNavigationManager = py::register_python_type(module.get(), type_name_SystemNavigationManager, &type_spec_SystemNavigationManager, object_bases.get(), nullptr);
-    if (!state->type_SystemNavigationManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemNavigationManager, &type_spec_SystemNavigationManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemNavigationManager, &type_spec_SystemNavigationManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TouchHitTestingEventArgs = py::register_python_type(module.get(), type_name_TouchHitTestingEventArgs, &type_spec_TouchHitTestingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TouchHitTestingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TouchHitTestingEventArgs, &type_spec_TouchHitTestingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TouchHitTestingEventArgs, &type_spec_TouchHitTestingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisibilityChangedEventArgs = py::register_python_type(module.get(), type_name_VisibilityChangedEventArgs, &type_spec_VisibilityChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VisibilityChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisibilityChangedEventArgs, &type_spec_VisibilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisibilityChangedEventArgs, &type_spec_VisibilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowActivatedEventArgs = py::register_python_type(module.get(), type_name_WindowActivatedEventArgs, &type_spec_WindowActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowActivatedEventArgs, &type_spec_WindowActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowActivatedEventArgs, &type_spec_WindowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowSizeChangedEventArgs = py::register_python_type(module.get(), type_name_WindowSizeChangedEventArgs, &type_spec_WindowSizeChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowSizeChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowSizeChangedEventArgs, &type_spec_WindowSizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowSizeChangedEventArgs, &type_spec_WindowSizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreAcceleratorKeys = py::register_python_type(module.get(), type_name_ICoreAcceleratorKeys, &type_spec_ICoreAcceleratorKeys, object_bases.get(), nullptr);
-    if (!state->type_ICoreAcceleratorKeys)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreAcceleratorKeys, &type_spec_ICoreAcceleratorKeys, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreAcceleratorKeys, &type_spec_ICoreAcceleratorKeys, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreInputSourceBase = py::register_python_type(module.get(), type_name_ICoreInputSourceBase, &type_spec_ICoreInputSourceBase, object_bases.get(), nullptr);
-    if (!state->type_ICoreInputSourceBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreInputSourceBase, &type_spec_ICoreInputSourceBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreInputSourceBase, &type_spec_ICoreInputSourceBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICorePointerInputSource = py::register_python_type(module.get(), type_name_ICorePointerInputSource, &type_spec_ICorePointerInputSource, object_bases.get(), nullptr);
-    if (!state->type_ICorePointerInputSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICorePointerInputSource, &type_spec_ICorePointerInputSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICorePointerInputSource, &type_spec_ICorePointerInputSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICorePointerInputSource2 = py::register_python_type(module.get(), type_name_ICorePointerInputSource2, &type_spec_ICorePointerInputSource2, object_bases.get(), nullptr);
-    if (!state->type_ICorePointerInputSource2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICorePointerInputSource2, &type_spec_ICorePointerInputSource2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICorePointerInputSource2, &type_spec_ICorePointerInputSource2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICorePointerRedirector = py::register_python_type(module.get(), type_name_ICorePointerRedirector, &type_spec_ICorePointerRedirector, object_bases.get(), nullptr);
-    if (!state->type_ICorePointerRedirector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICorePointerRedirector, &type_spec_ICorePointerRedirector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICorePointerRedirector, &type_spec_ICorePointerRedirector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreWindow = py::register_python_type(module.get(), type_name_ICoreWindow, &type_spec_ICoreWindow, object_bases.get(), nullptr);
-    if (!state->type_ICoreWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreWindow, &type_spec_ICoreWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreWindow, &type_spec_ICoreWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreWindowEventArgs = py::register_python_type(module.get(), type_name_ICoreWindowEventArgs, &type_spec_ICoreWindowEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ICoreWindowEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreWindowEventArgs, &type_spec_ICoreWindowEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreWindowEventArgs, &type_spec_ICoreWindowEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInitializeWithCoreWindow = py::register_python_type(module.get(), type_name_IInitializeWithCoreWindow, &type_spec_IInitializeWithCoreWindow, object_bases.get(), nullptr);
-    if (!state->type_IInitializeWithCoreWindow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInitializeWithCoreWindow, &type_spec_IInitializeWithCoreWindow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInitializeWithCoreWindow, &type_spec_IInitializeWithCoreWindow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CorePhysicalKeyStatus = py::register_python_type(module.get(), type_name_CorePhysicalKeyStatus, &type_spec_CorePhysicalKeyStatus, nullptr, nullptr);
-    if (!state->type_CorePhysicalKeyStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CorePhysicalKeyStatus, &type_spec_CorePhysicalKeyStatus, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CorePhysicalKeyStatus, &type_spec_CorePhysicalKeyStatus, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreProximityEvaluation = py::register_python_type(module.get(), type_name_CoreProximityEvaluation, &type_spec_CoreProximityEvaluation, nullptr, nullptr);
-    if (!state->type_CoreProximityEvaluation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreProximityEvaluation, &type_spec_CoreProximityEvaluation, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreProximityEvaluation, &type_spec_CoreProximityEvaluation, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AcceleratorKeyEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AcceleratorKeyEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AutomationProviderRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::BackRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::BackRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CharacterReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CharacterReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ClosestInteractiveBoundsRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreAcceleratorKeys;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreAcceleratorKeys is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreComponentInputSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreComponentInputSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreComponentInputSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreCursor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreCursor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreCursor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreDispatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDispatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreDispatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreIndependentInputSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreIndependentInputSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreIndependentInputSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreIndependentInputSourceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreIndependentInputSourceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindowDialog>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindowDialog;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindowDialog is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindowEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindowEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindowEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindowFlyout>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindowFlyout;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindowFlyout is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindowPopupShowingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreWindowResizeManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreWindowResizeManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreWindowResizeManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IdleDispatchedHandlerArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::IdleDispatchedHandlerArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::InputEnabledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputEnabledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::InputEnabledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::KeyEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::KeyEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::PointerEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointerEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::PointerEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::SystemNavigationManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemNavigationManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::SystemNavigationManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TouchHitTestingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::TouchHitTestingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisibilityChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::VisibilityChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::WindowActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowSizeChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::WindowSizeChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreAcceleratorKeys;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICoreAcceleratorKeys is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICoreInputSourceBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreInputSourceBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICoreInputSourceBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICorePointerInputSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICorePointerInputSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICorePointerInputSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICorePointerInputSource2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICorePointerInputSource2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICorePointerInputSource2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICorePointerRedirector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICorePointerRedirector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICorePointerRedirector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICoreWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICoreWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreWindowEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::ICoreWindowEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInitializeWithCoreWindow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::IInitializeWithCoreWindow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CorePhysicalKeyStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CorePhysicalKeyStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::CoreProximityEvaluation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreProximityEvaluation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::CoreProximityEvaluation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

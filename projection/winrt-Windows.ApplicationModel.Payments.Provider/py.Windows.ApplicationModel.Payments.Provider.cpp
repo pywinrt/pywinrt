@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 {
-    struct module_state
-    {
-        PyTypeObject* type_PaymentAppCanMakePaymentTriggerDetails;
-        PyTypeObject* type_PaymentAppManager;
-        PyTypeObject* type_PaymentTransaction;
-        PyTypeObject* type_PaymentTransactionAcceptResult;
-    };
-
     // ----- PaymentAppCanMakePaymentTriggerDetails class --------------------
     static constexpr const char* const type_name_PaymentAppCanMakePaymentTriggerDetails = "PaymentAppCanMakePaymentTriggerDetails";
 
@@ -816,50 +808,15 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Payments::Provider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PaymentAppCanMakePaymentTriggerDetails);
-        Py_VISIT(state->type_PaymentAppManager);
-        Py_VISIT(state->type_PaymentTransaction);
-        Py_VISIT(state->type_PaymentTransactionAcceptResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PaymentAppCanMakePaymentTriggerDetails);
-        Py_CLEAR(state->type_PaymentAppManager);
-        Py_CLEAR(state->type_PaymentTransaction);
-        Py_CLEAR(state->type_PaymentTransactionAcceptResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Payments_Provider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Payments::Provider
@@ -875,7 +832,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Payments_Provider(void) no
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -888,11 +845,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Payments_Provider(void) no
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PaymentAppCanMakePaymentTriggerDetails = py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTriggerDetails, &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PaymentAppCanMakePaymentTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTriggerDetails, &type_spec_PaymentAppCanMakePaymentTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTriggerDetails, &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -903,116 +860,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Payments_Provider(void) no
         return nullptr;
     }
 
-    state->type_PaymentAppManager = py::register_python_type(module.get(), type_name_PaymentAppManager, &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get()));
-    if (!state->type_PaymentAppManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaymentAppManager, &type_spec_PaymentAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaymentAppManager, &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PaymentTransaction = py::register_python_type(module.get(), type_name_PaymentTransaction, &type_spec_PaymentTransaction, object_bases.get(), nullptr);
-    if (!state->type_PaymentTransaction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaymentTransaction, &type_spec_PaymentTransaction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaymentTransaction, &type_spec_PaymentTransaction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PaymentTransactionAcceptResult = py::register_python_type(module.get(), type_name_PaymentTransactionAcceptResult, &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr);
-    if (!state->type_PaymentTransactionAcceptResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaymentTransactionAcceptResult, &type_spec_PaymentTransactionAcceptResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaymentTransactionAcceptResult, &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentAppCanMakePaymentTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentAppManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentTransaction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Payments::Provider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Payments::Provider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentTransactionAcceptResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

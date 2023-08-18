@@ -462,393 +462,458 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::ActivatedDeferral>
+    struct py_type<winrt::Windows::UI::WebUI::ActivatedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "ActivatedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::ActivatedOperation>
+    struct py_type<winrt::Windows::UI::WebUI::ActivatedOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "ActivatedOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "BackgroundActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "EnteredBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>
+    struct py_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "HtmlPrintDocumentSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "LeavingBackgroundEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "NewWebUIViewCreatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::SuspendingDeferral>
+    struct py_type<winrt::Windows::UI::WebUI::SuspendingDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "SuspendingDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "SuspendingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::SuspendingOperation>
+    struct py_type<winrt::Windows::UI::WebUI::SuspendingOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "SuspendingOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIApplication>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIApplication>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIApplication";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIAppointmentsProviderAddAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIBackgroundTaskInstance";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIBackgroundTaskInstanceRuntimeClass";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIBarcodeScannerPreviewActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUICachedFileUpdaterActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUICameraSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUICommandLineActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactMapActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactMessageActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactPanelActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactPostActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIContactVideoCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIDeviceActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIDevicePairingActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIDialReceiverActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFileActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFileOpenPickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFileOpenPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFileSavePickerActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFileSavePickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIFolderPickerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUILaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUILockScreenActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUILockScreenCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUILockScreenComponentActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>
+    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUINavigatedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUINavigatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>
+    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUINavigatedOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIPhoneCallActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIPrint3DWorkflowActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIPrintTaskSettingsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIPrintWorkflowForegroundTaskActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIProtocolActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIProtocolForResultsActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIRestrictedLaunchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUISearchActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIShareTargetActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIStartupTaskActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIToastNotificationActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIUserDataAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIView>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIView>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIView";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIVoiceCommandActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIWalletActionActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIWebAccountProviderActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "WebUIWebAuthenticationBrokerContinuationEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
+    struct py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "IActivatedEventArgsDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
+    struct py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "IWebUIBackgroundTaskInstance";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
+    struct py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.webui";
+        static constexpr const char* type_name = "IWebUINavigatedEventArgs";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::WebUI::ActivatedEventHandler>

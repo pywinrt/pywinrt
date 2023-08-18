@@ -22,8 +22,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::System::Profile::RetailMode>
+    struct py_type<winrt::Windows::Phone::System::Profile::RetailMode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.system.profile";
+        static constexpr const char* type_name = "RetailMode";
     };
 }

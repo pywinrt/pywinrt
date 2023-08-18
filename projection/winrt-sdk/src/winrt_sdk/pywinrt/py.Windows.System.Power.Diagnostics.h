@@ -23,14 +23,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>
+    struct py_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
+        static constexpr const char* type_name = "BackgroundEnergyDiagnostics";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>
+    struct py_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
+        static constexpr const char* type_name = "ForegroundEnergyDiagnostics";
     };
 }

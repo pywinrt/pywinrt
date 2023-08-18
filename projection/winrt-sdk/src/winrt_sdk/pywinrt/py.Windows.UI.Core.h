@@ -270,219 +270,255 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>
+    struct py_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "AcceleratorKeyEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "AutomationProviderRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::BackRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::BackRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "BackRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CharacterReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ClosestInteractiveBoundsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>
+    struct py_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreAcceleratorKeys";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreComponentInputSource>
+    struct py_type<winrt::Windows::UI::Core::CoreComponentInputSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreComponentInputSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreCursor>
+    struct py_type<winrt::Windows::UI::Core::CoreCursor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreCursor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreDispatcher>
+    struct py_type<winrt::Windows::UI::Core::CoreDispatcher>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreDispatcher";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreIndependentInputSource>
+    struct py_type<winrt::Windows::UI::Core::CoreIndependentInputSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreIndependentInputSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>
+    struct py_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreIndependentInputSourceController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindow>
+    struct py_type<winrt::Windows::UI::Core::CoreWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindowDialog>
+    struct py_type<winrt::Windows::UI::Core::CoreWindowDialog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindowDialog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindowEventArgs>
+    struct py_type<winrt::Windows::UI::Core::CoreWindowEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindowEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindowFlyout>
+    struct py_type<winrt::Windows::UI::Core::CoreWindowFlyout>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindowFlyout";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>
+    struct py_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindowPopupShowingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreWindowResizeManager>
+    struct py_type<winrt::Windows::UI::Core::CoreWindowResizeManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreWindowResizeManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>
+    struct py_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "IdleDispatchedHandlerArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::InputEnabledEventArgs>
+    struct py_type<winrt::Windows::UI::Core::InputEnabledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "InputEnabledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::KeyEventArgs>
+    struct py_type<winrt::Windows::UI::Core::KeyEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "KeyEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::PointerEventArgs>
+    struct py_type<winrt::Windows::UI::Core::PointerEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "PointerEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::SystemNavigationManager>
+    struct py_type<winrt::Windows::UI::Core::SystemNavigationManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "SystemNavigationManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>
+    struct py_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "TouchHitTestingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "VisibilityChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "WindowActivatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "WindowSizeChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>
+    struct py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICoreAcceleratorKeys";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICoreInputSourceBase>
+    struct py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICoreInputSourceBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICorePointerInputSource>
+    struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICorePointerInputSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICorePointerInputSource2>
+    struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICorePointerInputSource2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICorePointerRedirector>
+    struct py_type<winrt::Windows::UI::Core::ICorePointerRedirector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICorePointerRedirector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICoreWindow>
+    struct py_type<winrt::Windows::UI::Core::ICoreWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICoreWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>
+    struct py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "ICoreWindowEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>
+    struct py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "IInitializeWithCoreWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>
+    struct py_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CorePhysicalKeyStatus";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Core::CoreProximityEvaluation>
+    struct py_type<winrt::Windows::UI::Core::CoreProximityEvaluation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.core";
+        static constexpr const char* type_name = "CoreProximityEvaluation";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Core::DispatchedHandler>

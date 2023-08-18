@@ -86,33 +86,38 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Popups::MessageDialog>
+    struct py_type<winrt::Windows::UI::Popups::MessageDialog>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "MessageDialog";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Popups::PopupMenu>
+    struct py_type<winrt::Windows::UI::Popups::PopupMenu>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "PopupMenu";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Popups::UICommand>
+    struct py_type<winrt::Windows::UI::Popups::UICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "UICommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Popups::UICommandSeparator>
+    struct py_type<winrt::Windows::UI::Popups::UICommandSeparator>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "UICommandSeparator";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Popups::IUICommand>
+    struct py_type<winrt::Windows::UI::Popups::IUICommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.popups";
+        static constexpr const char* type_name = "IUICommand";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Popups::UICommandInvokedHandler>

@@ -57,38 +57,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticProviderRequestResponseCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticProviderRequestResponseTimestamps";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticProviderRequestSentEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticProviderResponseReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>
+    struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
+        static constexpr const char* type_name = "HttpDiagnosticSourceLocation";
     };
 }

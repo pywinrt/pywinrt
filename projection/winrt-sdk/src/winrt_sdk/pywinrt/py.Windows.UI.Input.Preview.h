@@ -32,8 +32,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Preview::InputActivationListenerPreview>
+    struct py_type<winrt::Windows::UI::Input::Preview::InputActivationListenerPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.preview";
+        static constexpr const char* type_name = "InputActivationListenerPreview";
     };
 }

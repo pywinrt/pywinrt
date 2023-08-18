@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppInstallItem;
-        PyTypeObject* type_AppInstallManager;
-        PyTypeObject* type_AppInstallManagerItemEventArgs;
-        PyTypeObject* type_AppInstallOptions;
-        PyTypeObject* type_AppInstallStatus;
-        PyTypeObject* type_AppUpdateOptions;
-        PyTypeObject* type_GetEntitlementResult;
-    };
-
     // ----- AppInstallItem class --------------------
     static constexpr const char* const type_name_AppInstallItem = "AppInstallItem";
 
@@ -3716,56 +3705,15 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::Preview::InstallControl");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppInstallItem);
-        Py_VISIT(state->type_AppInstallManager);
-        Py_VISIT(state->type_AppInstallManagerItemEventArgs);
-        Py_VISIT(state->type_AppInstallOptions);
-        Py_VISIT(state->type_AppInstallStatus);
-        Py_VISIT(state->type_AppUpdateOptions);
-        Py_VISIT(state->type_GetEntitlementResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppInstallItem);
-        Py_CLEAR(state->type_AppInstallManager);
-        Py_CLEAR(state->type_AppInstallManagerItemEventArgs);
-        Py_CLEAR(state->type_AppInstallOptions);
-        Py_CLEAR(state->type_AppInstallStatus);
-        Py_CLEAR(state->type_AppUpdateOptions);
-        Py_CLEAR(state->type_GetEntitlementResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
@@ -3781,7 +3729,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview_InstallContr
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3794,212 +3742,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview_InstallContr
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppInstallItem = py::register_python_type(module.get(), type_name_AppInstallItem, &type_spec_AppInstallItem, object_bases.get(), nullptr);
-    if (!state->type_AppInstallItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallItem, &type_spec_AppInstallItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallItem, &type_spec_AppInstallItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppInstallManager = py::register_python_type(module.get(), type_name_AppInstallManager, &type_spec_AppInstallManager, object_bases.get(), nullptr);
-    if (!state->type_AppInstallManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallManager, &type_spec_AppInstallManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallManager, &type_spec_AppInstallManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppInstallManagerItemEventArgs = py::register_python_type(module.get(), type_name_AppInstallManagerItemEventArgs, &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppInstallManagerItemEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallManagerItemEventArgs, &type_spec_AppInstallManagerItemEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallManagerItemEventArgs, &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppInstallOptions = py::register_python_type(module.get(), type_name_AppInstallOptions, &type_spec_AppInstallOptions, object_bases.get(), nullptr);
-    if (!state->type_AppInstallOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallOptions, &type_spec_AppInstallOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallOptions, &type_spec_AppInstallOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppInstallStatus = py::register_python_type(module.get(), type_name_AppInstallStatus, &type_spec_AppInstallStatus, object_bases.get(), nullptr);
-    if (!state->type_AppInstallStatus)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppInstallStatus, &type_spec_AppInstallStatus, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppInstallStatus, &type_spec_AppInstallStatus, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppUpdateOptions = py::register_python_type(module.get(), type_name_AppUpdateOptions, &type_spec_AppUpdateOptions, object_bases.get(), nullptr);
-    if (!state->type_AppUpdateOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppUpdateOptions, &type_spec_AppUpdateOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppUpdateOptions, &type_spec_AppUpdateOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GetEntitlementResult = py::register_python_type(module.get(), type_name_GetEntitlementResult, &type_spec_GetEntitlementResult, object_bases.get(), nullptr);
-    if (!state->type_GetEntitlementResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GetEntitlementResult, &type_spec_GetEntitlementResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GetEntitlementResult, &type_spec_GetEntitlementResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallManagerItemEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppInstallStatus;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppUpdateOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Store::Preview::InstallControl");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetEntitlementResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

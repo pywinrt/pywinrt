@@ -44,20 +44,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
+        static constexpr const char* type_name = "IndexedResourceCandidate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
+        static constexpr const char* type_name = "IndexedResourceQualifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer>
+    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
+        static constexpr const char* type_name = "ResourceIndexer";
     };
 }

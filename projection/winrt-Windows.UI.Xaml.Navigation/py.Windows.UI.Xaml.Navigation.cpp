@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Navigation
 {
-    struct module_state
-    {
-        PyTypeObject* type_FrameNavigationOptions;
-        PyTypeObject* type_NavigatingCancelEventArgs;
-        PyTypeObject* type_NavigationEventArgs;
-        PyTypeObject* type_NavigationFailedEventArgs;
-        PyTypeObject* type_PageStackEntry;
-    };
-
     // ----- FrameNavigationOptions class --------------------
     static constexpr const char* const type_name_FrameNavigationOptions = "FrameNavigationOptions";
 
@@ -1004,52 +995,15 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Navigation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_FrameNavigationOptions);
-        Py_VISIT(state->type_NavigatingCancelEventArgs);
-        Py_VISIT(state->type_NavigationEventArgs);
-        Py_VISIT(state->type_NavigationFailedEventArgs);
-        Py_VISIT(state->type_PageStackEntry);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_FrameNavigationOptions);
-        Py_CLEAR(state->type_NavigatingCancelEventArgs);
-        Py_CLEAR(state->type_NavigationEventArgs);
-        Py_CLEAR(state->type_NavigationFailedEventArgs);
-        Py_CLEAR(state->type_PageStackEntry);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Navigation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Navigation
@@ -1065,7 +1019,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Navigation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1078,29 +1032,38 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Navigation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_FrameNavigationOptions = py::register_python_type(module.get(), type_name_FrameNavigationOptions, &type_spec_FrameNavigationOptions, object_bases.get(), nullptr);
-    if (!state->type_FrameNavigationOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameNavigationOptions, &type_spec_FrameNavigationOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameNavigationOptions, &type_spec_FrameNavigationOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NavigatingCancelEventArgs = py::register_python_type(module.get(), type_name_NavigatingCancelEventArgs, &type_spec_NavigatingCancelEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NavigatingCancelEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigatingCancelEventArgs, &type_spec_NavigatingCancelEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigatingCancelEventArgs, &type_spec_NavigatingCancelEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NavigationEventArgs = py::register_python_type(module.get(), type_name_NavigationEventArgs, &type_spec_NavigationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NavigationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationEventArgs, &type_spec_NavigationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationEventArgs, &type_spec_NavigationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NavigationFailedEventArgs = py::register_python_type(module.get(), type_name_NavigationFailedEventArgs, &type_spec_NavigationFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NavigationFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NavigationFailedEventArgs, &type_spec_NavigationFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NavigationFailedEventArgs, &type_spec_NavigationFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1111,127 +1074,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Navigation(void) noexcept
         return nullptr;
     }
 
-    state->type_PageStackEntry = py::register_python_type(module.get(), type_name_PageStackEntry, &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get()));
-    if (!state->type_PageStackEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PageStackEntry, &type_spec_PageStackEntry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PageStackEntry, &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Navigation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Navigation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameNavigationOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Navigation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Navigation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigatingCancelEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Navigation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Navigation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Navigation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Navigation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NavigationFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Navigation::PageStackEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Navigation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Navigation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PageStackEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Navigation::PageStackEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

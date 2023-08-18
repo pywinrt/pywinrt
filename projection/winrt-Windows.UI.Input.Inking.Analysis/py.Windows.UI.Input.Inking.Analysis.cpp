@@ -6,23 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input::Inking::Analysis
 {
-    struct module_state
-    {
-        PyTypeObject* type_InkAnalysisInkBullet;
-        PyTypeObject* type_InkAnalysisInkDrawing;
-        PyTypeObject* type_InkAnalysisInkWord;
-        PyTypeObject* type_InkAnalysisLine;
-        PyTypeObject* type_InkAnalysisListItem;
-        PyTypeObject* type_InkAnalysisNode;
-        PyTypeObject* type_InkAnalysisParagraph;
-        PyTypeObject* type_InkAnalysisResult;
-        PyTypeObject* type_InkAnalysisRoot;
-        PyTypeObject* type_InkAnalysisWritingRegion;
-        PyTypeObject* type_InkAnalyzer;
-        PyTypeObject* type_IInkAnalysisNode;
-        PyTypeObject* type_IInkAnalyzerFactory;
-    };
-
     // ----- InkAnalysisInkBullet class --------------------
     static constexpr const char* const type_name_InkAnalysisInkBullet = "InkAnalysisInkBullet";
 
@@ -3147,68 +3130,15 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Inking::Analysis");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_InkAnalysisInkBullet);
-        Py_VISIT(state->type_InkAnalysisInkDrawing);
-        Py_VISIT(state->type_InkAnalysisInkWord);
-        Py_VISIT(state->type_InkAnalysisLine);
-        Py_VISIT(state->type_InkAnalysisListItem);
-        Py_VISIT(state->type_InkAnalysisNode);
-        Py_VISIT(state->type_InkAnalysisParagraph);
-        Py_VISIT(state->type_InkAnalysisResult);
-        Py_VISIT(state->type_InkAnalysisRoot);
-        Py_VISIT(state->type_InkAnalysisWritingRegion);
-        Py_VISIT(state->type_InkAnalyzer);
-        Py_VISIT(state->type_IInkAnalysisNode);
-        Py_VISIT(state->type_IInkAnalyzerFactory);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_InkAnalysisInkBullet);
-        Py_CLEAR(state->type_InkAnalysisInkDrawing);
-        Py_CLEAR(state->type_InkAnalysisInkWord);
-        Py_CLEAR(state->type_InkAnalysisLine);
-        Py_CLEAR(state->type_InkAnalysisListItem);
-        Py_CLEAR(state->type_InkAnalysisNode);
-        Py_CLEAR(state->type_InkAnalysisParagraph);
-        Py_CLEAR(state->type_InkAnalysisResult);
-        Py_CLEAR(state->type_InkAnalysisRoot);
-        Py_CLEAR(state->type_InkAnalysisWritingRegion);
-        Py_CLEAR(state->type_InkAnalyzer);
-        Py_CLEAR(state->type_IInkAnalysisNode);
-        Py_CLEAR(state->type_IInkAnalyzerFactory);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input_Inking_Analysis",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input::Inking::Analysis
@@ -3224,7 +3154,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Analysis(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3237,386 +3167,123 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Analysis(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_InkAnalysisInkBullet = py::register_python_type(module.get(), type_name_InkAnalysisInkBullet, &type_spec_InkAnalysisInkBullet, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisInkBullet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkBullet, &type_spec_InkAnalysisInkBullet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkBullet, &type_spec_InkAnalysisInkBullet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisInkDrawing = py::register_python_type(module.get(), type_name_InkAnalysisInkDrawing, &type_spec_InkAnalysisInkDrawing, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisInkDrawing)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkDrawing, &type_spec_InkAnalysisInkDrawing, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkDrawing, &type_spec_InkAnalysisInkDrawing, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisInkWord = py::register_python_type(module.get(), type_name_InkAnalysisInkWord, &type_spec_InkAnalysisInkWord, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisInkWord)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkWord, &type_spec_InkAnalysisInkWord, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisInkWord, &type_spec_InkAnalysisInkWord, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisLine = py::register_python_type(module.get(), type_name_InkAnalysisLine, &type_spec_InkAnalysisLine, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisLine)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisLine, &type_spec_InkAnalysisLine, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisLine, &type_spec_InkAnalysisLine, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisListItem = py::register_python_type(module.get(), type_name_InkAnalysisListItem, &type_spec_InkAnalysisListItem, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisListItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisListItem, &type_spec_InkAnalysisListItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisListItem, &type_spec_InkAnalysisListItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisNode = py::register_python_type(module.get(), type_name_InkAnalysisNode, &type_spec_InkAnalysisNode, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisNode, &type_spec_InkAnalysisNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisNode, &type_spec_InkAnalysisNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisParagraph = py::register_python_type(module.get(), type_name_InkAnalysisParagraph, &type_spec_InkAnalysisParagraph, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisParagraph)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisParagraph, &type_spec_InkAnalysisParagraph, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisParagraph, &type_spec_InkAnalysisParagraph, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisResult = py::register_python_type(module.get(), type_name_InkAnalysisResult, &type_spec_InkAnalysisResult, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisResult, &type_spec_InkAnalysisResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisResult, &type_spec_InkAnalysisResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisRoot = py::register_python_type(module.get(), type_name_InkAnalysisRoot, &type_spec_InkAnalysisRoot, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisRoot)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisRoot, &type_spec_InkAnalysisRoot, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisRoot, &type_spec_InkAnalysisRoot, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalysisWritingRegion = py::register_python_type(module.get(), type_name_InkAnalysisWritingRegion, &type_spec_InkAnalysisWritingRegion, object_bases.get(), nullptr);
-    if (!state->type_InkAnalysisWritingRegion)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalysisWritingRegion, &type_spec_InkAnalysisWritingRegion, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalysisWritingRegion, &type_spec_InkAnalysisWritingRegion, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkAnalyzer = py::register_python_type(module.get(), type_name_InkAnalyzer, &type_spec_InkAnalyzer, object_bases.get(), nullptr);
-    if (!state->type_InkAnalyzer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkAnalyzer, &type_spec_InkAnalyzer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkAnalyzer, &type_spec_InkAnalyzer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkAnalysisNode = py::register_python_type(module.get(), type_name_IInkAnalysisNode, &type_spec_IInkAnalysisNode, object_bases.get(), nullptr);
-    if (!state->type_IInkAnalysisNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkAnalysisNode, &type_spec_IInkAnalysisNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkAnalysisNode, &type_spec_IInkAnalysisNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IInkAnalyzerFactory = py::register_python_type(module.get(), type_name_IInkAnalyzerFactory, &type_spec_IInkAnalyzerFactory, object_bases.get(), nullptr);
-    if (!state->type_IInkAnalyzerFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IInkAnalyzerFactory, &type_spec_IInkAnalyzerFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IInkAnalyzerFactory, &type_spec_IInkAnalyzerFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisInkBullet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisInkDrawing;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisInkWord;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisLine;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisListItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisParagraph;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisRoot;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalysisWritingRegion;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkAnalyzer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkAnalysisNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Inking::Analysis;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Inking::Analysis");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IInkAnalyzerFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

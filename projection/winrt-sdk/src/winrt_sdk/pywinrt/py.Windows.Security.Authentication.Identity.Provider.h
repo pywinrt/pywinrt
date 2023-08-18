@@ -153,44 +153,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthentication";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStageInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>
+    struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
+        static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistrationResult";
     };
 }

@@ -98,104 +98,121 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "AsymmetricAlgorithmNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "AsymmetricKeyAlgorithmProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicEngine";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicHash";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "CryptographicKey";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "EccCurveNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "EncryptedAndAuthenticatedData";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "HashAlgorithmNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "HashAlgorithmProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "KeyDerivationAlgorithmNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "KeyDerivationAlgorithmProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "KeyDerivationParameters";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "MacAlgorithmNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "MacAlgorithmProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "PersistedKeyProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "SymmetricAlgorithmNames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>
+    struct py_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
+        static constexpr const char* type_name = "SymmetricKeyAlgorithmProvider";
     };
 }

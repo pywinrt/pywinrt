@@ -27,8 +27,9 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::Devices::Power::Battery>
+    struct py_type<winrt::Windows::Phone::Devices::Power::Battery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.devices.power";
+        static constexpr const char* type_name = "Battery";
     };
 }

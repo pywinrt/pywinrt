@@ -6,17 +6,6 @@
 
 namespace py::cpp::Windows::Networking::Proximity
 {
-    struct module_state
-    {
-        PyTypeObject* type_ConnectionRequestedEventArgs;
-        PyTypeObject* type_PeerFinder;
-        PyTypeObject* type_PeerInformation;
-        PyTypeObject* type_PeerWatcher;
-        PyTypeObject* type_ProximityDevice;
-        PyTypeObject* type_ProximityMessage;
-        PyTypeObject* type_TriggeredConnectionStateChangedEventArgs;
-    };
-
     // ----- ConnectionRequestedEventArgs class --------------------
     static constexpr const char* const type_name_ConnectionRequestedEventArgs = "ConnectionRequestedEventArgs";
 
@@ -2153,56 +2142,15 @@ namespace py::cpp::Windows::Networking::Proximity
     PyDoc_STRVAR(module_doc, "Windows::Networking::Proximity");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ConnectionRequestedEventArgs);
-        Py_VISIT(state->type_PeerFinder);
-        Py_VISIT(state->type_PeerInformation);
-        Py_VISIT(state->type_PeerWatcher);
-        Py_VISIT(state->type_ProximityDevice);
-        Py_VISIT(state->type_ProximityMessage);
-        Py_VISIT(state->type_TriggeredConnectionStateChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ConnectionRequestedEventArgs);
-        Py_CLEAR(state->type_PeerFinder);
-        Py_CLEAR(state->type_PeerInformation);
-        Py_CLEAR(state->type_PeerWatcher);
-        Py_CLEAR(state->type_ProximityDevice);
-        Py_CLEAR(state->type_ProximityMessage);
-        Py_CLEAR(state->type_TriggeredConnectionStateChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking_Proximity",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking::Proximity
@@ -2218,7 +2166,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Proximity(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2231,11 +2179,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Proximity(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ConnectionRequestedEventArgs = py::register_python_type(module.get(), type_name_ConnectionRequestedEventArgs, &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ConnectionRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConnectionRequestedEventArgs, &type_spec_ConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConnectionRequestedEventArgs, &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2246,203 +2194,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Proximity(void) noexcept
         return nullptr;
     }
 
-    state->type_PeerFinder = py::register_python_type(module.get(), type_name_PeerFinder, &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get()));
-    if (!state->type_PeerFinder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PeerFinder, &type_spec_PeerFinder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PeerFinder, &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PeerInformation = py::register_python_type(module.get(), type_name_PeerInformation, &type_spec_PeerInformation, object_bases.get(), nullptr);
-    if (!state->type_PeerInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PeerInformation, &type_spec_PeerInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PeerInformation, &type_spec_PeerInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PeerWatcher = py::register_python_type(module.get(), type_name_PeerWatcher, &type_spec_PeerWatcher, object_bases.get(), nullptr);
-    if (!state->type_PeerWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PeerWatcher, &type_spec_PeerWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PeerWatcher, &type_spec_PeerWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximityDevice = py::register_python_type(module.get(), type_name_ProximityDevice, &type_spec_ProximityDevice, object_bases.get(), nullptr);
-    if (!state->type_ProximityDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximityDevice, &type_spec_ProximityDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximityDevice, &type_spec_ProximityDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProximityMessage = py::register_python_type(module.get(), type_name_ProximityMessage, &type_spec_ProximityMessage, object_bases.get(), nullptr);
-    if (!state->type_ProximityMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProximityMessage, &type_spec_ProximityMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProximityMessage, &type_spec_ProximityMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TriggeredConnectionStateChangedEventArgs = py::register_python_type(module.get(), type_name_TriggeredConnectionStateChangedEventArgs, &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_TriggeredConnectionStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TriggeredConnectionStateChangedEventArgs, &type_spec_TriggeredConnectionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TriggeredConnectionStateChangedEventArgs, &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConnectionRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::PeerFinder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PeerFinder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::PeerFinder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::PeerInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PeerInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::PeerInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::PeerWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PeerWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::PeerWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::ProximityDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximityDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::ProximityDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::ProximityMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProximityMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::ProximityMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking::Proximity;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking::Proximity");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TriggeredConnectionStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

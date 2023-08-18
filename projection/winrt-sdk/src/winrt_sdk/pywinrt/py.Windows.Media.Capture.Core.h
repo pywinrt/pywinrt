@@ -33,14 +33,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>
+    struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.core";
+        static constexpr const char* type_name = "VariablePhotoCapturedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>
+    struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.capture.core";
+        static constexpr const char* type_name = "VariablePhotoSequenceCapture";
     };
 }

@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::Perception::Spatial::Surfaces
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpatialSurfaceInfo;
-        PyTypeObject* type_SpatialSurfaceMesh;
-        PyTypeObject* type_SpatialSurfaceMeshBuffer;
-        PyTypeObject* type_SpatialSurfaceMeshOptions;
-        PyTypeObject* type_SpatialSurfaceObserver;
-    };
-
     // ----- SpatialSurfaceInfo class --------------------
     static constexpr const char* const type_name_SpatialSurfaceInfo = "SpatialSurfaceInfo";
 
@@ -1238,52 +1229,15 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial::Surfaces");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpatialSurfaceInfo);
-        Py_VISIT(state->type_SpatialSurfaceMesh);
-        Py_VISIT(state->type_SpatialSurfaceMeshBuffer);
-        Py_VISIT(state->type_SpatialSurfaceMeshOptions);
-        Py_VISIT(state->type_SpatialSurfaceObserver);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpatialSurfaceInfo);
-        Py_CLEAR(state->type_SpatialSurfaceMesh);
-        Py_CLEAR(state->type_SpatialSurfaceMeshBuffer);
-        Py_CLEAR(state->type_SpatialSurfaceMeshOptions);
-        Py_CLEAR(state->type_SpatialSurfaceObserver);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Perception_Spatial_Surfaces",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Perception::Spatial::Surfaces
@@ -1299,7 +1253,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial_Surfaces(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1312,23 +1266,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial_Surfaces(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpatialSurfaceInfo = py::register_python_type(module.get(), type_name_SpatialSurfaceInfo, &type_spec_SpatialSurfaceInfo, object_bases.get(), nullptr);
-    if (!state->type_SpatialSurfaceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceInfo, &type_spec_SpatialSurfaceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceInfo, &type_spec_SpatialSurfaceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialSurfaceMesh = py::register_python_type(module.get(), type_name_SpatialSurfaceMesh, &type_spec_SpatialSurfaceMesh, object_bases.get(), nullptr);
-    if (!state->type_SpatialSurfaceMesh)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMesh, &type_spec_SpatialSurfaceMesh, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMesh, &type_spec_SpatialSurfaceMesh, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialSurfaceMeshBuffer = py::register_python_type(module.get(), type_name_SpatialSurfaceMeshBuffer, &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), nullptr);
-    if (!state->type_SpatialSurfaceMeshBuffer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMeshBuffer, &type_spec_SpatialSurfaceMeshBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMeshBuffer, &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -1339,133 +1299,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial_Surfaces(void) noexcept
         return nullptr;
     }
 
-    state->type_SpatialSurfaceMeshOptions = py::register_python_type(module.get(), type_name_SpatialSurfaceMeshOptions, &type_spec_SpatialSurfaceMeshOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceMeshOptions_Meta.get()));
-    if (!state->type_SpatialSurfaceMeshOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMeshOptions, &type_spec_SpatialSurfaceMeshOptions, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceMeshOptions_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceMeshOptions, &type_spec_SpatialSurfaceMeshOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceMeshOptions_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialSurfaceObserver = py::register_python_type(module.get(), type_name_SpatialSurfaceObserver, &type_spec_SpatialSurfaceObserver, object_bases.get(), nullptr);
-    if (!state->type_SpatialSurfaceObserver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceObserver, &type_spec_SpatialSurfaceObserver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialSurfaceObserver, &type_spec_SpatialSurfaceObserver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial::Surfaces;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial::Surfaces");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialSurfaceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial::Surfaces;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial::Surfaces");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialSurfaceMesh;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial::Surfaces;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial::Surfaces");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialSurfaceMeshBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial::Surfaces;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial::Surfaces");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialSurfaceMeshOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Perception::Spatial::Surfaces;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Perception::Spatial::Surfaces");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialSurfaceObserver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

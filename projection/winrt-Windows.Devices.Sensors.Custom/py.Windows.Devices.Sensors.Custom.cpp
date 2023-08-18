@@ -6,13 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Sensors::Custom
 {
-    struct module_state
-    {
-        PyTypeObject* type_CustomSensor;
-        PyTypeObject* type_CustomSensorReading;
-        PyTypeObject* type_CustomSensorReadingChangedEventArgs;
-    };
-
     // ----- CustomSensor class --------------------
     static constexpr const char* const type_name_CustomSensor = "CustomSensor";
 
@@ -617,48 +610,15 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     PyDoc_STRVAR(module_doc, "Windows::Devices::Sensors::Custom");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CustomSensor);
-        Py_VISIT(state->type_CustomSensorReading);
-        Py_VISIT(state->type_CustomSensorReadingChangedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CustomSensor);
-        Py_CLEAR(state->type_CustomSensorReading);
-        Py_CLEAR(state->type_CustomSensorReadingChangedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Sensors_Custom",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Sensors::Custom
@@ -674,7 +634,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors_Custom(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -687,96 +647,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors_Custom(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CustomSensor = py::register_python_type(module.get(), type_name_CustomSensor, &type_spec_CustomSensor, object_bases.get(), nullptr);
-    if (!state->type_CustomSensor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CustomSensor, &type_spec_CustomSensor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CustomSensor, &type_spec_CustomSensor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CustomSensorReading = py::register_python_type(module.get(), type_name_CustomSensorReading, &type_spec_CustomSensorReading, object_bases.get(), nullptr);
-    if (!state->type_CustomSensorReading)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CustomSensorReading, &type_spec_CustomSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CustomSensorReading, &type_spec_CustomSensorReading, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CustomSensorReadingChangedEventArgs = py::register_python_type(module.get(), type_name_CustomSensorReadingChangedEventArgs, &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CustomSensorReadingChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CustomSensorReadingChangedEventArgs, &type_spec_CustomSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CustomSensorReadingChangedEventArgs, &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CustomSensor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Custom::CustomSensor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CustomSensorReading;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Custom::CustomSensorReading is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Sensors::Custom;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Sensors::Custom");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CustomSensorReadingChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

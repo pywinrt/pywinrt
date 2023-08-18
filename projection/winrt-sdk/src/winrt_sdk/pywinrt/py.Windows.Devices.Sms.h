@@ -240,183 +240,213 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>
+    struct py_type<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "DeleteSmsMessageOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>
+    struct py_type<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "DeleteSmsMessagesOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>
+    struct py_type<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "GetSmsDeviceOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::GetSmsMessageOperation>
+    struct py_type<winrt::Windows::Devices::Sms::GetSmsMessageOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "GetSmsMessageOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>
+    struct py_type<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "GetSmsMessagesOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SendSmsMessageOperation>
+    struct py_type<winrt::Windows::Devices::Sms::SendSmsMessageOperation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SendSmsMessageOperation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsAppMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsAppMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsAppMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsBinaryMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsBinaryMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsBinaryMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsBroadcastMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsBroadcastMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsBroadcastMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsDevice>
+    struct py_type<winrt::Windows::Devices::Sms::SmsDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsDevice2>
+    struct py_type<winrt::Windows::Devices::Sms::SmsDevice2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsDevice2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>
+    struct py_type<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsDeviceMessageStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsFilterRule>
+    struct py_type<winrt::Windows::Devices::Sms::SmsFilterRule>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsFilterRule";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsFilterRules>
+    struct py_type<winrt::Windows::Devices::Sms::SmsFilterRules>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsFilterRules";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>
+    struct py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>
+    struct py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageReceivedTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsMessageRegistration>
+    struct py_type<winrt::Windows::Devices::Sms::SmsMessageRegistration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsMessageRegistration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>
+    struct py_type<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsReceivedEventDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsSendMessageResult>
+    struct py_type<winrt::Windows::Devices::Sms::SmsSendMessageResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsSendMessageResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsStatusMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsStatusMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsStatusMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsTextMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsTextMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsTextMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsTextMessage2>
+    struct py_type<winrt::Windows::Devices::Sms::SmsTextMessage2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsTextMessage2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsVoicemailMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsVoicemailMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsVoicemailMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsWapMessage>
+    struct py_type<winrt::Windows::Devices::Sms::SmsWapMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsWapMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>
+    struct py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "ISmsBinaryMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::ISmsDevice>
+    struct py_type<winrt::Windows::Devices::Sms::ISmsDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "ISmsDevice";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::ISmsMessage>
+    struct py_type<winrt::Windows::Devices::Sms::ISmsMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "ISmsMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::ISmsMessageBase>
+    struct py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "ISmsMessageBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::ISmsTextMessage>
+    struct py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "ISmsTextMessage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Sms::SmsEncodedLength>
+    struct py_type<winrt::Windows::Devices::Sms::SmsEncodedLength>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.sms";
+        static constexpr const char* type_name = "SmsEncodedLength";
     };
     template <>
     struct delegate_python_type<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>

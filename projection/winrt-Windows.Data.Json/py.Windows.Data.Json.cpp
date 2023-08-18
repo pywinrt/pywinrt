@@ -6,15 +6,6 @@
 
 namespace py::cpp::Windows::Data::Json
 {
-    struct module_state
-    {
-        PyTypeObject* type_JsonArray;
-        PyTypeObject* type_JsonError;
-        PyTypeObject* type_JsonObject;
-        PyTypeObject* type_JsonValue;
-        PyTypeObject* type_IJsonValue;
-    };
-
     // ----- JsonArray class --------------------
     static constexpr const char* const type_name_JsonArray = "JsonArray";
 
@@ -3112,52 +3103,15 @@ namespace py::cpp::Windows::Data::Json
     PyDoc_STRVAR(module_doc, "Windows::Data::Json");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_JsonArray);
-        Py_VISIT(state->type_JsonError);
-        Py_VISIT(state->type_JsonObject);
-        Py_VISIT(state->type_JsonValue);
-        Py_VISIT(state->type_IJsonValue);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_JsonArray);
-        Py_CLEAR(state->type_JsonError);
-        Py_CLEAR(state->type_JsonObject);
-        Py_CLEAR(state->type_JsonValue);
-        Py_CLEAR(state->type_IJsonValue);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Data_Json",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Data::Json
@@ -3173,7 +3127,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Json(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3186,154 +3140,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Json(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_JsonArray = py::register_python_type(module.get(), type_name_JsonArray, &type_spec_JsonArray, object_bases.get(), nullptr);
-    if (!state->type_JsonArray)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JsonArray, &type_spec_JsonArray, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JsonArray, &type_spec_JsonArray, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JsonError = py::register_python_type(module.get(), type_name_JsonError, &type_spec_JsonError, object_bases.get(), nullptr);
-    if (!state->type_JsonError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JsonError, &type_spec_JsonError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JsonError, &type_spec_JsonError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JsonObject = py::register_python_type(module.get(), type_name_JsonObject, &type_spec_JsonObject, object_bases.get(), nullptr);
-    if (!state->type_JsonObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JsonObject, &type_spec_JsonObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JsonObject, &type_spec_JsonObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_JsonValue = py::register_python_type(module.get(), type_name_JsonValue, &type_spec_JsonValue, object_bases.get(), nullptr);
-    if (!state->type_JsonValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_JsonValue, &type_spec_JsonValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_JsonValue, &type_spec_JsonValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IJsonValue = py::register_python_type(module.get(), type_name_IJsonValue, &type_spec_IJsonValue, object_bases.get(), nullptr);
-    if (!state->type_IJsonValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IJsonValue, &type_spec_IJsonValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IJsonValue, &type_spec_IJsonValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Json::JsonArray>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Json;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Json");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JsonArray;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Json::JsonArray is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Json::JsonError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Json;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Json");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JsonError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Json::JsonError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Json::JsonObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Json;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Json");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JsonObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Json::JsonObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Json::JsonValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Json;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Json");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_JsonValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Json::JsonValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Json::IJsonValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Json;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Json");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IJsonValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Json::IJsonValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

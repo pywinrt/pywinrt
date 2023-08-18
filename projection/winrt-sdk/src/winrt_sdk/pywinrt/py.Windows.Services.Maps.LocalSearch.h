@@ -63,44 +63,51 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalCategories";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalLocationFinder";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalLocationFinderResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalLocationHoursOfOperationItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "LocalLocationRatingInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>
+    struct py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
+        static constexpr const char* type_name = "PlaceInfoHelper";
     };
 }

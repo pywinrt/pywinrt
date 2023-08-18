@@ -6,58 +6,6 @@
 
 namespace py::cpp::Windows::Media::Devices
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdvancedPhotoCaptureSettings;
-        PyTypeObject* type_AdvancedPhotoControl;
-        PyTypeObject* type_AudioDeviceController;
-        PyTypeObject* type_AudioDeviceModule;
-        PyTypeObject* type_AudioDeviceModuleNotificationEventArgs;
-        PyTypeObject* type_AudioDeviceModulesManager;
-        PyTypeObject* type_CallControl;
-        PyTypeObject* type_CameraOcclusionInfo;
-        PyTypeObject* type_CameraOcclusionState;
-        PyTypeObject* type_CameraOcclusionStateChangedEventArgs;
-        PyTypeObject* type_DefaultAudioCaptureDeviceChangedEventArgs;
-        PyTypeObject* type_DefaultAudioRenderDeviceChangedEventArgs;
-        PyTypeObject* type_DialRequestedEventArgs;
-        PyTypeObject* type_DigitalWindowBounds;
-        PyTypeObject* type_DigitalWindowCapability;
-        PyTypeObject* type_DigitalWindowControl;
-        PyTypeObject* type_ExposureCompensationControl;
-        PyTypeObject* type_ExposureControl;
-        PyTypeObject* type_ExposurePriorityVideoControl;
-        PyTypeObject* type_FlashControl;
-        PyTypeObject* type_FocusControl;
-        PyTypeObject* type_FocusSettings;
-        PyTypeObject* type_HdrVideoControl;
-        PyTypeObject* type_InfraredTorchControl;
-        PyTypeObject* type_IsoSpeedControl;
-        PyTypeObject* type_KeypadPressedEventArgs;
-        PyTypeObject* type_LowLagPhotoControl;
-        PyTypeObject* type_LowLagPhotoSequenceControl;
-        PyTypeObject* type_MediaDevice;
-        PyTypeObject* type_MediaDeviceControl;
-        PyTypeObject* type_MediaDeviceControlCapabilities;
-        PyTypeObject* type_ModuleCommandResult;
-        PyTypeObject* type_OpticalImageStabilizationControl;
-        PyTypeObject* type_PanelBasedOptimizationControl;
-        PyTypeObject* type_PhotoConfirmationControl;
-        PyTypeObject* type_RedialRequestedEventArgs;
-        PyTypeObject* type_RegionOfInterest;
-        PyTypeObject* type_RegionsOfInterestControl;
-        PyTypeObject* type_SceneModeControl;
-        PyTypeObject* type_TorchControl;
-        PyTypeObject* type_VideoDeviceController;
-        PyTypeObject* type_VideoDeviceControllerGetDevicePropertyResult;
-        PyTypeObject* type_VideoTemporalDenoisingControl;
-        PyTypeObject* type_WhiteBalanceControl;
-        PyTypeObject* type_ZoomControl;
-        PyTypeObject* type_ZoomSettings;
-        PyTypeObject* type_IDefaultAudioDeviceChangedEventArgs;
-        PyTypeObject* type_IMediaDeviceController;
-    };
-
     // ----- AdvancedPhotoCaptureSettings class --------------------
     static constexpr const char* const type_name_AdvancedPhotoCaptureSettings = "AdvancedPhotoCaptureSettings";
 
@@ -11805,138 +11753,15 @@ namespace py::cpp::Windows::Media::Devices
     PyDoc_STRVAR(module_doc, "Windows::Media::Devices");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdvancedPhotoCaptureSettings);
-        Py_VISIT(state->type_AdvancedPhotoControl);
-        Py_VISIT(state->type_AudioDeviceController);
-        Py_VISIT(state->type_AudioDeviceModule);
-        Py_VISIT(state->type_AudioDeviceModuleNotificationEventArgs);
-        Py_VISIT(state->type_AudioDeviceModulesManager);
-        Py_VISIT(state->type_CallControl);
-        Py_VISIT(state->type_CameraOcclusionInfo);
-        Py_VISIT(state->type_CameraOcclusionState);
-        Py_VISIT(state->type_CameraOcclusionStateChangedEventArgs);
-        Py_VISIT(state->type_DefaultAudioCaptureDeviceChangedEventArgs);
-        Py_VISIT(state->type_DefaultAudioRenderDeviceChangedEventArgs);
-        Py_VISIT(state->type_DialRequestedEventArgs);
-        Py_VISIT(state->type_DigitalWindowBounds);
-        Py_VISIT(state->type_DigitalWindowCapability);
-        Py_VISIT(state->type_DigitalWindowControl);
-        Py_VISIT(state->type_ExposureCompensationControl);
-        Py_VISIT(state->type_ExposureControl);
-        Py_VISIT(state->type_ExposurePriorityVideoControl);
-        Py_VISIT(state->type_FlashControl);
-        Py_VISIT(state->type_FocusControl);
-        Py_VISIT(state->type_FocusSettings);
-        Py_VISIT(state->type_HdrVideoControl);
-        Py_VISIT(state->type_InfraredTorchControl);
-        Py_VISIT(state->type_IsoSpeedControl);
-        Py_VISIT(state->type_KeypadPressedEventArgs);
-        Py_VISIT(state->type_LowLagPhotoControl);
-        Py_VISIT(state->type_LowLagPhotoSequenceControl);
-        Py_VISIT(state->type_MediaDevice);
-        Py_VISIT(state->type_MediaDeviceControl);
-        Py_VISIT(state->type_MediaDeviceControlCapabilities);
-        Py_VISIT(state->type_ModuleCommandResult);
-        Py_VISIT(state->type_OpticalImageStabilizationControl);
-        Py_VISIT(state->type_PanelBasedOptimizationControl);
-        Py_VISIT(state->type_PhotoConfirmationControl);
-        Py_VISIT(state->type_RedialRequestedEventArgs);
-        Py_VISIT(state->type_RegionOfInterest);
-        Py_VISIT(state->type_RegionsOfInterestControl);
-        Py_VISIT(state->type_SceneModeControl);
-        Py_VISIT(state->type_TorchControl);
-        Py_VISIT(state->type_VideoDeviceController);
-        Py_VISIT(state->type_VideoDeviceControllerGetDevicePropertyResult);
-        Py_VISIT(state->type_VideoTemporalDenoisingControl);
-        Py_VISIT(state->type_WhiteBalanceControl);
-        Py_VISIT(state->type_ZoomControl);
-        Py_VISIT(state->type_ZoomSettings);
-        Py_VISIT(state->type_IDefaultAudioDeviceChangedEventArgs);
-        Py_VISIT(state->type_IMediaDeviceController);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdvancedPhotoCaptureSettings);
-        Py_CLEAR(state->type_AdvancedPhotoControl);
-        Py_CLEAR(state->type_AudioDeviceController);
-        Py_CLEAR(state->type_AudioDeviceModule);
-        Py_CLEAR(state->type_AudioDeviceModuleNotificationEventArgs);
-        Py_CLEAR(state->type_AudioDeviceModulesManager);
-        Py_CLEAR(state->type_CallControl);
-        Py_CLEAR(state->type_CameraOcclusionInfo);
-        Py_CLEAR(state->type_CameraOcclusionState);
-        Py_CLEAR(state->type_CameraOcclusionStateChangedEventArgs);
-        Py_CLEAR(state->type_DefaultAudioCaptureDeviceChangedEventArgs);
-        Py_CLEAR(state->type_DefaultAudioRenderDeviceChangedEventArgs);
-        Py_CLEAR(state->type_DialRequestedEventArgs);
-        Py_CLEAR(state->type_DigitalWindowBounds);
-        Py_CLEAR(state->type_DigitalWindowCapability);
-        Py_CLEAR(state->type_DigitalWindowControl);
-        Py_CLEAR(state->type_ExposureCompensationControl);
-        Py_CLEAR(state->type_ExposureControl);
-        Py_CLEAR(state->type_ExposurePriorityVideoControl);
-        Py_CLEAR(state->type_FlashControl);
-        Py_CLEAR(state->type_FocusControl);
-        Py_CLEAR(state->type_FocusSettings);
-        Py_CLEAR(state->type_HdrVideoControl);
-        Py_CLEAR(state->type_InfraredTorchControl);
-        Py_CLEAR(state->type_IsoSpeedControl);
-        Py_CLEAR(state->type_KeypadPressedEventArgs);
-        Py_CLEAR(state->type_LowLagPhotoControl);
-        Py_CLEAR(state->type_LowLagPhotoSequenceControl);
-        Py_CLEAR(state->type_MediaDevice);
-        Py_CLEAR(state->type_MediaDeviceControl);
-        Py_CLEAR(state->type_MediaDeviceControlCapabilities);
-        Py_CLEAR(state->type_ModuleCommandResult);
-        Py_CLEAR(state->type_OpticalImageStabilizationControl);
-        Py_CLEAR(state->type_PanelBasedOptimizationControl);
-        Py_CLEAR(state->type_PhotoConfirmationControl);
-        Py_CLEAR(state->type_RedialRequestedEventArgs);
-        Py_CLEAR(state->type_RegionOfInterest);
-        Py_CLEAR(state->type_RegionsOfInterestControl);
-        Py_CLEAR(state->type_SceneModeControl);
-        Py_CLEAR(state->type_TorchControl);
-        Py_CLEAR(state->type_VideoDeviceController);
-        Py_CLEAR(state->type_VideoDeviceControllerGetDevicePropertyResult);
-        Py_CLEAR(state->type_VideoTemporalDenoisingControl);
-        Py_CLEAR(state->type_WhiteBalanceControl);
-        Py_CLEAR(state->type_ZoomControl);
-        Py_CLEAR(state->type_ZoomSettings);
-        Py_CLEAR(state->type_IDefaultAudioDeviceChangedEventArgs);
-        Py_CLEAR(state->type_IMediaDeviceController);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Devices",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Devices
@@ -11952,7 +11777,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -11965,1401 +11790,438 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdvancedPhotoCaptureSettings = py::register_python_type(module.get(), type_name_AdvancedPhotoCaptureSettings, &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), nullptr);
-    if (!state->type_AdvancedPhotoCaptureSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCaptureSettings, &type_spec_AdvancedPhotoCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCaptureSettings, &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdvancedPhotoControl = py::register_python_type(module.get(), type_name_AdvancedPhotoControl, &type_spec_AdvancedPhotoControl, object_bases.get(), nullptr);
-    if (!state->type_AdvancedPhotoControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoControl, &type_spec_AdvancedPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoControl, &type_spec_AdvancedPhotoControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioDeviceController = py::register_python_type(module.get(), type_name_AudioDeviceController, &type_spec_AudioDeviceController, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceController, &type_spec_AudioDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceController, &type_spec_AudioDeviceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioDeviceModule = py::register_python_type(module.get(), type_name_AudioDeviceModule, &type_spec_AudioDeviceModule, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceModule)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModule, &type_spec_AudioDeviceModule, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModule, &type_spec_AudioDeviceModule, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioDeviceModuleNotificationEventArgs = py::register_python_type(module.get(), type_name_AudioDeviceModuleNotificationEventArgs, &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceModuleNotificationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModuleNotificationEventArgs, &type_spec_AudioDeviceModuleNotificationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModuleNotificationEventArgs, &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioDeviceModulesManager = py::register_python_type(module.get(), type_name_AudioDeviceModulesManager, &type_spec_AudioDeviceModulesManager, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceModulesManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModulesManager, &type_spec_AudioDeviceModulesManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceModulesManager, &type_spec_AudioDeviceModulesManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CallControl = py::register_python_type(module.get(), type_name_CallControl, &type_spec_CallControl, object_bases.get(), nullptr);
-    if (!state->type_CallControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CallControl, &type_spec_CallControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CallControl, &type_spec_CallControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraOcclusionInfo = py::register_python_type(module.get(), type_name_CameraOcclusionInfo, &type_spec_CameraOcclusionInfo, object_bases.get(), nullptr);
-    if (!state->type_CameraOcclusionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionInfo, &type_spec_CameraOcclusionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionInfo, &type_spec_CameraOcclusionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraOcclusionState = py::register_python_type(module.get(), type_name_CameraOcclusionState, &type_spec_CameraOcclusionState, object_bases.get(), nullptr);
-    if (!state->type_CameraOcclusionState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionState, &type_spec_CameraOcclusionState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionState, &type_spec_CameraOcclusionState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraOcclusionStateChangedEventArgs = py::register_python_type(module.get(), type_name_CameraOcclusionStateChangedEventArgs, &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CameraOcclusionStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionStateChangedEventArgs, &type_spec_CameraOcclusionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraOcclusionStateChangedEventArgs, &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DefaultAudioCaptureDeviceChangedEventArgs = py::register_python_type(module.get(), type_name_DefaultAudioCaptureDeviceChangedEventArgs, &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DefaultAudioCaptureDeviceChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DefaultAudioCaptureDeviceChangedEventArgs, &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DefaultAudioCaptureDeviceChangedEventArgs, &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DefaultAudioRenderDeviceChangedEventArgs = py::register_python_type(module.get(), type_name_DefaultAudioRenderDeviceChangedEventArgs, &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DefaultAudioRenderDeviceChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DefaultAudioRenderDeviceChangedEventArgs, &type_spec_DefaultAudioRenderDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DefaultAudioRenderDeviceChangedEventArgs, &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialRequestedEventArgs = py::register_python_type(module.get(), type_name_DialRequestedEventArgs, &type_spec_DialRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DialRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialRequestedEventArgs, &type_spec_DialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialRequestedEventArgs, &type_spec_DialRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DigitalWindowBounds = py::register_python_type(module.get(), type_name_DigitalWindowBounds, &type_spec_DigitalWindowBounds, object_bases.get(), nullptr);
-    if (!state->type_DigitalWindowBounds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DigitalWindowBounds, &type_spec_DigitalWindowBounds, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DigitalWindowBounds, &type_spec_DigitalWindowBounds, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DigitalWindowCapability = py::register_python_type(module.get(), type_name_DigitalWindowCapability, &type_spec_DigitalWindowCapability, object_bases.get(), nullptr);
-    if (!state->type_DigitalWindowCapability)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DigitalWindowCapability, &type_spec_DigitalWindowCapability, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DigitalWindowCapability, &type_spec_DigitalWindowCapability, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DigitalWindowControl = py::register_python_type(module.get(), type_name_DigitalWindowControl, &type_spec_DigitalWindowControl, object_bases.get(), nullptr);
-    if (!state->type_DigitalWindowControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DigitalWindowControl, &type_spec_DigitalWindowControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DigitalWindowControl, &type_spec_DigitalWindowControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExposureCompensationControl = py::register_python_type(module.get(), type_name_ExposureCompensationControl, &type_spec_ExposureCompensationControl, object_bases.get(), nullptr);
-    if (!state->type_ExposureCompensationControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExposureCompensationControl, &type_spec_ExposureCompensationControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExposureCompensationControl, &type_spec_ExposureCompensationControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExposureControl = py::register_python_type(module.get(), type_name_ExposureControl, &type_spec_ExposureControl, object_bases.get(), nullptr);
-    if (!state->type_ExposureControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExposureControl, &type_spec_ExposureControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExposureControl, &type_spec_ExposureControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExposurePriorityVideoControl = py::register_python_type(module.get(), type_name_ExposurePriorityVideoControl, &type_spec_ExposurePriorityVideoControl, object_bases.get(), nullptr);
-    if (!state->type_ExposurePriorityVideoControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExposurePriorityVideoControl, &type_spec_ExposurePriorityVideoControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExposurePriorityVideoControl, &type_spec_ExposurePriorityVideoControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FlashControl = py::register_python_type(module.get(), type_name_FlashControl, &type_spec_FlashControl, object_bases.get(), nullptr);
-    if (!state->type_FlashControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FlashControl, &type_spec_FlashControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FlashControl, &type_spec_FlashControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusControl = py::register_python_type(module.get(), type_name_FocusControl, &type_spec_FocusControl, object_bases.get(), nullptr);
-    if (!state->type_FocusControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusControl, &type_spec_FocusControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusControl, &type_spec_FocusControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusSettings = py::register_python_type(module.get(), type_name_FocusSettings, &type_spec_FocusSettings, object_bases.get(), nullptr);
-    if (!state->type_FocusSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusSettings, &type_spec_FocusSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusSettings, &type_spec_FocusSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HdrVideoControl = py::register_python_type(module.get(), type_name_HdrVideoControl, &type_spec_HdrVideoControl, object_bases.get(), nullptr);
-    if (!state->type_HdrVideoControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HdrVideoControl, &type_spec_HdrVideoControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HdrVideoControl, &type_spec_HdrVideoControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InfraredTorchControl = py::register_python_type(module.get(), type_name_InfraredTorchControl, &type_spec_InfraredTorchControl, object_bases.get(), nullptr);
-    if (!state->type_InfraredTorchControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InfraredTorchControl, &type_spec_InfraredTorchControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InfraredTorchControl, &type_spec_InfraredTorchControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IsoSpeedControl = py::register_python_type(module.get(), type_name_IsoSpeedControl, &type_spec_IsoSpeedControl, object_bases.get(), nullptr);
-    if (!state->type_IsoSpeedControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IsoSpeedControl, &type_spec_IsoSpeedControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IsoSpeedControl, &type_spec_IsoSpeedControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeypadPressedEventArgs = py::register_python_type(module.get(), type_name_KeypadPressedEventArgs, &type_spec_KeypadPressedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_KeypadPressedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeypadPressedEventArgs, &type_spec_KeypadPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeypadPressedEventArgs, &type_spec_KeypadPressedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLagPhotoControl = py::register_python_type(module.get(), type_name_LowLagPhotoControl, &type_spec_LowLagPhotoControl, object_bases.get(), nullptr);
-    if (!state->type_LowLagPhotoControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoControl, &type_spec_LowLagPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoControl, &type_spec_LowLagPhotoControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLagPhotoSequenceControl = py::register_python_type(module.get(), type_name_LowLagPhotoSequenceControl, &type_spec_LowLagPhotoSequenceControl, object_bases.get(), nullptr);
-    if (!state->type_LowLagPhotoSequenceControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceControl, &type_spec_LowLagPhotoSequenceControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceControl, &type_spec_LowLagPhotoSequenceControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaDevice = py::register_python_type(module.get(), type_name_MediaDevice, &type_spec_MediaDevice, object_bases.get(), nullptr);
-    if (!state->type_MediaDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaDevice, &type_spec_MediaDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaDevice, &type_spec_MediaDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaDeviceControl = py::register_python_type(module.get(), type_name_MediaDeviceControl, &type_spec_MediaDeviceControl, object_bases.get(), nullptr);
-    if (!state->type_MediaDeviceControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaDeviceControl, &type_spec_MediaDeviceControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaDeviceControl, &type_spec_MediaDeviceControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaDeviceControlCapabilities = py::register_python_type(module.get(), type_name_MediaDeviceControlCapabilities, &type_spec_MediaDeviceControlCapabilities, object_bases.get(), nullptr);
-    if (!state->type_MediaDeviceControlCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaDeviceControlCapabilities, &type_spec_MediaDeviceControlCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaDeviceControlCapabilities, &type_spec_MediaDeviceControlCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ModuleCommandResult = py::register_python_type(module.get(), type_name_ModuleCommandResult, &type_spec_ModuleCommandResult, object_bases.get(), nullptr);
-    if (!state->type_ModuleCommandResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ModuleCommandResult, &type_spec_ModuleCommandResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ModuleCommandResult, &type_spec_ModuleCommandResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OpticalImageStabilizationControl = py::register_python_type(module.get(), type_name_OpticalImageStabilizationControl, &type_spec_OpticalImageStabilizationControl, object_bases.get(), nullptr);
-    if (!state->type_OpticalImageStabilizationControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OpticalImageStabilizationControl, &type_spec_OpticalImageStabilizationControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OpticalImageStabilizationControl, &type_spec_OpticalImageStabilizationControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PanelBasedOptimizationControl = py::register_python_type(module.get(), type_name_PanelBasedOptimizationControl, &type_spec_PanelBasedOptimizationControl, object_bases.get(), nullptr);
-    if (!state->type_PanelBasedOptimizationControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PanelBasedOptimizationControl, &type_spec_PanelBasedOptimizationControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PanelBasedOptimizationControl, &type_spec_PanelBasedOptimizationControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoConfirmationControl = py::register_python_type(module.get(), type_name_PhotoConfirmationControl, &type_spec_PhotoConfirmationControl, object_bases.get(), nullptr);
-    if (!state->type_PhotoConfirmationControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoConfirmationControl, &type_spec_PhotoConfirmationControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoConfirmationControl, &type_spec_PhotoConfirmationControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RedialRequestedEventArgs = py::register_python_type(module.get(), type_name_RedialRequestedEventArgs, &type_spec_RedialRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RedialRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RedialRequestedEventArgs, &type_spec_RedialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RedialRequestedEventArgs, &type_spec_RedialRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RegionOfInterest = py::register_python_type(module.get(), type_name_RegionOfInterest, &type_spec_RegionOfInterest, object_bases.get(), nullptr);
-    if (!state->type_RegionOfInterest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RegionOfInterest, &type_spec_RegionOfInterest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RegionOfInterest, &type_spec_RegionOfInterest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RegionsOfInterestControl = py::register_python_type(module.get(), type_name_RegionsOfInterestControl, &type_spec_RegionsOfInterestControl, object_bases.get(), nullptr);
-    if (!state->type_RegionsOfInterestControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RegionsOfInterestControl, &type_spec_RegionsOfInterestControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RegionsOfInterestControl, &type_spec_RegionsOfInterestControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SceneModeControl = py::register_python_type(module.get(), type_name_SceneModeControl, &type_spec_SceneModeControl, object_bases.get(), nullptr);
-    if (!state->type_SceneModeControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SceneModeControl, &type_spec_SceneModeControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SceneModeControl, &type_spec_SceneModeControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TorchControl = py::register_python_type(module.get(), type_name_TorchControl, &type_spec_TorchControl, object_bases.get(), nullptr);
-    if (!state->type_TorchControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TorchControl, &type_spec_TorchControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TorchControl, &type_spec_TorchControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoDeviceController = py::register_python_type(module.get(), type_name_VideoDeviceController, &type_spec_VideoDeviceController, object_bases.get(), nullptr);
-    if (!state->type_VideoDeviceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoDeviceController, &type_spec_VideoDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoDeviceController, &type_spec_VideoDeviceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoDeviceControllerGetDevicePropertyResult = py::register_python_type(module.get(), type_name_VideoDeviceControllerGetDevicePropertyResult, &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), nullptr);
-    if (!state->type_VideoDeviceControllerGetDevicePropertyResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoDeviceControllerGetDevicePropertyResult, &type_spec_VideoDeviceControllerGetDevicePropertyResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoDeviceControllerGetDevicePropertyResult, &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoTemporalDenoisingControl = py::register_python_type(module.get(), type_name_VideoTemporalDenoisingControl, &type_spec_VideoTemporalDenoisingControl, object_bases.get(), nullptr);
-    if (!state->type_VideoTemporalDenoisingControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoTemporalDenoisingControl, &type_spec_VideoTemporalDenoisingControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoTemporalDenoisingControl, &type_spec_VideoTemporalDenoisingControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WhiteBalanceControl = py::register_python_type(module.get(), type_name_WhiteBalanceControl, &type_spec_WhiteBalanceControl, object_bases.get(), nullptr);
-    if (!state->type_WhiteBalanceControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WhiteBalanceControl, &type_spec_WhiteBalanceControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WhiteBalanceControl, &type_spec_WhiteBalanceControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ZoomControl = py::register_python_type(module.get(), type_name_ZoomControl, &type_spec_ZoomControl, object_bases.get(), nullptr);
-    if (!state->type_ZoomControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ZoomControl, &type_spec_ZoomControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ZoomControl, &type_spec_ZoomControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ZoomSettings = py::register_python_type(module.get(), type_name_ZoomSettings, &type_spec_ZoomSettings, object_bases.get(), nullptr);
-    if (!state->type_ZoomSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ZoomSettings, &type_spec_ZoomSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ZoomSettings, &type_spec_ZoomSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDefaultAudioDeviceChangedEventArgs = py::register_python_type(module.get(), type_name_IDefaultAudioDeviceChangedEventArgs, &type_spec_IDefaultAudioDeviceChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IDefaultAudioDeviceChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDefaultAudioDeviceChangedEventArgs, &type_spec_IDefaultAudioDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDefaultAudioDeviceChangedEventArgs, &type_spec_IDefaultAudioDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IMediaDeviceController = py::register_python_type(module.get(), type_name_IMediaDeviceController, &type_spec_IMediaDeviceController, object_bases.get(), nullptr);
-    if (!state->type_IMediaDeviceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IMediaDeviceController, &type_spec_IMediaDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IMediaDeviceController, &type_spec_IMediaDeviceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedPhotoCaptureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedPhotoControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AdvancedPhotoControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AudioDeviceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AudioDeviceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AudioDeviceModule>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceModule;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AudioDeviceModule is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceModuleNotificationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::AudioDeviceModulesManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceModulesManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::AudioDeviceModulesManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::CallControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CallControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::CallControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraOcclusionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::CameraOcclusionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::CameraOcclusionState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraOcclusionState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::CameraOcclusionState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraOcclusionStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DefaultAudioCaptureDeviceChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DefaultAudioRenderDeviceChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DialRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DigitalWindowBounds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DigitalWindowBounds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DigitalWindowBounds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DigitalWindowCapability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DigitalWindowCapability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DigitalWindowCapability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::DigitalWindowControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DigitalWindowControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::DigitalWindowControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ExposureCompensationControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExposureCompensationControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ExposureCompensationControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ExposureControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExposureControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ExposureControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExposurePriorityVideoControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ExposurePriorityVideoControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::FlashControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FlashControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::FlashControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::FocusControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::FocusControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::FocusSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::FocusSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::HdrVideoControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HdrVideoControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::HdrVideoControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::InfraredTorchControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InfraredTorchControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::InfraredTorchControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::IsoSpeedControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IsoSpeedControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::IsoSpeedControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeypadPressedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::KeypadPressedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::LowLagPhotoControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLagPhotoControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::LowLagPhotoControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLagPhotoSequenceControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::LowLagPhotoSequenceControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::MediaDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::MediaDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::MediaDeviceControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaDeviceControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::MediaDeviceControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaDeviceControlCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::MediaDeviceControlCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ModuleCommandResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ModuleCommandResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ModuleCommandResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OpticalImageStabilizationControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::OpticalImageStabilizationControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PanelBasedOptimizationControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::PanelBasedOptimizationControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoConfirmationControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::PhotoConfirmationControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RedialRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::RedialRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::RegionOfInterest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RegionOfInterest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::RegionOfInterest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RegionsOfInterestControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::RegionsOfInterestControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::SceneModeControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SceneModeControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::SceneModeControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::TorchControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TorchControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::TorchControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::VideoDeviceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoDeviceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::VideoDeviceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoDeviceControllerGetDevicePropertyResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoTemporalDenoisingControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::VideoTemporalDenoisingControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::WhiteBalanceControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WhiteBalanceControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::WhiteBalanceControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ZoomControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ZoomControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ZoomControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::ZoomSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ZoomSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::ZoomSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDefaultAudioDeviceChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::IMediaDeviceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IMediaDeviceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::IMediaDeviceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

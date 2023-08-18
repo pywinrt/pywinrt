@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Fonts::LanguageFont>
+    struct py_type<winrt::Windows::Globalization::Fonts::LanguageFont>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.fonts";
+        static constexpr const char* type_name = "LanguageFont";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Globalization::Fonts::LanguageFontGroup>
+    struct py_type<winrt::Windows::Globalization::Fonts::LanguageFontGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.globalization.fonts";
+        static constexpr const char* type_name = "LanguageFontGroup";
     };
 }

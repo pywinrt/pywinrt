@@ -38,14 +38,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
+        static constexpr const char* type_name = "HolographicApplicationPreview";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>
+    struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
+        static constexpr const char* type_name = "HolographicKeyboardPlacementOverridePreview";
     };
 }

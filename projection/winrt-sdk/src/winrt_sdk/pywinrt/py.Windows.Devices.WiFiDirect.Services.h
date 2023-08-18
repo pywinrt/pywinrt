@@ -130,56 +130,65 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectService>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceAdvertiser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceAutoAcceptSessionConnectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceProvisioningInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceRemotePortAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSessionDeferredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSessionRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs>
+    struct py_type<winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.wifidirect.services";
+        static constexpr const char* type_name = "WiFiDirectServiceSessionRequestedEventArgs";
     };
 }

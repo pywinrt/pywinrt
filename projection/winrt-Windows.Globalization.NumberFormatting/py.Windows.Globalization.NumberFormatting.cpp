@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::Globalization::NumberFormatting
 {
-    struct module_state
-    {
-        PyTypeObject* type_CurrencyFormatter;
-        PyTypeObject* type_DecimalFormatter;
-        PyTypeObject* type_IncrementNumberRounder;
-        PyTypeObject* type_NumeralSystemTranslator;
-        PyTypeObject* type_PercentFormatter;
-        PyTypeObject* type_PermilleFormatter;
-        PyTypeObject* type_SignificantDigitsNumberRounder;
-        PyTypeObject* type_INumberFormatter;
-        PyTypeObject* type_INumberFormatter2;
-        PyTypeObject* type_INumberFormatterOptions;
-        PyTypeObject* type_INumberParser;
-        PyTypeObject* type_INumberRounder;
-        PyTypeObject* type_INumberRounderOption;
-        PyTypeObject* type_ISignedZeroOption;
-        PyTypeObject* type_ISignificantDigitsOption;
-    };
-
     // ----- CurrencyFormatter class --------------------
     static constexpr const char* const type_name_CurrencyFormatter = "CurrencyFormatter";
 
@@ -5854,72 +5835,15 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     PyDoc_STRVAR(module_doc, "Windows::Globalization::NumberFormatting");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CurrencyFormatter);
-        Py_VISIT(state->type_DecimalFormatter);
-        Py_VISIT(state->type_IncrementNumberRounder);
-        Py_VISIT(state->type_NumeralSystemTranslator);
-        Py_VISIT(state->type_PercentFormatter);
-        Py_VISIT(state->type_PermilleFormatter);
-        Py_VISIT(state->type_SignificantDigitsNumberRounder);
-        Py_VISIT(state->type_INumberFormatter);
-        Py_VISIT(state->type_INumberFormatter2);
-        Py_VISIT(state->type_INumberFormatterOptions);
-        Py_VISIT(state->type_INumberParser);
-        Py_VISIT(state->type_INumberRounder);
-        Py_VISIT(state->type_INumberRounderOption);
-        Py_VISIT(state->type_ISignedZeroOption);
-        Py_VISIT(state->type_ISignificantDigitsOption);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CurrencyFormatter);
-        Py_CLEAR(state->type_DecimalFormatter);
-        Py_CLEAR(state->type_IncrementNumberRounder);
-        Py_CLEAR(state->type_NumeralSystemTranslator);
-        Py_CLEAR(state->type_PercentFormatter);
-        Py_CLEAR(state->type_PermilleFormatter);
-        Py_CLEAR(state->type_SignificantDigitsNumberRounder);
-        Py_CLEAR(state->type_INumberFormatter);
-        Py_CLEAR(state->type_INumberFormatter2);
-        Py_CLEAR(state->type_INumberFormatterOptions);
-        Py_CLEAR(state->type_INumberParser);
-        Py_CLEAR(state->type_INumberRounder);
-        Py_CLEAR(state->type_INumberRounderOption);
-        Py_CLEAR(state->type_ISignedZeroOption);
-        Py_CLEAR(state->type_ISignificantDigitsOption);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Globalization_NumberFormatting",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Globalization::NumberFormatting
@@ -5935,7 +5859,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_NumberFormatting(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5948,444 +5872,141 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_NumberFormatting(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CurrencyFormatter = py::register_python_type(module.get(), type_name_CurrencyFormatter, &type_spec_CurrencyFormatter, object_bases.get(), nullptr);
-    if (!state->type_CurrencyFormatter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CurrencyFormatter, &type_spec_CurrencyFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CurrencyFormatter, &type_spec_CurrencyFormatter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DecimalFormatter = py::register_python_type(module.get(), type_name_DecimalFormatter, &type_spec_DecimalFormatter, object_bases.get(), nullptr);
-    if (!state->type_DecimalFormatter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DecimalFormatter, &type_spec_DecimalFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DecimalFormatter, &type_spec_DecimalFormatter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IncrementNumberRounder = py::register_python_type(module.get(), type_name_IncrementNumberRounder, &type_spec_IncrementNumberRounder, object_bases.get(), nullptr);
-    if (!state->type_IncrementNumberRounder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IncrementNumberRounder, &type_spec_IncrementNumberRounder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IncrementNumberRounder, &type_spec_IncrementNumberRounder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NumeralSystemTranslator = py::register_python_type(module.get(), type_name_NumeralSystemTranslator, &type_spec_NumeralSystemTranslator, object_bases.get(), nullptr);
-    if (!state->type_NumeralSystemTranslator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NumeralSystemTranslator, &type_spec_NumeralSystemTranslator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NumeralSystemTranslator, &type_spec_NumeralSystemTranslator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PercentFormatter = py::register_python_type(module.get(), type_name_PercentFormatter, &type_spec_PercentFormatter, object_bases.get(), nullptr);
-    if (!state->type_PercentFormatter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PercentFormatter, &type_spec_PercentFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PercentFormatter, &type_spec_PercentFormatter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PermilleFormatter = py::register_python_type(module.get(), type_name_PermilleFormatter, &type_spec_PermilleFormatter, object_bases.get(), nullptr);
-    if (!state->type_PermilleFormatter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PermilleFormatter, &type_spec_PermilleFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PermilleFormatter, &type_spec_PermilleFormatter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SignificantDigitsNumberRounder = py::register_python_type(module.get(), type_name_SignificantDigitsNumberRounder, &type_spec_SignificantDigitsNumberRounder, object_bases.get(), nullptr);
-    if (!state->type_SignificantDigitsNumberRounder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SignificantDigitsNumberRounder, &type_spec_SignificantDigitsNumberRounder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SignificantDigitsNumberRounder, &type_spec_SignificantDigitsNumberRounder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberFormatter = py::register_python_type(module.get(), type_name_INumberFormatter, &type_spec_INumberFormatter, object_bases.get(), nullptr);
-    if (!state->type_INumberFormatter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberFormatter, &type_spec_INumberFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberFormatter, &type_spec_INumberFormatter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberFormatter2 = py::register_python_type(module.get(), type_name_INumberFormatter2, &type_spec_INumberFormatter2, object_bases.get(), nullptr);
-    if (!state->type_INumberFormatter2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberFormatter2, &type_spec_INumberFormatter2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberFormatter2, &type_spec_INumberFormatter2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberFormatterOptions = py::register_python_type(module.get(), type_name_INumberFormatterOptions, &type_spec_INumberFormatterOptions, object_bases.get(), nullptr);
-    if (!state->type_INumberFormatterOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberFormatterOptions, &type_spec_INumberFormatterOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberFormatterOptions, &type_spec_INumberFormatterOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberParser = py::register_python_type(module.get(), type_name_INumberParser, &type_spec_INumberParser, object_bases.get(), nullptr);
-    if (!state->type_INumberParser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberParser, &type_spec_INumberParser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberParser, &type_spec_INumberParser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberRounder = py::register_python_type(module.get(), type_name_INumberRounder, &type_spec_INumberRounder, object_bases.get(), nullptr);
-    if (!state->type_INumberRounder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberRounder, &type_spec_INumberRounder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberRounder, &type_spec_INumberRounder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INumberRounderOption = py::register_python_type(module.get(), type_name_INumberRounderOption, &type_spec_INumberRounderOption, object_bases.get(), nullptr);
-    if (!state->type_INumberRounderOption)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INumberRounderOption, &type_spec_INumberRounderOption, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INumberRounderOption, &type_spec_INumberRounderOption, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISignedZeroOption = py::register_python_type(module.get(), type_name_ISignedZeroOption, &type_spec_ISignedZeroOption, object_bases.get(), nullptr);
-    if (!state->type_ISignedZeroOption)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISignedZeroOption, &type_spec_ISignedZeroOption, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISignedZeroOption, &type_spec_ISignedZeroOption, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISignificantDigitsOption = py::register_python_type(module.get(), type_name_ISignificantDigitsOption, &type_spec_ISignificantDigitsOption, object_bases.get(), nullptr);
-    if (!state->type_ISignificantDigitsOption)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISignificantDigitsOption, &type_spec_ISignificantDigitsOption, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISignificantDigitsOption, &type_spec_ISignificantDigitsOption, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CurrencyFormatter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DecimalFormatter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::DecimalFormatter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IncrementNumberRounder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NumeralSystemTranslator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PercentFormatter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::PercentFormatter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PermilleFormatter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::PermilleFormatter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SignificantDigitsNumberRounder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberFormatter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberFormatter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberFormatter2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberFormatter2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberFormatterOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberParser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberParser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberRounder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberRounder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INumberRounderOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::INumberRounderOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISignedZeroOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Globalization::NumberFormatting;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Globalization::NumberFormatting");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISignificantDigitsOption;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

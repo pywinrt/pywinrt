@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_CoreDragDropManager;
-        PyTypeObject* type_CoreDragInfo;
-        PyTypeObject* type_CoreDragOperation;
-        PyTypeObject* type_CoreDragUIOverride;
-        PyTypeObject* type_CoreDropOperationTargetRequestedEventArgs;
-        PyTypeObject* type_ICoreDropOperationTarget;
-    };
-
     // ----- CoreDragDropManager class --------------------
     static constexpr const char* const type_name_CoreDragDropManager = "CoreDragDropManager";
 
@@ -1371,54 +1361,15 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::DragDrop::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CoreDragDropManager);
-        Py_VISIT(state->type_CoreDragInfo);
-        Py_VISIT(state->type_CoreDragOperation);
-        Py_VISIT(state->type_CoreDragUIOverride);
-        Py_VISIT(state->type_CoreDropOperationTargetRequestedEventArgs);
-        Py_VISIT(state->type_ICoreDropOperationTarget);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CoreDragDropManager);
-        Py_CLEAR(state->type_CoreDragInfo);
-        Py_CLEAR(state->type_CoreDragOperation);
-        Py_CLEAR(state->type_CoreDragUIOverride);
-        Py_CLEAR(state->type_CoreDropOperationTargetRequestedEventArgs);
-        Py_CLEAR(state->type_ICoreDropOperationTarget);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_DataTransfer_DragDrop_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
@@ -1434,7 +1385,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_DragDrop_Core
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1447,183 +1398,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer_DragDrop_Core
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CoreDragDropManager = py::register_python_type(module.get(), type_name_CoreDragDropManager, &type_spec_CoreDragDropManager, object_bases.get(), nullptr);
-    if (!state->type_CoreDragDropManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDragDropManager, &type_spec_CoreDragDropManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDragDropManager, &type_spec_CoreDragDropManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreDragInfo = py::register_python_type(module.get(), type_name_CoreDragInfo, &type_spec_CoreDragInfo, object_bases.get(), nullptr);
-    if (!state->type_CoreDragInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDragInfo, &type_spec_CoreDragInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDragInfo, &type_spec_CoreDragInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreDragOperation = py::register_python_type(module.get(), type_name_CoreDragOperation, &type_spec_CoreDragOperation, object_bases.get(), nullptr);
-    if (!state->type_CoreDragOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDragOperation, &type_spec_CoreDragOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDragOperation, &type_spec_CoreDragOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreDragUIOverride = py::register_python_type(module.get(), type_name_CoreDragUIOverride, &type_spec_CoreDragUIOverride, object_bases.get(), nullptr);
-    if (!state->type_CoreDragUIOverride)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDragUIOverride, &type_spec_CoreDragUIOverride, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDragUIOverride, &type_spec_CoreDragUIOverride, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreDropOperationTargetRequestedEventArgs = py::register_python_type(module.get(), type_name_CoreDropOperationTargetRequestedEventArgs, &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CoreDropOperationTargetRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreDropOperationTargetRequestedEventArgs, &type_spec_CoreDropOperationTargetRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreDropOperationTargetRequestedEventArgs, &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreDropOperationTarget = py::register_python_type(module.get(), type_name_ICoreDropOperationTarget, &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr);
-    if (!state->type_ICoreDropOperationTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreDropOperationTarget, &type_spec_ICoreDropOperationTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreDropOperationTarget, &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDragDropManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDragInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDragOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDragUIOverride;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreDropOperationTargetRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::DataTransfer::DragDrop::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreDropOperationTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

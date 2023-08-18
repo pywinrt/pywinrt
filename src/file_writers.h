@@ -57,11 +57,11 @@ namespace pywinrt
                 w);
             settings.filter.bind_each<write_py_type_specialization_struct>(
                 members.enums)(w);
-            settings.filter.bind_each<write_python_type_specialization_struct>(
+            settings.filter.bind_each<write_py_type_specialization_struct>(
                 members.classes)(w);
-            settings.filter.bind_each<write_python_type_specialization_struct>(
+            settings.filter.bind_each<write_py_type_specialization_struct>(
                 members.interfaces)(w);
-            settings.filter.bind_each<write_python_type_specialization_struct>(
+            settings.filter.bind_each<write_py_type_specialization_struct>(
                 members.structs)(w);
             settings.filter.bind_each<write_pinterface_type_mapper>(members.interfaces)(
                 w);
@@ -137,8 +137,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         {
             writer::indent_guard g{w};
 
-            write_namespace_module_state_struct(w, members);
-
             settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
             settings.filter.bind_each<write_inspectable_type>(members.interfaces)(w);
             settings.filter.bind_each<write_struct>(members.structs)(w);
@@ -147,11 +145,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("} // py::cpp::%\n", bind_list("::", segments));
 
         write_namespace_module_init_function(w, ns, members);
-
-        settings.filter.bind_each<write_get_python_type_definition>(members.classes)(w);
-        settings.filter.bind_each<write_get_python_type_definition>(members.interfaces)(
-            w);
-        settings.filter.bind_each<write_get_python_type_definition>(members.structs)(w);
 
         w.flush_to_file(folder / filename);
         return std::move(w.needed_namespaces);

@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::Devices::WiFi
 {
-    struct module_state
-    {
-        PyTypeObject* type_WiFiAdapter;
-        PyTypeObject* type_WiFiAvailableNetwork;
-        PyTypeObject* type_WiFiConnectionResult;
-        PyTypeObject* type_WiFiNetworkReport;
-        PyTypeObject* type_WiFiOnDemandHotspotConnectTriggerDetails;
-        PyTypeObject* type_WiFiOnDemandHotspotConnectionResult;
-        PyTypeObject* type_WiFiOnDemandHotspotNetwork;
-        PyTypeObject* type_WiFiOnDemandHotspotNetworkProperties;
-        PyTypeObject* type_WiFiWpsConfigurationResult;
-    };
-
     // ----- WiFiAdapter class --------------------
     static constexpr const char* const type_name_WiFiAdapter = "WiFiAdapter";
 
@@ -2004,60 +1991,15 @@ namespace py::cpp::Windows::Devices::WiFi
     PyDoc_STRVAR(module_doc, "Windows::Devices::WiFi");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WiFiAdapter);
-        Py_VISIT(state->type_WiFiAvailableNetwork);
-        Py_VISIT(state->type_WiFiConnectionResult);
-        Py_VISIT(state->type_WiFiNetworkReport);
-        Py_VISIT(state->type_WiFiOnDemandHotspotConnectTriggerDetails);
-        Py_VISIT(state->type_WiFiOnDemandHotspotConnectionResult);
-        Py_VISIT(state->type_WiFiOnDemandHotspotNetwork);
-        Py_VISIT(state->type_WiFiOnDemandHotspotNetworkProperties);
-        Py_VISIT(state->type_WiFiWpsConfigurationResult);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WiFiAdapter);
-        Py_CLEAR(state->type_WiFiAvailableNetwork);
-        Py_CLEAR(state->type_WiFiConnectionResult);
-        Py_CLEAR(state->type_WiFiNetworkReport);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotConnectTriggerDetails);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotConnectionResult);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotNetwork);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotNetworkProperties);
-        Py_CLEAR(state->type_WiFiWpsConfigurationResult);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_WiFi",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::WiFi
@@ -2073,7 +2015,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFi(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2086,270 +2028,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFi(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WiFiAdapter = py::register_python_type(module.get(), type_name_WiFiAdapter, &type_spec_WiFiAdapter, object_bases.get(), nullptr);
-    if (!state->type_WiFiAdapter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiAdapter, &type_spec_WiFiAdapter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiAdapter, &type_spec_WiFiAdapter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiAvailableNetwork = py::register_python_type(module.get(), type_name_WiFiAvailableNetwork, &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr);
-    if (!state->type_WiFiAvailableNetwork)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiAvailableNetwork, &type_spec_WiFiAvailableNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiAvailableNetwork, &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiConnectionResult = py::register_python_type(module.get(), type_name_WiFiConnectionResult, &type_spec_WiFiConnectionResult, object_bases.get(), nullptr);
-    if (!state->type_WiFiConnectionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiConnectionResult, &type_spec_WiFiConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiConnectionResult, &type_spec_WiFiConnectionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiNetworkReport = py::register_python_type(module.get(), type_name_WiFiNetworkReport, &type_spec_WiFiNetworkReport, object_bases.get(), nullptr);
-    if (!state->type_WiFiNetworkReport)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiNetworkReport, &type_spec_WiFiNetworkReport, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiNetworkReport, &type_spec_WiFiNetworkReport, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotConnectTriggerDetails = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTriggerDetails, &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotConnectTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTriggerDetails, &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTriggerDetails, &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotConnectionResult = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectionResult, &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotConnectionResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectionResult, &type_spec_WiFiOnDemandHotspotConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectionResult, &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotNetwork = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetwork, &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotNetwork)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetwork, &type_spec_WiFiOnDemandHotspotNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetwork, &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotNetworkProperties = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetworkProperties, &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotNetworkProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetworkProperties, &type_spec_WiFiOnDemandHotspotNetworkProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetworkProperties, &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiWpsConfigurationResult = py::register_python_type(module.get(), type_name_WiFiWpsConfigurationResult, &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr);
-    if (!state->type_WiFiWpsConfigurationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiWpsConfigurationResult, &type_spec_WiFiWpsConfigurationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiWpsConfigurationResult, &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiAdapter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiAdapter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiAdapter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiAvailableNetwork;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiAvailableNetwork is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiConnectionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiConnectionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiNetworkReport;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiNetworkReport is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotConnectTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotConnectionResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotNetwork;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotNetworkProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::WiFi;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::WiFi");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiWpsConfigurationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

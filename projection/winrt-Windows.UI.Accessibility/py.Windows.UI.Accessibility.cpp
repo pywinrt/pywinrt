@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::UI::Accessibility
 {
-    struct module_state
-    {
-        PyTypeObject* type_ScreenReaderPositionChangedEventArgs;
-        PyTypeObject* type_ScreenReaderService;
-    };
-
     // ----- ScreenReaderPositionChangedEventArgs class --------------------
     static constexpr const char* const type_name_ScreenReaderPositionChangedEventArgs = "ScreenReaderPositionChangedEventArgs";
 
@@ -294,46 +288,15 @@ namespace py::cpp::Windows::UI::Accessibility
     PyDoc_STRVAR(module_doc, "Windows::UI::Accessibility");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ScreenReaderPositionChangedEventArgs);
-        Py_VISIT(state->type_ScreenReaderService);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ScreenReaderPositionChangedEventArgs);
-        Py_CLEAR(state->type_ScreenReaderService);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Accessibility",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Accessibility
@@ -349,7 +312,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Accessibility(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -362,67 +325,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Accessibility(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ScreenReaderPositionChangedEventArgs = py::register_python_type(module.get(), type_name_ScreenReaderPositionChangedEventArgs, &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ScreenReaderPositionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScreenReaderPositionChangedEventArgs, &type_spec_ScreenReaderPositionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScreenReaderPositionChangedEventArgs, &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScreenReaderService = py::register_python_type(module.get(), type_name_ScreenReaderService, &type_spec_ScreenReaderService, object_bases.get(), nullptr);
-    if (!state->type_ScreenReaderService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScreenReaderService, &type_spec_ScreenReaderService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScreenReaderService, &type_spec_ScreenReaderService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Accessibility;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Accessibility");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScreenReaderPositionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Accessibility::ScreenReaderService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Accessibility;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Accessibility");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScreenReaderService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Accessibility::ScreenReaderService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

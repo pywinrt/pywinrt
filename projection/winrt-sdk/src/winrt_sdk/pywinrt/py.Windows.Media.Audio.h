@@ -269,260 +269,303 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioDeviceInputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioDeviceInputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioDeviceInputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioDeviceOutputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioDeviceOutputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioDeviceOutputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioFileInputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioFileInputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioFileInputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioFileOutputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioFileOutputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioFileOutputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>
+    struct py_type<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioFrameCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioFrameInputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioFrameInputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioFrameInputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioFrameOutputNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioFrameOutputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioFrameOutputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioGraph>
+    struct py_type<winrt::Windows::Media::Audio::AudioGraph>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioGraph";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioGraphBatchUpdater>
+    struct py_type<winrt::Windows::Media::Audio::AudioGraphBatchUpdater>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioGraphBatchUpdater";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioGraphConnection>
+    struct py_type<winrt::Windows::Media::Audio::AudioGraphConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioGraphConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioGraphSettings>
+    struct py_type<winrt::Windows::Media::Audio::AudioGraphSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioGraphSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>
+    struct py_type<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioGraphUnrecoverableErrorOccurredEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitter>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeEmitter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeEmitter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeEmitterConeProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeEmitterDecayModel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeEmitterNaturalDecayModelProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterShape>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeEmitterShape>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeEmitterShape";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioNodeListener>
+    struct py_type<winrt::Windows::Media::Audio::AudioNodeListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioNodeListener";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioPlaybackConnection>
+    struct py_type<winrt::Windows::Media::Audio::AudioPlaybackConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioPlaybackConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult>
+    struct py_type<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioPlaybackConnectionOpenResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioStateMonitor>
+    struct py_type<winrt::Windows::Media::Audio::AudioStateMonitor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioStateMonitor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::AudioSubmixNode>
+    struct py_type<winrt::Windows::Media::Audio::AudioSubmixNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioSubmixNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateAudioDeviceInputNodeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateAudioDeviceOutputNodeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateAudioFileInputNodeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateAudioFileOutputNodeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateAudioGraphResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateAudioGraphResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateAudioGraphResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>
+    struct py_type<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "CreateMediaSourceAudioInputNodeResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::EchoEffectDefinition>
+    struct py_type<winrt::Windows::Media::Audio::EchoEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "EchoEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::EqualizerBand>
+    struct py_type<winrt::Windows::Media::Audio::EqualizerBand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "EqualizerBand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::EqualizerEffectDefinition>
+    struct py_type<winrt::Windows::Media::Audio::EqualizerEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "EqualizerEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>
+    struct py_type<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "FrameInputNodeQuantumStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::LimiterEffectDefinition>
+    struct py_type<winrt::Windows::Media::Audio::LimiterEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "LimiterEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::MediaSourceAudioInputNode>
+    struct py_type<winrt::Windows::Media::Audio::MediaSourceAudioInputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "MediaSourceAudioInputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::ReverbEffectDefinition>
+    struct py_type<winrt::Windows::Media::Audio::ReverbEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "ReverbEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>
+    struct py_type<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "SetDefaultSpatialAudioFormatResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration>
+    struct py_type<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "SpatialAudioDeviceConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration>
+    struct py_type<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "SpatialAudioFormatConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype>
+    struct py_type<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "SpatialAudioFormatSubtype";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::IAudioInputNode>
+    struct py_type<winrt::Windows::Media::Audio::IAudioInputNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "IAudioInputNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::IAudioInputNode2>
+    struct py_type<winrt::Windows::Media::Audio::IAudioInputNode2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "IAudioInputNode2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::IAudioNode>
+    struct py_type<winrt::Windows::Media::Audio::IAudioNode>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "IAudioNode";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>
+    struct py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "IAudioNodeWithListener";
     };
 }

@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::Networking
 {
-    struct module_state
-    {
-        PyTypeObject* type_EndpointPair;
-        PyTypeObject* type_HostName;
-    };
-
     // ----- EndpointPair class --------------------
     static constexpr const char* const type_name_EndpointPair = "EndpointPair";
 
@@ -620,46 +614,15 @@ namespace py::cpp::Windows::Networking
     PyDoc_STRVAR(module_doc, "Windows::Networking");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_EndpointPair);
-        Py_VISIT(state->type_HostName);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_EndpointPair);
-        Py_CLEAR(state->type_HostName);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Networking",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Networking
@@ -675,7 +638,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -688,67 +651,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Networking(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_EndpointPair = py::register_python_type(module.get(), type_name_EndpointPair, &type_spec_EndpointPair, object_bases.get(), nullptr);
-    if (!state->type_EndpointPair)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EndpointPair, &type_spec_EndpointPair, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EndpointPair, &type_spec_EndpointPair, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HostName = py::register_python_type(module.get(), type_name_HostName, &type_spec_HostName, object_bases.get(), nullptr);
-    if (!state->type_HostName)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HostName, &type_spec_HostName, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HostName, &type_spec_HostName, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::EndpointPair>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EndpointPair;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::EndpointPair is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Networking::HostName>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Networking;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Networking");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HostName;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Networking::HostName is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

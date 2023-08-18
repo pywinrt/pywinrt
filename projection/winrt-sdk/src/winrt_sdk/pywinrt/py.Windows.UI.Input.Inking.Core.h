@@ -66,32 +66,37 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke>
+    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreIncrementalInkStroke";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>
+    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreInkIndependentInputSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost>
+    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreInkPresenterHost";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreWetStrokeUpdateEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>
+    struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
+        static constexpr const char* type_name = "CoreWetStrokeUpdateSource";
     };
 }

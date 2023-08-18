@@ -6,38 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input::Spatial
 {
-    struct module_state
-    {
-        PyTypeObject* type_SpatialGestureRecognizer;
-        PyTypeObject* type_SpatialHoldCanceledEventArgs;
-        PyTypeObject* type_SpatialHoldCompletedEventArgs;
-        PyTypeObject* type_SpatialHoldStartedEventArgs;
-        PyTypeObject* type_SpatialInteraction;
-        PyTypeObject* type_SpatialInteractionController;
-        PyTypeObject* type_SpatialInteractionControllerProperties;
-        PyTypeObject* type_SpatialInteractionDetectedEventArgs;
-        PyTypeObject* type_SpatialInteractionManager;
-        PyTypeObject* type_SpatialInteractionSource;
-        PyTypeObject* type_SpatialInteractionSourceEventArgs;
-        PyTypeObject* type_SpatialInteractionSourceLocation;
-        PyTypeObject* type_SpatialInteractionSourceProperties;
-        PyTypeObject* type_SpatialInteractionSourceState;
-        PyTypeObject* type_SpatialManipulationCanceledEventArgs;
-        PyTypeObject* type_SpatialManipulationCompletedEventArgs;
-        PyTypeObject* type_SpatialManipulationDelta;
-        PyTypeObject* type_SpatialManipulationStartedEventArgs;
-        PyTypeObject* type_SpatialManipulationUpdatedEventArgs;
-        PyTypeObject* type_SpatialNavigationCanceledEventArgs;
-        PyTypeObject* type_SpatialNavigationCompletedEventArgs;
-        PyTypeObject* type_SpatialNavigationStartedEventArgs;
-        PyTypeObject* type_SpatialNavigationUpdatedEventArgs;
-        PyTypeObject* type_SpatialPointerInteractionSourcePose;
-        PyTypeObject* type_SpatialPointerPose;
-        PyTypeObject* type_SpatialRecognitionEndedEventArgs;
-        PyTypeObject* type_SpatialRecognitionStartedEventArgs;
-        PyTypeObject* type_SpatialTappedEventArgs;
-    };
-
     // ----- SpatialGestureRecognizer class --------------------
     static constexpr const char* const type_name_SpatialGestureRecognizer = "SpatialGestureRecognizer";
 
@@ -5348,98 +5316,15 @@ namespace py::cpp::Windows::UI::Input::Spatial
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Spatial");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_SpatialGestureRecognizer);
-        Py_VISIT(state->type_SpatialHoldCanceledEventArgs);
-        Py_VISIT(state->type_SpatialHoldCompletedEventArgs);
-        Py_VISIT(state->type_SpatialHoldStartedEventArgs);
-        Py_VISIT(state->type_SpatialInteraction);
-        Py_VISIT(state->type_SpatialInteractionController);
-        Py_VISIT(state->type_SpatialInteractionControllerProperties);
-        Py_VISIT(state->type_SpatialInteractionDetectedEventArgs);
-        Py_VISIT(state->type_SpatialInteractionManager);
-        Py_VISIT(state->type_SpatialInteractionSource);
-        Py_VISIT(state->type_SpatialInteractionSourceEventArgs);
-        Py_VISIT(state->type_SpatialInteractionSourceLocation);
-        Py_VISIT(state->type_SpatialInteractionSourceProperties);
-        Py_VISIT(state->type_SpatialInteractionSourceState);
-        Py_VISIT(state->type_SpatialManipulationCanceledEventArgs);
-        Py_VISIT(state->type_SpatialManipulationCompletedEventArgs);
-        Py_VISIT(state->type_SpatialManipulationDelta);
-        Py_VISIT(state->type_SpatialManipulationStartedEventArgs);
-        Py_VISIT(state->type_SpatialManipulationUpdatedEventArgs);
-        Py_VISIT(state->type_SpatialNavigationCanceledEventArgs);
-        Py_VISIT(state->type_SpatialNavigationCompletedEventArgs);
-        Py_VISIT(state->type_SpatialNavigationStartedEventArgs);
-        Py_VISIT(state->type_SpatialNavigationUpdatedEventArgs);
-        Py_VISIT(state->type_SpatialPointerInteractionSourcePose);
-        Py_VISIT(state->type_SpatialPointerPose);
-        Py_VISIT(state->type_SpatialRecognitionEndedEventArgs);
-        Py_VISIT(state->type_SpatialRecognitionStartedEventArgs);
-        Py_VISIT(state->type_SpatialTappedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_SpatialGestureRecognizer);
-        Py_CLEAR(state->type_SpatialHoldCanceledEventArgs);
-        Py_CLEAR(state->type_SpatialHoldCompletedEventArgs);
-        Py_CLEAR(state->type_SpatialHoldStartedEventArgs);
-        Py_CLEAR(state->type_SpatialInteraction);
-        Py_CLEAR(state->type_SpatialInteractionController);
-        Py_CLEAR(state->type_SpatialInteractionControllerProperties);
-        Py_CLEAR(state->type_SpatialInteractionDetectedEventArgs);
-        Py_CLEAR(state->type_SpatialInteractionManager);
-        Py_CLEAR(state->type_SpatialInteractionSource);
-        Py_CLEAR(state->type_SpatialInteractionSourceEventArgs);
-        Py_CLEAR(state->type_SpatialInteractionSourceLocation);
-        Py_CLEAR(state->type_SpatialInteractionSourceProperties);
-        Py_CLEAR(state->type_SpatialInteractionSourceState);
-        Py_CLEAR(state->type_SpatialManipulationCanceledEventArgs);
-        Py_CLEAR(state->type_SpatialManipulationCompletedEventArgs);
-        Py_CLEAR(state->type_SpatialManipulationDelta);
-        Py_CLEAR(state->type_SpatialManipulationStartedEventArgs);
-        Py_CLEAR(state->type_SpatialManipulationUpdatedEventArgs);
-        Py_CLEAR(state->type_SpatialNavigationCanceledEventArgs);
-        Py_CLEAR(state->type_SpatialNavigationCompletedEventArgs);
-        Py_CLEAR(state->type_SpatialNavigationStartedEventArgs);
-        Py_CLEAR(state->type_SpatialNavigationUpdatedEventArgs);
-        Py_CLEAR(state->type_SpatialPointerInteractionSourcePose);
-        Py_CLEAR(state->type_SpatialPointerPose);
-        Py_CLEAR(state->type_SpatialRecognitionEndedEventArgs);
-        Py_CLEAR(state->type_SpatialRecognitionStartedEventArgs);
-        Py_CLEAR(state->type_SpatialTappedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input_Spatial",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input::Spatial
@@ -5455,7 +5340,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Spatial(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5468,821 +5353,258 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Spatial(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_SpatialGestureRecognizer = py::register_python_type(module.get(), type_name_SpatialGestureRecognizer, &type_spec_SpatialGestureRecognizer, object_bases.get(), nullptr);
-    if (!state->type_SpatialGestureRecognizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialGestureRecognizer, &type_spec_SpatialGestureRecognizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialGestureRecognizer, &type_spec_SpatialGestureRecognizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialHoldCanceledEventArgs = py::register_python_type(module.get(), type_name_SpatialHoldCanceledEventArgs, &type_spec_SpatialHoldCanceledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialHoldCanceledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialHoldCanceledEventArgs, &type_spec_SpatialHoldCanceledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialHoldCanceledEventArgs, &type_spec_SpatialHoldCanceledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialHoldCompletedEventArgs = py::register_python_type(module.get(), type_name_SpatialHoldCompletedEventArgs, &type_spec_SpatialHoldCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialHoldCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialHoldCompletedEventArgs, &type_spec_SpatialHoldCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialHoldCompletedEventArgs, &type_spec_SpatialHoldCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialHoldStartedEventArgs = py::register_python_type(module.get(), type_name_SpatialHoldStartedEventArgs, &type_spec_SpatialHoldStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialHoldStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialHoldStartedEventArgs, &type_spec_SpatialHoldStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialHoldStartedEventArgs, &type_spec_SpatialHoldStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteraction = py::register_python_type(module.get(), type_name_SpatialInteraction, &type_spec_SpatialInteraction, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteraction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteraction, &type_spec_SpatialInteraction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteraction, &type_spec_SpatialInteraction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionController = py::register_python_type(module.get(), type_name_SpatialInteractionController, &type_spec_SpatialInteractionController, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionController, &type_spec_SpatialInteractionController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionController, &type_spec_SpatialInteractionController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionControllerProperties = py::register_python_type(module.get(), type_name_SpatialInteractionControllerProperties, &type_spec_SpatialInteractionControllerProperties, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionControllerProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionControllerProperties, &type_spec_SpatialInteractionControllerProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionControllerProperties, &type_spec_SpatialInteractionControllerProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionDetectedEventArgs = py::register_python_type(module.get(), type_name_SpatialInteractionDetectedEventArgs, &type_spec_SpatialInteractionDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionDetectedEventArgs, &type_spec_SpatialInteractionDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionDetectedEventArgs, &type_spec_SpatialInteractionDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionManager = py::register_python_type(module.get(), type_name_SpatialInteractionManager, &type_spec_SpatialInteractionManager, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionManager, &type_spec_SpatialInteractionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionManager, &type_spec_SpatialInteractionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionSource = py::register_python_type(module.get(), type_name_SpatialInteractionSource, &type_spec_SpatialInteractionSource, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSource, &type_spec_SpatialInteractionSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSource, &type_spec_SpatialInteractionSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionSourceEventArgs = py::register_python_type(module.get(), type_name_SpatialInteractionSourceEventArgs, &type_spec_SpatialInteractionSourceEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionSourceEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceEventArgs, &type_spec_SpatialInteractionSourceEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceEventArgs, &type_spec_SpatialInteractionSourceEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionSourceLocation = py::register_python_type(module.get(), type_name_SpatialInteractionSourceLocation, &type_spec_SpatialInteractionSourceLocation, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionSourceLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceLocation, &type_spec_SpatialInteractionSourceLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceLocation, &type_spec_SpatialInteractionSourceLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionSourceProperties = py::register_python_type(module.get(), type_name_SpatialInteractionSourceProperties, &type_spec_SpatialInteractionSourceProperties, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionSourceProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceProperties, &type_spec_SpatialInteractionSourceProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceProperties, &type_spec_SpatialInteractionSourceProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialInteractionSourceState = py::register_python_type(module.get(), type_name_SpatialInteractionSourceState, &type_spec_SpatialInteractionSourceState, object_bases.get(), nullptr);
-    if (!state->type_SpatialInteractionSourceState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceState, &type_spec_SpatialInteractionSourceState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialInteractionSourceState, &type_spec_SpatialInteractionSourceState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialManipulationCanceledEventArgs = py::register_python_type(module.get(), type_name_SpatialManipulationCanceledEventArgs, &type_spec_SpatialManipulationCanceledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialManipulationCanceledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationCanceledEventArgs, &type_spec_SpatialManipulationCanceledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationCanceledEventArgs, &type_spec_SpatialManipulationCanceledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialManipulationCompletedEventArgs = py::register_python_type(module.get(), type_name_SpatialManipulationCompletedEventArgs, &type_spec_SpatialManipulationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialManipulationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationCompletedEventArgs, &type_spec_SpatialManipulationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationCompletedEventArgs, &type_spec_SpatialManipulationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialManipulationDelta = py::register_python_type(module.get(), type_name_SpatialManipulationDelta, &type_spec_SpatialManipulationDelta, object_bases.get(), nullptr);
-    if (!state->type_SpatialManipulationDelta)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationDelta, &type_spec_SpatialManipulationDelta, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationDelta, &type_spec_SpatialManipulationDelta, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialManipulationStartedEventArgs = py::register_python_type(module.get(), type_name_SpatialManipulationStartedEventArgs, &type_spec_SpatialManipulationStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialManipulationStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationStartedEventArgs, &type_spec_SpatialManipulationStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationStartedEventArgs, &type_spec_SpatialManipulationStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialManipulationUpdatedEventArgs = py::register_python_type(module.get(), type_name_SpatialManipulationUpdatedEventArgs, &type_spec_SpatialManipulationUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialManipulationUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationUpdatedEventArgs, &type_spec_SpatialManipulationUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialManipulationUpdatedEventArgs, &type_spec_SpatialManipulationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialNavigationCanceledEventArgs = py::register_python_type(module.get(), type_name_SpatialNavigationCanceledEventArgs, &type_spec_SpatialNavigationCanceledEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialNavigationCanceledEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationCanceledEventArgs, &type_spec_SpatialNavigationCanceledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationCanceledEventArgs, &type_spec_SpatialNavigationCanceledEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialNavigationCompletedEventArgs = py::register_python_type(module.get(), type_name_SpatialNavigationCompletedEventArgs, &type_spec_SpatialNavigationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialNavigationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationCompletedEventArgs, &type_spec_SpatialNavigationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationCompletedEventArgs, &type_spec_SpatialNavigationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialNavigationStartedEventArgs = py::register_python_type(module.get(), type_name_SpatialNavigationStartedEventArgs, &type_spec_SpatialNavigationStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialNavigationStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationStartedEventArgs, &type_spec_SpatialNavigationStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationStartedEventArgs, &type_spec_SpatialNavigationStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialNavigationUpdatedEventArgs = py::register_python_type(module.get(), type_name_SpatialNavigationUpdatedEventArgs, &type_spec_SpatialNavigationUpdatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialNavigationUpdatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationUpdatedEventArgs, &type_spec_SpatialNavigationUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialNavigationUpdatedEventArgs, &type_spec_SpatialNavigationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialPointerInteractionSourcePose = py::register_python_type(module.get(), type_name_SpatialPointerInteractionSourcePose, &type_spec_SpatialPointerInteractionSourcePose, object_bases.get(), nullptr);
-    if (!state->type_SpatialPointerInteractionSourcePose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialPointerInteractionSourcePose, &type_spec_SpatialPointerInteractionSourcePose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialPointerInteractionSourcePose, &type_spec_SpatialPointerInteractionSourcePose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialPointerPose = py::register_python_type(module.get(), type_name_SpatialPointerPose, &type_spec_SpatialPointerPose, object_bases.get(), nullptr);
-    if (!state->type_SpatialPointerPose)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialPointerPose, &type_spec_SpatialPointerPose, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialPointerPose, &type_spec_SpatialPointerPose, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialRecognitionEndedEventArgs = py::register_python_type(module.get(), type_name_SpatialRecognitionEndedEventArgs, &type_spec_SpatialRecognitionEndedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialRecognitionEndedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialRecognitionEndedEventArgs, &type_spec_SpatialRecognitionEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialRecognitionEndedEventArgs, &type_spec_SpatialRecognitionEndedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialRecognitionStartedEventArgs = py::register_python_type(module.get(), type_name_SpatialRecognitionStartedEventArgs, &type_spec_SpatialRecognitionStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialRecognitionStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialRecognitionStartedEventArgs, &type_spec_SpatialRecognitionStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialRecognitionStartedEventArgs, &type_spec_SpatialRecognitionStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialTappedEventArgs = py::register_python_type(module.get(), type_name_SpatialTappedEventArgs, &type_spec_SpatialTappedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SpatialTappedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialTappedEventArgs, &type_spec_SpatialTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialTappedEventArgs, &type_spec_SpatialTappedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialGestureRecognizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialHoldCanceledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialHoldCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialHoldStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteraction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteraction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteraction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionControllerProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialInteractionSourceState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialManipulationCanceledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialManipulationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialManipulationDelta;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialManipulationStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialManipulationUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialNavigationCanceledEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialNavigationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialNavigationStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialNavigationUpdatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialPointerInteractionSourcePose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialPointerPose>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialPointerPose;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialPointerPose is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialRecognitionEndedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialRecognitionStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Spatial;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Spatial");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialTappedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Interop
 {
-    struct module_state
-    {
-        PyTypeObject* type_NotifyCollectionChangedEventArgs;
-        PyTypeObject* type_IBindableIterable;
-        PyTypeObject* type_IBindableIterator;
-        PyTypeObject* type_IBindableObservableVector;
-        PyTypeObject* type_IBindableVector;
-        PyTypeObject* type_IBindableVectorView;
-        PyTypeObject* type_INotifyCollectionChanged;
-        PyTypeObject* type_TypeName;
-    };
-
     // ----- NotifyCollectionChangedEventArgs class --------------------
     static constexpr const char* const type_name_NotifyCollectionChangedEventArgs = "NotifyCollectionChangedEventArgs";
 
@@ -1834,58 +1822,15 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Interop");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_NotifyCollectionChangedEventArgs);
-        Py_VISIT(state->type_IBindableIterable);
-        Py_VISIT(state->type_IBindableIterator);
-        Py_VISIT(state->type_IBindableObservableVector);
-        Py_VISIT(state->type_IBindableVector);
-        Py_VISIT(state->type_IBindableVectorView);
-        Py_VISIT(state->type_INotifyCollectionChanged);
-        Py_VISIT(state->type_TypeName);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_NotifyCollectionChangedEventArgs);
-        Py_CLEAR(state->type_IBindableIterable);
-        Py_CLEAR(state->type_IBindableIterator);
-        Py_CLEAR(state->type_IBindableObservableVector);
-        Py_CLEAR(state->type_IBindableVector);
-        Py_CLEAR(state->type_IBindableVectorView);
-        Py_CLEAR(state->type_INotifyCollectionChanged);
-        Py_CLEAR(state->type_TypeName);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Interop",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Interop
@@ -1901,7 +1846,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Interop(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1914,241 +1859,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Interop(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_NotifyCollectionChangedEventArgs = py::register_python_type(module.get(), type_name_NotifyCollectionChangedEventArgs, &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NotifyCollectionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NotifyCollectionChangedEventArgs, &type_spec_NotifyCollectionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NotifyCollectionChangedEventArgs, &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBindableIterable = py::register_python_type(module.get(), type_name_IBindableIterable, &type_spec_IBindableIterable, object_bases.get(), nullptr);
-    if (!state->type_IBindableIterable)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBindableIterable, &type_spec_IBindableIterable, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBindableIterable, &type_spec_IBindableIterable, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBindableIterator = py::register_python_type(module.get(), type_name_IBindableIterator, &type_spec_IBindableIterator, object_bases.get(), nullptr);
-    if (!state->type_IBindableIterator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBindableIterator, &type_spec_IBindableIterator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBindableIterator, &type_spec_IBindableIterator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBindableObservableVector = py::register_python_type(module.get(), type_name_IBindableObservableVector, &type_spec_IBindableObservableVector, object_bases.get(), nullptr);
-    if (!state->type_IBindableObservableVector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBindableObservableVector, &type_spec_IBindableObservableVector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBindableObservableVector, &type_spec_IBindableObservableVector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBindableVector = py::register_python_type(module.get(), type_name_IBindableVector, &type_spec_IBindableVector, object_bases.get(), nullptr);
-    if (!state->type_IBindableVector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBindableVector, &type_spec_IBindableVector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBindableVector, &type_spec_IBindableVector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBindableVectorView = py::register_python_type(module.get(), type_name_IBindableVectorView, &type_spec_IBindableVectorView, object_bases.get(), nullptr);
-    if (!state->type_IBindableVectorView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBindableVectorView, &type_spec_IBindableVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBindableVectorView, &type_spec_IBindableVectorView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_INotifyCollectionChanged = py::register_python_type(module.get(), type_name_INotifyCollectionChanged, &type_spec_INotifyCollectionChanged, object_bases.get(), nullptr);
-    if (!state->type_INotifyCollectionChanged)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_INotifyCollectionChanged, &type_spec_INotifyCollectionChanged, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_INotifyCollectionChanged, &type_spec_INotifyCollectionChanged, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TypeName = py::register_python_type(module.get(), type_name_TypeName, &type_spec_TypeName, nullptr, nullptr);
-    if (!state->type_TypeName)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TypeName, &type_spec_TypeName, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TypeName, &type_spec_TypeName, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NotifyCollectionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBindableIterable;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::IBindableIterable is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBindableIterator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::IBindableIterator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBindableObservableVector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::IBindableObservableVector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBindableVector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::IBindableVector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBindableVectorView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::IBindableVectorView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_INotifyCollectionChanged;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Interop::TypeName>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Interop;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Interop");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TypeName;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Interop::TypeName is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

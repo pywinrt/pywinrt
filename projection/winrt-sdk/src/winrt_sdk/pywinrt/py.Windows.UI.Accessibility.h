@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>
+    struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.accessibility";
+        static constexpr const char* type_name = "ScreenReaderPositionChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Accessibility::ScreenReaderService>
+    struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.accessibility";
+        static constexpr const char* type_name = "ScreenReaderService";
     };
 }

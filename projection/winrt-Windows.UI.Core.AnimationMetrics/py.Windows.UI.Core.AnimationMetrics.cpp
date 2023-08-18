@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::UI::Core::AnimationMetrics
 {
-    struct module_state
-    {
-        PyTypeObject* type_AnimationDescription;
-        PyTypeObject* type_OpacityAnimation;
-        PyTypeObject* type_PropertyAnimation;
-        PyTypeObject* type_ScaleAnimation;
-        PyTypeObject* type_TranslationAnimation;
-        PyTypeObject* type_IPropertyAnimation;
-    };
-
     // ----- AnimationDescription class --------------------
     static constexpr const char* const type_name_AnimationDescription = "AnimationDescription";
 
@@ -1236,54 +1226,15 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     PyDoc_STRVAR(module_doc, "Windows::UI::Core::AnimationMetrics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AnimationDescription);
-        Py_VISIT(state->type_OpacityAnimation);
-        Py_VISIT(state->type_PropertyAnimation);
-        Py_VISIT(state->type_ScaleAnimation);
-        Py_VISIT(state->type_TranslationAnimation);
-        Py_VISIT(state->type_IPropertyAnimation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AnimationDescription);
-        Py_CLEAR(state->type_OpacityAnimation);
-        Py_CLEAR(state->type_PropertyAnimation);
-        Py_CLEAR(state->type_ScaleAnimation);
-        Py_CLEAR(state->type_TranslationAnimation);
-        Py_CLEAR(state->type_IPropertyAnimation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Core_AnimationMetrics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Core::AnimationMetrics
@@ -1299,7 +1250,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_AnimationMetrics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1312,183 +1263,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_AnimationMetrics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AnimationDescription = py::register_python_type(module.get(), type_name_AnimationDescription, &type_spec_AnimationDescription, object_bases.get(), nullptr);
-    if (!state->type_AnimationDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnimationDescription, &type_spec_AnimationDescription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnimationDescription, &type_spec_AnimationDescription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OpacityAnimation = py::register_python_type(module.get(), type_name_OpacityAnimation, &type_spec_OpacityAnimation, object_bases.get(), nullptr);
-    if (!state->type_OpacityAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OpacityAnimation, &type_spec_OpacityAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OpacityAnimation, &type_spec_OpacityAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PropertyAnimation = py::register_python_type(module.get(), type_name_PropertyAnimation, &type_spec_PropertyAnimation, object_bases.get(), nullptr);
-    if (!state->type_PropertyAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PropertyAnimation, &type_spec_PropertyAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PropertyAnimation, &type_spec_PropertyAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScaleAnimation = py::register_python_type(module.get(), type_name_ScaleAnimation, &type_spec_ScaleAnimation, object_bases.get(), nullptr);
-    if (!state->type_ScaleAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScaleAnimation, &type_spec_ScaleAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScaleAnimation, &type_spec_ScaleAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TranslationAnimation = py::register_python_type(module.get(), type_name_TranslationAnimation, &type_spec_TranslationAnimation, object_bases.get(), nullptr);
-    if (!state->type_TranslationAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TranslationAnimation, &type_spec_TranslationAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TranslationAnimation, &type_spec_TranslationAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPropertyAnimation = py::register_python_type(module.get(), type_name_IPropertyAnimation, &type_spec_IPropertyAnimation, object_bases.get(), nullptr);
-    if (!state->type_IPropertyAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPropertyAnimation, &type_spec_IPropertyAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPropertyAnimation, &type_spec_IPropertyAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnimationDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OpacityAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PropertyAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScaleAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TranslationAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Core::AnimationMetrics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Core::AnimationMetrics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPropertyAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

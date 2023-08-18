@@ -45,26 +45,30 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>
+    struct py_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.haptics";
+        static constexpr const char* type_name = "KnownSimpleHapticsControllerWaveforms";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>
+    struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.haptics";
+        static constexpr const char* type_name = "SimpleHapticsController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>
+    struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.haptics";
+        static constexpr const char* type_name = "SimpleHapticsControllerFeedback";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Haptics::VibrationDevice>
+    struct py_type<winrt::Windows::Devices::Haptics::VibrationDevice>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.haptics";
+        static constexpr const char* type_name = "VibrationDevice";
     };
 }

@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::System::Profile::SystemManufacturers
 {
-    struct module_state
-    {
-        PyTypeObject* type_OemSupportInfo;
-        PyTypeObject* type_SmbiosInformation;
-        PyTypeObject* type_SystemSupportDeviceInfo;
-        PyTypeObject* type_SystemSupportInfo;
-    };
-
     // ----- OemSupportInfo class --------------------
     static constexpr const char* const type_name_OemSupportInfo = "OemSupportInfo";
 
@@ -556,50 +548,15 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     PyDoc_STRVAR(module_doc, "Windows::System::Profile::SystemManufacturers");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_OemSupportInfo);
-        Py_VISIT(state->type_SmbiosInformation);
-        Py_VISIT(state->type_SystemSupportDeviceInfo);
-        Py_VISIT(state->type_SystemSupportInfo);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_OemSupportInfo);
-        Py_CLEAR(state->type_SmbiosInformation);
-        Py_CLEAR(state->type_SystemSupportDeviceInfo);
-        Py_CLEAR(state->type_SystemSupportInfo);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Profile_SystemManufacturers",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Profile::SystemManufacturers
@@ -615,7 +572,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile_SystemManufacturers(void) no
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -628,11 +585,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile_SystemManufacturers(void) no
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_OemSupportInfo = py::register_python_type(module.get(), type_name_OemSupportInfo, &type_spec_OemSupportInfo, object_bases.get(), nullptr);
-    if (!state->type_OemSupportInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OemSupportInfo, &type_spec_OemSupportInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OemSupportInfo, &type_spec_OemSupportInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -643,14 +600,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile_SystemManufacturers(void) no
         return nullptr;
     }
 
-    state->type_SmbiosInformation = py::register_python_type(module.get(), type_name_SmbiosInformation, &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get()));
-    if (!state->type_SmbiosInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmbiosInformation, &type_spec_SmbiosInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmbiosInformation, &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemSupportDeviceInfo = py::register_python_type(module.get(), type_name_SystemSupportDeviceInfo, &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr);
-    if (!state->type_SystemSupportDeviceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemSupportDeviceInfo, &type_spec_SystemSupportDeviceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemSupportDeviceInfo, &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -661,104 +624,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile_SystemManufacturers(void) no
         return nullptr;
     }
 
-    state->type_SystemSupportInfo = py::register_python_type(module.get(), type_name_SystemSupportInfo, &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get()));
-    if (!state->type_SystemSupportInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemSupportInfo, &type_spec_SystemSupportInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemSupportInfo, &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile::SystemManufacturers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OemSupportInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile::SystemManufacturers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmbiosInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile::SystemManufacturers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemSupportDeviceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile::SystemManufacturers");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemSupportInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

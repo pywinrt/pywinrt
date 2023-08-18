@@ -37,8 +37,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Phone::System::Power::PowerManager>
+    struct py_type<winrt::Windows::Phone::System::Power::PowerManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.phone.system.power";
+        static constexpr const char* type_name = "PowerManager";
     };
 }

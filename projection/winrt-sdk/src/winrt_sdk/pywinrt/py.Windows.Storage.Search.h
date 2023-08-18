@@ -129,92 +129,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::ContentIndexer>
+    struct py_type<winrt::Windows::Storage::Search::ContentIndexer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "ContentIndexer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::ContentIndexerQuery>
+    struct py_type<winrt::Windows::Storage::Search::ContentIndexerQuery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "ContentIndexerQuery";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::IndexableContent>
+    struct py_type<winrt::Windows::Storage::Search::IndexableContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IndexableContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::QueryOptions>
+    struct py_type<winrt::Windows::Storage::Search::QueryOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "QueryOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::SortEntryVector>
+    struct py_type<winrt::Windows::Storage::Search::SortEntryVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "SortEntryVector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::StorageFileQueryResult>
+    struct py_type<winrt::Windows::Storage::Search::StorageFileQueryResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "StorageFileQueryResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>
+    struct py_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "StorageFolderQueryResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::StorageItemQueryResult>
+    struct py_type<winrt::Windows::Storage::Search::StorageItemQueryResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "StorageItemQueryResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>
+    struct py_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "StorageLibraryChangeTrackerTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>
+    struct py_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "StorageLibraryContentChangedTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::ValueAndLanguage>
+    struct py_type<winrt::Windows::Storage::Search::ValueAndLanguage>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "ValueAndLanguage";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::IIndexableContent>
+    struct py_type<winrt::Windows::Storage::Search::IIndexableContent>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IIndexableContent";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>
+    struct py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IStorageFolderQueryOperations";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>
+    struct py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "IStorageQueryResultBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Search::SortEntry>
+    struct py_type<winrt::Windows::Storage::Search::SortEntry>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.search";
+        static constexpr const char* type_name = "SortEntry";
     };
 }

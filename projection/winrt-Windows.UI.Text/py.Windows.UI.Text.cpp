@@ -6,21 +6,6 @@
 
 namespace py::cpp::Windows::UI::Text
 {
-    struct module_state
-    {
-        PyTypeObject* type_ContentLinkInfo;
-        PyTypeObject* type_FontWeights;
-        PyTypeObject* type_RichEditTextDocument;
-        PyTypeObject* type_RichEditTextRange;
-        PyTypeObject* type_TextConstants;
-        PyTypeObject* type_ITextCharacterFormat;
-        PyTypeObject* type_ITextDocument;
-        PyTypeObject* type_ITextParagraphFormat;
-        PyTypeObject* type_ITextRange;
-        PyTypeObject* type_ITextSelection;
-        PyTypeObject* type_FontWeight;
-    };
-
     // ----- ContentLinkInfo class --------------------
     static constexpr const char* const type_name_ContentLinkInfo = "ContentLinkInfo";
 
@@ -10843,64 +10828,15 @@ namespace py::cpp::Windows::UI::Text
     PyDoc_STRVAR(module_doc, "Windows::UI::Text");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ContentLinkInfo);
-        Py_VISIT(state->type_FontWeights);
-        Py_VISIT(state->type_RichEditTextDocument);
-        Py_VISIT(state->type_RichEditTextRange);
-        Py_VISIT(state->type_TextConstants);
-        Py_VISIT(state->type_ITextCharacterFormat);
-        Py_VISIT(state->type_ITextDocument);
-        Py_VISIT(state->type_ITextParagraphFormat);
-        Py_VISIT(state->type_ITextRange);
-        Py_VISIT(state->type_ITextSelection);
-        Py_VISIT(state->type_FontWeight);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ContentLinkInfo);
-        Py_CLEAR(state->type_FontWeights);
-        Py_CLEAR(state->type_RichEditTextDocument);
-        Py_CLEAR(state->type_RichEditTextRange);
-        Py_CLEAR(state->type_TextConstants);
-        Py_CLEAR(state->type_ITextCharacterFormat);
-        Py_CLEAR(state->type_ITextDocument);
-        Py_CLEAR(state->type_ITextParagraphFormat);
-        Py_CLEAR(state->type_ITextRange);
-        Py_CLEAR(state->type_ITextSelection);
-        Py_CLEAR(state->type_FontWeight);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Text",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Text
@@ -10916,7 +10852,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -10929,11 +10865,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ContentLinkInfo = py::register_python_type(module.get(), type_name_ContentLinkInfo, &type_spec_ContentLinkInfo, object_bases.get(), nullptr);
-    if (!state->type_ContentLinkInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentLinkInfo, &type_spec_ContentLinkInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentLinkInfo, &type_spec_ContentLinkInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10944,20 +10880,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text(void) noexcept
         return nullptr;
     }
 
-    state->type_FontWeights = py::register_python_type(module.get(), type_name_FontWeights, &type_spec_FontWeights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontWeights_Meta.get()));
-    if (!state->type_FontWeights)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FontWeights, &type_spec_FontWeights, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontWeights_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FontWeights, &type_spec_FontWeights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontWeights_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RichEditTextDocument = py::register_python_type(module.get(), type_name_RichEditTextDocument, &type_spec_RichEditTextDocument, object_bases.get(), nullptr);
-    if (!state->type_RichEditTextDocument)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RichEditTextDocument, &type_spec_RichEditTextDocument, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RichEditTextDocument, &type_spec_RichEditTextDocument, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RichEditTextRange = py::register_python_type(module.get(), type_name_RichEditTextRange, &type_spec_RichEditTextRange, object_bases.get(), nullptr);
-    if (!state->type_RichEditTextRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RichEditTextRange, &type_spec_RichEditTextRange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RichEditTextRange, &type_spec_RichEditTextRange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -10968,301 +10913,69 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text(void) noexcept
         return nullptr;
     }
 
-    state->type_TextConstants = py::register_python_type(module.get(), type_name_TextConstants, &type_spec_TextConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextConstants_Meta.get()));
-    if (!state->type_TextConstants)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextConstants, &type_spec_TextConstants, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextConstants_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextConstants, &type_spec_TextConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextConstants_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextCharacterFormat = py::register_python_type(module.get(), type_name_ITextCharacterFormat, &type_spec_ITextCharacterFormat, object_bases.get(), nullptr);
-    if (!state->type_ITextCharacterFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextCharacterFormat, &type_spec_ITextCharacterFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextCharacterFormat, &type_spec_ITextCharacterFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextDocument = py::register_python_type(module.get(), type_name_ITextDocument, &type_spec_ITextDocument, object_bases.get(), nullptr);
-    if (!state->type_ITextDocument)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextDocument, &type_spec_ITextDocument, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextDocument, &type_spec_ITextDocument, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextParagraphFormat = py::register_python_type(module.get(), type_name_ITextParagraphFormat, &type_spec_ITextParagraphFormat, object_bases.get(), nullptr);
-    if (!state->type_ITextParagraphFormat)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextParagraphFormat, &type_spec_ITextParagraphFormat, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextParagraphFormat, &type_spec_ITextParagraphFormat, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextRange = py::register_python_type(module.get(), type_name_ITextRange, &type_spec_ITextRange, object_bases.get(), nullptr);
-    if (!state->type_ITextRange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextRange, &type_spec_ITextRange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextRange, &type_spec_ITextRange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ITextSelection = py::register_python_type(module.get(), type_name_ITextSelection, &type_spec_ITextSelection, object_bases.get(), nullptr);
-    if (!state->type_ITextSelection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ITextSelection, &type_spec_ITextSelection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ITextSelection, &type_spec_ITextSelection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FontWeight = py::register_python_type(module.get(), type_name_FontWeight, &type_spec_FontWeight, nullptr, nullptr);
-    if (!state->type_FontWeight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FontWeight, &type_spec_FontWeight, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FontWeight, &type_spec_FontWeight, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ContentLinkInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentLinkInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ContentLinkInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::FontWeights>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FontWeights;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::FontWeights is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::RichEditTextDocument>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RichEditTextDocument;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::RichEditTextDocument is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::RichEditTextRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RichEditTextRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::RichEditTextRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::TextConstants>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextConstants;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::TextConstants is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ITextCharacterFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextCharacterFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ITextCharacterFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ITextDocument>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextDocument;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ITextDocument is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ITextParagraphFormat>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextParagraphFormat;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ITextParagraphFormat is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ITextRange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextRange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ITextRange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::ITextSelection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ITextSelection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::ITextSelection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Text::FontWeight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FontWeight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Text::FontWeight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

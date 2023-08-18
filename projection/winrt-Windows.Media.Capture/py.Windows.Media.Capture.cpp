@@ -6,85 +6,6 @@
 
 namespace py::cpp::Windows::Media::Capture
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdvancedCapturedPhoto;
-        PyTypeObject* type_AdvancedPhotoCapture;
-        PyTypeObject* type_AppBroadcastBackgroundService;
-        PyTypeObject* type_AppBroadcastBackgroundServiceSignInInfo;
-        PyTypeObject* type_AppBroadcastBackgroundServiceStreamInfo;
-        PyTypeObject* type_AppBroadcastCameraCaptureStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastGlobalSettings;
-        PyTypeObject* type_AppBroadcastHeartbeatRequestedEventArgs;
-        PyTypeObject* type_AppBroadcastManager;
-        PyTypeObject* type_AppBroadcastMicrophoneCaptureStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastPlugIn;
-        PyTypeObject* type_AppBroadcastPlugInManager;
-        PyTypeObject* type_AppBroadcastPlugInStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastPreview;
-        PyTypeObject* type_AppBroadcastPreviewStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastPreviewStreamReader;
-        PyTypeObject* type_AppBroadcastPreviewStreamVideoFrame;
-        PyTypeObject* type_AppBroadcastPreviewStreamVideoHeader;
-        PyTypeObject* type_AppBroadcastProviderSettings;
-        PyTypeObject* type_AppBroadcastServices;
-        PyTypeObject* type_AppBroadcastSignInStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastState;
-        PyTypeObject* type_AppBroadcastStreamAudioFrame;
-        PyTypeObject* type_AppBroadcastStreamAudioHeader;
-        PyTypeObject* type_AppBroadcastStreamReader;
-        PyTypeObject* type_AppBroadcastStreamStateChangedEventArgs;
-        PyTypeObject* type_AppBroadcastStreamVideoFrame;
-        PyTypeObject* type_AppBroadcastStreamVideoHeader;
-        PyTypeObject* type_AppBroadcastTriggerDetails;
-        PyTypeObject* type_AppBroadcastViewerCountChangedEventArgs;
-        PyTypeObject* type_AppCapture;
-        PyTypeObject* type_AppCaptureAlternateShortcutKeys;
-        PyTypeObject* type_AppCaptureDurationGeneratedEventArgs;
-        PyTypeObject* type_AppCaptureFileGeneratedEventArgs;
-        PyTypeObject* type_AppCaptureManager;
-        PyTypeObject* type_AppCaptureMetadataWriter;
-        PyTypeObject* type_AppCaptureMicrophoneCaptureStateChangedEventArgs;
-        PyTypeObject* type_AppCaptureRecordOperation;
-        PyTypeObject* type_AppCaptureRecordingStateChangedEventArgs;
-        PyTypeObject* type_AppCaptureServices;
-        PyTypeObject* type_AppCaptureSettings;
-        PyTypeObject* type_AppCaptureState;
-        PyTypeObject* type_CameraCaptureUI;
-        PyTypeObject* type_CameraCaptureUIPhotoCaptureSettings;
-        PyTypeObject* type_CameraCaptureUIVideoCaptureSettings;
-        PyTypeObject* type_CameraOptionsUI;
-        PyTypeObject* type_CapturedFrame;
-        PyTypeObject* type_CapturedFrameControlValues;
-        PyTypeObject* type_CapturedPhoto;
-        PyTypeObject* type_GameBarServices;
-        PyTypeObject* type_GameBarServicesCommandEventArgs;
-        PyTypeObject* type_GameBarServicesManager;
-        PyTypeObject* type_GameBarServicesManagerGameBarServicesCreatedEventArgs;
-        PyTypeObject* type_GameBarServicesTargetInfo;
-        PyTypeObject* type_LowLagMediaRecording;
-        PyTypeObject* type_LowLagPhotoCapture;
-        PyTypeObject* type_LowLagPhotoSequenceCapture;
-        PyTypeObject* type_MediaCapture;
-        PyTypeObject* type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs;
-        PyTypeObject* type_MediaCaptureFailedEventArgs;
-        PyTypeObject* type_MediaCaptureFocusChangedEventArgs;
-        PyTypeObject* type_MediaCaptureInitializationSettings;
-        PyTypeObject* type_MediaCapturePauseResult;
-        PyTypeObject* type_MediaCaptureRelativePanelWatcher;
-        PyTypeObject* type_MediaCaptureSettings;
-        PyTypeObject* type_MediaCaptureStopResult;
-        PyTypeObject* type_MediaCaptureVideoProfile;
-        PyTypeObject* type_MediaCaptureVideoProfileMediaDescription;
-        PyTypeObject* type_OptionalReferencePhotoCapturedEventArgs;
-        PyTypeObject* type_PhotoCapturedEventArgs;
-        PyTypeObject* type_PhotoConfirmationCapturedEventArgs;
-        PyTypeObject* type_ScreenCapture;
-        PyTypeObject* type_SourceSuspensionChangedEventArgs;
-        PyTypeObject* type_VideoStreamConfiguration;
-        PyTypeObject* type_WhiteBalanceGain;
-    };
-
     // ----- AdvancedCapturedPhoto class --------------------
     static constexpr const char* const type_name_AdvancedCapturedPhoto = "AdvancedCapturedPhoto";
 
@@ -20816,192 +20737,15 @@ namespace py::cpp::Windows::Media::Capture
     PyDoc_STRVAR(module_doc, "Windows::Media::Capture");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdvancedCapturedPhoto);
-        Py_VISIT(state->type_AdvancedPhotoCapture);
-        Py_VISIT(state->type_AppBroadcastBackgroundService);
-        Py_VISIT(state->type_AppBroadcastBackgroundServiceSignInInfo);
-        Py_VISIT(state->type_AppBroadcastBackgroundServiceStreamInfo);
-        Py_VISIT(state->type_AppBroadcastCameraCaptureStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastGlobalSettings);
-        Py_VISIT(state->type_AppBroadcastHeartbeatRequestedEventArgs);
-        Py_VISIT(state->type_AppBroadcastManager);
-        Py_VISIT(state->type_AppBroadcastMicrophoneCaptureStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastPlugIn);
-        Py_VISIT(state->type_AppBroadcastPlugInManager);
-        Py_VISIT(state->type_AppBroadcastPlugInStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastPreview);
-        Py_VISIT(state->type_AppBroadcastPreviewStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastPreviewStreamReader);
-        Py_VISIT(state->type_AppBroadcastPreviewStreamVideoFrame);
-        Py_VISIT(state->type_AppBroadcastPreviewStreamVideoHeader);
-        Py_VISIT(state->type_AppBroadcastProviderSettings);
-        Py_VISIT(state->type_AppBroadcastServices);
-        Py_VISIT(state->type_AppBroadcastSignInStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastState);
-        Py_VISIT(state->type_AppBroadcastStreamAudioFrame);
-        Py_VISIT(state->type_AppBroadcastStreamAudioHeader);
-        Py_VISIT(state->type_AppBroadcastStreamReader);
-        Py_VISIT(state->type_AppBroadcastStreamStateChangedEventArgs);
-        Py_VISIT(state->type_AppBroadcastStreamVideoFrame);
-        Py_VISIT(state->type_AppBroadcastStreamVideoHeader);
-        Py_VISIT(state->type_AppBroadcastTriggerDetails);
-        Py_VISIT(state->type_AppBroadcastViewerCountChangedEventArgs);
-        Py_VISIT(state->type_AppCapture);
-        Py_VISIT(state->type_AppCaptureAlternateShortcutKeys);
-        Py_VISIT(state->type_AppCaptureDurationGeneratedEventArgs);
-        Py_VISIT(state->type_AppCaptureFileGeneratedEventArgs);
-        Py_VISIT(state->type_AppCaptureManager);
-        Py_VISIT(state->type_AppCaptureMetadataWriter);
-        Py_VISIT(state->type_AppCaptureMicrophoneCaptureStateChangedEventArgs);
-        Py_VISIT(state->type_AppCaptureRecordOperation);
-        Py_VISIT(state->type_AppCaptureRecordingStateChangedEventArgs);
-        Py_VISIT(state->type_AppCaptureServices);
-        Py_VISIT(state->type_AppCaptureSettings);
-        Py_VISIT(state->type_AppCaptureState);
-        Py_VISIT(state->type_CameraCaptureUI);
-        Py_VISIT(state->type_CameraCaptureUIPhotoCaptureSettings);
-        Py_VISIT(state->type_CameraCaptureUIVideoCaptureSettings);
-        Py_VISIT(state->type_CameraOptionsUI);
-        Py_VISIT(state->type_CapturedFrame);
-        Py_VISIT(state->type_CapturedFrameControlValues);
-        Py_VISIT(state->type_CapturedPhoto);
-        Py_VISIT(state->type_GameBarServices);
-        Py_VISIT(state->type_GameBarServicesCommandEventArgs);
-        Py_VISIT(state->type_GameBarServicesManager);
-        Py_VISIT(state->type_GameBarServicesManagerGameBarServicesCreatedEventArgs);
-        Py_VISIT(state->type_GameBarServicesTargetInfo);
-        Py_VISIT(state->type_LowLagMediaRecording);
-        Py_VISIT(state->type_LowLagPhotoCapture);
-        Py_VISIT(state->type_LowLagPhotoSequenceCapture);
-        Py_VISIT(state->type_MediaCapture);
-        Py_VISIT(state->type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs);
-        Py_VISIT(state->type_MediaCaptureFailedEventArgs);
-        Py_VISIT(state->type_MediaCaptureFocusChangedEventArgs);
-        Py_VISIT(state->type_MediaCaptureInitializationSettings);
-        Py_VISIT(state->type_MediaCapturePauseResult);
-        Py_VISIT(state->type_MediaCaptureRelativePanelWatcher);
-        Py_VISIT(state->type_MediaCaptureSettings);
-        Py_VISIT(state->type_MediaCaptureStopResult);
-        Py_VISIT(state->type_MediaCaptureVideoProfile);
-        Py_VISIT(state->type_MediaCaptureVideoProfileMediaDescription);
-        Py_VISIT(state->type_OptionalReferencePhotoCapturedEventArgs);
-        Py_VISIT(state->type_PhotoCapturedEventArgs);
-        Py_VISIT(state->type_PhotoConfirmationCapturedEventArgs);
-        Py_VISIT(state->type_ScreenCapture);
-        Py_VISIT(state->type_SourceSuspensionChangedEventArgs);
-        Py_VISIT(state->type_VideoStreamConfiguration);
-        Py_VISIT(state->type_WhiteBalanceGain);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdvancedCapturedPhoto);
-        Py_CLEAR(state->type_AdvancedPhotoCapture);
-        Py_CLEAR(state->type_AppBroadcastBackgroundService);
-        Py_CLEAR(state->type_AppBroadcastBackgroundServiceSignInInfo);
-        Py_CLEAR(state->type_AppBroadcastBackgroundServiceStreamInfo);
-        Py_CLEAR(state->type_AppBroadcastCameraCaptureStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastGlobalSettings);
-        Py_CLEAR(state->type_AppBroadcastHeartbeatRequestedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastManager);
-        Py_CLEAR(state->type_AppBroadcastMicrophoneCaptureStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastPlugIn);
-        Py_CLEAR(state->type_AppBroadcastPlugInManager);
-        Py_CLEAR(state->type_AppBroadcastPlugInStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastPreview);
-        Py_CLEAR(state->type_AppBroadcastPreviewStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastPreviewStreamReader);
-        Py_CLEAR(state->type_AppBroadcastPreviewStreamVideoFrame);
-        Py_CLEAR(state->type_AppBroadcastPreviewStreamVideoHeader);
-        Py_CLEAR(state->type_AppBroadcastProviderSettings);
-        Py_CLEAR(state->type_AppBroadcastServices);
-        Py_CLEAR(state->type_AppBroadcastSignInStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastState);
-        Py_CLEAR(state->type_AppBroadcastStreamAudioFrame);
-        Py_CLEAR(state->type_AppBroadcastStreamAudioHeader);
-        Py_CLEAR(state->type_AppBroadcastStreamReader);
-        Py_CLEAR(state->type_AppBroadcastStreamStateChangedEventArgs);
-        Py_CLEAR(state->type_AppBroadcastStreamVideoFrame);
-        Py_CLEAR(state->type_AppBroadcastStreamVideoHeader);
-        Py_CLEAR(state->type_AppBroadcastTriggerDetails);
-        Py_CLEAR(state->type_AppBroadcastViewerCountChangedEventArgs);
-        Py_CLEAR(state->type_AppCapture);
-        Py_CLEAR(state->type_AppCaptureAlternateShortcutKeys);
-        Py_CLEAR(state->type_AppCaptureDurationGeneratedEventArgs);
-        Py_CLEAR(state->type_AppCaptureFileGeneratedEventArgs);
-        Py_CLEAR(state->type_AppCaptureManager);
-        Py_CLEAR(state->type_AppCaptureMetadataWriter);
-        Py_CLEAR(state->type_AppCaptureMicrophoneCaptureStateChangedEventArgs);
-        Py_CLEAR(state->type_AppCaptureRecordOperation);
-        Py_CLEAR(state->type_AppCaptureRecordingStateChangedEventArgs);
-        Py_CLEAR(state->type_AppCaptureServices);
-        Py_CLEAR(state->type_AppCaptureSettings);
-        Py_CLEAR(state->type_AppCaptureState);
-        Py_CLEAR(state->type_CameraCaptureUI);
-        Py_CLEAR(state->type_CameraCaptureUIPhotoCaptureSettings);
-        Py_CLEAR(state->type_CameraCaptureUIVideoCaptureSettings);
-        Py_CLEAR(state->type_CameraOptionsUI);
-        Py_CLEAR(state->type_CapturedFrame);
-        Py_CLEAR(state->type_CapturedFrameControlValues);
-        Py_CLEAR(state->type_CapturedPhoto);
-        Py_CLEAR(state->type_GameBarServices);
-        Py_CLEAR(state->type_GameBarServicesCommandEventArgs);
-        Py_CLEAR(state->type_GameBarServicesManager);
-        Py_CLEAR(state->type_GameBarServicesManagerGameBarServicesCreatedEventArgs);
-        Py_CLEAR(state->type_GameBarServicesTargetInfo);
-        Py_CLEAR(state->type_LowLagMediaRecording);
-        Py_CLEAR(state->type_LowLagPhotoCapture);
-        Py_CLEAR(state->type_LowLagPhotoSequenceCapture);
-        Py_CLEAR(state->type_MediaCapture);
-        Py_CLEAR(state->type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs);
-        Py_CLEAR(state->type_MediaCaptureFailedEventArgs);
-        Py_CLEAR(state->type_MediaCaptureFocusChangedEventArgs);
-        Py_CLEAR(state->type_MediaCaptureInitializationSettings);
-        Py_CLEAR(state->type_MediaCapturePauseResult);
-        Py_CLEAR(state->type_MediaCaptureRelativePanelWatcher);
-        Py_CLEAR(state->type_MediaCaptureSettings);
-        Py_CLEAR(state->type_MediaCaptureStopResult);
-        Py_CLEAR(state->type_MediaCaptureVideoProfile);
-        Py_CLEAR(state->type_MediaCaptureVideoProfileMediaDescription);
-        Py_CLEAR(state->type_OptionalReferencePhotoCapturedEventArgs);
-        Py_CLEAR(state->type_PhotoCapturedEventArgs);
-        Py_CLEAR(state->type_PhotoConfirmationCapturedEventArgs);
-        Py_CLEAR(state->type_ScreenCapture);
-        Py_CLEAR(state->type_SourceSuspensionChangedEventArgs);
-        Py_CLEAR(state->type_VideoStreamConfiguration);
-        Py_CLEAR(state->type_WhiteBalanceGain);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Capture",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Capture
@@ -21017,7 +20761,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -21030,2184 +20774,681 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdvancedCapturedPhoto = py::register_python_type(module.get(), type_name_AdvancedCapturedPhoto, &type_spec_AdvancedCapturedPhoto, object_bases.get(), nullptr);
-    if (!state->type_AdvancedCapturedPhoto)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvancedCapturedPhoto, &type_spec_AdvancedCapturedPhoto, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvancedCapturedPhoto, &type_spec_AdvancedCapturedPhoto, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AdvancedPhotoCapture = py::register_python_type(module.get(), type_name_AdvancedPhotoCapture, &type_spec_AdvancedPhotoCapture, object_bases.get(), nullptr);
-    if (!state->type_AdvancedPhotoCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCapture, &type_spec_AdvancedPhotoCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCapture, &type_spec_AdvancedPhotoCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastBackgroundService = py::register_python_type(module.get(), type_name_AppBroadcastBackgroundService, &type_spec_AppBroadcastBackgroundService, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastBackgroundService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundService, &type_spec_AppBroadcastBackgroundService, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundService, &type_spec_AppBroadcastBackgroundService, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastBackgroundServiceSignInInfo = py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceSignInInfo, &type_spec_AppBroadcastBackgroundServiceSignInInfo, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastBackgroundServiceSignInInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceSignInInfo, &type_spec_AppBroadcastBackgroundServiceSignInInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceSignInInfo, &type_spec_AppBroadcastBackgroundServiceSignInInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastBackgroundServiceStreamInfo = py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceStreamInfo, &type_spec_AppBroadcastBackgroundServiceStreamInfo, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastBackgroundServiceStreamInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceStreamInfo, &type_spec_AppBroadcastBackgroundServiceStreamInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastBackgroundServiceStreamInfo, &type_spec_AppBroadcastBackgroundServiceStreamInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastCameraCaptureStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastCameraCaptureStateChangedEventArgs, &type_spec_AppBroadcastCameraCaptureStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastCameraCaptureStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastCameraCaptureStateChangedEventArgs, &type_spec_AppBroadcastCameraCaptureStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastCameraCaptureStateChangedEventArgs, &type_spec_AppBroadcastCameraCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastGlobalSettings = py::register_python_type(module.get(), type_name_AppBroadcastGlobalSettings, &type_spec_AppBroadcastGlobalSettings, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastGlobalSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastGlobalSettings, &type_spec_AppBroadcastGlobalSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastGlobalSettings, &type_spec_AppBroadcastGlobalSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastHeartbeatRequestedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastHeartbeatRequestedEventArgs, &type_spec_AppBroadcastHeartbeatRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastHeartbeatRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastHeartbeatRequestedEventArgs, &type_spec_AppBroadcastHeartbeatRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastHeartbeatRequestedEventArgs, &type_spec_AppBroadcastHeartbeatRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastManager = py::register_python_type(module.get(), type_name_AppBroadcastManager, &type_spec_AppBroadcastManager, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastManager, &type_spec_AppBroadcastManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastManager, &type_spec_AppBroadcastManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastMicrophoneCaptureStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastMicrophoneCaptureStateChangedEventArgs, &type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastMicrophoneCaptureStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastMicrophoneCaptureStateChangedEventArgs, &type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastMicrophoneCaptureStateChangedEventArgs, &type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPlugIn = py::register_python_type(module.get(), type_name_AppBroadcastPlugIn, &type_spec_AppBroadcastPlugIn, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPlugIn)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugIn, &type_spec_AppBroadcastPlugIn, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugIn, &type_spec_AppBroadcastPlugIn, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPlugInManager = py::register_python_type(module.get(), type_name_AppBroadcastPlugInManager, &type_spec_AppBroadcastPlugInManager, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPlugInManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugInManager, &type_spec_AppBroadcastPlugInManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugInManager, &type_spec_AppBroadcastPlugInManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPlugInStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastPlugInStateChangedEventArgs, &type_spec_AppBroadcastPlugInStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPlugInStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugInStateChangedEventArgs, &type_spec_AppBroadcastPlugInStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPlugInStateChangedEventArgs, &type_spec_AppBroadcastPlugInStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPreview = py::register_python_type(module.get(), type_name_AppBroadcastPreview, &type_spec_AppBroadcastPreview, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPreview)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreview, &type_spec_AppBroadcastPreview, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreview, &type_spec_AppBroadcastPreview, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPreviewStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastPreviewStateChangedEventArgs, &type_spec_AppBroadcastPreviewStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPreviewStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStateChangedEventArgs, &type_spec_AppBroadcastPreviewStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStateChangedEventArgs, &type_spec_AppBroadcastPreviewStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPreviewStreamReader = py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamReader, &type_spec_AppBroadcastPreviewStreamReader, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPreviewStreamReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamReader, &type_spec_AppBroadcastPreviewStreamReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamReader, &type_spec_AppBroadcastPreviewStreamReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPreviewStreamVideoFrame = py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoFrame, &type_spec_AppBroadcastPreviewStreamVideoFrame, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPreviewStreamVideoFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoFrame, &type_spec_AppBroadcastPreviewStreamVideoFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoFrame, &type_spec_AppBroadcastPreviewStreamVideoFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastPreviewStreamVideoHeader = py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoHeader, &type_spec_AppBroadcastPreviewStreamVideoHeader, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastPreviewStreamVideoHeader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoHeader, &type_spec_AppBroadcastPreviewStreamVideoHeader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastPreviewStreamVideoHeader, &type_spec_AppBroadcastPreviewStreamVideoHeader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastProviderSettings = py::register_python_type(module.get(), type_name_AppBroadcastProviderSettings, &type_spec_AppBroadcastProviderSettings, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastProviderSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastProviderSettings, &type_spec_AppBroadcastProviderSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastProviderSettings, &type_spec_AppBroadcastProviderSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastServices = py::register_python_type(module.get(), type_name_AppBroadcastServices, &type_spec_AppBroadcastServices, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastServices)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastServices, &type_spec_AppBroadcastServices, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastServices, &type_spec_AppBroadcastServices, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastSignInStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastSignInStateChangedEventArgs, &type_spec_AppBroadcastSignInStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastSignInStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastSignInStateChangedEventArgs, &type_spec_AppBroadcastSignInStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastSignInStateChangedEventArgs, &type_spec_AppBroadcastSignInStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastState = py::register_python_type(module.get(), type_name_AppBroadcastState, &type_spec_AppBroadcastState, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastState, &type_spec_AppBroadcastState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastState, &type_spec_AppBroadcastState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamAudioFrame = py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioFrame, &type_spec_AppBroadcastStreamAudioFrame, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamAudioFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioFrame, &type_spec_AppBroadcastStreamAudioFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioFrame, &type_spec_AppBroadcastStreamAudioFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamAudioHeader = py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioHeader, &type_spec_AppBroadcastStreamAudioHeader, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamAudioHeader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioHeader, &type_spec_AppBroadcastStreamAudioHeader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamAudioHeader, &type_spec_AppBroadcastStreamAudioHeader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamReader = py::register_python_type(module.get(), type_name_AppBroadcastStreamReader, &type_spec_AppBroadcastStreamReader, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamReader, &type_spec_AppBroadcastStreamReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamReader, &type_spec_AppBroadcastStreamReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastStreamStateChangedEventArgs, &type_spec_AppBroadcastStreamStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamStateChangedEventArgs, &type_spec_AppBroadcastStreamStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamStateChangedEventArgs, &type_spec_AppBroadcastStreamStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamVideoFrame = py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoFrame, &type_spec_AppBroadcastStreamVideoFrame, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamVideoFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoFrame, &type_spec_AppBroadcastStreamVideoFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoFrame, &type_spec_AppBroadcastStreamVideoFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastStreamVideoHeader = py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoHeader, &type_spec_AppBroadcastStreamVideoHeader, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastStreamVideoHeader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoHeader, &type_spec_AppBroadcastStreamVideoHeader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastStreamVideoHeader, &type_spec_AppBroadcastStreamVideoHeader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastTriggerDetails = py::register_python_type(module.get(), type_name_AppBroadcastTriggerDetails, &type_spec_AppBroadcastTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTriggerDetails, &type_spec_AppBroadcastTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTriggerDetails, &type_spec_AppBroadcastTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastViewerCountChangedEventArgs = py::register_python_type(module.get(), type_name_AppBroadcastViewerCountChangedEventArgs, &type_spec_AppBroadcastViewerCountChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastViewerCountChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastViewerCountChangedEventArgs, &type_spec_AppBroadcastViewerCountChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastViewerCountChangedEventArgs, &type_spec_AppBroadcastViewerCountChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCapture = py::register_python_type(module.get(), type_name_AppCapture, &type_spec_AppCapture, object_bases.get(), nullptr);
-    if (!state->type_AppCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCapture, &type_spec_AppCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCapture, &type_spec_AppCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureAlternateShortcutKeys = py::register_python_type(module.get(), type_name_AppCaptureAlternateShortcutKeys, &type_spec_AppCaptureAlternateShortcutKeys, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureAlternateShortcutKeys)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureAlternateShortcutKeys, &type_spec_AppCaptureAlternateShortcutKeys, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureAlternateShortcutKeys, &type_spec_AppCaptureAlternateShortcutKeys, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureDurationGeneratedEventArgs = py::register_python_type(module.get(), type_name_AppCaptureDurationGeneratedEventArgs, &type_spec_AppCaptureDurationGeneratedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureDurationGeneratedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureDurationGeneratedEventArgs, &type_spec_AppCaptureDurationGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureDurationGeneratedEventArgs, &type_spec_AppCaptureDurationGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureFileGeneratedEventArgs = py::register_python_type(module.get(), type_name_AppCaptureFileGeneratedEventArgs, &type_spec_AppCaptureFileGeneratedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureFileGeneratedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureFileGeneratedEventArgs, &type_spec_AppCaptureFileGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureFileGeneratedEventArgs, &type_spec_AppCaptureFileGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureManager = py::register_python_type(module.get(), type_name_AppCaptureManager, &type_spec_AppCaptureManager, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureManager, &type_spec_AppCaptureManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureManager, &type_spec_AppCaptureManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureMetadataWriter = py::register_python_type(module.get(), type_name_AppCaptureMetadataWriter, &type_spec_AppCaptureMetadataWriter, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureMetadataWriter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureMetadataWriter, &type_spec_AppCaptureMetadataWriter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureMetadataWriter, &type_spec_AppCaptureMetadataWriter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureMicrophoneCaptureStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppCaptureMicrophoneCaptureStateChangedEventArgs, &type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureMicrophoneCaptureStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureMicrophoneCaptureStateChangedEventArgs, &type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureMicrophoneCaptureStateChangedEventArgs, &type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureRecordOperation = py::register_python_type(module.get(), type_name_AppCaptureRecordOperation, &type_spec_AppCaptureRecordOperation, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureRecordOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureRecordOperation, &type_spec_AppCaptureRecordOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureRecordOperation, &type_spec_AppCaptureRecordOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureRecordingStateChangedEventArgs = py::register_python_type(module.get(), type_name_AppCaptureRecordingStateChangedEventArgs, &type_spec_AppCaptureRecordingStateChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureRecordingStateChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureRecordingStateChangedEventArgs, &type_spec_AppCaptureRecordingStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureRecordingStateChangedEventArgs, &type_spec_AppCaptureRecordingStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureServices = py::register_python_type(module.get(), type_name_AppCaptureServices, &type_spec_AppCaptureServices, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureServices)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureServices, &type_spec_AppCaptureServices, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureServices, &type_spec_AppCaptureServices, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureSettings = py::register_python_type(module.get(), type_name_AppCaptureSettings, &type_spec_AppCaptureSettings, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureSettings, &type_spec_AppCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureSettings, &type_spec_AppCaptureSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppCaptureState = py::register_python_type(module.get(), type_name_AppCaptureState, &type_spec_AppCaptureState, object_bases.get(), nullptr);
-    if (!state->type_AppCaptureState)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppCaptureState, &type_spec_AppCaptureState, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppCaptureState, &type_spec_AppCaptureState, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraCaptureUI = py::register_python_type(module.get(), type_name_CameraCaptureUI, &type_spec_CameraCaptureUI, object_bases.get(), nullptr);
-    if (!state->type_CameraCaptureUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUI, &type_spec_CameraCaptureUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUI, &type_spec_CameraCaptureUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraCaptureUIPhotoCaptureSettings = py::register_python_type(module.get(), type_name_CameraCaptureUIPhotoCaptureSettings, &type_spec_CameraCaptureUIPhotoCaptureSettings, object_bases.get(), nullptr);
-    if (!state->type_CameraCaptureUIPhotoCaptureSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUIPhotoCaptureSettings, &type_spec_CameraCaptureUIPhotoCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUIPhotoCaptureSettings, &type_spec_CameraCaptureUIPhotoCaptureSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraCaptureUIVideoCaptureSettings = py::register_python_type(module.get(), type_name_CameraCaptureUIVideoCaptureSettings, &type_spec_CameraCaptureUIVideoCaptureSettings, object_bases.get(), nullptr);
-    if (!state->type_CameraCaptureUIVideoCaptureSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUIVideoCaptureSettings, &type_spec_CameraCaptureUIVideoCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraCaptureUIVideoCaptureSettings, &type_spec_CameraCaptureUIVideoCaptureSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraOptionsUI = py::register_python_type(module.get(), type_name_CameraOptionsUI, &type_spec_CameraOptionsUI, object_bases.get(), nullptr);
-    if (!state->type_CameraOptionsUI)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraOptionsUI, &type_spec_CameraOptionsUI, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraOptionsUI, &type_spec_CameraOptionsUI, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CapturedFrame = py::register_python_type(module.get(), type_name_CapturedFrame, &type_spec_CapturedFrame, object_bases.get(), nullptr);
-    if (!state->type_CapturedFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CapturedFrame, &type_spec_CapturedFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CapturedFrame, &type_spec_CapturedFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CapturedFrameControlValues = py::register_python_type(module.get(), type_name_CapturedFrameControlValues, &type_spec_CapturedFrameControlValues, object_bases.get(), nullptr);
-    if (!state->type_CapturedFrameControlValues)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CapturedFrameControlValues, &type_spec_CapturedFrameControlValues, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CapturedFrameControlValues, &type_spec_CapturedFrameControlValues, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CapturedPhoto = py::register_python_type(module.get(), type_name_CapturedPhoto, &type_spec_CapturedPhoto, object_bases.get(), nullptr);
-    if (!state->type_CapturedPhoto)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CapturedPhoto, &type_spec_CapturedPhoto, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CapturedPhoto, &type_spec_CapturedPhoto, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameBarServices = py::register_python_type(module.get(), type_name_GameBarServices, &type_spec_GameBarServices, object_bases.get(), nullptr);
-    if (!state->type_GameBarServices)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameBarServices, &type_spec_GameBarServices, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameBarServices, &type_spec_GameBarServices, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameBarServicesCommandEventArgs = py::register_python_type(module.get(), type_name_GameBarServicesCommandEventArgs, &type_spec_GameBarServicesCommandEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GameBarServicesCommandEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameBarServicesCommandEventArgs, &type_spec_GameBarServicesCommandEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameBarServicesCommandEventArgs, &type_spec_GameBarServicesCommandEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameBarServicesManager = py::register_python_type(module.get(), type_name_GameBarServicesManager, &type_spec_GameBarServicesManager, object_bases.get(), nullptr);
-    if (!state->type_GameBarServicesManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameBarServicesManager, &type_spec_GameBarServicesManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameBarServicesManager, &type_spec_GameBarServicesManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameBarServicesManagerGameBarServicesCreatedEventArgs = py::register_python_type(module.get(), type_name_GameBarServicesManagerGameBarServicesCreatedEventArgs, &type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GameBarServicesManagerGameBarServicesCreatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameBarServicesManagerGameBarServicesCreatedEventArgs, &type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameBarServicesManagerGameBarServicesCreatedEventArgs, &type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GameBarServicesTargetInfo = py::register_python_type(module.get(), type_name_GameBarServicesTargetInfo, &type_spec_GameBarServicesTargetInfo, object_bases.get(), nullptr);
-    if (!state->type_GameBarServicesTargetInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GameBarServicesTargetInfo, &type_spec_GameBarServicesTargetInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GameBarServicesTargetInfo, &type_spec_GameBarServicesTargetInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLagMediaRecording = py::register_python_type(module.get(), type_name_LowLagMediaRecording, &type_spec_LowLagMediaRecording, object_bases.get(), nullptr);
-    if (!state->type_LowLagMediaRecording)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLagMediaRecording, &type_spec_LowLagMediaRecording, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLagMediaRecording, &type_spec_LowLagMediaRecording, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLagPhotoCapture = py::register_python_type(module.get(), type_name_LowLagPhotoCapture, &type_spec_LowLagPhotoCapture, object_bases.get(), nullptr);
-    if (!state->type_LowLagPhotoCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoCapture, &type_spec_LowLagPhotoCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoCapture, &type_spec_LowLagPhotoCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LowLagPhotoSequenceCapture = py::register_python_type(module.get(), type_name_LowLagPhotoSequenceCapture, &type_spec_LowLagPhotoSequenceCapture, object_bases.get(), nullptr);
-    if (!state->type_LowLagPhotoSequenceCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceCapture, &type_spec_LowLagPhotoSequenceCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceCapture, &type_spec_LowLagPhotoSequenceCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCapture = py::register_python_type(module.get(), type_name_MediaCapture, &type_spec_MediaCapture, object_bases.get(), nullptr);
-    if (!state->type_MediaCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCapture, &type_spec_MediaCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCapture, &type_spec_MediaCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = py::register_python_type(module.get(), type_name_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, &type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, &type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, &type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureFailedEventArgs = py::register_python_type(module.get(), type_name_MediaCaptureFailedEventArgs, &type_spec_MediaCaptureFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureFailedEventArgs, &type_spec_MediaCaptureFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureFailedEventArgs, &type_spec_MediaCaptureFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureFocusChangedEventArgs = py::register_python_type(module.get(), type_name_MediaCaptureFocusChangedEventArgs, &type_spec_MediaCaptureFocusChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureFocusChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureFocusChangedEventArgs, &type_spec_MediaCaptureFocusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureFocusChangedEventArgs, &type_spec_MediaCaptureFocusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureInitializationSettings = py::register_python_type(module.get(), type_name_MediaCaptureInitializationSettings, &type_spec_MediaCaptureInitializationSettings, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureInitializationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureInitializationSettings, &type_spec_MediaCaptureInitializationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureInitializationSettings, &type_spec_MediaCaptureInitializationSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCapturePauseResult = py::register_python_type(module.get(), type_name_MediaCapturePauseResult, &type_spec_MediaCapturePauseResult, object_bases.get(), nullptr);
-    if (!state->type_MediaCapturePauseResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCapturePauseResult, &type_spec_MediaCapturePauseResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCapturePauseResult, &type_spec_MediaCapturePauseResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureRelativePanelWatcher = py::register_python_type(module.get(), type_name_MediaCaptureRelativePanelWatcher, &type_spec_MediaCaptureRelativePanelWatcher, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureRelativePanelWatcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureRelativePanelWatcher, &type_spec_MediaCaptureRelativePanelWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureRelativePanelWatcher, &type_spec_MediaCaptureRelativePanelWatcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureSettings = py::register_python_type(module.get(), type_name_MediaCaptureSettings, &type_spec_MediaCaptureSettings, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureSettings, &type_spec_MediaCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureSettings, &type_spec_MediaCaptureSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureStopResult = py::register_python_type(module.get(), type_name_MediaCaptureStopResult, &type_spec_MediaCaptureStopResult, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureStopResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureStopResult, &type_spec_MediaCaptureStopResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureStopResult, &type_spec_MediaCaptureStopResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureVideoProfile = py::register_python_type(module.get(), type_name_MediaCaptureVideoProfile, &type_spec_MediaCaptureVideoProfile, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureVideoProfile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureVideoProfile, &type_spec_MediaCaptureVideoProfile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureVideoProfile, &type_spec_MediaCaptureVideoProfile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaCaptureVideoProfileMediaDescription = py::register_python_type(module.get(), type_name_MediaCaptureVideoProfileMediaDescription, &type_spec_MediaCaptureVideoProfileMediaDescription, object_bases.get(), nullptr);
-    if (!state->type_MediaCaptureVideoProfileMediaDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaCaptureVideoProfileMediaDescription, &type_spec_MediaCaptureVideoProfileMediaDescription, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaCaptureVideoProfileMediaDescription, &type_spec_MediaCaptureVideoProfileMediaDescription, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_OptionalReferencePhotoCapturedEventArgs = py::register_python_type(module.get(), type_name_OptionalReferencePhotoCapturedEventArgs, &type_spec_OptionalReferencePhotoCapturedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_OptionalReferencePhotoCapturedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_OptionalReferencePhotoCapturedEventArgs, &type_spec_OptionalReferencePhotoCapturedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_OptionalReferencePhotoCapturedEventArgs, &type_spec_OptionalReferencePhotoCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoCapturedEventArgs = py::register_python_type(module.get(), type_name_PhotoCapturedEventArgs, &type_spec_PhotoCapturedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhotoCapturedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoCapturedEventArgs, &type_spec_PhotoCapturedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoCapturedEventArgs, &type_spec_PhotoCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhotoConfirmationCapturedEventArgs = py::register_python_type(module.get(), type_name_PhotoConfirmationCapturedEventArgs, &type_spec_PhotoConfirmationCapturedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhotoConfirmationCapturedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhotoConfirmationCapturedEventArgs, &type_spec_PhotoConfirmationCapturedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhotoConfirmationCapturedEventArgs, &type_spec_PhotoConfirmationCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScreenCapture = py::register_python_type(module.get(), type_name_ScreenCapture, &type_spec_ScreenCapture, object_bases.get(), nullptr);
-    if (!state->type_ScreenCapture)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScreenCapture, &type_spec_ScreenCapture, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScreenCapture, &type_spec_ScreenCapture, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SourceSuspensionChangedEventArgs = py::register_python_type(module.get(), type_name_SourceSuspensionChangedEventArgs, &type_spec_SourceSuspensionChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SourceSuspensionChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SourceSuspensionChangedEventArgs, &type_spec_SourceSuspensionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SourceSuspensionChangedEventArgs, &type_spec_SourceSuspensionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VideoStreamConfiguration = py::register_python_type(module.get(), type_name_VideoStreamConfiguration, &type_spec_VideoStreamConfiguration, object_bases.get(), nullptr);
-    if (!state->type_VideoStreamConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VideoStreamConfiguration, &type_spec_VideoStreamConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VideoStreamConfiguration, &type_spec_VideoStreamConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WhiteBalanceGain = py::register_python_type(module.get(), type_name_WhiteBalanceGain, &type_spec_WhiteBalanceGain, nullptr, nullptr);
-    if (!state->type_WhiteBalanceGain)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WhiteBalanceGain, &type_spec_WhiteBalanceGain, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WhiteBalanceGain, &type_spec_WhiteBalanceGain, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedCapturedPhoto;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AdvancedCapturedPhoto is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AdvancedPhotoCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdvancedPhotoCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AdvancedPhotoCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastBackgroundService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastBackgroundService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastBackgroundServiceSignInInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastBackgroundServiceStreamInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastCameraCaptureStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastGlobalSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastGlobalSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastHeartbeatRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastMicrophoneCaptureStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPlugIn>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPlugIn;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPlugIn is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPlugInManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPlugInManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPlugInStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPreview>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPreview;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPreview is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPreviewStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPreviewStreamReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPreviewStreamVideoFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastPreviewStreamVideoHeader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastProviderSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastProviderSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastServices>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastServices;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastServices is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastSignInStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamAudioFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamAudioHeader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamVideoFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastStreamVideoHeader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastViewerCountChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureAlternateShortcutKeys;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureDurationGeneratedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureFileGeneratedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureMetadataWriter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureMetadataWriter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureMetadataWriter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureMicrophoneCaptureStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureRecordOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureRecordOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureRecordOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureRecordingStateChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureServices>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureServices;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureServices is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::AppCaptureState>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppCaptureState;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::AppCaptureState is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CameraCaptureUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraCaptureUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CameraCaptureUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraCaptureUIPhotoCaptureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraCaptureUIVideoCaptureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CameraOptionsUI>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraOptionsUI;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CameraOptionsUI is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CapturedFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CapturedFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CapturedFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CapturedFrameControlValues>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CapturedFrameControlValues;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CapturedFrameControlValues is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::CapturedPhoto>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CapturedPhoto;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::CapturedPhoto is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::GameBarServices>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameBarServices;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::GameBarServices is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameBarServicesCommandEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::GameBarServicesManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameBarServicesManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::GameBarServicesManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameBarServicesManagerGameBarServicesCreatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GameBarServicesTargetInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::GameBarServicesTargetInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::LowLagMediaRecording>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLagMediaRecording;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::LowLagMediaRecording is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::LowLagPhotoCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLagPhotoCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::LowLagPhotoCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LowLagPhotoSequenceCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureFocusChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureInitializationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureInitializationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCapturePauseResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCapturePauseResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCapturePauseResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureRelativePanelWatcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureStopResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureStopResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureStopResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureVideoProfile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureVideoProfile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaCaptureVideoProfileMediaDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_OptionalReferencePhotoCapturedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoCapturedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::PhotoCapturedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhotoConfirmationCapturedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::ScreenCapture>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScreenCapture;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::ScreenCapture is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SourceSuspensionChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::VideoStreamConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VideoStreamConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::VideoStreamConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Capture::WhiteBalanceGain>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WhiteBalanceGain;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Capture::WhiteBalanceGain is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

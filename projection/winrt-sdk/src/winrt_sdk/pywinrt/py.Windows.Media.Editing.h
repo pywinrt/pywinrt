@@ -97,38 +97,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>
+    struct py_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "BackgroundAudioTrack";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>
+    struct py_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "EmbeddedAudioTrack";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::MediaClip>
+    struct py_type<winrt::Windows::Media::Editing::MediaClip>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "MediaClip";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::MediaComposition>
+    struct py_type<winrt::Windows::Media::Editing::MediaComposition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "MediaComposition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::MediaOverlay>
+    struct py_type<winrt::Windows::Media::Editing::MediaOverlay>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "MediaOverlay";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Editing::MediaOverlayLayer>
+    struct py_type<winrt::Windows::Media::Editing::MediaOverlayLayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.editing";
+        static constexpr const char* type_name = "MediaOverlayLayer";
     };
 }

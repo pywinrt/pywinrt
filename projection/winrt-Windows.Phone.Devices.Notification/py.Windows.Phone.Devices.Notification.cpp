@@ -6,11 +6,6 @@
 
 namespace py::cpp::Windows::Phone::Devices::Notification
 {
-    struct module_state
-    {
-        PyTypeObject* type_VibrationDevice;
-    };
-
     // ----- VibrationDevice class --------------------
     static constexpr const char* const type_name_VibrationDevice = "VibrationDevice";
 
@@ -184,44 +179,15 @@ namespace py::cpp::Windows::Phone::Devices::Notification
     PyDoc_STRVAR(module_doc, "Windows::Phone::Devices::Notification");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_VibrationDevice);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_VibrationDevice);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Phone_Devices_Notification",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Phone::Devices::Notification
@@ -237,7 +203,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Devices_Notification(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -250,38 +216,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Devices_Notification(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_VibrationDevice = py::register_python_type(module.get(), type_name_VibrationDevice, &type_spec_VibrationDevice, object_bases.get(), nullptr);
-    if (!state->type_VibrationDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VibrationDevice, &type_spec_VibrationDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VibrationDevice, &type_spec_VibrationDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Devices::Notification;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Devices::Notification");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VibrationDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Devices::Notification::VibrationDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

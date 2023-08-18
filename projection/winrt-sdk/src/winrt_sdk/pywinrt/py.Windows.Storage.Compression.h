@@ -43,14 +43,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Compression::Compressor>
+    struct py_type<winrt::Windows::Storage::Compression::Compressor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.compression";
+        static constexpr const char* type_name = "Compressor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Compression::Decompressor>
+    struct py_type<winrt::Windows::Storage::Compression::Decompressor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.compression";
+        static constexpr const char* type_name = "Decompressor";
     };
 }

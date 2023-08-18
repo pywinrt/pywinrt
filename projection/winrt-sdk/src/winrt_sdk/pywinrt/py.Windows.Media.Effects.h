@@ -135,116 +135,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>
+    struct py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioCaptureEffectsManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::AudioEffect>
+    struct py_type<winrt::Windows::Media::Effects::AudioEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::AudioEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::AudioEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::AudioEffectsManager>
+    struct py_type<winrt::Windows::Media::Effects::AudioEffectsManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioEffectsManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>
+    struct py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioRenderEffectsManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>
+    struct py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "CompositeVideoFrameContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>
+    struct py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "ProcessAudioFrameContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>
+    struct py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "ProcessVideoFrameContext";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "SlowMotionEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>
+    struct py_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "VideoCompositorDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::VideoEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::VideoEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "VideoEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "VideoTransformEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>
+    struct py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "VideoTransformSphericalProjection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IAudioEffectDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IBasicAudioEffect>
+    struct py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IBasicAudioEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IBasicVideoEffect>
+    struct py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IBasicVideoEffect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IVideoCompositor>
+    struct py_type<winrt::Windows::Media::Effects::IVideoCompositor>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IVideoCompositor";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>
+    struct py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IVideoCompositorDefinition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>
+    struct py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "IVideoEffectDefinition";
     };
 }

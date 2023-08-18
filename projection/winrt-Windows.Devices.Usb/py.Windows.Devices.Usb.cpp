@@ -6,32 +6,6 @@
 
 namespace py::cpp::Windows::Devices::Usb
 {
-    struct module_state
-    {
-        PyTypeObject* type_UsbBulkInEndpointDescriptor;
-        PyTypeObject* type_UsbBulkInPipe;
-        PyTypeObject* type_UsbBulkOutEndpointDescriptor;
-        PyTypeObject* type_UsbBulkOutPipe;
-        PyTypeObject* type_UsbConfiguration;
-        PyTypeObject* type_UsbConfigurationDescriptor;
-        PyTypeObject* type_UsbControlRequestType;
-        PyTypeObject* type_UsbDescriptor;
-        PyTypeObject* type_UsbDevice;
-        PyTypeObject* type_UsbDeviceClass;
-        PyTypeObject* type_UsbDeviceClasses;
-        PyTypeObject* type_UsbDeviceDescriptor;
-        PyTypeObject* type_UsbEndpointDescriptor;
-        PyTypeObject* type_UsbInterface;
-        PyTypeObject* type_UsbInterfaceDescriptor;
-        PyTypeObject* type_UsbInterfaceSetting;
-        PyTypeObject* type_UsbInterruptInEndpointDescriptor;
-        PyTypeObject* type_UsbInterruptInEventArgs;
-        PyTypeObject* type_UsbInterruptInPipe;
-        PyTypeObject* type_UsbInterruptOutEndpointDescriptor;
-        PyTypeObject* type_UsbInterruptOutPipe;
-        PyTypeObject* type_UsbSetupPacket;
-    };
-
     // ----- UsbBulkInEndpointDescriptor class --------------------
     static constexpr const char* const type_name_UsbBulkInEndpointDescriptor = "UsbBulkInEndpointDescriptor";
 
@@ -4818,86 +4792,15 @@ namespace py::cpp::Windows::Devices::Usb
     PyDoc_STRVAR(module_doc, "Windows::Devices::Usb");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_UsbBulkInEndpointDescriptor);
-        Py_VISIT(state->type_UsbBulkInPipe);
-        Py_VISIT(state->type_UsbBulkOutEndpointDescriptor);
-        Py_VISIT(state->type_UsbBulkOutPipe);
-        Py_VISIT(state->type_UsbConfiguration);
-        Py_VISIT(state->type_UsbConfigurationDescriptor);
-        Py_VISIT(state->type_UsbControlRequestType);
-        Py_VISIT(state->type_UsbDescriptor);
-        Py_VISIT(state->type_UsbDevice);
-        Py_VISIT(state->type_UsbDeviceClass);
-        Py_VISIT(state->type_UsbDeviceClasses);
-        Py_VISIT(state->type_UsbDeviceDescriptor);
-        Py_VISIT(state->type_UsbEndpointDescriptor);
-        Py_VISIT(state->type_UsbInterface);
-        Py_VISIT(state->type_UsbInterfaceDescriptor);
-        Py_VISIT(state->type_UsbInterfaceSetting);
-        Py_VISIT(state->type_UsbInterruptInEndpointDescriptor);
-        Py_VISIT(state->type_UsbInterruptInEventArgs);
-        Py_VISIT(state->type_UsbInterruptInPipe);
-        Py_VISIT(state->type_UsbInterruptOutEndpointDescriptor);
-        Py_VISIT(state->type_UsbInterruptOutPipe);
-        Py_VISIT(state->type_UsbSetupPacket);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_UsbBulkInEndpointDescriptor);
-        Py_CLEAR(state->type_UsbBulkInPipe);
-        Py_CLEAR(state->type_UsbBulkOutEndpointDescriptor);
-        Py_CLEAR(state->type_UsbBulkOutPipe);
-        Py_CLEAR(state->type_UsbConfiguration);
-        Py_CLEAR(state->type_UsbConfigurationDescriptor);
-        Py_CLEAR(state->type_UsbControlRequestType);
-        Py_CLEAR(state->type_UsbDescriptor);
-        Py_CLEAR(state->type_UsbDevice);
-        Py_CLEAR(state->type_UsbDeviceClass);
-        Py_CLEAR(state->type_UsbDeviceClasses);
-        Py_CLEAR(state->type_UsbDeviceDescriptor);
-        Py_CLEAR(state->type_UsbEndpointDescriptor);
-        Py_CLEAR(state->type_UsbInterface);
-        Py_CLEAR(state->type_UsbInterfaceDescriptor);
-        Py_CLEAR(state->type_UsbInterfaceSetting);
-        Py_CLEAR(state->type_UsbInterruptInEndpointDescriptor);
-        Py_CLEAR(state->type_UsbInterruptInEventArgs);
-        Py_CLEAR(state->type_UsbInterruptInPipe);
-        Py_CLEAR(state->type_UsbInterruptOutEndpointDescriptor);
-        Py_CLEAR(state->type_UsbInterruptOutPipe);
-        Py_CLEAR(state->type_UsbSetupPacket);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Devices_Usb",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Devices::Usb
@@ -4913,7 +4816,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Usb(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4926,65 +4829,92 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Usb(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_UsbBulkInEndpointDescriptor = py::register_python_type(module.get(), type_name_UsbBulkInEndpointDescriptor, &type_spec_UsbBulkInEndpointDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbBulkInEndpointDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbBulkInEndpointDescriptor, &type_spec_UsbBulkInEndpointDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbBulkInEndpointDescriptor, &type_spec_UsbBulkInEndpointDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbBulkInPipe = py::register_python_type(module.get(), type_name_UsbBulkInPipe, &type_spec_UsbBulkInPipe, object_bases.get(), nullptr);
-    if (!state->type_UsbBulkInPipe)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbBulkInPipe, &type_spec_UsbBulkInPipe, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbBulkInPipe, &type_spec_UsbBulkInPipe, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbBulkOutEndpointDescriptor = py::register_python_type(module.get(), type_name_UsbBulkOutEndpointDescriptor, &type_spec_UsbBulkOutEndpointDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbBulkOutEndpointDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbBulkOutEndpointDescriptor, &type_spec_UsbBulkOutEndpointDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbBulkOutEndpointDescriptor, &type_spec_UsbBulkOutEndpointDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbBulkOutPipe = py::register_python_type(module.get(), type_name_UsbBulkOutPipe, &type_spec_UsbBulkOutPipe, object_bases.get(), nullptr);
-    if (!state->type_UsbBulkOutPipe)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbBulkOutPipe, &type_spec_UsbBulkOutPipe, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbBulkOutPipe, &type_spec_UsbBulkOutPipe, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbConfiguration = py::register_python_type(module.get(), type_name_UsbConfiguration, &type_spec_UsbConfiguration, object_bases.get(), nullptr);
-    if (!state->type_UsbConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbConfiguration, &type_spec_UsbConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbConfiguration, &type_spec_UsbConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbConfigurationDescriptor = py::register_python_type(module.get(), type_name_UsbConfigurationDescriptor, &type_spec_UsbConfigurationDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbConfigurationDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbConfigurationDescriptor, &type_spec_UsbConfigurationDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbConfigurationDescriptor, &type_spec_UsbConfigurationDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbControlRequestType = py::register_python_type(module.get(), type_name_UsbControlRequestType, &type_spec_UsbControlRequestType, object_bases.get(), nullptr);
-    if (!state->type_UsbControlRequestType)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbControlRequestType, &type_spec_UsbControlRequestType, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbControlRequestType, &type_spec_UsbControlRequestType, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbDescriptor = py::register_python_type(module.get(), type_name_UsbDescriptor, &type_spec_UsbDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbDescriptor, &type_spec_UsbDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbDescriptor, &type_spec_UsbDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbDevice = py::register_python_type(module.get(), type_name_UsbDevice, &type_spec_UsbDevice, object_bases.get(), nullptr);
-    if (!state->type_UsbDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbDevice, &type_spec_UsbDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbDevice, &type_spec_UsbDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbDeviceClass = py::register_python_type(module.get(), type_name_UsbDeviceClass, &type_spec_UsbDeviceClass, object_bases.get(), nullptr);
-    if (!state->type_UsbDeviceClass)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbDeviceClass, &type_spec_UsbDeviceClass, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbDeviceClass, &type_spec_UsbDeviceClass, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4995,584 +4925,114 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Usb(void) noexcept
         return nullptr;
     }
 
-    state->type_UsbDeviceClasses = py::register_python_type(module.get(), type_name_UsbDeviceClasses, &type_spec_UsbDeviceClasses, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UsbDeviceClasses_Meta.get()));
-    if (!state->type_UsbDeviceClasses)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbDeviceClasses, &type_spec_UsbDeviceClasses, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UsbDeviceClasses_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbDeviceClasses, &type_spec_UsbDeviceClasses, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UsbDeviceClasses_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbDeviceDescriptor = py::register_python_type(module.get(), type_name_UsbDeviceDescriptor, &type_spec_UsbDeviceDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbDeviceDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbDeviceDescriptor, &type_spec_UsbDeviceDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbDeviceDescriptor, &type_spec_UsbDeviceDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbEndpointDescriptor = py::register_python_type(module.get(), type_name_UsbEndpointDescriptor, &type_spec_UsbEndpointDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbEndpointDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbEndpointDescriptor, &type_spec_UsbEndpointDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbEndpointDescriptor, &type_spec_UsbEndpointDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterface = py::register_python_type(module.get(), type_name_UsbInterface, &type_spec_UsbInterface, object_bases.get(), nullptr);
-    if (!state->type_UsbInterface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterface, &type_spec_UsbInterface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterface, &type_spec_UsbInterface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterfaceDescriptor = py::register_python_type(module.get(), type_name_UsbInterfaceDescriptor, &type_spec_UsbInterfaceDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbInterfaceDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterfaceDescriptor, &type_spec_UsbInterfaceDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterfaceDescriptor, &type_spec_UsbInterfaceDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterfaceSetting = py::register_python_type(module.get(), type_name_UsbInterfaceSetting, &type_spec_UsbInterfaceSetting, object_bases.get(), nullptr);
-    if (!state->type_UsbInterfaceSetting)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterfaceSetting, &type_spec_UsbInterfaceSetting, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterfaceSetting, &type_spec_UsbInterfaceSetting, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterruptInEndpointDescriptor = py::register_python_type(module.get(), type_name_UsbInterruptInEndpointDescriptor, &type_spec_UsbInterruptInEndpointDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbInterruptInEndpointDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInEndpointDescriptor, &type_spec_UsbInterruptInEndpointDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInEndpointDescriptor, &type_spec_UsbInterruptInEndpointDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterruptInEventArgs = py::register_python_type(module.get(), type_name_UsbInterruptInEventArgs, &type_spec_UsbInterruptInEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UsbInterruptInEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInEventArgs, &type_spec_UsbInterruptInEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInEventArgs, &type_spec_UsbInterruptInEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterruptInPipe = py::register_python_type(module.get(), type_name_UsbInterruptInPipe, &type_spec_UsbInterruptInPipe, object_bases.get(), nullptr);
-    if (!state->type_UsbInterruptInPipe)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInPipe, &type_spec_UsbInterruptInPipe, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterruptInPipe, &type_spec_UsbInterruptInPipe, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterruptOutEndpointDescriptor = py::register_python_type(module.get(), type_name_UsbInterruptOutEndpointDescriptor, &type_spec_UsbInterruptOutEndpointDescriptor, object_bases.get(), nullptr);
-    if (!state->type_UsbInterruptOutEndpointDescriptor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterruptOutEndpointDescriptor, &type_spec_UsbInterruptOutEndpointDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterruptOutEndpointDescriptor, &type_spec_UsbInterruptOutEndpointDescriptor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbInterruptOutPipe = py::register_python_type(module.get(), type_name_UsbInterruptOutPipe, &type_spec_UsbInterruptOutPipe, object_bases.get(), nullptr);
-    if (!state->type_UsbInterruptOutPipe)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbInterruptOutPipe, &type_spec_UsbInterruptOutPipe, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbInterruptOutPipe, &type_spec_UsbInterruptOutPipe, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UsbSetupPacket = py::register_python_type(module.get(), type_name_UsbSetupPacket, &type_spec_UsbSetupPacket, object_bases.get(), nullptr);
-    if (!state->type_UsbSetupPacket)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UsbSetupPacket, &type_spec_UsbSetupPacket, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UsbSetupPacket, &type_spec_UsbSetupPacket, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbBulkInEndpointDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbBulkInPipe;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbBulkInPipe is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbBulkOutEndpointDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbBulkOutPipe;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbBulkOutPipe is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbConfigurationDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbConfigurationDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbControlRequestType>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbControlRequestType;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbControlRequestType is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbDeviceClass>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbDeviceClass;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbDeviceClass is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbDeviceClasses;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbDeviceClasses is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbDeviceDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbDeviceDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbEndpointDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbEndpointDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterfaceDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterfaceDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterfaceSetting;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterfaceSetting is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterruptInEndpointDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterruptInEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterruptInEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterruptInPipe;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterruptInPipe is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterruptOutEndpointDescriptor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbInterruptOutPipe;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbInterruptOutPipe is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Devices::Usb::UsbSetupPacket>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Devices::Usb;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Devices::Usb");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UsbSetupPacket;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Devices::Usb::UsbSetupPacket is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

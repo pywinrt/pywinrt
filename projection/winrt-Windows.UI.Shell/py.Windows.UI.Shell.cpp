@@ -6,28 +6,6 @@
 
 namespace py::cpp::Windows::UI::Shell
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdaptiveCardBuilder;
-        PyTypeObject* type_FocusSession;
-        PyTypeObject* type_FocusSessionManager;
-        PyTypeObject* type_SecurityAppManager;
-        PyTypeObject* type_ShareWindowCommandEventArgs;
-        PyTypeObject* type_ShareWindowCommandSource;
-        PyTypeObject* type_TaskbarManager;
-        PyTypeObject* type_WindowTab;
-        PyTypeObject* type_WindowTabCloseRequestedEventArgs;
-        PyTypeObject* type_WindowTabCollection;
-        PyTypeObject* type_WindowTabGroup;
-        PyTypeObject* type_WindowTabIcon;
-        PyTypeObject* type_WindowTabManager;
-        PyTypeObject* type_WindowTabSwitchRequestedEventArgs;
-        PyTypeObject* type_WindowTabTearOutRequestedEventArgs;
-        PyTypeObject* type_WindowTabThumbnailRequestedEventArgs;
-        PyTypeObject* type_IAdaptiveCard;
-        PyTypeObject* type_IAdaptiveCardBuilderStatics;
-    };
-
     // ----- AdaptiveCardBuilder class --------------------
     static constexpr const char* const type_name_AdaptiveCardBuilder = "AdaptiveCardBuilder";
 
@@ -4117,78 +4095,15 @@ namespace py::cpp::Windows::UI::Shell
     PyDoc_STRVAR(module_doc, "Windows::UI::Shell");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdaptiveCardBuilder);
-        Py_VISIT(state->type_FocusSession);
-        Py_VISIT(state->type_FocusSessionManager);
-        Py_VISIT(state->type_SecurityAppManager);
-        Py_VISIT(state->type_ShareWindowCommandEventArgs);
-        Py_VISIT(state->type_ShareWindowCommandSource);
-        Py_VISIT(state->type_TaskbarManager);
-        Py_VISIT(state->type_WindowTab);
-        Py_VISIT(state->type_WindowTabCloseRequestedEventArgs);
-        Py_VISIT(state->type_WindowTabCollection);
-        Py_VISIT(state->type_WindowTabGroup);
-        Py_VISIT(state->type_WindowTabIcon);
-        Py_VISIT(state->type_WindowTabManager);
-        Py_VISIT(state->type_WindowTabSwitchRequestedEventArgs);
-        Py_VISIT(state->type_WindowTabTearOutRequestedEventArgs);
-        Py_VISIT(state->type_WindowTabThumbnailRequestedEventArgs);
-        Py_VISIT(state->type_IAdaptiveCard);
-        Py_VISIT(state->type_IAdaptiveCardBuilderStatics);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdaptiveCardBuilder);
-        Py_CLEAR(state->type_FocusSession);
-        Py_CLEAR(state->type_FocusSessionManager);
-        Py_CLEAR(state->type_SecurityAppManager);
-        Py_CLEAR(state->type_ShareWindowCommandEventArgs);
-        Py_CLEAR(state->type_ShareWindowCommandSource);
-        Py_CLEAR(state->type_TaskbarManager);
-        Py_CLEAR(state->type_WindowTab);
-        Py_CLEAR(state->type_WindowTabCloseRequestedEventArgs);
-        Py_CLEAR(state->type_WindowTabCollection);
-        Py_CLEAR(state->type_WindowTabGroup);
-        Py_CLEAR(state->type_WindowTabIcon);
-        Py_CLEAR(state->type_WindowTabManager);
-        Py_CLEAR(state->type_WindowTabSwitchRequestedEventArgs);
-        Py_CLEAR(state->type_WindowTabTearOutRequestedEventArgs);
-        Py_CLEAR(state->type_WindowTabThumbnailRequestedEventArgs);
-        Py_CLEAR(state->type_IAdaptiveCard);
-        Py_CLEAR(state->type_IAdaptiveCardBuilderStatics);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Shell",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Shell
@@ -4204,7 +4119,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Shell(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -4217,17 +4132,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Shell(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdaptiveCardBuilder = py::register_python_type(module.get(), type_name_AdaptiveCardBuilder, &type_spec_AdaptiveCardBuilder, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveCardBuilder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveCardBuilder, &type_spec_AdaptiveCardBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveCardBuilder, &type_spec_AdaptiveCardBuilder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FocusSession = py::register_python_type(module.get(), type_name_FocusSession, &type_spec_FocusSession, object_bases.get(), nullptr);
-    if (!state->type_FocusSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusSession, &type_spec_FocusSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusSession, &type_spec_FocusSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -4238,516 +4156,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Shell(void) noexcept
         return nullptr;
     }
 
-    state->type_FocusSessionManager = py::register_python_type(module.get(), type_name_FocusSessionManager, &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get()));
-    if (!state->type_FocusSessionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FocusSessionManager, &type_spec_FocusSessionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FocusSessionManager, &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecurityAppManager = py::register_python_type(module.get(), type_name_SecurityAppManager, &type_spec_SecurityAppManager, object_bases.get(), nullptr);
-    if (!state->type_SecurityAppManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecurityAppManager, &type_spec_SecurityAppManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecurityAppManager, &type_spec_SecurityAppManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareWindowCommandEventArgs = py::register_python_type(module.get(), type_name_ShareWindowCommandEventArgs, &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ShareWindowCommandEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareWindowCommandEventArgs, &type_spec_ShareWindowCommandEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareWindowCommandEventArgs, &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareWindowCommandSource = py::register_python_type(module.get(), type_name_ShareWindowCommandSource, &type_spec_ShareWindowCommandSource, object_bases.get(), nullptr);
-    if (!state->type_ShareWindowCommandSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareWindowCommandSource, &type_spec_ShareWindowCommandSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareWindowCommandSource, &type_spec_ShareWindowCommandSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TaskbarManager = py::register_python_type(module.get(), type_name_TaskbarManager, &type_spec_TaskbarManager, object_bases.get(), nullptr);
-    if (!state->type_TaskbarManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TaskbarManager, &type_spec_TaskbarManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TaskbarManager, &type_spec_TaskbarManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTab = py::register_python_type(module.get(), type_name_WindowTab, &type_spec_WindowTab, object_bases.get(), nullptr);
-    if (!state->type_WindowTab)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTab, &type_spec_WindowTab, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTab, &type_spec_WindowTab, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabCloseRequestedEventArgs = py::register_python_type(module.get(), type_name_WindowTabCloseRequestedEventArgs, &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowTabCloseRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabCloseRequestedEventArgs, &type_spec_WindowTabCloseRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabCloseRequestedEventArgs, &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabCollection = py::register_python_type(module.get(), type_name_WindowTabCollection, &type_spec_WindowTabCollection, object_bases.get(), nullptr);
-    if (!state->type_WindowTabCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabCollection, &type_spec_WindowTabCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabCollection, &type_spec_WindowTabCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabGroup = py::register_python_type(module.get(), type_name_WindowTabGroup, &type_spec_WindowTabGroup, object_bases.get(), nullptr);
-    if (!state->type_WindowTabGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabGroup, &type_spec_WindowTabGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabGroup, &type_spec_WindowTabGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabIcon = py::register_python_type(module.get(), type_name_WindowTabIcon, &type_spec_WindowTabIcon, object_bases.get(), nullptr);
-    if (!state->type_WindowTabIcon)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabIcon, &type_spec_WindowTabIcon, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabIcon, &type_spec_WindowTabIcon, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabManager = py::register_python_type(module.get(), type_name_WindowTabManager, &type_spec_WindowTabManager, object_bases.get(), nullptr);
-    if (!state->type_WindowTabManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabManager, &type_spec_WindowTabManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabManager, &type_spec_WindowTabManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabSwitchRequestedEventArgs = py::register_python_type(module.get(), type_name_WindowTabSwitchRequestedEventArgs, &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowTabSwitchRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabSwitchRequestedEventArgs, &type_spec_WindowTabSwitchRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabSwitchRequestedEventArgs, &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabTearOutRequestedEventArgs = py::register_python_type(module.get(), type_name_WindowTabTearOutRequestedEventArgs, &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowTabTearOutRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabTearOutRequestedEventArgs, &type_spec_WindowTabTearOutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabTearOutRequestedEventArgs, &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WindowTabThumbnailRequestedEventArgs = py::register_python_type(module.get(), type_name_WindowTabThumbnailRequestedEventArgs, &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WindowTabThumbnailRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowTabThumbnailRequestedEventArgs, &type_spec_WindowTabThumbnailRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowTabThumbnailRequestedEventArgs, &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAdaptiveCard = py::register_python_type(module.get(), type_name_IAdaptiveCard, &type_spec_IAdaptiveCard, object_bases.get(), nullptr);
-    if (!state->type_IAdaptiveCard)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAdaptiveCard, &type_spec_IAdaptiveCard, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAdaptiveCard, &type_spec_IAdaptiveCard, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAdaptiveCardBuilderStatics = py::register_python_type(module.get(), type_name_IAdaptiveCardBuilderStatics, &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr);
-    if (!state->type_IAdaptiveCardBuilderStatics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAdaptiveCardBuilderStatics, &type_spec_IAdaptiveCardBuilderStatics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAdaptiveCardBuilderStatics, &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveCardBuilder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::AdaptiveCardBuilder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::FocusSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::FocusSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::FocusSessionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FocusSessionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::FocusSessionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::SecurityAppManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecurityAppManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::SecurityAppManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareWindowCommandEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::ShareWindowCommandEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareWindowCommandSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::ShareWindowCommandSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::TaskbarManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TaskbarManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::TaskbarManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTab>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTab;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTab is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabCloseRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabIcon>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabIcon;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabIcon is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabSwitchRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabTearOutRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowTabThumbnailRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::IAdaptiveCard>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAdaptiveCard;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::IAdaptiveCard is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Shell;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Shell");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAdaptiveCardBuilderStatics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

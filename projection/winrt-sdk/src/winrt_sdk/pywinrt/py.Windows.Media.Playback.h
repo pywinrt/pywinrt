@@ -286,272 +286,317 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>
+    struct py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "BackgroundMediaPlayer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "CurrentMediaPlaybackItemChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreak>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreak>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreak";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakEndedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakManager>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakSchedule>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakSchedule";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakSeekedOverEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakSkippedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaBreakStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>
+    struct py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaItemDisplayProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackAudioTrackList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerCommandBehavior";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerFastForwardReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerNextReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerPauseReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerPlayReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerPositionReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerPreviousReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerRateReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerRewindReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackCommandManagerShuffleReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackItem>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItem>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItem";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItemError";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItemFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackItemOpenedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackList>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackSession>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackSessionBufferingStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackSessionOutputDegradationPolicyState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackSphericalVideoProjection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackTimedMetadataTrackList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlaybackVideoTrackList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlayer>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlayer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerDataReceivedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerFailedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerRateChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::MediaPlayerSurface>
+    struct py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "MediaPlayerSurface";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::PlaybackMediaMarker>
+    struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "PlaybackMediaMarker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "PlaybackMediaMarkerReachedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>
+    struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "PlaybackMediaMarkerSequence";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>
+    struct py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "TimedMetadataPresentationModeChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
+    struct py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "IMediaEnginePlaybackSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>
+    struct py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.media.playback";
+        static constexpr const char* type_name = "IMediaPlaybackSource";
     };
 }

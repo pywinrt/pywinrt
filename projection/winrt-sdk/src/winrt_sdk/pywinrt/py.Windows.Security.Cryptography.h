@@ -37,8 +37,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>
+    struct py_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.cryptography";
+        static constexpr const char* type_name = "CryptographicBuffer";
     };
 }

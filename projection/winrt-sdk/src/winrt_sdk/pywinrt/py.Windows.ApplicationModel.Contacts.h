@@ -353,314 +353,366 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "AggregateContactManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::Contact>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::Contact>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "Contact";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAddress>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAddress>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactAddress";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactAnnotation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactAnnotationList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactAnnotationStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactBatch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactCardDelayedDataLoader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactCardOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactChange";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactChangeReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactChangeTracker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactChangedDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactConnectedServiceAccount";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactDate>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactDate>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactDate";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactEmail>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactEmail>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactEmail";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactField>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactField>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactField";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactFieldFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactGroup";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactInformation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactInstantMessageField";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactJobInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactLaunchActionVerbs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactList>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactListLimitedWriteOperations";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactListSyncConstraints";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactListSyncManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactLocationField";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactManagerForUser";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactMatchReason";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactPanel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactPanelClosingEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactPanelLaunchFullAppRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPhone>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPhone>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactPhone";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactPicker>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactPicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactQueryOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactQueryTextSearch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactSignificantOther";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactStore";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactStoreNotificationTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "ContactWebsite";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "FullContactCardOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "KnownContactField";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "PinnedContactIdsQueryResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "PinnedContactManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactField>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "IContactField";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "IContactFieldFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "IContactInstantMessageFieldFactory";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
+        static constexpr const char* type_name = "IContactLocationFieldFactory";
     };
 }

@@ -82,218 +82,254 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IRawElementProviderSimple";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IAnnotationProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ICustomNavigationProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IDockProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IDragProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IDropTargetProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IExpandCollapseProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IGridItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IGridProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IInvokeProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IItemContainerProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IMultipleViewProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IObjectModelProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IRangeValueProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IScrollItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IScrollProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ISelectionItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ISelectionProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ISpreadsheetItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ISpreadsheetProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IStylesProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ISynchronizedInputProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITableItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITableProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextChildProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextEditProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextProvider2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextRangeProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITextRangeProvider2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IToggleProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITransformProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "ITransformProvider2";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IValueProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IVirtualizedItemProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>
+    struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
+        static constexpr const char* type_name = "IWindowProvider";
     };
 }

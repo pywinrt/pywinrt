@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 {
-    struct module_state
-    {
-        PyTypeObject* type_VoiceCommand;
-        PyTypeObject* type_VoiceCommandCompletedEventArgs;
-        PyTypeObject* type_VoiceCommandConfirmationResult;
-        PyTypeObject* type_VoiceCommandContentTile;
-        PyTypeObject* type_VoiceCommandDefinition;
-        PyTypeObject* type_VoiceCommandDefinitionManager;
-        PyTypeObject* type_VoiceCommandDisambiguationResult;
-        PyTypeObject* type_VoiceCommandResponse;
-        PyTypeObject* type_VoiceCommandServiceConnection;
-        PyTypeObject* type_VoiceCommandUserMessage;
-    };
-
     // ----- VoiceCommand class --------------------
     static constexpr const char* const type_name_VoiceCommand = "VoiceCommand";
 
@@ -2155,62 +2141,15 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::VoiceCommands");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_VoiceCommand);
-        Py_VISIT(state->type_VoiceCommandCompletedEventArgs);
-        Py_VISIT(state->type_VoiceCommandConfirmationResult);
-        Py_VISIT(state->type_VoiceCommandContentTile);
-        Py_VISIT(state->type_VoiceCommandDefinition);
-        Py_VISIT(state->type_VoiceCommandDefinitionManager);
-        Py_VISIT(state->type_VoiceCommandDisambiguationResult);
-        Py_VISIT(state->type_VoiceCommandResponse);
-        Py_VISIT(state->type_VoiceCommandServiceConnection);
-        Py_VISIT(state->type_VoiceCommandUserMessage);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_VoiceCommand);
-        Py_CLEAR(state->type_VoiceCommandCompletedEventArgs);
-        Py_CLEAR(state->type_VoiceCommandConfirmationResult);
-        Py_CLEAR(state->type_VoiceCommandContentTile);
-        Py_CLEAR(state->type_VoiceCommandDefinition);
-        Py_CLEAR(state->type_VoiceCommandDefinitionManager);
-        Py_CLEAR(state->type_VoiceCommandDisambiguationResult);
-        Py_CLEAR(state->type_VoiceCommandResponse);
-        Py_CLEAR(state->type_VoiceCommandServiceConnection);
-        Py_CLEAR(state->type_VoiceCommandUserMessage);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_VoiceCommands",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::VoiceCommands
@@ -2226,7 +2165,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexce
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2239,35 +2178,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexce
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_VoiceCommand = py::register_python_type(module.get(), type_name_VoiceCommand, &type_spec_VoiceCommand, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommand, &type_spec_VoiceCommand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommand, &type_spec_VoiceCommand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandCompletedEventArgs = py::register_python_type(module.get(), type_name_VoiceCommandCompletedEventArgs, &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandCompletedEventArgs, &type_spec_VoiceCommandCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandCompletedEventArgs, &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandConfirmationResult = py::register_python_type(module.get(), type_name_VoiceCommandConfirmationResult, &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandConfirmationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandConfirmationResult, &type_spec_VoiceCommandConfirmationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandConfirmationResult, &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandContentTile = py::register_python_type(module.get(), type_name_VoiceCommandContentTile, &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandContentTile)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandContentTile, &type_spec_VoiceCommandContentTile, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandContentTile, &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandDefinition = py::register_python_type(module.get(), type_name_VoiceCommandDefinition, &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDefinition, &type_spec_VoiceCommandDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDefinition, &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2278,14 +2229,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexce
         return nullptr;
     }
 
-    state->type_VoiceCommandDefinitionManager = py::register_python_type(module.get(), type_name_VoiceCommandDefinitionManager, &type_spec_VoiceCommandDefinitionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Meta.get()));
-    if (!state->type_VoiceCommandDefinitionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDefinitionManager, &type_spec_VoiceCommandDefinitionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDefinitionManager, &type_spec_VoiceCommandDefinitionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandDisambiguationResult = py::register_python_type(module.get(), type_name_VoiceCommandDisambiguationResult, &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandDisambiguationResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDisambiguationResult, &type_spec_VoiceCommandDisambiguationResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandDisambiguationResult, &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2296,254 +2253,33 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexce
         return nullptr;
     }
 
-    state->type_VoiceCommandResponse = py::register_python_type(module.get(), type_name_VoiceCommandResponse, &type_spec_VoiceCommandResponse, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Meta.get()));
-    if (!state->type_VoiceCommandResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandResponse, &type_spec_VoiceCommandResponse, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandResponse, &type_spec_VoiceCommandResponse, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandServiceConnection = py::register_python_type(module.get(), type_name_VoiceCommandServiceConnection, &type_spec_VoiceCommandServiceConnection, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandServiceConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandServiceConnection, &type_spec_VoiceCommandServiceConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandServiceConnection, &type_spec_VoiceCommandServiceConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandUserMessage = py::register_python_type(module.get(), type_name_VoiceCommandUserMessage, &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandUserMessage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandUserMessage, &type_spec_VoiceCommandUserMessage, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandUserMessage, &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandConfirmationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandContentTile;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandDefinitionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandDisambiguationResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandServiceConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::VoiceCommands");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandUserMessage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

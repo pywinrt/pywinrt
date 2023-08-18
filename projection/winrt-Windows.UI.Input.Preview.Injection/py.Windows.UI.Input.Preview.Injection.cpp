@@ -6,19 +6,6 @@
 
 namespace py::cpp::Windows::UI::Input::Preview::Injection
 {
-    struct module_state
-    {
-        PyTypeObject* type_InjectedInputGamepadInfo;
-        PyTypeObject* type_InjectedInputKeyboardInfo;
-        PyTypeObject* type_InjectedInputMouseInfo;
-        PyTypeObject* type_InjectedInputPenInfo;
-        PyTypeObject* type_InjectedInputTouchInfo;
-        PyTypeObject* type_InputInjector;
-        PyTypeObject* type_InjectedInputPoint;
-        PyTypeObject* type_InjectedInputPointerInfo;
-        PyTypeObject* type_InjectedInputRectangle;
-    };
-
     // ----- InjectedInputGamepadInfo class --------------------
     static constexpr const char* const type_name_InjectedInputGamepadInfo = "InjectedInputGamepadInfo";
 
@@ -2927,60 +2914,15 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     PyDoc_STRVAR(module_doc, "Windows::UI::Input::Preview::Injection");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_InjectedInputGamepadInfo);
-        Py_VISIT(state->type_InjectedInputKeyboardInfo);
-        Py_VISIT(state->type_InjectedInputMouseInfo);
-        Py_VISIT(state->type_InjectedInputPenInfo);
-        Py_VISIT(state->type_InjectedInputTouchInfo);
-        Py_VISIT(state->type_InputInjector);
-        Py_VISIT(state->type_InjectedInputPoint);
-        Py_VISIT(state->type_InjectedInputPointerInfo);
-        Py_VISIT(state->type_InjectedInputRectangle);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_InjectedInputGamepadInfo);
-        Py_CLEAR(state->type_InjectedInputKeyboardInfo);
-        Py_CLEAR(state->type_InjectedInputMouseInfo);
-        Py_CLEAR(state->type_InjectedInputPenInfo);
-        Py_CLEAR(state->type_InjectedInputTouchInfo);
-        Py_CLEAR(state->type_InputInjector);
-        Py_CLEAR(state->type_InjectedInputPoint);
-        Py_CLEAR(state->type_InjectedInputPointerInfo);
-        Py_CLEAR(state->type_InjectedInputRectangle);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Input_Preview_Injection",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Input::Preview::Injection
@@ -2996,7 +2938,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Preview_Injection(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3009,270 +2951,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Preview_Injection(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_InjectedInputGamepadInfo = py::register_python_type(module.get(), type_name_InjectedInputGamepadInfo, &type_spec_InjectedInputGamepadInfo, object_bases.get(), nullptr);
-    if (!state->type_InjectedInputGamepadInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputGamepadInfo, &type_spec_InjectedInputGamepadInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputGamepadInfo, &type_spec_InjectedInputGamepadInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputKeyboardInfo = py::register_python_type(module.get(), type_name_InjectedInputKeyboardInfo, &type_spec_InjectedInputKeyboardInfo, object_bases.get(), nullptr);
-    if (!state->type_InjectedInputKeyboardInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputKeyboardInfo, &type_spec_InjectedInputKeyboardInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputKeyboardInfo, &type_spec_InjectedInputKeyboardInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputMouseInfo = py::register_python_type(module.get(), type_name_InjectedInputMouseInfo, &type_spec_InjectedInputMouseInfo, object_bases.get(), nullptr);
-    if (!state->type_InjectedInputMouseInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputMouseInfo, &type_spec_InjectedInputMouseInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputMouseInfo, &type_spec_InjectedInputMouseInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputPenInfo = py::register_python_type(module.get(), type_name_InjectedInputPenInfo, &type_spec_InjectedInputPenInfo, object_bases.get(), nullptr);
-    if (!state->type_InjectedInputPenInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputPenInfo, &type_spec_InjectedInputPenInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputPenInfo, &type_spec_InjectedInputPenInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputTouchInfo = py::register_python_type(module.get(), type_name_InjectedInputTouchInfo, &type_spec_InjectedInputTouchInfo, object_bases.get(), nullptr);
-    if (!state->type_InjectedInputTouchInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputTouchInfo, &type_spec_InjectedInputTouchInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputTouchInfo, &type_spec_InjectedInputTouchInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputInjector = py::register_python_type(module.get(), type_name_InputInjector, &type_spec_InputInjector, object_bases.get(), nullptr);
-    if (!state->type_InputInjector)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputInjector, &type_spec_InputInjector, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputInjector, &type_spec_InputInjector, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputPoint = py::register_python_type(module.get(), type_name_InjectedInputPoint, &type_spec_InjectedInputPoint, nullptr, nullptr);
-    if (!state->type_InjectedInputPoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputPoint, &type_spec_InjectedInputPoint, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputPoint, &type_spec_InjectedInputPoint, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputPointerInfo = py::register_python_type(module.get(), type_name_InjectedInputPointerInfo, &type_spec_InjectedInputPointerInfo, nullptr, nullptr);
-    if (!state->type_InjectedInputPointerInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputPointerInfo, &type_spec_InjectedInputPointerInfo, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputPointerInfo, &type_spec_InjectedInputPointerInfo, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InjectedInputRectangle = py::register_python_type(module.get(), type_name_InjectedInputRectangle, &type_spec_InjectedInputRectangle, nullptr, nullptr);
-    if (!state->type_InjectedInputRectangle)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InjectedInputRectangle, &type_spec_InjectedInputRectangle, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InjectedInputRectangle, &type_spec_InjectedInputRectangle, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputGamepadInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputKeyboardInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputMouseInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputPenInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputTouchInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputInjector;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InputInjector is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputPoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputPointerInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Input::Preview::Injection;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Input::Preview::Injection");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InjectedInputRectangle;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

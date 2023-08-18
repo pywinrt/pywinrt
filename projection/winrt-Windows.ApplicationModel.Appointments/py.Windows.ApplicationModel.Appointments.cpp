@@ -6,30 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Appointments
 {
-    struct module_state
-    {
-        PyTypeObject* type_Appointment;
-        PyTypeObject* type_AppointmentCalendar;
-        PyTypeObject* type_AppointmentCalendarSyncManager;
-        PyTypeObject* type_AppointmentConflictResult;
-        PyTypeObject* type_AppointmentException;
-        PyTypeObject* type_AppointmentInvitee;
-        PyTypeObject* type_AppointmentManager;
-        PyTypeObject* type_AppointmentManagerForUser;
-        PyTypeObject* type_AppointmentOrganizer;
-        PyTypeObject* type_AppointmentProperties;
-        PyTypeObject* type_AppointmentRecurrence;
-        PyTypeObject* type_AppointmentStore;
-        PyTypeObject* type_AppointmentStoreChange;
-        PyTypeObject* type_AppointmentStoreChangeReader;
-        PyTypeObject* type_AppointmentStoreChangeTracker;
-        PyTypeObject* type_AppointmentStoreChangedDeferral;
-        PyTypeObject* type_AppointmentStoreChangedEventArgs;
-        PyTypeObject* type_AppointmentStoreNotificationTriggerDetails;
-        PyTypeObject* type_FindAppointmentsOptions;
-        PyTypeObject* type_IAppointmentParticipant;
-    };
-
     // ----- Appointment class --------------------
     static constexpr const char* const type_name_Appointment = "Appointment";
 
@@ -7777,82 +7753,15 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Appointments");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Appointment);
-        Py_VISIT(state->type_AppointmentCalendar);
-        Py_VISIT(state->type_AppointmentCalendarSyncManager);
-        Py_VISIT(state->type_AppointmentConflictResult);
-        Py_VISIT(state->type_AppointmentException);
-        Py_VISIT(state->type_AppointmentInvitee);
-        Py_VISIT(state->type_AppointmentManager);
-        Py_VISIT(state->type_AppointmentManagerForUser);
-        Py_VISIT(state->type_AppointmentOrganizer);
-        Py_VISIT(state->type_AppointmentProperties);
-        Py_VISIT(state->type_AppointmentRecurrence);
-        Py_VISIT(state->type_AppointmentStore);
-        Py_VISIT(state->type_AppointmentStoreChange);
-        Py_VISIT(state->type_AppointmentStoreChangeReader);
-        Py_VISIT(state->type_AppointmentStoreChangeTracker);
-        Py_VISIT(state->type_AppointmentStoreChangedDeferral);
-        Py_VISIT(state->type_AppointmentStoreChangedEventArgs);
-        Py_VISIT(state->type_AppointmentStoreNotificationTriggerDetails);
-        Py_VISIT(state->type_FindAppointmentsOptions);
-        Py_VISIT(state->type_IAppointmentParticipant);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Appointment);
-        Py_CLEAR(state->type_AppointmentCalendar);
-        Py_CLEAR(state->type_AppointmentCalendarSyncManager);
-        Py_CLEAR(state->type_AppointmentConflictResult);
-        Py_CLEAR(state->type_AppointmentException);
-        Py_CLEAR(state->type_AppointmentInvitee);
-        Py_CLEAR(state->type_AppointmentManager);
-        Py_CLEAR(state->type_AppointmentManagerForUser);
-        Py_CLEAR(state->type_AppointmentOrganizer);
-        Py_CLEAR(state->type_AppointmentProperties);
-        Py_CLEAR(state->type_AppointmentRecurrence);
-        Py_CLEAR(state->type_AppointmentStore);
-        Py_CLEAR(state->type_AppointmentStoreChange);
-        Py_CLEAR(state->type_AppointmentStoreChangeReader);
-        Py_CLEAR(state->type_AppointmentStoreChangeTracker);
-        Py_CLEAR(state->type_AppointmentStoreChangedDeferral);
-        Py_CLEAR(state->type_AppointmentStoreChangedEventArgs);
-        Py_CLEAR(state->type_AppointmentStoreNotificationTriggerDetails);
-        Py_CLEAR(state->type_FindAppointmentsOptions);
-        Py_CLEAR(state->type_IAppointmentParticipant);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Appointments",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Appointments
@@ -7868,7 +7777,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments(void) noexcep
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -7881,59 +7790,83 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments(void) noexcep
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Appointment = py::register_python_type(module.get(), type_name_Appointment, &type_spec_Appointment, object_bases.get(), nullptr);
-    if (!state->type_Appointment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Appointment, &type_spec_Appointment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Appointment, &type_spec_Appointment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendar = py::register_python_type(module.get(), type_name_AppointmentCalendar, &type_spec_AppointmentCalendar, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendar, &type_spec_AppointmentCalendar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendar, &type_spec_AppointmentCalendar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarSyncManager = py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManager, &type_spec_AppointmentCalendarSyncManager, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarSyncManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManager, &type_spec_AppointmentCalendarSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManager, &type_spec_AppointmentCalendarSyncManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentConflictResult = py::register_python_type(module.get(), type_name_AppointmentConflictResult, &type_spec_AppointmentConflictResult, object_bases.get(), nullptr);
-    if (!state->type_AppointmentConflictResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentConflictResult, &type_spec_AppointmentConflictResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentConflictResult, &type_spec_AppointmentConflictResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentException = py::register_python_type(module.get(), type_name_AppointmentException, &type_spec_AppointmentException, object_bases.get(), nullptr);
-    if (!state->type_AppointmentException)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentException, &type_spec_AppointmentException, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentException, &type_spec_AppointmentException, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentInvitee = py::register_python_type(module.get(), type_name_AppointmentInvitee, &type_spec_AppointmentInvitee, object_bases.get(), nullptr);
-    if (!state->type_AppointmentInvitee)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentInvitee, &type_spec_AppointmentInvitee, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentInvitee, &type_spec_AppointmentInvitee, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentManager = py::register_python_type(module.get(), type_name_AppointmentManager, &type_spec_AppointmentManager, object_bases.get(), nullptr);
-    if (!state->type_AppointmentManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentManager, &type_spec_AppointmentManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentManager, &type_spec_AppointmentManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentManagerForUser = py::register_python_type(module.get(), type_name_AppointmentManagerForUser, &type_spec_AppointmentManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_AppointmentManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentManagerForUser, &type_spec_AppointmentManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentManagerForUser, &type_spec_AppointmentManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentOrganizer = py::register_python_type(module.get(), type_name_AppointmentOrganizer, &type_spec_AppointmentOrganizer, object_bases.get(), nullptr);
-    if (!state->type_AppointmentOrganizer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentOrganizer, &type_spec_AppointmentOrganizer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentOrganizer, &type_spec_AppointmentOrganizer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -7944,532 +7877,105 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments(void) noexcep
         return nullptr;
     }
 
-    state->type_AppointmentProperties = py::register_python_type(module.get(), type_name_AppointmentProperties, &type_spec_AppointmentProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentProperties_Meta.get()));
-    if (!state->type_AppointmentProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentProperties, &type_spec_AppointmentProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentProperties, &type_spec_AppointmentProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentRecurrence = py::register_python_type(module.get(), type_name_AppointmentRecurrence, &type_spec_AppointmentRecurrence, object_bases.get(), nullptr);
-    if (!state->type_AppointmentRecurrence)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentRecurrence, &type_spec_AppointmentRecurrence, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentRecurrence, &type_spec_AppointmentRecurrence, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStore = py::register_python_type(module.get(), type_name_AppointmentStore, &type_spec_AppointmentStore, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStore, &type_spec_AppointmentStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStore, &type_spec_AppointmentStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreChange = py::register_python_type(module.get(), type_name_AppointmentStoreChange, &type_spec_AppointmentStoreChange, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreChange)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChange, &type_spec_AppointmentStoreChange, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChange, &type_spec_AppointmentStoreChange, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreChangeReader = py::register_python_type(module.get(), type_name_AppointmentStoreChangeReader, &type_spec_AppointmentStoreChangeReader, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreChangeReader)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangeReader, &type_spec_AppointmentStoreChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangeReader, &type_spec_AppointmentStoreChangeReader, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreChangeTracker = py::register_python_type(module.get(), type_name_AppointmentStoreChangeTracker, &type_spec_AppointmentStoreChangeTracker, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreChangeTracker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangeTracker, &type_spec_AppointmentStoreChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangeTracker, &type_spec_AppointmentStoreChangeTracker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreChangedDeferral = py::register_python_type(module.get(), type_name_AppointmentStoreChangedDeferral, &type_spec_AppointmentStoreChangedDeferral, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreChangedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangedDeferral, &type_spec_AppointmentStoreChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangedDeferral, &type_spec_AppointmentStoreChangedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreChangedEventArgs = py::register_python_type(module.get(), type_name_AppointmentStoreChangedEventArgs, &type_spec_AppointmentStoreChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangedEventArgs, &type_spec_AppointmentStoreChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreChangedEventArgs, &type_spec_AppointmentStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreNotificationTriggerDetails = py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTriggerDetails, &type_spec_AppointmentStoreNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTriggerDetails, &type_spec_AppointmentStoreNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTriggerDetails, &type_spec_AppointmentStoreNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FindAppointmentsOptions = py::register_python_type(module.get(), type_name_FindAppointmentsOptions, &type_spec_FindAppointmentsOptions, object_bases.get(), nullptr);
-    if (!state->type_FindAppointmentsOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FindAppointmentsOptions, &type_spec_FindAppointmentsOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FindAppointmentsOptions, &type_spec_FindAppointmentsOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentParticipant = py::register_python_type(module.get(), type_name_IAppointmentParticipant, &type_spec_IAppointmentParticipant, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentParticipant)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentParticipant, &type_spec_IAppointmentParticipant, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentParticipant, &type_spec_IAppointmentParticipant, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::Appointment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Appointment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::Appointment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarSyncManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentConflictResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentException>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentException;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentException is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentInvitee;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentOrganizer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentRecurrence;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreChange;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreChangeReader;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreChangeTracker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreChangedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FindAppointmentsOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentParticipant;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

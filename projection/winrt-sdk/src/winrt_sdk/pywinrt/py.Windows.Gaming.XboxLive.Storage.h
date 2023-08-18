@@ -62,68 +62,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveBlobGetResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveBlobInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveBlobInfoGetResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveBlobInfoQuery";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveContainer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveContainerInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveContainerInfoGetResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveContainerInfoQuery";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveOperationResult";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveProvider";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>
+    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
+        static constexpr const char* type_name = "GameSaveProviderGetResult";
     };
 }

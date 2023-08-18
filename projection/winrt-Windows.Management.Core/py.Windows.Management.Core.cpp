@@ -6,11 +6,6 @@
 
 namespace py::cpp::Windows::Management::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_ApplicationDataManager;
-    };
-
     // ----- ApplicationDataManager class --------------------
     static constexpr const char* const type_name_ApplicationDataManager = "ApplicationDataManager";
 
@@ -122,44 +117,15 @@ namespace py::cpp::Windows::Management::Core
     PyDoc_STRVAR(module_doc, "Windows::Management::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ApplicationDataManager);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ApplicationDataManager);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Management_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Management::Core
@@ -175,7 +141,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -188,38 +154,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Management_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ApplicationDataManager = py::register_python_type(module.get(), type_name_ApplicationDataManager, &type_spec_ApplicationDataManager, object_bases.get(), nullptr);
-    if (!state->type_ApplicationDataManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationDataManager, &type_spec_ApplicationDataManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationDataManager, &type_spec_ApplicationDataManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Management::Core::ApplicationDataManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Management::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Management::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationDataManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Management::Core::ApplicationDataManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

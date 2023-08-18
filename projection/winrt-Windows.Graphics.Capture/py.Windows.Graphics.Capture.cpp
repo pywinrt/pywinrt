@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Capture
 {
-    struct module_state
-    {
-        PyTypeObject* type_Direct3D11CaptureFrame;
-        PyTypeObject* type_Direct3D11CaptureFramePool;
-        PyTypeObject* type_GraphicsCaptureAccess;
-        PyTypeObject* type_GraphicsCaptureItem;
-        PyTypeObject* type_GraphicsCapturePicker;
-        PyTypeObject* type_GraphicsCaptureSession;
-    };
-
     // ----- Direct3D11CaptureFrame class --------------------
     static constexpr const char* const type_name_Direct3D11CaptureFrame = "Direct3D11CaptureFrame";
 
@@ -1304,54 +1294,15 @@ namespace py::cpp::Windows::Graphics::Capture
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Capture");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_Direct3D11CaptureFrame);
-        Py_VISIT(state->type_Direct3D11CaptureFramePool);
-        Py_VISIT(state->type_GraphicsCaptureAccess);
-        Py_VISIT(state->type_GraphicsCaptureItem);
-        Py_VISIT(state->type_GraphicsCapturePicker);
-        Py_VISIT(state->type_GraphicsCaptureSession);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_Direct3D11CaptureFrame);
-        Py_CLEAR(state->type_Direct3D11CaptureFramePool);
-        Py_CLEAR(state->type_GraphicsCaptureAccess);
-        Py_CLEAR(state->type_GraphicsCaptureItem);
-        Py_CLEAR(state->type_GraphicsCapturePicker);
-        Py_CLEAR(state->type_GraphicsCaptureSession);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Capture",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Capture
@@ -1367,7 +1318,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Capture(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1380,183 +1331,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Capture(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_Direct3D11CaptureFrame = py::register_python_type(module.get(), type_name_Direct3D11CaptureFrame, &type_spec_Direct3D11CaptureFrame, object_bases.get(), nullptr);
-    if (!state->type_Direct3D11CaptureFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Direct3D11CaptureFrame, &type_spec_Direct3D11CaptureFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Direct3D11CaptureFrame, &type_spec_Direct3D11CaptureFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Direct3D11CaptureFramePool = py::register_python_type(module.get(), type_name_Direct3D11CaptureFramePool, &type_spec_Direct3D11CaptureFramePool, object_bases.get(), nullptr);
-    if (!state->type_Direct3D11CaptureFramePool)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Direct3D11CaptureFramePool, &type_spec_Direct3D11CaptureFramePool, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Direct3D11CaptureFramePool, &type_spec_Direct3D11CaptureFramePool, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GraphicsCaptureAccess = py::register_python_type(module.get(), type_name_GraphicsCaptureAccess, &type_spec_GraphicsCaptureAccess, object_bases.get(), nullptr);
-    if (!state->type_GraphicsCaptureAccess)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureAccess, &type_spec_GraphicsCaptureAccess, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureAccess, &type_spec_GraphicsCaptureAccess, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GraphicsCaptureItem = py::register_python_type(module.get(), type_name_GraphicsCaptureItem, &type_spec_GraphicsCaptureItem, object_bases.get(), nullptr);
-    if (!state->type_GraphicsCaptureItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureItem, &type_spec_GraphicsCaptureItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureItem, &type_spec_GraphicsCaptureItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GraphicsCapturePicker = py::register_python_type(module.get(), type_name_GraphicsCapturePicker, &type_spec_GraphicsCapturePicker, object_bases.get(), nullptr);
-    if (!state->type_GraphicsCapturePicker)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GraphicsCapturePicker, &type_spec_GraphicsCapturePicker, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GraphicsCapturePicker, &type_spec_GraphicsCapturePicker, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GraphicsCaptureSession = py::register_python_type(module.get(), type_name_GraphicsCaptureSession, &type_spec_GraphicsCaptureSession, object_bases.get(), nullptr);
-    if (!state->type_GraphicsCaptureSession)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureSession, &type_spec_GraphicsCaptureSession, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GraphicsCaptureSession, &type_spec_GraphicsCaptureSession, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Direct3D11CaptureFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Direct3D11CaptureFramePool;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsCaptureAccess;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::GraphicsCaptureAccess is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsCaptureItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::GraphicsCaptureItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::GraphicsCapturePicker>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsCapturePicker;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::GraphicsCapturePicker is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Capture;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Capture");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GraphicsCaptureSession;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Capture::GraphicsCaptureSession is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

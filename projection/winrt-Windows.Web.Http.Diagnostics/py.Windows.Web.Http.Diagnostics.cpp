@@ -6,16 +6,6 @@
 
 namespace py::cpp::Windows::Web::Http::Diagnostics
 {
-    struct module_state
-    {
-        PyTypeObject* type_HttpDiagnosticProvider;
-        PyTypeObject* type_HttpDiagnosticProviderRequestResponseCompletedEventArgs;
-        PyTypeObject* type_HttpDiagnosticProviderRequestResponseTimestamps;
-        PyTypeObject* type_HttpDiagnosticProviderRequestSentEventArgs;
-        PyTypeObject* type_HttpDiagnosticProviderResponseReceivedEventArgs;
-        PyTypeObject* type_HttpDiagnosticSourceLocation;
-    };
-
     // ----- HttpDiagnosticProvider class --------------------
     static constexpr const char* const type_name_HttpDiagnosticProvider = "HttpDiagnosticProvider";
 
@@ -1279,54 +1269,15 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     PyDoc_STRVAR(module_doc, "Windows::Web::Http::Diagnostics");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_HttpDiagnosticProvider);
-        Py_VISIT(state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs);
-        Py_VISIT(state->type_HttpDiagnosticProviderRequestResponseTimestamps);
-        Py_VISIT(state->type_HttpDiagnosticProviderRequestSentEventArgs);
-        Py_VISIT(state->type_HttpDiagnosticProviderResponseReceivedEventArgs);
-        Py_VISIT(state->type_HttpDiagnosticSourceLocation);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_HttpDiagnosticProvider);
-        Py_CLEAR(state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs);
-        Py_CLEAR(state->type_HttpDiagnosticProviderRequestResponseTimestamps);
-        Py_CLEAR(state->type_HttpDiagnosticProviderRequestSentEventArgs);
-        Py_CLEAR(state->type_HttpDiagnosticProviderResponseReceivedEventArgs);
-        Py_CLEAR(state->type_HttpDiagnosticSourceLocation);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Web_Http_Diagnostics",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Web::Http::Diagnostics
@@ -1342,7 +1293,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -1355,183 +1306,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Diagnostics(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_HttpDiagnosticProvider = py::register_python_type(module.get(), type_name_HttpDiagnosticProvider, &type_spec_HttpDiagnosticProvider, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProvider, &type_spec_HttpDiagnosticProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProvider, &type_spec_HttpDiagnosticProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs = py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseCompletedEventArgs, &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseCompletedEventArgs, &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseCompletedEventArgs, &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDiagnosticProviderRequestResponseTimestamps = py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseTimestamps, &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticProviderRequestResponseTimestamps)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseTimestamps, &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestResponseTimestamps, &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDiagnosticProviderRequestSentEventArgs = py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestSentEventArgs, &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticProviderRequestSentEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestSentEventArgs, &type_spec_HttpDiagnosticProviderRequestSentEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderRequestSentEventArgs, &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDiagnosticProviderResponseReceivedEventArgs = py::register_python_type(module.get(), type_name_HttpDiagnosticProviderResponseReceivedEventArgs, &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticProviderResponseReceivedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderResponseReceivedEventArgs, &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticProviderResponseReceivedEventArgs, &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HttpDiagnosticSourceLocation = py::register_python_type(module.get(), type_name_HttpDiagnosticSourceLocation, &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), nullptr);
-    if (!state->type_HttpDiagnosticSourceLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticSourceLocation, &type_spec_HttpDiagnosticSourceLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HttpDiagnosticSourceLocation, &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticProviderRequestResponseCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticProviderRequestResponseTimestamps;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticProviderRequestSentEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticProviderResponseReceivedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::Http::Diagnostics;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::Http::Diagnostics");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HttpDiagnosticSourceLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

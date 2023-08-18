@@ -6,42 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 {
-    struct module_state
-    {
-        PyTypeObject* type_EmailDataProviderConnection;
-        PyTypeObject* type_EmailDataProviderTriggerDetails;
-        PyTypeObject* type_EmailMailboxCreateFolderRequest;
-        PyTypeObject* type_EmailMailboxCreateFolderRequestEventArgs;
-        PyTypeObject* type_EmailMailboxDeleteFolderRequest;
-        PyTypeObject* type_EmailMailboxDeleteFolderRequestEventArgs;
-        PyTypeObject* type_EmailMailboxDownloadAttachmentRequest;
-        PyTypeObject* type_EmailMailboxDownloadAttachmentRequestEventArgs;
-        PyTypeObject* type_EmailMailboxDownloadMessageRequest;
-        PyTypeObject* type_EmailMailboxDownloadMessageRequestEventArgs;
-        PyTypeObject* type_EmailMailboxEmptyFolderRequest;
-        PyTypeObject* type_EmailMailboxEmptyFolderRequestEventArgs;
-        PyTypeObject* type_EmailMailboxForwardMeetingRequest;
-        PyTypeObject* type_EmailMailboxForwardMeetingRequestEventArgs;
-        PyTypeObject* type_EmailMailboxGetAutoReplySettingsRequest;
-        PyTypeObject* type_EmailMailboxGetAutoReplySettingsRequestEventArgs;
-        PyTypeObject* type_EmailMailboxMoveFolderRequest;
-        PyTypeObject* type_EmailMailboxMoveFolderRequestEventArgs;
-        PyTypeObject* type_EmailMailboxProposeNewTimeForMeetingRequest;
-        PyTypeObject* type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs;
-        PyTypeObject* type_EmailMailboxResolveRecipientsRequest;
-        PyTypeObject* type_EmailMailboxResolveRecipientsRequestEventArgs;
-        PyTypeObject* type_EmailMailboxServerSearchReadBatchRequest;
-        PyTypeObject* type_EmailMailboxServerSearchReadBatchRequestEventArgs;
-        PyTypeObject* type_EmailMailboxSetAutoReplySettingsRequest;
-        PyTypeObject* type_EmailMailboxSetAutoReplySettingsRequestEventArgs;
-        PyTypeObject* type_EmailMailboxSyncManagerSyncRequest;
-        PyTypeObject* type_EmailMailboxSyncManagerSyncRequestEventArgs;
-        PyTypeObject* type_EmailMailboxUpdateMeetingResponseRequest;
-        PyTypeObject* type_EmailMailboxUpdateMeetingResponseRequestEventArgs;
-        PyTypeObject* type_EmailMailboxValidateCertificatesRequest;
-        PyTypeObject* type_EmailMailboxValidateCertificatesRequestEventArgs;
-    };
-
     // ----- EmailDataProviderConnection class --------------------
     static constexpr const char* const type_name_EmailDataProviderConnection = "EmailDataProviderConnection";
 
@@ -5850,106 +5814,15 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Email::DataProvider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_EmailDataProviderConnection);
-        Py_VISIT(state->type_EmailDataProviderTriggerDetails);
-        Py_VISIT(state->type_EmailMailboxCreateFolderRequest);
-        Py_VISIT(state->type_EmailMailboxCreateFolderRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxDeleteFolderRequest);
-        Py_VISIT(state->type_EmailMailboxDeleteFolderRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxDownloadAttachmentRequest);
-        Py_VISIT(state->type_EmailMailboxDownloadAttachmentRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxDownloadMessageRequest);
-        Py_VISIT(state->type_EmailMailboxDownloadMessageRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxEmptyFolderRequest);
-        Py_VISIT(state->type_EmailMailboxEmptyFolderRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxForwardMeetingRequest);
-        Py_VISIT(state->type_EmailMailboxForwardMeetingRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxGetAutoReplySettingsRequest);
-        Py_VISIT(state->type_EmailMailboxGetAutoReplySettingsRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxMoveFolderRequest);
-        Py_VISIT(state->type_EmailMailboxMoveFolderRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxProposeNewTimeForMeetingRequest);
-        Py_VISIT(state->type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxResolveRecipientsRequest);
-        Py_VISIT(state->type_EmailMailboxResolveRecipientsRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxServerSearchReadBatchRequest);
-        Py_VISIT(state->type_EmailMailboxServerSearchReadBatchRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxSetAutoReplySettingsRequest);
-        Py_VISIT(state->type_EmailMailboxSetAutoReplySettingsRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxSyncManagerSyncRequest);
-        Py_VISIT(state->type_EmailMailboxSyncManagerSyncRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxUpdateMeetingResponseRequest);
-        Py_VISIT(state->type_EmailMailboxUpdateMeetingResponseRequestEventArgs);
-        Py_VISIT(state->type_EmailMailboxValidateCertificatesRequest);
-        Py_VISIT(state->type_EmailMailboxValidateCertificatesRequestEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_EmailDataProviderConnection);
-        Py_CLEAR(state->type_EmailDataProviderTriggerDetails);
-        Py_CLEAR(state->type_EmailMailboxCreateFolderRequest);
-        Py_CLEAR(state->type_EmailMailboxCreateFolderRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxDeleteFolderRequest);
-        Py_CLEAR(state->type_EmailMailboxDeleteFolderRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxDownloadAttachmentRequest);
-        Py_CLEAR(state->type_EmailMailboxDownloadAttachmentRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxDownloadMessageRequest);
-        Py_CLEAR(state->type_EmailMailboxDownloadMessageRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxEmptyFolderRequest);
-        Py_CLEAR(state->type_EmailMailboxEmptyFolderRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxForwardMeetingRequest);
-        Py_CLEAR(state->type_EmailMailboxForwardMeetingRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxGetAutoReplySettingsRequest);
-        Py_CLEAR(state->type_EmailMailboxGetAutoReplySettingsRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxMoveFolderRequest);
-        Py_CLEAR(state->type_EmailMailboxMoveFolderRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxProposeNewTimeForMeetingRequest);
-        Py_CLEAR(state->type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxResolveRecipientsRequest);
-        Py_CLEAR(state->type_EmailMailboxResolveRecipientsRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxServerSearchReadBatchRequest);
-        Py_CLEAR(state->type_EmailMailboxServerSearchReadBatchRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxSetAutoReplySettingsRequest);
-        Py_CLEAR(state->type_EmailMailboxSetAutoReplySettingsRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxSyncManagerSyncRequest);
-        Py_CLEAR(state->type_EmailMailboxSyncManagerSyncRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxUpdateMeetingResponseRequest);
-        Py_CLEAR(state->type_EmailMailboxUpdateMeetingResponseRequestEventArgs);
-        Py_CLEAR(state->type_EmailMailboxValidateCertificatesRequest);
-        Py_CLEAR(state->type_EmailMailboxValidateCertificatesRequestEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Email_DataProvider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Email::DataProvider
@@ -5965,7 +5838,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Email_DataProvider(void) n
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -5978,937 +5851,294 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Email_DataProvider(void) n
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_EmailDataProviderConnection = py::register_python_type(module.get(), type_name_EmailDataProviderConnection, &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr);
-    if (!state->type_EmailDataProviderConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailDataProviderConnection, &type_spec_EmailDataProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailDataProviderConnection, &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailDataProviderTriggerDetails = py::register_python_type(module.get(), type_name_EmailDataProviderTriggerDetails, &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_EmailDataProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailDataProviderTriggerDetails, &type_spec_EmailDataProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailDataProviderTriggerDetails, &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxCreateFolderRequest = py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequest, &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxCreateFolderRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequest, &type_spec_EmailMailboxCreateFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequest, &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxCreateFolderRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequestEventArgs, &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxCreateFolderRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequestEventArgs, &type_spec_EmailMailboxCreateFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequestEventArgs, &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDeleteFolderRequest = py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequest, &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDeleteFolderRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequest, &type_spec_EmailMailboxDeleteFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequest, &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDeleteFolderRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequestEventArgs, &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDeleteFolderRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequestEventArgs, &type_spec_EmailMailboxDeleteFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequestEventArgs, &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDownloadAttachmentRequest = py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequest, &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDownloadAttachmentRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequest, &type_spec_EmailMailboxDownloadAttachmentRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequest, &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDownloadAttachmentRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequestEventArgs, &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDownloadAttachmentRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequestEventArgs, &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequestEventArgs, &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDownloadMessageRequest = py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequest, &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDownloadMessageRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequest, &type_spec_EmailMailboxDownloadMessageRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequest, &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxDownloadMessageRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequestEventArgs, &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxDownloadMessageRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequestEventArgs, &type_spec_EmailMailboxDownloadMessageRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequestEventArgs, &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxEmptyFolderRequest = py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequest, &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxEmptyFolderRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequest, &type_spec_EmailMailboxEmptyFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequest, &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxEmptyFolderRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequestEventArgs, &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxEmptyFolderRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequestEventArgs, &type_spec_EmailMailboxEmptyFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequestEventArgs, &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxForwardMeetingRequest = py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequest, &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxForwardMeetingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequest, &type_spec_EmailMailboxForwardMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequest, &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxForwardMeetingRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequestEventArgs, &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxForwardMeetingRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequestEventArgs, &type_spec_EmailMailboxForwardMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequestEventArgs, &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxGetAutoReplySettingsRequest = py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequest, &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxGetAutoReplySettingsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequest, &type_spec_EmailMailboxGetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequest, &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxGetAutoReplySettingsRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxGetAutoReplySettingsRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxMoveFolderRequest = py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequest, &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxMoveFolderRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequest, &type_spec_EmailMailboxMoveFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequest, &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxMoveFolderRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequestEventArgs, &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxMoveFolderRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequestEventArgs, &type_spec_EmailMailboxMoveFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequestEventArgs, &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxProposeNewTimeForMeetingRequest = py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequest, &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxProposeNewTimeForMeetingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequest, &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequest, &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxResolveRecipientsRequest = py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequest, &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxResolveRecipientsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequest, &type_spec_EmailMailboxResolveRecipientsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequest, &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxResolveRecipientsRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequestEventArgs, &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxResolveRecipientsRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequestEventArgs, &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequestEventArgs, &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxServerSearchReadBatchRequest = py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequest, &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxServerSearchReadBatchRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequest, &type_spec_EmailMailboxServerSearchReadBatchRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequest, &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxServerSearchReadBatchRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequestEventArgs, &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxServerSearchReadBatchRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequestEventArgs, &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequestEventArgs, &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxSetAutoReplySettingsRequest = py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequest, &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxSetAutoReplySettingsRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequest, &type_spec_EmailMailboxSetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequest, &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxSetAutoReplySettingsRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxSetAutoReplySettingsRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxSyncManagerSyncRequest = py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequest, &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxSyncManagerSyncRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequest, &type_spec_EmailMailboxSyncManagerSyncRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequest, &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxSyncManagerSyncRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequestEventArgs, &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxSyncManagerSyncRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequestEventArgs, &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequestEventArgs, &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxUpdateMeetingResponseRequest = py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequest, &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxUpdateMeetingResponseRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequest, &type_spec_EmailMailboxUpdateMeetingResponseRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequest, &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxUpdateMeetingResponseRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequestEventArgs, &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxUpdateMeetingResponseRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequestEventArgs, &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequestEventArgs, &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxValidateCertificatesRequest = py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequest, &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxValidateCertificatesRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequest, &type_spec_EmailMailboxValidateCertificatesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequest, &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailMailboxValidateCertificatesRequestEventArgs = py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequestEventArgs, &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EmailMailboxValidateCertificatesRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequestEventArgs, &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequestEventArgs, &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailDataProviderConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailDataProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxCreateFolderRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxCreateFolderRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDeleteFolderRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDeleteFolderRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDownloadAttachmentRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDownloadAttachmentRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDownloadMessageRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxDownloadMessageRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxEmptyFolderRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxEmptyFolderRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxForwardMeetingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxForwardMeetingRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxGetAutoReplySettingsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxGetAutoReplySettingsRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxMoveFolderRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxMoveFolderRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxProposeNewTimeForMeetingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxProposeNewTimeForMeetingRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxResolveRecipientsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxResolveRecipientsRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxServerSearchReadBatchRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxServerSearchReadBatchRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxSetAutoReplySettingsRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxSetAutoReplySettingsRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxSyncManagerSyncRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxSyncManagerSyncRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxUpdateMeetingResponseRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxUpdateMeetingResponseRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxValidateCertificatesRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Email::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Email::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailMailboxValidateCertificatesRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -178,69 +178,80 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "AccountsSettingsPane";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "AccountsSettingsPaneCommandsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "AccountsSettingsPaneEventDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::CredentialCommand>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::CredentialCommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "CredentialCommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsCommand>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsCommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SettingsCommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SettingsPane";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SettingsPaneCommandsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "SettingsPaneCommandsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountCommand>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountCommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "WebAccountCommand";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "WebAccountInvokedArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand>
+    struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
+        static constexpr const char* type_name = "WebAccountProviderCommand";
     };
     template <>
     struct delegate_python_type<winrt::Windows::UI::ApplicationSettings::CredentialCommandCredentialDeletedHandler>

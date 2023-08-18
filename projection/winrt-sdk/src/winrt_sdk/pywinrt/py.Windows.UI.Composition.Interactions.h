@@ -135,116 +135,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "CompositionConditionalValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "CompositionInteractionSourceCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionSourceConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTracker>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTracker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTracker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerCustomAnimationStateEnteredArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerIdleStateEnteredArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInertiaModifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInertiaMotion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInertiaNaturalMotion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInertiaRestingValue";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInertiaStateEnteredArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerInteractingStateEnteredArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerRequestIgnoredArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerValuesChangedArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerVector2InertiaModifier";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "InteractionTrackerVector2InertiaNaturalMotion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "VisualInteractionSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "ICompositionInteractionSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>
+    struct py_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
+        static constexpr const char* type_name = "IInteractionTrackerOwner";
     };
 }

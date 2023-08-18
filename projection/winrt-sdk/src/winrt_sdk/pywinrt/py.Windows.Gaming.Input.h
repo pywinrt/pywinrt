@@ -174,92 +174,107 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::ArcadeStick>
+    struct py_type<winrt::Windows::Gaming::Input::ArcadeStick>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "ArcadeStick";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::FlightStick>
+    struct py_type<winrt::Windows::Gaming::Input::FlightStick>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "FlightStick";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Gamepad>
+    struct py_type<winrt::Windows::Gaming::Input::Gamepad>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "Gamepad";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::Headset>
+    struct py_type<winrt::Windows::Gaming::Input::Headset>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "Headset";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::RacingWheel>
+    struct py_type<winrt::Windows::Gaming::Input::RacingWheel>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "RacingWheel";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::RawGameController>
+    struct py_type<winrt::Windows::Gaming::Input::RawGameController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "RawGameController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::UINavigationController>
+    struct py_type<winrt::Windows::Gaming::Input::UINavigationController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "UINavigationController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::IGameController>
+    struct py_type<winrt::Windows::Gaming::Input::IGameController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "IGameController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
+    struct py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "IGameControllerBatteryInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::ArcadeStickReading>
+    struct py_type<winrt::Windows::Gaming::Input::ArcadeStickReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "ArcadeStickReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::FlightStickReading>
+    struct py_type<winrt::Windows::Gaming::Input::FlightStickReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "FlightStickReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::GamepadReading>
+    struct py_type<winrt::Windows::Gaming::Input::GamepadReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GamepadReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::GamepadVibration>
+    struct py_type<winrt::Windows::Gaming::Input::GamepadVibration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "GamepadVibration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::RacingWheelReading>
+    struct py_type<winrt::Windows::Gaming::Input::RacingWheelReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "RacingWheelReading";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Gaming::Input::UINavigationReading>
+    struct py_type<winrt::Windows::Gaming::Input::UINavigationReading>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.gaming.input";
+        static constexpr const char* type_name = "UINavigationReading";
     };
 }

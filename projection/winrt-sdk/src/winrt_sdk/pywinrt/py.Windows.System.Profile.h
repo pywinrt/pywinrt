@@ -97,98 +97,114 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::AnalyticsInfo>
+    struct py_type<winrt::Windows::System::Profile::AnalyticsInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "AnalyticsInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>
+    struct py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "AnalyticsVersionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::AppApplicability>
+    struct py_type<winrt::Windows::System::Profile::AppApplicability>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "AppApplicability";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::EducationSettings>
+    struct py_type<winrt::Windows::System::Profile::EducationSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "EducationSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::HardwareIdentification>
+    struct py_type<winrt::Windows::System::Profile::HardwareIdentification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "HardwareIdentification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::HardwareToken>
+    struct py_type<winrt::Windows::System::Profile::HardwareToken>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "HardwareToken";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>
+    struct py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "KnownRetailInfoProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>
+    struct py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "PlatformDiagnosticsAndUsageDataSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::RetailInfo>
+    struct py_type<winrt::Windows::System::Profile::RetailInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "RetailInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SharedModeSettings>
+    struct py_type<winrt::Windows::System::Profile::SharedModeSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SharedModeSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SmartAppControlPolicy>
+    struct py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SmartAppControlPolicy";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemIdentification>
+    struct py_type<winrt::Windows::System::Profile::SystemIdentification>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SystemIdentification";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemIdentificationInfo>
+    struct py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SystemIdentificationInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::SystemSetupInfo>
+    struct py_type<winrt::Windows::System::Profile::SystemSetupInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "SystemSetupInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>
+    struct py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "UnsupportedAppRequirement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>
+    struct py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "WindowsIntegrityPolicy";
     };
 }

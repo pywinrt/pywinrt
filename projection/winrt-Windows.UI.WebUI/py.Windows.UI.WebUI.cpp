@@ -6,75 +6,6 @@
 
 namespace py::cpp::Windows::UI::WebUI
 {
-    struct module_state
-    {
-        PyTypeObject* type_ActivatedDeferral;
-        PyTypeObject* type_ActivatedOperation;
-        PyTypeObject* type_BackgroundActivatedEventArgs;
-        PyTypeObject* type_EnteredBackgroundEventArgs;
-        PyTypeObject* type_HtmlPrintDocumentSource;
-        PyTypeObject* type_LeavingBackgroundEventArgs;
-        PyTypeObject* type_NewWebUIViewCreatedEventArgs;
-        PyTypeObject* type_SuspendingDeferral;
-        PyTypeObject* type_SuspendingEventArgs;
-        PyTypeObject* type_SuspendingOperation;
-        PyTypeObject* type_WebUIApplication;
-        PyTypeObject* type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs;
-        PyTypeObject* type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs;
-        PyTypeObject* type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs;
-        PyTypeObject* type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-        PyTypeObject* type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs;
-        PyTypeObject* type_WebUIBackgroundTaskInstance;
-        PyTypeObject* type_WebUIBackgroundTaskInstanceRuntimeClass;
-        PyTypeObject* type_WebUIBarcodeScannerPreviewActivatedEventArgs;
-        PyTypeObject* type_WebUICachedFileUpdaterActivatedEventArgs;
-        PyTypeObject* type_WebUICameraSettingsActivatedEventArgs;
-        PyTypeObject* type_WebUICommandLineActivatedEventArgs;
-        PyTypeObject* type_WebUIContactCallActivatedEventArgs;
-        PyTypeObject* type_WebUIContactMapActivatedEventArgs;
-        PyTypeObject* type_WebUIContactMessageActivatedEventArgs;
-        PyTypeObject* type_WebUIContactPanelActivatedEventArgs;
-        PyTypeObject* type_WebUIContactPickerActivatedEventArgs;
-        PyTypeObject* type_WebUIContactPostActivatedEventArgs;
-        PyTypeObject* type_WebUIContactVideoCallActivatedEventArgs;
-        PyTypeObject* type_WebUIDeviceActivatedEventArgs;
-        PyTypeObject* type_WebUIDevicePairingActivatedEventArgs;
-        PyTypeObject* type_WebUIDialReceiverActivatedEventArgs;
-        PyTypeObject* type_WebUIFileActivatedEventArgs;
-        PyTypeObject* type_WebUIFileOpenPickerActivatedEventArgs;
-        PyTypeObject* type_WebUIFileOpenPickerContinuationEventArgs;
-        PyTypeObject* type_WebUIFileSavePickerActivatedEventArgs;
-        PyTypeObject* type_WebUIFileSavePickerContinuationEventArgs;
-        PyTypeObject* type_WebUIFolderPickerContinuationEventArgs;
-        PyTypeObject* type_WebUILaunchActivatedEventArgs;
-        PyTypeObject* type_WebUILockScreenActivatedEventArgs;
-        PyTypeObject* type_WebUILockScreenCallActivatedEventArgs;
-        PyTypeObject* type_WebUILockScreenComponentActivatedEventArgs;
-        PyTypeObject* type_WebUINavigatedDeferral;
-        PyTypeObject* type_WebUINavigatedEventArgs;
-        PyTypeObject* type_WebUINavigatedOperation;
-        PyTypeObject* type_WebUIPhoneCallActivatedEventArgs;
-        PyTypeObject* type_WebUIPrint3DWorkflowActivatedEventArgs;
-        PyTypeObject* type_WebUIPrintTaskSettingsActivatedEventArgs;
-        PyTypeObject* type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs;
-        PyTypeObject* type_WebUIProtocolActivatedEventArgs;
-        PyTypeObject* type_WebUIProtocolForResultsActivatedEventArgs;
-        PyTypeObject* type_WebUIRestrictedLaunchActivatedEventArgs;
-        PyTypeObject* type_WebUISearchActivatedEventArgs;
-        PyTypeObject* type_WebUIShareTargetActivatedEventArgs;
-        PyTypeObject* type_WebUIStartupTaskActivatedEventArgs;
-        PyTypeObject* type_WebUIToastNotificationActivatedEventArgs;
-        PyTypeObject* type_WebUIUserDataAccountProviderActivatedEventArgs;
-        PyTypeObject* type_WebUIView;
-        PyTypeObject* type_WebUIVoiceCommandActivatedEventArgs;
-        PyTypeObject* type_WebUIWalletActionActivatedEventArgs;
-        PyTypeObject* type_WebUIWebAccountProviderActivatedEventArgs;
-        PyTypeObject* type_WebUIWebAuthenticationBrokerContinuationEventArgs;
-        PyTypeObject* type_IActivatedEventArgsDeferral;
-        PyTypeObject* type_IWebUIBackgroundTaskInstance;
-        PyTypeObject* type_IWebUINavigatedEventArgs;
-    };
-
     // ----- ActivatedDeferral class --------------------
     static constexpr const char* const type_name_ActivatedDeferral = "ActivatedDeferral";
 
@@ -14498,172 +14429,15 @@ namespace py::cpp::Windows::UI::WebUI
     PyDoc_STRVAR(module_doc, "Windows::UI::WebUI");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ActivatedDeferral);
-        Py_VISIT(state->type_ActivatedOperation);
-        Py_VISIT(state->type_BackgroundActivatedEventArgs);
-        Py_VISIT(state->type_EnteredBackgroundEventArgs);
-        Py_VISIT(state->type_HtmlPrintDocumentSource);
-        Py_VISIT(state->type_LeavingBackgroundEventArgs);
-        Py_VISIT(state->type_NewWebUIViewCreatedEventArgs);
-        Py_VISIT(state->type_SuspendingDeferral);
-        Py_VISIT(state->type_SuspendingEventArgs);
-        Py_VISIT(state->type_SuspendingOperation);
-        Py_VISIT(state->type_WebUIApplication);
-        Py_VISIT(state->type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_VISIT(state->type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_VISIT(state->type_WebUIBackgroundTaskInstance);
-        Py_VISIT(state->type_WebUIBackgroundTaskInstanceRuntimeClass);
-        Py_VISIT(state->type_WebUIBarcodeScannerPreviewActivatedEventArgs);
-        Py_VISIT(state->type_WebUICachedFileUpdaterActivatedEventArgs);
-        Py_VISIT(state->type_WebUICameraSettingsActivatedEventArgs);
-        Py_VISIT(state->type_WebUICommandLineActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactCallActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactMapActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactMessageActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactPanelActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactPickerActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactPostActivatedEventArgs);
-        Py_VISIT(state->type_WebUIContactVideoCallActivatedEventArgs);
-        Py_VISIT(state->type_WebUIDeviceActivatedEventArgs);
-        Py_VISIT(state->type_WebUIDevicePairingActivatedEventArgs);
-        Py_VISIT(state->type_WebUIDialReceiverActivatedEventArgs);
-        Py_VISIT(state->type_WebUIFileActivatedEventArgs);
-        Py_VISIT(state->type_WebUIFileOpenPickerActivatedEventArgs);
-        Py_VISIT(state->type_WebUIFileOpenPickerContinuationEventArgs);
-        Py_VISIT(state->type_WebUIFileSavePickerActivatedEventArgs);
-        Py_VISIT(state->type_WebUIFileSavePickerContinuationEventArgs);
-        Py_VISIT(state->type_WebUIFolderPickerContinuationEventArgs);
-        Py_VISIT(state->type_WebUILaunchActivatedEventArgs);
-        Py_VISIT(state->type_WebUILockScreenActivatedEventArgs);
-        Py_VISIT(state->type_WebUILockScreenCallActivatedEventArgs);
-        Py_VISIT(state->type_WebUILockScreenComponentActivatedEventArgs);
-        Py_VISIT(state->type_WebUINavigatedDeferral);
-        Py_VISIT(state->type_WebUINavigatedEventArgs);
-        Py_VISIT(state->type_WebUINavigatedOperation);
-        Py_VISIT(state->type_WebUIPhoneCallActivatedEventArgs);
-        Py_VISIT(state->type_WebUIPrint3DWorkflowActivatedEventArgs);
-        Py_VISIT(state->type_WebUIPrintTaskSettingsActivatedEventArgs);
-        Py_VISIT(state->type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs);
-        Py_VISIT(state->type_WebUIProtocolActivatedEventArgs);
-        Py_VISIT(state->type_WebUIProtocolForResultsActivatedEventArgs);
-        Py_VISIT(state->type_WebUIRestrictedLaunchActivatedEventArgs);
-        Py_VISIT(state->type_WebUISearchActivatedEventArgs);
-        Py_VISIT(state->type_WebUIShareTargetActivatedEventArgs);
-        Py_VISIT(state->type_WebUIStartupTaskActivatedEventArgs);
-        Py_VISIT(state->type_WebUIToastNotificationActivatedEventArgs);
-        Py_VISIT(state->type_WebUIUserDataAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_WebUIView);
-        Py_VISIT(state->type_WebUIVoiceCommandActivatedEventArgs);
-        Py_VISIT(state->type_WebUIWalletActionActivatedEventArgs);
-        Py_VISIT(state->type_WebUIWebAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_WebUIWebAuthenticationBrokerContinuationEventArgs);
-        Py_VISIT(state->type_IActivatedEventArgsDeferral);
-        Py_VISIT(state->type_IWebUIBackgroundTaskInstance);
-        Py_VISIT(state->type_IWebUINavigatedEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ActivatedDeferral);
-        Py_CLEAR(state->type_ActivatedOperation);
-        Py_CLEAR(state->type_BackgroundActivatedEventArgs);
-        Py_CLEAR(state->type_EnteredBackgroundEventArgs);
-        Py_CLEAR(state->type_HtmlPrintDocumentSource);
-        Py_CLEAR(state->type_LeavingBackgroundEventArgs);
-        Py_CLEAR(state->type_NewWebUIViewCreatedEventArgs);
-        Py_CLEAR(state->type_SuspendingDeferral);
-        Py_CLEAR(state->type_SuspendingEventArgs);
-        Py_CLEAR(state->type_SuspendingOperation);
-        Py_CLEAR(state->type_WebUIApplication);
-        Py_CLEAR(state->type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIBackgroundTaskInstance);
-        Py_CLEAR(state->type_WebUIBackgroundTaskInstanceRuntimeClass);
-        Py_CLEAR(state->type_WebUIBarcodeScannerPreviewActivatedEventArgs);
-        Py_CLEAR(state->type_WebUICachedFileUpdaterActivatedEventArgs);
-        Py_CLEAR(state->type_WebUICameraSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_WebUICommandLineActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactCallActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactMapActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactMessageActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactPanelActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactPickerActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactPostActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIContactVideoCallActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIDeviceActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIDevicePairingActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIDialReceiverActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIFileActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIFileOpenPickerActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIFileOpenPickerContinuationEventArgs);
-        Py_CLEAR(state->type_WebUIFileSavePickerActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIFileSavePickerContinuationEventArgs);
-        Py_CLEAR(state->type_WebUIFolderPickerContinuationEventArgs);
-        Py_CLEAR(state->type_WebUILaunchActivatedEventArgs);
-        Py_CLEAR(state->type_WebUILockScreenActivatedEventArgs);
-        Py_CLEAR(state->type_WebUILockScreenCallActivatedEventArgs);
-        Py_CLEAR(state->type_WebUILockScreenComponentActivatedEventArgs);
-        Py_CLEAR(state->type_WebUINavigatedDeferral);
-        Py_CLEAR(state->type_WebUINavigatedEventArgs);
-        Py_CLEAR(state->type_WebUINavigatedOperation);
-        Py_CLEAR(state->type_WebUIPhoneCallActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIPrint3DWorkflowActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIPrintTaskSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIProtocolActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIProtocolForResultsActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIRestrictedLaunchActivatedEventArgs);
-        Py_CLEAR(state->type_WebUISearchActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIShareTargetActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIStartupTaskActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIToastNotificationActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIUserDataAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIView);
-        Py_CLEAR(state->type_WebUIVoiceCommandActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIWalletActionActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIWebAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_WebUIWebAuthenticationBrokerContinuationEventArgs);
-        Py_CLEAR(state->type_IActivatedEventArgsDeferral);
-        Py_CLEAR(state->type_IWebUIBackgroundTaskInstance);
-        Py_CLEAR(state->type_IWebUINavigatedEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_WebUI",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::WebUI
@@ -14679,7 +14453,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -14692,101 +14466,146 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ActivatedDeferral = py::register_python_type(module.get(), type_name_ActivatedDeferral, &type_spec_ActivatedDeferral, object_bases.get(), nullptr);
-    if (!state->type_ActivatedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivatedDeferral, &type_spec_ActivatedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivatedDeferral, &type_spec_ActivatedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivatedOperation = py::register_python_type(module.get(), type_name_ActivatedOperation, &type_spec_ActivatedOperation, object_bases.get(), nullptr);
-    if (!state->type_ActivatedOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivatedOperation, &type_spec_ActivatedOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivatedOperation, &type_spec_ActivatedOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundActivatedEventArgs = py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackgroundActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EnteredBackgroundEventArgs = py::register_python_type(module.get(), type_name_EnteredBackgroundEventArgs, &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr);
-    if (!state->type_EnteredBackgroundEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EnteredBackgroundEventArgs, &type_spec_EnteredBackgroundEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EnteredBackgroundEventArgs, &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HtmlPrintDocumentSource = py::register_python_type(module.get(), type_name_HtmlPrintDocumentSource, &type_spec_HtmlPrintDocumentSource, object_bases.get(), nullptr);
-    if (!state->type_HtmlPrintDocumentSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HtmlPrintDocumentSource, &type_spec_HtmlPrintDocumentSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HtmlPrintDocumentSource, &type_spec_HtmlPrintDocumentSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LeavingBackgroundEventArgs = py::register_python_type(module.get(), type_name_LeavingBackgroundEventArgs, &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LeavingBackgroundEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LeavingBackgroundEventArgs, &type_spec_LeavingBackgroundEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LeavingBackgroundEventArgs, &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NewWebUIViewCreatedEventArgs = py::register_python_type(module.get(), type_name_NewWebUIViewCreatedEventArgs, &type_spec_NewWebUIViewCreatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_NewWebUIViewCreatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NewWebUIViewCreatedEventArgs, &type_spec_NewWebUIViewCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NewWebUIViewCreatedEventArgs, &type_spec_NewWebUIViewCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SuspendingDeferral = py::register_python_type(module.get(), type_name_SuspendingDeferral, &type_spec_SuspendingDeferral, object_bases.get(), nullptr);
-    if (!state->type_SuspendingDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SuspendingDeferral, &type_spec_SuspendingDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SuspendingDeferral, &type_spec_SuspendingDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SuspendingEventArgs = py::register_python_type(module.get(), type_name_SuspendingEventArgs, &type_spec_SuspendingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SuspendingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SuspendingEventArgs, &type_spec_SuspendingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SuspendingEventArgs, &type_spec_SuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SuspendingOperation = py::register_python_type(module.get(), type_name_SuspendingOperation, &type_spec_SuspendingOperation, object_bases.get(), nullptr);
-    if (!state->type_SuspendingOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SuspendingOperation, &type_spec_SuspendingOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SuspendingOperation, &type_spec_SuspendingOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIApplication = py::register_python_type(module.get(), type_name_WebUIApplication, &type_spec_WebUIApplication, object_bases.get(), nullptr);
-    if (!state->type_WebUIApplication)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIApplication, &type_spec_WebUIApplication, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIApplication, &type_spec_WebUIApplication, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -14797,1795 +14616,447 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI(void) noexcept
         return nullptr;
     }
 
-    state->type_WebUIBackgroundTaskInstance = py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstance, &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Meta.get()));
-    if (!state->type_WebUIBackgroundTaskInstance)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstance, &type_spec_WebUIBackgroundTaskInstance, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstance, &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIBackgroundTaskInstanceRuntimeClass = py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstanceRuntimeClass, &type_spec_WebUIBackgroundTaskInstanceRuntimeClass, object_bases.get(), nullptr);
-    if (!state->type_WebUIBackgroundTaskInstanceRuntimeClass)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstanceRuntimeClass, &type_spec_WebUIBackgroundTaskInstanceRuntimeClass, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIBackgroundTaskInstanceRuntimeClass, &type_spec_WebUIBackgroundTaskInstanceRuntimeClass, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIBarcodeScannerPreviewActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIBarcodeScannerPreviewActivatedEventArgs, &type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIBarcodeScannerPreviewActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIBarcodeScannerPreviewActivatedEventArgs, &type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIBarcodeScannerPreviewActivatedEventArgs, &type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICachedFileUpdaterActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUICachedFileUpdaterActivatedEventArgs, &type_spec_WebUICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUICachedFileUpdaterActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICachedFileUpdaterActivatedEventArgs, &type_spec_WebUICachedFileUpdaterActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICachedFileUpdaterActivatedEventArgs, &type_spec_WebUICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICameraSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUICameraSettingsActivatedEventArgs, &type_spec_WebUICameraSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUICameraSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICameraSettingsActivatedEventArgs, &type_spec_WebUICameraSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICameraSettingsActivatedEventArgs, &type_spec_WebUICameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUICommandLineActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUICommandLineActivatedEventArgs, &type_spec_WebUICommandLineActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUICommandLineActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUICommandLineActivatedEventArgs, &type_spec_WebUICommandLineActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUICommandLineActivatedEventArgs, &type_spec_WebUICommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactCallActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactCallActivatedEventArgs, &type_spec_WebUIContactCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactCallActivatedEventArgs, &type_spec_WebUIContactCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactCallActivatedEventArgs, &type_spec_WebUIContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactMapActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactMapActivatedEventArgs, &type_spec_WebUIContactMapActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactMapActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactMapActivatedEventArgs, &type_spec_WebUIContactMapActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactMapActivatedEventArgs, &type_spec_WebUIContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactMessageActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactMessageActivatedEventArgs, &type_spec_WebUIContactMessageActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactMessageActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactMessageActivatedEventArgs, &type_spec_WebUIContactMessageActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactMessageActivatedEventArgs, &type_spec_WebUIContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactPanelActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactPanelActivatedEventArgs, &type_spec_WebUIContactPanelActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactPanelActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactPanelActivatedEventArgs, &type_spec_WebUIContactPanelActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactPanelActivatedEventArgs, &type_spec_WebUIContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactPickerActivatedEventArgs, &type_spec_WebUIContactPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactPickerActivatedEventArgs, &type_spec_WebUIContactPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactPickerActivatedEventArgs, &type_spec_WebUIContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactPostActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactPostActivatedEventArgs, &type_spec_WebUIContactPostActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactPostActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactPostActivatedEventArgs, &type_spec_WebUIContactPostActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactPostActivatedEventArgs, &type_spec_WebUIContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIContactVideoCallActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIContactVideoCallActivatedEventArgs, &type_spec_WebUIContactVideoCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIContactVideoCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIContactVideoCallActivatedEventArgs, &type_spec_WebUIContactVideoCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIContactVideoCallActivatedEventArgs, &type_spec_WebUIContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIDeviceActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIDeviceActivatedEventArgs, &type_spec_WebUIDeviceActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIDeviceActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIDeviceActivatedEventArgs, &type_spec_WebUIDeviceActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIDeviceActivatedEventArgs, &type_spec_WebUIDeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIDevicePairingActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIDevicePairingActivatedEventArgs, &type_spec_WebUIDevicePairingActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIDevicePairingActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIDevicePairingActivatedEventArgs, &type_spec_WebUIDevicePairingActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIDevicePairingActivatedEventArgs, &type_spec_WebUIDevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIDialReceiverActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIDialReceiverActivatedEventArgs, &type_spec_WebUIDialReceiverActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIDialReceiverActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIDialReceiverActivatedEventArgs, &type_spec_WebUIDialReceiverActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIDialReceiverActivatedEventArgs, &type_spec_WebUIDialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFileActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIFileActivatedEventArgs, &type_spec_WebUIFileActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFileActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFileActivatedEventArgs, &type_spec_WebUIFileActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFileActivatedEventArgs, &type_spec_WebUIFileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFileOpenPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIFileOpenPickerActivatedEventArgs, &type_spec_WebUIFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFileOpenPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFileOpenPickerActivatedEventArgs, &type_spec_WebUIFileOpenPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFileOpenPickerActivatedEventArgs, &type_spec_WebUIFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFileOpenPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_WebUIFileOpenPickerContinuationEventArgs, &type_spec_WebUIFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFileOpenPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFileOpenPickerContinuationEventArgs, &type_spec_WebUIFileOpenPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFileOpenPickerContinuationEventArgs, &type_spec_WebUIFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFileSavePickerActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIFileSavePickerActivatedEventArgs, &type_spec_WebUIFileSavePickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFileSavePickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFileSavePickerActivatedEventArgs, &type_spec_WebUIFileSavePickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFileSavePickerActivatedEventArgs, &type_spec_WebUIFileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFileSavePickerContinuationEventArgs = py::register_python_type(module.get(), type_name_WebUIFileSavePickerContinuationEventArgs, &type_spec_WebUIFileSavePickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFileSavePickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFileSavePickerContinuationEventArgs, &type_spec_WebUIFileSavePickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFileSavePickerContinuationEventArgs, &type_spec_WebUIFileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIFolderPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_WebUIFolderPickerContinuationEventArgs, &type_spec_WebUIFolderPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIFolderPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIFolderPickerContinuationEventArgs, &type_spec_WebUIFolderPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIFolderPickerContinuationEventArgs, &type_spec_WebUIFolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUILaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUILaunchActivatedEventArgs, &type_spec_WebUILaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUILaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUILaunchActivatedEventArgs, &type_spec_WebUILaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUILaunchActivatedEventArgs, &type_spec_WebUILaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUILockScreenActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUILockScreenActivatedEventArgs, &type_spec_WebUILockScreenActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUILockScreenActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenActivatedEventArgs, &type_spec_WebUILockScreenActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenActivatedEventArgs, &type_spec_WebUILockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUILockScreenCallActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUILockScreenCallActivatedEventArgs, &type_spec_WebUILockScreenCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUILockScreenCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenCallActivatedEventArgs, &type_spec_WebUILockScreenCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenCallActivatedEventArgs, &type_spec_WebUILockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUILockScreenComponentActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUILockScreenComponentActivatedEventArgs, &type_spec_WebUILockScreenComponentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUILockScreenComponentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenComponentActivatedEventArgs, &type_spec_WebUILockScreenComponentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUILockScreenComponentActivatedEventArgs, &type_spec_WebUILockScreenComponentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUINavigatedDeferral = py::register_python_type(module.get(), type_name_WebUINavigatedDeferral, &type_spec_WebUINavigatedDeferral, object_bases.get(), nullptr);
-    if (!state->type_WebUINavigatedDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedDeferral, &type_spec_WebUINavigatedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedDeferral, &type_spec_WebUINavigatedDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUINavigatedEventArgs = py::register_python_type(module.get(), type_name_WebUINavigatedEventArgs, &type_spec_WebUINavigatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUINavigatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedEventArgs, &type_spec_WebUINavigatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedEventArgs, &type_spec_WebUINavigatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUINavigatedOperation = py::register_python_type(module.get(), type_name_WebUINavigatedOperation, &type_spec_WebUINavigatedOperation, object_bases.get(), nullptr);
-    if (!state->type_WebUINavigatedOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedOperation, &type_spec_WebUINavigatedOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUINavigatedOperation, &type_spec_WebUINavigatedOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIPhoneCallActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIPhoneCallActivatedEventArgs, &type_spec_WebUIPhoneCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIPhoneCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIPhoneCallActivatedEventArgs, &type_spec_WebUIPhoneCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIPhoneCallActivatedEventArgs, &type_spec_WebUIPhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIPrint3DWorkflowActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIPrint3DWorkflowActivatedEventArgs, &type_spec_WebUIPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIPrint3DWorkflowActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIPrint3DWorkflowActivatedEventArgs, &type_spec_WebUIPrint3DWorkflowActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIPrint3DWorkflowActivatedEventArgs, &type_spec_WebUIPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIPrintTaskSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIPrintTaskSettingsActivatedEventArgs, &type_spec_WebUIPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIPrintTaskSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIPrintTaskSettingsActivatedEventArgs, &type_spec_WebUIPrintTaskSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIPrintTaskSettingsActivatedEventArgs, &type_spec_WebUIPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, &type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, &type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, &type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIProtocolActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIProtocolActivatedEventArgs, &type_spec_WebUIProtocolActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIProtocolActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIProtocolActivatedEventArgs, &type_spec_WebUIProtocolActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIProtocolActivatedEventArgs, &type_spec_WebUIProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIProtocolForResultsActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIProtocolForResultsActivatedEventArgs, &type_spec_WebUIProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIProtocolForResultsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIProtocolForResultsActivatedEventArgs, &type_spec_WebUIProtocolForResultsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIProtocolForResultsActivatedEventArgs, &type_spec_WebUIProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIRestrictedLaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIRestrictedLaunchActivatedEventArgs, &type_spec_WebUIRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIRestrictedLaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIRestrictedLaunchActivatedEventArgs, &type_spec_WebUIRestrictedLaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIRestrictedLaunchActivatedEventArgs, &type_spec_WebUIRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUISearchActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUISearchActivatedEventArgs, &type_spec_WebUISearchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUISearchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUISearchActivatedEventArgs, &type_spec_WebUISearchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUISearchActivatedEventArgs, &type_spec_WebUISearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIShareTargetActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIShareTargetActivatedEventArgs, &type_spec_WebUIShareTargetActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIShareTargetActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIShareTargetActivatedEventArgs, &type_spec_WebUIShareTargetActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIShareTargetActivatedEventArgs, &type_spec_WebUIShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIStartupTaskActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIStartupTaskActivatedEventArgs, &type_spec_WebUIStartupTaskActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIStartupTaskActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIStartupTaskActivatedEventArgs, &type_spec_WebUIStartupTaskActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIStartupTaskActivatedEventArgs, &type_spec_WebUIStartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIToastNotificationActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIToastNotificationActivatedEventArgs, &type_spec_WebUIToastNotificationActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIToastNotificationActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIToastNotificationActivatedEventArgs, &type_spec_WebUIToastNotificationActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIToastNotificationActivatedEventArgs, &type_spec_WebUIToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIUserDataAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIUserDataAccountProviderActivatedEventArgs, &type_spec_WebUIUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIUserDataAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIUserDataAccountProviderActivatedEventArgs, &type_spec_WebUIUserDataAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIUserDataAccountProviderActivatedEventArgs, &type_spec_WebUIUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIView = py::register_python_type(module.get(), type_name_WebUIView, &type_spec_WebUIView, object_bases.get(), nullptr);
-    if (!state->type_WebUIView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIView, &type_spec_WebUIView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIView, &type_spec_WebUIView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIVoiceCommandActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIVoiceCommandActivatedEventArgs, &type_spec_WebUIVoiceCommandActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIVoiceCommandActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIVoiceCommandActivatedEventArgs, &type_spec_WebUIVoiceCommandActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIVoiceCommandActivatedEventArgs, &type_spec_WebUIVoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIWalletActionActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIWalletActionActivatedEventArgs, &type_spec_WebUIWalletActionActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIWalletActionActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIWalletActionActivatedEventArgs, &type_spec_WebUIWalletActionActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIWalletActionActivatedEventArgs, &type_spec_WebUIWalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIWebAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_WebUIWebAccountProviderActivatedEventArgs, &type_spec_WebUIWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIWebAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIWebAccountProviderActivatedEventArgs, &type_spec_WebUIWebAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIWebAccountProviderActivatedEventArgs, &type_spec_WebUIWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebUIWebAuthenticationBrokerContinuationEventArgs = py::register_python_type(module.get(), type_name_WebUIWebAuthenticationBrokerContinuationEventArgs, &type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebUIWebAuthenticationBrokerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebUIWebAuthenticationBrokerContinuationEventArgs, &type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebUIWebAuthenticationBrokerContinuationEventArgs, &type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IActivatedEventArgsDeferral = py::register_python_type(module.get(), type_name_IActivatedEventArgsDeferral, &type_spec_IActivatedEventArgsDeferral, object_bases.get(), nullptr);
-    if (!state->type_IActivatedEventArgsDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgsDeferral, &type_spec_IActivatedEventArgsDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgsDeferral, &type_spec_IActivatedEventArgsDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebUIBackgroundTaskInstance = py::register_python_type(module.get(), type_name_IWebUIBackgroundTaskInstance, &type_spec_IWebUIBackgroundTaskInstance, object_bases.get(), nullptr);
-    if (!state->type_IWebUIBackgroundTaskInstance)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebUIBackgroundTaskInstance, &type_spec_IWebUIBackgroundTaskInstance, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebUIBackgroundTaskInstance, &type_spec_IWebUIBackgroundTaskInstance, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebUINavigatedEventArgs = py::register_python_type(module.get(), type_name_IWebUINavigatedEventArgs, &type_spec_IWebUINavigatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IWebUINavigatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebUINavigatedEventArgs, &type_spec_IWebUINavigatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebUINavigatedEventArgs, &type_spec_IWebUINavigatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::ActivatedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivatedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::ActivatedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::ActivatedOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivatedOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::ActivatedOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnteredBackgroundEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HtmlPrintDocumentSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::HtmlPrintDocumentSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LeavingBackgroundEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NewWebUIViewCreatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::SuspendingDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SuspendingDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::SuspendingDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SuspendingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::SuspendingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::SuspendingOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SuspendingOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::SuspendingOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIApplication>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIApplication;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIApplication is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIBackgroundTaskInstance;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIBackgroundTaskInstanceRuntimeClass;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIBarcodeScannerPreviewActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICachedFileUpdaterActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICameraSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUICommandLineActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactMapActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactMessageActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactPanelActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactPostActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIContactVideoCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIDeviceActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIDevicePairingActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIDialReceiverActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFileActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFileOpenPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFileOpenPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFileSavePickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFileSavePickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIFolderPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUILaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUILockScreenActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUILockScreenCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUILockScreenComponentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUINavigatedDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUINavigatedDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUINavigatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUINavigatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUINavigatedOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUINavigatedOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIPhoneCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIPrint3DWorkflowActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIPrintTaskSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIPrintWorkflowForegroundTaskActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIProtocolActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIProtocolForResultsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIRestrictedLaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUISearchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIShareTargetActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIStartupTaskActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIToastNotificationActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIUserDataAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIVoiceCommandActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIWalletActionActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIWebAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebUIWebAuthenticationBrokerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IActivatedEventArgsDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebUIBackgroundTaskInstance;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::WebUI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::WebUI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebUINavigatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -34,32 +34,37 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.media3d";
+        static constexpr const char* type_name = "CompositeTransform3D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.media3d";
+        static constexpr const char* type_name = "Matrix3DHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.media3d";
+        static constexpr const char* type_name = "PerspectiveTransform3D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.media3d";
+        static constexpr const char* type_name = "Transform3D";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.media3d";
+        static constexpr const char* type_name = "Matrix3D";
     };
 }

@@ -6,31 +6,6 @@
 
 namespace py::cpp::Windows::Phone::Notification::Management
 {
-    struct module_state
-    {
-        PyTypeObject* type_AccessoryManager;
-        PyTypeObject* type_AlarmNotificationTriggerDetails;
-        PyTypeObject* type_AppNotificationInfo;
-        PyTypeObject* type_BinaryId;
-        PyTypeObject* type_CalendarChangedNotificationTriggerDetails;
-        PyTypeObject* type_CortanaTileNotificationTriggerDetails;
-        PyTypeObject* type_EmailAccountInfo;
-        PyTypeObject* type_EmailFolderInfo;
-        PyTypeObject* type_EmailNotificationTriggerDetails;
-        PyTypeObject* type_EmailReadNotificationTriggerDetails;
-        PyTypeObject* type_MediaControlsTriggerDetails;
-        PyTypeObject* type_MediaMetadata;
-        PyTypeObject* type_PhoneCallDetails;
-        PyTypeObject* type_PhoneLineDetails;
-        PyTypeObject* type_PhoneNotificationTriggerDetails;
-        PyTypeObject* type_ReminderNotificationTriggerDetails;
-        PyTypeObject* type_SpeedDialEntry;
-        PyTypeObject* type_TextResponse;
-        PyTypeObject* type_ToastNotificationTriggerDetails;
-        PyTypeObject* type_VolumeInfo;
-        PyTypeObject* type_IAccessoryNotificationTriggerDetails;
-    };
-
     // ----- AccessoryManager class --------------------
     static constexpr const char* const type_name_AccessoryManager = "AccessoryManager";
 
@@ -6506,84 +6481,15 @@ namespace py::cpp::Windows::Phone::Notification::Management
     PyDoc_STRVAR(module_doc, "Windows::Phone::Notification::Management");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AccessoryManager);
-        Py_VISIT(state->type_AlarmNotificationTriggerDetails);
-        Py_VISIT(state->type_AppNotificationInfo);
-        Py_VISIT(state->type_BinaryId);
-        Py_VISIT(state->type_CalendarChangedNotificationTriggerDetails);
-        Py_VISIT(state->type_CortanaTileNotificationTriggerDetails);
-        Py_VISIT(state->type_EmailAccountInfo);
-        Py_VISIT(state->type_EmailFolderInfo);
-        Py_VISIT(state->type_EmailNotificationTriggerDetails);
-        Py_VISIT(state->type_EmailReadNotificationTriggerDetails);
-        Py_VISIT(state->type_MediaControlsTriggerDetails);
-        Py_VISIT(state->type_MediaMetadata);
-        Py_VISIT(state->type_PhoneCallDetails);
-        Py_VISIT(state->type_PhoneLineDetails);
-        Py_VISIT(state->type_PhoneNotificationTriggerDetails);
-        Py_VISIT(state->type_ReminderNotificationTriggerDetails);
-        Py_VISIT(state->type_SpeedDialEntry);
-        Py_VISIT(state->type_TextResponse);
-        Py_VISIT(state->type_ToastNotificationTriggerDetails);
-        Py_VISIT(state->type_VolumeInfo);
-        Py_VISIT(state->type_IAccessoryNotificationTriggerDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AccessoryManager);
-        Py_CLEAR(state->type_AlarmNotificationTriggerDetails);
-        Py_CLEAR(state->type_AppNotificationInfo);
-        Py_CLEAR(state->type_BinaryId);
-        Py_CLEAR(state->type_CalendarChangedNotificationTriggerDetails);
-        Py_CLEAR(state->type_CortanaTileNotificationTriggerDetails);
-        Py_CLEAR(state->type_EmailAccountInfo);
-        Py_CLEAR(state->type_EmailFolderInfo);
-        Py_CLEAR(state->type_EmailNotificationTriggerDetails);
-        Py_CLEAR(state->type_EmailReadNotificationTriggerDetails);
-        Py_CLEAR(state->type_MediaControlsTriggerDetails);
-        Py_CLEAR(state->type_MediaMetadata);
-        Py_CLEAR(state->type_PhoneCallDetails);
-        Py_CLEAR(state->type_PhoneLineDetails);
-        Py_CLEAR(state->type_PhoneNotificationTriggerDetails);
-        Py_CLEAR(state->type_ReminderNotificationTriggerDetails);
-        Py_CLEAR(state->type_SpeedDialEntry);
-        Py_CLEAR(state->type_TextResponse);
-        Py_CLEAR(state->type_ToastNotificationTriggerDetails);
-        Py_CLEAR(state->type_VolumeInfo);
-        Py_CLEAR(state->type_IAccessoryNotificationTriggerDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Phone_Notification_Management",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Phone::Notification::Management
@@ -6599,7 +6505,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Notification_Management(void) noexcep
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6612,624 +6518,201 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Notification_Management(void) noexcep
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AccessoryManager_Meta{PyType_FromSpec(&type_spec_AccessoryManager_Meta)};
     if (!type_AccessoryManager_Meta)
     {
         return nullptr;
     }
 
-    state->type_AccessoryManager = py::register_python_type(module.get(), type_name_AccessoryManager, &type_spec_AccessoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessoryManager_Meta.get()));
-    if (!state->type_AccessoryManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessoryManager, &type_spec_AccessoryManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessoryManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessoryManager, &type_spec_AccessoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessoryManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AlarmNotificationTriggerDetails = py::register_python_type(module.get(), type_name_AlarmNotificationTriggerDetails, &type_spec_AlarmNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_AlarmNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AlarmNotificationTriggerDetails, &type_spec_AlarmNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AlarmNotificationTriggerDetails, &type_spec_AlarmNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppNotificationInfo = py::register_python_type(module.get(), type_name_AppNotificationInfo, &type_spec_AppNotificationInfo, object_bases.get(), nullptr);
-    if (!state->type_AppNotificationInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppNotificationInfo, &type_spec_AppNotificationInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppNotificationInfo, &type_spec_AppNotificationInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BinaryId = py::register_python_type(module.get(), type_name_BinaryId, &type_spec_BinaryId, object_bases.get(), nullptr);
-    if (!state->type_BinaryId)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BinaryId, &type_spec_BinaryId, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BinaryId, &type_spec_BinaryId, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CalendarChangedNotificationTriggerDetails = py::register_python_type(module.get(), type_name_CalendarChangedNotificationTriggerDetails, &type_spec_CalendarChangedNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_CalendarChangedNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CalendarChangedNotificationTriggerDetails, &type_spec_CalendarChangedNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CalendarChangedNotificationTriggerDetails, &type_spec_CalendarChangedNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CortanaTileNotificationTriggerDetails = py::register_python_type(module.get(), type_name_CortanaTileNotificationTriggerDetails, &type_spec_CortanaTileNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_CortanaTileNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CortanaTileNotificationTriggerDetails, &type_spec_CortanaTileNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CortanaTileNotificationTriggerDetails, &type_spec_CortanaTileNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailAccountInfo = py::register_python_type(module.get(), type_name_EmailAccountInfo, &type_spec_EmailAccountInfo, object_bases.get(), nullptr);
-    if (!state->type_EmailAccountInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailAccountInfo, &type_spec_EmailAccountInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailAccountInfo, &type_spec_EmailAccountInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailFolderInfo = py::register_python_type(module.get(), type_name_EmailFolderInfo, &type_spec_EmailFolderInfo, object_bases.get(), nullptr);
-    if (!state->type_EmailFolderInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailFolderInfo, &type_spec_EmailFolderInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailFolderInfo, &type_spec_EmailFolderInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailNotificationTriggerDetails = py::register_python_type(module.get(), type_name_EmailNotificationTriggerDetails, &type_spec_EmailNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_EmailNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailNotificationTriggerDetails, &type_spec_EmailNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailNotificationTriggerDetails, &type_spec_EmailNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailReadNotificationTriggerDetails = py::register_python_type(module.get(), type_name_EmailReadNotificationTriggerDetails, &type_spec_EmailReadNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_EmailReadNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailReadNotificationTriggerDetails, &type_spec_EmailReadNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailReadNotificationTriggerDetails, &type_spec_EmailReadNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaControlsTriggerDetails = py::register_python_type(module.get(), type_name_MediaControlsTriggerDetails, &type_spec_MediaControlsTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_MediaControlsTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaControlsTriggerDetails, &type_spec_MediaControlsTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaControlsTriggerDetails, &type_spec_MediaControlsTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaMetadata = py::register_python_type(module.get(), type_name_MediaMetadata, &type_spec_MediaMetadata, object_bases.get(), nullptr);
-    if (!state->type_MediaMetadata)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaMetadata, &type_spec_MediaMetadata, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaMetadata, &type_spec_MediaMetadata, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallDetails = py::register_python_type(module.get(), type_name_PhoneCallDetails, &type_spec_PhoneCallDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallDetails, &type_spec_PhoneCallDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallDetails, &type_spec_PhoneCallDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneLineDetails = py::register_python_type(module.get(), type_name_PhoneLineDetails, &type_spec_PhoneLineDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneLineDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneLineDetails, &type_spec_PhoneLineDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneLineDetails, &type_spec_PhoneLineDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneNotificationTriggerDetails = py::register_python_type(module.get(), type_name_PhoneNotificationTriggerDetails, &type_spec_PhoneNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_PhoneNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneNotificationTriggerDetails, &type_spec_PhoneNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneNotificationTriggerDetails, &type_spec_PhoneNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReminderNotificationTriggerDetails = py::register_python_type(module.get(), type_name_ReminderNotificationTriggerDetails, &type_spec_ReminderNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ReminderNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReminderNotificationTriggerDetails, &type_spec_ReminderNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReminderNotificationTriggerDetails, &type_spec_ReminderNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpeedDialEntry = py::register_python_type(module.get(), type_name_SpeedDialEntry, &type_spec_SpeedDialEntry, object_bases.get(), nullptr);
-    if (!state->type_SpeedDialEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpeedDialEntry, &type_spec_SpeedDialEntry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpeedDialEntry, &type_spec_SpeedDialEntry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextResponse = py::register_python_type(module.get(), type_name_TextResponse, &type_spec_TextResponse, object_bases.get(), nullptr);
-    if (!state->type_TextResponse)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextResponse, &type_spec_TextResponse, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextResponse, &type_spec_TextResponse, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationTriggerDetails = py::register_python_type(module.get(), type_name_ToastNotificationTriggerDetails, &type_spec_ToastNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationTriggerDetails, &type_spec_ToastNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationTriggerDetails, &type_spec_ToastNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VolumeInfo = py::register_python_type(module.get(), type_name_VolumeInfo, &type_spec_VolumeInfo, object_bases.get(), nullptr);
-    if (!state->type_VolumeInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VolumeInfo, &type_spec_VolumeInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VolumeInfo, &type_spec_VolumeInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAccessoryNotificationTriggerDetails = py::register_python_type(module.get(), type_name_IAccessoryNotificationTriggerDetails, &type_spec_IAccessoryNotificationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_IAccessoryNotificationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAccessoryNotificationTriggerDetails, &type_spec_IAccessoryNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAccessoryNotificationTriggerDetails, &type_spec_IAccessoryNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::AccessoryManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessoryManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::AccessoryManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AlarmNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppNotificationInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::AppNotificationInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::BinaryId>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BinaryId;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::BinaryId is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CalendarChangedNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CortanaTileNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailAccountInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::EmailAccountInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailFolderInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::EmailFolderInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailReadNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaControlsTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::MediaMetadata>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaMetadata;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::MediaMetadata is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::PhoneCallDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneLineDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::PhoneLineDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReminderNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpeedDialEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::SpeedDialEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::TextResponse>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextResponse;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::TextResponse is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::VolumeInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VolumeInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::VolumeInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Phone::Notification::Management;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Phone::Notification::Management");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAccessoryNotificationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 {
-    struct module_state
-    {
-        PyTypeObject* type_BitmapImage;
-        PyTypeObject* type_BitmapSource;
-        PyTypeObject* type_DownloadProgressEventArgs;
-        PyTypeObject* type_RenderTargetBitmap;
-        PyTypeObject* type_SoftwareBitmapSource;
-        PyTypeObject* type_SurfaceImageSource;
-        PyTypeObject* type_SvgImageSource;
-        PyTypeObject* type_SvgImageSourceFailedEventArgs;
-        PyTypeObject* type_SvgImageSourceOpenedEventArgs;
-        PyTypeObject* type_VirtualSurfaceImageSource;
-        PyTypeObject* type_WriteableBitmap;
-        PyTypeObject* type_XamlRenderingBackgroundTask;
-    };
-
     // ----- BitmapImage class --------------------
     static constexpr const char* const type_name_BitmapImage = "BitmapImage";
 
@@ -2797,66 +2781,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Media::Imaging");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BitmapImage);
-        Py_VISIT(state->type_BitmapSource);
-        Py_VISIT(state->type_DownloadProgressEventArgs);
-        Py_VISIT(state->type_RenderTargetBitmap);
-        Py_VISIT(state->type_SoftwareBitmapSource);
-        Py_VISIT(state->type_SurfaceImageSource);
-        Py_VISIT(state->type_SvgImageSource);
-        Py_VISIT(state->type_SvgImageSourceFailedEventArgs);
-        Py_VISIT(state->type_SvgImageSourceOpenedEventArgs);
-        Py_VISIT(state->type_VirtualSurfaceImageSource);
-        Py_VISIT(state->type_WriteableBitmap);
-        Py_VISIT(state->type_XamlRenderingBackgroundTask);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BitmapImage);
-        Py_CLEAR(state->type_BitmapSource);
-        Py_CLEAR(state->type_DownloadProgressEventArgs);
-        Py_CLEAR(state->type_RenderTargetBitmap);
-        Py_CLEAR(state->type_SoftwareBitmapSource);
-        Py_CLEAR(state->type_SurfaceImageSource);
-        Py_CLEAR(state->type_SvgImageSource);
-        Py_CLEAR(state->type_SvgImageSourceFailedEventArgs);
-        Py_CLEAR(state->type_SvgImageSourceOpenedEventArgs);
-        Py_CLEAR(state->type_VirtualSurfaceImageSource);
-        Py_CLEAR(state->type_WriteableBitmap);
-        Py_CLEAR(state->type_XamlRenderingBackgroundTask);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Media_Imaging",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Media::Imaging
@@ -2872,7 +2805,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2885,17 +2818,17 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_BitmapImage_Meta{PyType_FromSpec(&type_spec_BitmapImage_Meta)};
     if (!type_BitmapImage_Meta)
     {
         return nullptr;
     }
 
-    state->type_BitmapImage = py::register_python_type(module.get(), type_name_BitmapImage, &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get()));
-    if (!state->type_BitmapImage)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapImage, &type_spec_BitmapImage, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapImage, &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2906,14 +2839,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
         return nullptr;
     }
 
-    state->type_BitmapSource = py::register_python_type(module.get(), type_name_BitmapSource, &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get()));
-    if (!state->type_BitmapSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapSource, &type_spec_BitmapSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapSource, &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DownloadProgressEventArgs = py::register_python_type(module.get(), type_name_DownloadProgressEventArgs, &type_spec_DownloadProgressEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DownloadProgressEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DownloadProgressEventArgs, &type_spec_DownloadProgressEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DownloadProgressEventArgs, &type_spec_DownloadProgressEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2924,20 +2863,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
         return nullptr;
     }
 
-    state->type_RenderTargetBitmap = py::register_python_type(module.get(), type_name_RenderTargetBitmap, &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get()));
-    if (!state->type_RenderTargetBitmap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RenderTargetBitmap, &type_spec_RenderTargetBitmap, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RenderTargetBitmap, &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SoftwareBitmapSource = py::register_python_type(module.get(), type_name_SoftwareBitmapSource, &type_spec_SoftwareBitmapSource, object_bases.get(), nullptr);
-    if (!state->type_SoftwareBitmapSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SoftwareBitmapSource, &type_spec_SoftwareBitmapSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SoftwareBitmapSource, &type_spec_SoftwareBitmapSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SurfaceImageSource = py::register_python_type(module.get(), type_name_SurfaceImageSource, &type_spec_SurfaceImageSource, object_bases.get(), nullptr);
-    if (!state->type_SurfaceImageSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SurfaceImageSource, &type_spec_SurfaceImageSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SurfaceImageSource, &type_spec_SurfaceImageSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2948,318 +2896,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Media_Imaging(void) noexcept
         return nullptr;
     }
 
-    state->type_SvgImageSource = py::register_python_type(module.get(), type_name_SvgImageSource, &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get()));
-    if (!state->type_SvgImageSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SvgImageSource, &type_spec_SvgImageSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SvgImageSource, &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SvgImageSourceFailedEventArgs = py::register_python_type(module.get(), type_name_SvgImageSourceFailedEventArgs, &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SvgImageSourceFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SvgImageSourceFailedEventArgs, &type_spec_SvgImageSourceFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SvgImageSourceFailedEventArgs, &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SvgImageSourceOpenedEventArgs = py::register_python_type(module.get(), type_name_SvgImageSourceOpenedEventArgs, &type_spec_SvgImageSourceOpenedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SvgImageSourceOpenedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SvgImageSourceOpenedEventArgs, &type_spec_SvgImageSourceOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SvgImageSourceOpenedEventArgs, &type_spec_SvgImageSourceOpenedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VirtualSurfaceImageSource = py::register_python_type(module.get(), type_name_VirtualSurfaceImageSource, &type_spec_VirtualSurfaceImageSource, object_bases.get(), nullptr);
-    if (!state->type_VirtualSurfaceImageSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VirtualSurfaceImageSource, &type_spec_VirtualSurfaceImageSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VirtualSurfaceImageSource, &type_spec_VirtualSurfaceImageSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WriteableBitmap = py::register_python_type(module.get(), type_name_WriteableBitmap, &type_spec_WriteableBitmap, object_bases.get(), nullptr);
-    if (!state->type_WriteableBitmap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WriteableBitmap, &type_spec_WriteableBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WriteableBitmap, &type_spec_WriteableBitmap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_XamlRenderingBackgroundTask = py::register_python_type(module.get(), type_name_XamlRenderingBackgroundTask, &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr);
-    if (!state->type_XamlRenderingBackgroundTask)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_XamlRenderingBackgroundTask, &type_spec_XamlRenderingBackgroundTask, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_XamlRenderingBackgroundTask, &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapImage;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DownloadProgressEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RenderTargetBitmap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SoftwareBitmapSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SurfaceImageSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SvgImageSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SvgImageSourceFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SvgImageSourceOpenedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VirtualSurfaceImageSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WriteableBitmap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Media::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Media::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_XamlRenderingBackgroundTask;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

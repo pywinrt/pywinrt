@@ -6,20 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppListEntry;
-        PyTypeObject* type_CoreApplication;
-        PyTypeObject* type_CoreApplicationView;
-        PyTypeObject* type_CoreApplicationViewTitleBar;
-        PyTypeObject* type_HostedViewClosingEventArgs;
-        PyTypeObject* type_UnhandledError;
-        PyTypeObject* type_UnhandledErrorDetectedEventArgs;
-        PyTypeObject* type_ICoreApplicationUnhandledError;
-        PyTypeObject* type_IFrameworkView;
-        PyTypeObject* type_IFrameworkViewSource;
-    };
-
     // ----- AppListEntry class --------------------
     static constexpr const char* const type_name_AppListEntry = "AppListEntry";
 
@@ -2433,62 +2419,15 @@ namespace py::cpp::Windows::ApplicationModel::Core
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppListEntry);
-        Py_VISIT(state->type_CoreApplication);
-        Py_VISIT(state->type_CoreApplicationView);
-        Py_VISIT(state->type_CoreApplicationViewTitleBar);
-        Py_VISIT(state->type_HostedViewClosingEventArgs);
-        Py_VISIT(state->type_UnhandledError);
-        Py_VISIT(state->type_UnhandledErrorDetectedEventArgs);
-        Py_VISIT(state->type_ICoreApplicationUnhandledError);
-        Py_VISIT(state->type_IFrameworkView);
-        Py_VISIT(state->type_IFrameworkViewSource);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppListEntry);
-        Py_CLEAR(state->type_CoreApplication);
-        Py_CLEAR(state->type_CoreApplicationView);
-        Py_CLEAR(state->type_CoreApplicationViewTitleBar);
-        Py_CLEAR(state->type_HostedViewClosingEventArgs);
-        Py_CLEAR(state->type_UnhandledError);
-        Py_CLEAR(state->type_UnhandledErrorDetectedEventArgs);
-        Py_CLEAR(state->type_ICoreApplicationUnhandledError);
-        Py_CLEAR(state->type_IFrameworkView);
-        Py_CLEAR(state->type_IFrameworkViewSource);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Core
@@ -2504,7 +2443,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2517,11 +2456,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppListEntry = py::register_python_type(module.get(), type_name_AppListEntry, &type_spec_AppListEntry, object_bases.get(), nullptr);
-    if (!state->type_AppListEntry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppListEntry, &type_spec_AppListEntry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppListEntry, &type_spec_AppListEntry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2532,290 +2471,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Core(void) noexcept
         return nullptr;
     }
 
-    state->type_CoreApplication = py::register_python_type(module.get(), type_name_CoreApplication, &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get()));
-    if (!state->type_CoreApplication)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreApplication, &type_spec_CoreApplication, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreApplication, &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreApplicationView = py::register_python_type(module.get(), type_name_CoreApplicationView, &type_spec_CoreApplicationView, object_bases.get(), nullptr);
-    if (!state->type_CoreApplicationView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreApplicationView, &type_spec_CoreApplicationView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreApplicationView, &type_spec_CoreApplicationView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CoreApplicationViewTitleBar = py::register_python_type(module.get(), type_name_CoreApplicationViewTitleBar, &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr);
-    if (!state->type_CoreApplicationViewTitleBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CoreApplicationViewTitleBar, &type_spec_CoreApplicationViewTitleBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CoreApplicationViewTitleBar, &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HostedViewClosingEventArgs = py::register_python_type(module.get(), type_name_HostedViewClosingEventArgs, &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_HostedViewClosingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HostedViewClosingEventArgs, &type_spec_HostedViewClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HostedViewClosingEventArgs, &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnhandledError = py::register_python_type(module.get(), type_name_UnhandledError, &type_spec_UnhandledError, object_bases.get(), nullptr);
-    if (!state->type_UnhandledError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnhandledError, &type_spec_UnhandledError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnhandledError, &type_spec_UnhandledError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnhandledErrorDetectedEventArgs = py::register_python_type(module.get(), type_name_UnhandledErrorDetectedEventArgs, &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UnhandledErrorDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnhandledErrorDetectedEventArgs, &type_spec_UnhandledErrorDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnhandledErrorDetectedEventArgs, &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICoreApplicationUnhandledError = py::register_python_type(module.get(), type_name_ICoreApplicationUnhandledError, &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr);
-    if (!state->type_ICoreApplicationUnhandledError)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICoreApplicationUnhandledError, &type_spec_ICoreApplicationUnhandledError, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICoreApplicationUnhandledError, &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFrameworkView = py::register_python_type(module.get(), type_name_IFrameworkView, &type_spec_IFrameworkView, object_bases.get(), nullptr);
-    if (!state->type_IFrameworkView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFrameworkView, &type_spec_IFrameworkView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFrameworkView, &type_spec_IFrameworkView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFrameworkViewSource = py::register_python_type(module.get(), type_name_IFrameworkViewSource, &type_spec_IFrameworkViewSource, object_bases.get(), nullptr);
-    if (!state->type_IFrameworkViewSource)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFrameworkViewSource, &type_spec_IFrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFrameworkViewSource, &type_spec_IFrameworkViewSource, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::AppListEntry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppListEntry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::AppListEntry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplication>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreApplication;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::CoreApplication is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreApplicationView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::CoreApplicationView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CoreApplicationViewTitleBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HostedViewClosingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::UnhandledError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnhandledError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::UnhandledError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnhandledErrorDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICoreApplicationUnhandledError;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFrameworkView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::IFrameworkView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFrameworkViewSource;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Core::IFrameworkViewSource is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

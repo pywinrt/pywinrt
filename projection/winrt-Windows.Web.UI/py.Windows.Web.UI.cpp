@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Web::UI
 {
-    struct module_state
-    {
-        PyTypeObject* type_WebViewControlContentLoadingEventArgs;
-        PyTypeObject* type_WebViewControlDOMContentLoadedEventArgs;
-        PyTypeObject* type_WebViewControlDeferredPermissionRequest;
-        PyTypeObject* type_WebViewControlLongRunningScriptDetectedEventArgs;
-        PyTypeObject* type_WebViewControlNavigationCompletedEventArgs;
-        PyTypeObject* type_WebViewControlNavigationStartingEventArgs;
-        PyTypeObject* type_WebViewControlNewWindowRequestedEventArgs;
-        PyTypeObject* type_WebViewControlPermissionRequest;
-        PyTypeObject* type_WebViewControlPermissionRequestedEventArgs;
-        PyTypeObject* type_WebViewControlScriptNotifyEventArgs;
-        PyTypeObject* type_WebViewControlSettings;
-        PyTypeObject* type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs;
-        PyTypeObject* type_WebViewControlUnviewableContentIdentifiedEventArgs;
-        PyTypeObject* type_WebViewControlWebResourceRequestedEventArgs;
-        PyTypeObject* type_IWebViewControl;
-        PyTypeObject* type_IWebViewControl2;
-    };
-
     // ----- WebViewControlContentLoadingEventArgs class --------------------
     static constexpr const char* const type_name_WebViewControlContentLoadingEventArgs = "WebViewControlContentLoadingEventArgs";
 
@@ -3796,74 +3776,15 @@ namespace py::cpp::Windows::Web::UI
     PyDoc_STRVAR(module_doc, "Windows::Web::UI");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WebViewControlContentLoadingEventArgs);
-        Py_VISIT(state->type_WebViewControlDOMContentLoadedEventArgs);
-        Py_VISIT(state->type_WebViewControlDeferredPermissionRequest);
-        Py_VISIT(state->type_WebViewControlLongRunningScriptDetectedEventArgs);
-        Py_VISIT(state->type_WebViewControlNavigationCompletedEventArgs);
-        Py_VISIT(state->type_WebViewControlNavigationStartingEventArgs);
-        Py_VISIT(state->type_WebViewControlNewWindowRequestedEventArgs);
-        Py_VISIT(state->type_WebViewControlPermissionRequest);
-        Py_VISIT(state->type_WebViewControlPermissionRequestedEventArgs);
-        Py_VISIT(state->type_WebViewControlScriptNotifyEventArgs);
-        Py_VISIT(state->type_WebViewControlSettings);
-        Py_VISIT(state->type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs);
-        Py_VISIT(state->type_WebViewControlUnviewableContentIdentifiedEventArgs);
-        Py_VISIT(state->type_WebViewControlWebResourceRequestedEventArgs);
-        Py_VISIT(state->type_IWebViewControl);
-        Py_VISIT(state->type_IWebViewControl2);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WebViewControlContentLoadingEventArgs);
-        Py_CLEAR(state->type_WebViewControlDOMContentLoadedEventArgs);
-        Py_CLEAR(state->type_WebViewControlDeferredPermissionRequest);
-        Py_CLEAR(state->type_WebViewControlLongRunningScriptDetectedEventArgs);
-        Py_CLEAR(state->type_WebViewControlNavigationCompletedEventArgs);
-        Py_CLEAR(state->type_WebViewControlNavigationStartingEventArgs);
-        Py_CLEAR(state->type_WebViewControlNewWindowRequestedEventArgs);
-        Py_CLEAR(state->type_WebViewControlPermissionRequest);
-        Py_CLEAR(state->type_WebViewControlPermissionRequestedEventArgs);
-        Py_CLEAR(state->type_WebViewControlScriptNotifyEventArgs);
-        Py_CLEAR(state->type_WebViewControlSettings);
-        Py_CLEAR(state->type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs);
-        Py_CLEAR(state->type_WebViewControlUnviewableContentIdentifiedEventArgs);
-        Py_CLEAR(state->type_WebViewControlWebResourceRequestedEventArgs);
-        Py_CLEAR(state->type_IWebViewControl);
-        Py_CLEAR(state->type_IWebViewControl2);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Web_UI",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Web::UI
@@ -3879,7 +3800,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_UI(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3892,473 +3813,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Web_UI(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WebViewControlContentLoadingEventArgs = py::register_python_type(module.get(), type_name_WebViewControlContentLoadingEventArgs, &type_spec_WebViewControlContentLoadingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlContentLoadingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlContentLoadingEventArgs, &type_spec_WebViewControlContentLoadingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlContentLoadingEventArgs, &type_spec_WebViewControlContentLoadingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlDOMContentLoadedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlDOMContentLoadedEventArgs, &type_spec_WebViewControlDOMContentLoadedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlDOMContentLoadedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlDOMContentLoadedEventArgs, &type_spec_WebViewControlDOMContentLoadedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlDOMContentLoadedEventArgs, &type_spec_WebViewControlDOMContentLoadedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlDeferredPermissionRequest = py::register_python_type(module.get(), type_name_WebViewControlDeferredPermissionRequest, &type_spec_WebViewControlDeferredPermissionRequest, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlDeferredPermissionRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlDeferredPermissionRequest, &type_spec_WebViewControlDeferredPermissionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlDeferredPermissionRequest, &type_spec_WebViewControlDeferredPermissionRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlLongRunningScriptDetectedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlLongRunningScriptDetectedEventArgs, &type_spec_WebViewControlLongRunningScriptDetectedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlLongRunningScriptDetectedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlLongRunningScriptDetectedEventArgs, &type_spec_WebViewControlLongRunningScriptDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlLongRunningScriptDetectedEventArgs, &type_spec_WebViewControlLongRunningScriptDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlNavigationCompletedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlNavigationCompletedEventArgs, &type_spec_WebViewControlNavigationCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlNavigationCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlNavigationCompletedEventArgs, &type_spec_WebViewControlNavigationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlNavigationCompletedEventArgs, &type_spec_WebViewControlNavigationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlNavigationStartingEventArgs = py::register_python_type(module.get(), type_name_WebViewControlNavigationStartingEventArgs, &type_spec_WebViewControlNavigationStartingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlNavigationStartingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlNavigationStartingEventArgs, &type_spec_WebViewControlNavigationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlNavigationStartingEventArgs, &type_spec_WebViewControlNavigationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlNewWindowRequestedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlNewWindowRequestedEventArgs, &type_spec_WebViewControlNewWindowRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlNewWindowRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlNewWindowRequestedEventArgs, &type_spec_WebViewControlNewWindowRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlNewWindowRequestedEventArgs, &type_spec_WebViewControlNewWindowRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlPermissionRequest = py::register_python_type(module.get(), type_name_WebViewControlPermissionRequest, &type_spec_WebViewControlPermissionRequest, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlPermissionRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlPermissionRequest, &type_spec_WebViewControlPermissionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlPermissionRequest, &type_spec_WebViewControlPermissionRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlPermissionRequestedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlPermissionRequestedEventArgs, &type_spec_WebViewControlPermissionRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlPermissionRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlPermissionRequestedEventArgs, &type_spec_WebViewControlPermissionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlPermissionRequestedEventArgs, &type_spec_WebViewControlPermissionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlScriptNotifyEventArgs = py::register_python_type(module.get(), type_name_WebViewControlScriptNotifyEventArgs, &type_spec_WebViewControlScriptNotifyEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlScriptNotifyEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlScriptNotifyEventArgs, &type_spec_WebViewControlScriptNotifyEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlScriptNotifyEventArgs, &type_spec_WebViewControlScriptNotifyEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlSettings = py::register_python_type(module.get(), type_name_WebViewControlSettings, &type_spec_WebViewControlSettings, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlSettings, &type_spec_WebViewControlSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlSettings, &type_spec_WebViewControlSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, &type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, &type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, &type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlUnviewableContentIdentifiedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlUnviewableContentIdentifiedEventArgs, &type_spec_WebViewControlUnviewableContentIdentifiedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlUnviewableContentIdentifiedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlUnviewableContentIdentifiedEventArgs, &type_spec_WebViewControlUnviewableContentIdentifiedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlUnviewableContentIdentifiedEventArgs, &type_spec_WebViewControlUnviewableContentIdentifiedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebViewControlWebResourceRequestedEventArgs = py::register_python_type(module.get(), type_name_WebViewControlWebResourceRequestedEventArgs, &type_spec_WebViewControlWebResourceRequestedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebViewControlWebResourceRequestedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebViewControlWebResourceRequestedEventArgs, &type_spec_WebViewControlWebResourceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebViewControlWebResourceRequestedEventArgs, &type_spec_WebViewControlWebResourceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebViewControl = py::register_python_type(module.get(), type_name_IWebViewControl, &type_spec_IWebViewControl, object_bases.get(), nullptr);
-    if (!state->type_IWebViewControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebViewControl, &type_spec_IWebViewControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebViewControl, &type_spec_IWebViewControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebViewControl2 = py::register_python_type(module.get(), type_name_IWebViewControl2, &type_spec_IWebViewControl2, object_bases.get(), nullptr);
-    if (!state->type_IWebViewControl2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebViewControl2, &type_spec_IWebViewControl2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebViewControl2, &type_spec_IWebViewControl2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlContentLoadingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlDOMContentLoadedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlDeferredPermissionRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlLongRunningScriptDetectedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlNavigationCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlNavigationStartingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlNewWindowRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlPermissionRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlPermissionRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlPermissionRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlScriptNotifyEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlUnviewableContentIdentifiedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebViewControlWebResourceRequestedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::IWebViewControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebViewControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::IWebViewControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Web::UI::IWebViewControl2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Web::UI;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Web::UI");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebViewControl2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Web::UI::IWebViewControl2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

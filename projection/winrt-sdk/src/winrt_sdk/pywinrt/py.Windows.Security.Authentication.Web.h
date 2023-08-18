@@ -63,14 +63,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>
+    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
+        static constexpr const char* type_name = "WebAuthenticationBroker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>
+    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
+        static constexpr const char* type_name = "WebAuthenticationResult";
     };
 }

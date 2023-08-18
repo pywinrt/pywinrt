@@ -6,24 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppointmentCalendarCancelMeetingRequest;
-        PyTypeObject* type_AppointmentCalendarCancelMeetingRequestEventArgs;
-        PyTypeObject* type_AppointmentCalendarCreateOrUpdateAppointmentRequest;
-        PyTypeObject* type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs;
-        PyTypeObject* type_AppointmentCalendarForwardMeetingRequest;
-        PyTypeObject* type_AppointmentCalendarForwardMeetingRequestEventArgs;
-        PyTypeObject* type_AppointmentCalendarProposeNewTimeForMeetingRequest;
-        PyTypeObject* type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs;
-        PyTypeObject* type_AppointmentCalendarSyncManagerSyncRequest;
-        PyTypeObject* type_AppointmentCalendarSyncManagerSyncRequestEventArgs;
-        PyTypeObject* type_AppointmentCalendarUpdateMeetingResponseRequest;
-        PyTypeObject* type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs;
-        PyTypeObject* type_AppointmentDataProviderConnection;
-        PyTypeObject* type_AppointmentDataProviderTriggerDetails;
-    };
-
     // ----- AppointmentCalendarCancelMeetingRequest class --------------------
     static constexpr const char* const type_name_AppointmentCalendarCancelMeetingRequest = "AppointmentCalendarCancelMeetingRequest";
 
@@ -2701,70 +2683,15 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Appointments::DataProvider");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppointmentCalendarCancelMeetingRequest);
-        Py_VISIT(state->type_AppointmentCalendarCancelMeetingRequestEventArgs);
-        Py_VISIT(state->type_AppointmentCalendarCreateOrUpdateAppointmentRequest);
-        Py_VISIT(state->type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs);
-        Py_VISIT(state->type_AppointmentCalendarForwardMeetingRequest);
-        Py_VISIT(state->type_AppointmentCalendarForwardMeetingRequestEventArgs);
-        Py_VISIT(state->type_AppointmentCalendarProposeNewTimeForMeetingRequest);
-        Py_VISIT(state->type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs);
-        Py_VISIT(state->type_AppointmentCalendarSyncManagerSyncRequest);
-        Py_VISIT(state->type_AppointmentCalendarSyncManagerSyncRequestEventArgs);
-        Py_VISIT(state->type_AppointmentCalendarUpdateMeetingResponseRequest);
-        Py_VISIT(state->type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs);
-        Py_VISIT(state->type_AppointmentDataProviderConnection);
-        Py_VISIT(state->type_AppointmentDataProviderTriggerDetails);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppointmentCalendarCancelMeetingRequest);
-        Py_CLEAR(state->type_AppointmentCalendarCancelMeetingRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentCalendarCreateOrUpdateAppointmentRequest);
-        Py_CLEAR(state->type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentCalendarForwardMeetingRequest);
-        Py_CLEAR(state->type_AppointmentCalendarForwardMeetingRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentCalendarProposeNewTimeForMeetingRequest);
-        Py_CLEAR(state->type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentCalendarSyncManagerSyncRequest);
-        Py_CLEAR(state->type_AppointmentCalendarSyncManagerSyncRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentCalendarUpdateMeetingResponseRequest);
-        Py_CLEAR(state->type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs);
-        Py_CLEAR(state->type_AppointmentDataProviderConnection);
-        Py_CLEAR(state->type_AppointmentDataProviderTriggerDetails);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Appointments_DataProvider",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Appointments::DataProvider
@@ -2780,7 +2707,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_DataProvider(
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2793,415 +2720,132 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_DataProvider(
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppointmentCalendarCancelMeetingRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequest, &type_spec_AppointmentCalendarCancelMeetingRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarCancelMeetingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequest, &type_spec_AppointmentCalendarCancelMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequest, &type_spec_AppointmentCalendarCancelMeetingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarCancelMeetingRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequestEventArgs, &type_spec_AppointmentCalendarCancelMeetingRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarCancelMeetingRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequestEventArgs, &type_spec_AppointmentCalendarCancelMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCancelMeetingRequestEventArgs, &type_spec_AppointmentCalendarCancelMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarCreateOrUpdateAppointmentRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequest, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarCreateOrUpdateAppointmentRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequest, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequest, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarForwardMeetingRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequest, &type_spec_AppointmentCalendarForwardMeetingRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarForwardMeetingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequest, &type_spec_AppointmentCalendarForwardMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequest, &type_spec_AppointmentCalendarForwardMeetingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarForwardMeetingRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequestEventArgs, &type_spec_AppointmentCalendarForwardMeetingRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarForwardMeetingRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequestEventArgs, &type_spec_AppointmentCalendarForwardMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarForwardMeetingRequestEventArgs, &type_spec_AppointmentCalendarForwardMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarProposeNewTimeForMeetingRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequest, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarProposeNewTimeForMeetingRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequest, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequest, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarSyncManagerSyncRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequest, &type_spec_AppointmentCalendarSyncManagerSyncRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarSyncManagerSyncRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequest, &type_spec_AppointmentCalendarSyncManagerSyncRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequest, &type_spec_AppointmentCalendarSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarSyncManagerSyncRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequestEventArgs, &type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarSyncManagerSyncRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequestEventArgs, &type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarSyncManagerSyncRequestEventArgs, &type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarUpdateMeetingResponseRequest = py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequest, &type_spec_AppointmentCalendarUpdateMeetingResponseRequest, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarUpdateMeetingResponseRequest)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequest, &type_spec_AppointmentCalendarUpdateMeetingResponseRequest, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequest, &type_spec_AppointmentCalendarUpdateMeetingResponseRequest, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs = py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, &type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, &type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, &type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentDataProviderConnection = py::register_python_type(module.get(), type_name_AppointmentDataProviderConnection, &type_spec_AppointmentDataProviderConnection, object_bases.get(), nullptr);
-    if (!state->type_AppointmentDataProviderConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentDataProviderConnection, &type_spec_AppointmentDataProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentDataProviderConnection, &type_spec_AppointmentDataProviderConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentDataProviderTriggerDetails = py::register_python_type(module.get(), type_name_AppointmentDataProviderTriggerDetails, &type_spec_AppointmentDataProviderTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_AppointmentDataProviderTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentDataProviderTriggerDetails, &type_spec_AppointmentDataProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentDataProviderTriggerDetails, &type_spec_AppointmentDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarCancelMeetingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarCancelMeetingRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarCreateOrUpdateAppointmentRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarForwardMeetingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarForwardMeetingRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarProposeNewTimeForMeetingRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarSyncManagerSyncRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarSyncManagerSyncRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarUpdateMeetingResponseRequest;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentCalendarUpdateMeetingResponseRequestEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentDataProviderConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Appointments::DataProvider");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentDataProviderTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

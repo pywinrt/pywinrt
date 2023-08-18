@@ -6,22 +6,6 @@
 
 namespace py::cpp::Windows::Data::Text
 {
-    struct module_state
-    {
-        PyTypeObject* type_AlternateWordForm;
-        PyTypeObject* type_SelectableWordSegment;
-        PyTypeObject* type_SelectableWordsSegmenter;
-        PyTypeObject* type_SemanticTextQuery;
-        PyTypeObject* type_TextConversionGenerator;
-        PyTypeObject* type_TextPhoneme;
-        PyTypeObject* type_TextPredictionGenerator;
-        PyTypeObject* type_TextReverseConversionGenerator;
-        PyTypeObject* type_UnicodeCharacters;
-        PyTypeObject* type_WordSegment;
-        PyTypeObject* type_WordsSegmenter;
-        PyTypeObject* type_TextSegment;
-    };
-
     // ----- AlternateWordForm class --------------------
     static constexpr const char* const type_name_AlternateWordForm = "AlternateWordForm";
 
@@ -2569,66 +2553,15 @@ namespace py::cpp::Windows::Data::Text
     PyDoc_STRVAR(module_doc, "Windows::Data::Text");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AlternateWordForm);
-        Py_VISIT(state->type_SelectableWordSegment);
-        Py_VISIT(state->type_SelectableWordsSegmenter);
-        Py_VISIT(state->type_SemanticTextQuery);
-        Py_VISIT(state->type_TextConversionGenerator);
-        Py_VISIT(state->type_TextPhoneme);
-        Py_VISIT(state->type_TextPredictionGenerator);
-        Py_VISIT(state->type_TextReverseConversionGenerator);
-        Py_VISIT(state->type_UnicodeCharacters);
-        Py_VISIT(state->type_WordSegment);
-        Py_VISIT(state->type_WordsSegmenter);
-        Py_VISIT(state->type_TextSegment);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AlternateWordForm);
-        Py_CLEAR(state->type_SelectableWordSegment);
-        Py_CLEAR(state->type_SelectableWordsSegmenter);
-        Py_CLEAR(state->type_SemanticTextQuery);
-        Py_CLEAR(state->type_TextConversionGenerator);
-        Py_CLEAR(state->type_TextPhoneme);
-        Py_CLEAR(state->type_TextPredictionGenerator);
-        Py_CLEAR(state->type_TextReverseConversionGenerator);
-        Py_CLEAR(state->type_UnicodeCharacters);
-        Py_CLEAR(state->type_WordSegment);
-        Py_CLEAR(state->type_WordsSegmenter);
-        Py_CLEAR(state->type_TextSegment);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Data_Text",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Data::Text
@@ -2644,7 +2577,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Text(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2657,357 +2590,114 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Data_Text(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AlternateWordForm = py::register_python_type(module.get(), type_name_AlternateWordForm, &type_spec_AlternateWordForm, object_bases.get(), nullptr);
-    if (!state->type_AlternateWordForm)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AlternateWordForm, &type_spec_AlternateWordForm, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AlternateWordForm, &type_spec_AlternateWordForm, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SelectableWordSegment = py::register_python_type(module.get(), type_name_SelectableWordSegment, &type_spec_SelectableWordSegment, object_bases.get(), nullptr);
-    if (!state->type_SelectableWordSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectableWordSegment, &type_spec_SelectableWordSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectableWordSegment, &type_spec_SelectableWordSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SelectableWordsSegmenter = py::register_python_type(module.get(), type_name_SelectableWordsSegmenter, &type_spec_SelectableWordsSegmenter, object_bases.get(), nullptr);
-    if (!state->type_SelectableWordsSegmenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SelectableWordsSegmenter, &type_spec_SelectableWordsSegmenter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SelectableWordsSegmenter, &type_spec_SelectableWordsSegmenter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SemanticTextQuery = py::register_python_type(module.get(), type_name_SemanticTextQuery, &type_spec_SemanticTextQuery, object_bases.get(), nullptr);
-    if (!state->type_SemanticTextQuery)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SemanticTextQuery, &type_spec_SemanticTextQuery, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SemanticTextQuery, &type_spec_SemanticTextQuery, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextConversionGenerator = py::register_python_type(module.get(), type_name_TextConversionGenerator, &type_spec_TextConversionGenerator, object_bases.get(), nullptr);
-    if (!state->type_TextConversionGenerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextConversionGenerator, &type_spec_TextConversionGenerator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextConversionGenerator, &type_spec_TextConversionGenerator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextPhoneme = py::register_python_type(module.get(), type_name_TextPhoneme, &type_spec_TextPhoneme, object_bases.get(), nullptr);
-    if (!state->type_TextPhoneme)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextPhoneme, &type_spec_TextPhoneme, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextPhoneme, &type_spec_TextPhoneme, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextPredictionGenerator = py::register_python_type(module.get(), type_name_TextPredictionGenerator, &type_spec_TextPredictionGenerator, object_bases.get(), nullptr);
-    if (!state->type_TextPredictionGenerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextPredictionGenerator, &type_spec_TextPredictionGenerator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextPredictionGenerator, &type_spec_TextPredictionGenerator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextReverseConversionGenerator = py::register_python_type(module.get(), type_name_TextReverseConversionGenerator, &type_spec_TextReverseConversionGenerator, object_bases.get(), nullptr);
-    if (!state->type_TextReverseConversionGenerator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextReverseConversionGenerator, &type_spec_TextReverseConversionGenerator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextReverseConversionGenerator, &type_spec_TextReverseConversionGenerator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnicodeCharacters = py::register_python_type(module.get(), type_name_UnicodeCharacters, &type_spec_UnicodeCharacters, object_bases.get(), nullptr);
-    if (!state->type_UnicodeCharacters)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnicodeCharacters, &type_spec_UnicodeCharacters, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnicodeCharacters, &type_spec_UnicodeCharacters, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WordSegment = py::register_python_type(module.get(), type_name_WordSegment, &type_spec_WordSegment, object_bases.get(), nullptr);
-    if (!state->type_WordSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WordSegment, &type_spec_WordSegment, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WordSegment, &type_spec_WordSegment, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WordsSegmenter = py::register_python_type(module.get(), type_name_WordsSegmenter, &type_spec_WordsSegmenter, object_bases.get(), nullptr);
-    if (!state->type_WordsSegmenter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WordsSegmenter, &type_spec_WordsSegmenter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WordsSegmenter, &type_spec_WordsSegmenter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TextSegment = py::register_python_type(module.get(), type_name_TextSegment, &type_spec_TextSegment, nullptr, nullptr);
-    if (!state->type_TextSegment)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TextSegment, &type_spec_TextSegment, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TextSegment, &type_spec_TextSegment, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::AlternateWordForm>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AlternateWordForm;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::AlternateWordForm is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::SelectableWordSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectableWordSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::SelectableWordSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::SelectableWordsSegmenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SelectableWordsSegmenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::SelectableWordsSegmenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::SemanticTextQuery>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SemanticTextQuery;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::SemanticTextQuery is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::TextConversionGenerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextConversionGenerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextConversionGenerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::TextPhoneme>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextPhoneme;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextPhoneme is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::TextPredictionGenerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextPredictionGenerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextPredictionGenerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::TextReverseConversionGenerator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextReverseConversionGenerator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextReverseConversionGenerator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::UnicodeCharacters>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnicodeCharacters;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::UnicodeCharacters is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::WordSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WordSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::WordSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::WordsSegmenter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WordsSegmenter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::WordsSegmenter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Data::Text::TextSegment>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Data::Text;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Data::Text");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TextSegment;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Data::Text::TextSegment is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

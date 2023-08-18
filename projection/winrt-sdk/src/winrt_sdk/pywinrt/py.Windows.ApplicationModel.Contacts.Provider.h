@@ -48,14 +48,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
+        static constexpr const char* type_name = "ContactPickerUI";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
+        static constexpr const char* type_name = "ContactRemovedEventArgs";
     };
 }

@@ -6,53 +6,6 @@
 
 namespace py::cpp::Windows::Media::Audio
 {
-    struct module_state
-    {
-        PyTypeObject* type_AudioDeviceInputNode;
-        PyTypeObject* type_AudioDeviceOutputNode;
-        PyTypeObject* type_AudioFileInputNode;
-        PyTypeObject* type_AudioFileOutputNode;
-        PyTypeObject* type_AudioFrameCompletedEventArgs;
-        PyTypeObject* type_AudioFrameInputNode;
-        PyTypeObject* type_AudioFrameOutputNode;
-        PyTypeObject* type_AudioGraph;
-        PyTypeObject* type_AudioGraphBatchUpdater;
-        PyTypeObject* type_AudioGraphConnection;
-        PyTypeObject* type_AudioGraphSettings;
-        PyTypeObject* type_AudioGraphUnrecoverableErrorOccurredEventArgs;
-        PyTypeObject* type_AudioNodeEmitter;
-        PyTypeObject* type_AudioNodeEmitterConeProperties;
-        PyTypeObject* type_AudioNodeEmitterDecayModel;
-        PyTypeObject* type_AudioNodeEmitterNaturalDecayModelProperties;
-        PyTypeObject* type_AudioNodeEmitterShape;
-        PyTypeObject* type_AudioNodeListener;
-        PyTypeObject* type_AudioPlaybackConnection;
-        PyTypeObject* type_AudioPlaybackConnectionOpenResult;
-        PyTypeObject* type_AudioStateMonitor;
-        PyTypeObject* type_AudioSubmixNode;
-        PyTypeObject* type_CreateAudioDeviceInputNodeResult;
-        PyTypeObject* type_CreateAudioDeviceOutputNodeResult;
-        PyTypeObject* type_CreateAudioFileInputNodeResult;
-        PyTypeObject* type_CreateAudioFileOutputNodeResult;
-        PyTypeObject* type_CreateAudioGraphResult;
-        PyTypeObject* type_CreateMediaSourceAudioInputNodeResult;
-        PyTypeObject* type_EchoEffectDefinition;
-        PyTypeObject* type_EqualizerBand;
-        PyTypeObject* type_EqualizerEffectDefinition;
-        PyTypeObject* type_FrameInputNodeQuantumStartedEventArgs;
-        PyTypeObject* type_LimiterEffectDefinition;
-        PyTypeObject* type_MediaSourceAudioInputNode;
-        PyTypeObject* type_ReverbEffectDefinition;
-        PyTypeObject* type_SetDefaultSpatialAudioFormatResult;
-        PyTypeObject* type_SpatialAudioDeviceConfiguration;
-        PyTypeObject* type_SpatialAudioFormatConfiguration;
-        PyTypeObject* type_SpatialAudioFormatSubtype;
-        PyTypeObject* type_IAudioInputNode;
-        PyTypeObject* type_IAudioInputNode2;
-        PyTypeObject* type_IAudioNode;
-        PyTypeObject* type_IAudioNodeWithListener;
-    };
-
     // ----- AudioDeviceInputNode class --------------------
     static constexpr const char* const type_name_AudioDeviceInputNode = "AudioDeviceInputNode";
 
@@ -15203,128 +15156,15 @@ namespace py::cpp::Windows::Media::Audio
     PyDoc_STRVAR(module_doc, "Windows::Media::Audio");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AudioDeviceInputNode);
-        Py_VISIT(state->type_AudioDeviceOutputNode);
-        Py_VISIT(state->type_AudioFileInputNode);
-        Py_VISIT(state->type_AudioFileOutputNode);
-        Py_VISIT(state->type_AudioFrameCompletedEventArgs);
-        Py_VISIT(state->type_AudioFrameInputNode);
-        Py_VISIT(state->type_AudioFrameOutputNode);
-        Py_VISIT(state->type_AudioGraph);
-        Py_VISIT(state->type_AudioGraphBatchUpdater);
-        Py_VISIT(state->type_AudioGraphConnection);
-        Py_VISIT(state->type_AudioGraphSettings);
-        Py_VISIT(state->type_AudioGraphUnrecoverableErrorOccurredEventArgs);
-        Py_VISIT(state->type_AudioNodeEmitter);
-        Py_VISIT(state->type_AudioNodeEmitterConeProperties);
-        Py_VISIT(state->type_AudioNodeEmitterDecayModel);
-        Py_VISIT(state->type_AudioNodeEmitterNaturalDecayModelProperties);
-        Py_VISIT(state->type_AudioNodeEmitterShape);
-        Py_VISIT(state->type_AudioNodeListener);
-        Py_VISIT(state->type_AudioPlaybackConnection);
-        Py_VISIT(state->type_AudioPlaybackConnectionOpenResult);
-        Py_VISIT(state->type_AudioStateMonitor);
-        Py_VISIT(state->type_AudioSubmixNode);
-        Py_VISIT(state->type_CreateAudioDeviceInputNodeResult);
-        Py_VISIT(state->type_CreateAudioDeviceOutputNodeResult);
-        Py_VISIT(state->type_CreateAudioFileInputNodeResult);
-        Py_VISIT(state->type_CreateAudioFileOutputNodeResult);
-        Py_VISIT(state->type_CreateAudioGraphResult);
-        Py_VISIT(state->type_CreateMediaSourceAudioInputNodeResult);
-        Py_VISIT(state->type_EchoEffectDefinition);
-        Py_VISIT(state->type_EqualizerBand);
-        Py_VISIT(state->type_EqualizerEffectDefinition);
-        Py_VISIT(state->type_FrameInputNodeQuantumStartedEventArgs);
-        Py_VISIT(state->type_LimiterEffectDefinition);
-        Py_VISIT(state->type_MediaSourceAudioInputNode);
-        Py_VISIT(state->type_ReverbEffectDefinition);
-        Py_VISIT(state->type_SetDefaultSpatialAudioFormatResult);
-        Py_VISIT(state->type_SpatialAudioDeviceConfiguration);
-        Py_VISIT(state->type_SpatialAudioFormatConfiguration);
-        Py_VISIT(state->type_SpatialAudioFormatSubtype);
-        Py_VISIT(state->type_IAudioInputNode);
-        Py_VISIT(state->type_IAudioInputNode2);
-        Py_VISIT(state->type_IAudioNode);
-        Py_VISIT(state->type_IAudioNodeWithListener);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AudioDeviceInputNode);
-        Py_CLEAR(state->type_AudioDeviceOutputNode);
-        Py_CLEAR(state->type_AudioFileInputNode);
-        Py_CLEAR(state->type_AudioFileOutputNode);
-        Py_CLEAR(state->type_AudioFrameCompletedEventArgs);
-        Py_CLEAR(state->type_AudioFrameInputNode);
-        Py_CLEAR(state->type_AudioFrameOutputNode);
-        Py_CLEAR(state->type_AudioGraph);
-        Py_CLEAR(state->type_AudioGraphBatchUpdater);
-        Py_CLEAR(state->type_AudioGraphConnection);
-        Py_CLEAR(state->type_AudioGraphSettings);
-        Py_CLEAR(state->type_AudioGraphUnrecoverableErrorOccurredEventArgs);
-        Py_CLEAR(state->type_AudioNodeEmitter);
-        Py_CLEAR(state->type_AudioNodeEmitterConeProperties);
-        Py_CLEAR(state->type_AudioNodeEmitterDecayModel);
-        Py_CLEAR(state->type_AudioNodeEmitterNaturalDecayModelProperties);
-        Py_CLEAR(state->type_AudioNodeEmitterShape);
-        Py_CLEAR(state->type_AudioNodeListener);
-        Py_CLEAR(state->type_AudioPlaybackConnection);
-        Py_CLEAR(state->type_AudioPlaybackConnectionOpenResult);
-        Py_CLEAR(state->type_AudioStateMonitor);
-        Py_CLEAR(state->type_AudioSubmixNode);
-        Py_CLEAR(state->type_CreateAudioDeviceInputNodeResult);
-        Py_CLEAR(state->type_CreateAudioDeviceOutputNodeResult);
-        Py_CLEAR(state->type_CreateAudioFileInputNodeResult);
-        Py_CLEAR(state->type_CreateAudioFileOutputNodeResult);
-        Py_CLEAR(state->type_CreateAudioGraphResult);
-        Py_CLEAR(state->type_CreateMediaSourceAudioInputNodeResult);
-        Py_CLEAR(state->type_EchoEffectDefinition);
-        Py_CLEAR(state->type_EqualizerBand);
-        Py_CLEAR(state->type_EqualizerEffectDefinition);
-        Py_CLEAR(state->type_FrameInputNodeQuantumStartedEventArgs);
-        Py_CLEAR(state->type_LimiterEffectDefinition);
-        Py_CLEAR(state->type_MediaSourceAudioInputNode);
-        Py_CLEAR(state->type_ReverbEffectDefinition);
-        Py_CLEAR(state->type_SetDefaultSpatialAudioFormatResult);
-        Py_CLEAR(state->type_SpatialAudioDeviceConfiguration);
-        Py_CLEAR(state->type_SpatialAudioFormatConfiguration);
-        Py_CLEAR(state->type_SpatialAudioFormatSubtype);
-        Py_CLEAR(state->type_IAudioInputNode);
-        Py_CLEAR(state->type_IAudioInputNode2);
-        Py_CLEAR(state->type_IAudioNode);
-        Py_CLEAR(state->type_IAudioNodeWithListener);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Audio",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Audio
@@ -15340,7 +15180,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Audio(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -15353,233 +15193,344 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Audio(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AudioDeviceInputNode = py::register_python_type(module.get(), type_name_AudioDeviceInputNode, &type_spec_AudioDeviceInputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceInputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceInputNode, &type_spec_AudioDeviceInputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceInputNode, &type_spec_AudioDeviceInputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioDeviceOutputNode = py::register_python_type(module.get(), type_name_AudioDeviceOutputNode, &type_spec_AudioDeviceOutputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioDeviceOutputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioDeviceOutputNode, &type_spec_AudioDeviceOutputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioDeviceOutputNode, &type_spec_AudioDeviceOutputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioFileInputNode = py::register_python_type(module.get(), type_name_AudioFileInputNode, &type_spec_AudioFileInputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioFileInputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioFileInputNode, &type_spec_AudioFileInputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioFileInputNode, &type_spec_AudioFileInputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioFileOutputNode = py::register_python_type(module.get(), type_name_AudioFileOutputNode, &type_spec_AudioFileOutputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioFileOutputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioFileOutputNode, &type_spec_AudioFileOutputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioFileOutputNode, &type_spec_AudioFileOutputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioFrameCompletedEventArgs = py::register_python_type(module.get(), type_name_AudioFrameCompletedEventArgs, &type_spec_AudioFrameCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AudioFrameCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioFrameCompletedEventArgs, &type_spec_AudioFrameCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioFrameCompletedEventArgs, &type_spec_AudioFrameCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioFrameInputNode = py::register_python_type(module.get(), type_name_AudioFrameInputNode, &type_spec_AudioFrameInputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioFrameInputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioFrameInputNode, &type_spec_AudioFrameInputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioFrameInputNode, &type_spec_AudioFrameInputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioFrameOutputNode = py::register_python_type(module.get(), type_name_AudioFrameOutputNode, &type_spec_AudioFrameOutputNode, object_bases.get(), nullptr);
-    if (!state->type_AudioFrameOutputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioFrameOutputNode, &type_spec_AudioFrameOutputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioFrameOutputNode, &type_spec_AudioFrameOutputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioGraph = py::register_python_type(module.get(), type_name_AudioGraph, &type_spec_AudioGraph, object_bases.get(), nullptr);
-    if (!state->type_AudioGraph)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioGraph, &type_spec_AudioGraph, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioGraph, &type_spec_AudioGraph, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioGraphBatchUpdater = py::register_python_type(module.get(), type_name_AudioGraphBatchUpdater, &type_spec_AudioGraphBatchUpdater, object_bases.get(), nullptr);
-    if (!state->type_AudioGraphBatchUpdater)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioGraphBatchUpdater, &type_spec_AudioGraphBatchUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioGraphBatchUpdater, &type_spec_AudioGraphBatchUpdater, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioGraphConnection = py::register_python_type(module.get(), type_name_AudioGraphConnection, &type_spec_AudioGraphConnection, object_bases.get(), nullptr);
-    if (!state->type_AudioGraphConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioGraphConnection, &type_spec_AudioGraphConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioGraphConnection, &type_spec_AudioGraphConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioGraphSettings = py::register_python_type(module.get(), type_name_AudioGraphSettings, &type_spec_AudioGraphSettings, object_bases.get(), nullptr);
-    if (!state->type_AudioGraphSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioGraphSettings, &type_spec_AudioGraphSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioGraphSettings, &type_spec_AudioGraphSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioGraphUnrecoverableErrorOccurredEventArgs = py::register_python_type(module.get(), type_name_AudioGraphUnrecoverableErrorOccurredEventArgs, &type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AudioGraphUnrecoverableErrorOccurredEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioGraphUnrecoverableErrorOccurredEventArgs, &type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioGraphUnrecoverableErrorOccurredEventArgs, &type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeEmitter = py::register_python_type(module.get(), type_name_AudioNodeEmitter, &type_spec_AudioNodeEmitter, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeEmitter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitter, &type_spec_AudioNodeEmitter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitter, &type_spec_AudioNodeEmitter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeEmitterConeProperties = py::register_python_type(module.get(), type_name_AudioNodeEmitterConeProperties, &type_spec_AudioNodeEmitterConeProperties, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeEmitterConeProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterConeProperties, &type_spec_AudioNodeEmitterConeProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterConeProperties, &type_spec_AudioNodeEmitterConeProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeEmitterDecayModel = py::register_python_type(module.get(), type_name_AudioNodeEmitterDecayModel, &type_spec_AudioNodeEmitterDecayModel, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeEmitterDecayModel)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterDecayModel, &type_spec_AudioNodeEmitterDecayModel, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterDecayModel, &type_spec_AudioNodeEmitterDecayModel, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeEmitterNaturalDecayModelProperties = py::register_python_type(module.get(), type_name_AudioNodeEmitterNaturalDecayModelProperties, &type_spec_AudioNodeEmitterNaturalDecayModelProperties, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeEmitterNaturalDecayModelProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterNaturalDecayModelProperties, &type_spec_AudioNodeEmitterNaturalDecayModelProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterNaturalDecayModelProperties, &type_spec_AudioNodeEmitterNaturalDecayModelProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeEmitterShape = py::register_python_type(module.get(), type_name_AudioNodeEmitterShape, &type_spec_AudioNodeEmitterShape, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeEmitterShape)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterShape, &type_spec_AudioNodeEmitterShape, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeEmitterShape, &type_spec_AudioNodeEmitterShape, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioNodeListener = py::register_python_type(module.get(), type_name_AudioNodeListener, &type_spec_AudioNodeListener, object_bases.get(), nullptr);
-    if (!state->type_AudioNodeListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioNodeListener, &type_spec_AudioNodeListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioNodeListener, &type_spec_AudioNodeListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioPlaybackConnection = py::register_python_type(module.get(), type_name_AudioPlaybackConnection, &type_spec_AudioPlaybackConnection, object_bases.get(), nullptr);
-    if (!state->type_AudioPlaybackConnection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioPlaybackConnection, &type_spec_AudioPlaybackConnection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioPlaybackConnection, &type_spec_AudioPlaybackConnection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioPlaybackConnectionOpenResult = py::register_python_type(module.get(), type_name_AudioPlaybackConnectionOpenResult, &type_spec_AudioPlaybackConnectionOpenResult, object_bases.get(), nullptr);
-    if (!state->type_AudioPlaybackConnectionOpenResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioPlaybackConnectionOpenResult, &type_spec_AudioPlaybackConnectionOpenResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioPlaybackConnectionOpenResult, &type_spec_AudioPlaybackConnectionOpenResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioStateMonitor = py::register_python_type(module.get(), type_name_AudioStateMonitor, &type_spec_AudioStateMonitor, object_bases.get(), nullptr);
-    if (!state->type_AudioStateMonitor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioStateMonitor, &type_spec_AudioStateMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioStateMonitor, &type_spec_AudioStateMonitor, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AudioSubmixNode = py::register_python_type(module.get(), type_name_AudioSubmixNode, &type_spec_AudioSubmixNode, object_bases.get(), nullptr);
-    if (!state->type_AudioSubmixNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AudioSubmixNode, &type_spec_AudioSubmixNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AudioSubmixNode, &type_spec_AudioSubmixNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateAudioDeviceInputNodeResult = py::register_python_type(module.get(), type_name_CreateAudioDeviceInputNodeResult, &type_spec_CreateAudioDeviceInputNodeResult, object_bases.get(), nullptr);
-    if (!state->type_CreateAudioDeviceInputNodeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateAudioDeviceInputNodeResult, &type_spec_CreateAudioDeviceInputNodeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateAudioDeviceInputNodeResult, &type_spec_CreateAudioDeviceInputNodeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateAudioDeviceOutputNodeResult = py::register_python_type(module.get(), type_name_CreateAudioDeviceOutputNodeResult, &type_spec_CreateAudioDeviceOutputNodeResult, object_bases.get(), nullptr);
-    if (!state->type_CreateAudioDeviceOutputNodeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateAudioDeviceOutputNodeResult, &type_spec_CreateAudioDeviceOutputNodeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateAudioDeviceOutputNodeResult, &type_spec_CreateAudioDeviceOutputNodeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateAudioFileInputNodeResult = py::register_python_type(module.get(), type_name_CreateAudioFileInputNodeResult, &type_spec_CreateAudioFileInputNodeResult, object_bases.get(), nullptr);
-    if (!state->type_CreateAudioFileInputNodeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateAudioFileInputNodeResult, &type_spec_CreateAudioFileInputNodeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateAudioFileInputNodeResult, &type_spec_CreateAudioFileInputNodeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateAudioFileOutputNodeResult = py::register_python_type(module.get(), type_name_CreateAudioFileOutputNodeResult, &type_spec_CreateAudioFileOutputNodeResult, object_bases.get(), nullptr);
-    if (!state->type_CreateAudioFileOutputNodeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateAudioFileOutputNodeResult, &type_spec_CreateAudioFileOutputNodeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateAudioFileOutputNodeResult, &type_spec_CreateAudioFileOutputNodeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateAudioGraphResult = py::register_python_type(module.get(), type_name_CreateAudioGraphResult, &type_spec_CreateAudioGraphResult, object_bases.get(), nullptr);
-    if (!state->type_CreateAudioGraphResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateAudioGraphResult, &type_spec_CreateAudioGraphResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateAudioGraphResult, &type_spec_CreateAudioGraphResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CreateMediaSourceAudioInputNodeResult = py::register_python_type(module.get(), type_name_CreateMediaSourceAudioInputNodeResult, &type_spec_CreateMediaSourceAudioInputNodeResult, object_bases.get(), nullptr);
-    if (!state->type_CreateMediaSourceAudioInputNodeResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CreateMediaSourceAudioInputNodeResult, &type_spec_CreateMediaSourceAudioInputNodeResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CreateMediaSourceAudioInputNodeResult, &type_spec_CreateMediaSourceAudioInputNodeResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EchoEffectDefinition = py::register_python_type(module.get(), type_name_EchoEffectDefinition, &type_spec_EchoEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_EchoEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EchoEffectDefinition, &type_spec_EchoEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EchoEffectDefinition, &type_spec_EchoEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EqualizerBand = py::register_python_type(module.get(), type_name_EqualizerBand, &type_spec_EqualizerBand, object_bases.get(), nullptr);
-    if (!state->type_EqualizerBand)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EqualizerBand, &type_spec_EqualizerBand, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EqualizerBand, &type_spec_EqualizerBand, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EqualizerEffectDefinition = py::register_python_type(module.get(), type_name_EqualizerEffectDefinition, &type_spec_EqualizerEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_EqualizerEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EqualizerEffectDefinition, &type_spec_EqualizerEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EqualizerEffectDefinition, &type_spec_EqualizerEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameInputNodeQuantumStartedEventArgs = py::register_python_type(module.get(), type_name_FrameInputNodeQuantumStartedEventArgs, &type_spec_FrameInputNodeQuantumStartedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FrameInputNodeQuantumStartedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameInputNodeQuantumStartedEventArgs, &type_spec_FrameInputNodeQuantumStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameInputNodeQuantumStartedEventArgs, &type_spec_FrameInputNodeQuantumStartedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LimiterEffectDefinition = py::register_python_type(module.get(), type_name_LimiterEffectDefinition, &type_spec_LimiterEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_LimiterEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LimiterEffectDefinition, &type_spec_LimiterEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LimiterEffectDefinition, &type_spec_LimiterEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaSourceAudioInputNode = py::register_python_type(module.get(), type_name_MediaSourceAudioInputNode, &type_spec_MediaSourceAudioInputNode, object_bases.get(), nullptr);
-    if (!state->type_MediaSourceAudioInputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaSourceAudioInputNode, &type_spec_MediaSourceAudioInputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaSourceAudioInputNode, &type_spec_MediaSourceAudioInputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ReverbEffectDefinition = py::register_python_type(module.get(), type_name_ReverbEffectDefinition, &type_spec_ReverbEffectDefinition, object_bases.get(), nullptr);
-    if (!state->type_ReverbEffectDefinition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ReverbEffectDefinition, &type_spec_ReverbEffectDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ReverbEffectDefinition, &type_spec_ReverbEffectDefinition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SetDefaultSpatialAudioFormatResult = py::register_python_type(module.get(), type_name_SetDefaultSpatialAudioFormatResult, &type_spec_SetDefaultSpatialAudioFormatResult, object_bases.get(), nullptr);
-    if (!state->type_SetDefaultSpatialAudioFormatResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SetDefaultSpatialAudioFormatResult, &type_spec_SetDefaultSpatialAudioFormatResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SetDefaultSpatialAudioFormatResult, &type_spec_SetDefaultSpatialAudioFormatResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAudioDeviceConfiguration = py::register_python_type(module.get(), type_name_SpatialAudioDeviceConfiguration, &type_spec_SpatialAudioDeviceConfiguration, object_bases.get(), nullptr);
-    if (!state->type_SpatialAudioDeviceConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAudioDeviceConfiguration, &type_spec_SpatialAudioDeviceConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAudioDeviceConfiguration, &type_spec_SpatialAudioDeviceConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpatialAudioFormatConfiguration = py::register_python_type(module.get(), type_name_SpatialAudioFormatConfiguration, &type_spec_SpatialAudioFormatConfiguration, object_bases.get(), nullptr);
-    if (!state->type_SpatialAudioFormatConfiguration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAudioFormatConfiguration, &type_spec_SpatialAudioFormatConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAudioFormatConfiguration, &type_spec_SpatialAudioFormatConfiguration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -15590,1025 +15541,51 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Audio(void) noexcept
         return nullptr;
     }
 
-    state->type_SpatialAudioFormatSubtype = py::register_python_type(module.get(), type_name_SpatialAudioFormatSubtype, &type_spec_SpatialAudioFormatSubtype, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatSubtype_Meta.get()));
-    if (!state->type_SpatialAudioFormatSubtype)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpatialAudioFormatSubtype, &type_spec_SpatialAudioFormatSubtype, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatSubtype_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpatialAudioFormatSubtype, &type_spec_SpatialAudioFormatSubtype, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatSubtype_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAudioInputNode = py::register_python_type(module.get(), type_name_IAudioInputNode, &type_spec_IAudioInputNode, object_bases.get(), nullptr);
-    if (!state->type_IAudioInputNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAudioInputNode, &type_spec_IAudioInputNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAudioInputNode, &type_spec_IAudioInputNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAudioInputNode2 = py::register_python_type(module.get(), type_name_IAudioInputNode2, &type_spec_IAudioInputNode2, object_bases.get(), nullptr);
-    if (!state->type_IAudioInputNode2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAudioInputNode2, &type_spec_IAudioInputNode2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAudioInputNode2, &type_spec_IAudioInputNode2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAudioNode = py::register_python_type(module.get(), type_name_IAudioNode, &type_spec_IAudioNode, object_bases.get(), nullptr);
-    if (!state->type_IAudioNode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAudioNode, &type_spec_IAudioNode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAudioNode, &type_spec_IAudioNode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAudioNodeWithListener = py::register_python_type(module.get(), type_name_IAudioNodeWithListener, &type_spec_IAudioNodeWithListener, object_bases.get(), nullptr);
-    if (!state->type_IAudioNodeWithListener)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAudioNodeWithListener, &type_spec_IAudioNodeWithListener, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAudioNodeWithListener, &type_spec_IAudioNodeWithListener, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioDeviceInputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceInputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioDeviceInputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioDeviceOutputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioDeviceOutputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioDeviceOutputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioFileInputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioFileInputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioFileInputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioFileOutputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioFileOutputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioFileOutputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioFrameCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioFrameInputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioFrameInputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioFrameInputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioFrameOutputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioFrameOutputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioFrameOutputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioGraph>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioGraph;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioGraph is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioGraphBatchUpdater>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioGraphBatchUpdater;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioGraphBatchUpdater is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioGraphConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioGraphConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioGraphConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioGraphSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioGraphSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioGraphSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioGraphUnrecoverableErrorOccurredEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeEmitter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeEmitter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeEmitterConeProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeEmitterDecayModel;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeEmitterNaturalDecayModelProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeEmitterShape>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeEmitterShape;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeEmitterShape is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioNodeListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioNodeListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioNodeListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioPlaybackConnection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioPlaybackConnection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioPlaybackConnection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioPlaybackConnectionOpenResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioStateMonitor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioStateMonitor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioStateMonitor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::AudioSubmixNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AudioSubmixNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::AudioSubmixNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateAudioDeviceInputNodeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateAudioDeviceOutputNodeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateAudioFileInputNodeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateAudioFileOutputNodeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateAudioGraphResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateAudioGraphResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateAudioGraphResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CreateMediaSourceAudioInputNodeResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::EchoEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EchoEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::EchoEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::EqualizerBand>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EqualizerBand;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::EqualizerBand is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::EqualizerEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EqualizerEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::EqualizerEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameInputNodeQuantumStartedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::LimiterEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LimiterEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::LimiterEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::MediaSourceAudioInputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaSourceAudioInputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::MediaSourceAudioInputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::ReverbEffectDefinition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ReverbEffectDefinition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::ReverbEffectDefinition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SetDefaultSpatialAudioFormatResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAudioDeviceConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAudioFormatConfiguration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpatialAudioFormatSubtype;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::SpatialAudioFormatSubtype is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::IAudioInputNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAudioInputNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::IAudioInputNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::IAudioInputNode2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAudioInputNode2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::IAudioInputNode2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::IAudioNode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAudioNode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::IAudioNode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Audio;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Audio");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAudioNodeWithListener;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Audio::IAudioNodeWithListener is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

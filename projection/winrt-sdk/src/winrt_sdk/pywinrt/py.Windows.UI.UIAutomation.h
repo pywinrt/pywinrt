@@ -25,26 +25,30 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::AutomationConnection>
+    struct py_type<winrt::Windows::UI::UIAutomation::AutomationConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
+        static constexpr const char* type_name = "AutomationConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>
+    struct py_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
+        static constexpr const char* type_name = "AutomationConnectionBoundObject";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::AutomationElement>
+    struct py_type<winrt::Windows::UI::UIAutomation::AutomationElement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
+        static constexpr const char* type_name = "AutomationElement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>
+    struct py_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
+        static constexpr const char* type_name = "AutomationTextRange";
     };
 }

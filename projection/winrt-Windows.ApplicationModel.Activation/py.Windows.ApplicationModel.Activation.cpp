@@ -6,120 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Activation
 {
-    struct module_state
-    {
-        PyTypeObject* type_AppointmentsProviderAddAppointmentActivatedEventArgs;
-        PyTypeObject* type_AppointmentsProviderRemoveAppointmentActivatedEventArgs;
-        PyTypeObject* type_AppointmentsProviderReplaceAppointmentActivatedEventArgs;
-        PyTypeObject* type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-        PyTypeObject* type_AppointmentsProviderShowTimeFrameActivatedEventArgs;
-        PyTypeObject* type_BackgroundActivatedEventArgs;
-        PyTypeObject* type_BarcodeScannerPreviewActivatedEventArgs;
-        PyTypeObject* type_CachedFileUpdaterActivatedEventArgs;
-        PyTypeObject* type_CameraSettingsActivatedEventArgs;
-        PyTypeObject* type_CommandLineActivatedEventArgs;
-        PyTypeObject* type_CommandLineActivationOperation;
-        PyTypeObject* type_ContactCallActivatedEventArgs;
-        PyTypeObject* type_ContactMapActivatedEventArgs;
-        PyTypeObject* type_ContactMessageActivatedEventArgs;
-        PyTypeObject* type_ContactPanelActivatedEventArgs;
-        PyTypeObject* type_ContactPickerActivatedEventArgs;
-        PyTypeObject* type_ContactPostActivatedEventArgs;
-        PyTypeObject* type_ContactVideoCallActivatedEventArgs;
-        PyTypeObject* type_DeviceActivatedEventArgs;
-        PyTypeObject* type_DevicePairingActivatedEventArgs;
-        PyTypeObject* type_DialReceiverActivatedEventArgs;
-        PyTypeObject* type_FileActivatedEventArgs;
-        PyTypeObject* type_FileOpenPickerActivatedEventArgs;
-        PyTypeObject* type_FileOpenPickerContinuationEventArgs;
-        PyTypeObject* type_FileSavePickerActivatedEventArgs;
-        PyTypeObject* type_FileSavePickerContinuationEventArgs;
-        PyTypeObject* type_FolderPickerContinuationEventArgs;
-        PyTypeObject* type_LaunchActivatedEventArgs;
-        PyTypeObject* type_LockScreenActivatedEventArgs;
-        PyTypeObject* type_LockScreenCallActivatedEventArgs;
-        PyTypeObject* type_LockScreenComponentActivatedEventArgs;
-        PyTypeObject* type_PhoneCallActivatedEventArgs;
-        PyTypeObject* type_PickerReturnedActivatedEventArgs;
-        PyTypeObject* type_Print3DWorkflowActivatedEventArgs;
-        PyTypeObject* type_PrintTaskSettingsActivatedEventArgs;
-        PyTypeObject* type_ProtocolActivatedEventArgs;
-        PyTypeObject* type_ProtocolForResultsActivatedEventArgs;
-        PyTypeObject* type_RestrictedLaunchActivatedEventArgs;
-        PyTypeObject* type_SearchActivatedEventArgs;
-        PyTypeObject* type_ShareTargetActivatedEventArgs;
-        PyTypeObject* type_SplashScreen;
-        PyTypeObject* type_StartupTaskActivatedEventArgs;
-        PyTypeObject* type_TileActivatedInfo;
-        PyTypeObject* type_ToastNotificationActivatedEventArgs;
-        PyTypeObject* type_UserDataAccountProviderActivatedEventArgs;
-        PyTypeObject* type_VoiceCommandActivatedEventArgs;
-        PyTypeObject* type_WalletActionActivatedEventArgs;
-        PyTypeObject* type_WebAccountProviderActivatedEventArgs;
-        PyTypeObject* type_WebAuthenticationBrokerContinuationEventArgs;
-        PyTypeObject* type_IActivatedEventArgs;
-        PyTypeObject* type_IActivatedEventArgsWithUser;
-        PyTypeObject* type_IApplicationViewActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderAddAppointmentActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-        PyTypeObject* type_IAppointmentsProviderShowTimeFrameActivatedEventArgs;
-        PyTypeObject* type_IBackgroundActivatedEventArgs;
-        PyTypeObject* type_IBarcodeScannerPreviewActivatedEventArgs;
-        PyTypeObject* type_ICachedFileUpdaterActivatedEventArgs;
-        PyTypeObject* type_ICameraSettingsActivatedEventArgs;
-        PyTypeObject* type_ICommandLineActivatedEventArgs;
-        PyTypeObject* type_IContactActivatedEventArgs;
-        PyTypeObject* type_IContactCallActivatedEventArgs;
-        PyTypeObject* type_IContactMapActivatedEventArgs;
-        PyTypeObject* type_IContactMessageActivatedEventArgs;
-        PyTypeObject* type_IContactPanelActivatedEventArgs;
-        PyTypeObject* type_IContactPickerActivatedEventArgs;
-        PyTypeObject* type_IContactPostActivatedEventArgs;
-        PyTypeObject* type_IContactVideoCallActivatedEventArgs;
-        PyTypeObject* type_IContactsProviderActivatedEventArgs;
-        PyTypeObject* type_IContinuationActivatedEventArgs;
-        PyTypeObject* type_IDeviceActivatedEventArgs;
-        PyTypeObject* type_IDevicePairingActivatedEventArgs;
-        PyTypeObject* type_IDialReceiverActivatedEventArgs;
-        PyTypeObject* type_IFileActivatedEventArgs;
-        PyTypeObject* type_IFileActivatedEventArgsWithCallerPackageFamilyName;
-        PyTypeObject* type_IFileActivatedEventArgsWithNeighboringFiles;
-        PyTypeObject* type_IFileOpenPickerActivatedEventArgs;
-        PyTypeObject* type_IFileOpenPickerActivatedEventArgs2;
-        PyTypeObject* type_IFileOpenPickerContinuationEventArgs;
-        PyTypeObject* type_IFileSavePickerActivatedEventArgs;
-        PyTypeObject* type_IFileSavePickerActivatedEventArgs2;
-        PyTypeObject* type_IFileSavePickerContinuationEventArgs;
-        PyTypeObject* type_IFolderPickerContinuationEventArgs;
-        PyTypeObject* type_ILaunchActivatedEventArgs;
-        PyTypeObject* type_ILaunchActivatedEventArgs2;
-        PyTypeObject* type_ILockScreenActivatedEventArgs;
-        PyTypeObject* type_ILockScreenCallActivatedEventArgs;
-        PyTypeObject* type_IPhoneCallActivatedEventArgs;
-        PyTypeObject* type_IPickerReturnedActivatedEventArgs;
-        PyTypeObject* type_IPrelaunchActivatedEventArgs;
-        PyTypeObject* type_IPrint3DWorkflowActivatedEventArgs;
-        PyTypeObject* type_IPrintTaskSettingsActivatedEventArgs;
-        PyTypeObject* type_IProtocolActivatedEventArgs;
-        PyTypeObject* type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData;
-        PyTypeObject* type_IProtocolForResultsActivatedEventArgs;
-        PyTypeObject* type_IRestrictedLaunchActivatedEventArgs;
-        PyTypeObject* type_ISearchActivatedEventArgs;
-        PyTypeObject* type_ISearchActivatedEventArgsWithLinguisticDetails;
-        PyTypeObject* type_IShareTargetActivatedEventArgs;
-        PyTypeObject* type_IStartupTaskActivatedEventArgs;
-        PyTypeObject* type_IToastNotificationActivatedEventArgs;
-        PyTypeObject* type_IUserDataAccountProviderActivatedEventArgs;
-        PyTypeObject* type_IViewSwitcherProvider;
-        PyTypeObject* type_IVoiceCommandActivatedEventArgs;
-        PyTypeObject* type_IWalletActionActivatedEventArgs;
-        PyTypeObject* type_IWebAccountProviderActivatedEventArgs;
-        PyTypeObject* type_IWebAuthenticationBrokerContinuationEventArgs;
-    };
-
     // ----- AppointmentsProviderAddAppointmentActivatedEventArgs class --------------------
     static constexpr const char* const type_name_AppointmentsProviderAddAppointmentActivatedEventArgs = "AppointmentsProviderAddAppointmentActivatedEventArgs";
 
@@ -19617,262 +19503,15 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Activation");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_AppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_AppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_VISIT(state->type_AppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_VISIT(state->type_BackgroundActivatedEventArgs);
-        Py_VISIT(state->type_BarcodeScannerPreviewActivatedEventArgs);
-        Py_VISIT(state->type_CachedFileUpdaterActivatedEventArgs);
-        Py_VISIT(state->type_CameraSettingsActivatedEventArgs);
-        Py_VISIT(state->type_CommandLineActivatedEventArgs);
-        Py_VISIT(state->type_CommandLineActivationOperation);
-        Py_VISIT(state->type_ContactCallActivatedEventArgs);
-        Py_VISIT(state->type_ContactMapActivatedEventArgs);
-        Py_VISIT(state->type_ContactMessageActivatedEventArgs);
-        Py_VISIT(state->type_ContactPanelActivatedEventArgs);
-        Py_VISIT(state->type_ContactPickerActivatedEventArgs);
-        Py_VISIT(state->type_ContactPostActivatedEventArgs);
-        Py_VISIT(state->type_ContactVideoCallActivatedEventArgs);
-        Py_VISIT(state->type_DeviceActivatedEventArgs);
-        Py_VISIT(state->type_DevicePairingActivatedEventArgs);
-        Py_VISIT(state->type_DialReceiverActivatedEventArgs);
-        Py_VISIT(state->type_FileActivatedEventArgs);
-        Py_VISIT(state->type_FileOpenPickerActivatedEventArgs);
-        Py_VISIT(state->type_FileOpenPickerContinuationEventArgs);
-        Py_VISIT(state->type_FileSavePickerActivatedEventArgs);
-        Py_VISIT(state->type_FileSavePickerContinuationEventArgs);
-        Py_VISIT(state->type_FolderPickerContinuationEventArgs);
-        Py_VISIT(state->type_LaunchActivatedEventArgs);
-        Py_VISIT(state->type_LockScreenActivatedEventArgs);
-        Py_VISIT(state->type_LockScreenCallActivatedEventArgs);
-        Py_VISIT(state->type_LockScreenComponentActivatedEventArgs);
-        Py_VISIT(state->type_PhoneCallActivatedEventArgs);
-        Py_VISIT(state->type_PickerReturnedActivatedEventArgs);
-        Py_VISIT(state->type_Print3DWorkflowActivatedEventArgs);
-        Py_VISIT(state->type_PrintTaskSettingsActivatedEventArgs);
-        Py_VISIT(state->type_ProtocolActivatedEventArgs);
-        Py_VISIT(state->type_ProtocolForResultsActivatedEventArgs);
-        Py_VISIT(state->type_RestrictedLaunchActivatedEventArgs);
-        Py_VISIT(state->type_SearchActivatedEventArgs);
-        Py_VISIT(state->type_ShareTargetActivatedEventArgs);
-        Py_VISIT(state->type_SplashScreen);
-        Py_VISIT(state->type_StartupTaskActivatedEventArgs);
-        Py_VISIT(state->type_TileActivatedInfo);
-        Py_VISIT(state->type_ToastNotificationActivatedEventArgs);
-        Py_VISIT(state->type_UserDataAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_VoiceCommandActivatedEventArgs);
-        Py_VISIT(state->type_WalletActionActivatedEventArgs);
-        Py_VISIT(state->type_WebAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_WebAuthenticationBrokerContinuationEventArgs);
-        Py_VISIT(state->type_IActivatedEventArgs);
-        Py_VISIT(state->type_IActivatedEventArgsWithUser);
-        Py_VISIT(state->type_IApplicationViewActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_VISIT(state->type_IAppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_VISIT(state->type_IBackgroundActivatedEventArgs);
-        Py_VISIT(state->type_IBarcodeScannerPreviewActivatedEventArgs);
-        Py_VISIT(state->type_ICachedFileUpdaterActivatedEventArgs);
-        Py_VISIT(state->type_ICameraSettingsActivatedEventArgs);
-        Py_VISIT(state->type_ICommandLineActivatedEventArgs);
-        Py_VISIT(state->type_IContactActivatedEventArgs);
-        Py_VISIT(state->type_IContactCallActivatedEventArgs);
-        Py_VISIT(state->type_IContactMapActivatedEventArgs);
-        Py_VISIT(state->type_IContactMessageActivatedEventArgs);
-        Py_VISIT(state->type_IContactPanelActivatedEventArgs);
-        Py_VISIT(state->type_IContactPickerActivatedEventArgs);
-        Py_VISIT(state->type_IContactPostActivatedEventArgs);
-        Py_VISIT(state->type_IContactVideoCallActivatedEventArgs);
-        Py_VISIT(state->type_IContactsProviderActivatedEventArgs);
-        Py_VISIT(state->type_IContinuationActivatedEventArgs);
-        Py_VISIT(state->type_IDeviceActivatedEventArgs);
-        Py_VISIT(state->type_IDevicePairingActivatedEventArgs);
-        Py_VISIT(state->type_IDialReceiverActivatedEventArgs);
-        Py_VISIT(state->type_IFileActivatedEventArgs);
-        Py_VISIT(state->type_IFileActivatedEventArgsWithCallerPackageFamilyName);
-        Py_VISIT(state->type_IFileActivatedEventArgsWithNeighboringFiles);
-        Py_VISIT(state->type_IFileOpenPickerActivatedEventArgs);
-        Py_VISIT(state->type_IFileOpenPickerActivatedEventArgs2);
-        Py_VISIT(state->type_IFileOpenPickerContinuationEventArgs);
-        Py_VISIT(state->type_IFileSavePickerActivatedEventArgs);
-        Py_VISIT(state->type_IFileSavePickerActivatedEventArgs2);
-        Py_VISIT(state->type_IFileSavePickerContinuationEventArgs);
-        Py_VISIT(state->type_IFolderPickerContinuationEventArgs);
-        Py_VISIT(state->type_ILaunchActivatedEventArgs);
-        Py_VISIT(state->type_ILaunchActivatedEventArgs2);
-        Py_VISIT(state->type_ILockScreenActivatedEventArgs);
-        Py_VISIT(state->type_ILockScreenCallActivatedEventArgs);
-        Py_VISIT(state->type_IPhoneCallActivatedEventArgs);
-        Py_VISIT(state->type_IPickerReturnedActivatedEventArgs);
-        Py_VISIT(state->type_IPrelaunchActivatedEventArgs);
-        Py_VISIT(state->type_IPrint3DWorkflowActivatedEventArgs);
-        Py_VISIT(state->type_IPrintTaskSettingsActivatedEventArgs);
-        Py_VISIT(state->type_IProtocolActivatedEventArgs);
-        Py_VISIT(state->type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData);
-        Py_VISIT(state->type_IProtocolForResultsActivatedEventArgs);
-        Py_VISIT(state->type_IRestrictedLaunchActivatedEventArgs);
-        Py_VISIT(state->type_ISearchActivatedEventArgs);
-        Py_VISIT(state->type_ISearchActivatedEventArgsWithLinguisticDetails);
-        Py_VISIT(state->type_IShareTargetActivatedEventArgs);
-        Py_VISIT(state->type_IStartupTaskActivatedEventArgs);
-        Py_VISIT(state->type_IToastNotificationActivatedEventArgs);
-        Py_VISIT(state->type_IUserDataAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_IViewSwitcherProvider);
-        Py_VISIT(state->type_IVoiceCommandActivatedEventArgs);
-        Py_VISIT(state->type_IWalletActionActivatedEventArgs);
-        Py_VISIT(state->type_IWebAccountProviderActivatedEventArgs);
-        Py_VISIT(state->type_IWebAuthenticationBrokerContinuationEventArgs);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_AppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_AppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_CLEAR(state->type_AppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_CLEAR(state->type_BackgroundActivatedEventArgs);
-        Py_CLEAR(state->type_BarcodeScannerPreviewActivatedEventArgs);
-        Py_CLEAR(state->type_CachedFileUpdaterActivatedEventArgs);
-        Py_CLEAR(state->type_CameraSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_CommandLineActivatedEventArgs);
-        Py_CLEAR(state->type_CommandLineActivationOperation);
-        Py_CLEAR(state->type_ContactCallActivatedEventArgs);
-        Py_CLEAR(state->type_ContactMapActivatedEventArgs);
-        Py_CLEAR(state->type_ContactMessageActivatedEventArgs);
-        Py_CLEAR(state->type_ContactPanelActivatedEventArgs);
-        Py_CLEAR(state->type_ContactPickerActivatedEventArgs);
-        Py_CLEAR(state->type_ContactPostActivatedEventArgs);
-        Py_CLEAR(state->type_ContactVideoCallActivatedEventArgs);
-        Py_CLEAR(state->type_DeviceActivatedEventArgs);
-        Py_CLEAR(state->type_DevicePairingActivatedEventArgs);
-        Py_CLEAR(state->type_DialReceiverActivatedEventArgs);
-        Py_CLEAR(state->type_FileActivatedEventArgs);
-        Py_CLEAR(state->type_FileOpenPickerActivatedEventArgs);
-        Py_CLEAR(state->type_FileOpenPickerContinuationEventArgs);
-        Py_CLEAR(state->type_FileSavePickerActivatedEventArgs);
-        Py_CLEAR(state->type_FileSavePickerContinuationEventArgs);
-        Py_CLEAR(state->type_FolderPickerContinuationEventArgs);
-        Py_CLEAR(state->type_LaunchActivatedEventArgs);
-        Py_CLEAR(state->type_LockScreenActivatedEventArgs);
-        Py_CLEAR(state->type_LockScreenCallActivatedEventArgs);
-        Py_CLEAR(state->type_LockScreenComponentActivatedEventArgs);
-        Py_CLEAR(state->type_PhoneCallActivatedEventArgs);
-        Py_CLEAR(state->type_PickerReturnedActivatedEventArgs);
-        Py_CLEAR(state->type_Print3DWorkflowActivatedEventArgs);
-        Py_CLEAR(state->type_PrintTaskSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_ProtocolActivatedEventArgs);
-        Py_CLEAR(state->type_ProtocolForResultsActivatedEventArgs);
-        Py_CLEAR(state->type_RestrictedLaunchActivatedEventArgs);
-        Py_CLEAR(state->type_SearchActivatedEventArgs);
-        Py_CLEAR(state->type_ShareTargetActivatedEventArgs);
-        Py_CLEAR(state->type_SplashScreen);
-        Py_CLEAR(state->type_StartupTaskActivatedEventArgs);
-        Py_CLEAR(state->type_TileActivatedInfo);
-        Py_CLEAR(state->type_ToastNotificationActivatedEventArgs);
-        Py_CLEAR(state->type_UserDataAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_VoiceCommandActivatedEventArgs);
-        Py_CLEAR(state->type_WalletActionActivatedEventArgs);
-        Py_CLEAR(state->type_WebAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_WebAuthenticationBrokerContinuationEventArgs);
-        Py_CLEAR(state->type_IActivatedEventArgs);
-        Py_CLEAR(state->type_IActivatedEventArgsWithUser);
-        Py_CLEAR(state->type_IApplicationViewActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderAddAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
-        Py_CLEAR(state->type_IAppointmentsProviderShowTimeFrameActivatedEventArgs);
-        Py_CLEAR(state->type_IBackgroundActivatedEventArgs);
-        Py_CLEAR(state->type_IBarcodeScannerPreviewActivatedEventArgs);
-        Py_CLEAR(state->type_ICachedFileUpdaterActivatedEventArgs);
-        Py_CLEAR(state->type_ICameraSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_ICommandLineActivatedEventArgs);
-        Py_CLEAR(state->type_IContactActivatedEventArgs);
-        Py_CLEAR(state->type_IContactCallActivatedEventArgs);
-        Py_CLEAR(state->type_IContactMapActivatedEventArgs);
-        Py_CLEAR(state->type_IContactMessageActivatedEventArgs);
-        Py_CLEAR(state->type_IContactPanelActivatedEventArgs);
-        Py_CLEAR(state->type_IContactPickerActivatedEventArgs);
-        Py_CLEAR(state->type_IContactPostActivatedEventArgs);
-        Py_CLEAR(state->type_IContactVideoCallActivatedEventArgs);
-        Py_CLEAR(state->type_IContactsProviderActivatedEventArgs);
-        Py_CLEAR(state->type_IContinuationActivatedEventArgs);
-        Py_CLEAR(state->type_IDeviceActivatedEventArgs);
-        Py_CLEAR(state->type_IDevicePairingActivatedEventArgs);
-        Py_CLEAR(state->type_IDialReceiverActivatedEventArgs);
-        Py_CLEAR(state->type_IFileActivatedEventArgs);
-        Py_CLEAR(state->type_IFileActivatedEventArgsWithCallerPackageFamilyName);
-        Py_CLEAR(state->type_IFileActivatedEventArgsWithNeighboringFiles);
-        Py_CLEAR(state->type_IFileOpenPickerActivatedEventArgs);
-        Py_CLEAR(state->type_IFileOpenPickerActivatedEventArgs2);
-        Py_CLEAR(state->type_IFileOpenPickerContinuationEventArgs);
-        Py_CLEAR(state->type_IFileSavePickerActivatedEventArgs);
-        Py_CLEAR(state->type_IFileSavePickerActivatedEventArgs2);
-        Py_CLEAR(state->type_IFileSavePickerContinuationEventArgs);
-        Py_CLEAR(state->type_IFolderPickerContinuationEventArgs);
-        Py_CLEAR(state->type_ILaunchActivatedEventArgs);
-        Py_CLEAR(state->type_ILaunchActivatedEventArgs2);
-        Py_CLEAR(state->type_ILockScreenActivatedEventArgs);
-        Py_CLEAR(state->type_ILockScreenCallActivatedEventArgs);
-        Py_CLEAR(state->type_IPhoneCallActivatedEventArgs);
-        Py_CLEAR(state->type_IPickerReturnedActivatedEventArgs);
-        Py_CLEAR(state->type_IPrelaunchActivatedEventArgs);
-        Py_CLEAR(state->type_IPrint3DWorkflowActivatedEventArgs);
-        Py_CLEAR(state->type_IPrintTaskSettingsActivatedEventArgs);
-        Py_CLEAR(state->type_IProtocolActivatedEventArgs);
-        Py_CLEAR(state->type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData);
-        Py_CLEAR(state->type_IProtocolForResultsActivatedEventArgs);
-        Py_CLEAR(state->type_IRestrictedLaunchActivatedEventArgs);
-        Py_CLEAR(state->type_ISearchActivatedEventArgs);
-        Py_CLEAR(state->type_ISearchActivatedEventArgsWithLinguisticDetails);
-        Py_CLEAR(state->type_IShareTargetActivatedEventArgs);
-        Py_CLEAR(state->type_IStartupTaskActivatedEventArgs);
-        Py_CLEAR(state->type_IToastNotificationActivatedEventArgs);
-        Py_CLEAR(state->type_IUserDataAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_IViewSwitcherProvider);
-        Py_CLEAR(state->type_IVoiceCommandActivatedEventArgs);
-        Py_CLEAR(state->type_IWalletActionActivatedEventArgs);
-        Py_CLEAR(state->type_IWebAccountProviderActivatedEventArgs);
-        Py_CLEAR(state->type_IWebAuthenticationBrokerContinuationEventArgs);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Activation",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Activation
@@ -19888,7 +19527,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Activation(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -19901,3199 +19540,996 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Activation(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AppointmentsProviderAddAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_AppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentsProviderAddAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentsProviderRemoveAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_AppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentsProviderRemoveAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentsProviderReplaceAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_AppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentsProviderReplaceAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs = py::register_python_type(module.get(), type_name_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentsProviderShowTimeFrameActivatedEventArgs = py::register_python_type(module.get(), type_name_AppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AppointmentsProviderShowTimeFrameActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundActivatedEventArgs = py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackgroundActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundActivatedEventArgs, &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BarcodeScannerPreviewActivatedEventArgs = py::register_python_type(module.get(), type_name_BarcodeScannerPreviewActivatedEventArgs, &type_spec_BarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BarcodeScannerPreviewActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerPreviewActivatedEventArgs, &type_spec_BarcodeScannerPreviewActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BarcodeScannerPreviewActivatedEventArgs, &type_spec_BarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CachedFileUpdaterActivatedEventArgs = py::register_python_type(module.get(), type_name_CachedFileUpdaterActivatedEventArgs, &type_spec_CachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CachedFileUpdaterActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterActivatedEventArgs, &type_spec_CachedFileUpdaterActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterActivatedEventArgs, &type_spec_CachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CameraSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_CameraSettingsActivatedEventArgs, &type_spec_CameraSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CameraSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraSettingsActivatedEventArgs, &type_spec_CameraSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraSettingsActivatedEventArgs, &type_spec_CameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommandLineActivatedEventArgs = py::register_python_type(module.get(), type_name_CommandLineActivatedEventArgs, &type_spec_CommandLineActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CommandLineActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommandLineActivatedEventArgs, &type_spec_CommandLineActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommandLineActivatedEventArgs, &type_spec_CommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommandLineActivationOperation = py::register_python_type(module.get(), type_name_CommandLineActivationOperation, &type_spec_CommandLineActivationOperation, object_bases.get(), nullptr);
-    if (!state->type_CommandLineActivationOperation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommandLineActivationOperation, &type_spec_CommandLineActivationOperation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommandLineActivationOperation, &type_spec_CommandLineActivationOperation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactCallActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactCallActivatedEventArgs, &type_spec_ContactCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactCallActivatedEventArgs, &type_spec_ContactCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactCallActivatedEventArgs, &type_spec_ContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactMapActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactMapActivatedEventArgs, &type_spec_ContactMapActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactMapActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactMapActivatedEventArgs, &type_spec_ContactMapActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactMapActivatedEventArgs, &type_spec_ContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactMessageActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactMessageActivatedEventArgs, &type_spec_ContactMessageActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactMessageActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactMessageActivatedEventArgs, &type_spec_ContactMessageActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactMessageActivatedEventArgs, &type_spec_ContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPanelActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactPanelActivatedEventArgs, &type_spec_ContactPanelActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactPanelActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPanelActivatedEventArgs, &type_spec_ContactPanelActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPanelActivatedEventArgs, &type_spec_ContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactPickerActivatedEventArgs, &type_spec_ContactPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPickerActivatedEventArgs, &type_spec_ContactPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPickerActivatedEventArgs, &type_spec_ContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactPostActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactPostActivatedEventArgs, &type_spec_ContactPostActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactPostActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactPostActivatedEventArgs, &type_spec_ContactPostActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactPostActivatedEventArgs, &type_spec_ContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactVideoCallActivatedEventArgs = py::register_python_type(module.get(), type_name_ContactVideoCallActivatedEventArgs, &type_spec_ContactVideoCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ContactVideoCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactVideoCallActivatedEventArgs, &type_spec_ContactVideoCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactVideoCallActivatedEventArgs, &type_spec_ContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceActivatedEventArgs = py::register_python_type(module.get(), type_name_DeviceActivatedEventArgs, &type_spec_DeviceActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DeviceActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceActivatedEventArgs, &type_spec_DeviceActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceActivatedEventArgs, &type_spec_DeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DevicePairingActivatedEventArgs = py::register_python_type(module.get(), type_name_DevicePairingActivatedEventArgs, &type_spec_DevicePairingActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DevicePairingActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DevicePairingActivatedEventArgs, &type_spec_DevicePairingActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DevicePairingActivatedEventArgs, &type_spec_DevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DialReceiverActivatedEventArgs = py::register_python_type(module.get(), type_name_DialReceiverActivatedEventArgs, &type_spec_DialReceiverActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_DialReceiverActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DialReceiverActivatedEventArgs, &type_spec_DialReceiverActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DialReceiverActivatedEventArgs, &type_spec_DialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileActivatedEventArgs = py::register_python_type(module.get(), type_name_FileActivatedEventArgs, &type_spec_FileActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileActivatedEventArgs, &type_spec_FileActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileActivatedEventArgs, &type_spec_FileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileOpenPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_FileOpenPickerActivatedEventArgs, &type_spec_FileOpenPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileOpenPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerActivatedEventArgs, &type_spec_FileOpenPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerActivatedEventArgs, &type_spec_FileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileOpenPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_FileOpenPickerContinuationEventArgs, &type_spec_FileOpenPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileOpenPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerContinuationEventArgs, &type_spec_FileOpenPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileOpenPickerContinuationEventArgs, &type_spec_FileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileSavePickerActivatedEventArgs = py::register_python_type(module.get(), type_name_FileSavePickerActivatedEventArgs, &type_spec_FileSavePickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileSavePickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileSavePickerActivatedEventArgs, &type_spec_FileSavePickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileSavePickerActivatedEventArgs, &type_spec_FileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FileSavePickerContinuationEventArgs = py::register_python_type(module.get(), type_name_FileSavePickerContinuationEventArgs, &type_spec_FileSavePickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FileSavePickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FileSavePickerContinuationEventArgs, &type_spec_FileSavePickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FileSavePickerContinuationEventArgs, &type_spec_FileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FolderPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_FolderPickerContinuationEventArgs, &type_spec_FolderPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_FolderPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FolderPickerContinuationEventArgs, &type_spec_FolderPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FolderPickerContinuationEventArgs, &type_spec_FolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_LaunchActivatedEventArgs, &type_spec_LaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LaunchActivatedEventArgs, &type_spec_LaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LaunchActivatedEventArgs, &type_spec_LaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenActivatedEventArgs = py::register_python_type(module.get(), type_name_LockScreenActivatedEventArgs, &type_spec_LockScreenActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LockScreenActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenActivatedEventArgs, &type_spec_LockScreenActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenActivatedEventArgs, &type_spec_LockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenCallActivatedEventArgs = py::register_python_type(module.get(), type_name_LockScreenCallActivatedEventArgs, &type_spec_LockScreenCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LockScreenCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenCallActivatedEventArgs, &type_spec_LockScreenCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenCallActivatedEventArgs, &type_spec_LockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LockScreenComponentActivatedEventArgs = py::register_python_type(module.get(), type_name_LockScreenComponentActivatedEventArgs, &type_spec_LockScreenComponentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_LockScreenComponentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LockScreenComponentActivatedEventArgs, &type_spec_LockScreenComponentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LockScreenComponentActivatedEventArgs, &type_spec_LockScreenComponentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneCallActivatedEventArgs = py::register_python_type(module.get(), type_name_PhoneCallActivatedEventArgs, &type_spec_PhoneCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PhoneCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneCallActivatedEventArgs, &type_spec_PhoneCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneCallActivatedEventArgs, &type_spec_PhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PickerReturnedActivatedEventArgs = py::register_python_type(module.get(), type_name_PickerReturnedActivatedEventArgs, &type_spec_PickerReturnedActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PickerReturnedActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PickerReturnedActivatedEventArgs, &type_spec_PickerReturnedActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PickerReturnedActivatedEventArgs, &type_spec_PickerReturnedActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Print3DWorkflowActivatedEventArgs = py::register_python_type(module.get(), type_name_Print3DWorkflowActivatedEventArgs, &type_spec_Print3DWorkflowActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_Print3DWorkflowActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowActivatedEventArgs, &type_spec_Print3DWorkflowActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Print3DWorkflowActivatedEventArgs, &type_spec_Print3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PrintTaskSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_PrintTaskSettingsActivatedEventArgs, &type_spec_PrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PrintTaskSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintTaskSettingsActivatedEventArgs, &type_spec_PrintTaskSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintTaskSettingsActivatedEventArgs, &type_spec_PrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtocolActivatedEventArgs = py::register_python_type(module.get(), type_name_ProtocolActivatedEventArgs, &type_spec_ProtocolActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProtocolActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtocolActivatedEventArgs, &type_spec_ProtocolActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtocolActivatedEventArgs, &type_spec_ProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ProtocolForResultsActivatedEventArgs = py::register_python_type(module.get(), type_name_ProtocolForResultsActivatedEventArgs, &type_spec_ProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ProtocolForResultsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProtocolForResultsActivatedEventArgs, &type_spec_ProtocolForResultsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProtocolForResultsActivatedEventArgs, &type_spec_ProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RestrictedLaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_RestrictedLaunchActivatedEventArgs, &type_spec_RestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RestrictedLaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RestrictedLaunchActivatedEventArgs, &type_spec_RestrictedLaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RestrictedLaunchActivatedEventArgs, &type_spec_RestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SearchActivatedEventArgs = py::register_python_type(module.get(), type_name_SearchActivatedEventArgs, &type_spec_SearchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_SearchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SearchActivatedEventArgs, &type_spec_SearchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SearchActivatedEventArgs, &type_spec_SearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShareTargetActivatedEventArgs = py::register_python_type(module.get(), type_name_ShareTargetActivatedEventArgs, &type_spec_ShareTargetActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ShareTargetActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShareTargetActivatedEventArgs, &type_spec_ShareTargetActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShareTargetActivatedEventArgs, &type_spec_ShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SplashScreen = py::register_python_type(module.get(), type_name_SplashScreen, &type_spec_SplashScreen, object_bases.get(), nullptr);
-    if (!state->type_SplashScreen)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SplashScreen, &type_spec_SplashScreen, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SplashScreen, &type_spec_SplashScreen, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StartupTaskActivatedEventArgs = py::register_python_type(module.get(), type_name_StartupTaskActivatedEventArgs, &type_spec_StartupTaskActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_StartupTaskActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StartupTaskActivatedEventArgs, &type_spec_StartupTaskActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StartupTaskActivatedEventArgs, &type_spec_StartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileActivatedInfo = py::register_python_type(module.get(), type_name_TileActivatedInfo, &type_spec_TileActivatedInfo, object_bases.get(), nullptr);
-    if (!state->type_TileActivatedInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileActivatedInfo, &type_spec_TileActivatedInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileActivatedInfo, &type_spec_TileActivatedInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationActivatedEventArgs = py::register_python_type(module.get(), type_name_ToastNotificationActivatedEventArgs, &type_spec_ToastNotificationActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActivatedEventArgs, &type_spec_ToastNotificationActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActivatedEventArgs, &type_spec_ToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserDataAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_UserDataAccountProviderActivatedEventArgs, &type_spec_UserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserDataAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderActivatedEventArgs, &type_spec_UserDataAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderActivatedEventArgs, &type_spec_UserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VoiceCommandActivatedEventArgs = py::register_python_type(module.get(), type_name_VoiceCommandActivatedEventArgs, &type_spec_VoiceCommandActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_VoiceCommandActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VoiceCommandActivatedEventArgs, &type_spec_VoiceCommandActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VoiceCommandActivatedEventArgs, &type_spec_VoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletActionActivatedEventArgs = py::register_python_type(module.get(), type_name_WalletActionActivatedEventArgs, &type_spec_WalletActionActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WalletActionActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletActionActivatedEventArgs, &type_spec_WalletActionActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletActionActivatedEventArgs, &type_spec_WalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_WebAccountProviderActivatedEventArgs, &type_spec_WebAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderActivatedEventArgs, &type_spec_WebAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAccountProviderActivatedEventArgs, &type_spec_WebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WebAuthenticationBrokerContinuationEventArgs = py::register_python_type(module.get(), type_name_WebAuthenticationBrokerContinuationEventArgs, &type_spec_WebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_WebAuthenticationBrokerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationBrokerContinuationEventArgs, &type_spec_WebAuthenticationBrokerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WebAuthenticationBrokerContinuationEventArgs, &type_spec_WebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IActivatedEventArgs = py::register_python_type(module.get(), type_name_IActivatedEventArgs, &type_spec_IActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgs, &type_spec_IActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgs, &type_spec_IActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IActivatedEventArgsWithUser = py::register_python_type(module.get(), type_name_IActivatedEventArgsWithUser, &type_spec_IActivatedEventArgsWithUser, object_bases.get(), nullptr);
-    if (!state->type_IActivatedEventArgsWithUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgsWithUser, &type_spec_IActivatedEventArgsWithUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IActivatedEventArgsWithUser, &type_spec_IActivatedEventArgsWithUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IApplicationViewActivatedEventArgs = py::register_python_type(module.get(), type_name_IApplicationViewActivatedEventArgs, &type_spec_IApplicationViewActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IApplicationViewActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IApplicationViewActivatedEventArgs, &type_spec_IApplicationViewActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IApplicationViewActivatedEventArgs, &type_spec_IApplicationViewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderActivatedEventArgs, &type_spec_IAppointmentsProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderActivatedEventArgs, &type_spec_IAppointmentsProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderActivatedEventArgs, &type_spec_IAppointmentsProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderAddAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderAddAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderAddAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, &type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAppointmentsProviderShowTimeFrameActivatedEventArgs = py::register_python_type(module.get(), type_name_IAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IAppointmentsProviderShowTimeFrameActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAppointmentsProviderShowTimeFrameActivatedEventArgs, &type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundActivatedEventArgs = py::register_python_type(module.get(), type_name_IBackgroundActivatedEventArgs, &type_spec_IBackgroundActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundActivatedEventArgs, &type_spec_IBackgroundActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundActivatedEventArgs, &type_spec_IBackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBarcodeScannerPreviewActivatedEventArgs = py::register_python_type(module.get(), type_name_IBarcodeScannerPreviewActivatedEventArgs, &type_spec_IBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IBarcodeScannerPreviewActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBarcodeScannerPreviewActivatedEventArgs, &type_spec_IBarcodeScannerPreviewActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBarcodeScannerPreviewActivatedEventArgs, &type_spec_IBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICachedFileUpdaterActivatedEventArgs = py::register_python_type(module.get(), type_name_ICachedFileUpdaterActivatedEventArgs, &type_spec_ICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ICachedFileUpdaterActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICachedFileUpdaterActivatedEventArgs, &type_spec_ICachedFileUpdaterActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICachedFileUpdaterActivatedEventArgs, &type_spec_ICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICameraSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_ICameraSettingsActivatedEventArgs, &type_spec_ICameraSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ICameraSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICameraSettingsActivatedEventArgs, &type_spec_ICameraSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICameraSettingsActivatedEventArgs, &type_spec_ICameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICommandLineActivatedEventArgs = py::register_python_type(module.get(), type_name_ICommandLineActivatedEventArgs, &type_spec_ICommandLineActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ICommandLineActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICommandLineActivatedEventArgs, &type_spec_ICommandLineActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICommandLineActivatedEventArgs, &type_spec_ICommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactActivatedEventArgs, &type_spec_IContactActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactActivatedEventArgs, &type_spec_IContactActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactActivatedEventArgs, &type_spec_IContactActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactCallActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactCallActivatedEventArgs, &type_spec_IContactCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactCallActivatedEventArgs, &type_spec_IContactCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactCallActivatedEventArgs, &type_spec_IContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactMapActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactMapActivatedEventArgs, &type_spec_IContactMapActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactMapActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactMapActivatedEventArgs, &type_spec_IContactMapActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactMapActivatedEventArgs, &type_spec_IContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactMessageActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactMessageActivatedEventArgs, &type_spec_IContactMessageActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactMessageActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactMessageActivatedEventArgs, &type_spec_IContactMessageActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactMessageActivatedEventArgs, &type_spec_IContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactPanelActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactPanelActivatedEventArgs, &type_spec_IContactPanelActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactPanelActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactPanelActivatedEventArgs, &type_spec_IContactPanelActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactPanelActivatedEventArgs, &type_spec_IContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactPickerActivatedEventArgs, &type_spec_IContactPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactPickerActivatedEventArgs, &type_spec_IContactPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactPickerActivatedEventArgs, &type_spec_IContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactPostActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactPostActivatedEventArgs, &type_spec_IContactPostActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactPostActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactPostActivatedEventArgs, &type_spec_IContactPostActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactPostActivatedEventArgs, &type_spec_IContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactVideoCallActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactVideoCallActivatedEventArgs, &type_spec_IContactVideoCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactVideoCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactVideoCallActivatedEventArgs, &type_spec_IContactVideoCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactVideoCallActivatedEventArgs, &type_spec_IContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContactsProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_IContactsProviderActivatedEventArgs, &type_spec_IContactsProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContactsProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContactsProviderActivatedEventArgs, &type_spec_IContactsProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContactsProviderActivatedEventArgs, &type_spec_IContactsProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IContinuationActivatedEventArgs = py::register_python_type(module.get(), type_name_IContinuationActivatedEventArgs, &type_spec_IContinuationActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IContinuationActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IContinuationActivatedEventArgs, &type_spec_IContinuationActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IContinuationActivatedEventArgs, &type_spec_IContinuationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDeviceActivatedEventArgs = py::register_python_type(module.get(), type_name_IDeviceActivatedEventArgs, &type_spec_IDeviceActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IDeviceActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDeviceActivatedEventArgs, &type_spec_IDeviceActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDeviceActivatedEventArgs, &type_spec_IDeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDevicePairingActivatedEventArgs = py::register_python_type(module.get(), type_name_IDevicePairingActivatedEventArgs, &type_spec_IDevicePairingActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IDevicePairingActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDevicePairingActivatedEventArgs, &type_spec_IDevicePairingActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDevicePairingActivatedEventArgs, &type_spec_IDevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IDialReceiverActivatedEventArgs = py::register_python_type(module.get(), type_name_IDialReceiverActivatedEventArgs, &type_spec_IDialReceiverActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IDialReceiverActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IDialReceiverActivatedEventArgs, &type_spec_IDialReceiverActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IDialReceiverActivatedEventArgs, &type_spec_IDialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileActivatedEventArgs = py::register_python_type(module.get(), type_name_IFileActivatedEventArgs, &type_spec_IFileActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFileActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgs, &type_spec_IFileActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgs, &type_spec_IFileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileActivatedEventArgsWithCallerPackageFamilyName = py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithCallerPackageFamilyName, &type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName, object_bases.get(), nullptr);
-    if (!state->type_IFileActivatedEventArgsWithCallerPackageFamilyName)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithCallerPackageFamilyName, &type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithCallerPackageFamilyName, &type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileActivatedEventArgsWithNeighboringFiles = py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithNeighboringFiles, &type_spec_IFileActivatedEventArgsWithNeighboringFiles, object_bases.get(), nullptr);
-    if (!state->type_IFileActivatedEventArgsWithNeighboringFiles)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithNeighboringFiles, &type_spec_IFileActivatedEventArgsWithNeighboringFiles, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileActivatedEventArgsWithNeighboringFiles, &type_spec_IFileActivatedEventArgsWithNeighboringFiles, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileOpenPickerActivatedEventArgs = py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs, &type_spec_IFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFileOpenPickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs, &type_spec_IFileOpenPickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs, &type_spec_IFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileOpenPickerActivatedEventArgs2 = py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs2, &type_spec_IFileOpenPickerActivatedEventArgs2, object_bases.get(), nullptr);
-    if (!state->type_IFileOpenPickerActivatedEventArgs2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs2, &type_spec_IFileOpenPickerActivatedEventArgs2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerActivatedEventArgs2, &type_spec_IFileOpenPickerActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileOpenPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_IFileOpenPickerContinuationEventArgs, &type_spec_IFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFileOpenPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerContinuationEventArgs, &type_spec_IFileOpenPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileOpenPickerContinuationEventArgs, &type_spec_IFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileSavePickerActivatedEventArgs = py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs, &type_spec_IFileSavePickerActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFileSavePickerActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs, &type_spec_IFileSavePickerActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs, &type_spec_IFileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileSavePickerActivatedEventArgs2 = py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs2, &type_spec_IFileSavePickerActivatedEventArgs2, object_bases.get(), nullptr);
-    if (!state->type_IFileSavePickerActivatedEventArgs2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs2, &type_spec_IFileSavePickerActivatedEventArgs2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerActivatedEventArgs2, &type_spec_IFileSavePickerActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFileSavePickerContinuationEventArgs = py::register_python_type(module.get(), type_name_IFileSavePickerContinuationEventArgs, &type_spec_IFileSavePickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFileSavePickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerContinuationEventArgs, &type_spec_IFileSavePickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFileSavePickerContinuationEventArgs, &type_spec_IFileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IFolderPickerContinuationEventArgs = py::register_python_type(module.get(), type_name_IFolderPickerContinuationEventArgs, &type_spec_IFolderPickerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IFolderPickerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IFolderPickerContinuationEventArgs, &type_spec_IFolderPickerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IFolderPickerContinuationEventArgs, &type_spec_IFolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs, &type_spec_ILaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ILaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs, &type_spec_ILaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs, &type_spec_ILaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILaunchActivatedEventArgs2 = py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs2, &type_spec_ILaunchActivatedEventArgs2, object_bases.get(), nullptr);
-    if (!state->type_ILaunchActivatedEventArgs2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs2, &type_spec_ILaunchActivatedEventArgs2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILaunchActivatedEventArgs2, &type_spec_ILaunchActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILockScreenActivatedEventArgs = py::register_python_type(module.get(), type_name_ILockScreenActivatedEventArgs, &type_spec_ILockScreenActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ILockScreenActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILockScreenActivatedEventArgs, &type_spec_ILockScreenActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILockScreenActivatedEventArgs, &type_spec_ILockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ILockScreenCallActivatedEventArgs = py::register_python_type(module.get(), type_name_ILockScreenCallActivatedEventArgs, &type_spec_ILockScreenCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ILockScreenCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ILockScreenCallActivatedEventArgs, &type_spec_ILockScreenCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ILockScreenCallActivatedEventArgs, &type_spec_ILockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPhoneCallActivatedEventArgs = py::register_python_type(module.get(), type_name_IPhoneCallActivatedEventArgs, &type_spec_IPhoneCallActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IPhoneCallActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPhoneCallActivatedEventArgs, &type_spec_IPhoneCallActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPhoneCallActivatedEventArgs, &type_spec_IPhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPickerReturnedActivatedEventArgs = py::register_python_type(module.get(), type_name_IPickerReturnedActivatedEventArgs, &type_spec_IPickerReturnedActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IPickerReturnedActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPickerReturnedActivatedEventArgs, &type_spec_IPickerReturnedActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPickerReturnedActivatedEventArgs, &type_spec_IPickerReturnedActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrelaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_IPrelaunchActivatedEventArgs, &type_spec_IPrelaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IPrelaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrelaunchActivatedEventArgs, &type_spec_IPrelaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrelaunchActivatedEventArgs, &type_spec_IPrelaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrint3DWorkflowActivatedEventArgs = py::register_python_type(module.get(), type_name_IPrint3DWorkflowActivatedEventArgs, &type_spec_IPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IPrint3DWorkflowActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrint3DWorkflowActivatedEventArgs, &type_spec_IPrint3DWorkflowActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrint3DWorkflowActivatedEventArgs, &type_spec_IPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IPrintTaskSettingsActivatedEventArgs = py::register_python_type(module.get(), type_name_IPrintTaskSettingsActivatedEventArgs, &type_spec_IPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IPrintTaskSettingsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IPrintTaskSettingsActivatedEventArgs, &type_spec_IPrintTaskSettingsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IPrintTaskSettingsActivatedEventArgs, &type_spec_IPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IProtocolActivatedEventArgs = py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgs, &type_spec_IProtocolActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IProtocolActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgs, &type_spec_IProtocolActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgs, &type_spec_IProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, object_bases.get(), nullptr);
-    if (!state->type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IProtocolForResultsActivatedEventArgs = py::register_python_type(module.get(), type_name_IProtocolForResultsActivatedEventArgs, &type_spec_IProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IProtocolForResultsActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IProtocolForResultsActivatedEventArgs, &type_spec_IProtocolForResultsActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IProtocolForResultsActivatedEventArgs, &type_spec_IProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IRestrictedLaunchActivatedEventArgs = py::register_python_type(module.get(), type_name_IRestrictedLaunchActivatedEventArgs, &type_spec_IRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IRestrictedLaunchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IRestrictedLaunchActivatedEventArgs, &type_spec_IRestrictedLaunchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IRestrictedLaunchActivatedEventArgs, &type_spec_IRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISearchActivatedEventArgs = py::register_python_type(module.get(), type_name_ISearchActivatedEventArgs, &type_spec_ISearchActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ISearchActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISearchActivatedEventArgs, &type_spec_ISearchActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISearchActivatedEventArgs, &type_spec_ISearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ISearchActivatedEventArgsWithLinguisticDetails = py::register_python_type(module.get(), type_name_ISearchActivatedEventArgsWithLinguisticDetails, &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, object_bases.get(), nullptr);
-    if (!state->type_ISearchActivatedEventArgsWithLinguisticDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ISearchActivatedEventArgsWithLinguisticDetails, &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ISearchActivatedEventArgsWithLinguisticDetails, &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IShareTargetActivatedEventArgs = py::register_python_type(module.get(), type_name_IShareTargetActivatedEventArgs, &type_spec_IShareTargetActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IShareTargetActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IShareTargetActivatedEventArgs, &type_spec_IShareTargetActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IShareTargetActivatedEventArgs, &type_spec_IShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IStartupTaskActivatedEventArgs = py::register_python_type(module.get(), type_name_IStartupTaskActivatedEventArgs, &type_spec_IStartupTaskActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IStartupTaskActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IStartupTaskActivatedEventArgs, &type_spec_IStartupTaskActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IStartupTaskActivatedEventArgs, &type_spec_IStartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IToastNotificationActivatedEventArgs = py::register_python_type(module.get(), type_name_IToastNotificationActivatedEventArgs, &type_spec_IToastNotificationActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IToastNotificationActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IToastNotificationActivatedEventArgs, &type_spec_IToastNotificationActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IToastNotificationActivatedEventArgs, &type_spec_IToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IUserDataAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_IUserDataAccountProviderActivatedEventArgs, &type_spec_IUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IUserDataAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderActivatedEventArgs, &type_spec_IUserDataAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderActivatedEventArgs, &type_spec_IUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IViewSwitcherProvider = py::register_python_type(module.get(), type_name_IViewSwitcherProvider, &type_spec_IViewSwitcherProvider, object_bases.get(), nullptr);
-    if (!state->type_IViewSwitcherProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IViewSwitcherProvider, &type_spec_IViewSwitcherProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IViewSwitcherProvider, &type_spec_IViewSwitcherProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVoiceCommandActivatedEventArgs = py::register_python_type(module.get(), type_name_IVoiceCommandActivatedEventArgs, &type_spec_IVoiceCommandActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IVoiceCommandActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVoiceCommandActivatedEventArgs, &type_spec_IVoiceCommandActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVoiceCommandActivatedEventArgs, &type_spec_IVoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWalletActionActivatedEventArgs = py::register_python_type(module.get(), type_name_IWalletActionActivatedEventArgs, &type_spec_IWalletActionActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IWalletActionActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWalletActionActivatedEventArgs, &type_spec_IWalletActionActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWalletActionActivatedEventArgs, &type_spec_IWalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAccountProviderActivatedEventArgs = py::register_python_type(module.get(), type_name_IWebAccountProviderActivatedEventArgs, &type_spec_IWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IWebAccountProviderActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderActivatedEventArgs, &type_spec_IWebAccountProviderActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAccountProviderActivatedEventArgs, &type_spec_IWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IWebAuthenticationBrokerContinuationEventArgs = py::register_python_type(module.get(), type_name_IWebAuthenticationBrokerContinuationEventArgs, &type_spec_IWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr);
-    if (!state->type_IWebAuthenticationBrokerContinuationEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IWebAuthenticationBrokerContinuationEventArgs, &type_spec_IWebAuthenticationBrokerContinuationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IWebAuthenticationBrokerContinuationEventArgs, &type_spec_IWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderAddAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderRemoveAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderReplaceAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentsProviderShowTimeFrameActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BarcodeScannerPreviewActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CachedFileUpdaterActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommandLineActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommandLineActivationOperation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::CommandLineActivationOperation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactMapActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactMessageActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPanelActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactPostActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactVideoCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DevicePairingActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DialReceiverActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FileActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileOpenPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileOpenPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileSavePickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FileSavePickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FolderPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LockScreenComponentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PickerReturnedActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Print3DWorkflowActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintTaskSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtocolActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProtocolForResultsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RestrictedLaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SearchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShareTargetActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::SplashScreen>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SplashScreen;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::SplashScreen is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StartupTaskActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::TileActivatedInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileActivatedInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::TileActivatedInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserDataAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VoiceCommandActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletActionActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WebAuthenticationBrokerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IActivatedEventArgsWithUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IApplicationViewActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderAddAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderRemoveAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderReplaceAppointmentActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAppointmentsProviderShowTimeFrameActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBarcodeScannerPreviewActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICachedFileUpdaterActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICameraSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICommandLineActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactMapActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactMessageActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactPanelActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactPostActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactVideoCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContactsProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IContinuationActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDeviceActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDevicePairingActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IDialReceiverActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileActivatedEventArgsWithCallerPackageFamilyName;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileActivatedEventArgsWithNeighboringFiles;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileOpenPickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileOpenPickerActivatedEventArgs2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileOpenPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileSavePickerActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileSavePickerActivatedEventArgs2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFileSavePickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IFolderPickerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILaunchActivatedEventArgs2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILockScreenActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ILockScreenCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPhoneCallActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPickerReturnedActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrelaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrint3DWorkflowActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IPrintTaskSettingsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IProtocolActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IProtocolForResultsActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IRestrictedLaunchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISearchActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ISearchActivatedEventArgsWithLinguisticDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IShareTargetActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IStartupTaskActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IToastNotificationActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IUserDataAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IViewSwitcherProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IViewSwitcherProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVoiceCommandActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWalletActionActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAccountProviderActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Activation;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Activation");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IWebAuthenticationBrokerContinuationEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

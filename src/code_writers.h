@@ -328,80 +328,6 @@ struct py_type<%>
             type.TypeName());
     }
 
-    /**
-     * Writes the binary extension Python type specialization struct.
-     */
-    void write_python_type_specialization_struct(writer& w, TypeDef const& type)
-    {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        auto format = R"(
-template<>
-struct winrt_type<%>
-{
-    static PyTypeObject* get_python_type() noexcept;
-};
-)";
-        w.write(format, bind<write_python_wrapper_template_type>(type));
-    }
-
-    /**
-     * Writes the binary extension Python type getter function implemenation.
-     */
-    void write_get_python_type_definition(writer& w, TypeDef const& type)
-    {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        auto format = R"(
-PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
-    using namespace py::cpp::%;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for %");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_@;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type % is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-)";
-
-        w.write(
-            format,
-            bind<write_python_wrapper_template_type>(type),
-            bind<write_type_namespace>(type),
-            bind<write_type_namespace>(type),
-            type.TypeName(),
-            bind<write_python_wrapper_template_type>(type));
-    }
-
     void write_python_wrapper_type(writer& w, TypeDef const& type)
     {
         switch (get_category(type))
@@ -490,32 +416,38 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
                 "reinterpret_cast<PyTypeObject*>(type_%_Meta.get())", type.TypeName());
         }
 
+        std::string buffer_procs{"nullptr"};
+
+        if (implements_ibuffer(type) || implements_imemorybufferreference(type))
+        {
+            buffer_procs = w.write_temp("&_PyBufferProcs_@", type.TypeName());
+        }
+
+        // workaround for https://bugs.python.org/issue40724
+        w.write("#if PY_VERSION_HEX < 0x03090000\n");
         w.write(
-            "state->type_@ = py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %);\n",
+            "if (py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %, %) == -1)\n",
             type.TypeName(),
+            type.TypeName(),
+            buffer_procs,
+            bind<write_type_base>(type),
+            metaclass);
+        w.write("#else\n");
+        w.write(
+            "if (py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %) == -1)\n",
             type.TypeName(),
             type.TypeName(),
             bind<write_type_base>(type),
             metaclass);
+        w.write("#endif\n");
 
-        w.write("if (!state->type_@)\n{\n", type.TypeName());
+        w.write("{\n");
         {
             writer::indent_guard g{w};
 
             w.write("return nullptr;\n");
         }
         w.write("}\n\n");
-
-        if (implements_ibuffer(type) || implements_imemorybufferreference(type))
-        {
-            // workaround for https://bugs.python.org/issue40724
-            w.write("#if PY_VERSION_HEX < 0x03090000\n");
-            w.write(
-                "state->type_@->tp_as_buffer = &_PyBufferProcs_@;\n",
-                type.TypeName(),
-                type.TypeName());
-            w.write("#endif\n\n");
-        }
     }
 
     void write_ns_module_name(writer& w, std::string_view const& ns)
@@ -556,129 +488,11 @@ PyTypeObject* py::winrt_type<%>::get_python_type() noexcept {
     }
 
     /**
-     * Writes the struct defintion for the namespace module state.
-     */
-    void write_namespace_module_state_struct(
-        writer& w, cache::namespace_members const& members)
-    {
-        w.write("\nstruct module_state\n{\n");
-        {
-            writer::indent_guard g{w};
-
-            settings.filter.bind_each<write_ns_module_python_type_member>(
-                members.classes)(w);
-            settings.filter.bind_each<write_ns_module_python_type_member>(
-                members.interfaces)(w);
-            settings.filter.bind_each<write_ns_module_python_type_member>(
-                members.structs)(w);
-        }
-        w.write("};\n");
-    }
-
-    /**
      * Writes the namespace module doc string definition.
      */
     void write_ns_module_doc_string(writer& w, std::string_view const& ns)
     {
         w.write("PyDoc_STRVAR(module_doc, \"@\");\n\n", ns);
-    }
-
-    /**
-     * Writes one visit statement for a namespace  module traverse function.
-     */
-    void write_ns_module_visit_member(writer& w, TypeDef const& type)
-    {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        w.write("Py_VISIT(state->type_@);\n", type.TypeName());
-    }
-
-    /**
-     * Writes the namespace module traverse function for use in PyModuleDef.m_traverse.
-     */
-    void write_ns_module_traverse_func(
-        writer& w, cache::namespace_members const& members)
-    {
-        w.write(
-            "\nstatic int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept\n{\n");
-        {
-            writer::indent_guard g{w};
-
-            w.write(
-                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n\n");
-
-            w.write("if (!state)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return 0;\n");
-            }
-            w.write("}\n\n");
-
-            settings.filter.bind_each<write_ns_module_visit_member>(members.classes)(w);
-            settings.filter.bind_each<write_ns_module_visit_member>(members.interfaces)(
-                w);
-            settings.filter.bind_each<write_ns_module_visit_member>(members.structs)(w);
-
-            w.write("\nreturn 0;\n");
-        }
-        w.write("}\n");
-    }
-
-    /**
-     * Writes one clear statement for a namespace module clear function.
-     */
-    void write_ns_module_clear_member(writer& w, TypeDef const& type)
-    {
-        if (is_exclusive_to(type))
-        {
-            return;
-        }
-
-        if (is_customized_struct(type))
-        {
-            return;
-        }
-
-        w.write("Py_CLEAR(state->type_@);\n", type.TypeName());
-    }
-
-    /**
-     * Writes the namespace module clear function for use in PyModuleDef.m_clear.
-     */
-    void write_ns_module_clear_func(writer& w, cache::namespace_members const& members)
-    {
-        w.write("\nstatic int module_clear(PyObject* module) noexcept\n{\n");
-        {
-            writer::indent_guard g{w};
-
-            w.write(
-                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));\n\n");
-
-            w.write("if (!state)\n{\n");
-            {
-                writer::indent_guard gg{w};
-
-                w.write("return 0;\n");
-            }
-            w.write("}\n\n");
-
-            settings.filter.bind_each<write_ns_module_clear_member>(members.classes)(w);
-            settings.filter.bind_each<write_ns_module_clear_member>(members.interfaces)(
-                w);
-            settings.filter.bind_each<write_ns_module_clear_member>(members.structs)(w);
-
-            w.write("\nreturn 0;\n");
-        }
-        w.write("}\n\n");
     }
 
     /**
@@ -691,11 +505,11 @@ static PyModuleDef module_def
     = {PyModuleDef_HEAD_INIT,
        "%",
        module_doc,
-       sizeof(module_state),
+       0,
        nullptr,
        nullptr,
-       module_traverse,
-       module_clear,
+       nullptr,
+       nullptr,
        nullptr};
 
 )";
@@ -712,8 +526,6 @@ static PyModuleDef module_def
         w.write("\n// ----- % Initialization --------------------\n", ns);
 
         write_ns_module_doc_string(w, ns);
-        write_ns_module_traverse_func(w, members);
-        write_ns_module_clear_func(w, members);
         write_ns_module_def_struct(w, ns);
     }
 
@@ -742,7 +554,7 @@ static PyModuleDef module_def
             }
             w.write("}\n\n");
 
-            w.write("auto object_type = py::get_python_type<py::Object>();\n");
+            w.write("auto object_type = py::get_object_type();\n");
             w.write("if (!object_type)\n{\n");
             {
                 writer::indent_guard gg{w};
@@ -760,10 +572,6 @@ static PyModuleDef module_def
                 w.write("return nullptr;\n");
             }
             w.write("}\n\n");
-
-            w.write(
-                "auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));\n");
-            w.write("WINRT_ASSERT(state);\n\n");
 
             settings.filter.bind_each<write_ns_module_init_python_type>(
                 members.classes)(w);

@@ -6,48 +6,6 @@
 
 namespace py::cpp::Windows::UI::Notifications
 {
-    struct module_state
-    {
-        PyTypeObject* type_AdaptiveNotificationText;
-        PyTypeObject* type_BadgeNotification;
-        PyTypeObject* type_BadgeUpdateManager;
-        PyTypeObject* type_BadgeUpdateManagerForUser;
-        PyTypeObject* type_BadgeUpdater;
-        PyTypeObject* type_KnownAdaptiveNotificationHints;
-        PyTypeObject* type_KnownAdaptiveNotificationTextStyles;
-        PyTypeObject* type_KnownNotificationBindings;
-        PyTypeObject* type_Notification;
-        PyTypeObject* type_NotificationBinding;
-        PyTypeObject* type_NotificationData;
-        PyTypeObject* type_NotificationVisual;
-        PyTypeObject* type_ScheduledTileNotification;
-        PyTypeObject* type_ScheduledToastNotification;
-        PyTypeObject* type_ScheduledToastNotificationShowingEventArgs;
-        PyTypeObject* type_ShownTileNotification;
-        PyTypeObject* type_TileFlyoutNotification;
-        PyTypeObject* type_TileFlyoutUpdateManager;
-        PyTypeObject* type_TileFlyoutUpdater;
-        PyTypeObject* type_TileNotification;
-        PyTypeObject* type_TileUpdateManager;
-        PyTypeObject* type_TileUpdateManagerForUser;
-        PyTypeObject* type_TileUpdater;
-        PyTypeObject* type_ToastActivatedEventArgs;
-        PyTypeObject* type_ToastCollection;
-        PyTypeObject* type_ToastCollectionManager;
-        PyTypeObject* type_ToastDismissedEventArgs;
-        PyTypeObject* type_ToastFailedEventArgs;
-        PyTypeObject* type_ToastNotification;
-        PyTypeObject* type_ToastNotificationActionTriggerDetail;
-        PyTypeObject* type_ToastNotificationHistory;
-        PyTypeObject* type_ToastNotificationHistoryChangedTriggerDetail;
-        PyTypeObject* type_ToastNotificationManager;
-        PyTypeObject* type_ToastNotificationManagerForUser;
-        PyTypeObject* type_ToastNotifier;
-        PyTypeObject* type_UserNotification;
-        PyTypeObject* type_UserNotificationChangedEventArgs;
-        PyTypeObject* type_IAdaptiveNotificationContent;
-    };
-
     // ----- AdaptiveNotificationText class --------------------
     static constexpr const char* const type_name_AdaptiveNotificationText = "AdaptiveNotificationText";
 
@@ -8682,118 +8640,15 @@ namespace py::cpp::Windows::UI::Notifications
     PyDoc_STRVAR(module_doc, "Windows::UI::Notifications");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AdaptiveNotificationText);
-        Py_VISIT(state->type_BadgeNotification);
-        Py_VISIT(state->type_BadgeUpdateManager);
-        Py_VISIT(state->type_BadgeUpdateManagerForUser);
-        Py_VISIT(state->type_BadgeUpdater);
-        Py_VISIT(state->type_KnownAdaptiveNotificationHints);
-        Py_VISIT(state->type_KnownAdaptiveNotificationTextStyles);
-        Py_VISIT(state->type_KnownNotificationBindings);
-        Py_VISIT(state->type_Notification);
-        Py_VISIT(state->type_NotificationBinding);
-        Py_VISIT(state->type_NotificationData);
-        Py_VISIT(state->type_NotificationVisual);
-        Py_VISIT(state->type_ScheduledTileNotification);
-        Py_VISIT(state->type_ScheduledToastNotification);
-        Py_VISIT(state->type_ScheduledToastNotificationShowingEventArgs);
-        Py_VISIT(state->type_ShownTileNotification);
-        Py_VISIT(state->type_TileFlyoutNotification);
-        Py_VISIT(state->type_TileFlyoutUpdateManager);
-        Py_VISIT(state->type_TileFlyoutUpdater);
-        Py_VISIT(state->type_TileNotification);
-        Py_VISIT(state->type_TileUpdateManager);
-        Py_VISIT(state->type_TileUpdateManagerForUser);
-        Py_VISIT(state->type_TileUpdater);
-        Py_VISIT(state->type_ToastActivatedEventArgs);
-        Py_VISIT(state->type_ToastCollection);
-        Py_VISIT(state->type_ToastCollectionManager);
-        Py_VISIT(state->type_ToastDismissedEventArgs);
-        Py_VISIT(state->type_ToastFailedEventArgs);
-        Py_VISIT(state->type_ToastNotification);
-        Py_VISIT(state->type_ToastNotificationActionTriggerDetail);
-        Py_VISIT(state->type_ToastNotificationHistory);
-        Py_VISIT(state->type_ToastNotificationHistoryChangedTriggerDetail);
-        Py_VISIT(state->type_ToastNotificationManager);
-        Py_VISIT(state->type_ToastNotificationManagerForUser);
-        Py_VISIT(state->type_ToastNotifier);
-        Py_VISIT(state->type_UserNotification);
-        Py_VISIT(state->type_UserNotificationChangedEventArgs);
-        Py_VISIT(state->type_IAdaptiveNotificationContent);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AdaptiveNotificationText);
-        Py_CLEAR(state->type_BadgeNotification);
-        Py_CLEAR(state->type_BadgeUpdateManager);
-        Py_CLEAR(state->type_BadgeUpdateManagerForUser);
-        Py_CLEAR(state->type_BadgeUpdater);
-        Py_CLEAR(state->type_KnownAdaptiveNotificationHints);
-        Py_CLEAR(state->type_KnownAdaptiveNotificationTextStyles);
-        Py_CLEAR(state->type_KnownNotificationBindings);
-        Py_CLEAR(state->type_Notification);
-        Py_CLEAR(state->type_NotificationBinding);
-        Py_CLEAR(state->type_NotificationData);
-        Py_CLEAR(state->type_NotificationVisual);
-        Py_CLEAR(state->type_ScheduledTileNotification);
-        Py_CLEAR(state->type_ScheduledToastNotification);
-        Py_CLEAR(state->type_ScheduledToastNotificationShowingEventArgs);
-        Py_CLEAR(state->type_ShownTileNotification);
-        Py_CLEAR(state->type_TileFlyoutNotification);
-        Py_CLEAR(state->type_TileFlyoutUpdateManager);
-        Py_CLEAR(state->type_TileFlyoutUpdater);
-        Py_CLEAR(state->type_TileNotification);
-        Py_CLEAR(state->type_TileUpdateManager);
-        Py_CLEAR(state->type_TileUpdateManagerForUser);
-        Py_CLEAR(state->type_TileUpdater);
-        Py_CLEAR(state->type_ToastActivatedEventArgs);
-        Py_CLEAR(state->type_ToastCollection);
-        Py_CLEAR(state->type_ToastCollectionManager);
-        Py_CLEAR(state->type_ToastDismissedEventArgs);
-        Py_CLEAR(state->type_ToastFailedEventArgs);
-        Py_CLEAR(state->type_ToastNotification);
-        Py_CLEAR(state->type_ToastNotificationActionTriggerDetail);
-        Py_CLEAR(state->type_ToastNotificationHistory);
-        Py_CLEAR(state->type_ToastNotificationHistoryChangedTriggerDetail);
-        Py_CLEAR(state->type_ToastNotificationManager);
-        Py_CLEAR(state->type_ToastNotificationManagerForUser);
-        Py_CLEAR(state->type_ToastNotifier);
-        Py_CLEAR(state->type_UserNotification);
-        Py_CLEAR(state->type_UserNotificationChangedEventArgs);
-        Py_CLEAR(state->type_IAdaptiveNotificationContent);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Notifications",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Notifications
@@ -8809,7 +8664,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -8822,35 +8677,47 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AdaptiveNotificationText = py::register_python_type(module.get(), type_name_AdaptiveNotificationText, &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr);
-    if (!state->type_AdaptiveNotificationText)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AdaptiveNotificationText, &type_spec_AdaptiveNotificationText, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AdaptiveNotificationText, &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BadgeNotification = py::register_python_type(module.get(), type_name_BadgeNotification, &type_spec_BadgeNotification, object_bases.get(), nullptr);
-    if (!state->type_BadgeNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BadgeNotification, &type_spec_BadgeNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BadgeNotification, &type_spec_BadgeNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BadgeUpdateManager = py::register_python_type(module.get(), type_name_BadgeUpdateManager, &type_spec_BadgeUpdateManager, object_bases.get(), nullptr);
-    if (!state->type_BadgeUpdateManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BadgeUpdateManager, &type_spec_BadgeUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BadgeUpdateManager, &type_spec_BadgeUpdateManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BadgeUpdateManagerForUser = py::register_python_type(module.get(), type_name_BadgeUpdateManagerForUser, &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_BadgeUpdateManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BadgeUpdateManagerForUser, &type_spec_BadgeUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BadgeUpdateManagerForUser, &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BadgeUpdater = py::register_python_type(module.get(), type_name_BadgeUpdater, &type_spec_BadgeUpdater, object_bases.get(), nullptr);
-    if (!state->type_BadgeUpdater)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BadgeUpdater, &type_spec_BadgeUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BadgeUpdater, &type_spec_BadgeUpdater, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8861,8 +8728,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownAdaptiveNotificationHints = py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationHints, &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get()));
-    if (!state->type_KnownAdaptiveNotificationHints)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationHints, &type_spec_KnownAdaptiveNotificationHints, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationHints, &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8873,8 +8743,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownAdaptiveNotificationTextStyles = py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationTextStyles, &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get()));
-    if (!state->type_KnownAdaptiveNotificationTextStyles)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationTextStyles, &type_spec_KnownAdaptiveNotificationTextStyles, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationTextStyles, &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -8885,152 +8758,227 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownNotificationBindings = py::register_python_type(module.get(), type_name_KnownNotificationBindings, &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get()));
-    if (!state->type_KnownNotificationBindings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownNotificationBindings, &type_spec_KnownNotificationBindings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownNotificationBindings, &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Notification = py::register_python_type(module.get(), type_name_Notification, &type_spec_Notification, object_bases.get(), nullptr);
-    if (!state->type_Notification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Notification, &type_spec_Notification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Notification, &type_spec_Notification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NotificationBinding = py::register_python_type(module.get(), type_name_NotificationBinding, &type_spec_NotificationBinding, object_bases.get(), nullptr);
-    if (!state->type_NotificationBinding)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NotificationBinding, &type_spec_NotificationBinding, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NotificationBinding, &type_spec_NotificationBinding, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NotificationData = py::register_python_type(module.get(), type_name_NotificationData, &type_spec_NotificationData, object_bases.get(), nullptr);
-    if (!state->type_NotificationData)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NotificationData, &type_spec_NotificationData, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NotificationData, &type_spec_NotificationData, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NotificationVisual = py::register_python_type(module.get(), type_name_NotificationVisual, &type_spec_NotificationVisual, object_bases.get(), nullptr);
-    if (!state->type_NotificationVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NotificationVisual, &type_spec_NotificationVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NotificationVisual, &type_spec_NotificationVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScheduledTileNotification = py::register_python_type(module.get(), type_name_ScheduledTileNotification, &type_spec_ScheduledTileNotification, object_bases.get(), nullptr);
-    if (!state->type_ScheduledTileNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScheduledTileNotification, &type_spec_ScheduledTileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScheduledTileNotification, &type_spec_ScheduledTileNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScheduledToastNotification = py::register_python_type(module.get(), type_name_ScheduledToastNotification, &type_spec_ScheduledToastNotification, object_bases.get(), nullptr);
-    if (!state->type_ScheduledToastNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScheduledToastNotification, &type_spec_ScheduledToastNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScheduledToastNotification, &type_spec_ScheduledToastNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScheduledToastNotificationShowingEventArgs = py::register_python_type(module.get(), type_name_ScheduledToastNotificationShowingEventArgs, &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ScheduledToastNotificationShowingEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScheduledToastNotificationShowingEventArgs, &type_spec_ScheduledToastNotificationShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScheduledToastNotificationShowingEventArgs, &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShownTileNotification = py::register_python_type(module.get(), type_name_ShownTileNotification, &type_spec_ShownTileNotification, object_bases.get(), nullptr);
-    if (!state->type_ShownTileNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShownTileNotification, &type_spec_ShownTileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShownTileNotification, &type_spec_ShownTileNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileFlyoutNotification = py::register_python_type(module.get(), type_name_TileFlyoutNotification, &type_spec_TileFlyoutNotification, object_bases.get(), nullptr);
-    if (!state->type_TileFlyoutNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileFlyoutNotification, &type_spec_TileFlyoutNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileFlyoutNotification, &type_spec_TileFlyoutNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileFlyoutUpdateManager = py::register_python_type(module.get(), type_name_TileFlyoutUpdateManager, &type_spec_TileFlyoutUpdateManager, object_bases.get(), nullptr);
-    if (!state->type_TileFlyoutUpdateManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdateManager, &type_spec_TileFlyoutUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdateManager, &type_spec_TileFlyoutUpdateManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileFlyoutUpdater = py::register_python_type(module.get(), type_name_TileFlyoutUpdater, &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr);
-    if (!state->type_TileFlyoutUpdater)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdater, &type_spec_TileFlyoutUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdater, &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileNotification = py::register_python_type(module.get(), type_name_TileNotification, &type_spec_TileNotification, object_bases.get(), nullptr);
-    if (!state->type_TileNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileNotification, &type_spec_TileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileNotification, &type_spec_TileNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileUpdateManager = py::register_python_type(module.get(), type_name_TileUpdateManager, &type_spec_TileUpdateManager, object_bases.get(), nullptr);
-    if (!state->type_TileUpdateManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileUpdateManager, &type_spec_TileUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileUpdateManager, &type_spec_TileUpdateManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileUpdateManagerForUser = py::register_python_type(module.get(), type_name_TileUpdateManagerForUser, &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_TileUpdateManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileUpdateManagerForUser, &type_spec_TileUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileUpdateManagerForUser, &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TileUpdater = py::register_python_type(module.get(), type_name_TileUpdater, &type_spec_TileUpdater, object_bases.get(), nullptr);
-    if (!state->type_TileUpdater)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TileUpdater, &type_spec_TileUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TileUpdater, &type_spec_TileUpdater, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastActivatedEventArgs = py::register_python_type(module.get(), type_name_ToastActivatedEventArgs, &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ToastActivatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastActivatedEventArgs, &type_spec_ToastActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastActivatedEventArgs, &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastCollection = py::register_python_type(module.get(), type_name_ToastCollection, &type_spec_ToastCollection, object_bases.get(), nullptr);
-    if (!state->type_ToastCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastCollection, &type_spec_ToastCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastCollection, &type_spec_ToastCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastCollectionManager = py::register_python_type(module.get(), type_name_ToastCollectionManager, &type_spec_ToastCollectionManager, object_bases.get(), nullptr);
-    if (!state->type_ToastCollectionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastCollectionManager, &type_spec_ToastCollectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastCollectionManager, &type_spec_ToastCollectionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastDismissedEventArgs = py::register_python_type(module.get(), type_name_ToastDismissedEventArgs, &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ToastDismissedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastDismissedEventArgs, &type_spec_ToastDismissedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastDismissedEventArgs, &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastFailedEventArgs = py::register_python_type(module.get(), type_name_ToastFailedEventArgs, &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ToastFailedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastFailedEventArgs, &type_spec_ToastFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastFailedEventArgs, &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotification = py::register_python_type(module.get(), type_name_ToastNotification, &type_spec_ToastNotification, object_bases.get(), nullptr);
-    if (!state->type_ToastNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotification, &type_spec_ToastNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotification, &type_spec_ToastNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationActionTriggerDetail = py::register_python_type(module.get(), type_name_ToastNotificationActionTriggerDetail, &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationActionTriggerDetail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTriggerDetail, &type_spec_ToastNotificationActionTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTriggerDetail, &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationHistory = py::register_python_type(module.get(), type_name_ToastNotificationHistory, &type_spec_ToastNotificationHistory, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationHistory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistory, &type_spec_ToastNotificationHistory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistory, &type_spec_ToastNotificationHistory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationHistoryChangedTriggerDetail = py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTriggerDetail, &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationHistoryChangedTriggerDetail)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTriggerDetail, &type_spec_ToastNotificationHistoryChangedTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTriggerDetail, &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -9041,916 +8989,60 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Notifications(void) noexcept
         return nullptr;
     }
 
-    state->type_ToastNotificationManager = py::register_python_type(module.get(), type_name_ToastNotificationManager, &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get()));
-    if (!state->type_ToastNotificationManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationManager, &type_spec_ToastNotificationManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationManager, &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationManagerForUser = py::register_python_type(module.get(), type_name_ToastNotificationManagerForUser, &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationManagerForUser)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationManagerForUser, &type_spec_ToastNotificationManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationManagerForUser, &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotifier = py::register_python_type(module.get(), type_name_ToastNotifier, &type_spec_ToastNotifier, object_bases.get(), nullptr);
-    if (!state->type_ToastNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotifier, &type_spec_ToastNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotifier, &type_spec_ToastNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserNotification = py::register_python_type(module.get(), type_name_UserNotification, &type_spec_UserNotification, object_bases.get(), nullptr);
-    if (!state->type_UserNotification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserNotification, &type_spec_UserNotification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserNotification, &type_spec_UserNotification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserNotificationChangedEventArgs = py::register_python_type(module.get(), type_name_UserNotificationChangedEventArgs, &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UserNotificationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserNotificationChangedEventArgs, &type_spec_UserNotificationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserNotificationChangedEventArgs, &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAdaptiveNotificationContent = py::register_python_type(module.get(), type_name_IAdaptiveNotificationContent, &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr);
-    if (!state->type_IAdaptiveNotificationContent)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAdaptiveNotificationContent, &type_spec_IAdaptiveNotificationContent, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAdaptiveNotificationContent, &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::AdaptiveNotificationText>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AdaptiveNotificationText;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::AdaptiveNotificationText is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::BadgeNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BadgeNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::BadgeNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BadgeUpdateManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::BadgeUpdateManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BadgeUpdateManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::BadgeUpdater>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BadgeUpdater;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::BadgeUpdater is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownAdaptiveNotificationHints;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownAdaptiveNotificationTextStyles;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownNotificationBindings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::KnownNotificationBindings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::Notification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Notification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::Notification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::NotificationBinding>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NotificationBinding;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::NotificationBinding is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::NotificationData>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NotificationData;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::NotificationData is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::NotificationVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NotificationVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::NotificationVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ScheduledTileNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScheduledTileNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ScheduledTileNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ScheduledToastNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScheduledToastNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ScheduledToastNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScheduledToastNotificationShowingEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ShownTileNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShownTileNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ShownTileNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileFlyoutNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileFlyoutNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileFlyoutNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileFlyoutUpdateManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileFlyoutUpdateManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileFlyoutUpdater;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileFlyoutUpdater is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileUpdateManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileUpdateManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileUpdateManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileUpdateManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileUpdateManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::TileUpdater>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TileUpdater;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::TileUpdater is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastActivatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastActivatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastCollectionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastCollectionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastCollectionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastDismissedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastDismissedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastFailedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastFailedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationActionTriggerDetail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationHistory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotificationHistory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationHistoryChangedTriggerDetail;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotificationManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotificationManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationManagerForUser;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotificationManagerForUser is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::ToastNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::ToastNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::UserNotification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserNotification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::UserNotification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserNotificationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Notifications;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Notifications");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAdaptiveNotificationContent;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Notifications::IAdaptiveNotificationContent is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

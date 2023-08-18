@@ -211,536 +211,625 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "AddDeleteThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BackEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BackEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "BackEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "BasicConnectedAnimationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "BeginStoryboard";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::BounceEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BounceEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "BounceEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CircleEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CircleEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "CircleEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ColorAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ColorAnimationUsingKeyFrames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ColorKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ColorKeyFrameCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "CommonNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ConnectedAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ConnectedAnimationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ConnectedAnimationService";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ContentThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ContinuumNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::CubicEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CubicEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "CubicEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DirectConnectedAnimationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DiscreteColorKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DiscreteDoubleKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DiscreteObjectKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DiscretePointKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DoubleAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DoubleAnimationUsingKeyFrames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DoubleKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DoubleKeyFrameCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DragItemThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DragOverThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DrillInNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DrillInThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DrillOutThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "DropTargetItemThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EasingColorKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EasingDoubleKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EasingFunctionBase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EasingPointKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EdgeUIThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ElasticEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ElasticEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ElasticEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EntranceNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "EntranceThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ExponentialEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "FadeInThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "FadeOutThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "GravityConnectedAnimationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "KeySpline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "KeyTimeHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "LinearColorKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "LinearDoubleKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "LinearPointKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "NavigationThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "NavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ObjectAnimationUsingKeyFrames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ObjectKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ObjectKeyFrameCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PaneThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointAnimationUsingKeyFrames";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointKeyFrameCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointerDownThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PointerUpThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PopInThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PopOutThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PopupThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::PowerEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PowerEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "PowerEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "QuadraticEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuarticEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuarticEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "QuarticEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::QuinticEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuinticEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "QuinticEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "ReorderThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "RepeatBehaviorHelper";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "RepositionThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "RepositionThemeTransition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SineEase>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SineEase>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SineEase";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SlideNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SplineColorKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SplineDoubleKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SplinePointKeyFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SplitCloseThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SplitOpenThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Storyboard>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Storyboard>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "Storyboard";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SuppressNavigationTransitionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SwipeBackThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "SwipeHintThemeAnimation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "Timeline";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "TimelineCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "Transition";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "TransitionCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "KeyTime";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>
+    struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
+        static constexpr const char* type_name = "RepeatBehavior";
     };
 }

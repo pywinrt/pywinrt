@@ -6,12 +6,6 @@
 
 namespace py::cpp::Windows::System::Threading::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_PreallocatedWorkItem;
-        PyTypeObject* type_SignalNotifier;
-    };
-
     // ----- PreallocatedWorkItem class --------------------
     static constexpr const char* const type_name_PreallocatedWorkItem = "PreallocatedWorkItem";
 
@@ -426,46 +420,15 @@ namespace py::cpp::Windows::System::Threading::Core
     PyDoc_STRVAR(module_doc, "Windows::System::Threading::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_PreallocatedWorkItem);
-        Py_VISIT(state->type_SignalNotifier);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_PreallocatedWorkItem);
-        Py_CLEAR(state->type_SignalNotifier);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Threading_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Threading::Core
@@ -481,7 +444,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Threading_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -494,67 +457,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Threading_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_PreallocatedWorkItem = py::register_python_type(module.get(), type_name_PreallocatedWorkItem, &type_spec_PreallocatedWorkItem, object_bases.get(), nullptr);
-    if (!state->type_PreallocatedWorkItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PreallocatedWorkItem, &type_spec_PreallocatedWorkItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PreallocatedWorkItem, &type_spec_PreallocatedWorkItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SignalNotifier = py::register_python_type(module.get(), type_name_SignalNotifier, &type_spec_SignalNotifier, object_bases.get(), nullptr);
-    if (!state->type_SignalNotifier)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SignalNotifier, &type_spec_SignalNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SignalNotifier, &type_spec_SignalNotifier, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Threading::Core::PreallocatedWorkItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Threading::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Threading::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PreallocatedWorkItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Threading::Core::PreallocatedWorkItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Threading::Core::SignalNotifier>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Threading::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Threading::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SignalNotifier;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Threading::Core::SignalNotifier is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

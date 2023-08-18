@@ -6,25 +6,6 @@
 
 namespace py::cpp::Windows::Media::Devices::Core
 {
-    struct module_state
-    {
-        PyTypeObject* type_CameraIntrinsics;
-        PyTypeObject* type_DepthCorrelatedCoordinateMapper;
-        PyTypeObject* type_FrameControlCapabilities;
-        PyTypeObject* type_FrameController;
-        PyTypeObject* type_FrameExposureCapabilities;
-        PyTypeObject* type_FrameExposureCompensationCapabilities;
-        PyTypeObject* type_FrameExposureCompensationControl;
-        PyTypeObject* type_FrameExposureControl;
-        PyTypeObject* type_FrameFlashCapabilities;
-        PyTypeObject* type_FrameFlashControl;
-        PyTypeObject* type_FrameFocusCapabilities;
-        PyTypeObject* type_FrameFocusControl;
-        PyTypeObject* type_FrameIsoSpeedCapabilities;
-        PyTypeObject* type_FrameIsoSpeedControl;
-        PyTypeObject* type_VariablePhotoSequenceController;
-    };
-
     // ----- CameraIntrinsics class --------------------
     static constexpr const char* const type_name_CameraIntrinsics = "CameraIntrinsics";
 
@@ -3120,72 +3101,15 @@ namespace py::cpp::Windows::Media::Devices::Core
     PyDoc_STRVAR(module_doc, "Windows::Media::Devices::Core");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_CameraIntrinsics);
-        Py_VISIT(state->type_DepthCorrelatedCoordinateMapper);
-        Py_VISIT(state->type_FrameControlCapabilities);
-        Py_VISIT(state->type_FrameController);
-        Py_VISIT(state->type_FrameExposureCapabilities);
-        Py_VISIT(state->type_FrameExposureCompensationCapabilities);
-        Py_VISIT(state->type_FrameExposureCompensationControl);
-        Py_VISIT(state->type_FrameExposureControl);
-        Py_VISIT(state->type_FrameFlashCapabilities);
-        Py_VISIT(state->type_FrameFlashControl);
-        Py_VISIT(state->type_FrameFocusCapabilities);
-        Py_VISIT(state->type_FrameFocusControl);
-        Py_VISIT(state->type_FrameIsoSpeedCapabilities);
-        Py_VISIT(state->type_FrameIsoSpeedControl);
-        Py_VISIT(state->type_VariablePhotoSequenceController);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_CameraIntrinsics);
-        Py_CLEAR(state->type_DepthCorrelatedCoordinateMapper);
-        Py_CLEAR(state->type_FrameControlCapabilities);
-        Py_CLEAR(state->type_FrameController);
-        Py_CLEAR(state->type_FrameExposureCapabilities);
-        Py_CLEAR(state->type_FrameExposureCompensationCapabilities);
-        Py_CLEAR(state->type_FrameExposureCompensationControl);
-        Py_CLEAR(state->type_FrameExposureControl);
-        Py_CLEAR(state->type_FrameFlashCapabilities);
-        Py_CLEAR(state->type_FrameFlashControl);
-        Py_CLEAR(state->type_FrameFocusCapabilities);
-        Py_CLEAR(state->type_FrameFocusControl);
-        Py_CLEAR(state->type_FrameIsoSpeedCapabilities);
-        Py_CLEAR(state->type_FrameIsoSpeedControl);
-        Py_CLEAR(state->type_VariablePhotoSequenceController);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Media_Devices_Core",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Media::Devices::Core
@@ -3201,7 +3125,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices_Core(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3214,444 +3138,141 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices_Core(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_CameraIntrinsics = py::register_python_type(module.get(), type_name_CameraIntrinsics, &type_spec_CameraIntrinsics, object_bases.get(), nullptr);
-    if (!state->type_CameraIntrinsics)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CameraIntrinsics, &type_spec_CameraIntrinsics, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CameraIntrinsics, &type_spec_CameraIntrinsics, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DepthCorrelatedCoordinateMapper = py::register_python_type(module.get(), type_name_DepthCorrelatedCoordinateMapper, &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), nullptr);
-    if (!state->type_DepthCorrelatedCoordinateMapper)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DepthCorrelatedCoordinateMapper, &type_spec_DepthCorrelatedCoordinateMapper, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DepthCorrelatedCoordinateMapper, &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameControlCapabilities = py::register_python_type(module.get(), type_name_FrameControlCapabilities, &type_spec_FrameControlCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameControlCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameControlCapabilities, &type_spec_FrameControlCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameControlCapabilities, &type_spec_FrameControlCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameController = py::register_python_type(module.get(), type_name_FrameController, &type_spec_FrameController, object_bases.get(), nullptr);
-    if (!state->type_FrameController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameController, &type_spec_FrameController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameController, &type_spec_FrameController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameExposureCapabilities = py::register_python_type(module.get(), type_name_FrameExposureCapabilities, &type_spec_FrameExposureCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameExposureCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameExposureCapabilities, &type_spec_FrameExposureCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameExposureCapabilities, &type_spec_FrameExposureCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameExposureCompensationCapabilities = py::register_python_type(module.get(), type_name_FrameExposureCompensationCapabilities, &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameExposureCompensationCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameExposureCompensationCapabilities, &type_spec_FrameExposureCompensationCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameExposureCompensationCapabilities, &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameExposureCompensationControl = py::register_python_type(module.get(), type_name_FrameExposureCompensationControl, &type_spec_FrameExposureCompensationControl, object_bases.get(), nullptr);
-    if (!state->type_FrameExposureCompensationControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameExposureCompensationControl, &type_spec_FrameExposureCompensationControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameExposureCompensationControl, &type_spec_FrameExposureCompensationControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameExposureControl = py::register_python_type(module.get(), type_name_FrameExposureControl, &type_spec_FrameExposureControl, object_bases.get(), nullptr);
-    if (!state->type_FrameExposureControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameExposureControl, &type_spec_FrameExposureControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameExposureControl, &type_spec_FrameExposureControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameFlashCapabilities = py::register_python_type(module.get(), type_name_FrameFlashCapabilities, &type_spec_FrameFlashCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameFlashCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameFlashCapabilities, &type_spec_FrameFlashCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameFlashCapabilities, &type_spec_FrameFlashCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameFlashControl = py::register_python_type(module.get(), type_name_FrameFlashControl, &type_spec_FrameFlashControl, object_bases.get(), nullptr);
-    if (!state->type_FrameFlashControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameFlashControl, &type_spec_FrameFlashControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameFlashControl, &type_spec_FrameFlashControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameFocusCapabilities = py::register_python_type(module.get(), type_name_FrameFocusCapabilities, &type_spec_FrameFocusCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameFocusCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameFocusCapabilities, &type_spec_FrameFocusCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameFocusCapabilities, &type_spec_FrameFocusCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameFocusControl = py::register_python_type(module.get(), type_name_FrameFocusControl, &type_spec_FrameFocusControl, object_bases.get(), nullptr);
-    if (!state->type_FrameFocusControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameFocusControl, &type_spec_FrameFocusControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameFocusControl, &type_spec_FrameFocusControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameIsoSpeedCapabilities = py::register_python_type(module.get(), type_name_FrameIsoSpeedCapabilities, &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), nullptr);
-    if (!state->type_FrameIsoSpeedCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameIsoSpeedCapabilities, &type_spec_FrameIsoSpeedCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameIsoSpeedCapabilities, &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_FrameIsoSpeedControl = py::register_python_type(module.get(), type_name_FrameIsoSpeedControl, &type_spec_FrameIsoSpeedControl, object_bases.get(), nullptr);
-    if (!state->type_FrameIsoSpeedControl)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_FrameIsoSpeedControl, &type_spec_FrameIsoSpeedControl, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_FrameIsoSpeedControl, &type_spec_FrameIsoSpeedControl, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VariablePhotoSequenceController = py::register_python_type(module.get(), type_name_VariablePhotoSequenceController, &type_spec_VariablePhotoSequenceController, object_bases.get(), nullptr);
-    if (!state->type_VariablePhotoSequenceController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VariablePhotoSequenceController, &type_spec_VariablePhotoSequenceController, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VariablePhotoSequenceController, &type_spec_VariablePhotoSequenceController, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::CameraIntrinsics>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CameraIntrinsics;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::CameraIntrinsics is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DepthCorrelatedCoordinateMapper;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameControlCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameControlCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameExposureCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameExposureCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameExposureCompensationCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameExposureCompensationControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameExposureControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameExposureControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameFlashCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameFlashCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameFlashControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameFlashControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameFocusCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameFocusCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameFocusControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameFocusControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameIsoSpeedCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_FrameIsoSpeedControl;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Media::Devices::Core;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Media::Devices::Core");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VariablePhotoSequenceController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

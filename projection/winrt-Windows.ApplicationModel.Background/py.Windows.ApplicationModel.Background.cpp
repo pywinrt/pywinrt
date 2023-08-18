@@ -6,87 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Background
 {
-    struct module_state
-    {
-        PyTypeObject* type_ActivitySensorTrigger;
-        PyTypeObject* type_AlarmApplicationManager;
-        PyTypeObject* type_AppBroadcastTrigger;
-        PyTypeObject* type_AppBroadcastTriggerProviderInfo;
-        PyTypeObject* type_ApplicationTrigger;
-        PyTypeObject* type_ApplicationTriggerDetails;
-        PyTypeObject* type_AppointmentStoreNotificationTrigger;
-        PyTypeObject* type_BackgroundExecutionManager;
-        PyTypeObject* type_BackgroundTaskBuilder;
-        PyTypeObject* type_BackgroundTaskCompletedEventArgs;
-        PyTypeObject* type_BackgroundTaskDeferral;
-        PyTypeObject* type_BackgroundTaskProgressEventArgs;
-        PyTypeObject* type_BackgroundTaskRegistration;
-        PyTypeObject* type_BackgroundTaskRegistrationGroup;
-        PyTypeObject* type_BackgroundWorkCost;
-        PyTypeObject* type_BluetoothLEAdvertisementPublisherTrigger;
-        PyTypeObject* type_BluetoothLEAdvertisementWatcherTrigger;
-        PyTypeObject* type_CachedFileUpdaterTrigger;
-        PyTypeObject* type_CachedFileUpdaterTriggerDetails;
-        PyTypeObject* type_ChatMessageNotificationTrigger;
-        PyTypeObject* type_ChatMessageReceivedNotificationTrigger;
-        PyTypeObject* type_CommunicationBlockingAppSetAsActiveTrigger;
-        PyTypeObject* type_ContactStoreNotificationTrigger;
-        PyTypeObject* type_ContentPrefetchTrigger;
-        PyTypeObject* type_ConversationalAgentTrigger;
-        PyTypeObject* type_CustomSystemEventTrigger;
-        PyTypeObject* type_DeviceConnectionChangeTrigger;
-        PyTypeObject* type_DeviceManufacturerNotificationTrigger;
-        PyTypeObject* type_DeviceServicingTrigger;
-        PyTypeObject* type_DeviceUseTrigger;
-        PyTypeObject* type_DeviceWatcherTrigger;
-        PyTypeObject* type_EmailStoreNotificationTrigger;
-        PyTypeObject* type_GattCharacteristicNotificationTrigger;
-        PyTypeObject* type_GattServiceProviderTrigger;
-        PyTypeObject* type_GattServiceProviderTriggerResult;
-        PyTypeObject* type_GeovisitTrigger;
-        PyTypeObject* type_LocationTrigger;
-        PyTypeObject* type_MaintenanceTrigger;
-        PyTypeObject* type_MediaProcessingTrigger;
-        PyTypeObject* type_MobileBroadbandDeviceServiceNotificationTrigger;
-        PyTypeObject* type_MobileBroadbandPcoDataChangeTrigger;
-        PyTypeObject* type_MobileBroadbandPinLockStateChangeTrigger;
-        PyTypeObject* type_MobileBroadbandRadioStateChangeTrigger;
-        PyTypeObject* type_MobileBroadbandRegistrationStateChangeTrigger;
-        PyTypeObject* type_NetworkOperatorDataUsageTrigger;
-        PyTypeObject* type_NetworkOperatorHotspotAuthenticationTrigger;
-        PyTypeObject* type_NetworkOperatorNotificationTrigger;
-        PyTypeObject* type_PaymentAppCanMakePaymentTrigger;
-        PyTypeObject* type_PhoneTrigger;
-        PyTypeObject* type_PushNotificationTrigger;
-        PyTypeObject* type_RcsEndUserMessageAvailableTrigger;
-        PyTypeObject* type_RfcommConnectionTrigger;
-        PyTypeObject* type_SecondaryAuthenticationFactorAuthenticationTrigger;
-        PyTypeObject* type_SensorDataThresholdTrigger;
-        PyTypeObject* type_SmartCardTrigger;
-        PyTypeObject* type_SmsMessageReceivedTrigger;
-        PyTypeObject* type_SocketActivityTrigger;
-        PyTypeObject* type_StorageLibraryChangeTrackerTrigger;
-        PyTypeObject* type_StorageLibraryContentChangedTrigger;
-        PyTypeObject* type_SystemCondition;
-        PyTypeObject* type_SystemTrigger;
-        PyTypeObject* type_TetheringEntitlementCheckTrigger;
-        PyTypeObject* type_TimeTrigger;
-        PyTypeObject* type_ToastNotificationActionTrigger;
-        PyTypeObject* type_ToastNotificationHistoryChangedTrigger;
-        PyTypeObject* type_UserNotificationChangedTrigger;
-        PyTypeObject* type_WiFiOnDemandHotspotConnectTrigger;
-        PyTypeObject* type_WiFiOnDemandHotspotUpdateMetadataTrigger;
-        PyTypeObject* type_IBackgroundCondition;
-        PyTypeObject* type_IBackgroundTask;
-        PyTypeObject* type_IBackgroundTaskInstance;
-        PyTypeObject* type_IBackgroundTaskInstance2;
-        PyTypeObject* type_IBackgroundTaskInstance4;
-        PyTypeObject* type_IBackgroundTaskRegistration;
-        PyTypeObject* type_IBackgroundTaskRegistration2;
-        PyTypeObject* type_IBackgroundTaskRegistration3;
-        PyTypeObject* type_IBackgroundTrigger;
-    };
-
     // ----- ActivitySensorTrigger class --------------------
     static constexpr const char* const type_name_ActivitySensorTrigger = "ActivitySensorTrigger";
 
@@ -11695,196 +11614,15 @@ namespace py::cpp::Windows::ApplicationModel::Background
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Background");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_ActivitySensorTrigger);
-        Py_VISIT(state->type_AlarmApplicationManager);
-        Py_VISIT(state->type_AppBroadcastTrigger);
-        Py_VISIT(state->type_AppBroadcastTriggerProviderInfo);
-        Py_VISIT(state->type_ApplicationTrigger);
-        Py_VISIT(state->type_ApplicationTriggerDetails);
-        Py_VISIT(state->type_AppointmentStoreNotificationTrigger);
-        Py_VISIT(state->type_BackgroundExecutionManager);
-        Py_VISIT(state->type_BackgroundTaskBuilder);
-        Py_VISIT(state->type_BackgroundTaskCompletedEventArgs);
-        Py_VISIT(state->type_BackgroundTaskDeferral);
-        Py_VISIT(state->type_BackgroundTaskProgressEventArgs);
-        Py_VISIT(state->type_BackgroundTaskRegistration);
-        Py_VISIT(state->type_BackgroundTaskRegistrationGroup);
-        Py_VISIT(state->type_BackgroundWorkCost);
-        Py_VISIT(state->type_BluetoothLEAdvertisementPublisherTrigger);
-        Py_VISIT(state->type_BluetoothLEAdvertisementWatcherTrigger);
-        Py_VISIT(state->type_CachedFileUpdaterTrigger);
-        Py_VISIT(state->type_CachedFileUpdaterTriggerDetails);
-        Py_VISIT(state->type_ChatMessageNotificationTrigger);
-        Py_VISIT(state->type_ChatMessageReceivedNotificationTrigger);
-        Py_VISIT(state->type_CommunicationBlockingAppSetAsActiveTrigger);
-        Py_VISIT(state->type_ContactStoreNotificationTrigger);
-        Py_VISIT(state->type_ContentPrefetchTrigger);
-        Py_VISIT(state->type_ConversationalAgentTrigger);
-        Py_VISIT(state->type_CustomSystemEventTrigger);
-        Py_VISIT(state->type_DeviceConnectionChangeTrigger);
-        Py_VISIT(state->type_DeviceManufacturerNotificationTrigger);
-        Py_VISIT(state->type_DeviceServicingTrigger);
-        Py_VISIT(state->type_DeviceUseTrigger);
-        Py_VISIT(state->type_DeviceWatcherTrigger);
-        Py_VISIT(state->type_EmailStoreNotificationTrigger);
-        Py_VISIT(state->type_GattCharacteristicNotificationTrigger);
-        Py_VISIT(state->type_GattServiceProviderTrigger);
-        Py_VISIT(state->type_GattServiceProviderTriggerResult);
-        Py_VISIT(state->type_GeovisitTrigger);
-        Py_VISIT(state->type_LocationTrigger);
-        Py_VISIT(state->type_MaintenanceTrigger);
-        Py_VISIT(state->type_MediaProcessingTrigger);
-        Py_VISIT(state->type_MobileBroadbandDeviceServiceNotificationTrigger);
-        Py_VISIT(state->type_MobileBroadbandPcoDataChangeTrigger);
-        Py_VISIT(state->type_MobileBroadbandPinLockStateChangeTrigger);
-        Py_VISIT(state->type_MobileBroadbandRadioStateChangeTrigger);
-        Py_VISIT(state->type_MobileBroadbandRegistrationStateChangeTrigger);
-        Py_VISIT(state->type_NetworkOperatorDataUsageTrigger);
-        Py_VISIT(state->type_NetworkOperatorHotspotAuthenticationTrigger);
-        Py_VISIT(state->type_NetworkOperatorNotificationTrigger);
-        Py_VISIT(state->type_PaymentAppCanMakePaymentTrigger);
-        Py_VISIT(state->type_PhoneTrigger);
-        Py_VISIT(state->type_PushNotificationTrigger);
-        Py_VISIT(state->type_RcsEndUserMessageAvailableTrigger);
-        Py_VISIT(state->type_RfcommConnectionTrigger);
-        Py_VISIT(state->type_SecondaryAuthenticationFactorAuthenticationTrigger);
-        Py_VISIT(state->type_SensorDataThresholdTrigger);
-        Py_VISIT(state->type_SmartCardTrigger);
-        Py_VISIT(state->type_SmsMessageReceivedTrigger);
-        Py_VISIT(state->type_SocketActivityTrigger);
-        Py_VISIT(state->type_StorageLibraryChangeTrackerTrigger);
-        Py_VISIT(state->type_StorageLibraryContentChangedTrigger);
-        Py_VISIT(state->type_SystemCondition);
-        Py_VISIT(state->type_SystemTrigger);
-        Py_VISIT(state->type_TetheringEntitlementCheckTrigger);
-        Py_VISIT(state->type_TimeTrigger);
-        Py_VISIT(state->type_ToastNotificationActionTrigger);
-        Py_VISIT(state->type_ToastNotificationHistoryChangedTrigger);
-        Py_VISIT(state->type_UserNotificationChangedTrigger);
-        Py_VISIT(state->type_WiFiOnDemandHotspotConnectTrigger);
-        Py_VISIT(state->type_WiFiOnDemandHotspotUpdateMetadataTrigger);
-        Py_VISIT(state->type_IBackgroundCondition);
-        Py_VISIT(state->type_IBackgroundTask);
-        Py_VISIT(state->type_IBackgroundTaskInstance);
-        Py_VISIT(state->type_IBackgroundTaskInstance2);
-        Py_VISIT(state->type_IBackgroundTaskInstance4);
-        Py_VISIT(state->type_IBackgroundTaskRegistration);
-        Py_VISIT(state->type_IBackgroundTaskRegistration2);
-        Py_VISIT(state->type_IBackgroundTaskRegistration3);
-        Py_VISIT(state->type_IBackgroundTrigger);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_ActivitySensorTrigger);
-        Py_CLEAR(state->type_AlarmApplicationManager);
-        Py_CLEAR(state->type_AppBroadcastTrigger);
-        Py_CLEAR(state->type_AppBroadcastTriggerProviderInfo);
-        Py_CLEAR(state->type_ApplicationTrigger);
-        Py_CLEAR(state->type_ApplicationTriggerDetails);
-        Py_CLEAR(state->type_AppointmentStoreNotificationTrigger);
-        Py_CLEAR(state->type_BackgroundExecutionManager);
-        Py_CLEAR(state->type_BackgroundTaskBuilder);
-        Py_CLEAR(state->type_BackgroundTaskCompletedEventArgs);
-        Py_CLEAR(state->type_BackgroundTaskDeferral);
-        Py_CLEAR(state->type_BackgroundTaskProgressEventArgs);
-        Py_CLEAR(state->type_BackgroundTaskRegistration);
-        Py_CLEAR(state->type_BackgroundTaskRegistrationGroup);
-        Py_CLEAR(state->type_BackgroundWorkCost);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementPublisherTrigger);
-        Py_CLEAR(state->type_BluetoothLEAdvertisementWatcherTrigger);
-        Py_CLEAR(state->type_CachedFileUpdaterTrigger);
-        Py_CLEAR(state->type_CachedFileUpdaterTriggerDetails);
-        Py_CLEAR(state->type_ChatMessageNotificationTrigger);
-        Py_CLEAR(state->type_ChatMessageReceivedNotificationTrigger);
-        Py_CLEAR(state->type_CommunicationBlockingAppSetAsActiveTrigger);
-        Py_CLEAR(state->type_ContactStoreNotificationTrigger);
-        Py_CLEAR(state->type_ContentPrefetchTrigger);
-        Py_CLEAR(state->type_ConversationalAgentTrigger);
-        Py_CLEAR(state->type_CustomSystemEventTrigger);
-        Py_CLEAR(state->type_DeviceConnectionChangeTrigger);
-        Py_CLEAR(state->type_DeviceManufacturerNotificationTrigger);
-        Py_CLEAR(state->type_DeviceServicingTrigger);
-        Py_CLEAR(state->type_DeviceUseTrigger);
-        Py_CLEAR(state->type_DeviceWatcherTrigger);
-        Py_CLEAR(state->type_EmailStoreNotificationTrigger);
-        Py_CLEAR(state->type_GattCharacteristicNotificationTrigger);
-        Py_CLEAR(state->type_GattServiceProviderTrigger);
-        Py_CLEAR(state->type_GattServiceProviderTriggerResult);
-        Py_CLEAR(state->type_GeovisitTrigger);
-        Py_CLEAR(state->type_LocationTrigger);
-        Py_CLEAR(state->type_MaintenanceTrigger);
-        Py_CLEAR(state->type_MediaProcessingTrigger);
-        Py_CLEAR(state->type_MobileBroadbandDeviceServiceNotificationTrigger);
-        Py_CLEAR(state->type_MobileBroadbandPcoDataChangeTrigger);
-        Py_CLEAR(state->type_MobileBroadbandPinLockStateChangeTrigger);
-        Py_CLEAR(state->type_MobileBroadbandRadioStateChangeTrigger);
-        Py_CLEAR(state->type_MobileBroadbandRegistrationStateChangeTrigger);
-        Py_CLEAR(state->type_NetworkOperatorDataUsageTrigger);
-        Py_CLEAR(state->type_NetworkOperatorHotspotAuthenticationTrigger);
-        Py_CLEAR(state->type_NetworkOperatorNotificationTrigger);
-        Py_CLEAR(state->type_PaymentAppCanMakePaymentTrigger);
-        Py_CLEAR(state->type_PhoneTrigger);
-        Py_CLEAR(state->type_PushNotificationTrigger);
-        Py_CLEAR(state->type_RcsEndUserMessageAvailableTrigger);
-        Py_CLEAR(state->type_RfcommConnectionTrigger);
-        Py_CLEAR(state->type_SecondaryAuthenticationFactorAuthenticationTrigger);
-        Py_CLEAR(state->type_SensorDataThresholdTrigger);
-        Py_CLEAR(state->type_SmartCardTrigger);
-        Py_CLEAR(state->type_SmsMessageReceivedTrigger);
-        Py_CLEAR(state->type_SocketActivityTrigger);
-        Py_CLEAR(state->type_StorageLibraryChangeTrackerTrigger);
-        Py_CLEAR(state->type_StorageLibraryContentChangedTrigger);
-        Py_CLEAR(state->type_SystemCondition);
-        Py_CLEAR(state->type_SystemTrigger);
-        Py_CLEAR(state->type_TetheringEntitlementCheckTrigger);
-        Py_CLEAR(state->type_TimeTrigger);
-        Py_CLEAR(state->type_ToastNotificationActionTrigger);
-        Py_CLEAR(state->type_ToastNotificationHistoryChangedTrigger);
-        Py_CLEAR(state->type_UserNotificationChangedTrigger);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotConnectTrigger);
-        Py_CLEAR(state->type_WiFiOnDemandHotspotUpdateMetadataTrigger);
-        Py_CLEAR(state->type_IBackgroundCondition);
-        Py_CLEAR(state->type_IBackgroundTask);
-        Py_CLEAR(state->type_IBackgroundTaskInstance);
-        Py_CLEAR(state->type_IBackgroundTaskInstance2);
-        Py_CLEAR(state->type_IBackgroundTaskInstance4);
-        Py_CLEAR(state->type_IBackgroundTaskRegistration);
-        Py_CLEAR(state->type_IBackgroundTaskRegistration2);
-        Py_CLEAR(state->type_IBackgroundTaskRegistration3);
-        Py_CLEAR(state->type_IBackgroundTrigger);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Background",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Background
@@ -11900,7 +11638,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Background(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -11913,77 +11651,110 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Background(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_ActivitySensorTrigger = py::register_python_type(module.get(), type_name_ActivitySensorTrigger, &type_spec_ActivitySensorTrigger, object_bases.get(), nullptr);
-    if (!state->type_ActivitySensorTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivitySensorTrigger, &type_spec_ActivitySensorTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivitySensorTrigger, &type_spec_ActivitySensorTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AlarmApplicationManager = py::register_python_type(module.get(), type_name_AlarmApplicationManager, &type_spec_AlarmApplicationManager, object_bases.get(), nullptr);
-    if (!state->type_AlarmApplicationManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AlarmApplicationManager, &type_spec_AlarmApplicationManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AlarmApplicationManager, &type_spec_AlarmApplicationManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastTrigger = py::register_python_type(module.get(), type_name_AppBroadcastTrigger, &type_spec_AppBroadcastTrigger, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTrigger, &type_spec_AppBroadcastTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTrigger, &type_spec_AppBroadcastTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppBroadcastTriggerProviderInfo = py::register_python_type(module.get(), type_name_AppBroadcastTriggerProviderInfo, &type_spec_AppBroadcastTriggerProviderInfo, object_bases.get(), nullptr);
-    if (!state->type_AppBroadcastTriggerProviderInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTriggerProviderInfo, &type_spec_AppBroadcastTriggerProviderInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppBroadcastTriggerProviderInfo, &type_spec_AppBroadcastTriggerProviderInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationTrigger = py::register_python_type(module.get(), type_name_ApplicationTrigger, &type_spec_ApplicationTrigger, object_bases.get(), nullptr);
-    if (!state->type_ApplicationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationTrigger, &type_spec_ApplicationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationTrigger, &type_spec_ApplicationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationTriggerDetails = py::register_python_type(module.get(), type_name_ApplicationTriggerDetails, &type_spec_ApplicationTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_ApplicationTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationTriggerDetails, &type_spec_ApplicationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationTriggerDetails, &type_spec_ApplicationTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppointmentStoreNotificationTrigger = py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTrigger, &type_spec_AppointmentStoreNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_AppointmentStoreNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTrigger, &type_spec_AppointmentStoreNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppointmentStoreNotificationTrigger, &type_spec_AppointmentStoreNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundExecutionManager = py::register_python_type(module.get(), type_name_BackgroundExecutionManager, &type_spec_BackgroundExecutionManager, object_bases.get(), nullptr);
-    if (!state->type_BackgroundExecutionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundExecutionManager, &type_spec_BackgroundExecutionManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundExecutionManager, &type_spec_BackgroundExecutionManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTaskBuilder = py::register_python_type(module.get(), type_name_BackgroundTaskBuilder, &type_spec_BackgroundTaskBuilder, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTaskBuilder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskBuilder, &type_spec_BackgroundTaskBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskBuilder, &type_spec_BackgroundTaskBuilder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTaskCompletedEventArgs = py::register_python_type(module.get(), type_name_BackgroundTaskCompletedEventArgs, &type_spec_BackgroundTaskCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTaskCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskCompletedEventArgs, &type_spec_BackgroundTaskCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskCompletedEventArgs, &type_spec_BackgroundTaskCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTaskDeferral = py::register_python_type(module.get(), type_name_BackgroundTaskDeferral, &type_spec_BackgroundTaskDeferral, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTaskDeferral)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskDeferral, &type_spec_BackgroundTaskDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskDeferral, &type_spec_BackgroundTaskDeferral, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTaskProgressEventArgs = py::register_python_type(module.get(), type_name_BackgroundTaskProgressEventArgs, &type_spec_BackgroundTaskProgressEventArgs, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTaskProgressEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskProgressEventArgs, &type_spec_BackgroundTaskProgressEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskProgressEventArgs, &type_spec_BackgroundTaskProgressEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -11994,14 +11765,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Background(void) noexcept
         return nullptr;
     }
 
-    state->type_BackgroundTaskRegistration = py::register_python_type(module.get(), type_name_BackgroundTaskRegistration, &type_spec_BackgroundTaskRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskRegistration_Meta.get()));
-    if (!state->type_BackgroundTaskRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskRegistration, &type_spec_BackgroundTaskRegistration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskRegistration_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskRegistration, &type_spec_BackgroundTaskRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskRegistration_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackgroundTaskRegistrationGroup = py::register_python_type(module.get(), type_name_BackgroundTaskRegistrationGroup, &type_spec_BackgroundTaskRegistrationGroup, object_bases.get(), nullptr);
-    if (!state->type_BackgroundTaskRegistrationGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskRegistrationGroup, &type_spec_BackgroundTaskRegistrationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundTaskRegistrationGroup, &type_spec_BackgroundTaskRegistrationGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -12012,2155 +11789,573 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Background(void) noexcept
         return nullptr;
     }
 
-    state->type_BackgroundWorkCost = py::register_python_type(module.get(), type_name_BackgroundWorkCost, &type_spec_BackgroundWorkCost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundWorkCost_Meta.get()));
-    if (!state->type_BackgroundWorkCost)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackgroundWorkCost, &type_spec_BackgroundWorkCost, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundWorkCost_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackgroundWorkCost, &type_spec_BackgroundWorkCost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundWorkCost_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BluetoothLEAdvertisementPublisherTrigger = py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTrigger, &type_spec_BluetoothLEAdvertisementPublisherTrigger, object_bases.get(), nullptr);
-    if (!state->type_BluetoothLEAdvertisementPublisherTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTrigger, &type_spec_BluetoothLEAdvertisementPublisherTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTrigger, &type_spec_BluetoothLEAdvertisementPublisherTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BluetoothLEAdvertisementWatcherTrigger = py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTrigger, &type_spec_BluetoothLEAdvertisementWatcherTrigger, object_bases.get(), nullptr);
-    if (!state->type_BluetoothLEAdvertisementWatcherTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTrigger, &type_spec_BluetoothLEAdvertisementWatcherTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTrigger, &type_spec_BluetoothLEAdvertisementWatcherTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CachedFileUpdaterTrigger = py::register_python_type(module.get(), type_name_CachedFileUpdaterTrigger, &type_spec_CachedFileUpdaterTrigger, object_bases.get(), nullptr);
-    if (!state->type_CachedFileUpdaterTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterTrigger, &type_spec_CachedFileUpdaterTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterTrigger, &type_spec_CachedFileUpdaterTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CachedFileUpdaterTriggerDetails = py::register_python_type(module.get(), type_name_CachedFileUpdaterTriggerDetails, &type_spec_CachedFileUpdaterTriggerDetails, object_bases.get(), nullptr);
-    if (!state->type_CachedFileUpdaterTriggerDetails)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterTriggerDetails, &type_spec_CachedFileUpdaterTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterTriggerDetails, &type_spec_CachedFileUpdaterTriggerDetails, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageNotificationTrigger = py::register_python_type(module.get(), type_name_ChatMessageNotificationTrigger, &type_spec_ChatMessageNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTrigger, &type_spec_ChatMessageNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTrigger, &type_spec_ChatMessageNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ChatMessageReceivedNotificationTrigger = py::register_python_type(module.get(), type_name_ChatMessageReceivedNotificationTrigger, &type_spec_ChatMessageReceivedNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_ChatMessageReceivedNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ChatMessageReceivedNotificationTrigger, &type_spec_ChatMessageReceivedNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ChatMessageReceivedNotificationTrigger, &type_spec_ChatMessageReceivedNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CommunicationBlockingAppSetAsActiveTrigger = py::register_python_type(module.get(), type_name_CommunicationBlockingAppSetAsActiveTrigger, &type_spec_CommunicationBlockingAppSetAsActiveTrigger, object_bases.get(), nullptr);
-    if (!state->type_CommunicationBlockingAppSetAsActiveTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppSetAsActiveTrigger, &type_spec_CommunicationBlockingAppSetAsActiveTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppSetAsActiveTrigger, &type_spec_CommunicationBlockingAppSetAsActiveTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContactStoreNotificationTrigger = py::register_python_type(module.get(), type_name_ContactStoreNotificationTrigger, &type_spec_ContactStoreNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_ContactStoreNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTrigger, &type_spec_ContactStoreNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTrigger, &type_spec_ContactStoreNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContentPrefetchTrigger = py::register_python_type(module.get(), type_name_ContentPrefetchTrigger, &type_spec_ContentPrefetchTrigger, object_bases.get(), nullptr);
-    if (!state->type_ContentPrefetchTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContentPrefetchTrigger, &type_spec_ContentPrefetchTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContentPrefetchTrigger, &type_spec_ContentPrefetchTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ConversationalAgentTrigger = py::register_python_type(module.get(), type_name_ConversationalAgentTrigger, &type_spec_ConversationalAgentTrigger, object_bases.get(), nullptr);
-    if (!state->type_ConversationalAgentTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentTrigger, &type_spec_ConversationalAgentTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ConversationalAgentTrigger, &type_spec_ConversationalAgentTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CustomSystemEventTrigger = py::register_python_type(module.get(), type_name_CustomSystemEventTrigger, &type_spec_CustomSystemEventTrigger, object_bases.get(), nullptr);
-    if (!state->type_CustomSystemEventTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CustomSystemEventTrigger, &type_spec_CustomSystemEventTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CustomSystemEventTrigger, &type_spec_CustomSystemEventTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceConnectionChangeTrigger = py::register_python_type(module.get(), type_name_DeviceConnectionChangeTrigger, &type_spec_DeviceConnectionChangeTrigger, object_bases.get(), nullptr);
-    if (!state->type_DeviceConnectionChangeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTrigger, &type_spec_DeviceConnectionChangeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTrigger, &type_spec_DeviceConnectionChangeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceManufacturerNotificationTrigger = py::register_python_type(module.get(), type_name_DeviceManufacturerNotificationTrigger, &type_spec_DeviceManufacturerNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_DeviceManufacturerNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceManufacturerNotificationTrigger, &type_spec_DeviceManufacturerNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceManufacturerNotificationTrigger, &type_spec_DeviceManufacturerNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceServicingTrigger = py::register_python_type(module.get(), type_name_DeviceServicingTrigger, &type_spec_DeviceServicingTrigger, object_bases.get(), nullptr);
-    if (!state->type_DeviceServicingTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceServicingTrigger, &type_spec_DeviceServicingTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceServicingTrigger, &type_spec_DeviceServicingTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceUseTrigger = py::register_python_type(module.get(), type_name_DeviceUseTrigger, &type_spec_DeviceUseTrigger, object_bases.get(), nullptr);
-    if (!state->type_DeviceUseTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceUseTrigger, &type_spec_DeviceUseTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceUseTrigger, &type_spec_DeviceUseTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DeviceWatcherTrigger = py::register_python_type(module.get(), type_name_DeviceWatcherTrigger, &type_spec_DeviceWatcherTrigger, object_bases.get(), nullptr);
-    if (!state->type_DeviceWatcherTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherTrigger, &type_spec_DeviceWatcherTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DeviceWatcherTrigger, &type_spec_DeviceWatcherTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_EmailStoreNotificationTrigger = py::register_python_type(module.get(), type_name_EmailStoreNotificationTrigger, &type_spec_EmailStoreNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_EmailStoreNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EmailStoreNotificationTrigger, &type_spec_EmailStoreNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EmailStoreNotificationTrigger, &type_spec_EmailStoreNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattCharacteristicNotificationTrigger = py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTrigger, &type_spec_GattCharacteristicNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_GattCharacteristicNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTrigger, &type_spec_GattCharacteristicNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTrigger, &type_spec_GattCharacteristicNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderTrigger = py::register_python_type(module.get(), type_name_GattServiceProviderTrigger, &type_spec_GattServiceProviderTrigger, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTrigger, &type_spec_GattServiceProviderTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTrigger, &type_spec_GattServiceProviderTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GattServiceProviderTriggerResult = py::register_python_type(module.get(), type_name_GattServiceProviderTriggerResult, &type_spec_GattServiceProviderTriggerResult, object_bases.get(), nullptr);
-    if (!state->type_GattServiceProviderTriggerResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerResult, &type_spec_GattServiceProviderTriggerResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerResult, &type_spec_GattServiceProviderTriggerResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GeovisitTrigger = py::register_python_type(module.get(), type_name_GeovisitTrigger, &type_spec_GeovisitTrigger, object_bases.get(), nullptr);
-    if (!state->type_GeovisitTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GeovisitTrigger, &type_spec_GeovisitTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GeovisitTrigger, &type_spec_GeovisitTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LocationTrigger = py::register_python_type(module.get(), type_name_LocationTrigger, &type_spec_LocationTrigger, object_bases.get(), nullptr);
-    if (!state->type_LocationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LocationTrigger, &type_spec_LocationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LocationTrigger, &type_spec_LocationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MaintenanceTrigger = py::register_python_type(module.get(), type_name_MaintenanceTrigger, &type_spec_MaintenanceTrigger, object_bases.get(), nullptr);
-    if (!state->type_MaintenanceTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MaintenanceTrigger, &type_spec_MaintenanceTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MaintenanceTrigger, &type_spec_MaintenanceTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MediaProcessingTrigger = py::register_python_type(module.get(), type_name_MediaProcessingTrigger, &type_spec_MediaProcessingTrigger, object_bases.get(), nullptr);
-    if (!state->type_MediaProcessingTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MediaProcessingTrigger, &type_spec_MediaProcessingTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MediaProcessingTrigger, &type_spec_MediaProcessingTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandDeviceServiceNotificationTrigger = py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceNotificationTrigger, &type_spec_MobileBroadbandDeviceServiceNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandDeviceServiceNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceNotificationTrigger, &type_spec_MobileBroadbandDeviceServiceNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceNotificationTrigger, &type_spec_MobileBroadbandDeviceServiceNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPcoDataChangeTrigger = py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTrigger, &type_spec_MobileBroadbandPcoDataChangeTrigger, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPcoDataChangeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTrigger, &type_spec_MobileBroadbandPcoDataChangeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTrigger, &type_spec_MobileBroadbandPcoDataChangeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandPinLockStateChangeTrigger = py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTrigger, &type_spec_MobileBroadbandPinLockStateChangeTrigger, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandPinLockStateChangeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTrigger, &type_spec_MobileBroadbandPinLockStateChangeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTrigger, &type_spec_MobileBroadbandPinLockStateChangeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandRadioStateChangeTrigger = py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTrigger, &type_spec_MobileBroadbandRadioStateChangeTrigger, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandRadioStateChangeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTrigger, &type_spec_MobileBroadbandRadioStateChangeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTrigger, &type_spec_MobileBroadbandRadioStateChangeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MobileBroadbandRegistrationStateChangeTrigger = py::register_python_type(module.get(), type_name_MobileBroadbandRegistrationStateChangeTrigger, &type_spec_MobileBroadbandRegistrationStateChangeTrigger, object_bases.get(), nullptr);
-    if (!state->type_MobileBroadbandRegistrationStateChangeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRegistrationStateChangeTrigger, &type_spec_MobileBroadbandRegistrationStateChangeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MobileBroadbandRegistrationStateChangeTrigger, &type_spec_MobileBroadbandRegistrationStateChangeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorDataUsageTrigger = py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTrigger, &type_spec_NetworkOperatorDataUsageTrigger, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorDataUsageTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTrigger, &type_spec_NetworkOperatorDataUsageTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTrigger, &type_spec_NetworkOperatorDataUsageTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorHotspotAuthenticationTrigger = py::register_python_type(module.get(), type_name_NetworkOperatorHotspotAuthenticationTrigger, &type_spec_NetworkOperatorHotspotAuthenticationTrigger, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorHotspotAuthenticationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorHotspotAuthenticationTrigger, &type_spec_NetworkOperatorHotspotAuthenticationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorHotspotAuthenticationTrigger, &type_spec_NetworkOperatorHotspotAuthenticationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NetworkOperatorNotificationTrigger = py::register_python_type(module.get(), type_name_NetworkOperatorNotificationTrigger, &type_spec_NetworkOperatorNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_NetworkOperatorNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationTrigger, &type_spec_NetworkOperatorNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationTrigger, &type_spec_NetworkOperatorNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PaymentAppCanMakePaymentTrigger = py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTrigger, &type_spec_PaymentAppCanMakePaymentTrigger, object_bases.get(), nullptr);
-    if (!state->type_PaymentAppCanMakePaymentTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTrigger, &type_spec_PaymentAppCanMakePaymentTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTrigger, &type_spec_PaymentAppCanMakePaymentTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PhoneTrigger = py::register_python_type(module.get(), type_name_PhoneTrigger, &type_spec_PhoneTrigger, object_bases.get(), nullptr);
-    if (!state->type_PhoneTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PhoneTrigger, &type_spec_PhoneTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PhoneTrigger, &type_spec_PhoneTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PushNotificationTrigger = py::register_python_type(module.get(), type_name_PushNotificationTrigger, &type_spec_PushNotificationTrigger, object_bases.get(), nullptr);
-    if (!state->type_PushNotificationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PushNotificationTrigger, &type_spec_PushNotificationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PushNotificationTrigger, &type_spec_PushNotificationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RcsEndUserMessageAvailableTrigger = py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTrigger, &type_spec_RcsEndUserMessageAvailableTrigger, object_bases.get(), nullptr);
-    if (!state->type_RcsEndUserMessageAvailableTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTrigger, &type_spec_RcsEndUserMessageAvailableTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTrigger, &type_spec_RcsEndUserMessageAvailableTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RfcommConnectionTrigger = py::register_python_type(module.get(), type_name_RfcommConnectionTrigger, &type_spec_RfcommConnectionTrigger, object_bases.get(), nullptr);
-    if (!state->type_RfcommConnectionTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RfcommConnectionTrigger, &type_spec_RfcommConnectionTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RfcommConnectionTrigger, &type_spec_RfcommConnectionTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SecondaryAuthenticationFactorAuthenticationTrigger = py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationTrigger, &type_spec_SecondaryAuthenticationFactorAuthenticationTrigger, object_bases.get(), nullptr);
-    if (!state->type_SecondaryAuthenticationFactorAuthenticationTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationTrigger, &type_spec_SecondaryAuthenticationFactorAuthenticationTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SecondaryAuthenticationFactorAuthenticationTrigger, &type_spec_SecondaryAuthenticationFactorAuthenticationTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SensorDataThresholdTrigger = py::register_python_type(module.get(), type_name_SensorDataThresholdTrigger, &type_spec_SensorDataThresholdTrigger, object_bases.get(), nullptr);
-    if (!state->type_SensorDataThresholdTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTrigger, &type_spec_SensorDataThresholdTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTrigger, &type_spec_SensorDataThresholdTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmartCardTrigger = py::register_python_type(module.get(), type_name_SmartCardTrigger, &type_spec_SmartCardTrigger, object_bases.get(), nullptr);
-    if (!state->type_SmartCardTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartCardTrigger, &type_spec_SmartCardTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartCardTrigger, &type_spec_SmartCardTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SmsMessageReceivedTrigger = py::register_python_type(module.get(), type_name_SmsMessageReceivedTrigger, &type_spec_SmsMessageReceivedTrigger, object_bases.get(), nullptr);
-    if (!state->type_SmsMessageReceivedTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedTrigger, &type_spec_SmsMessageReceivedTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmsMessageReceivedTrigger, &type_spec_SmsMessageReceivedTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SocketActivityTrigger = py::register_python_type(module.get(), type_name_SocketActivityTrigger, &type_spec_SocketActivityTrigger, object_bases.get(), nullptr);
-    if (!state->type_SocketActivityTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SocketActivityTrigger, &type_spec_SocketActivityTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SocketActivityTrigger, &type_spec_SocketActivityTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageLibraryChangeTrackerTrigger = py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTrigger, &type_spec_StorageLibraryChangeTrackerTrigger, object_bases.get(), nullptr);
-    if (!state->type_StorageLibraryChangeTrackerTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTrigger, &type_spec_StorageLibraryChangeTrackerTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageLibraryChangeTrackerTrigger, &type_spec_StorageLibraryChangeTrackerTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StorageLibraryContentChangedTrigger = py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTrigger, &type_spec_StorageLibraryContentChangedTrigger, object_bases.get(), nullptr);
-    if (!state->type_StorageLibraryContentChangedTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTrigger, &type_spec_StorageLibraryContentChangedTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StorageLibraryContentChangedTrigger, &type_spec_StorageLibraryContentChangedTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemCondition = py::register_python_type(module.get(), type_name_SystemCondition, &type_spec_SystemCondition, object_bases.get(), nullptr);
-    if (!state->type_SystemCondition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemCondition, &type_spec_SystemCondition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemCondition, &type_spec_SystemCondition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemTrigger = py::register_python_type(module.get(), type_name_SystemTrigger, &type_spec_SystemTrigger, object_bases.get(), nullptr);
-    if (!state->type_SystemTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemTrigger, &type_spec_SystemTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemTrigger, &type_spec_SystemTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TetheringEntitlementCheckTrigger = py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTrigger, &type_spec_TetheringEntitlementCheckTrigger, object_bases.get(), nullptr);
-    if (!state->type_TetheringEntitlementCheckTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTrigger, &type_spec_TetheringEntitlementCheckTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTrigger, &type_spec_TetheringEntitlementCheckTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_TimeTrigger = py::register_python_type(module.get(), type_name_TimeTrigger, &type_spec_TimeTrigger, object_bases.get(), nullptr);
-    if (!state->type_TimeTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_TimeTrigger, &type_spec_TimeTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_TimeTrigger, &type_spec_TimeTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationActionTrigger = py::register_python_type(module.get(), type_name_ToastNotificationActionTrigger, &type_spec_ToastNotificationActionTrigger, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationActionTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTrigger, &type_spec_ToastNotificationActionTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTrigger, &type_spec_ToastNotificationActionTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ToastNotificationHistoryChangedTrigger = py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTrigger, &type_spec_ToastNotificationHistoryChangedTrigger, object_bases.get(), nullptr);
-    if (!state->type_ToastNotificationHistoryChangedTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTrigger, &type_spec_ToastNotificationHistoryChangedTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTrigger, &type_spec_ToastNotificationHistoryChangedTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UserNotificationChangedTrigger = py::register_python_type(module.get(), type_name_UserNotificationChangedTrigger, &type_spec_UserNotificationChangedTrigger, object_bases.get(), nullptr);
-    if (!state->type_UserNotificationChangedTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UserNotificationChangedTrigger, &type_spec_UserNotificationChangedTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UserNotificationChangedTrigger, &type_spec_UserNotificationChangedTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotConnectTrigger = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTrigger, &type_spec_WiFiOnDemandHotspotConnectTrigger, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotConnectTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTrigger, &type_spec_WiFiOnDemandHotspotConnectTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTrigger, &type_spec_WiFiOnDemandHotspotConnectTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WiFiOnDemandHotspotUpdateMetadataTrigger = py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotUpdateMetadataTrigger, &type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger, object_bases.get(), nullptr);
-    if (!state->type_WiFiOnDemandHotspotUpdateMetadataTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotUpdateMetadataTrigger, &type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotUpdateMetadataTrigger, &type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundCondition = py::register_python_type(module.get(), type_name_IBackgroundCondition, &type_spec_IBackgroundCondition, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundCondition)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundCondition, &type_spec_IBackgroundCondition, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundCondition, &type_spec_IBackgroundCondition, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTask = py::register_python_type(module.get(), type_name_IBackgroundTask, &type_spec_IBackgroundTask, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTask)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTask, &type_spec_IBackgroundTask, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTask, &type_spec_IBackgroundTask, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskInstance = py::register_python_type(module.get(), type_name_IBackgroundTaskInstance, &type_spec_IBackgroundTaskInstance, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskInstance)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance, &type_spec_IBackgroundTaskInstance, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance, &type_spec_IBackgroundTaskInstance, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskInstance2 = py::register_python_type(module.get(), type_name_IBackgroundTaskInstance2, &type_spec_IBackgroundTaskInstance2, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskInstance2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance2, &type_spec_IBackgroundTaskInstance2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance2, &type_spec_IBackgroundTaskInstance2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskInstance4 = py::register_python_type(module.get(), type_name_IBackgroundTaskInstance4, &type_spec_IBackgroundTaskInstance4, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskInstance4)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance4, &type_spec_IBackgroundTaskInstance4, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskInstance4, &type_spec_IBackgroundTaskInstance4, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskRegistration = py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration, &type_spec_IBackgroundTaskRegistration, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskRegistration)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration, &type_spec_IBackgroundTaskRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration, &type_spec_IBackgroundTaskRegistration, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskRegistration2 = py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration2, &type_spec_IBackgroundTaskRegistration2, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskRegistration2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration2, &type_spec_IBackgroundTaskRegistration2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration2, &type_spec_IBackgroundTaskRegistration2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTaskRegistration3 = py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration3, &type_spec_IBackgroundTaskRegistration3, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTaskRegistration3)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration3, &type_spec_IBackgroundTaskRegistration3, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTaskRegistration3, &type_spec_IBackgroundTaskRegistration3, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBackgroundTrigger = py::register_python_type(module.get(), type_name_IBackgroundTrigger, &type_spec_IBackgroundTrigger, object_bases.get(), nullptr);
-    if (!state->type_IBackgroundTrigger)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBackgroundTrigger, &type_spec_IBackgroundTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBackgroundTrigger, &type_spec_IBackgroundTrigger, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivitySensorTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AlarmApplicationManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::AlarmApplicationManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppBroadcastTriggerProviderInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ApplicationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ApplicationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppointmentStoreNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundExecutionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskBuilder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskDeferral;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskProgressEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundTaskRegistrationGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackgroundWorkCost;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BackgroundWorkCost is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementPublisherTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BluetoothLEAdvertisementWatcherTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CachedFileUpdaterTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CachedFileUpdaterTriggerDetails;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ChatMessageReceivedNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CommunicationBlockingAppSetAsActiveTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContactStoreNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContentPrefetchTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ConversationalAgentTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CustomSystemEventTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceConnectionChangeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceManufacturerNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceServicingTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::DeviceUseTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceUseTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::DeviceUseTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DeviceWatcherTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EmailStoreNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattCharacteristicNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GattServiceProviderTriggerResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::GeovisitTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GeovisitTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::GeovisitTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::LocationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LocationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::LocationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MaintenanceTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MaintenanceTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MaintenanceTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MediaProcessingTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandDeviceServiceNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPcoDataChangeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandPinLockStateChangeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandRadioStateChangeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MobileBroadbandRegistrationStateChangeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorDataUsageTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorHotspotAuthenticationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NetworkOperatorNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaymentAppCanMakePaymentTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::PhoneTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PhoneTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::PhoneTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::PushNotificationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PushNotificationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::PushNotificationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RcsEndUserMessageAvailableTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RfcommConnectionTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SecondaryAuthenticationFactorAuthenticationTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SensorDataThresholdTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SmartCardTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartCardTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SmartCardTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmsMessageReceivedTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SocketActivityTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SocketActivityTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SocketActivityTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageLibraryChangeTrackerTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StorageLibraryContentChangedTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SystemCondition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemCondition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SystemCondition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::SystemTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::SystemTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TetheringEntitlementCheckTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::TimeTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_TimeTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::TimeTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationActionTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ToastNotificationHistoryChangedTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UserNotificationChangedTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotConnectTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WiFiOnDemandHotspotUpdateMetadataTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundCondition;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundCondition is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTask;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTask is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskInstance;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskInstance2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskInstance4;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskRegistration;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskRegistration2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTaskRegistration3;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Background;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Background");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBackgroundTrigger;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Background::IBackgroundTrigger is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

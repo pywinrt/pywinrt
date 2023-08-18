@@ -1417,33 +1417,38 @@ namespace py
 
 
     template<>
-    struct winrt_type<winrt::TestComponent::TestRunner>
+    struct py_type<winrt::TestComponent::TestRunner>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "TestRunner";
     };
 
     template<>
-    struct winrt_type<winrt::TestComponent::ITests>
+    struct py_type<winrt::TestComponent::ITests>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "ITests";
     };
 
     template<>
-    struct winrt_type<winrt::TestComponent::Blittable>
+    struct py_type<winrt::TestComponent::Blittable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Blittable";
     };
 
     template<>
-    struct winrt_type<winrt::TestComponent::Nested>
+    struct py_type<winrt::TestComponent::Nested>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Nested";
     };
 
     template<>
-    struct winrt_type<winrt::TestComponent::NonBlittable>
+    struct py_type<winrt::TestComponent::NonBlittable>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "NonBlittable";
     };
     template <>
     struct delegate_python_type<winrt::TestComponent::Array10Handler>

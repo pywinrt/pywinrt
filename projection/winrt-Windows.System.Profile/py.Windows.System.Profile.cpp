@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::System::Profile
 {
-    struct module_state
-    {
-        PyTypeObject* type_AnalyticsInfo;
-        PyTypeObject* type_AnalyticsVersionInfo;
-        PyTypeObject* type_AppApplicability;
-        PyTypeObject* type_EducationSettings;
-        PyTypeObject* type_HardwareIdentification;
-        PyTypeObject* type_HardwareToken;
-        PyTypeObject* type_KnownRetailInfoProperties;
-        PyTypeObject* type_PlatformDiagnosticsAndUsageDataSettings;
-        PyTypeObject* type_RetailInfo;
-        PyTypeObject* type_SharedModeSettings;
-        PyTypeObject* type_SmartAppControlPolicy;
-        PyTypeObject* type_SystemIdentification;
-        PyTypeObject* type_SystemIdentificationInfo;
-        PyTypeObject* type_SystemSetupInfo;
-        PyTypeObject* type_UnsupportedAppRequirement;
-        PyTypeObject* type_WindowsIntegrityPolicy;
-    };
-
     // ----- AnalyticsInfo class --------------------
     static constexpr const char* const type_name_AnalyticsInfo = "AnalyticsInfo";
 
@@ -2208,74 +2188,15 @@ namespace py::cpp::Windows::System::Profile
     PyDoc_STRVAR(module_doc, "Windows::System::Profile");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AnalyticsInfo);
-        Py_VISIT(state->type_AnalyticsVersionInfo);
-        Py_VISIT(state->type_AppApplicability);
-        Py_VISIT(state->type_EducationSettings);
-        Py_VISIT(state->type_HardwareIdentification);
-        Py_VISIT(state->type_HardwareToken);
-        Py_VISIT(state->type_KnownRetailInfoProperties);
-        Py_VISIT(state->type_PlatformDiagnosticsAndUsageDataSettings);
-        Py_VISIT(state->type_RetailInfo);
-        Py_VISIT(state->type_SharedModeSettings);
-        Py_VISIT(state->type_SmartAppControlPolicy);
-        Py_VISIT(state->type_SystemIdentification);
-        Py_VISIT(state->type_SystemIdentificationInfo);
-        Py_VISIT(state->type_SystemSetupInfo);
-        Py_VISIT(state->type_UnsupportedAppRequirement);
-        Py_VISIT(state->type_WindowsIntegrityPolicy);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AnalyticsInfo);
-        Py_CLEAR(state->type_AnalyticsVersionInfo);
-        Py_CLEAR(state->type_AppApplicability);
-        Py_CLEAR(state->type_EducationSettings);
-        Py_CLEAR(state->type_HardwareIdentification);
-        Py_CLEAR(state->type_HardwareToken);
-        Py_CLEAR(state->type_KnownRetailInfoProperties);
-        Py_CLEAR(state->type_PlatformDiagnosticsAndUsageDataSettings);
-        Py_CLEAR(state->type_RetailInfo);
-        Py_CLEAR(state->type_SharedModeSettings);
-        Py_CLEAR(state->type_SmartAppControlPolicy);
-        Py_CLEAR(state->type_SystemIdentification);
-        Py_CLEAR(state->type_SystemIdentificationInfo);
-        Py_CLEAR(state->type_SystemSetupInfo);
-        Py_CLEAR(state->type_UnsupportedAppRequirement);
-        Py_CLEAR(state->type_WindowsIntegrityPolicy);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_System_Profile",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::System::Profile
@@ -2291,7 +2212,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -2304,29 +2225,35 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
     py::pyobj_handle type_AnalyticsInfo_Meta{PyType_FromSpec(&type_spec_AnalyticsInfo_Meta)};
     if (!type_AnalyticsInfo_Meta)
     {
         return nullptr;
     }
 
-    state->type_AnalyticsInfo = py::register_python_type(module.get(), type_name_AnalyticsInfo, &type_spec_AnalyticsInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Meta.get()));
-    if (!state->type_AnalyticsInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnalyticsInfo, &type_spec_AnalyticsInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnalyticsInfo, &type_spec_AnalyticsInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AnalyticsVersionInfo = py::register_python_type(module.get(), type_name_AnalyticsVersionInfo, &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr);
-    if (!state->type_AnalyticsVersionInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnalyticsVersionInfo, &type_spec_AnalyticsVersionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnalyticsVersionInfo, &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AppApplicability = py::register_python_type(module.get(), type_name_AppApplicability, &type_spec_AppApplicability, object_bases.get(), nullptr);
-    if (!state->type_AppApplicability)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AppApplicability, &type_spec_AppApplicability, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AppApplicability, &type_spec_AppApplicability, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2337,20 +2264,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_EducationSettings = py::register_python_type(module.get(), type_name_EducationSettings, &type_spec_EducationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Meta.get()));
-    if (!state->type_EducationSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EducationSettings, &type_spec_EducationSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EducationSettings, &type_spec_EducationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HardwareIdentification = py::register_python_type(module.get(), type_name_HardwareIdentification, &type_spec_HardwareIdentification, object_bases.get(), nullptr);
-    if (!state->type_HardwareIdentification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HardwareIdentification, &type_spec_HardwareIdentification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HardwareIdentification, &type_spec_HardwareIdentification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_HardwareToken = py::register_python_type(module.get(), type_name_HardwareToken, &type_spec_HardwareToken, object_bases.get(), nullptr);
-    if (!state->type_HardwareToken)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_HardwareToken, &type_spec_HardwareToken, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_HardwareToken, &type_spec_HardwareToken, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2361,8 +2297,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_KnownRetailInfoProperties = py::register_python_type(module.get(), type_name_KnownRetailInfoProperties, &type_spec_KnownRetailInfoProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Meta.get()));
-    if (!state->type_KnownRetailInfoProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KnownRetailInfoProperties, &type_spec_KnownRetailInfoProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KnownRetailInfoProperties, &type_spec_KnownRetailInfoProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2373,8 +2312,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_PlatformDiagnosticsAndUsageDataSettings = py::register_python_type(module.get(), type_name_PlatformDiagnosticsAndUsageDataSettings, &type_spec_PlatformDiagnosticsAndUsageDataSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Meta.get()));
-    if (!state->type_PlatformDiagnosticsAndUsageDataSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlatformDiagnosticsAndUsageDataSettings, &type_spec_PlatformDiagnosticsAndUsageDataSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlatformDiagnosticsAndUsageDataSettings, &type_spec_PlatformDiagnosticsAndUsageDataSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2385,8 +2327,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_RetailInfo = py::register_python_type(module.get(), type_name_RetailInfo, &type_spec_RetailInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Meta.get()));
-    if (!state->type_RetailInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RetailInfo, &type_spec_RetailInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RetailInfo, &type_spec_RetailInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2397,8 +2342,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_SharedModeSettings = py::register_python_type(module.get(), type_name_SharedModeSettings, &type_spec_SharedModeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Meta.get()));
-    if (!state->type_SharedModeSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SharedModeSettings, &type_spec_SharedModeSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SharedModeSettings, &type_spec_SharedModeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2409,20 +2357,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_SmartAppControlPolicy = py::register_python_type(module.get(), type_name_SmartAppControlPolicy, &type_spec_SmartAppControlPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Meta.get()));
-    if (!state->type_SmartAppControlPolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SmartAppControlPolicy, &type_spec_SmartAppControlPolicy, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SmartAppControlPolicy, &type_spec_SmartAppControlPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemIdentification = py::register_python_type(module.get(), type_name_SystemIdentification, &type_spec_SystemIdentification, object_bases.get(), nullptr);
-    if (!state->type_SystemIdentification)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemIdentification, &type_spec_SystemIdentification, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemIdentification, &type_spec_SystemIdentification, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SystemIdentificationInfo = py::register_python_type(module.get(), type_name_SystemIdentificationInfo, &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr);
-    if (!state->type_SystemIdentificationInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemIdentificationInfo, &type_spec_SystemIdentificationInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemIdentificationInfo, &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2433,14 +2390,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_SystemSetupInfo = py::register_python_type(module.get(), type_name_SystemSetupInfo, &type_spec_SystemSetupInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Meta.get()));
-    if (!state->type_SystemSetupInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SystemSetupInfo, &type_spec_SystemSetupInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SystemSetupInfo, &type_spec_SystemSetupInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UnsupportedAppRequirement = py::register_python_type(module.get(), type_name_UnsupportedAppRequirement, &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr);
-    if (!state->type_UnsupportedAppRequirement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UnsupportedAppRequirement, &type_spec_UnsupportedAppRequirement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UnsupportedAppRequirement, &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -2451,380 +2414,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
         return nullptr;
     }
 
-    state->type_WindowsIntegrityPolicy = py::register_python_type(module.get(), type_name_WindowsIntegrityPolicy, &type_spec_WindowsIntegrityPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Meta.get()));
-    if (!state->type_WindowsIntegrityPolicy)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WindowsIntegrityPolicy, &type_spec_WindowsIntegrityPolicy, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WindowsIntegrityPolicy, &type_spec_WindowsIntegrityPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::AnalyticsInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnalyticsInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::AnalyticsInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnalyticsVersionInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::AnalyticsVersionInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::AppApplicability>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AppApplicability;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::AppApplicability is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::EducationSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EducationSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::EducationSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::HardwareIdentification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HardwareIdentification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::HardwareIdentification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::HardwareToken>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_HardwareToken;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::HardwareToken is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KnownRetailInfoProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::KnownRetailInfoProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlatformDiagnosticsAndUsageDataSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::RetailInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RetailInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::RetailInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SharedModeSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SharedModeSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SharedModeSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SmartAppControlPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SmartAppControlPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SmartAppControlPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemIdentification>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemIdentification;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemIdentification is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemIdentificationInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemIdentificationInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemIdentificationInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::SystemSetupInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SystemSetupInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::SystemSetupInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UnsupportedAppRequirement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::UnsupportedAppRequirement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::System::Profile;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::System::Profile");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WindowsIntegrityPolicy;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::System::Profile::WindowsIntegrityPolicy is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

@@ -38,14 +38,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>
+    struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
+        static constexpr const char* type_name = "CompositionDebugHeatMaps";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>
+    struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
+        static constexpr const char* type_name = "CompositionDebugSettings";
     };
 }

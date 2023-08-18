@@ -6,122 +6,6 @@
 
 namespace py::cpp::Windows::UI::Composition
 {
-    struct module_state
-    {
-        PyTypeObject* type_AmbientLight;
-        PyTypeObject* type_AnimationController;
-        PyTypeObject* type_AnimationPropertyInfo;
-        PyTypeObject* type_BackEasingFunction;
-        PyTypeObject* type_BooleanKeyFrameAnimation;
-        PyTypeObject* type_BounceEasingFunction;
-        PyTypeObject* type_BounceScalarNaturalMotionAnimation;
-        PyTypeObject* type_BounceVector2NaturalMotionAnimation;
-        PyTypeObject* type_BounceVector3NaturalMotionAnimation;
-        PyTypeObject* type_CircleEasingFunction;
-        PyTypeObject* type_ColorKeyFrameAnimation;
-        PyTypeObject* type_CompositionAnimation;
-        PyTypeObject* type_CompositionAnimationGroup;
-        PyTypeObject* type_CompositionBackdropBrush;
-        PyTypeObject* type_CompositionBatchCompletedEventArgs;
-        PyTypeObject* type_CompositionBrush;
-        PyTypeObject* type_CompositionCapabilities;
-        PyTypeObject* type_CompositionClip;
-        PyTypeObject* type_CompositionColorBrush;
-        PyTypeObject* type_CompositionColorGradientStop;
-        PyTypeObject* type_CompositionColorGradientStopCollection;
-        PyTypeObject* type_CompositionCommitBatch;
-        PyTypeObject* type_CompositionContainerShape;
-        PyTypeObject* type_CompositionDrawingSurface;
-        PyTypeObject* type_CompositionEasingFunction;
-        PyTypeObject* type_CompositionEffectBrush;
-        PyTypeObject* type_CompositionEffectFactory;
-        PyTypeObject* type_CompositionEffectSourceParameter;
-        PyTypeObject* type_CompositionEllipseGeometry;
-        PyTypeObject* type_CompositionGeometricClip;
-        PyTypeObject* type_CompositionGeometry;
-        PyTypeObject* type_CompositionGradientBrush;
-        PyTypeObject* type_CompositionGraphicsDevice;
-        PyTypeObject* type_CompositionLight;
-        PyTypeObject* type_CompositionLineGeometry;
-        PyTypeObject* type_CompositionLinearGradientBrush;
-        PyTypeObject* type_CompositionMaskBrush;
-        PyTypeObject* type_CompositionMipmapSurface;
-        PyTypeObject* type_CompositionNineGridBrush;
-        PyTypeObject* type_CompositionObject;
-        PyTypeObject* type_CompositionPath;
-        PyTypeObject* type_CompositionPathGeometry;
-        PyTypeObject* type_CompositionProjectedShadow;
-        PyTypeObject* type_CompositionProjectedShadowCaster;
-        PyTypeObject* type_CompositionProjectedShadowCasterCollection;
-        PyTypeObject* type_CompositionProjectedShadowReceiver;
-        PyTypeObject* type_CompositionProjectedShadowReceiverUnorderedCollection;
-        PyTypeObject* type_CompositionPropertySet;
-        PyTypeObject* type_CompositionRadialGradientBrush;
-        PyTypeObject* type_CompositionRectangleGeometry;
-        PyTypeObject* type_CompositionRoundedRectangleGeometry;
-        PyTypeObject* type_CompositionScopedBatch;
-        PyTypeObject* type_CompositionShadow;
-        PyTypeObject* type_CompositionShape;
-        PyTypeObject* type_CompositionShapeCollection;
-        PyTypeObject* type_CompositionSpriteShape;
-        PyTypeObject* type_CompositionStrokeDashArray;
-        PyTypeObject* type_CompositionSurfaceBrush;
-        PyTypeObject* type_CompositionTarget;
-        PyTypeObject* type_CompositionTransform;
-        PyTypeObject* type_CompositionViewBox;
-        PyTypeObject* type_CompositionVirtualDrawingSurface;
-        PyTypeObject* type_CompositionVisualSurface;
-        PyTypeObject* type_Compositor;
-        PyTypeObject* type_ContainerVisual;
-        PyTypeObject* type_CubicBezierEasingFunction;
-        PyTypeObject* type_DelegatedInkTrailVisual;
-        PyTypeObject* type_DistantLight;
-        PyTypeObject* type_DropShadow;
-        PyTypeObject* type_ElasticEasingFunction;
-        PyTypeObject* type_ExponentialEasingFunction;
-        PyTypeObject* type_ExpressionAnimation;
-        PyTypeObject* type_ImplicitAnimationCollection;
-        PyTypeObject* type_InitialValueExpressionCollection;
-        PyTypeObject* type_InsetClip;
-        PyTypeObject* type_KeyFrameAnimation;
-        PyTypeObject* type_LayerVisual;
-        PyTypeObject* type_LinearEasingFunction;
-        PyTypeObject* type_NaturalMotionAnimation;
-        PyTypeObject* type_PathKeyFrameAnimation;
-        PyTypeObject* type_PointLight;
-        PyTypeObject* type_PowerEasingFunction;
-        PyTypeObject* type_QuaternionKeyFrameAnimation;
-        PyTypeObject* type_RectangleClip;
-        PyTypeObject* type_RedirectVisual;
-        PyTypeObject* type_RenderingDeviceReplacedEventArgs;
-        PyTypeObject* type_ScalarKeyFrameAnimation;
-        PyTypeObject* type_ScalarNaturalMotionAnimation;
-        PyTypeObject* type_ShapeVisual;
-        PyTypeObject* type_SineEasingFunction;
-        PyTypeObject* type_SpotLight;
-        PyTypeObject* type_SpringScalarNaturalMotionAnimation;
-        PyTypeObject* type_SpringVector2NaturalMotionAnimation;
-        PyTypeObject* type_SpringVector3NaturalMotionAnimation;
-        PyTypeObject* type_SpriteVisual;
-        PyTypeObject* type_StepEasingFunction;
-        PyTypeObject* type_Vector2KeyFrameAnimation;
-        PyTypeObject* type_Vector2NaturalMotionAnimation;
-        PyTypeObject* type_Vector3KeyFrameAnimation;
-        PyTypeObject* type_Vector3NaturalMotionAnimation;
-        PyTypeObject* type_Vector4KeyFrameAnimation;
-        PyTypeObject* type_Visual;
-        PyTypeObject* type_VisualCollection;
-        PyTypeObject* type_VisualUnorderedCollection;
-        PyTypeObject* type_IAnimationObject;
-        PyTypeObject* type_ICompositionAnimationBase;
-        PyTypeObject* type_ICompositionSupportsSystemBackdrop;
-        PyTypeObject* type_ICompositionSurface;
-        PyTypeObject* type_ICompositionSurfaceFacade;
-        PyTypeObject* type_IVisualElement;
-        PyTypeObject* type_IVisualElement2;
-        PyTypeObject* type_InkTrailPoint;
-    };
-
     // ----- AmbientLight class --------------------
     static constexpr const char* const type_name_AmbientLight = "AmbientLight";
 
@@ -29783,266 +29667,15 @@ namespace py::cpp::Windows::UI::Composition
     PyDoc_STRVAR(module_doc, "Windows::UI::Composition");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AmbientLight);
-        Py_VISIT(state->type_AnimationController);
-        Py_VISIT(state->type_AnimationPropertyInfo);
-        Py_VISIT(state->type_BackEasingFunction);
-        Py_VISIT(state->type_BooleanKeyFrameAnimation);
-        Py_VISIT(state->type_BounceEasingFunction);
-        Py_VISIT(state->type_BounceScalarNaturalMotionAnimation);
-        Py_VISIT(state->type_BounceVector2NaturalMotionAnimation);
-        Py_VISIT(state->type_BounceVector3NaturalMotionAnimation);
-        Py_VISIT(state->type_CircleEasingFunction);
-        Py_VISIT(state->type_ColorKeyFrameAnimation);
-        Py_VISIT(state->type_CompositionAnimation);
-        Py_VISIT(state->type_CompositionAnimationGroup);
-        Py_VISIT(state->type_CompositionBackdropBrush);
-        Py_VISIT(state->type_CompositionBatchCompletedEventArgs);
-        Py_VISIT(state->type_CompositionBrush);
-        Py_VISIT(state->type_CompositionCapabilities);
-        Py_VISIT(state->type_CompositionClip);
-        Py_VISIT(state->type_CompositionColorBrush);
-        Py_VISIT(state->type_CompositionColorGradientStop);
-        Py_VISIT(state->type_CompositionColorGradientStopCollection);
-        Py_VISIT(state->type_CompositionCommitBatch);
-        Py_VISIT(state->type_CompositionContainerShape);
-        Py_VISIT(state->type_CompositionDrawingSurface);
-        Py_VISIT(state->type_CompositionEasingFunction);
-        Py_VISIT(state->type_CompositionEffectBrush);
-        Py_VISIT(state->type_CompositionEffectFactory);
-        Py_VISIT(state->type_CompositionEffectSourceParameter);
-        Py_VISIT(state->type_CompositionEllipseGeometry);
-        Py_VISIT(state->type_CompositionGeometricClip);
-        Py_VISIT(state->type_CompositionGeometry);
-        Py_VISIT(state->type_CompositionGradientBrush);
-        Py_VISIT(state->type_CompositionGraphicsDevice);
-        Py_VISIT(state->type_CompositionLight);
-        Py_VISIT(state->type_CompositionLineGeometry);
-        Py_VISIT(state->type_CompositionLinearGradientBrush);
-        Py_VISIT(state->type_CompositionMaskBrush);
-        Py_VISIT(state->type_CompositionMipmapSurface);
-        Py_VISIT(state->type_CompositionNineGridBrush);
-        Py_VISIT(state->type_CompositionObject);
-        Py_VISIT(state->type_CompositionPath);
-        Py_VISIT(state->type_CompositionPathGeometry);
-        Py_VISIT(state->type_CompositionProjectedShadow);
-        Py_VISIT(state->type_CompositionProjectedShadowCaster);
-        Py_VISIT(state->type_CompositionProjectedShadowCasterCollection);
-        Py_VISIT(state->type_CompositionProjectedShadowReceiver);
-        Py_VISIT(state->type_CompositionProjectedShadowReceiverUnorderedCollection);
-        Py_VISIT(state->type_CompositionPropertySet);
-        Py_VISIT(state->type_CompositionRadialGradientBrush);
-        Py_VISIT(state->type_CompositionRectangleGeometry);
-        Py_VISIT(state->type_CompositionRoundedRectangleGeometry);
-        Py_VISIT(state->type_CompositionScopedBatch);
-        Py_VISIT(state->type_CompositionShadow);
-        Py_VISIT(state->type_CompositionShape);
-        Py_VISIT(state->type_CompositionShapeCollection);
-        Py_VISIT(state->type_CompositionSpriteShape);
-        Py_VISIT(state->type_CompositionStrokeDashArray);
-        Py_VISIT(state->type_CompositionSurfaceBrush);
-        Py_VISIT(state->type_CompositionTarget);
-        Py_VISIT(state->type_CompositionTransform);
-        Py_VISIT(state->type_CompositionViewBox);
-        Py_VISIT(state->type_CompositionVirtualDrawingSurface);
-        Py_VISIT(state->type_CompositionVisualSurface);
-        Py_VISIT(state->type_Compositor);
-        Py_VISIT(state->type_ContainerVisual);
-        Py_VISIT(state->type_CubicBezierEasingFunction);
-        Py_VISIT(state->type_DelegatedInkTrailVisual);
-        Py_VISIT(state->type_DistantLight);
-        Py_VISIT(state->type_DropShadow);
-        Py_VISIT(state->type_ElasticEasingFunction);
-        Py_VISIT(state->type_ExponentialEasingFunction);
-        Py_VISIT(state->type_ExpressionAnimation);
-        Py_VISIT(state->type_ImplicitAnimationCollection);
-        Py_VISIT(state->type_InitialValueExpressionCollection);
-        Py_VISIT(state->type_InsetClip);
-        Py_VISIT(state->type_KeyFrameAnimation);
-        Py_VISIT(state->type_LayerVisual);
-        Py_VISIT(state->type_LinearEasingFunction);
-        Py_VISIT(state->type_NaturalMotionAnimation);
-        Py_VISIT(state->type_PathKeyFrameAnimation);
-        Py_VISIT(state->type_PointLight);
-        Py_VISIT(state->type_PowerEasingFunction);
-        Py_VISIT(state->type_QuaternionKeyFrameAnimation);
-        Py_VISIT(state->type_RectangleClip);
-        Py_VISIT(state->type_RedirectVisual);
-        Py_VISIT(state->type_RenderingDeviceReplacedEventArgs);
-        Py_VISIT(state->type_ScalarKeyFrameAnimation);
-        Py_VISIT(state->type_ScalarNaturalMotionAnimation);
-        Py_VISIT(state->type_ShapeVisual);
-        Py_VISIT(state->type_SineEasingFunction);
-        Py_VISIT(state->type_SpotLight);
-        Py_VISIT(state->type_SpringScalarNaturalMotionAnimation);
-        Py_VISIT(state->type_SpringVector2NaturalMotionAnimation);
-        Py_VISIT(state->type_SpringVector3NaturalMotionAnimation);
-        Py_VISIT(state->type_SpriteVisual);
-        Py_VISIT(state->type_StepEasingFunction);
-        Py_VISIT(state->type_Vector2KeyFrameAnimation);
-        Py_VISIT(state->type_Vector2NaturalMotionAnimation);
-        Py_VISIT(state->type_Vector3KeyFrameAnimation);
-        Py_VISIT(state->type_Vector3NaturalMotionAnimation);
-        Py_VISIT(state->type_Vector4KeyFrameAnimation);
-        Py_VISIT(state->type_Visual);
-        Py_VISIT(state->type_VisualCollection);
-        Py_VISIT(state->type_VisualUnorderedCollection);
-        Py_VISIT(state->type_IAnimationObject);
-        Py_VISIT(state->type_ICompositionAnimationBase);
-        Py_VISIT(state->type_ICompositionSupportsSystemBackdrop);
-        Py_VISIT(state->type_ICompositionSurface);
-        Py_VISIT(state->type_ICompositionSurfaceFacade);
-        Py_VISIT(state->type_IVisualElement);
-        Py_VISIT(state->type_IVisualElement2);
-        Py_VISIT(state->type_InkTrailPoint);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AmbientLight);
-        Py_CLEAR(state->type_AnimationController);
-        Py_CLEAR(state->type_AnimationPropertyInfo);
-        Py_CLEAR(state->type_BackEasingFunction);
-        Py_CLEAR(state->type_BooleanKeyFrameAnimation);
-        Py_CLEAR(state->type_BounceEasingFunction);
-        Py_CLEAR(state->type_BounceScalarNaturalMotionAnimation);
-        Py_CLEAR(state->type_BounceVector2NaturalMotionAnimation);
-        Py_CLEAR(state->type_BounceVector3NaturalMotionAnimation);
-        Py_CLEAR(state->type_CircleEasingFunction);
-        Py_CLEAR(state->type_ColorKeyFrameAnimation);
-        Py_CLEAR(state->type_CompositionAnimation);
-        Py_CLEAR(state->type_CompositionAnimationGroup);
-        Py_CLEAR(state->type_CompositionBackdropBrush);
-        Py_CLEAR(state->type_CompositionBatchCompletedEventArgs);
-        Py_CLEAR(state->type_CompositionBrush);
-        Py_CLEAR(state->type_CompositionCapabilities);
-        Py_CLEAR(state->type_CompositionClip);
-        Py_CLEAR(state->type_CompositionColorBrush);
-        Py_CLEAR(state->type_CompositionColorGradientStop);
-        Py_CLEAR(state->type_CompositionColorGradientStopCollection);
-        Py_CLEAR(state->type_CompositionCommitBatch);
-        Py_CLEAR(state->type_CompositionContainerShape);
-        Py_CLEAR(state->type_CompositionDrawingSurface);
-        Py_CLEAR(state->type_CompositionEasingFunction);
-        Py_CLEAR(state->type_CompositionEffectBrush);
-        Py_CLEAR(state->type_CompositionEffectFactory);
-        Py_CLEAR(state->type_CompositionEffectSourceParameter);
-        Py_CLEAR(state->type_CompositionEllipseGeometry);
-        Py_CLEAR(state->type_CompositionGeometricClip);
-        Py_CLEAR(state->type_CompositionGeometry);
-        Py_CLEAR(state->type_CompositionGradientBrush);
-        Py_CLEAR(state->type_CompositionGraphicsDevice);
-        Py_CLEAR(state->type_CompositionLight);
-        Py_CLEAR(state->type_CompositionLineGeometry);
-        Py_CLEAR(state->type_CompositionLinearGradientBrush);
-        Py_CLEAR(state->type_CompositionMaskBrush);
-        Py_CLEAR(state->type_CompositionMipmapSurface);
-        Py_CLEAR(state->type_CompositionNineGridBrush);
-        Py_CLEAR(state->type_CompositionObject);
-        Py_CLEAR(state->type_CompositionPath);
-        Py_CLEAR(state->type_CompositionPathGeometry);
-        Py_CLEAR(state->type_CompositionProjectedShadow);
-        Py_CLEAR(state->type_CompositionProjectedShadowCaster);
-        Py_CLEAR(state->type_CompositionProjectedShadowCasterCollection);
-        Py_CLEAR(state->type_CompositionProjectedShadowReceiver);
-        Py_CLEAR(state->type_CompositionProjectedShadowReceiverUnorderedCollection);
-        Py_CLEAR(state->type_CompositionPropertySet);
-        Py_CLEAR(state->type_CompositionRadialGradientBrush);
-        Py_CLEAR(state->type_CompositionRectangleGeometry);
-        Py_CLEAR(state->type_CompositionRoundedRectangleGeometry);
-        Py_CLEAR(state->type_CompositionScopedBatch);
-        Py_CLEAR(state->type_CompositionShadow);
-        Py_CLEAR(state->type_CompositionShape);
-        Py_CLEAR(state->type_CompositionShapeCollection);
-        Py_CLEAR(state->type_CompositionSpriteShape);
-        Py_CLEAR(state->type_CompositionStrokeDashArray);
-        Py_CLEAR(state->type_CompositionSurfaceBrush);
-        Py_CLEAR(state->type_CompositionTarget);
-        Py_CLEAR(state->type_CompositionTransform);
-        Py_CLEAR(state->type_CompositionViewBox);
-        Py_CLEAR(state->type_CompositionVirtualDrawingSurface);
-        Py_CLEAR(state->type_CompositionVisualSurface);
-        Py_CLEAR(state->type_Compositor);
-        Py_CLEAR(state->type_ContainerVisual);
-        Py_CLEAR(state->type_CubicBezierEasingFunction);
-        Py_CLEAR(state->type_DelegatedInkTrailVisual);
-        Py_CLEAR(state->type_DistantLight);
-        Py_CLEAR(state->type_DropShadow);
-        Py_CLEAR(state->type_ElasticEasingFunction);
-        Py_CLEAR(state->type_ExponentialEasingFunction);
-        Py_CLEAR(state->type_ExpressionAnimation);
-        Py_CLEAR(state->type_ImplicitAnimationCollection);
-        Py_CLEAR(state->type_InitialValueExpressionCollection);
-        Py_CLEAR(state->type_InsetClip);
-        Py_CLEAR(state->type_KeyFrameAnimation);
-        Py_CLEAR(state->type_LayerVisual);
-        Py_CLEAR(state->type_LinearEasingFunction);
-        Py_CLEAR(state->type_NaturalMotionAnimation);
-        Py_CLEAR(state->type_PathKeyFrameAnimation);
-        Py_CLEAR(state->type_PointLight);
-        Py_CLEAR(state->type_PowerEasingFunction);
-        Py_CLEAR(state->type_QuaternionKeyFrameAnimation);
-        Py_CLEAR(state->type_RectangleClip);
-        Py_CLEAR(state->type_RedirectVisual);
-        Py_CLEAR(state->type_RenderingDeviceReplacedEventArgs);
-        Py_CLEAR(state->type_ScalarKeyFrameAnimation);
-        Py_CLEAR(state->type_ScalarNaturalMotionAnimation);
-        Py_CLEAR(state->type_ShapeVisual);
-        Py_CLEAR(state->type_SineEasingFunction);
-        Py_CLEAR(state->type_SpotLight);
-        Py_CLEAR(state->type_SpringScalarNaturalMotionAnimation);
-        Py_CLEAR(state->type_SpringVector2NaturalMotionAnimation);
-        Py_CLEAR(state->type_SpringVector3NaturalMotionAnimation);
-        Py_CLEAR(state->type_SpriteVisual);
-        Py_CLEAR(state->type_StepEasingFunction);
-        Py_CLEAR(state->type_Vector2KeyFrameAnimation);
-        Py_CLEAR(state->type_Vector2NaturalMotionAnimation);
-        Py_CLEAR(state->type_Vector3KeyFrameAnimation);
-        Py_CLEAR(state->type_Vector3NaturalMotionAnimation);
-        Py_CLEAR(state->type_Vector4KeyFrameAnimation);
-        Py_CLEAR(state->type_Visual);
-        Py_CLEAR(state->type_VisualCollection);
-        Py_CLEAR(state->type_VisualUnorderedCollection);
-        Py_CLEAR(state->type_IAnimationObject);
-        Py_CLEAR(state->type_ICompositionAnimationBase);
-        Py_CLEAR(state->type_ICompositionSupportsSystemBackdrop);
-        Py_CLEAR(state->type_ICompositionSurface);
-        Py_CLEAR(state->type_ICompositionSurfaceFacade);
-        Py_CLEAR(state->type_IVisualElement);
-        Py_CLEAR(state->type_IVisualElement2);
-        Py_CLEAR(state->type_InkTrailPoint);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Composition",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Composition
@@ -30058,7 +29691,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -30071,11 +29704,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AmbientLight = py::register_python_type(module.get(), type_name_AmbientLight, &type_spec_AmbientLight, object_bases.get(), nullptr);
-    if (!state->type_AmbientLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AmbientLight, &type_spec_AmbientLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AmbientLight, &type_spec_AmbientLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30086,260 +29719,389 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
         return nullptr;
     }
 
-    state->type_AnimationController = py::register_python_type(module.get(), type_name_AnimationController, &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get()));
-    if (!state->type_AnimationController)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnimationController, &type_spec_AnimationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnimationController, &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_AnimationPropertyInfo = py::register_python_type(module.get(), type_name_AnimationPropertyInfo, &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr);
-    if (!state->type_AnimationPropertyInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AnimationPropertyInfo, &type_spec_AnimationPropertyInfo, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AnimationPropertyInfo, &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BackEasingFunction = py::register_python_type(module.get(), type_name_BackEasingFunction, &type_spec_BackEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_BackEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BackEasingFunction, &type_spec_BackEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BackEasingFunction, &type_spec_BackEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BooleanKeyFrameAnimation = py::register_python_type(module.get(), type_name_BooleanKeyFrameAnimation, &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_BooleanKeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BooleanKeyFrameAnimation, &type_spec_BooleanKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BooleanKeyFrameAnimation, &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BounceEasingFunction = py::register_python_type(module.get(), type_name_BounceEasingFunction, &type_spec_BounceEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_BounceEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BounceEasingFunction, &type_spec_BounceEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BounceEasingFunction, &type_spec_BounceEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BounceScalarNaturalMotionAnimation = py::register_python_type(module.get(), type_name_BounceScalarNaturalMotionAnimation, &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_BounceScalarNaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BounceScalarNaturalMotionAnimation, &type_spec_BounceScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BounceScalarNaturalMotionAnimation, &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BounceVector2NaturalMotionAnimation = py::register_python_type(module.get(), type_name_BounceVector2NaturalMotionAnimation, &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_BounceVector2NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BounceVector2NaturalMotionAnimation, &type_spec_BounceVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BounceVector2NaturalMotionAnimation, &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BounceVector3NaturalMotionAnimation = py::register_python_type(module.get(), type_name_BounceVector3NaturalMotionAnimation, &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_BounceVector3NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BounceVector3NaturalMotionAnimation, &type_spec_BounceVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BounceVector3NaturalMotionAnimation, &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CircleEasingFunction = py::register_python_type(module.get(), type_name_CircleEasingFunction, &type_spec_CircleEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_CircleEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CircleEasingFunction, &type_spec_CircleEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CircleEasingFunction, &type_spec_CircleEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ColorKeyFrameAnimation = py::register_python_type(module.get(), type_name_ColorKeyFrameAnimation, &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_ColorKeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrameAnimation, &type_spec_ColorKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ColorKeyFrameAnimation, &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionAnimation = py::register_python_type(module.get(), type_name_CompositionAnimation, &type_spec_CompositionAnimation, object_bases.get(), nullptr);
-    if (!state->type_CompositionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionAnimation, &type_spec_CompositionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionAnimation, &type_spec_CompositionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionAnimationGroup = py::register_python_type(module.get(), type_name_CompositionAnimationGroup, &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr);
-    if (!state->type_CompositionAnimationGroup)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionAnimationGroup, &type_spec_CompositionAnimationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionAnimationGroup, &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionBackdropBrush = py::register_python_type(module.get(), type_name_CompositionBackdropBrush, &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionBackdropBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionBackdropBrush, &type_spec_CompositionBackdropBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionBackdropBrush, &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionBatchCompletedEventArgs = py::register_python_type(module.get(), type_name_CompositionBatchCompletedEventArgs, &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_CompositionBatchCompletedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionBatchCompletedEventArgs, &type_spec_CompositionBatchCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionBatchCompletedEventArgs, &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionBrush = py::register_python_type(module.get(), type_name_CompositionBrush, &type_spec_CompositionBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionBrush, &type_spec_CompositionBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionBrush, &type_spec_CompositionBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionCapabilities = py::register_python_type(module.get(), type_name_CompositionCapabilities, &type_spec_CompositionCapabilities, object_bases.get(), nullptr);
-    if (!state->type_CompositionCapabilities)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionCapabilities, &type_spec_CompositionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionCapabilities, &type_spec_CompositionCapabilities, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionClip = py::register_python_type(module.get(), type_name_CompositionClip, &type_spec_CompositionClip, object_bases.get(), nullptr);
-    if (!state->type_CompositionClip)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionClip, &type_spec_CompositionClip, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionClip, &type_spec_CompositionClip, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionColorBrush = py::register_python_type(module.get(), type_name_CompositionColorBrush, &type_spec_CompositionColorBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionColorBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionColorBrush, &type_spec_CompositionColorBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionColorBrush, &type_spec_CompositionColorBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionColorGradientStop = py::register_python_type(module.get(), type_name_CompositionColorGradientStop, &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr);
-    if (!state->type_CompositionColorGradientStop)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStop, &type_spec_CompositionColorGradientStop, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStop, &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionColorGradientStopCollection = py::register_python_type(module.get(), type_name_CompositionColorGradientStopCollection, &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr);
-    if (!state->type_CompositionColorGradientStopCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStopCollection, &type_spec_CompositionColorGradientStopCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStopCollection, &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionCommitBatch = py::register_python_type(module.get(), type_name_CompositionCommitBatch, &type_spec_CompositionCommitBatch, object_bases.get(), nullptr);
-    if (!state->type_CompositionCommitBatch)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionCommitBatch, &type_spec_CompositionCommitBatch, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionCommitBatch, &type_spec_CompositionCommitBatch, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionContainerShape = py::register_python_type(module.get(), type_name_CompositionContainerShape, &type_spec_CompositionContainerShape, object_bases.get(), nullptr);
-    if (!state->type_CompositionContainerShape)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionContainerShape, &type_spec_CompositionContainerShape, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionContainerShape, &type_spec_CompositionContainerShape, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionDrawingSurface = py::register_python_type(module.get(), type_name_CompositionDrawingSurface, &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr);
-    if (!state->type_CompositionDrawingSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionDrawingSurface, &type_spec_CompositionDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionDrawingSurface, &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionEasingFunction = py::register_python_type(module.get(), type_name_CompositionEasingFunction, &type_spec_CompositionEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_CompositionEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionEasingFunction, &type_spec_CompositionEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionEasingFunction, &type_spec_CompositionEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionEffectBrush = py::register_python_type(module.get(), type_name_CompositionEffectBrush, &type_spec_CompositionEffectBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionEffectBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionEffectBrush, &type_spec_CompositionEffectBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionEffectBrush, &type_spec_CompositionEffectBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionEffectFactory = py::register_python_type(module.get(), type_name_CompositionEffectFactory, &type_spec_CompositionEffectFactory, object_bases.get(), nullptr);
-    if (!state->type_CompositionEffectFactory)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionEffectFactory, &type_spec_CompositionEffectFactory, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionEffectFactory, &type_spec_CompositionEffectFactory, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionEffectSourceParameter = py::register_python_type(module.get(), type_name_CompositionEffectSourceParameter, &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr);
-    if (!state->type_CompositionEffectSourceParameter)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionEffectSourceParameter, &type_spec_CompositionEffectSourceParameter, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionEffectSourceParameter, &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionEllipseGeometry = py::register_python_type(module.get(), type_name_CompositionEllipseGeometry, &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionEllipseGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionEllipseGeometry, &type_spec_CompositionEllipseGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionEllipseGeometry, &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionGeometricClip = py::register_python_type(module.get(), type_name_CompositionGeometricClip, &type_spec_CompositionGeometricClip, object_bases.get(), nullptr);
-    if (!state->type_CompositionGeometricClip)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionGeometricClip, &type_spec_CompositionGeometricClip, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionGeometricClip, &type_spec_CompositionGeometricClip, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionGeometry = py::register_python_type(module.get(), type_name_CompositionGeometry, &type_spec_CompositionGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionGeometry, &type_spec_CompositionGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionGeometry, &type_spec_CompositionGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionGradientBrush = py::register_python_type(module.get(), type_name_CompositionGradientBrush, &type_spec_CompositionGradientBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionGradientBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionGradientBrush, &type_spec_CompositionGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionGradientBrush, &type_spec_CompositionGradientBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionGraphicsDevice = py::register_python_type(module.get(), type_name_CompositionGraphicsDevice, &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr);
-    if (!state->type_CompositionGraphicsDevice)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionGraphicsDevice, &type_spec_CompositionGraphicsDevice, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionGraphicsDevice, &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionLight = py::register_python_type(module.get(), type_name_CompositionLight, &type_spec_CompositionLight, object_bases.get(), nullptr);
-    if (!state->type_CompositionLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionLight, &type_spec_CompositionLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionLight, &type_spec_CompositionLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionLineGeometry = py::register_python_type(module.get(), type_name_CompositionLineGeometry, &type_spec_CompositionLineGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionLineGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionLineGeometry, &type_spec_CompositionLineGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionLineGeometry, &type_spec_CompositionLineGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionLinearGradientBrush = py::register_python_type(module.get(), type_name_CompositionLinearGradientBrush, &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionLinearGradientBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionLinearGradientBrush, &type_spec_CompositionLinearGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionLinearGradientBrush, &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionMaskBrush = py::register_python_type(module.get(), type_name_CompositionMaskBrush, &type_spec_CompositionMaskBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionMaskBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionMaskBrush, &type_spec_CompositionMaskBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionMaskBrush, &type_spec_CompositionMaskBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionMipmapSurface = py::register_python_type(module.get(), type_name_CompositionMipmapSurface, &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr);
-    if (!state->type_CompositionMipmapSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionMipmapSurface, &type_spec_CompositionMipmapSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionMipmapSurface, &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionNineGridBrush = py::register_python_type(module.get(), type_name_CompositionNineGridBrush, &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionNineGridBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionNineGridBrush, &type_spec_CompositionNineGridBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionNineGridBrush, &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionObject = py::register_python_type(module.get(), type_name_CompositionObject, &type_spec_CompositionObject, object_bases.get(), nullptr);
-    if (!state->type_CompositionObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionObject, &type_spec_CompositionObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionObject, &type_spec_CompositionObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionPath = py::register_python_type(module.get(), type_name_CompositionPath, &type_spec_CompositionPath, object_bases.get(), nullptr);
-    if (!state->type_CompositionPath)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionPath, &type_spec_CompositionPath, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionPath, &type_spec_CompositionPath, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionPathGeometry = py::register_python_type(module.get(), type_name_CompositionPathGeometry, &type_spec_CompositionPathGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionPathGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionPathGeometry, &type_spec_CompositionPathGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionPathGeometry, &type_spec_CompositionPathGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionProjectedShadow = py::register_python_type(module.get(), type_name_CompositionProjectedShadow, &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr);
-    if (!state->type_CompositionProjectedShadow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadow, &type_spec_CompositionProjectedShadow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadow, &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionProjectedShadowCaster = py::register_python_type(module.get(), type_name_CompositionProjectedShadowCaster, &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr);
-    if (!state->type_CompositionProjectedShadowCaster)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCaster, &type_spec_CompositionProjectedShadowCaster, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCaster, &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30350,116 +30112,173 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
         return nullptr;
     }
 
-    state->type_CompositionProjectedShadowCasterCollection = py::register_python_type(module.get(), type_name_CompositionProjectedShadowCasterCollection, &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get()));
-    if (!state->type_CompositionProjectedShadowCasterCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCasterCollection, &type_spec_CompositionProjectedShadowCasterCollection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCasterCollection, &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionProjectedShadowReceiver = py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiver, &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr);
-    if (!state->type_CompositionProjectedShadowReceiver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiver, &type_spec_CompositionProjectedShadowReceiver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiver, &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionProjectedShadowReceiverUnorderedCollection = py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiverUnorderedCollection, &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr);
-    if (!state->type_CompositionProjectedShadowReceiverUnorderedCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiverUnorderedCollection, &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiverUnorderedCollection, &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionPropertySet = py::register_python_type(module.get(), type_name_CompositionPropertySet, &type_spec_CompositionPropertySet, object_bases.get(), nullptr);
-    if (!state->type_CompositionPropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionPropertySet, &type_spec_CompositionPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionPropertySet, &type_spec_CompositionPropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionRadialGradientBrush = py::register_python_type(module.get(), type_name_CompositionRadialGradientBrush, &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionRadialGradientBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionRadialGradientBrush, &type_spec_CompositionRadialGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionRadialGradientBrush, &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionRectangleGeometry = py::register_python_type(module.get(), type_name_CompositionRectangleGeometry, &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionRectangleGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionRectangleGeometry, &type_spec_CompositionRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionRectangleGeometry, &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionRoundedRectangleGeometry = py::register_python_type(module.get(), type_name_CompositionRoundedRectangleGeometry, &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr);
-    if (!state->type_CompositionRoundedRectangleGeometry)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionRoundedRectangleGeometry, &type_spec_CompositionRoundedRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionRoundedRectangleGeometry, &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionScopedBatch = py::register_python_type(module.get(), type_name_CompositionScopedBatch, &type_spec_CompositionScopedBatch, object_bases.get(), nullptr);
-    if (!state->type_CompositionScopedBatch)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionScopedBatch, &type_spec_CompositionScopedBatch, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionScopedBatch, &type_spec_CompositionScopedBatch, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionShadow = py::register_python_type(module.get(), type_name_CompositionShadow, &type_spec_CompositionShadow, object_bases.get(), nullptr);
-    if (!state->type_CompositionShadow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionShadow, &type_spec_CompositionShadow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionShadow, &type_spec_CompositionShadow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionShape = py::register_python_type(module.get(), type_name_CompositionShape, &type_spec_CompositionShape, object_bases.get(), nullptr);
-    if (!state->type_CompositionShape)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionShape, &type_spec_CompositionShape, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionShape, &type_spec_CompositionShape, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionShapeCollection = py::register_python_type(module.get(), type_name_CompositionShapeCollection, &type_spec_CompositionShapeCollection, object_bases.get(), nullptr);
-    if (!state->type_CompositionShapeCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionShapeCollection, &type_spec_CompositionShapeCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionShapeCollection, &type_spec_CompositionShapeCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionSpriteShape = py::register_python_type(module.get(), type_name_CompositionSpriteShape, &type_spec_CompositionSpriteShape, object_bases.get(), nullptr);
-    if (!state->type_CompositionSpriteShape)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionSpriteShape, &type_spec_CompositionSpriteShape, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionSpriteShape, &type_spec_CompositionSpriteShape, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionStrokeDashArray = py::register_python_type(module.get(), type_name_CompositionStrokeDashArray, &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr);
-    if (!state->type_CompositionStrokeDashArray)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionStrokeDashArray, &type_spec_CompositionStrokeDashArray, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionStrokeDashArray, &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionSurfaceBrush = py::register_python_type(module.get(), type_name_CompositionSurfaceBrush, &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr);
-    if (!state->type_CompositionSurfaceBrush)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionSurfaceBrush, &type_spec_CompositionSurfaceBrush, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionSurfaceBrush, &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionTarget = py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, object_bases.get(), nullptr);
-    if (!state->type_CompositionTarget)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionTransform = py::register_python_type(module.get(), type_name_CompositionTransform, &type_spec_CompositionTransform, object_bases.get(), nullptr);
-    if (!state->type_CompositionTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionTransform, &type_spec_CompositionTransform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionTransform, &type_spec_CompositionTransform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionViewBox = py::register_python_type(module.get(), type_name_CompositionViewBox, &type_spec_CompositionViewBox, object_bases.get(), nullptr);
-    if (!state->type_CompositionViewBox)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionViewBox, &type_spec_CompositionViewBox, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionViewBox, &type_spec_CompositionViewBox, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionVirtualDrawingSurface = py::register_python_type(module.get(), type_name_CompositionVirtualDrawingSurface, &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr);
-    if (!state->type_CompositionVirtualDrawingSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionVirtualDrawingSurface, &type_spec_CompositionVirtualDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionVirtualDrawingSurface, &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CompositionVisualSurface = py::register_python_type(module.get(), type_name_CompositionVisualSurface, &type_spec_CompositionVisualSurface, object_bases.get(), nullptr);
-    if (!state->type_CompositionVisualSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CompositionVisualSurface, &type_spec_CompositionVisualSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CompositionVisualSurface, &type_spec_CompositionVisualSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -30470,2876 +30289,447 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
         return nullptr;
     }
 
-    state->type_Compositor = py::register_python_type(module.get(), type_name_Compositor, &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get()));
-    if (!state->type_Compositor)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Compositor, &type_spec_Compositor, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Compositor, &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ContainerVisual = py::register_python_type(module.get(), type_name_ContainerVisual, &type_spec_ContainerVisual, object_bases.get(), nullptr);
-    if (!state->type_ContainerVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ContainerVisual, &type_spec_ContainerVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ContainerVisual, &type_spec_ContainerVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_CubicBezierEasingFunction = py::register_python_type(module.get(), type_name_CubicBezierEasingFunction, &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_CubicBezierEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_CubicBezierEasingFunction, &type_spec_CubicBezierEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_CubicBezierEasingFunction, &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DelegatedInkTrailVisual = py::register_python_type(module.get(), type_name_DelegatedInkTrailVisual, &type_spec_DelegatedInkTrailVisual, object_bases.get(), nullptr);
-    if (!state->type_DelegatedInkTrailVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DelegatedInkTrailVisual, &type_spec_DelegatedInkTrailVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DelegatedInkTrailVisual, &type_spec_DelegatedInkTrailVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DistantLight = py::register_python_type(module.get(), type_name_DistantLight, &type_spec_DistantLight, object_bases.get(), nullptr);
-    if (!state->type_DistantLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DistantLight, &type_spec_DistantLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DistantLight, &type_spec_DistantLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_DropShadow = py::register_python_type(module.get(), type_name_DropShadow, &type_spec_DropShadow, object_bases.get(), nullptr);
-    if (!state->type_DropShadow)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_DropShadow, &type_spec_DropShadow, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_DropShadow, &type_spec_DropShadow, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ElasticEasingFunction = py::register_python_type(module.get(), type_name_ElasticEasingFunction, &type_spec_ElasticEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_ElasticEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ElasticEasingFunction, &type_spec_ElasticEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ElasticEasingFunction, &type_spec_ElasticEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExponentialEasingFunction = py::register_python_type(module.get(), type_name_ExponentialEasingFunction, &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_ExponentialEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExponentialEasingFunction, &type_spec_ExponentialEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExponentialEasingFunction, &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ExpressionAnimation = py::register_python_type(module.get(), type_name_ExpressionAnimation, &type_spec_ExpressionAnimation, object_bases.get(), nullptr);
-    if (!state->type_ExpressionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ExpressionAnimation, &type_spec_ExpressionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ExpressionAnimation, &type_spec_ExpressionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImplicitAnimationCollection = py::register_python_type(module.get(), type_name_ImplicitAnimationCollection, &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr);
-    if (!state->type_ImplicitAnimationCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImplicitAnimationCollection, &type_spec_ImplicitAnimationCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImplicitAnimationCollection, &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InitialValueExpressionCollection = py::register_python_type(module.get(), type_name_InitialValueExpressionCollection, &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr);
-    if (!state->type_InitialValueExpressionCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InitialValueExpressionCollection, &type_spec_InitialValueExpressionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InitialValueExpressionCollection, &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InsetClip = py::register_python_type(module.get(), type_name_InsetClip, &type_spec_InsetClip, object_bases.get(), nullptr);
-    if (!state->type_InsetClip)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InsetClip, &type_spec_InsetClip, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InsetClip, &type_spec_InsetClip, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_KeyFrameAnimation = py::register_python_type(module.get(), type_name_KeyFrameAnimation, &type_spec_KeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_KeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_KeyFrameAnimation, &type_spec_KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_KeyFrameAnimation, &type_spec_KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LayerVisual = py::register_python_type(module.get(), type_name_LayerVisual, &type_spec_LayerVisual, object_bases.get(), nullptr);
-    if (!state->type_LayerVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LayerVisual, &type_spec_LayerVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LayerVisual, &type_spec_LayerVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_LinearEasingFunction = py::register_python_type(module.get(), type_name_LinearEasingFunction, &type_spec_LinearEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_LinearEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_LinearEasingFunction, &type_spec_LinearEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_LinearEasingFunction, &type_spec_LinearEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_NaturalMotionAnimation = py::register_python_type(module.get(), type_name_NaturalMotionAnimation, &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_NaturalMotionAnimation, &type_spec_NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_NaturalMotionAnimation, &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PathKeyFrameAnimation = py::register_python_type(module.get(), type_name_PathKeyFrameAnimation, &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_PathKeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PathKeyFrameAnimation, &type_spec_PathKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PathKeyFrameAnimation, &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PointLight = py::register_python_type(module.get(), type_name_PointLight, &type_spec_PointLight, object_bases.get(), nullptr);
-    if (!state->type_PointLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PointLight, &type_spec_PointLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PointLight, &type_spec_PointLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PowerEasingFunction = py::register_python_type(module.get(), type_name_PowerEasingFunction, &type_spec_PowerEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_PowerEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PowerEasingFunction, &type_spec_PowerEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PowerEasingFunction, &type_spec_PowerEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_QuaternionKeyFrameAnimation = py::register_python_type(module.get(), type_name_QuaternionKeyFrameAnimation, &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_QuaternionKeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_QuaternionKeyFrameAnimation, &type_spec_QuaternionKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_QuaternionKeyFrameAnimation, &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RectangleClip = py::register_python_type(module.get(), type_name_RectangleClip, &type_spec_RectangleClip, object_bases.get(), nullptr);
-    if (!state->type_RectangleClip)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RectangleClip, &type_spec_RectangleClip, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RectangleClip, &type_spec_RectangleClip, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RedirectVisual = py::register_python_type(module.get(), type_name_RedirectVisual, &type_spec_RedirectVisual, object_bases.get(), nullptr);
-    if (!state->type_RedirectVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RedirectVisual, &type_spec_RedirectVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RedirectVisual, &type_spec_RedirectVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_RenderingDeviceReplacedEventArgs = py::register_python_type(module.get(), type_name_RenderingDeviceReplacedEventArgs, &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_RenderingDeviceReplacedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_RenderingDeviceReplacedEventArgs, &type_spec_RenderingDeviceReplacedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_RenderingDeviceReplacedEventArgs, &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScalarKeyFrameAnimation = py::register_python_type(module.get(), type_name_ScalarKeyFrameAnimation, &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_ScalarKeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScalarKeyFrameAnimation, &type_spec_ScalarKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScalarKeyFrameAnimation, &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ScalarNaturalMotionAnimation = py::register_python_type(module.get(), type_name_ScalarNaturalMotionAnimation, &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_ScalarNaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ScalarNaturalMotionAnimation, &type_spec_ScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ScalarNaturalMotionAnimation, &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ShapeVisual = py::register_python_type(module.get(), type_name_ShapeVisual, &type_spec_ShapeVisual, object_bases.get(), nullptr);
-    if (!state->type_ShapeVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ShapeVisual, &type_spec_ShapeVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ShapeVisual, &type_spec_ShapeVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SineEasingFunction = py::register_python_type(module.get(), type_name_SineEasingFunction, &type_spec_SineEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_SineEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SineEasingFunction, &type_spec_SineEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SineEasingFunction, &type_spec_SineEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpotLight = py::register_python_type(module.get(), type_name_SpotLight, &type_spec_SpotLight, object_bases.get(), nullptr);
-    if (!state->type_SpotLight)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpotLight, &type_spec_SpotLight, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpotLight, &type_spec_SpotLight, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpringScalarNaturalMotionAnimation = py::register_python_type(module.get(), type_name_SpringScalarNaturalMotionAnimation, &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_SpringScalarNaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpringScalarNaturalMotionAnimation, &type_spec_SpringScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpringScalarNaturalMotionAnimation, &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpringVector2NaturalMotionAnimation = py::register_python_type(module.get(), type_name_SpringVector2NaturalMotionAnimation, &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_SpringVector2NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpringVector2NaturalMotionAnimation, &type_spec_SpringVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpringVector2NaturalMotionAnimation, &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpringVector3NaturalMotionAnimation = py::register_python_type(module.get(), type_name_SpringVector3NaturalMotionAnimation, &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_SpringVector3NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpringVector3NaturalMotionAnimation, &type_spec_SpringVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpringVector3NaturalMotionAnimation, &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SpriteVisual = py::register_python_type(module.get(), type_name_SpriteVisual, &type_spec_SpriteVisual, object_bases.get(), nullptr);
-    if (!state->type_SpriteVisual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SpriteVisual, &type_spec_SpriteVisual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SpriteVisual, &type_spec_SpriteVisual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StepEasingFunction = py::register_python_type(module.get(), type_name_StepEasingFunction, &type_spec_StepEasingFunction, object_bases.get(), nullptr);
-    if (!state->type_StepEasingFunction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StepEasingFunction, &type_spec_StepEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StepEasingFunction, &type_spec_StepEasingFunction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector2KeyFrameAnimation = py::register_python_type(module.get(), type_name_Vector2KeyFrameAnimation, &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_Vector2KeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector2KeyFrameAnimation, &type_spec_Vector2KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector2KeyFrameAnimation, &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector2NaturalMotionAnimation = py::register_python_type(module.get(), type_name_Vector2NaturalMotionAnimation, &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_Vector2NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector2NaturalMotionAnimation, &type_spec_Vector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector2NaturalMotionAnimation, &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector3KeyFrameAnimation = py::register_python_type(module.get(), type_name_Vector3KeyFrameAnimation, &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_Vector3KeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector3KeyFrameAnimation, &type_spec_Vector3KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector3KeyFrameAnimation, &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector3NaturalMotionAnimation = py::register_python_type(module.get(), type_name_Vector3NaturalMotionAnimation, &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr);
-    if (!state->type_Vector3NaturalMotionAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector3NaturalMotionAnimation, &type_spec_Vector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector3NaturalMotionAnimation, &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Vector4KeyFrameAnimation = py::register_python_type(module.get(), type_name_Vector4KeyFrameAnimation, &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr);
-    if (!state->type_Vector4KeyFrameAnimation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Vector4KeyFrameAnimation, &type_spec_Vector4KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Vector4KeyFrameAnimation, &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_Visual = py::register_python_type(module.get(), type_name_Visual, &type_spec_Visual, object_bases.get(), nullptr);
-    if (!state->type_Visual)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_Visual, &type_spec_Visual, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_Visual, &type_spec_Visual, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualCollection = py::register_python_type(module.get(), type_name_VisualCollection, &type_spec_VisualCollection, object_bases.get(), nullptr);
-    if (!state->type_VisualCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualCollection, &type_spec_VisualCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualCollection, &type_spec_VisualCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_VisualUnorderedCollection = py::register_python_type(module.get(), type_name_VisualUnorderedCollection, &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr);
-    if (!state->type_VisualUnorderedCollection)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_VisualUnorderedCollection, &type_spec_VisualUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_VisualUnorderedCollection, &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IAnimationObject = py::register_python_type(module.get(), type_name_IAnimationObject, &type_spec_IAnimationObject, object_bases.get(), nullptr);
-    if (!state->type_IAnimationObject)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IAnimationObject, &type_spec_IAnimationObject, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IAnimationObject, &type_spec_IAnimationObject, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICompositionAnimationBase = py::register_python_type(module.get(), type_name_ICompositionAnimationBase, &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr);
-    if (!state->type_ICompositionAnimationBase)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICompositionAnimationBase, &type_spec_ICompositionAnimationBase, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICompositionAnimationBase, &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICompositionSupportsSystemBackdrop = py::register_python_type(module.get(), type_name_ICompositionSupportsSystemBackdrop, &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr);
-    if (!state->type_ICompositionSupportsSystemBackdrop)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICompositionSupportsSystemBackdrop, &type_spec_ICompositionSupportsSystemBackdrop, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICompositionSupportsSystemBackdrop, &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICompositionSurface = py::register_python_type(module.get(), type_name_ICompositionSurface, &type_spec_ICompositionSurface, object_bases.get(), nullptr);
-    if (!state->type_ICompositionSurface)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICompositionSurface, &type_spec_ICompositionSurface, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICompositionSurface, &type_spec_ICompositionSurface, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ICompositionSurfaceFacade = py::register_python_type(module.get(), type_name_ICompositionSurfaceFacade, &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr);
-    if (!state->type_ICompositionSurfaceFacade)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ICompositionSurfaceFacade, &type_spec_ICompositionSurfaceFacade, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ICompositionSurfaceFacade, &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVisualElement = py::register_python_type(module.get(), type_name_IVisualElement, &type_spec_IVisualElement, object_bases.get(), nullptr);
-    if (!state->type_IVisualElement)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVisualElement, &type_spec_IVisualElement, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVisualElement, &type_spec_IVisualElement, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IVisualElement2 = py::register_python_type(module.get(), type_name_IVisualElement2, &type_spec_IVisualElement2, object_bases.get(), nullptr);
-    if (!state->type_IVisualElement2)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IVisualElement2, &type_spec_IVisualElement2, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IVisualElement2, &type_spec_IVisualElement2, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InkTrailPoint = py::register_python_type(module.get(), type_name_InkTrailPoint, &type_spec_InkTrailPoint, nullptr, nullptr);
-    if (!state->type_InkTrailPoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InkTrailPoint, &type_spec_InkTrailPoint, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InkTrailPoint, &type_spec_InkTrailPoint, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::AmbientLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AmbientLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::AmbientLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::AnimationController>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnimationController;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::AnimationController is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AnimationPropertyInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::AnimationPropertyInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BackEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BackEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BackEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BooleanKeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BooleanKeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BounceEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BounceEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BounceEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BounceScalarNaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BounceVector2NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BounceVector3NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CircleEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CircleEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CircleEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ColorKeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ColorKeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionAnimationGroup;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionAnimationGroup is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionBackdropBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionBackdropBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionBatchCompletedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionCapabilities>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionCapabilities;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionCapabilities is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionClip>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionClip;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionClip is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionColorBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionColorBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionColorBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionColorGradientStop;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionColorGradientStop is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionColorGradientStopCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionColorGradientStopCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionCommitBatch>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionCommitBatch;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionCommitBatch is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionContainerShape>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionContainerShape;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionContainerShape is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionDrawingSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionDrawingSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionEffectBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionEffectBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionEffectBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionEffectFactory>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionEffectFactory;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionEffectFactory is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionEffectSourceParameter>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionEffectSourceParameter;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionEffectSourceParameter is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionEllipseGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionEllipseGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionGeometricClip>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionGeometricClip;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionGeometricClip is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionGradientBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionGradientBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionGradientBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionGraphicsDevice;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionGraphicsDevice is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionLineGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionLineGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionLineGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionLinearGradientBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionLinearGradientBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionMaskBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionMaskBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionMaskBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionMipmapSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionMipmapSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionNineGridBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionNineGridBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionPath>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionPath;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionPath is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionPathGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionPathGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionPathGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionProjectedShadow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionProjectedShadow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionProjectedShadowCaster;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionProjectedShadowCaster is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionProjectedShadowCasterCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionProjectedShadowReceiver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionProjectedShadowReceiverUnorderedCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionPropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionPropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionPropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionRadialGradientBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionRadialGradientBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionRectangleGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionRectangleGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionRoundedRectangleGeometry;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionScopedBatch>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionScopedBatch;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionScopedBatch is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionShadow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionShadow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionShadow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionShape>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionShape;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionShape is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionShapeCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionShapeCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionShapeCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionSpriteShape>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionSpriteShape;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionSpriteShape is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionStrokeDashArray;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionStrokeDashArray is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionSurfaceBrush;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionSurfaceBrush is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionTarget>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionTarget;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionTarget is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionViewBox>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionViewBox;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionViewBox is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionVirtualDrawingSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CompositionVisualSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CompositionVisualSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CompositionVisualSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Compositor>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Compositor;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Compositor is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ContainerVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ContainerVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ContainerVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_CubicBezierEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::CubicBezierEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DelegatedInkTrailVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::DelegatedInkTrailVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::DistantLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DistantLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::DistantLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::DropShadow>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_DropShadow;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::DropShadow is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ElasticEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ElasticEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ElasticEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExponentialEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ExponentialEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ExpressionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ExpressionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ExpressionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImplicitAnimationCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ImplicitAnimationCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InitialValueExpressionCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::InitialValueExpressionCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::InsetClip>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InsetClip;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::InsetClip is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::KeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_KeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::KeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::LayerVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LayerVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::LayerVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::LinearEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_LinearEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::LinearEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PathKeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::PathKeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::PointLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PointLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::PointLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::PowerEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PowerEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::PowerEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_QuaternionKeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::RectangleClip>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RectangleClip;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::RectangleClip is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::RedirectVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RedirectVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::RedirectVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_RenderingDeviceReplacedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScalarKeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ScalarKeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ScalarNaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ShapeVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ShapeVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ShapeVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SineEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SineEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SineEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SpotLight>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpotLight;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SpotLight is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpringScalarNaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpringVector2NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpringVector3NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::SpriteVisual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SpriteVisual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::SpriteVisual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::StepEasingFunction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StepEasingFunction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::StepEasingFunction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector2KeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Vector2KeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector2NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector3KeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Vector3KeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector3NaturalMotionAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Vector4KeyFrameAnimation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Vector4KeyFrameAnimation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::Visual>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_Visual;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::Visual is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::VisualCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::VisualCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_VisualUnorderedCollection;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::VisualUnorderedCollection is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::IAnimationObject>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IAnimationObject;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::IAnimationObject is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICompositionAnimationBase;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ICompositionAnimationBase is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICompositionSupportsSystemBackdrop;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ICompositionSurface>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICompositionSurface;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ICompositionSurface is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ICompositionSurfaceFacade;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::ICompositionSurfaceFacade is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::IVisualElement>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVisualElement;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::IVisualElement is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::IVisualElement2>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IVisualElement2;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::IVisualElement2 is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Composition::InkTrailPoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Composition;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Composition");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InkTrailPoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Composition::InkTrailPoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

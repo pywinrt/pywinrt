@@ -67,38 +67,44 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FileExtensionVector>
+    struct py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FileExtensionVector";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FileOpenPicker>
+    struct py_type<winrt::Windows::Storage::Pickers::FileOpenPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FileOpenPicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>
+    struct py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FilePickerFileTypesOrderedMap";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>
+    struct py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FilePickerSelectedFilesArray";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FileSavePicker>
+    struct py_type<winrt::Windows::Storage::Pickers::FileSavePicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FileSavePicker";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Storage::Pickers::FolderPicker>
+    struct py_type<winrt::Windows::Storage::Pickers::FolderPicker>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.storage.pickers";
+        static constexpr const char* type_name = "FolderPicker";
     };
 }

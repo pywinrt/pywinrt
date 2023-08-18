@@ -187,68 +187,79 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTask";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskBatch";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskList";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskListLimitedWriteOperations";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskListSyncManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskQueryOptions";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskReader";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskRecurrenceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskRegenerationProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>
+    struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
+        static constexpr const char* type_name = "UserDataTaskStore";
     };
 }

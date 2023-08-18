@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::Graphics::Imaging
 {
-    struct module_state
-    {
-        PyTypeObject* type_BitmapBuffer;
-        PyTypeObject* type_BitmapCodecInformation;
-        PyTypeObject* type_BitmapDecoder;
-        PyTypeObject* type_BitmapEncoder;
-        PyTypeObject* type_BitmapFrame;
-        PyTypeObject* type_BitmapProperties;
-        PyTypeObject* type_BitmapPropertiesView;
-        PyTypeObject* type_BitmapPropertySet;
-        PyTypeObject* type_BitmapTransform;
-        PyTypeObject* type_BitmapTypedValue;
-        PyTypeObject* type_ImageStream;
-        PyTypeObject* type_PixelDataProvider;
-        PyTypeObject* type_SoftwareBitmap;
-        PyTypeObject* type_IBitmapFrame;
-        PyTypeObject* type_IBitmapFrameWithSoftwareBitmap;
-        PyTypeObject* type_IBitmapPropertiesView;
-        PyTypeObject* type_BitmapBounds;
-        PyTypeObject* type_BitmapPlaneDescription;
-        PyTypeObject* type_BitmapSize;
-    };
-
     // ----- BitmapBuffer class --------------------
     static constexpr const char* const type_name_BitmapBuffer = "BitmapBuffer";
 
@@ -6323,80 +6300,15 @@ namespace py::cpp::Windows::Graphics::Imaging
     PyDoc_STRVAR(module_doc, "Windows::Graphics::Imaging");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_BitmapBuffer);
-        Py_VISIT(state->type_BitmapCodecInformation);
-        Py_VISIT(state->type_BitmapDecoder);
-        Py_VISIT(state->type_BitmapEncoder);
-        Py_VISIT(state->type_BitmapFrame);
-        Py_VISIT(state->type_BitmapProperties);
-        Py_VISIT(state->type_BitmapPropertiesView);
-        Py_VISIT(state->type_BitmapPropertySet);
-        Py_VISIT(state->type_BitmapTransform);
-        Py_VISIT(state->type_BitmapTypedValue);
-        Py_VISIT(state->type_ImageStream);
-        Py_VISIT(state->type_PixelDataProvider);
-        Py_VISIT(state->type_SoftwareBitmap);
-        Py_VISIT(state->type_IBitmapFrame);
-        Py_VISIT(state->type_IBitmapFrameWithSoftwareBitmap);
-        Py_VISIT(state->type_IBitmapPropertiesView);
-        Py_VISIT(state->type_BitmapBounds);
-        Py_VISIT(state->type_BitmapPlaneDescription);
-        Py_VISIT(state->type_BitmapSize);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_BitmapBuffer);
-        Py_CLEAR(state->type_BitmapCodecInformation);
-        Py_CLEAR(state->type_BitmapDecoder);
-        Py_CLEAR(state->type_BitmapEncoder);
-        Py_CLEAR(state->type_BitmapFrame);
-        Py_CLEAR(state->type_BitmapProperties);
-        Py_CLEAR(state->type_BitmapPropertiesView);
-        Py_CLEAR(state->type_BitmapPropertySet);
-        Py_CLEAR(state->type_BitmapTransform);
-        Py_CLEAR(state->type_BitmapTypedValue);
-        Py_CLEAR(state->type_ImageStream);
-        Py_CLEAR(state->type_PixelDataProvider);
-        Py_CLEAR(state->type_SoftwareBitmap);
-        Py_CLEAR(state->type_IBitmapFrame);
-        Py_CLEAR(state->type_IBitmapFrameWithSoftwareBitmap);
-        Py_CLEAR(state->type_IBitmapPropertiesView);
-        Py_CLEAR(state->type_BitmapBounds);
-        Py_CLEAR(state->type_BitmapPlaneDescription);
-        Py_CLEAR(state->type_BitmapSize);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Graphics_Imaging",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Graphics::Imaging
@@ -6412,7 +6324,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Imaging(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6425,17 +6337,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Imaging(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_BitmapBuffer = py::register_python_type(module.get(), type_name_BitmapBuffer, &type_spec_BitmapBuffer, object_bases.get(), nullptr);
-    if (!state->type_BitmapBuffer)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapBuffer, &type_spec_BitmapBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapBuffer, &type_spec_BitmapBuffer, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapCodecInformation = py::register_python_type(module.get(), type_name_BitmapCodecInformation, &type_spec_BitmapCodecInformation, object_bases.get(), nullptr);
-    if (!state->type_BitmapCodecInformation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapCodecInformation, &type_spec_BitmapCodecInformation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapCodecInformation, &type_spec_BitmapCodecInformation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6446,8 +6361,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Imaging(void) noexcept
         return nullptr;
     }
 
-    state->type_BitmapDecoder = py::register_python_type(module.get(), type_name_BitmapDecoder, &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get()));
-    if (!state->type_BitmapDecoder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapDecoder, &type_spec_BitmapDecoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapDecoder, &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6458,539 +6376,150 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Imaging(void) noexcept
         return nullptr;
     }
 
-    state->type_BitmapEncoder = py::register_python_type(module.get(), type_name_BitmapEncoder, &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get()));
-    if (!state->type_BitmapEncoder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapEncoder, &type_spec_BitmapEncoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapEncoder, &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapFrame = py::register_python_type(module.get(), type_name_BitmapFrame, &type_spec_BitmapFrame, object_bases.get(), nullptr);
-    if (!state->type_BitmapFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapFrame, &type_spec_BitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapFrame, &type_spec_BitmapFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapProperties = py::register_python_type(module.get(), type_name_BitmapProperties, &type_spec_BitmapProperties, object_bases.get(), nullptr);
-    if (!state->type_BitmapProperties)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapProperties, &type_spec_BitmapProperties, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapProperties, &type_spec_BitmapProperties, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapPropertiesView = py::register_python_type(module.get(), type_name_BitmapPropertiesView, &type_spec_BitmapPropertiesView, object_bases.get(), nullptr);
-    if (!state->type_BitmapPropertiesView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapPropertiesView, &type_spec_BitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapPropertiesView, &type_spec_BitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapPropertySet = py::register_python_type(module.get(), type_name_BitmapPropertySet, &type_spec_BitmapPropertySet, object_bases.get(), nullptr);
-    if (!state->type_BitmapPropertySet)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapPropertySet, &type_spec_BitmapPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapPropertySet, &type_spec_BitmapPropertySet, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapTransform = py::register_python_type(module.get(), type_name_BitmapTransform, &type_spec_BitmapTransform, object_bases.get(), nullptr);
-    if (!state->type_BitmapTransform)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapTransform, &type_spec_BitmapTransform, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapTransform, &type_spec_BitmapTransform, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapTypedValue = py::register_python_type(module.get(), type_name_BitmapTypedValue, &type_spec_BitmapTypedValue, object_bases.get(), nullptr);
-    if (!state->type_BitmapTypedValue)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapTypedValue, &type_spec_BitmapTypedValue, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapTypedValue, &type_spec_BitmapTypedValue, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ImageStream = py::register_python_type(module.get(), type_name_ImageStream, &type_spec_ImageStream, object_bases.get(), nullptr);
-    if (!state->type_ImageStream)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ImageStream, &type_spec_ImageStream, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ImageStream, &type_spec_ImageStream, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PixelDataProvider = py::register_python_type(module.get(), type_name_PixelDataProvider, &type_spec_PixelDataProvider, object_bases.get(), nullptr);
-    if (!state->type_PixelDataProvider)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PixelDataProvider, &type_spec_PixelDataProvider, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PixelDataProvider, &type_spec_PixelDataProvider, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_SoftwareBitmap = py::register_python_type(module.get(), type_name_SoftwareBitmap, &type_spec_SoftwareBitmap, object_bases.get(), nullptr);
-    if (!state->type_SoftwareBitmap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_SoftwareBitmap, &type_spec_SoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_SoftwareBitmap, &type_spec_SoftwareBitmap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBitmapFrame = py::register_python_type(module.get(), type_name_IBitmapFrame, &type_spec_IBitmapFrame, object_bases.get(), nullptr);
-    if (!state->type_IBitmapFrame)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBitmapFrame, &type_spec_IBitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBitmapFrame, &type_spec_IBitmapFrame, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBitmapFrameWithSoftwareBitmap = py::register_python_type(module.get(), type_name_IBitmapFrameWithSoftwareBitmap, &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr);
-    if (!state->type_IBitmapFrameWithSoftwareBitmap)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBitmapFrameWithSoftwareBitmap, &type_spec_IBitmapFrameWithSoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBitmapFrameWithSoftwareBitmap, &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_IBitmapPropertiesView = py::register_python_type(module.get(), type_name_IBitmapPropertiesView, &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr);
-    if (!state->type_IBitmapPropertiesView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_IBitmapPropertiesView, &type_spec_IBitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_IBitmapPropertiesView, &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapBounds = py::register_python_type(module.get(), type_name_BitmapBounds, &type_spec_BitmapBounds, nullptr, nullptr);
-    if (!state->type_BitmapBounds)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapBounds, &type_spec_BitmapBounds, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapBounds, &type_spec_BitmapBounds, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapPlaneDescription = py::register_python_type(module.get(), type_name_BitmapPlaneDescription, &type_spec_BitmapPlaneDescription, nullptr, nullptr);
-    if (!state->type_BitmapPlaneDescription)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapPlaneDescription, &type_spec_BitmapPlaneDescription, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapPlaneDescription, &type_spec_BitmapPlaneDescription, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_BitmapSize = py::register_python_type(module.get(), type_name_BitmapSize, &type_spec_BitmapSize, nullptr, nullptr);
-    if (!state->type_BitmapSize)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_BitmapSize, &type_spec_BitmapSize, nullptr, nullptr, nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_BitmapSize, &type_spec_BitmapSize, nullptr, nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapBuffer;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapBuffer is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapCodecInformation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapCodecInformation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapDecoder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapDecoder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapEncoder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapEncoder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapProperties>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapProperties;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapProperties is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapPropertiesView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapPropertiesView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapPropertySet>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapPropertySet;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapPropertySet is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapTransform>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapTransform;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapTransform is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapTypedValue>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapTypedValue;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapTypedValue is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::ImageStream>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ImageStream;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::ImageStream is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PixelDataProvider;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::PixelDataProvider is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::SoftwareBitmap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_SoftwareBitmap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::SoftwareBitmap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBitmapFrame;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::IBitmapFrame is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBitmapFrameWithSoftwareBitmap;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_IBitmapPropertiesView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::IBitmapPropertiesView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapBounds>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapBounds;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapBounds is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapPlaneDescription;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapPlaneDescription is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Graphics::Imaging::BitmapSize>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Graphics::Imaging;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Graphics::Imaging");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_BitmapSize;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Graphics::Imaging::BitmapSize is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

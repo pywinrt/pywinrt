@@ -6,18 +6,6 @@
 
 namespace py::cpp::Windows::ApplicationModel::Wallet
 {
-    struct module_state
-    {
-        PyTypeObject* type_WalletBarcode;
-        PyTypeObject* type_WalletItem;
-        PyTypeObject* type_WalletItemCustomProperty;
-        PyTypeObject* type_WalletItemStore;
-        PyTypeObject* type_WalletManager;
-        PyTypeObject* type_WalletRelevantLocation;
-        PyTypeObject* type_WalletTransaction;
-        PyTypeObject* type_WalletVerb;
-    };
-
     // ----- WalletBarcode class --------------------
     static constexpr const char* const type_name_WalletBarcode = "WalletBarcode";
 
@@ -3032,58 +3020,15 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Wallet");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_WalletBarcode);
-        Py_VISIT(state->type_WalletItem);
-        Py_VISIT(state->type_WalletItemCustomProperty);
-        Py_VISIT(state->type_WalletItemStore);
-        Py_VISIT(state->type_WalletManager);
-        Py_VISIT(state->type_WalletRelevantLocation);
-        Py_VISIT(state->type_WalletTransaction);
-        Py_VISIT(state->type_WalletVerb);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_WalletBarcode);
-        Py_CLEAR(state->type_WalletItem);
-        Py_CLEAR(state->type_WalletItemCustomProperty);
-        Py_CLEAR(state->type_WalletItemStore);
-        Py_CLEAR(state->type_WalletManager);
-        Py_CLEAR(state->type_WalletRelevantLocation);
-        Py_CLEAR(state->type_WalletTransaction);
-        Py_CLEAR(state->type_WalletVerb);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_ApplicationModel_Wallet",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::ApplicationModel::Wallet
@@ -3099,7 +3044,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Wallet(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3112,241 +3057,78 @@ PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Wallet(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_WalletBarcode = py::register_python_type(module.get(), type_name_WalletBarcode, &type_spec_WalletBarcode, object_bases.get(), nullptr);
-    if (!state->type_WalletBarcode)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletBarcode, &type_spec_WalletBarcode, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletBarcode, &type_spec_WalletBarcode, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletItem = py::register_python_type(module.get(), type_name_WalletItem, &type_spec_WalletItem, object_bases.get(), nullptr);
-    if (!state->type_WalletItem)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletItem, &type_spec_WalletItem, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletItem, &type_spec_WalletItem, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletItemCustomProperty = py::register_python_type(module.get(), type_name_WalletItemCustomProperty, &type_spec_WalletItemCustomProperty, object_bases.get(), nullptr);
-    if (!state->type_WalletItemCustomProperty)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletItemCustomProperty, &type_spec_WalletItemCustomProperty, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletItemCustomProperty, &type_spec_WalletItemCustomProperty, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletItemStore = py::register_python_type(module.get(), type_name_WalletItemStore, &type_spec_WalletItemStore, object_bases.get(), nullptr);
-    if (!state->type_WalletItemStore)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletItemStore, &type_spec_WalletItemStore, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletItemStore, &type_spec_WalletItemStore, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletManager = py::register_python_type(module.get(), type_name_WalletManager, &type_spec_WalletManager, object_bases.get(), nullptr);
-    if (!state->type_WalletManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletManager, &type_spec_WalletManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletManager, &type_spec_WalletManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletRelevantLocation = py::register_python_type(module.get(), type_name_WalletRelevantLocation, &type_spec_WalletRelevantLocation, object_bases.get(), nullptr);
-    if (!state->type_WalletRelevantLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletRelevantLocation, &type_spec_WalletRelevantLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletRelevantLocation, &type_spec_WalletRelevantLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletTransaction = py::register_python_type(module.get(), type_name_WalletTransaction, &type_spec_WalletTransaction, object_bases.get(), nullptr);
-    if (!state->type_WalletTransaction)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletTransaction, &type_spec_WalletTransaction, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletTransaction, &type_spec_WalletTransaction, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_WalletVerb = py::register_python_type(module.get(), type_name_WalletVerb, &type_spec_WalletVerb, object_bases.get(), nullptr);
-    if (!state->type_WalletVerb)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_WalletVerb, &type_spec_WalletVerb, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_WalletVerb, &type_spec_WalletVerb, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletBarcode;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletBarcode is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItem>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletItem;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletItem is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletItemCustomProperty;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletItemStore;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletItemStore is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletRelevantLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletTransaction>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletTransaction;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletTransaction is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::ApplicationModel::Wallet::WalletVerb>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::ApplicationModel::Wallet;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::ApplicationModel::Wallet");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_WalletVerb;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::ApplicationModel::Wallet::WalletVerb is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

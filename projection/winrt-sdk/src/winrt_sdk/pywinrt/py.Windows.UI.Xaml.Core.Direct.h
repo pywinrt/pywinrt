@@ -78,14 +78,16 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>
+    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
+        static constexpr const char* type_name = "XamlDirect";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
+    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
+        static constexpr const char* type_name = "IXamlDirectObject";
     };
 }

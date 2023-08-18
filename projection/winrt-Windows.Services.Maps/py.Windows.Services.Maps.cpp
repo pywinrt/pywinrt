@@ -6,26 +6,6 @@
 
 namespace py::cpp::Windows::Services::Maps
 {
-    struct module_state
-    {
-        PyTypeObject* type_EnhancedWaypoint;
-        PyTypeObject* type_ManeuverWarning;
-        PyTypeObject* type_MapAddress;
-        PyTypeObject* type_MapLocation;
-        PyTypeObject* type_MapLocationFinder;
-        PyTypeObject* type_MapLocationFinderResult;
-        PyTypeObject* type_MapManager;
-        PyTypeObject* type_MapRoute;
-        PyTypeObject* type_MapRouteDrivingOptions;
-        PyTypeObject* type_MapRouteFinder;
-        PyTypeObject* type_MapRouteFinderResult;
-        PyTypeObject* type_MapRouteLeg;
-        PyTypeObject* type_MapRouteManeuver;
-        PyTypeObject* type_MapService;
-        PyTypeObject* type_PlaceInfo;
-        PyTypeObject* type_PlaceInfoCreateOptions;
-    };
-
     // ----- EnhancedWaypoint class --------------------
     static constexpr const char* const type_name_EnhancedWaypoint = "EnhancedWaypoint";
 
@@ -3613,74 +3593,15 @@ namespace py::cpp::Windows::Services::Maps
     PyDoc_STRVAR(module_doc, "Windows::Services::Maps");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_EnhancedWaypoint);
-        Py_VISIT(state->type_ManeuverWarning);
-        Py_VISIT(state->type_MapAddress);
-        Py_VISIT(state->type_MapLocation);
-        Py_VISIT(state->type_MapLocationFinder);
-        Py_VISIT(state->type_MapLocationFinderResult);
-        Py_VISIT(state->type_MapManager);
-        Py_VISIT(state->type_MapRoute);
-        Py_VISIT(state->type_MapRouteDrivingOptions);
-        Py_VISIT(state->type_MapRouteFinder);
-        Py_VISIT(state->type_MapRouteFinderResult);
-        Py_VISIT(state->type_MapRouteLeg);
-        Py_VISIT(state->type_MapRouteManeuver);
-        Py_VISIT(state->type_MapService);
-        Py_VISIT(state->type_PlaceInfo);
-        Py_VISIT(state->type_PlaceInfoCreateOptions);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_EnhancedWaypoint);
-        Py_CLEAR(state->type_ManeuverWarning);
-        Py_CLEAR(state->type_MapAddress);
-        Py_CLEAR(state->type_MapLocation);
-        Py_CLEAR(state->type_MapLocationFinder);
-        Py_CLEAR(state->type_MapLocationFinderResult);
-        Py_CLEAR(state->type_MapManager);
-        Py_CLEAR(state->type_MapRoute);
-        Py_CLEAR(state->type_MapRouteDrivingOptions);
-        Py_CLEAR(state->type_MapRouteFinder);
-        Py_CLEAR(state->type_MapRouteFinderResult);
-        Py_CLEAR(state->type_MapRouteLeg);
-        Py_CLEAR(state->type_MapRouteManeuver);
-        Py_CLEAR(state->type_MapService);
-        Py_CLEAR(state->type_PlaceInfo);
-        Py_CLEAR(state->type_PlaceInfoCreateOptions);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_Services_Maps",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::Services::Maps
@@ -3696,7 +3617,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -3709,83 +3630,119 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_EnhancedWaypoint = py::register_python_type(module.get(), type_name_EnhancedWaypoint, &type_spec_EnhancedWaypoint, object_bases.get(), nullptr);
-    if (!state->type_EnhancedWaypoint)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_EnhancedWaypoint, &type_spec_EnhancedWaypoint, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_EnhancedWaypoint, &type_spec_EnhancedWaypoint, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ManeuverWarning = py::register_python_type(module.get(), type_name_ManeuverWarning, &type_spec_ManeuverWarning, object_bases.get(), nullptr);
-    if (!state->type_ManeuverWarning)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ManeuverWarning, &type_spec_ManeuverWarning, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ManeuverWarning, &type_spec_ManeuverWarning, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapAddress = py::register_python_type(module.get(), type_name_MapAddress, &type_spec_MapAddress, object_bases.get(), nullptr);
-    if (!state->type_MapAddress)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapAddress, &type_spec_MapAddress, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapAddress, &type_spec_MapAddress, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapLocation = py::register_python_type(module.get(), type_name_MapLocation, &type_spec_MapLocation, object_bases.get(), nullptr);
-    if (!state->type_MapLocation)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapLocation, &type_spec_MapLocation, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapLocation, &type_spec_MapLocation, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapLocationFinder = py::register_python_type(module.get(), type_name_MapLocationFinder, &type_spec_MapLocationFinder, object_bases.get(), nullptr);
-    if (!state->type_MapLocationFinder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapLocationFinder, &type_spec_MapLocationFinder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapLocationFinder, &type_spec_MapLocationFinder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapLocationFinderResult = py::register_python_type(module.get(), type_name_MapLocationFinderResult, &type_spec_MapLocationFinderResult, object_bases.get(), nullptr);
-    if (!state->type_MapLocationFinderResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapLocationFinderResult, &type_spec_MapLocationFinderResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapLocationFinderResult, &type_spec_MapLocationFinderResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapManager = py::register_python_type(module.get(), type_name_MapManager, &type_spec_MapManager, object_bases.get(), nullptr);
-    if (!state->type_MapManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapManager, &type_spec_MapManager, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapManager, &type_spec_MapManager, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRoute = py::register_python_type(module.get(), type_name_MapRoute, &type_spec_MapRoute, object_bases.get(), nullptr);
-    if (!state->type_MapRoute)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRoute, &type_spec_MapRoute, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRoute, &type_spec_MapRoute, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteDrivingOptions = py::register_python_type(module.get(), type_name_MapRouteDrivingOptions, &type_spec_MapRouteDrivingOptions, object_bases.get(), nullptr);
-    if (!state->type_MapRouteDrivingOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteDrivingOptions, &type_spec_MapRouteDrivingOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteDrivingOptions, &type_spec_MapRouteDrivingOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteFinder = py::register_python_type(module.get(), type_name_MapRouteFinder, &type_spec_MapRouteFinder, object_bases.get(), nullptr);
-    if (!state->type_MapRouteFinder)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteFinder, &type_spec_MapRouteFinder, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteFinder, &type_spec_MapRouteFinder, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteFinderResult = py::register_python_type(module.get(), type_name_MapRouteFinderResult, &type_spec_MapRouteFinderResult, object_bases.get(), nullptr);
-    if (!state->type_MapRouteFinderResult)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteFinderResult, &type_spec_MapRouteFinderResult, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteFinderResult, &type_spec_MapRouteFinderResult, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteLeg = py::register_python_type(module.get(), type_name_MapRouteLeg, &type_spec_MapRouteLeg, object_bases.get(), nullptr);
-    if (!state->type_MapRouteLeg)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteLeg, &type_spec_MapRouteLeg, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteLeg, &type_spec_MapRouteLeg, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_MapRouteManeuver = py::register_python_type(module.get(), type_name_MapRouteManeuver, &type_spec_MapRouteManeuver, object_bases.get(), nullptr);
-    if (!state->type_MapRouteManeuver)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapRouteManeuver, &type_spec_MapRouteManeuver, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapRouteManeuver, &type_spec_MapRouteManeuver, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3796,8 +3753,11 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_MapService = py::register_python_type(module.get(), type_name_MapService, &type_spec_MapService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapService_Meta.get()));
-    if (!state->type_MapService)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_MapService, &type_spec_MapService, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapService_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_MapService, &type_spec_MapService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapService_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -3808,386 +3768,24 @@ PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps(void) noexcept
         return nullptr;
     }
 
-    state->type_PlaceInfo = py::register_python_type(module.get(), type_name_PlaceInfo, &type_spec_PlaceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfo_Meta.get()));
-    if (!state->type_PlaceInfo)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaceInfo, &type_spec_PlaceInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfo_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaceInfo, &type_spec_PlaceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfo_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PlaceInfoCreateOptions = py::register_python_type(module.get(), type_name_PlaceInfoCreateOptions, &type_spec_PlaceInfoCreateOptions, object_bases.get(), nullptr);
-    if (!state->type_PlaceInfoCreateOptions)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PlaceInfoCreateOptions, &type_spec_PlaceInfoCreateOptions, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PlaceInfoCreateOptions, &type_spec_PlaceInfoCreateOptions, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::EnhancedWaypoint>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_EnhancedWaypoint;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::EnhancedWaypoint is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::ManeuverWarning>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ManeuverWarning;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::ManeuverWarning is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapAddress>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapAddress;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapAddress is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapLocation>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapLocation;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapLocation is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapLocationFinder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapLocationFinder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapLocationFinder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapLocationFinderResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapLocationFinderResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapLocationFinderResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRoute>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRoute;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRoute is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRouteDrivingOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteDrivingOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRouteDrivingOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRouteFinder>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteFinder;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRouteFinder is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRouteFinderResult>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteFinderResult;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRouteFinderResult is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRouteLeg>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteLeg;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRouteLeg is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapRouteManeuver>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapRouteManeuver;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapRouteManeuver is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::MapService>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_MapService;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::MapService is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::PlaceInfo>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaceInfo;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::PlaceInfo is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::Services::Maps;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::Services::Maps");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PlaceInfoCreateOptions;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::Services::Maps::PlaceInfoCreateOptions is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

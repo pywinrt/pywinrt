@@ -144,170 +144,198 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialGestureRecognizer";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialHoldCanceledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialHoldCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialHoldStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteraction>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteraction>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteraction";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionController>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionController>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionController";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionControllerProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionDetectedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSource";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceLocation";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceProperties";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialInteractionSourceState";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialManipulationCanceledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialManipulationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialManipulationDelta";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialManipulationStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialManipulationUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialNavigationCanceledEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialNavigationCompletedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialNavigationStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialNavigationUpdatedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialPointerInteractionSourcePose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialPointerPose>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerPose>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialPointerPose";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialRecognitionEndedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialRecognitionStartedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>
+    struct py_type<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.input.spatial";
+        static constexpr const char* type_name = "SpatialTappedEventArgs";
     };
 }

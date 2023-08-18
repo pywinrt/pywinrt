@@ -49,20 +49,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>
+    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
+        static constexpr const char* type_name = "LicenseManager";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>
+    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
+        static constexpr const char* type_name = "LicenseSatisfactionInfo";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>
+    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
+        static constexpr const char* type_name = "LicenseSatisfactionResult";
     };
 }

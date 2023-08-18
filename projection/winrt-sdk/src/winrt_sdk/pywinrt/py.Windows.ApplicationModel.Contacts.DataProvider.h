@@ -41,62 +41,72 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactDataProviderConnection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactDataProviderTriggerDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListCreateOrUpdateContactRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListCreateOrUpdateContactRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListDeleteContactRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListDeleteContactRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListServerSearchReadBatchRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListServerSearchReadBatchRequestEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListSyncManagerSyncRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
+        static constexpr const char* type_name = "ContactListSyncManagerSyncRequestEventArgs";
     };
 }

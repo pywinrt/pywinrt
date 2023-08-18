@@ -6,29 +6,6 @@
 
 namespace py::cpp::Windows::UI::ViewManagement
 {
-    struct module_state
-    {
-        PyTypeObject* type_AccessibilitySettings;
-        PyTypeObject* type_ActivationViewSwitcher;
-        PyTypeObject* type_ApplicationView;
-        PyTypeObject* type_ApplicationViewConsolidatedEventArgs;
-        PyTypeObject* type_ApplicationViewScaling;
-        PyTypeObject* type_ApplicationViewSwitcher;
-        PyTypeObject* type_ApplicationViewTitleBar;
-        PyTypeObject* type_ApplicationViewTransferContext;
-        PyTypeObject* type_InputPane;
-        PyTypeObject* type_InputPaneVisibilityEventArgs;
-        PyTypeObject* type_ProjectionManager;
-        PyTypeObject* type_StatusBar;
-        PyTypeObject* type_StatusBarProgressIndicator;
-        PyTypeObject* type_UISettings;
-        PyTypeObject* type_UISettingsAnimationsEnabledChangedEventArgs;
-        PyTypeObject* type_UISettingsAutoHideScrollBarsChangedEventArgs;
-        PyTypeObject* type_UISettingsMessageDurationChangedEventArgs;
-        PyTypeObject* type_UIViewSettings;
-        PyTypeObject* type_ViewModePreferences;
-    };
-
     // ----- AccessibilitySettings class --------------------
     static constexpr const char* const type_name_AccessibilitySettings = "AccessibilitySettings";
 
@@ -5942,80 +5919,15 @@ namespace py::cpp::Windows::UI::ViewManagement
     PyDoc_STRVAR(module_doc, "Windows::UI::ViewManagement");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AccessibilitySettings);
-        Py_VISIT(state->type_ActivationViewSwitcher);
-        Py_VISIT(state->type_ApplicationView);
-        Py_VISIT(state->type_ApplicationViewConsolidatedEventArgs);
-        Py_VISIT(state->type_ApplicationViewScaling);
-        Py_VISIT(state->type_ApplicationViewSwitcher);
-        Py_VISIT(state->type_ApplicationViewTitleBar);
-        Py_VISIT(state->type_ApplicationViewTransferContext);
-        Py_VISIT(state->type_InputPane);
-        Py_VISIT(state->type_InputPaneVisibilityEventArgs);
-        Py_VISIT(state->type_ProjectionManager);
-        Py_VISIT(state->type_StatusBar);
-        Py_VISIT(state->type_StatusBarProgressIndicator);
-        Py_VISIT(state->type_UISettings);
-        Py_VISIT(state->type_UISettingsAnimationsEnabledChangedEventArgs);
-        Py_VISIT(state->type_UISettingsAutoHideScrollBarsChangedEventArgs);
-        Py_VISIT(state->type_UISettingsMessageDurationChangedEventArgs);
-        Py_VISIT(state->type_UIViewSettings);
-        Py_VISIT(state->type_ViewModePreferences);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AccessibilitySettings);
-        Py_CLEAR(state->type_ActivationViewSwitcher);
-        Py_CLEAR(state->type_ApplicationView);
-        Py_CLEAR(state->type_ApplicationViewConsolidatedEventArgs);
-        Py_CLEAR(state->type_ApplicationViewScaling);
-        Py_CLEAR(state->type_ApplicationViewSwitcher);
-        Py_CLEAR(state->type_ApplicationViewTitleBar);
-        Py_CLEAR(state->type_ApplicationViewTransferContext);
-        Py_CLEAR(state->type_InputPane);
-        Py_CLEAR(state->type_InputPaneVisibilityEventArgs);
-        Py_CLEAR(state->type_ProjectionManager);
-        Py_CLEAR(state->type_StatusBar);
-        Py_CLEAR(state->type_StatusBarProgressIndicator);
-        Py_CLEAR(state->type_UISettings);
-        Py_CLEAR(state->type_UISettingsAnimationsEnabledChangedEventArgs);
-        Py_CLEAR(state->type_UISettingsAutoHideScrollBarsChangedEventArgs);
-        Py_CLEAR(state->type_UISettingsMessageDurationChangedEventArgs);
-        Py_CLEAR(state->type_UIViewSettings);
-        Py_CLEAR(state->type_ViewModePreferences);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_ViewManagement",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::ViewManagement
@@ -6031,7 +5943,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -6044,17 +5956,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AccessibilitySettings = py::register_python_type(module.get(), type_name_AccessibilitySettings, &type_spec_AccessibilitySettings, object_bases.get(), nullptr);
-    if (!state->type_AccessibilitySettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AccessibilitySettings, &type_spec_AccessibilitySettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AccessibilitySettings, &type_spec_AccessibilitySettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ActivationViewSwitcher = py::register_python_type(module.get(), type_name_ActivationViewSwitcher, &type_spec_ActivationViewSwitcher, object_bases.get(), nullptr);
-    if (!state->type_ActivationViewSwitcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ActivationViewSwitcher, &type_spec_ActivationViewSwitcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ActivationViewSwitcher, &type_spec_ActivationViewSwitcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6065,14 +5980,20 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    state->type_ApplicationView = py::register_python_type(module.get(), type_name_ApplicationView, &type_spec_ApplicationView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationView_Meta.get()));
-    if (!state->type_ApplicationView)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationView, &type_spec_ApplicationView, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationView_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationView, &type_spec_ApplicationView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationView_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationViewConsolidatedEventArgs = py::register_python_type(module.get(), type_name_ApplicationViewConsolidatedEventArgs, &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_ApplicationViewConsolidatedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationViewConsolidatedEventArgs, &type_spec_ApplicationViewConsolidatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationViewConsolidatedEventArgs, &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6083,20 +6004,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    state->type_ApplicationViewScaling = py::register_python_type(module.get(), type_name_ApplicationViewScaling, &type_spec_ApplicationViewScaling, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewScaling_Meta.get()));
-    if (!state->type_ApplicationViewScaling)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationViewScaling, &type_spec_ApplicationViewScaling, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewScaling_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationViewScaling, &type_spec_ApplicationViewScaling, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewScaling_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationViewSwitcher = py::register_python_type(module.get(), type_name_ApplicationViewSwitcher, &type_spec_ApplicationViewSwitcher, object_bases.get(), nullptr);
-    if (!state->type_ApplicationViewSwitcher)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationViewSwitcher, &type_spec_ApplicationViewSwitcher, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationViewSwitcher, &type_spec_ApplicationViewSwitcher, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ApplicationViewTitleBar = py::register_python_type(module.get(), type_name_ApplicationViewTitleBar, &type_spec_ApplicationViewTitleBar, object_bases.get(), nullptr);
-    if (!state->type_ApplicationViewTitleBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationViewTitleBar, &type_spec_ApplicationViewTitleBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationViewTitleBar, &type_spec_ApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6107,20 +6037,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    state->type_ApplicationViewTransferContext = py::register_python_type(module.get(), type_name_ApplicationViewTransferContext, &type_spec_ApplicationViewTransferContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewTransferContext_Meta.get()));
-    if (!state->type_ApplicationViewTransferContext)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ApplicationViewTransferContext, &type_spec_ApplicationViewTransferContext, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewTransferContext_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ApplicationViewTransferContext, &type_spec_ApplicationViewTransferContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewTransferContext_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputPane = py::register_python_type(module.get(), type_name_InputPane, &type_spec_InputPane, object_bases.get(), nullptr);
-    if (!state->type_InputPane)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputPane, &type_spec_InputPane, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputPane, &type_spec_InputPane, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_InputPaneVisibilityEventArgs = py::register_python_type(module.get(), type_name_InputPaneVisibilityEventArgs, &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), nullptr);
-    if (!state->type_InputPaneVisibilityEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_InputPaneVisibilityEventArgs, &type_spec_InputPaneVisibilityEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_InputPaneVisibilityEventArgs, &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -6131,497 +6070,87 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_ViewManagement(void) noexcept
         return nullptr;
     }
 
-    state->type_ProjectionManager = py::register_python_type(module.get(), type_name_ProjectionManager, &type_spec_ProjectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProjectionManager_Meta.get()));
-    if (!state->type_ProjectionManager)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ProjectionManager, &type_spec_ProjectionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProjectionManager_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ProjectionManager, &type_spec_ProjectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProjectionManager_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StatusBar = py::register_python_type(module.get(), type_name_StatusBar, &type_spec_StatusBar, object_bases.get(), nullptr);
-    if (!state->type_StatusBar)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StatusBar, &type_spec_StatusBar, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StatusBar, &type_spec_StatusBar, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_StatusBarProgressIndicator = py::register_python_type(module.get(), type_name_StatusBarProgressIndicator, &type_spec_StatusBarProgressIndicator, object_bases.get(), nullptr);
-    if (!state->type_StatusBarProgressIndicator)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_StatusBarProgressIndicator, &type_spec_StatusBarProgressIndicator, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_StatusBarProgressIndicator, &type_spec_StatusBarProgressIndicator, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UISettings = py::register_python_type(module.get(), type_name_UISettings, &type_spec_UISettings, object_bases.get(), nullptr);
-    if (!state->type_UISettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UISettings, &type_spec_UISettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UISettings, &type_spec_UISettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UISettingsAnimationsEnabledChangedEventArgs = py::register_python_type(module.get(), type_name_UISettingsAnimationsEnabledChangedEventArgs, &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UISettingsAnimationsEnabledChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UISettingsAnimationsEnabledChangedEventArgs, &type_spec_UISettingsAnimationsEnabledChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UISettingsAnimationsEnabledChangedEventArgs, &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UISettingsAutoHideScrollBarsChangedEventArgs = py::register_python_type(module.get(), type_name_UISettingsAutoHideScrollBarsChangedEventArgs, &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UISettingsAutoHideScrollBarsChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UISettingsAutoHideScrollBarsChangedEventArgs, &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UISettingsAutoHideScrollBarsChangedEventArgs, &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UISettingsMessageDurationChangedEventArgs = py::register_python_type(module.get(), type_name_UISettingsMessageDurationChangedEventArgs, &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), nullptr);
-    if (!state->type_UISettingsMessageDurationChangedEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UISettingsMessageDurationChangedEventArgs, &type_spec_UISettingsMessageDurationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UISettingsMessageDurationChangedEventArgs, &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_UIViewSettings = py::register_python_type(module.get(), type_name_UIViewSettings, &type_spec_UIViewSettings, object_bases.get(), nullptr);
-    if (!state->type_UIViewSettings)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_UIViewSettings, &type_spec_UIViewSettings, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_UIViewSettings, &type_spec_UIViewSettings, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_ViewModePreferences = py::register_python_type(module.get(), type_name_ViewModePreferences, &type_spec_ViewModePreferences, object_bases.get(), nullptr);
-    if (!state->type_ViewModePreferences)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_ViewModePreferences, &type_spec_ViewModePreferences, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_ViewModePreferences, &type_spec_ViewModePreferences, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::AccessibilitySettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AccessibilitySettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::AccessibilitySettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ActivationViewSwitcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ActivationViewSwitcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationView>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationView;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationView is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationViewConsolidatedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationViewScaling;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationViewScaling is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationViewSwitcher;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationViewTitleBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ApplicationViewTransferContext;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::InputPane>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputPane;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::InputPane is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_InputPaneVisibilityEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ProjectionManager>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ProjectionManager;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ProjectionManager is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::StatusBar>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StatusBar;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::StatusBar is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_StatusBarProgressIndicator;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::UISettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UISettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::UISettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UISettingsAnimationsEnabledChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UISettingsAutoHideScrollBarsChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UISettingsMessageDurationChangedEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::UIViewSettings>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_UIViewSettings;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::UIViewSettings is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::ViewManagement;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::ViewManagement");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_ViewModePreferences;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::ViewManagement::ViewModePreferences is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

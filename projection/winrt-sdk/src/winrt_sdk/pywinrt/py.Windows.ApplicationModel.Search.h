@@ -56,92 +56,107 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>
+    struct py_type<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "LocalContentSuggestionSettings";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPane>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPane>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPane";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneQueryChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneQueryLinguisticDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneQuerySubmittedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneResultSuggestionChosenEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneSuggestionsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneSuggestionsRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneSuggestionsRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchPaneVisibilityChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchQueryLinguisticDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchSuggestionCollection";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchSuggestionsRequest";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>
+    struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "SearchSuggestionsRequestDeferral";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>
+    struct py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
+        static constexpr const char* type_name = "ISearchPaneQueryChangedEventArgs";
     };
 }

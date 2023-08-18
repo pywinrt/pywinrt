@@ -28,14 +28,16 @@ namespace py
 {
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Background::DeviceServicingDetails>
+    struct py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.background";
+        static constexpr const char* type_name = "DeviceServicingDetails";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Devices::Background::DeviceUseDetails>
+    struct py_type<winrt::Windows::Devices::Background::DeviceUseDetails>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.devices.background";
+        static constexpr const char* type_name = "DeviceUseDetails";
     };
 }

@@ -42,8 +42,9 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>
+    struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
+        static constexpr const char* type_name = "RemoteDesktopConnectionInfo";
     };
 }

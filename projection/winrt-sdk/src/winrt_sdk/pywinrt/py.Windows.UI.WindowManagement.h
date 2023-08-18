@@ -115,116 +115,135 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindow>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindow>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindow";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowCloseRequestedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowClosedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowFrame";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowPlacement";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowPresentationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowPresenter";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowTitleBar";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>
+    struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "AppWindowTitleBarOcclusion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>
+    struct py_type<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "CompactOverlayPresentationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>
+    struct py_type<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "DefaultPresentationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::DisplayRegion>
+    struct py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "DisplayRegion";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>
+    struct py_type<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "FullScreenPresentationConfiguration";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::WindowServices>
+    struct py_type<winrt::Windows::UI::WindowManagement::WindowServices>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowServices";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>
+    struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowingEnvironment";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowingEnvironmentAddedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowingEnvironmentChangedEventArgs";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>
+    struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
+        static constexpr const char* type_name = "WindowingEnvironmentRemovedEventArgs";
     };
 }

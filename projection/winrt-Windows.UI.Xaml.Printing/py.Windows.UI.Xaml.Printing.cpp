@@ -6,14 +6,6 @@
 
 namespace py::cpp::Windows::UI::Xaml::Printing
 {
-    struct module_state
-    {
-        PyTypeObject* type_AddPagesEventArgs;
-        PyTypeObject* type_GetPreviewPageEventArgs;
-        PyTypeObject* type_PaginateEventArgs;
-        PyTypeObject* type_PrintDocument;
-    };
-
     // ----- AddPagesEventArgs class --------------------
     static constexpr const char* const type_name_AddPagesEventArgs = "AddPagesEventArgs";
 
@@ -848,50 +840,15 @@ namespace py::cpp::Windows::UI::Xaml::Printing
     PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Printing");
 
 
-    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_VISIT(state->type_AddPagesEventArgs);
-        Py_VISIT(state->type_GetPreviewPageEventArgs);
-        Py_VISIT(state->type_PaginateEventArgs);
-        Py_VISIT(state->type_PrintDocument);
-
-        return 0;
-    }
-
-    static int module_clear(PyObject* module) noexcept
-    {
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-
-        if (!state)
-        {
-            return 0;
-        }
-
-        Py_CLEAR(state->type_AddPagesEventArgs);
-        Py_CLEAR(state->type_GetPreviewPageEventArgs);
-        Py_CLEAR(state->type_PaginateEventArgs);
-        Py_CLEAR(state->type_PrintDocument);
-
-        return 0;
-    }
-
-
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_Windows_UI_Xaml_Printing",
            module_doc,
-           sizeof(module_state),
+           0,
            nullptr,
            nullptr,
-           module_traverse,
-           module_clear,
+           nullptr,
+           nullptr,
            nullptr};
 
 } // py::cpp::Windows::UI::Xaml::Printing
@@ -907,7 +864,7 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Printing(void) noexcept
         return nullptr;
     }
 
-    auto object_type = py::get_python_type<py::Object>();
+    auto object_type = py::get_object_type();
     if (!object_type)
     {
         return nullptr;
@@ -920,23 +877,29 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Printing(void) noexcept
         return nullptr;
     }
 
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
-    WINRT_ASSERT(state);
-
-    state->type_AddPagesEventArgs = py::register_python_type(module.get(), type_name_AddPagesEventArgs, &type_spec_AddPagesEventArgs, object_bases.get(), nullptr);
-    if (!state->type_AddPagesEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_AddPagesEventArgs, &type_spec_AddPagesEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_AddPagesEventArgs, &type_spec_AddPagesEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_GetPreviewPageEventArgs = py::register_python_type(module.get(), type_name_GetPreviewPageEventArgs, &type_spec_GetPreviewPageEventArgs, object_bases.get(), nullptr);
-    if (!state->type_GetPreviewPageEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_GetPreviewPageEventArgs, &type_spec_GetPreviewPageEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_GetPreviewPageEventArgs, &type_spec_GetPreviewPageEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
 
-    state->type_PaginateEventArgs = py::register_python_type(module.get(), type_name_PaginateEventArgs, &type_spec_PaginateEventArgs, object_bases.get(), nullptr);
-    if (!state->type_PaginateEventArgs)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PaginateEventArgs, &type_spec_PaginateEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PaginateEventArgs, &type_spec_PaginateEventArgs, object_bases.get(), nullptr) == -1)
+    #endif
     {
         return nullptr;
     }
@@ -947,104 +910,15 @@ PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Printing(void) noexcept
         return nullptr;
     }
 
-    state->type_PrintDocument = py::register_python_type(module.get(), type_name_PrintDocument, &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Meta.get()));
-    if (!state->type_PrintDocument)
+    #if PY_VERSION_HEX < 0x03090000
+    if (py::register_python_type(module.get(), type_name_PrintDocument, &type_spec_PrintDocument, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Meta.get())) == -1)
+    #else
+    if (py::register_python_type(module.get(), type_name_PrintDocument, &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Meta.get())) == -1)
+    #endif
     {
         return nullptr;
     }
 
 
     return module.detach();
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Printing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Printing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_AddPagesEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Printing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Printing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_GetPreviewPageEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Printing::PaginateEventArgs>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Printing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Printing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PaginateEventArgs;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Printing::PaginateEventArgs is not registered");
-        return nullptr;
-    }
-
-    return python_type;
-}
-
-PyTypeObject* py::winrt_type<winrt::Windows::UI::Xaml::Printing::PrintDocument>::get_python_type() noexcept {
-    using namespace py::cpp::Windows::UI::Xaml::Printing;
-
-    PyObject* module = PyState_FindModule(&module_def);
-
-    if (!module) {
-        PyErr_SetString(PyExc_RuntimeError, "could not find module for Windows::UI::Xaml::Printing");
-        return nullptr;
-    }
-
-    auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-    assert(state);
-
-    auto python_type = state->type_PrintDocument;
-
-    if (!python_type) {
-        PyErr_SetString(PyExc_RuntimeError, "type winrt::Windows::UI::Xaml::Printing::PrintDocument is not registered");
-        return nullptr;
-    }
-
-    return python_type;
 }

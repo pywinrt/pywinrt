@@ -64,20 +64,23 @@ namespace py
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::MdmAlert>
+    struct py_type<winrt::Windows::Management::MdmAlert>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmAlert";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::MdmSession>
+    struct py_type<winrt::Windows::Management::MdmSession>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmSession";
     };
 
     template<>
-    struct winrt_type<winrt::Windows::Management::MdmSessionManager>
+    struct py_type<winrt::Windows::Management::MdmSessionManager>
     {
-        static PyTypeObject* get_python_type() noexcept;
+        static constexpr const char* module_name = "winrt.windows.management";
+        static constexpr const char* type_name = "MdmSessionManager";
     };
 }
