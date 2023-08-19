@@ -1308,7 +1308,7 @@ namespace py
                 throw python_exception();
             }
 
-            if (Py_TYPE(obj) != type)
+            if (!Py_IS_TYPE(obj, type))
             {
                 PyErr_Format(
                     PyExc_TypeError,
@@ -1341,7 +1341,7 @@ namespace py
                 throw python_exception();
             }
 
-            if (Py_TYPE(obj) != type)
+            if (!Py_IS_TYPE(obj, type))
             {
                 PyErr_SetString(PyExc_TypeError, "wrong type");
                 throw python_exception();
@@ -1460,7 +1460,7 @@ namespace py
             throw python_exception();
         }
 
-        if (Py_TYPE(obj) == type)
+        if (Py_IS_TYPE(obj, type))
         {
             return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
         }

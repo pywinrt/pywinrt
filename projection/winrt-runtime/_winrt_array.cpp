@@ -71,7 +71,7 @@ namespace py::cpp::_winrt
      */
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept
     {
-        if (Py_TYPE(obj) != get_array_type())
+        if (!Py_IS_TYPE(obj, get_array_type()))
         {
             {
                 PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
