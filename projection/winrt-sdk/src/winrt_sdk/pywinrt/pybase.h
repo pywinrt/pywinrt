@@ -1758,7 +1758,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (obj == Py_None)
+            if (Py_IsNone(obj))
             {
                 return nullptr;
             }
@@ -1784,7 +1784,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            if (obj == Py_None)
+            if (Py_IsNone(obj))
             {
                 return {};
             }
