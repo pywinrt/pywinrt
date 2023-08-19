@@ -173,7 +173,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
@@ -204,7 +215,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
@@ -235,7 +257,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
@@ -266,7 +299,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
@@ -297,7 +341,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
@@ -329,6 +384,11 @@ namespace py::impl::Windows::UI::WebUI
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
@@ -358,7 +418,18 @@ namespace py::impl::Windows::UI::WebUI
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 

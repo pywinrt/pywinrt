@@ -6224,6 +6224,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             py::pyobj_handle iter{py::convert(self->obj.First())};
+
+            if (!iter)
+            {
+                return nullptr;
+            }
+
             return py::wrap_mapping_iter(iter.get());
         }
         catch (...)
@@ -15869,6 +15875,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             py::pyobj_handle iter{py::convert(self->obj.First())};
+
+            if (!iter)
+            {
+                return nullptr;
+            }
+
             return py::wrap_mapping_iter(iter.get());
         }
         catch (...)
@@ -16707,6 +16719,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             py::pyobj_handle iter{py::convert(self->obj.First())};
+
+            if (!iter)
+            {
+                return nullptr;
+            }
+
             return py::wrap_mapping_iter(iter.get());
         }
         catch (...)

@@ -1468,6 +1468,12 @@ namespace py::cpp::Windows::Storage::Pickers
         try
         {
             py::pyobj_handle iter{py::convert(self->obj.First())};
+
+            if (!iter)
+            {
+                return nullptr;
+            }
+
             return py::wrap_mapping_iter(iter.get());
         }
         catch (...)

@@ -836,6 +836,12 @@ namespace py::cpp::Windows::System::UserProfile
         try
         {
             py::pyobj_handle iter{py::convert(self->obj.First())};
+
+            if (!iter)
+            {
+                return nullptr;
+            }
+
             return py::wrap_mapping_iter(iter.get());
         }
         catch (...)

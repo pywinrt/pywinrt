@@ -54,6 +54,11 @@ namespace py::impl::Windows::ApplicationModel::DataTransfer
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
@@ -83,6 +88,11 @@ namespace py::impl::Windows::ApplicationModel::DataTransfer
                 winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
 
                 py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 

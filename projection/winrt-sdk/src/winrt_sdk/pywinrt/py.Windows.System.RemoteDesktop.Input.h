@@ -24,6 +24,11 @@ namespace py::impl::Windows::System::RemoteDesktop::Input
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
                 py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {

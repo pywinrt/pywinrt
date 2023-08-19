@@ -1424,6 +1424,12 @@ namespace py
             using enum_type = std::underlying_type_t<T>;
             pyobj_handle value{
                 converter<enum_type>::convert(static_cast<enum_type>(instance))};
+
+            if (!value)
+            {
+                return nullptr;
+            }
+
             return wrap_enum<T>(value.get());
         }
 
@@ -1947,7 +1953,7 @@ namespace py
     };
 
     template<typename T>
-    PyObject* convert(T const& instance)
+    PyObject* convert(T const& instance) noexcept
     {
         return converter<T>::convert(instance);
     }

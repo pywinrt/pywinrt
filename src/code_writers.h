@@ -1268,6 +1268,14 @@ static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyOb
                     w.write(
                         "py::pyobj_handle iter{py::convert(%First())};\n",
                         bind<write_method_invoke_context>(type, MethodDef{}));
+
+                    w.write("\nif (!iter)\n{\n");
+                    {
+                        writer::indent_guard g{w};
+                        w.write("return nullptr;\n");
+                    }
+                    w.write("}\n\n");
+
                     w.write("return py::wrap_mapping_iter(iter.get());\n");
                 });
         }
@@ -3469,13 +3477,23 @@ return [delegate = std::move(_delegate)](%)
                             "py::pyobj_handle %{ py::convert(%) };\n",
                             py_param_name,
                             param_name);
+
+                        w.write("\nif (!%) {\n", py_param_name);
+                        {
+                            writer::indent_guard gggg{w};
+                            w.write("PyErr_WriteUnraisable(delegate.callable());\n");
+                            w.write(
+                                "throw std::invalid_argument(\"%\");\n", param_name);
+                        }
+                        w.write("}\n\n");
+
                         tuple_params.push_back(py_param_name);
                     }
 
                     if (tuple_params.size() > 0)
                     {
                         w.write(
-                            "\npy::pyobj_handle args{ % };\n",
+                            "py::pyobj_handle args{ % };\n",
                             bind<write_py_tuple_pack>(tuple_params));
 
                         w.write("\nif (!args) {\n");
